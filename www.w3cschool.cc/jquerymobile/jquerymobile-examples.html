@@ -1,0 +1,465 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Mobile 实例 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery Mobile 方向改变事件' href='http://www.w3cschool.cc/jquerymobile/jquerymobile-events-orientation.html' />
+<link rel='next' title='XPath 简介' href='http://www.w3cschool.cc/xpath/xpath-intro.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jquerymobile/jquerymobile-examples.html' />
+<meta name="keywords" content="jQuery Mobile 实例,jQuery Mobile">
+<meta name="description" content="jQuery Mobile 实例   jQuery Mobile 页面  一个基本的移动网页 多个页面 对话框  实例解释  jQuery Mobile 页面切换  淡入效果 从后向前翻转效果 流动效果 弹出效果 滑动效果 从右到左滑动并淡入效果 从下到上滑动效果 从上到下滑动效果 翻页效果 没有切换效果 颠倒效果  实例解释  jQuery Mobile 按钮  创建按钮 内联按钮 组合按钮 后退按钮 带有圆角或不带有圆角的按钮 小尺..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>jQuery Mobile</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html" >
+	jQuery Mobile 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-intro.html" >
+	jQuery Mobile 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-install.html" >
+	jQuery Mobile 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-pages.html" >
+	jQuery Mobile 页面	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-transitions.html" >
+	jQuery Mobile 页面切换	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-buttons.html" >
+	jQuery Mobile 按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-icons.html" >
+	jQuery Mobile 按钮图标	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-toolbars.html" >
+	jQuery Mobile 工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-navbars.html" >
+	jQuery Mobile 导航栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-collapsibles.html" >
+	jQuery Mobile 可折叠块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-grids.html" >
+	jQuery Mobile 网格	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 列表</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-list-views.html" >
+	jQuery Mobile 列表视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-list-content.html" >
+	jQuery Mobile 列表内容	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 表单</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-basic.html" >
+	jQuery Mobile 表单基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-inputs.html" >
+	jQuery Mobile 表单输入	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-select.html" >
+	jQuery Mobile 表单选择	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-sliders.html" >
+	jQuery Mobile 表单滑动条	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 主题</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-themes.html" >
+	jQuery Mobile 主题	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 事件</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events.html" >
+	jQuery Mobile 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-touch.html" >
+	jQuery Mobile 触摸事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-scroll.html" >
+	jQuery Mobile 滚屏事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-orientation.html" >
+	jQuery Mobile 方向改变事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-examples.html" >
+	jQuery Mobile 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-data.html" >
+	jQuery Mobile Data 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-icons.html" >
+	jQuery Mobile 图标	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-events.html" >
+	jQuery Mobile 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-page.html" >
+	jQuery Mobile页面事件	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-orientation.html" rel="prev"> jQuery Mobile 方向改变事件</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-data.html" rel="next">jQuery Mobile Data 属性</a> &raquo;</div>
+	</div>
+
+	<h1>jQuery <span class="color_h1">Mobile 实例</span>
+</h1>
+<hr />
+<p><b>jQuery Mobile 页面</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_start">一个基本的移动网页</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_pages">多个页面</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_dialog">对话框</a>
+</p>
+<p><b><a href="jquerymobile-pages.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 页面切换</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_trans_fade">淡入效果</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_trans_flip">从后向前翻转效果</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_trans_flow">流动效果</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_trans_pop">弹出效果</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_trans_slide">滑动效果</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_trans_slidefade">从右到左滑动并淡入效果</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_trans_slideup">从下到上滑动效果</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_trans_slidedown">从上到下滑动效果</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_trans_turn">翻页效果</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_trans_none">没有切换效果</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_trans_reverse">颠倒效果</a>
+</p>
+<p><b><a href="jquerymobile-transitions.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 按钮</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_button">创建按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_button_inline">内联按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_button_group">组合按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_button_back">后退按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_button_corners">带有圆角或不带有圆角的按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_button_mini">小尺寸或常规尺寸的按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_button_shadow">带有阴影或不带有阴影的按钮</a>
+</p>
+<p><b><a href="jquerymobile-buttons.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 按钮图标</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_icon_all">添加图标到按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_icon_positions">定位图标</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_icon_notext">只显示图标</a>
+</p>
+<p><b><a href="jquerymobile-icons.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 工具栏</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_toolbars_basic">创建头部栏和尾部栏</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_header">在头部栏添加按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_header_left">在头部栏左侧添加按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_header_class">在头部栏右侧添加按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_footer">带有按钮的尾部栏</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_footer_class">带有居中对齐按钮的尾部栏</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_footer_grouped">带有组合按钮的尾部栏</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_footer_grouped_horizontal">带有水平组合按钮的尾部栏</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_toolbars_inline">Inline 定位 - 头部栏和尾部栏与页面内容内联</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_toolbars_fixed">Fixed 定位 - 头部栏和尾部栏固定在页面的顶部和底部</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_toolbars_fullscreen">Fullscreen 定位 - 头部栏和尾部栏固定在页面的顶部和底部，但是会遮住页面内容</a>
+</p>
+<p><b><a href="jquerymobile-toolbars.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 导航栏</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_navbars">创建导航栏</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_navbars_content">内容中的导航栏</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_navbars_footer">尾部中的导航栏</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_navbars_class_active">在导航栏中为按钮添加被选中（按下）外观</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_navbars_class_persist">持续添加被选中（按下）外观</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_navbars_footer_icons">定位导航栏中的图标</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_navbars_wrap">导航栏中 10 个按钮的演示</a>
+</p>
+<p><b><a href="jquerymobile-navbars.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 可折叠块</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_collapsible">创建可折叠的内容块</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_collapsible_false">当页面加载时展开内容</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_collapsible_nested">嵌套可折叠块</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_collapsible_sets">可折叠集合</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_collapsible_inset">取消可折叠块上的圆角</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_collapsible_mini">让可折叠块更小</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_collapsible_icons">改变可折叠块的图标</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_collapsible">可折叠列表</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_collapsible">可折叠表单</a>
+</p>
+<p><b><a href="jquerymobile-collapsibles.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 网格</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_grid_a">两列布局</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_grid_b">三列布局</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_grid_c">四列布局</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_grid_d">五列布局</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_grid_css">自定义网格</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_grid_multiple">列内的多行</a>
+</p>
+<p><b><a href="jquerymobile-grids.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 列表</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_lists_views">创建列表视图</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_inset">带圆角的列表视图</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_dividers">列表分隔</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_autodividers">自动分隔</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_filter">创建搜索过滤</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_filter_placeholder">改变搜索框内的文本</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_readonly">创建只读列表</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_thumbs">为列表项添加缩略图</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_thumbs2">添加 HTML 元素，用信息填充列表项</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_icons">添加图标到列表项</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_split">创建带有分割按钮的列表</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_split2">让列表项更具功能性</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_count">创建计数气泡</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_change_icons">为列表项创建默认链接图标</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_collapsible">可折叠列表</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_lists_formatting">创建日历</a>
+</p>
+<p><b><a href="jquerymobile-list-views.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 表单</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_forms_inputs">文本输入框</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_textarea">文本输入域</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_search">搜索输入框</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_radio">单选按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_checkbox">复选框</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_horizontal">水平组合单选按钮和复选框</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_radio_check_fieldcontain">带有单选按钮和复选框的 Field 容器</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_checked">预选中单选按钮/复选框</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_select">创建选择菜单</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_select_optgroup">创建带有分隔（optgroup）的选择菜单</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_select_native">自定义选择菜单</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_select_multiple">在选择菜单中选择多个选项</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_select_group">组合选择菜单</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_select_horizontal">水平组合选择菜单</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_select_selected">预选中选项</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_collapsible">可折叠表单</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_slider">创建滑动条控件</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_slider_highlight">高亮突出显示滑动条的值</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_select_switch">创建拨动开关</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_forms_select_switch_selected">预选中拨动开关</a>
+</p>
+<p><b><a href="jquerymobile-form-basic.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 主题</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_themes_a">主题 "a"</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_b">主题 "b"</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_c">主题 "c"</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_d">主题 "d"</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_e">主题 "e"</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_content">主题头部、内容和尾部</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_dialog">主题对话框</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_buttons">主题按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_icons">主题图标</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_toolbars_buttons">头部和尾部的主题按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_navbars">主题导航栏</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_collapsibles">主题可折叠按钮和内容</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_lists">主题列表</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_split">主题分割按钮</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_collapsible_lists">主题可折叠列表</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_forms">主题表单</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_collapsible_forms">主题可折叠表单</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_themes_custom">自定义主题</a>
+</p>
+<p><b><a href="jquerymobile-themes.html">实例解释</a></b></p>
+<hr />
+<p><b>jQuery Mobile 触摸事件</b></p>
+<p>
+<a target="_blank" href="/try/try.php?filename=tryjqmob_events_tap">点击（Tap）事件</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_events_taphold">点击不放（Taphold）事件</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_events_swipe">滑动（Swipe）事件</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_events_swipeleft">向左滑动（Swipeleft）事件</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_events_swiperight">向右滑动（Swiperight）事件</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_events_scrollstart">滚屏开始（Scrollstart）事件</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_events_scrollstop">滚屏结束（Scrollstop）事件</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_events_orientationchange">方向改变（Orientationchange）事件 - 提示方向</a>
+<br /><a target="_blank" href="/try/try.php?filename=tryjqmob_events_orientationchange2">方向改变（Orientationchange）事件 - 为纵向和横向设置不同的样式</a>
+</p>
+<p><b><a href="jquerymobile-events-touch.html">实例解释</a></b></p>
+
+<br />	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-orientation.html" rel="prev"> jQuery Mobile 方向改变事件</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-data.html" rel="next">jQuery Mobile Data 属性</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.183 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:00:11 -->
+
+<!-- super cache -->

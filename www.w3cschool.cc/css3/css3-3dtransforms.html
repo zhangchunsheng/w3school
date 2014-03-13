@@ -1,0 +1,524 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 3D 转换 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='CSS3 2D 转换' href='http://www.w3cschool.cc/css3/css3-2dtransforms.html' />
+<link rel='next' title='PHP 过滤器' href='http://www.w3cschool.cc/php/php-filter.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/css3/css3-3dtransforms.html' />
+<meta name="keywords" content="CSS3 3D 转换,CSS3 教程">
+<meta name="description" content=".animated_div { width:60px; height:40px; color:#ffffff; position:relative; font-weight:bold; font-size:15px; padding:10px; float:left; margin:20px; margin-right:50px; border:1px solid #888888; -webkit-border-radius:5px; ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>CSS3 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-tutorial.html" >
+	CSS3 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-intro.html" >
+	CSS3 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-borders.html" >
+	CSS3 边框（Borders）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-backgrounds.html" >
+	CSS3 背景	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-text-effects.html" >
+	CSS3 文本效果	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-fonts.html" >
+	CSS3 字体	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-2dtransforms.html" >
+	CSS3 2D 转换	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-3dtransforms.html" >
+	CSS3 3D 转换	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-transitions.html" >
+	CSS3 过渡	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-animations.html" >
+	CSS3 动画	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-multiple-columns.html" >
+	CSS3 多列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-user-interface.html" >
+	CSS3 用户界面	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/css3/css3-2dtransforms.html" rel="prev"> CSS3 2D 转换</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/css3/css3-transitions.html" rel="next">CSS3 过渡</a> &raquo;</div>
+	</div>
+
+	<script>
+<!--
+var x,y,n=0,ny=0,rotINT,rotYINT
+function rotateDIV()
+{
+x=document.getElementById("rotate1")
+clearInterval(rotINT)
+rotINT=setInterval("startRotate()",10)
+}
+function rotateYDIV()
+{
+y=document.getElementById("rotatey1")
+clearInterval(rotYINT)
+rotYINT=setInterval("startYRotate()",10)
+}
+function startRotate()
+{
+n=n+1
+x.style.transform="rotate(" + n + "deg)"
+x.style.webkitTransform="rotate(" + n + "deg)"
+x.style.OTransform="rotate(" + n + "deg)"
+x.style.MozTransform="rotate(" + n + "deg)"
+if (n==180 || n==360)
+	{
+	clearInterval(rotINT)
+	if (n==360){n=0}
+	}
+}
+function startYRotate()
+{
+ny=ny+1
+y.style.transform="rotateY(" + ny + "deg)"
+y.style.webkitTransform="rotateY(" + ny + "deg)"
+y.style.OTransform="rotateY(" + ny + "deg)"
+y.style.MozTransform="rotateY(" + ny + "deg)"
+if (ny==180 || ny>=360)
+	{
+	clearInterval(rotYINT)
+	if (ny>=360){ny=0}
+	}
+}
+//-->
+</script>
+
+<style> 
+.animated_div
+{
+width:60px;
+height:40px;
+color:#ffffff;
+position:relative;
+font-weight:bold;
+font-size:15px;
+padding:10px;
+float:left;
+margin:20px;
+margin-right:50px;
+border:1px solid #888888;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+border-radius:5px;
+}
+
+#div1 {background:#92B901;transform:rotate(30deg);-webkit-transform:rotate(30deg);-o-transform:rotate(30deg);-moz-transform:rotate(30deg);}
+#div2 {background:#f98450;transform:scale(2,2);-webkit-transform:scale(2,2);-o-transform:scale(2,2);-moz-transform:scale(2,2);}
+#div3 {background:#1ec7e6;transform:skew(30deg,20deg);-webkit-transform:skew(30deg,20deg);-o-transform:skew(30deg,20deg);-moz-transform:skew(30deg,20deg);}
+
+#div1 {-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.8660254037844384, M12=-0.5000000000000004, M21=0.5000000000000004, M22=0.8660254037844384, SizingMethod=auto expand)";}
+#div2 {-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=2, M12=0, M21=0, M22=2, SizingMethod=auto expand)";}
+#div3 {-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1, M12=0.5773502691896265, M21=0.3639702342662022, M22=1, SizingMethod=auto expand)";}
+ 
+    
+#rotate1,#rotatey1
+{
+border:1px solid #000000;
+background:red;
+margin:10px;
+opacity:0.7;
+}
+</style>
+<h1>CSS3 <span class="color_h1">3D 转换</span>
+</h1>
+<hr />
+<h2>3D Transforms</h2>
+
+<p>CSS3 允许您使用 3D 转换来对元素进行格式化。</p>
+<p>在本章中，您将学到其中的一些 3D 转换方法：</p>
+<ul>
+<li>rotateX()</li>
+	<li>rotateY()</li>
+</ul>
+<p class="example">点击下面的元素，来查看 2D 转换与 3D 转换之间的不同之处：</p>
+		<div style="height:80px;">
+			<div onclick="rotateDIV()" id="rotate1" class="animated_div">2D rotate</div>
+			<div onclick="rotateYDIV()" id="rotatey1" class="animated_div" style="-webkit-transform: rotateY(180deg);">3D rotate</div>
+		</div>
+<br /><hr />
+<h2>浏览器支持</h2>
+<table class="browsersupport">
+<tr>
+<th>属性</th>
+		<th colspan="5">浏览器支持</th>
+	</tr>
+<tr>
+<td class="bsProperty">transform</td>
+		<td class="bsIE"></td>						
+		<td class="bsFirefox"></td>
+		<td class="bsPreChrome"></td>
+		<td class="bsPreSafari"></td>		
+		<td class="bsNoOpera"></td>				
+	</tr>
+</table>
+<p>Internet Explorer 10 和 Firefox 支持  3D 转换.</p>
+<p>Chrome 和 Safari 必须添加前缀 -webkit-.</p>
+<p>Opera 还不支持 3D 转换(支持 <a href="css3-2dtransforms.html">2D 转换</a> ).</p>
+<hr />
+<h2>rotateX() 方法</h2>
+
+<img src="/images/transform_rotatex.gif" alt="Rotate X"><p>rotateX()方法，围绕其在一个给定度数X轴旋转的元素。</p>
+
+<div class="example">
+<img style="float:right" src="/images/incompatible_opera2020.gif" align="middle" title="Opera" alt="Opera" width="20" height="20"><img style="float:right" src="/images/compatible_safari2020.gif" align="middle" title="Safari" alt="Safari" width="20" height="20"><img style="float:right" src="/images/compatible_chrome2020.gif" align="middle" title="Chrome" alt="Chrome" width="20" height="20"><img style="float:right" src="/images/compatible_firefox2020.gif" align="middle" title="Firefox" alt="Firefox" width="20" height="20"><img style="float:right" src="/images/compatible_ie2020.gif" align="middle" title="Internet Explorer" alt="Internet Explorer" width="20" height="20"><h2 class="example">实例</h2>
+<div class="example_code notranslate">
+    div<br />
+	{<br />
+	transform: rotateX(120deg);<br />
+	-webkit-transform: rotateX(120deg); /* Safari and Chrome */<br />
+	}	
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=trycss3_transform_rotateX">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2> rotateY() 方法</h2>
+<img src="/images/transform_rotatey.gif" alt="Rotate Y"><p>rotateY()方法，围绕其在一个给定度数Y轴旋转的元素。</p>
+<div class="example">
+<img style="float:right" src="/images/incompatible_opera2020.gif" align="middle" title="Opera" alt="Opera" width="20" height="20"><img style="float:right" src="/images/compatible_safari2020.gif" align="middle" title="Safari" alt="Safari" width="20" height="20"><img style="float:right" src="/images/compatible_chrome2020.gif" align="middle" title="Chrome" alt="Chrome" width="20" height="20"><img style="float:right" src="/images/compatible_firefox2020.gif" align="middle" title="Firefox" alt="Firefox" width="20" height="20"><img style="float:right" src="/images/compatible_ie2020.gif" align="middle" title="Internet Explorer" alt="Internet Explorer" width="20" height="20"><h2 class="example">实例</h2>
+<div class="example_code notranslate">
+    div<br />
+	{<br />
+	transform: rotateY(130deg);<br />
+	-webkit-transform: rotateY(130deg); /* Safari and Chrome */<br />
+	}	
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=trycss3_transform_rotateY">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>转换属性</h2>
+
+<p>下表列出了所有的转换属性：</p>
+<table class="reference">
+
+<tbody><tr>
+<th style="width:25%;">属性</th>
+<th>描述</th>
+<th style="width:5%;">CSS</th>
+</tr>
+
+<tr>
+<td><a href="/cssref/css3-pr-transform.html" title="CSS3 transform 属性">transform</a></td>
+<td>向元素应用 2D 或 3D 转换。</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td><a href="/cssref/css3-pr-transform-origin.html" title="CSS3 transform-origin 属性">transform-origin</a></td>
+<td>允许你改变被转换元素的位置。</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td><a href="/cssref/css3-pr-transform-style.html" title="CSS3 transform-style 属性">transform-style</a></td>
+<td>规定被嵌套元素如何在 3D 空间中显示。</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td><a href="/cssref/css3-pr-perspective.html" title="CSS3 perspective 属性">perspective</a></td>
+<td>规定 3D 元素的透视效果。</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td><a href="/cssref/css3-pr-perspective-origin.html" title="CSS3 perspective-origin 属性">perspective-origin</a></td>
+<td>规定 3D 元素的底部位置。</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td><a href="/cssref/css3-pr-backface-visibility.html" title="CSS3 backface-visibility 属性">backface-visibility</a></td>
+<td>定义元素在不面对屏幕时是否可见。</td>
+<td>3</td>
+</tr>
+
+</tbody></table>
+<h2>3D 转换方法</h2>
+
+<table class="reference">
+
+<tbody><tr>
+<th style="width:25%;">函数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>matrix3d(<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<br /><i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>)</td>
+<td>定义 3D 转换，使用 16 个值的 4x4 矩阵。</td>
+</tr>
+
+<tr>
+<td>translate3d(<i>x</i>,<i>y</i>,<i>z</i>)</td>
+<td>定义 3D 转化。</td>
+</tr>
+
+<tr>
+<td>translateX(<i>x</i>)</td>
+<td>定义 3D 转化，仅使用用于 X 轴的值。</td>
+</tr>
+
+<tr>
+<td>translateY(<i>y</i>)</td>
+<td>定义 3D 转化，仅使用用于 Y 轴的值。</td>
+</tr>
+
+<tr>
+<td>translateZ(<i>z</i>)</td>
+<td>定义 3D 转化，仅使用用于 Z 轴的值。</td>
+</tr>
+
+<tr>
+<td>scale3d(<i>x</i>,<i>y</i>,<i>z</i>)</td>
+<td>定义 3D 缩放转换。</td>
+</tr>
+
+<tr>
+<td>scaleX(<i>x</i>)</td>
+<td>定义 3D 缩放转换，通过给定一个 X 轴的值。</td>
+</tr>
+
+<tr>
+<td>scaleY(<i>y</i>)</td>
+<td>定义 3D 缩放转换，通过给定一个 Y 轴的值。</td>
+</tr>
+
+<tr>
+<td>scaleZ(<i>z</i>)</td>
+<td>定义 3D 缩放转换，通过给定一个 Z 轴的值。</td>
+</tr>
+
+<tr>
+<td>rotate3d(<i>x</i>,<i>y</i>,<i>z</i>,<i>angle</i>)</td>
+<td>定义 3D 旋转。</td>
+</tr>
+
+<tr>
+<td>rotateX(<i>angle</i>)</td>
+<td>定义沿 X 轴的 3D 旋转。</td>
+</tr>
+
+<tr>
+<td>rotateY(<i>angle</i>)</td>
+<td>定义沿 Y 轴的 3D 旋转。</td>
+</tr>
+
+<tr>
+<td>rotateZ(<i>angle</i>)</td>
+<td>定义沿 Z 轴的 3D 旋转。</td>
+</tr>
+
+<tr>
+<td>perspective(<i>n</i>)</td>
+<td>定义 3D 转换元素的透视视图。</td>
+</tr>
+</tbody></table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/css3/css3-2dtransforms.html" rel="prev"> CSS3 2D 转换</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/css3/css3-transitions.html" rel="next">CSS3 过渡</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.134 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:00:52 -->
+
+<!-- super cache -->

@@ -1,0 +1,375 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Java 数据结构 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Java Properties 接口' href='http://www.w3cschool.cc/java/java-properties-class.html' />
+<link rel='next' title='MongoDB Limit与Skip方法' href='http://www.w3cschool.cc/mongodb/mongodb-limit-skip.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/java/java-data-structures.html' />
+<meta name="keywords" content="Java 数据结构,Java 教程">
+<meta name="description" content="Java 数据结构 Java工具包提供了强大的数据结构。在Java中的数据结构主要包括以下几种接口和类：  	 		枚举（Enumeration） 	 		位集合（BitSet） 	 		向量（Vector） 	 		栈（Stack） 	 		字典（Dictionary） 	 		哈希表（Hashtable） 	 		属性（Properties）  以上这些类是传统遗留的，在Java2中引入了一种新的框架-集合框架(Collection..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Java 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-tutorial.html" >
+	Java 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-intro.html" >
+	Java 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-environment-setup.html" >
+	Java开发环境配置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-syntax.html" >
+	Java基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-object-classes.html" >
+	Java对象和类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-datatypes.html" >
+	Java基本数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-variable-types.html" >
+	Java变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-modifier-types.html" >
+	Java修饰符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-operators.html" >
+	Java运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-loop.html" >
+	Java循环结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-if-else-switch.html" >
+	Java分支结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-number.html" >
+	Java Number类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-character.html" >
+	Java Character类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-string.html" >
+	Java String类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-stringbuffer.html" >
+	Java StringBuffer和StringBuilder类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-array.html" >
+	Java 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-date-time.html" >
+	Java日期时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-regular-expressions.html" >
+	Java正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-methods.html" >
+	Java 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-files-io.html" >
+	Java 流(Stream)、文件(File)和IO	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-exceptions.html" >
+	Java 异常处理	</a>
+	<br><h2 class="left">Java <span class="left_h2">面向对象</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-inheritance.html" >
+	Java 继承	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-override-overload.html" >
+	Java 重写(Override)与重载(Overload)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-polymorphism.html" >
+	Java 多态	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-abstraction.html" >
+	Java 抽象类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-encapsulation.html" >
+	java 封装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-interfaces.html" >
+	Java 接口	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-package.html" >
+	Java 包(package)	</a>
+	<br><h2 class="left">Java <span class="left_h2">高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-data-structures.html" >
+	Java 数据结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-collections.html" >
+	Java 集合框架	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-generics.html" >
+	Java 泛型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-serialization.html" >
+	Java序列化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-networking.html" >
+	Java 网络编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-sending-email.html" >
+	Java 发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-multithreading.html" >
+	Java 多线程编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-applet-basics.html" >
+	Java Applet基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-documentation.html" >
+	Java 文档注释	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-properties-class.html" rel="prev"> Java Properties 接口</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-collections.html" rel="next">Java 集合框架</a> &raquo;</div>
+	</div>
+
+	<h1>Java 数据结构</h1>
+<p>Java工具包提供了强大的数据结构。在Java中的数据结构主要包括以下几种接口和类：</p>
+<ul>
+	<li>
+		枚举（Enumeration）</li>
+	<li>
+		位集合（BitSet）</li>
+	<li>
+		向量（Vector）</li>
+	<li>
+		栈（Stack）</li>
+	<li>
+		字典（Dictionary）</li>
+	<li>
+		哈希表（Hashtable）</li>
+	<li>
+		属性（Properties）</li>
+</ul>
+<p>以上这些类是传统遗留的，在Java2中引入了一种新的框架-集合框架(Collection)，我们后面再讨论。</p>
+<hr />
+<h2>
+枚举（Enumeration）</h2>
+
+<p>枚举（Enumeration）接口虽然它本身不属于数据结构,但它在其他数据结构的范畴里应用很广。 枚举（The Enumeration）接口定义了一种从数据结构中取回连续元素的方式。
+</p><p>例如，枚举定义了一个叫nextElement 的方法，该方法用来得到一个包含多元素的数据结构的下一个元素。 
+</p><p>关于枚举接口的更多信息，<a href="/java/java-enumeration-interface.html" target="_blank">请参见枚举（Enumeration）</a>。</p>
+<hr />
+<h2>
+位集合（BitSet）</h2>
+
+<p>
+位集合类实现了一组可以单独设置和清除的位或标志。</p><p>
+该类在处理一组布尔值的时候非常有用，你只需要给每个值赋值一"位"，然后对位进行适当的设置或清除，就可以对布尔值进行操作了。</p><p>
+关于该类的更多信息，<a href="/java/java-bitset-class.html" target="_blank">请参见位集合（BitSet）</a>。</p>
+<hr />
+<h2>
+向量（Vector）</h2>
+
+
+<p>向量（Vector）类和传统数组非常相似，但是Vector的大小能根据需要动态的变化。</p><p>
+和数组一样，Vector对象的元素也能通过索引访问。</p><p>
+使用Vector类最主要的好处就是在创建对象的时候不必给对象指定大小，它的大小会根据需要动态的变化。</p><p>
+关于该类的更多信息，<a href="/java/java-vector-class.html" target="_blank">请参见向量(Vector)</a></p>
+<hr />
+<h2>
+栈（Stack）</h2>
+
+<p>栈（Stack）实现了一个后进先出（LIFO）的数据结构。</p><p>
+你可以把栈理解为对象的垂直分布的栈，当你添加一个新元素时，就将新元素放在其他元素的顶部。</p><p>
+当你从栈中取元素的时候，就从栈顶取一个元素。换句话说，最后进栈的元素最先被取出。</p><p>
+关于该类的更多信息，<a href="/java/java-stack-class.html" target="_blank">请参见栈（Stack）</a>。</p>
+<hr />
+<h2>
+字典（Dictionary）</h2>
+
+<p>字典（Dictionary） 类是一个抽象类，它定义了键映射到值的数据结构。</p><p>
+当你想要通过特定的键而不是整数索引来访问数据的时候，这时候应该使用Dictionary。</p><p>
+由于Dictionary类是抽象类，所以它只提供了键映射到值的数据结构，而没有提供特定的实现。</p><p>
+关于该类的更多信息，<a href="/java/java-dictionary-class.html" target="_blank">请参见字典（ Dictionary）</a>。</p>
+<hr />
+<h2>
+哈希表（Hashtable）</h2>
+
+<p>Hashtable类提供了一种在用户定义键结构的基础上来组织数据的手段。</p><p>
+例如，在地址列表的哈希表中，你可以根据邮政编码作为键来存储和排序数据，而是通过人的名字。</p><p>
+哈希表键的具体含义完全取决于哈希表的使用情景和它包含的数据。</p><p>
+关于该类的更多信息，<a href="/java/java-hashTable-class.html" target="_blank">请参见哈希表（HashTable）</a>。</p>
+<hr />
+<h2>
+属性（Properties）</h2>
+
+<p>Properties 继承于 Hashtable.Properties 类表示了一个持久的属性集.属性列表中每个键及其对应值都是一个字符串。</p><p>
+Properties 类被许多Java类使用。例如，在获取环境变量时它就作为System.getProperties()方法的返回值。</p><p>
+关于该类的更多信息，<a href="/java/java-properties-class.html" target="_blank">请参见属性（Properties）</a>。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-properties-class.html" rel="prev"> Java Properties 接口</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-collections.html" rel="next">Java 集合框架</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.187 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:13:51 -->
+
+<!-- super cache -->

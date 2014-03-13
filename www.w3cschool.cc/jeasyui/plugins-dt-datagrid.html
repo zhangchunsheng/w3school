@@ -1,0 +1,1593 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery EasyUI 数据网格与树插件 &#8211; Datagrid 数据网格 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery EasyUI 窗口插件 &#8211; Messager 消息框' href='http://www.w3cschool.cc/jeasyui/plugins-window-messager.html' />
+<link rel='next' title='jQuery EasyUI 数据网格与树插件 &#8211; Propertygrid 属性网格' href='http://www.w3cschool.cc/jeasyui/plugins-dt-propertygrid.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jeasyui/plugins-dt-datagrid.html' />
+<meta name="keywords" content="jQuery EasyUI 数据网格与树插件 &#8211; Datagrid 数据网格,jQuery EasyUI教程">
+<meta name="description" content="pre { white-space: pre-wrap; }   jQuery EasyUI 数据网格与树插件 - Datagrid 数据网格   jQuery EasyUI 插件   扩展自 $.fn.panel.defaults。通过 $.fn.datagrid.defaults 重写默认的 defaults。 数据网格（datagrid）以表格格式显示数据，并为选择、排序、分组和编辑数据提供了丰富的支持。数据网格（datagrid..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>jQuery EasyUI教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html" >
+	jQuery EasyUI 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-intro.html" >
+	jQuery EasyUI 简介	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 应用</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud1.html" >
+	jEasyUI 创建 CRUD 应用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud2.html" >
+	jEasyUI 创建 CRUD 数据网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud3.html" >
+	jEasyUI 表单的 CRUD 应用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-rssreader.html" >
+	jEasyUI  创建 RSS 阅读器	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 拖放</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-basic.html" >
+	jEasyUI 基本的拖动和放置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-shopping.html" >
+	jEasyUI 创建拖放的购物车	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-timetable.html" >
+	jEasyUI 创建学校课程表	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 菜单与按钮</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-menu.html" >
+	jEasyUI 创建简单的菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-linkbutton.html" >
+	jEasyUI 创建链接按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-menubutton.html" >
+	jEasyUI 创建菜单按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-splitbutton.html" >
+	jEasyUI 创建分割按钮	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 布局</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-layout.html" >
+	jEasyUI 创建边框布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-panel.html" >
+	jEasyUI 创建复杂布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-accordion.html" >
+	jEasyUI 创建折叠面板	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs1.html" >
+	jEasyUI 创建标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs2.html" >
+	jEasyUI 动态添加标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs3.html" >
+	jEasyUI 添加自动播放标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-xp.html" >
+	jEasyUI 创建 XP 风格左侧面板	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 数据网格</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid1.html" >
+	jEasyUI 转换 HTML 表格为数据网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid3.html" >
+	jEasyUI 取得选中行数据	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid24.html" >
+	jEasyUI 添加查询功能	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid4.html" >
+	jEasyUI 添加工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid19.html" >
+	jEasyUI 创建复杂工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid5.html" >
+	jEasyUI 设置冻结列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid6.html" >
+	jEasyUI 动态改变列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid7.html" >
+	jEasyUI 格式化列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid8.html" >
+	jEasyUI 设置排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid14.html" >
+	jEasyUI 自定义排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid9.html" >
+	jEasyUI 创建列组合	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid10.html" >
+	jEasyUI 添加复选框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid11.html" >
+	jEasyUI 自定义分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid12.html" >
+	jEasyUI 启用行内编辑	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid23.html" >
+	jEasyUI 扩展编辑器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid15.html" >
+	jEasyUI 列运算	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid13.html" >
+	jEasyUI 合并单元格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid16.html" >
+	jEasyUI 创建自定义视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid17.html" >
+	jEasyUI 创建页脚摘要	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid18.html" >
+	jEasyUI 条件设置行背景颜色	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid20.html" >
+	jEasyUI 创建属性网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid21.html" >
+	jEasyUI 扩展行显示细节	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid22.html" >
+	jEasyUI 创建子网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid27.html" >
+	jEasyUI 显示海量数据	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid2.html" >
+	jEasyUI 添加分页组件	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 窗口</h2>
+<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win1.html">
+	jEasyUI 创建简单窗口	</a>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win2.html" >
+	jEasyUI 自定义窗口工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win3.html" >
+	jEasyUI 窗口与布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-dlg1.html" >
+	jEasyUI 创建对话框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-dlg2.html" >
+	jEasyUI 自定义对话框	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 树形菜单</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree1.html" >
+	jEasyUI 使用标记创建树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree2.html" >
+	jEasyUI 创建异步树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree3.html" >
+	jEasyUI 树形菜单添加节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree4.html" >
+	jEasyUI 创建带复选框的树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree5.html" >
+	jEasyUI 树形菜单拖放控制	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree6.html" >
+	jEasyUI 树形菜单加载父/子节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid1.html" >
+	jEasyUI 创建基础树形网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid2.html" >
+	jEasyUI 创建复杂树形网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid3.html" >
+	jEasyUI 树形网格动态加载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid4.html" >
+	jEasyUI 树形网格添加分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid5.html" >
+	jEasyUI 树形网格惰性加载节点	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 表单</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form1.html" >
+	jEasyUI 创建异步提交表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form3.html" >
+	jEasyUI 表单验证	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form2.html" >
+	jEasyUI 创建树形下拉框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form4.html" >
+	jEasyUI 格式化下拉框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form5.html" >
+	jEasyUI 过滤下拉数据网格	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 参考手册</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-ref-plugins.html" >
+	jQuery EasyUI 插件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-ref-extension.html" >
+	jQuery EasyUI 扩展	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jeasyui/plugins-window-messager.html" rel="prev"> jQuery EasyUI 窗口插件 &#8211; Messager 消息框</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jeasyui/plugins-dt-propertygrid.html" rel="next">jQuery EasyUI 数据网格与树插件 &#8211; Propertygrid 属性网格</a> &raquo;</div>
+	</div>
+
+	<style>
+pre {
+white-space: pre-wrap;
+}
+</style>
+
+<h1>jQuery EasyUI 数据网格与树插件 - <span class="color_h1">Datagrid 数据网格</span></h1>
+<hr />
+<a href="jeasyui-ref-plugins.html"><img class="navup" src="/images/up.gif" alt="jQuery EasyUI 插件"> jQuery EasyUI 插件</a>
+<hr />
+<div class="tutintro">
+<p>扩展自 $.fn.panel.defaults。通过 $.fn.datagrid.defaults 重写默认的 defaults。</p>
+<p>数据网格（datagrid）以表格格式显示数据，并为选择、排序、分组和编辑数据提供了丰富的支持。数据网格（datagrid）的设计目的是为了减少开发时间，且不要求开发人员具备指定的知识。它是轻量级的，但是功能丰富。它的特性包括单元格合并，多列页眉，冻结列和页脚，等等。</p>
+</div>
+<img src="/wp-content/uploads/2013/12/datagrid.png"/>
+<h2>依赖</h2>
+<ul>
+<li>panel</li>
+<li>resizable</li>
+<li>linkbutton</li>
+<li>pagination</li>
+</ul>
+
+<h2>用法</h2>
+<p>从已有的表格元素创建数据网格（datagrid），在 html 中定义列、行及数据。</p>
+<pre style="color:#006600">
+&lt;table class="easyui-datagrid"&gt;
+    &lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th data-options="field:'code'"&gt;Code&lt;/th&gt;
+			&lt;th data-options="field:'name'"&gt;Name&lt;/th&gt;
+			&lt;th data-options="field:'price'"&gt;Price&lt;/th&gt;
+		&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;001&lt;/td&gt;&lt;td&gt;name1&lt;/td&gt;&lt;td&gt;2323&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;002&lt;/td&gt;&lt;td&gt;name2&lt;/td&gt;&lt;td&gt;4612&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+<p>通过 &lt;table&gt; 标记创建数据网格（datagrid）。嵌套的 &lt;th&gt; 标签定义表格中的列。</p>
+<pre style="color:#006600">
+&lt;table class="easyui-datagrid" style="width:400px;height:250px"
+    data-options="url:'datagrid_data.json',fitColumns:true,singleSelect:true"&gt;
+    &lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th data-options="field:'code',width:100"&gt;Code&lt;/th&gt;
+			&lt;th data-options="field:'name',width:100"&gt;Name&lt;/th&gt;
+			&lt;th data-options="field:'price',width:100,align:'right'"&gt;Price&lt;/th&gt;
+		&lt;/tr&gt;
+    &lt;/thead&gt;
+&lt;/table&gt;
+</pre>
+<p>也可以使用 javascript 创建数据网格（datagrid）。</p>
+<pre style="color:#006600">
+&lt;table id="dg"&gt;&lt;/table&gt;
+</pre>
+<pre style="color:#006600">
+$('#dg').datagrid({
+    url:'datagrid_data.json',
+    columns:[[
+		{field:'code',title:'Code',width:100},
+		{field:'name',title:'Name',width:100},
+		{field:'price',title:'Price',width:100,align:'right'}
+    ]]
+});
+</pre>
+<p>通过一些参数查询数据。</p>
+<pre style="color:#006600">
+$('#dg').datagrid('load', {
+    name: 'easyui',
+    address: 'ho'
+});
+</pre>
+<p>在向服务器改变数据之后，更新前台数据。</p>
+<pre style="color:#006600">
+$('#dg').datagrid('reload');    // reload the current page data
+</pre>
+
+<h2>数据网格（DataGrid）属性</h2>
+<p>该属性扩展自面板（panel），下面是为数据网格（datagrid）添加的属性。</p>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">类型</th>
+    <th align="left">描述</th>
+	<th align="left">默认值</th>
+</tr>
+<tr>
+	<td>columns</td>
+    <td>array</td>
+    <td>数据网格（datagrid）的列（column）的配置对象，更多细节请参见列（column）属性。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>frozenColumns</td>
+    <td>array</td>
+    <td>和列（column）属性一样，但是这些列将被冻结在左边。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>fitColumns</td>
+    <td>boolean</td>
+    <td>设置为 true，则会自动扩大或缩小列的尺寸以适应网格的宽度并且防止水平滚动。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>resizeHandle</td>
+    <td>string</td>
+    <td>调整列的位置，可用的值有：'left'、'right'、'both'。当设置为 'right' 时，用户可通过拖拽列头部的右边缘来调整列。<br />
+	该属性自版本 1.3.2 起可用。
+	</td>
+	<td>right</td>
+</tr>
+<tr>
+	<td>autoRowHeight</td>
+    <td>boolean</td>
+    <td>定义是否设置基于该行内容的行高度。设置为 false，则可以提高加载性能。</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>toolbar</td>
+    <td>array,selector</td>
+    <td>数据网格（datagrid）面板的头部工具栏。可能的值：<br />
+	1、数组，每个工具选项与链接按钮（linkbutton）一样。<br />
+	2、选择器，只是工具栏。<br />
+	<br />
+	在 &lt;div&gt; 标签内定义工具栏：
+<pre style="color:#006600">
+$('#dg').datagrid({
+	toolbar: '#tb'
+});
+&lt;div id="tb"&gt;
+&lt;a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true"&gt;&lt;/a&gt;
+&lt;a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-help',plain:true"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+	通过数组定义工具栏：
+<pre style="color:#006600">
+$('#dg').datagrid({
+	toolbar: [{
+		iconCls: 'icon-edit',
+		handler: function(){alert('edit')}
+	},'-',{
+		iconCls: 'icon-help',
+		handler: function(){alert('help')}
+	}]
+});
+</pre>
+	</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>striped</td>
+    <td>boolean</td>
+    <td>设置为 true，则把行条纹化。（即奇偶行使用不同背景色）</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>method</td>
+    <td>string</td>
+    <td>请求远程数据的方法（method）类型。</td>
+	<td>post</td>
+</tr>
+<tr>
+	<td>nowrap</td>
+    <td>boolean</td>
+    <td>设置为 true，则把数据显示在一行里。设置为 true 可提高加载性能。</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>idField</td>
+    <td>string</td>
+    <td>指示哪个字段是标识字段。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>url</td>
+    <td>string</td>
+    <td>从远程站点请求数据的 URL。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>data</td>
+    <td>array,object</td>
+    <td>要加载的数据。该属性自版本 1.3.2 起可用。<br />
+	代码实例：
+<pre style="color:#006600">
+$('#dg').datagrid({
+	data: [
+		{f1:'value11', f2:'value12'},
+		{f1:'value21', f2:'value22'}
+	]
+});
+</pre>
+	</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>loadMsg</td>
+    <td>string</td>
+    <td>当从远程站点加载数据时，显示的提示消息。</td>
+	<td>Processing, please wait …</td>
+</tr>
+<tr>
+	<td>pagination</td>
+    <td>boolean</td>
+    <td>设置为 true，则在数据网格（datagrid）底部显示分页工具栏。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>rownumbers</td>
+    <td>boolean</td>
+    <td>设置为 true，则显示带有行号的列。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>singleSelect</td>
+    <td>boolean</td>
+    <td>设置为 true，则只允许选中一行。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>checkOnSelect</td>
+    <td>boolean</td>
+    <td>如果设置为 true，当用户点击某一行时，则会选中/取消选中复选框。如果设置为 false 时，只有当用户点击了复选框时，才会选中/取消选中复选框。<br />
+	该属性自版本 1.3 起可用。
+	</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>selectOnCheck</td>
+    <td>boolean</td>
+    <td>如果设置为 true，点击复选框将会选中该行。如果设置为 false，选中该行将不会选中复选框。<br />
+	该属性自版本 1.3 起可用。
+	</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>pagePosition</td>
+    <td>string</td>
+    <td>定义分页栏的位置。可用的值有：'top'、'bottom'、'both'。<br />
+	该属性自版本 1.3 起可用。
+	</td>
+	<td>bottom</td>
+</tr>
+<tr>
+	<td>pageNumber</td>
+    <td>number</td>
+    <td>当设置了 pagination 属性时，初始化页码。</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>pageSize</td>
+    <td>number</td>
+    <td>当设置了 pagination 属性时，初始化页面尺寸。</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>pageList</td>
+    <td>array</td>
+    <td>当设置了 pagination 属性时，初始化页面尺寸的选择列表。</td>
+	<td>[10,20,30,40,50]</td>
+</tr>
+<tr>
+	<td>queryParams</td>
+    <td>object</td>
+    <td>当请求远程数据时，发送的额外参数。<br />
+	代码实例：
+<pre style="color:#006600">
+$('#dg').datagrid({
+	queryParams: {
+		name: 'easyui',
+		subject: 'datagrid'
+	}
+});
+</pre>
+	</td>
+	<td>{}</td>
+</tr>
+<tr>
+	<td>sortName</td>
+    <td>string</td>
+    <td>定义可以排序的列。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>sortOrder</td>
+    <td>string</td>
+    <td>定义列的排序顺序，只能用 'asc' 或 'desc'。</td>
+	<td>asc</td>
+</tr>
+<tr>
+	<td>multiSort</td>
+    <td>boolean</td>
+    <td>定义是否启用多列排序。该属性自版本 1.3.4 起可用。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>remoteSort</td>
+    <td>boolean</td>
+    <td>定义是否从服务器排序数据。</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>showHeader</td>
+    <td>boolean</td>
+    <td>定义是否显示行的头部。</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>showFooter</td>
+    <td>boolean</td>
+    <td>定义是否显示行的底部。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>scrollbarSize</td>
+    <td>number</td>
+    <td>滚动条宽度（当滚动条是垂直的时候）或者滚动条的高度（当滚动条是水平的时候）。</td>
+	<td>18</td>
+</tr>
+<tr>
+	<td>rowStyler</td>
+    <td>function</td>
+    <td>返回例如 'background:red' 的样式。该函数需要两个参数：<br />
+	rowIndex：行的索引，从 0 开始。<br />
+	rowData：该行相应的记录。<br />
+	<br />
+	代码实例：
+<pre style="color:#006600">
+$('#dg').datagrid({
+	rowStyler: function(index,row){
+		if (row.listprice&gt;80){
+			return 'background-color:#6293BB;color:#fff;'; // return inline style
+			// the function can return predefined css class and inline style
+			// return {class:'r1', style:{'color:#fff'}};	
+		}
+	}
+});
+</pre>
+	</td>
+	<td></td>
+</tr>
+<tr>
+	<td>loader</td>
+    <td>function</td>
+    <td>定义如何从远程服务器加载数据。返回 false 则取消该动作。该函数有下列参数：<br />
+	param：要传递到远程服务器的参数对象。<br />
+	success(data)：当检索数据成功时调用的回调函数。<br />
+	error()：当检索数据失败时调用的回调函数。<br />
+	</td>
+	<td>json loader</td>
+</tr>
+<tr>
+	<td>loadFilter</td>
+    <td>function</td>
+    <td>返回要显示的过滤数据。该函数有一个参数 'data' ，表示原始数据。您可以把原始数据变成标准数据格式。该函数必须返回标准数据对象，含有 'total' 和 'rows' 属性。<br />
+	代码实例：
+<pre style="color:#006600">
+// removing 'd' object from asp.net web service json output
+$('#dg').datagrid({
+	loadFilter: function(data){
+		if (data.d){
+			return data.d;
+		} else {
+			return data;
+		}
+	}
+});
+</pre>
+	</td>
+	<td></td>
+</tr>
+<tr>
+	<td>editors</td>
+    <td>object</td>
+    <td>定义编辑行时的编辑器。</td>
+	<td>predefined editors</td>
+</tr>
+<tr>
+	<td>view</td>
+    <td>object</td>
+    <td>定义数据网格（datagrid）的视图。</td>
+	<td>default view</td>
+</tr>
+</table>
+
+<h2>列（Column）属性</h2>
+<p>数据网格（DataGrid） 的列（Column）是一个数组对象，它的每个元素也是一个数组。元素数组的元素是一个配置对象，它定义了每个列的字段。</p>
+<p>代码实例：</p>
+<pre style="color:#006600">
+columns:[[
+    {field:'itemid',title:'Item ID',rowspan:2,width:80,sortable:true},
+    {field:'productid',title:'Product ID',rowspan:2,width:80,sortable:true},
+    {title:'Item Details',colspan:4}
+],[
+    {field:'listprice',title:'List Price',width:80,align:'right',sortable:true},
+    {field:'unitcost',title:'Unit Cost',width:80,align:'right',sortable:true},
+    {field:'attr1',title:'Attribute',width:100},
+    {field:'status',title:'Status',width:60}
+]]
+</pre>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">类型</th>
+    <th align="left">描述</th>
+	<th align="left">默认值</th>
+</tr>
+<tr>
+	<td>title</td>
+    <td>string</td>
+    <td>列的标题文本。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>field</td>
+    <td>string</td>
+    <td>列的字段名。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>width</td>
+    <td>number</td>
+    <td>列的宽度。如果未定义，则宽度会自动扩展以适应它的内容。没有定义宽度将会降低性能。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>rowspan</td>
+    <td>number</td>
+    <td>指示一个单元格占据多少行。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>colspan</td>
+    <td>number</td>
+    <td>指示一个单元格占据多少列。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>align</td>
+    <td>string</td>
+    <td>指示如何对齐该列的数据，可以用 'left'、'right'、'center'。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>halign</td>
+    <td>string</td>
+    <td>指示如何对齐该列的头部，可能的值：'left'、'right'、'center'。如果没有分配值，则头部对齐方式将与通过 'align' 属性定义的数据对齐方式一致。该属性自版本 1.3.2 起可用。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>sortable</td>
+    <td>boolean</td>
+    <td>设置为 true，则允许该列被排序。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>order</td>
+    <td>string</td>
+    <td>默认的排序顺序，只能用 'asc' 或 'desc'。该属性自版本 1.3.2 起可用。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>resizable</td>
+    <td>boolean</td>
+    <td>设置为 true，则允许该列可调整尺寸。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>fixed</td>
+    <td>boolean</td>
+    <td>设置为 true，则当 'fitColumns' 设置为 true 时放置调整宽度。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>hidden</td>
+    <td>boolean</td>
+    <td>设置为 true，则隐藏该列。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>checkbox</td>
+    <td>boolean</td>
+    <td>设置为 true，则显示复选框。复选框有固定宽度。</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>formatter</td>
+    <td>function</td>
+    <td>单元格的格式化函数，需要三个参数：<br /> 
+	value：字段的值。<br />
+	rowData：行的记录数据。<br />
+	rowIndex：行的索引。<br />
+	<br />
+	代码实例：
+<pre style="color:#006600">
+$('#dg').datagrid({
+	columns:[[
+		{field:'userId',title:'User', width:80,
+			formatter: function(value,row,index){
+				if (row.user){
+					return row.user.name;
+				} else {
+					return value;
+				}
+			}
+		}
+	]]
+});
+</pre>
+	</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>styler</td>
+    <td>function</td>
+    <td>单元格的样式函数，返回样式字符串来自定义该单元格的样式，例如 'background:red' 。该函数需要三个参数：<br />
+	value：字段的值。<br />
+	rowData：行的记录数据。<br />
+	rowIndex：行的索引。<br />
+	<br />
+	代码实例：
+<pre style="color:#006600">
+$('#dg').datagrid({
+	columns:[[
+		{field:'listprice',title:'List Price', width:80, align:'right',
+			styler: function(value,row,index){
+				if (value &lt; 20){
+					return 'background-color:#ffee00;color:red;';
+					// the function can return predefined css class and inline style
+					// return {class:'c1',style:'color:red'}
+				}
+			}
+		}
+	]]
+});
+</pre>
+	</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>sorter</td>
+    <td>function</td>
+    <td>用于本地排序的自定义字段的排序函数，需要两个参数：<br />
+	a：第一个字段值。<br />
+	b：第二个字段值。<br />
+	<br />
+	代码实例：
+<pre style="color:#006600">
+$('#dg').datagrid({
+	remoteSort: false,
+	columns: [[
+		{field:'date',title:'Date',width:80,sortable:true,align:'center',  
+			sorter:function(a,b){  
+				a = a.split('/');  
+				b = b.split('/');  
+				if (a[2] == b[2]){  
+					if (a[0] == b[0]){  
+						return (a[1]&gt;b[1]?1:-1);  
+					} else {  
+						return (a[0]&gt;b[0]?1:-1);  
+					}  
+				} else {  
+					return (a[2]&gt;b[2]?1:-1);  
+				}  
+			}  
+		}
+	]]
+});
+</pre>
+	</td>
+	<td>undefined</td>
+</tr>
+<tr>
+	<td>editor</td>
+    <td>string,object</td>
+    <td>指示编辑类型。当是字符串（string）时则指编辑类型，当是对象（object）时则包含两个属性：<br />
+	type：字符串，编辑类型，可能的类型：text、textarea、checkbox、numberbox、validatebox、datebox、combobox、combotree。<br />
+	options：对象，编辑类型对应的编辑器选项。
+	</td>
+	<td>undefined</td>
+</tr>
+</table>
+
+<h2>编辑器（Editor）</h2>
+<p>通过 $.fn.datagrid.defaults.editors 重写默认的 defaults。</p>
+<p>每个编辑器有下列行为：</p>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">参数</th>
+    <th align="left">描述</th>
+</tr>
+<tr>
+	<td>init</td>
+    <td>container, options</td>
+    <td>初始化编辑器并且返回目标对象。</td>
+</tr>
+<tr>
+	<td>destroy</td>
+    <td>target</td>
+    <td>如果必要就销毁编辑器。</td>
+</tr>
+<tr>
+	<td>getValue</td>
+    <td>target</td>
+    <td>从编辑器的文本获取值。</td>
+</tr>
+<tr>
+	<td>setValue</td>
+    <td>target , value</td>
+    <td>给编辑器设置值。</td>
+</tr>
+<tr>
+	<td>resize</td>
+    <td>target , width</td>
+    <td>如果必要就调整编辑器的尺寸。</td>
+</tr>
+</table>
+<p>例如，文本编辑器（text editor）定义如下：</p>
+<pre style="color:#006600">
+$.extend($.fn.datagrid.defaults.editors, {
+    text: {
+		init: function(container, options){
+			var input = $('&lt;input type="text" class="datagrid-editable-input"&gt;').appendTo(container);
+			return input;
+		},
+		destroy: function(target){
+			$(target).remove();
+		},
+		getValue: function(target){
+			return $(target).val();
+		},
+		setValue: function(target, value){
+			$(target).val(value);
+		},
+		resize: function(target, width){
+			$(target)._outerWidth(width);
+		}
+    }
+});
+</pre>
+
+<h2>数据网格视图（DataGrid View）</h2>
+<p>通过 $.fn.datagrid.defaults.view 重写默认的 defaults。</p>
+<p>视图（view）是一个对象，它告诉数据网格（datagrid）如何呈现行。该对象必须定义下列函数：</p>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">参数</th>
+    <th align="left">描述</th>
+</tr>
+<tr>
+	<td>render</td>
+    <td>target, container, frozen</td>
+    <td>当数据加载时调用。<br />
+	target：DOM 对象，数据网格（datagrid）对象。<br />
+	container：行的容器。<br />
+	frozen：指示是否呈现冻结容器。
+	</td>
+</tr>
+<tr>
+	<td>renderFooter</td>
+    <td>target, container, frozen</td>
+    <td>这是呈现行脚的选项函数。</td>
+</tr>
+<tr>
+	<td>renderRow</td>
+    <td>target, fields, frozen, rowIndex, rowData</td>
+    <td>这是将会被 render 函数调用的选项函数。</td>
+</tr>
+<tr>
+	<td>refreshRow</td>
+    <td>target, rowIndex</td>
+    <td>定义如何刷新指定的行。</td>
+</tr>
+<tr>
+	<td>onBeforeRender</td>
+    <td>target, rows</td>
+    <td>视图被呈现前触发。</td>
+</tr>
+<tr>
+	<td>onAfterRender</td>
+    <td>target</td>
+    <td>视图被呈现后触发。</td>
+</tr>
+</table>
+
+<h2>事件</h2>
+<p>该事件扩展自面板（panel），下面是为数据网格（datagrid）添加的事件。</p>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">参数</th>
+    <th align="left">描述</th>
+</tr>
+<tr>
+	<td>onLoadSuccess</td>
+    <td>data</td>
+    <td>当数据加载成功时触发。</td>
+</tr>
+<tr>
+	<td>onLoadError</td>
+    <td>none</td>
+    <td>加载远程数据发生某些错误时触发。</td>
+</tr>
+<tr>
+	<td>onBeforeLoad</td>
+    <td>param</td>
+    <td>发送加载数据的请求前触发，如果返回 false 加载动作就会取消。</td>
+</tr>
+<tr>
+	<td>onClickRow</td>
+    <td>rowIndex, rowData</td>
+    <td>当用户点击一行时触发，参数包括：<br />
+	rowIndex：被点击行的索引，从 0 开始<br />
+	rowData：被点击行对应的记录
+	</td>
+</tr>
+<tr>
+	<td>onDblClickRow</td>
+    <td>rowIndex, rowData</td>
+    <td>当用户双击一行时触发，参数包括：<br />
+	rowIndex：被双击行的索引，从 0 开始<br />
+	rowData：被双击行对应的记录
+	</td>
+</tr>
+<tr>
+	<td>onClickCell</td>
+    <td>rowIndex, field, value</td>
+    <td>当用户单击一个单元格时触发。</td>
+</tr>
+<tr>
+	<td>onDblClickCell</td>
+    <td>rowIndex, field, value</td>
+    <td>当用户双击一个单元格时触发。<br />
+	代码实例：
+<pre style="color:#006600">
+// when double click a cell, begin editing and make the editor get focus
+$('#dg').datagrid({
+	onDblClickCell: function(index,field,value){
+		$(this).datagrid('beginEdit', index);
+		var ed = $(this).datagrid('getEditor', {index:index,field:field});
+		$(ed.target).focus();
+	}
+});
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>onSortColumn</td>
+    <td>sort, order</td>
+    <td>当用户对一列进行排序时触发，参数包括：<br />
+	sort：排序的列的字段名<br />
+	order：排序的列的顺序
+	</td>
+</tr>
+<tr>
+	<td>onResizeColumn</td>
+    <td>field, width</td>
+    <td>当用户调整列的尺寸时触发。</td>
+</tr>
+<tr>
+	<td>onSelect</td>
+    <td>rowIndex, rowData</td>
+    <td>当用户选中一行时触发，参数包括：<br />
+	rowIndex：选中行的索引，从 0 开始<br />
+	rowData：选中行对应的记录
+	</td>
+</tr>
+<tr>
+	<td>onUnselect</td>
+    <td>rowIndex, rowData</td>
+    <td>当用户取消选中一行时触发，参数包括：<br />
+	rowIndex：取消选中行的索引，从 0 开始<br />
+	rowData：取消选中行对应的记录
+	</td>
+</tr>
+<tr>
+	<td>onSelectAll</td>
+    <td>rows</td>
+    <td>当用户选中全部行时触发。</td>
+</tr>
+<tr>
+	<td>onUnselectAll</td>
+    <td>rows</td>
+    <td>当用户取消选中全部行时触发。</td>
+</tr>
+<tr>
+	<td>onCheck</td>
+    <td>rowIndex,rowData</td>
+    <td>当用户勾选一行时触发，参数包括：<br />
+	rowIndex：勾选行的索引，从 0 开始<br />
+	rowData：勾选行对应的记录<br />
+	该事件自版本 1.3 起可用。 
+	</td>
+</tr>
+<tr>
+	<td>onUncheck</td>
+    <td>rowIndex,rowData</td>
+    <td>当用户取消勾选一行时触发，参数包括：<br />
+	rowIndex：取消勾选行的索引，从 0 开始<br />
+	rowData：取消勾选行对应的记录<br />
+	该事件自版本 1.3 起可用。 
+	</td>
+</tr>
+<tr>
+	<td>onCheckAll</td>
+    <td>rows</td>
+    <td>当用户勾选全部行时触发。该事件自版本 1.3 起可用。</td>
+</tr>
+<tr>
+	<td>onUncheckAll</td>
+    <td>rows</td>
+    <td>当用户取消勾选全部行时触发。该事件自版本 1.3 起可用。</td>
+</tr>
+<tr>
+	<td>onBeforeEdit</td>
+    <td>rowIndex, rowData</td>
+    <td>当用户开始编辑一行时触发，参数包括：<br />
+	rowIndex：编辑行的索引，从 0 开始<br />
+	rowData：编辑行对应的记录
+	</td>
+</tr>
+<tr>
+	<td>onAfterEdit</td>
+    <td>rowIndex, rowData, changes</td>
+    <td>当用户完成编辑一行时触发，参数包括：<br />
+	rowIndex：编辑行的索引，从 0 开始<br />
+	rowData：编辑行对应的记录<br />
+	changes：更改的字段/值对
+	</td>
+</tr>
+<tr>
+	<td>onCancelEdit</td>
+    <td>rowIndex, rowData</td>
+    <td>当用户取消编辑一行时触发，参数包括：<br />
+	rowIndex：编辑行的索引，从 0 开始<br />
+	rowData：编辑行对应的记录
+	</td>
+</tr>
+<tr>
+	<td>onHeaderContextMenu</td>
+    <td>e, field</td>
+    <td>当数据网格（datagrid）的头部被右键单击时触发。</td>
+</tr>
+<tr>
+	<td>onRowContextMenu</td>
+    <td>e, rowIndex, rowData</td>
+    <td>当右键点击行时触发。</td>
+</tr>
+</table>
+
+<h2>方法</h2>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">参数</th>
+    <th align="left">描述</th>
+</tr>
+<tr>
+	<td>options</td>
+    <td>none</td>
+    <td>返回选项（options）对象。</td>
+</tr>
+<tr>
+	<td>getPager</td>
+    <td>none</td>
+    <td>返回分页（pager）对象。</td>
+</tr>
+<tr>
+	<td>getPanel</td>
+    <td>none</td>
+    <td>返回面板（panel）对象。</td>
+</tr>
+<tr>
+	<td>getColumnFields</td>
+    <td>frozen</td>
+    <td>返回列的字段，如果 frozen 设置为 true，则冻结列的字段被返回。<br />
+	代码实例：
+<pre style="color:#006600">
+var opts = $('#dg').datagrid('getColumnFields');	// get unfrozen columns
+var opts = $('#dg').datagrid('getColumnFields', true); // get frozen columns
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>getColumnOption</td>
+    <td>field</td>
+    <td>返回指定列的选项。</td>
+</tr>
+<tr>
+	<td>resize</td>
+    <td>param</td>
+    <td>调整尺寸和布局。</td>
+</tr>
+<tr>
+	<td>load</td>
+    <td>param</td>
+    <td>加载并显示第一页的行，如果指定 'param' 参数，它将替换 queryParams 属性。通常情况下，通过传递一些从参数进行查询，该方法被调用来从服务器加载新数据。
+<pre style="color:#006600">
+$('#dg').datagrid('load',{
+	code: '01',
+	name: 'name01'
+});
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>reload</td>
+    <td>param</td>
+    <td>重新加载行，就像 load 方法一样，但是保持在当前页。</td>
+</tr>
+<tr>
+	<td>reloadFooter</td>
+    <td>footer</td>
+    <td>重新加载底部的行。代码实例：
+<pre style="color:#006600">
+// update footer row values and then refresh
+var rows = $('#dg').datagrid('getFooterRows');
+rows[0]['name'] = 'new name';
+rows[0]['salary'] = 60000;
+$('#dg').datagrid('reloadFooter');
+
+// update footer rows with new data
+$('#dg').datagrid('reloadFooter',[
+	{name: 'name1', salary: 60000},
+	{name: 'name2', salary: 65000}
+]);
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>loading</td>
+    <td>none</td>
+    <td>显示正在加载状态。</td>
+</tr>
+<tr>
+	<td>loaded</td>
+    <td>none</td>
+    <td>隐藏正在加载状态。</td>
+</tr>
+<tr>
+	<td>fitColumns</td>
+    <td>none</td>
+    <td>使列自动展开/折叠以适应数据网格（datagrid）的宽度。</td>
+</tr>
+<tr>
+	<td>fixColumnSize</td>
+    <td>field</td>
+    <td>固定列的尺寸。如果 'field' 参数未设置，所有的列的尺寸将是固定的。<br />
+	代码实例：
+<pre style="color:#006600">
+$('#dg').datagrid('fixColumnSize', 'name');  // fix the 'name' column size
+$('#dg').datagrid('fixColumnSize');  // fix all columns size
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>fixRowHeight</td>
+    <td>index</td>
+    <td>固定指定行的高度。如果 'index' 参数未设置，所有的行的高度将是固定的。</td>
+</tr>
+<tr>
+	<td>freezeRow</td>
+    <td>index</td>
+    <td>冻结指定的行，以便数据网格（datagrid）向下滚动时这些冻结行总是被显示在顶部。该方法自版本 1.3.2 起可用。</td>
+</tr>
+<tr>
+	<td>autoSizeColumn</td>
+    <td>field</td>
+    <td>调整列的宽度以适应内容。该方法自版本 1.3 起可用。</td>
+</tr>
+<tr>
+	<td>loadData</td>
+    <td>data</td>
+    <td>加载本地数据，旧的行会被移除。</td>
+</tr>
+<tr>
+	<td>getData</td>
+    <td>none</td>
+    <td>返回加载的数据。</td>
+</tr>
+<tr>
+	<td>getRows</td>
+    <td>none</td>
+    <td>返回当前页的行。</td>
+</tr>
+<tr>
+	<td>getFooterRows</td>
+    <td>none</td>
+    <td>返回底部的行。</td>
+</tr>
+<tr>
+	<td>getRowIndex</td>
+    <td>row</td>
+    <td>返回指定行的索引，row 参数可以是一个行记录或者一个 id 字段的值。</td>
+</tr>
+<tr>
+	<td>getChecked</td>
+    <td>none</td>
+    <td>返回复选框选中的所有行。该方法自版本 1.3 起可用。</td>
+</tr>
+<tr>
+	<td>getSelected</td>
+    <td>none</td>
+    <td>返回第一个选中的行或者 null。</td>
+</tr>
+<tr>
+	<td>getSelections</td>
+    <td>none</td>
+    <td>返回所有选中的行，当没有选中的记录时，将返回空数组。</td>
+</tr>
+<tr>
+	<td>clearSelections</td>
+    <td>none</td>
+    <td>清除所有的选择。</td>
+</tr>
+<tr>
+	<td>clearChecked</td>
+    <td>none</td>
+    <td>清除所有勾选的行。该方法自版本 1.3.2 起可用。</td>
+</tr>
+<tr>
+	<td>scrollTo</td>
+    <td>index</td>
+    <td>滚动到指定行。该方法自版本 1.3.3 起可用。</td>
+</tr>
+<tr>
+	<td>highlightRow</td>
+    <td>index</td>
+    <td>高亮显示一行。该方法自版本 1.3.3 起可用。</td>
+</tr>
+<tr>
+	<td>selectAll</td>
+    <td>none</td>
+    <td>选中当前页所有的行。</td>
+</tr>
+<tr>
+	<td>unselectAll</td>
+    <td>none</td>
+    <td>取消选中当前页所有的行。</td>
+</tr>
+<tr>
+	<td>selectRow</td>
+    <td>index</td>
+    <td>选中一行，行索引从 0 开始。</td>
+</tr>
+<tr>
+	<td>selectRecord</td>
+    <td>idValue</td>
+    <td>通过传递 id 的值做参数选中一行。</td>
+</tr>
+<tr>
+	<td>unselectRow</td>
+    <td>index</td>
+    <td>取消选中一行。</td>
+</tr>
+<tr>
+	<td>checkAll</td>
+    <td>none</td>
+    <td>勾选当前页所有的行。该方法自版本 1.3 起可用。</td>
+</tr>
+<tr>
+	<td>uncheckAll</td>
+    <td>none</td>
+    <td>取消勾选当前页所有的行。该方法自版本 1.3 起可用。</td>
+</tr>
+<tr>
+	<td>checkRow</td>
+    <td>index</td>
+    <td>勾选一行，行索引从 0 开始。该方法自版本 1.3 起可用。</td>
+</tr>
+<tr>
+	<td>uncheckRow</td>
+    <td>index</td>
+    <td>取消勾选一行，行索引从 0 开始。该方法自版本 1.3 起可用。</td>
+</tr>
+<tr>
+	<td>beginEdit</td>
+    <td>index</td>
+    <td>开始对一行进行编辑。</td>
+</tr>
+<tr>
+	<td>endEdit</td>
+    <td>index</td>
+    <td>结束对一行进行编辑。</td>
+</tr>
+<tr>
+	<td>cancelEdit</td>
+    <td>index</td>
+    <td>取消对一行进行编辑。</td>
+</tr>
+<tr>
+	<td>getEditors</td>
+    <td>index</td>
+    <td>获取指定行的编辑器。每个编辑器有下列属性：<br />
+	actions：编辑器能做的动作，与编辑器定义相同。<br />
+	target：目标编辑器的 jQuery 对象。<br />
+	field：字段名。<br />
+	type：编辑器的类型，比如：'text'、'combobox'、'datebox'，等等。
+	</td>
+</tr>
+<tr>
+	<td>getEditor</td>
+    <td>options</td>
+    <td>获取指定的编辑器， options 参数包含两个属性：<br />
+	index：行的索引。<br />
+	field：字段名。<br />
+	<br />
+	代码实例：
+<pre style="color:#006600">
+// get the datebox editor and change its value
+var ed = $('#dg').datagrid('getEditor', {index:1,field:'birthday'});
+$(ed.target).datebox('setValue', '5/4/2012');
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>refreshRow</td>
+    <td>index</td>
+    <td>刷新一行。</td>
+</tr>
+<tr>
+	<td>validateRow</td>
+    <td>index</td>
+    <td>验证指定的行，有效时返回 true。</td>
+</tr>
+<tr>
+	<td>updateRow</td>
+    <td>param</td>
+    <td>更新指定的行， param 参数包括下列属性：<br />
+	index：要更新的行的索引。<br />
+	row：新的行数据。<br />
+	<br />
+	代码实例：
+<pre style="color:#006600">
+$('#dg').datagrid('updateRow',{
+	index: 2,
+	row: {
+		name: 'new name',
+		note: 'new note message'
+	}
+});
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>appendRow</td>
+    <td>row</td>
+    <td>追加一个新行。新的行将被添加在最后的位置：
+<pre style="color:#006600">
+$('#dg').datagrid('appendRow',{
+	name: 'new name',
+	age: 30,
+	note: 'some messages'
+});
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>insertRow</td>
+    <td>param</td>
+    <td>插入一个新行， param 参数包括下列属性：<br />
+	index：插入进去的行的索引，如果没有定义，就追加该新行。<br />
+	row：行的数据。<br />
+	<br />
+	代码实例：
+<pre style="color:#006600">
+// insert a new row at second row position
+$('#dg').datagrid('insertRow',{
+	index: 1,	// index start with 0
+	row: {
+		name: 'new name',
+		age: 30,
+		note: 'some messages'
+	}
+});
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>deleteRow</td>
+    <td>index</td>
+    <td>删除一行。</td>
+</tr>
+<tr>
+	<td>getChanges</td>
+    <td>type</td>
+    <td>获取最后一次提交以来更改的行，type 参数表示更改的行的类型，可能的值是：inserted、deleted、updated，等等。当 type 参数没有分配时，返回所有改变的行。</td>
+</tr>
+<tr>
+	<td>acceptChanges</td>
+    <td>none</td>
+    <td>提交自从被加载以来或最后一次调用 acceptChanges 以来所有更改的数据。</td>
+</tr>
+<tr>
+	<td>rejectChanges</td>
+    <td>none</td>
+    <td>回滚自从创建以来或最后一次调用 acceptChanges 以来所有更改的数据。</td>
+</tr>
+<tr>
+	<td>mergeCells</td>
+    <td>options</td>
+    <td>把一些单元格合并为一个单元格，options 参数包括下列特性：<br />
+	index：列的索引。<br />
+	field：字段名。<br />
+	rowspan：合并跨越的行数。<br />
+	colspan：合并跨越的列数。
+	</td>
+</tr>
+<tr>
+	<td>showColumn</td>
+    <td>field</td>
+    <td>显示指定的列。</td>
+</tr>
+<tr>
+	<td>hideColumn</td>
+    <td>field</td>
+    <td>隐藏指定的列。</td>
+</tr>
+</table>
+<hr />
+<a href="jeasyui-ref-plugins.html"><img class="navup" src="/images/up.gif" alt="jQuery EasyUI 插件"> jQuery EasyUI 插件</a>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jeasyui/plugins-window-messager.html" rel="prev"> jQuery EasyUI 窗口插件 &#8211; Messager 消息框</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jeasyui/plugins-dt-propertygrid.html" rel="next">jQuery EasyUI 数据网格与树插件 &#8211; Propertygrid 属性网格</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.255 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 08:07:11 -->
+
+<!-- super cache -->

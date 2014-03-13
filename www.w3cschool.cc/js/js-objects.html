@@ -1,0 +1,542 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript 对象 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='PHP array_values() 函数' href='http://www.w3cschool.cc/php/func-array-values.html' />
+<link rel='next' title='JavaScript Number 对象' href='http://www.w3cschool.cc/js/js-obj-number.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/js/js-objects.html' />
+<meta name="keywords" content="JavaScript 对象,JS 教程">
+<meta name="description" content="JavaScript 对象    JavaScript 中的所有事物都是对象：字符串、数值、数组、函数...  此外，JavaScript 允许自定义对象。  所有事物都是对象 JavaScript 提供多个内建对象，比如 String、Date、Array 等等。 对象只是带有属性和方法的特殊数据类型。  布尔型可以是一个对象。 	数字型可以是一个对象。 	字符串也可以是一个对象 	日期是一个对象 	数学和正则表达式也是对象 	数组是..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JS 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-tutorial.html" >
+	JavaScript 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-intro.html" >
+	JavaScript 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-howto.html" >
+	JavaScript 用法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-whereto.html" >
+	JavaScript 输出	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-statements.html" >
+	JavaScript 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-comments.html" >
+	JavaScript 注释	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-variables.html" >
+	JavaScript  变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-datatypes.html" >
+	JavaScript 数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-intro.html" >
+	JavaScript 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-functions.html" >
+	JavaScript 函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-operators.html" >
+	JavaScript 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-comparisons.html" >
+	JavaScript 比较	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-if-else.html" >
+	JavaScript 条件语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-switch.html" >
+	JavaScript Switch	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-loop-for.html" >
+	JavaScript for 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-loop-while.html" >
+	JavaScript while	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-break.html" >
+	JavaScript Breaks	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-errors.html" >
+	JavaScript  错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-form-validation.html" >
+	JavaScript 表单验证	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> HTML DOM</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom.html" >
+	DOM 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-html.html" >
+	DOM HTML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-css.html" >
+	DOM CSS	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-events.html" >
+	DOM 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-elements.html" >
+	DOM 元素	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-objects.html" >
+	JavaScript 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-number.html" >
+	JavaScript Number 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-string.html" >
+	JavaScript String	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-date.html" >
+	JavaScript Date（日期）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-array.html" >
+	JavaScript  Array（数组）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-boolean.html" >
+	JavaScript Boolean（布尔）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-math.html" >
+	JavaScript Math（算数）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-regexp.html" >
+	JavaScript RegExp 对象	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 浏览器BOM</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-window.html" >
+	JavaScript Window	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-screen.html" >
+	JavaScript Window Screen	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-location.html" >
+	JavaScript Window Location	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-history.html" >
+	JavaScript Window History	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-navigator.html" >
+	JavaScript Navigator	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-popup.html" >
+	JavaScript 弹窗	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-timing.html" >
+	JavaScript 计时事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-cookies.html" >
+	JavaScript Cookies	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 库</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-libraries.html" >
+	JavaScript 库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-lib-jquery.html" >
+	JavaScript 测试 jQuery	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-lib-prototype.html" >
+	JavaScript 测试 Prototype	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 实例</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-examples.html" >
+	JavaScript 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-objects.html" >
+	JavaScript 对象实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-browser.html" >
+	JavaScript 浏览器对象实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-dom.html" >
+	JavaScript HTML DOM 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-summary.html" >
+	JavaScript 总结	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 参考手册</h2>
+<a target="_top" href="/jsref/jsref-tutorial.html">JavaScript 对象</a>
+<a target="_top" href="/jsref/dom-obj-document.html">HTML DOM 对象</a></div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/js/js-htmldom-elements.html" rel="prev"> JavaScript HTML DOM 元素</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/js/js-obj-number.html" rel="next">JavaScript Number 对象</a> &raquo;</div>
+	</div>
+
+	<h1>JavaScript <span class="color_h1">对象</span>
+</h1>
+
+<hr />
+<p class="intro">JavaScript 中的所有事物都是对象：字符串、数值、数组、函数...
+</p>
+<p class="intro">此外，JavaScript 允许自定义对象。</p>
+<hr />
+<h2>所有事物都是对象</h2>
+<p>JavaScript 提供多个内建对象，比如 String、Date、Array 等等。
+对象只是带有属性和方法的特殊数据类型。</p>
+<ul>
+<li>布尔型可以是一个对象。</li>
+	<li>数字型可以是一个对象。</li>
+	<li>字符串也可以是一个对象</li>
+	<li>日期是一个对象</li>
+	<li>数学和正则表达式也是对象</li>
+	<li>数组是一个对象</li>
+	<li>甚至函数也可以是对象</li>
+</ul>
+<hr />
+<h2>JavaScript 对象</h2>
+<p>对象只是一种特殊的数据。对象拥有<strong>属性</strong>和<strong>方法</strong>。</p>
+<hr />
+<h2>访问对象的属性</h2>
+<p>属性是与对象相关的值。</p>
+
+<p>访问对象属性的语法是：</p>
+
+<div class="code "><div>
+<i>objectName.propertyName</i>
+</div></div>
+
+<p>这个例子使用了 String 对象的 length 属性来获得字符串的长度：</p>
+<div class="code notranslate">
+	<div>
+
+var message="Hello World!";<br />
+var x=message.length;</div>
+</div>
+
+<p>在以上代码执行后，x 的值将是：</p>
+
+<div class="code notranslate"><div>
+12</div></div>
+<br /><hr />
+<h2>访问对象的方法</h2>
+<p>方法是能够在对象上执行的动作。</p>
+<p>您可以通过以下语法来调用方法：</p>
+
+<div class="code notranslate"><div>
+<i>objectName.methodName()</i>
+</div></div>
+
+<p>这个例子使用了 String 对象的 toUpperCase() 方法来将文本转换为大写：</p>
+<div class="code notranslate">
+	<div>
+
+var message="Hello world!";<br />
+var x=message.toUpperCase();</div>
+</div>
+<p>在以上代码执行后，x 的值将是：</p>
+<div class="code notranslate"><div>
+HELLO WORLD!</div></div>
+<br /><hr />
+<h2>创建 JavaScript 对象</h2>
+<p>通过 JavaScript，您能够定义并创建自己的对象。</p>
+
+<p>创建新对象有两种不同的方法：</p>
+
+<ul>
+<li>定义并创建对象的实例</li>
+<li>使用函数来定义对象，然后创建新的对象实例</li>
+</ul>
+
+<hr />
+<h2>创建直接的实例</h2>
+<p>这个例子创建了对象的一个新实例，并向其添加了四个属性：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+person=new Object();<br />
+person.firstname="John";<br />
+person.lastname="Doe";<br />
+person.age=50;<br />
+person.eyecolor="blue";
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjs_create_object">尝试一下 »</a>
+</div>
+
+<p>替代语法（使用对象 literals）：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+person={firstname:"John",lastname:"Doe",age:50,eyecolor:"blue"};
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjs_create_object1">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>使用对象构造器</h2>
+<p>本例使用函数来构造对象：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+
+function person(firstname,lastname,age,eyecolor)<br />
+{<br />
+this.firstname=firstname;<br />
+this.lastname=lastname;<br />
+this.age=age;<br />
+this.eyecolor=eyecolor;<br />
+}</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjs_create_object2">尝试一下 »</a>
+</div>
+<p>在JavaScript中，this通常指向的是我们正在执行的函数本身，或者是指向该函数所属的对象（运行时）</p>
+
+<hr />
+<h2>创建 JavaScript 对象实例</h2>
+<p>一旦您有了对象构造器，就可以创建新的对象实例，就像这样：</p>
+
+<div class="code notranslate"><div>
+
+var
+myFather=new person("John","Doe",50,"blue");<br />
+var myMother=new person("Sally","Rally",48,"green");</div></div>
+<br /><hr />
+<h2>把属性添加到 JavaScript 对象</h2>
+
+<p>您可以通过为对象赋值，向已有对象添加新属性：</p>
+
+<p>假设 personObj 已存在 - 您可以为其添加这些新属性：firstname、lastname、age 以及 eyecolor：</p>
+
+
+<div class="code notranslate"><div>
+
+person.firstname="John";<br />
+person.lastname="Doe";<br />
+person.age=30;<br />
+person.eyecolor="blue";<br /><br />
+x=person.firstname;</div></div>
+
+<p>T在以上代码执行后，x 的值将是：</p>
+
+<div class="code notranslate"><div>
+John</div></div>
+<br /><hr />
+<h2>把方法添加到 JavaScript 对象</h2>
+
+<p>方法只不过是附加在对象上的函数。</p>
+
+<p>在构造器函数内部定义对象的方法：</p>
+
+
+<div class="code notranslate"><div>
+
+function person(firstname,lastname,age,eyecolor)<br />
+{<br />
+this.firstname=firstname;<br />
+this.lastname=lastname;<br />
+this.age=age;<br />
+this.eyecolor=eyecolor;<br /><br />
+this.changeName=changeName;<br />
+function changeName(name)<br />
+{<br />
+this.lastname=name;<br />
+}<br />
+}</div></div>
+
+<p>changeName() 函数 name 的值赋给 person 的 lastname 属性。
+</p>
+<div class="example">
+<h2 class="example">现在您可以试一下：</h2>
+<div class="example_code notranslate">
+
+myMother.changeName("Doe");</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjs_create_object3">尝试一下 »</a>
+</div>
+
+<hr />
+<h2>JavaScript 类</h2>
+<p>JavaScript 是面向对象的语言，但 JavaScript 不使用类。</p>
+
+<p>在 JavaScript 中，不会创建类，也不会通过类来创建对象（就像在其他面向对象的语言中那样）。</p>
+
+<p>JavaScript 基于 prototype，而不是基于类的。</p>
+
+<hr />
+<h2>JavaScript for...in 循环</h2>
+<p>JavaScript for...in 语句循环遍历对象的属性。</p>
+<h3>语法</h3>
+<div class="code notranslate"><div>
+for (<i>variable</i> in <i>object</i>)<br />
+&nbsp;
+{<br />
+    <i>&nbsp; code to be executed</i><br />
+&nbsp;
+}</div></div>
+
+<p><b>注意： </b>for...in 循环中的代码块将针对每个属性执行一次。</p>
+
+<h3>实例</h3>
+<p>循环遍历对象的属性：</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var person={fname:&quot;John&quot;,lname:&quot;Doe&quot;,age:25}; <br />
+<br />
+for (x in person)<br />
+&nbsp;
+{<br />
+&nbsp; txt=txt + person[x];<br />
+&nbsp;
+}</div>
+<br />
+<a target="_blank" href="/try/try.php?filename=tryjs_object_for_in" class="tryitbtn">尝试一下 &raquo;</a>
+</div>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/js/js-htmldom-elements.html" rel="prev"> JavaScript HTML DOM 元素</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/js/js-obj-number.html" rel="next">JavaScript Number 对象</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.173 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 21:50:07 -->
+
+<!-- super cache -->

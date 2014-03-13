@@ -1,0 +1,1483 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>ASP.NET MVC 参考手册 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='ASP.NET MVC &#8211; 发布' href='http://www.w3cschool.cc/aspnet/mvc-publish.html' />
+<link rel='next' title='ASP.NET Web Forms 教程' href='http://www.w3cschool.cc/aspnet/aspnet-intro.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/aspnet/mvc-reference.html' />
+<meta name="keywords" content="ASP.NET MVC 参考手册,ASP.NET 教程">
+<meta name="description" content="ASP.NET MVC - 参考手册    类 		   类 描述    AcceptVerbsAttribute 表示一个特性，该特性指定操作方法将响应的 HTTP 谓词。    ActionDescriptor 提供有关操作方法的信息，比如操作方法的名称、控制器、参数、特性和筛选器。    ActionExecutedContext 提供 ActionFilterAttribute 类的 ActionExecuted 方法的上下文。..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>ASP.NET 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-tutorial.html" >
+	ASP.NET 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet.html" >
+	ASP.NET 简介	</a>
+	<br><h2 class="left"><span class="left_h2">WP 教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-intro.html" >
+	WebPages 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-razor.html" >
+	WebPages Razor	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-layout.html" >
+	WebPages 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-folders.html" >
+	WebPages 文件夹	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-global.html" >
+	WebPages 全局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-forms.html" >
+	WebPages 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-objects.html" >
+	WebPages 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-files.html" >
+	WebPages 文件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-helpers.html" >
+	WebPages 帮助器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-webgrid.html" >
+	WebPages WebGrid	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-chart.html" >
+	WebPages 图表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-email.html" >
+	WebPages Email	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-php.html" >
+	WebPages PHP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-publish.html" >
+	WebPages 发布	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-examples.html" >
+	WebPages 实例	</a>
+	<br><h2 class="left"><span class="left_h2">WP 参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-ref-classes.html" >
+	WebPages 类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-ref-websecurity.html" >
+	WebPages 安全	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-ref-database.html" >
+	WebPages 数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-ref-webmail.html" >
+	WebPages 邮局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-ref-helpers.html" >
+	WebPages 帮助器	</a>
+	<br><h2 class="left"><span class="left_h2">ASP.NET Razor</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-intro.html" >
+	Razor 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-syntax.html" >
+	Razor 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-cs-variables.html" >
+	Razor C# 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-cs-loops.html" >
+	Razor C# 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-cs-logic.html" >
+	Razor C# 逻辑	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-vb-variables.html" >
+	Razor VB 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-vb-loops.html" >
+	Razor VB 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-vb-logic.html" >
+	Razor VB 逻辑	</a>
+	<br><h2 class="left"><span class="left_h2">ASP.NET MVC</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-intro.html" >
+	MVC 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-app.html" >
+	MVC 应用程序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-folders.html" >
+	MVC 文件夹	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-layout.html" >
+	MVC 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-controllers.html" >
+	MVC 控制器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-views.html" >
+	MVC 视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-database.html" >
+	MVC 数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-models.html" >
+	MVC 模型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-security.html" >
+	MVC 安全	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-htmlhelpers.html" >
+	MVC HTML 帮助器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-publish.html" >
+	MVC 发布	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-reference.html" >
+	MVC 参考手册	</a>
+	<br><h2 class="left"><span class="left_h2">WF 教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-intro.html" >
+	WebForms 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-pages.html" >
+	WebForms 页面	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-controls.html" >
+	WebForms 控件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-events.html" >
+	WebForms 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-forms.html" >
+	WebForms 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-viewstate.html" >
+	WebForms ViewState	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-textbox.html" >
+	WebForms TextBox	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-button.html" >
+	WebForms Button	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-databinding.html" >
+	WebForms 数据绑定	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-arraylist.html" >
+	WebForms ArrayList	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-hashtable.html" >
+	WebForms Hashtable	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-sortedlist.html" >
+	WebForms SortedList	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-xml.html" >
+	WebForms XML 文件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-repeater.html" >
+	WebForms Repeater	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-datalist.html" >
+	WebForms DataList	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-dbconnection.html" >
+	WebForms 数据库连接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-masterpages.html" >
+	WebForms 母版页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-navigation.html" >
+	WebForms 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-examples.html" >
+	WebForms 实例	</a>
+	<br><h2 class="left"><span class="left_h2">WF 参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-ref-htmlcontrols.html" >
+	WebForms HTML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-ref-webcontrols.html" >
+	WebForms Controls	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-ref-validationcontrols.html" >
+	WebForms Validation	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/aspnet/mvc-publish.html" rel="prev"> ASP.NET MVC &#8211; 发布</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/aspnet/aspnet-intro.html" rel="next">ASP.NET Web Forms 教程</a> &raquo;</div>
+	</div>
+
+	<h1>ASP.NET MVC <span class="color_h1">- 参考手册</span>
+</h1>
+
+<hr />
+<h2>类</h2>
+		
+<table class="reference notranslate">
+<tr>
+<th>类</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>
+AcceptVerbsAttribute</td>
+<td>表示一个特性，该特性指定操作方法将响应的 HTTP 谓词。</td>
+</tr>
+<tr>
+<td>
+ActionDescriptor</td>
+<td>提供有关操作方法的信息，比如操作方法的名称、控制器、参数、特性和筛选器。</td>
+</tr>
+<tr>
+<td>
+ActionExecutedContext</td>
+<td>提供 ActionFilterAttribute 类的 ActionExecuted 方法的上下文。</td>
+</tr>
+<tr>
+<td>
+ActionExecutingContext</td>
+<td>提供 ActionFilterAttribute 类的 ActionExecuting 方法的上下文。</td>
+</tr>
+<tr>
+<td>
+ActionFilterAttribute</td>
+<td>表示筛选器特性的基类。</td>
+</tr>
+<tr>
+<td>
+ActionMethodSelectorAttribute</td>
+<td>表示一个用于影响操作方法选择的特性。</td>
+</tr>
+<tr>
+<td>
+ActionNameAttribute</td>
+<td>表示一个用于操作的名称的特性。</td>
+</tr>
+<tr>
+<td>
+ActionNameSelectorAttribute</td>
+<td>表示一个可影响操作方法选择的特性。</td>
+</tr>
+<tr>
+<td>
+ActionResult</td>
+<td>封装一个操作方法的结果并用于代表该操作方法执行框架级操作。</td>
+</tr>
+<tr>
+<td>
+AdditionalMetadataAttribute</td>
+<td>提供一个类，该类实现 IMetadataAware 接口以支持其他元数据。</td>
+</tr>
+<tr>
+<td>
+AjaxHelper</td>
+<td>表示支持在视图中呈现 AJAX 方案中的 HTML。</td>
+</tr>
+<tr>
+<td>
+AjaxHelper(TModel)</td>
+<td>表示支持在强类型视图中呈现 AJAX 方案中的 HTML。</td>
+</tr>
+<tr>
+<td>
+AjaxRequestExtensions</td>
+<td>表示一个类，该类对 HttpRequestBase 类进行了扩展，在其中添加了确定 HTTP 请求是否为 AJAX 请求的功能。</td>
+</tr>
+<tr>
+<td>
+AllowHtmlAttribute</td>
+<td>通过跳过属性的请求验证，允许请求在模型绑定过程中包含 HTML 标记。（强烈建议应用程序显式检查所有禁用请求验证的模型，以防止脚本攻击。）</td>
+</tr>
+<tr>
+<td>
+AreaRegistration</td>
+<td>提供在一个 ASP.NET MVC 应用程序内注册一个或多个区域的方式。</td>
+</tr>
+<tr>
+<td>
+AreaRegistrationContext</td>
+<td>对在 ASP.NET MVC 应用程序内注册某个区域时所需的信息进行封装。</td>
+</tr>
+<tr>
+<td>
+AssociatedMetadataProvider</td>
+<td>提供用于实现元数据提供程序的抽象类。</td>
+</tr>
+<tr>
+<td>
+AssociatedValidatorProvider</td>
+<td>为用于实现验证提供程序的类提供抽象类。</td>
+</tr>
+<tr>
+<td>
+AsyncController</td>
+<td>为异步控制器提供基类。</td>
+</tr>
+<tr>
+<td>
+AsyncTimeoutAttribute</td>
+<td>表示一个特性，该特性用于设置异步方法的超时值（以毫秒为单位）。</td>
+</tr>
+<tr>
+<td>
+AuthorizationContext</td>
+<td>对使用 AuthorizeAttribute 特性时所需的信息进行封装。</td>
+</tr>
+<tr>
+<td>
+AuthorizeAttribute</td>
+<td>表示一个特性，该特性用于限制调用方对操作方法的访问。</td>
+</tr>
+<tr>
+<td>
+BindAttribute</td>
+<td>表示一个特性，该特性用于提供有关应如何进行模型绑定到参数的详细信息。</td>
+</tr>
+<tr>
+<td>
+BuildManagerCompiledView</td>
+<td>表示在视图引擎呈现视图之前由 BuildManager 类编译的视图的基类。</td>
+</tr>
+<tr>
+<td>
+BuildManagerViewEngine</td>
+<td>为视图引擎提供基类。</td>
+</tr>
+<tr>
+<td>
+ByteArrayModelBinder</td>
+<td>映射浏览器请求到字节数组。</td>
+</tr>
+<tr>
+<td>
+ChildActionOnlyAttribute</td>
+<td>表示一个特性，该特性用于指示操作方法只应作为子操作进行调用。</td>
+</tr>
+<tr>
+<td>
+ChildActionValueProvider</td>
+<td>表示子操作中的值的值提供程序。</td>
+</tr>
+<tr>
+<td>
+ChildActionValueProviderFactory</td>
+<td>表示用于为子操作创建值提供程序对象的工厂。</td>
+</tr>
+<tr>
+<td>
+ClientDataTypeModelValidatorProvider</td>
+<td>返回客户端数据类型模型验证程序。</td>
+</tr>
+<tr>
+<td>
+CompareAttribute</td>
+<td>提供用于比较某个模型的两个属性的特性。</td>
+</tr>
+<tr>
+<td>
+ContentResult</td>
+<td>表示用户定义的内容类型，该类型是操作方法的结果。</td>
+</tr>
+<tr>
+<td>
+Controller</td>
+<td>提供用于响应对 ASP.NET MVC 网站所进行的 HTTP 请求的方法。</td>
+</tr>
+<tr>
+<td>
+ControllerActionInvoker</td>
+<td>表示一个类，该类负责调用控制器的操作方法。</td>
+</tr>
+<tr>
+<td>
+ControllerBase</td>
+<td>表示所有 MVC 控制器的基类。</td>
+</tr>
+<tr>
+<td>
+ControllerBuilder</td>
+<td>表示一个类，该类负责动态生成控制器。</td>
+</tr>
+<tr>
+<td>
+ControllerContext</td>
+<td>封装有关与指定的 RouteBase 和 ControllerBase 实例匹配的 HTTP 请求的信息。</td>
+</tr>
+<tr>
+<td>
+ControllerDescriptor</td>
+<td>封装描述控制器的信息，比如控制器的名称、类型和操作。</td>
+</tr>
+<tr>
+<td>
+ControllerInstanceFilterProvider</td>
+<td>将控制器添加到 FilterProviderCollection 实例。</td>
+</tr>
+<tr>
+<td>
+CustomModelBinderAttribute</td>
+<td>表示一个调用自定义模型联编程序的特性。</td>
+</tr>
+<tr>
+<td>
+DataAnnotationsModelMetadata</td>
+<td>为数据模型的公共元数据、DataAnnotationsModelMetadataProvider 类和 DataAnnotationsModelValidator 类提供容器。</td>
+</tr>
+<tr>
+<td>
+DataAnnotationsModelMetadataProvider</td>
+<td>实现 ASP.NET MVC 的默认模型元数据提供程序。</td>
+</tr>
+<tr>
+<td>
+DataAnnotationsModelValidator</td>
+<td>提供模型验证程序。</td>
+</tr>
+<tr>
+<td>
+DataAnnotationsModelValidator(TAttribute)</td>
+<td>为指定的验证类型提供模型验证程序。</td>
+</tr>
+<tr>
+<td>
+<a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.dataannotationsmodelvalidatorprovider(v=vs.98).aspx">
+DataAnnotationsModelValidatorProvider</a>
+</td>
+<td>实现 ASP.NET MVC 的默认验证提供程序。</td>
+</tr>
+<tr>
+<td>
+<a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.dataerrorinfomodelvalidatorprovider(v=vs.98).aspx">
+DataErrorInfoModelValidatorProvider</a>
+</td>
+<td>为错误信息模型验证程序提供容器。</td>
+</tr>
+<tr>
+<td>
+DefaultControllerFactory</td>
+<td>表示默认情况下已注册的控制器工厂。</td>
+</tr>
+<tr>
+<td>
+DefaultModelBinder</td>
+<td>映射浏览器请求到数据对象。该类提供模型联编程序的具体实现。</td>
+</tr>
+<tr>
+<td>
+DefaultViewLocationCache</td>
+<td>表示视图位置的内存缓存。</td>
+</tr>
+<tr>
+<td>
+DependencyResolver</td>
+<td>为实现 IDependencyResolver 或公共服务定位器 IServiceLocator 接口的依赖关系解析程序提供一个注册点。</td>
+</tr>
+<tr>
+<td>
+DependencyResolverExtensions</td>
+<td>提供 GetService 和 GetServices 的类型安全实现。</td>
+</tr>
+<tr>
+<td>
+DictionaryValueProvider(TValue)</td>
+<td>表示值提供程序的基类，这些值提供程序的值来自实现 IDictionary(TKey, TValue) 接口的集合。</td>
+</tr>
+<tr>
+<td>
+EmptyModelMetadataProvider</td>
+<td>为不需要元数据的数据模型提供空的元数据提供程序。</td>
+</tr>
+<tr>
+<td>
+EmptyModelValidatorProvider</td>
+<td>为不需要验证程序的模型提供空的验证提供程序。</td>
+</tr>
+<tr>
+<td>
+EmptyResult</td>
+<td>表示一个不执行任何操作的结果，比如一个不返回任何内容的控制器操作方法。</td>
+</tr>
+<tr>
+<td>
+ExceptionContext</td>
+<td>P提供使用 HandleErrorAttribute 类的上下文。</td>
+</tr>
+<tr>
+<td>
+ExpressionHelper</td>
+<td>提供用于从表达式中获取模型名称的帮助器类。</td>
+</tr>
+<tr>
+<td>
+FieldValidationMetadata</td>
+<td>为客户端字段验证元数据提供容器。</td>
+</tr>
+<tr>
+<td>
+FileContentResult</td>
+<td>将二进制文件的内容发送到响应。</td>
+</tr>
+<tr>
+<td>
+FilePathResult</td>
+<td>将文件的内容发送到响应。</td>
+</tr>
+<tr>
+<td>
+FileResult</td>
+<td>表示一个用于将二进制文件内容发送到响应的基类。</td>
+</tr>
+<tr>
+<td>
+FileStreamResult</td>
+<td>使用 Stream 实例将二进制内容发送到响应。</td>
+</tr>
+<tr>
+<td>
+Filter</td>
+<td>表示一个元数据类，它包含对一个或多个筛选器接口的实现、筛选器顺序和筛选器范围的引用。</td>
+</tr>
+<tr>
+<td>
+FilterAttribute</td>
+<td>表示操作和结果筛选器特性的基类。</td>
+</tr>
+<tr>
+<td>
+FilterAttributeFilterProvider</td>
+<td>定义筛选器特性的筛选器提供程序。</td>
+</tr>
+<tr>
+<td>
+FilterInfo</td>
+<td>封装有关可用的操作筛选器的信息。</td>
+</tr>
+<tr>
+<td>
+FilterProviderCollection</td>
+<td>表示应用程序的筛选器提供程序的集合。</td>
+</tr>
+<tr>
+<td>
+FilterProviders</td>
+<td>为筛选器提供一个注册点。</td>
+</tr>
+<tr>
+<td>
+FormCollection</td>
+<td>包含应用程序的表单值提供程序。</td>
+</tr>
+<tr>
+<td>
+FormContext</td>
+<td>对验证和处理 HTML 表单中的输入数据所需的信息进行封装。</td>
+</tr>
+<tr>
+<td>
+FormValueProvider</td>
+<td>表示 NameValueCollection 对象中包含的表单值的值提供程序。</td>
+</tr>
+<tr>
+<td>
+FormValueProviderFactory</td>
+<td>表示一个类，该类负责创建表单值提供程序对象的新实例。</td>
+</tr>
+<tr>
+<td>
+GlobalFilterCollection</td>
+<td>表示一个包含所有全局筛选器的类。</td>
+</tr>
+<tr>
+<td>
+GlobalFilters</td>
+<td>表示全局筛选器集合。</td>
+</tr>
+<tr>
+<td>
+HandleErrorAttribute</td>
+<td>表示一个特性，该特性用于处理由操作方法引发的异常。</td>
+</tr>
+<tr>
+<td>
+HandleErrorInfo</td>
+<td>封装有关处理由操作方法引发的错误的信息。</td>
+</tr>
+<tr>
+<td>
+HiddenInputAttribute</td>
+<td>表示一个特性，该特性用于指示是否应将属性值或字段值呈现为隐藏的 input 元素。</td>
+</tr>
+<tr>
+<td>
+HtmlHelper</td>
+<td>表示支持在视图中呈现 HTML 控件。</td>
+</tr>
+<tr>
+<td>
+HtmlHelper(TModel)</td>
+<td>表示支持在强类型视图中呈现 HTML 控件。</td>
+</tr>
+<tr>
+<td>
+HttpDeleteAttribute</td>
+<td>表示一个特性，该特性用于限制操作方法，以便该方法仅处理 HTTP DELETE 请求。</td>
+</tr>
+<tr>
+<td>
+HttpFileCollectionValueProvider</td>
+<td>表示要用于来自 HTTP 文件集合的值的值提供程序。</td>
+</tr>
+<tr>
+<td>
+HttpFileCollectionValueProviderFactory</td>
+<td>表示一个类，该类负责创建 HTTP 文件集合值提供程序对象的新实例。</td>
+</tr>
+<tr>
+<td>
+HttpGetAttribute</td>
+<td>表示一个特性，该特性用于限制操作方法，以便该方法仅处理 HTTP GET 请求。</td>
+</tr>
+<tr>
+<td>
+HttpNotFoundResult</td>
+<td>定义一个用于指示未找到所请求资源的对象。</td>
+</tr>
+<tr>
+<td>
+HttpPostAttribute</td>
+<td>表示一个特性，该特性用于限制操作方法，以便该方法仅处理 HTTP POST 请求。</td>
+</tr>
+<tr>
+<td>
+HttpPostedFileBaseModelBinder</td>
+<td>将模型绑定到已发布的文件。</td>
+</tr>
+<tr>
+<td>
+HttpPutAttribute</td>
+<td>表示一个特性，该特性用于限制操作方法，以便该方法仅处理 HTTP PUT 请求。</td>
+</tr>
+<tr>
+<td>
+HttpRequestExtensions</td>
+<td>扩展 HttpRequestBase 类，该类包含客户端在 Web 请求中发送的 HTTP 值。</td>
+</tr>
+<tr>
+<td>
+HttpStatusCodeResult</td>
+<td>提供一种用于返回带特定 HTTP 响应状态代码和说明的操作结果的方法。</td>
+</tr>
+<tr>
+<td>
+HttpUnauthorizedResult</td>
+<td>表示未经授权的 HTTP 请求的结果。</td>
+</tr>
+<tr>
+<td>
+JavaScriptResult</td>
+<td>将 JavaScript 内容发送到响应。</td>
+</tr>
+<tr>
+<td>
+JsonResult</td>
+<td>表示一个类，该类用于将 JSON 格式的内容发送到响应。</td>
+</tr>
+<tr>
+<td>
+JsonValueProviderFactory</td>
+<td>启用操作方法以发送和接收 JSON 格式的文本，并将 JSON 文本以模型绑定方式传递给操作方法的参数。</td>
+</tr>
+<tr>
+<td>
+LinqBinaryModelBinder</td>
+<td>映射浏览器请求到 LINQ Binary 对象。</td>
+</tr>
+<tr>
+<td>
+ModelBinderAttribute</td>
+<td>表示一个特性，该特性用于将模型类型关联到模型-生成器类型。</td>
+</tr>
+<tr>
+<td>
+ModelBinderDictionary</td>
+<td>表示一个类，该类包含应用程序的所有模型联编程序（按联编程序类型列出）。</td>
+</tr>
+<tr>
+<td>
+ModelBinderProviderCollection</td>
+<td>为模型联编程序提供程序提供一个容器。</td>
+</tr>
+<tr>
+<td>
+ModelBinderProviders</td>
+<td>为模型联编程序提供程序提供一个容器。</td>
+</tr>
+<tr>
+<td>
+ModelBinders</td>
+<td>提供对应用程序的模型联编程序的全局访问。</td>
+</tr>
+<tr>
+<td>
+ModelBindingContext</td>
+<td>提供运行模型联编程序的上下文。</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationEqualToRule</td>
+<td>为发送到浏览器的相等验证规则提供一个容器。</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationRangeRule</td>
+<td>为发送到浏览器的范围验证规则提供一个容器。</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationRegexRule</td>
+<td>为发送到浏览器的正则表达式客户端验证规则提供一个容器。</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationRemoteRule</td>
+<td>为发送到浏览器的远程验证规则提供一个容器。</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationRequiredRule</td>
+<td>为必填字段的客户端验证提供一个容器。</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationRule</td>
+<td>为发送到浏览器的客户端验证规则提供一个基类容器。</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationStringLengthRule</td>
+<td>为发送到浏览器的字符串长度验证规则提供一个容器。</td>
+</tr>
+<tr>
+<td>
+ModelError</td>
+<td>表示在模型绑定期间发生的错误。</td>
+</tr>
+<tr>
+<td>
+ModelErrorCollection</td>
+<td>ModelError 实例的集合。</td>
+</tr>
+<tr>
+<td>
+ModelMetadata</td>
+<td>为数据模型的公共元数据、ModelMetadataProvider 类和 ModelValidator 类提供容器。</td>
+</tr>
+<tr>
+<td>
+ModelMetadataProvider</td>
+<td>为自定义元数据提供程序提供抽象基类。</td>
+</tr>
+<tr>
+<td>
+ModelMetadataProviders</td>
+<td>为当前的 ModelMetadataProvider 实例提供容器。</td>
+</tr>
+<tr>
+<td>
+ModelState</td>
+<td>将模型绑定的状态封装到操作方法参数的一个属性或操作方法参数本身。</td>
+</tr>
+<tr>
+<td>
+ModelStateDictionary</td>
+<td>表示将已发送表单绑定到操作方法（其中包括验证信息）的尝试的状态。</td>
+</tr>
+<tr>
+<td>
+ModelValidationResult</td>
+<td>为验证结果提供容器。</td>
+</tr>
+<tr>
+<td>
+ModelValidator</td>
+<td>提供用于实现验证逻辑的基类。</td>
+</tr>
+<tr>
+<td>
+ModelValidatorProvider</td>
+<td>为模型提供验证程序的列表。</td>
+</tr>
+<tr>
+<td>
+ModelValidatorProviderCollection</td>
+<td>为验证提供程序的列表提供一个容器。</td>
+</tr>
+<tr>
+<td>
+ModelValidatorProviders</td>
+<td>为当前验证提供程序提供容器。</td>
+</tr>
+<tr>
+<td>
+MultiSelectList</td>
+<td>表示一个项列表，用户可从该列表中选择多个项。</td>
+</tr>
+<tr>
+<td>
+MvcFilter</td>
+<td>在派生类中实现时，提供一个元数据类，它包含对一个或多个筛选器接口的实现、筛选器顺序和筛选器范围的引用。</td>
+</tr>
+<tr>
+<td>
+MvcHandler</td>
+<td>选择将处理 HTTP 请求的控制器。</td>
+</tr>
+<tr>
+<td>
+MvcHtmlString</td>
+<td>表示不应再次进行编码的 HTML 编码的字符串。</td>
+</tr>
+<tr>
+<td>
+MvcHttpHandler</td>
+<td>验证并处理 HTTP 请求。</td>
+</tr>
+<tr>
+<td>
+MvcRouteHandler</td>
+<td>创建一个实现 IHttpHandler 接口的对象并向该对象传递请求上下文。</td>
+</tr>
+<tr>
+<td>
+MvcWebRazorHostFactory</td>
+<td>创建 MvcWebPageRazorHost 文件的实例。</td>
+</tr>
+<tr>
+<td>
+NameValueCollectionExtensions</td>
+<td>扩展 NameValueCollection 对象，以便能够将集合复制到指定字典。</td>
+</tr>
+<tr>
+<td>
+NameValueCollectionValueProvider</td>
+<td>表示值提供程序的基类，这些值提供程序的值来自 NameValueCollection 对象。</td>
+</tr>
+<tr>
+<td>
+NoAsyncTimeoutAttribute</td>
+<td>为 AsyncTimeoutAttribute 特性提供便利包装。</td>
+</tr>
+<tr>
+<td>
+NonActionAttribute</td>
+<td>表示一个特性，该特性用于指示控制器方法不是操作方法。</td>
+</tr>
+<tr>
+<td>
+OutputCacheAttribute</td>
+<td>表示一个特性，该特性用于标记将缓存其输出的操作方法。</td>
+</tr>
+<tr>
+<td>
+ParameterBindingInfo</td>
+<td>封装与将操作方法参数绑定到数据模型相关的信息。</td>
+</tr>
+<tr>
+<td>
+ParameterDescriptor</td>
+<td>包含描述参数的信息。</td>
+</tr>
+<tr>
+<td>
+PartialViewResult</td>
+<td>表示一个用于将部分视图发送到响应的基类。</td>
+</tr>
+<tr>
+<td>
+PreApplicationStartCode</td>
+<td>为 ASP.NET Razor 应用程序预启动代码提供注册点。</td>
+</tr>
+<tr>
+<td>
+QueryStringValueProvider</td>
+<td>表示 NameValueCollection 对象中包含的查询字符串的值提供程序。</td>
+</tr>
+<tr>
+<td>
+QueryStringValueProviderFactory</td>
+<td>表示一个类，该类负责创建查询字符串值提供程序对象的新实例。</td>
+</tr>
+<tr>
+<td>
+RangeAttributeAdapter</td>
+<td>提供 RangeAttribute 特性的适配器。</td>
+</tr>
+<tr>
+<td>
+RazorView</td>
+<td>表示用于创建具有 Razor 语法的视图的类。</td>
+</tr>
+<tr>
+<td>
+RazorViewEngine</td>
+<td>表示一个用于呈现使用 ASP.NET Razor 语法的 Web 页面的视图引擎。</td>
+</tr>
+<tr>
+<td>
+RedirectResult</td>
+<td>通过重定向到指定的 URI 来控制对应用程序操作的处理。</td>
+</tr>
+<tr>
+<td>
+RedirectToRouteResult</td>
+<td>表示使用指定的路由值字典来执行重定向的结果。</td>
+</tr>
+<tr>
+<td>
+ReflectedActionDescriptor</td>
+<td>包含描述反射的操作方法的信息。</td>
+</tr>
+<tr>
+<td>
+ReflectedControllerDescriptor</td>
+<td>包含描述反射的控制器的信息。</td>
+</tr>
+<tr>
+<td>
+ReflectedParameterDescriptor</td>
+<td>包含描述反射的操作方法参数的信息。</td>
+</tr>
+<tr>
+<td>
+RegularExpressionAttributeAdapter</td>
+<td>提供 RegularExpressionAttribute 特性的适配器。</td>
+</tr>
+<tr>
+<td>
+RemoteAttribute</td>
+<td>提供使用 jQuery 验证插件远程验证程序的特性。</td>
+</tr>
+<tr>
+<td>
+RequiredAttributeAdapter</td>
+<td>提供 RequiredAttributeAttribute 特性的适配器。</td>
+</tr>
+<tr>
+<td>
+RequireHttpsAttribute</td>
+<td>表示一个特性，该特性用于强制通过 HTTPS 重新发送不安全的 HTTP 请求。</td>
+</tr>
+<tr>
+<td>
+ResultExecutedContext</td>
+<td>提供 ActionFilterAttribute 类的 OnResultExecuted 方法的上下文。</td>
+</tr>
+<tr>
+<td>
+ResultExecutingContext</td>
+<td>提供 ActionFilterAttribute 类的 OnResultExecuting 方法的上下文。</td>
+</tr>
+<tr>
+<td>
+RouteCollectionExtensions</td>
+<td>扩展 RouteCollection 对象以进行 MVC 路由。</td>
+</tr>
+<tr>
+<td>
+RouteDataValueProvider</td>
+<td>表示实现 IDictionary(TKey, TValue) 接口的对象中包含的路由数据的值提供程序。</td>
+</tr>
+<tr>
+<td>
+RouteDataValueProviderFactory</td>
+<td>表示用来创建路由数据值提供程序对象的工厂。</td>
+</tr>
+<tr>
+<td>
+SelectList</td>
+<td>表示一个列表，用户可从该列表中选择一个项。</td>
+</tr>
+<tr>
+<td>
+SelectListItem</td>
+<td>表示 SelectList 类的实例中的选定项。</td>
+</tr>
+<tr>
+<td>
+SessionStateAttribute</td>
+<td>指定控制器的会话状态。</td>
+</tr>
+<tr>
+<td>
+SessionStateTempDataProvider</td>
+<td>为当前 TempDataDictionary 对象提供会话状态数据。</td>
+</tr>
+<tr>
+<td>
+StringLengthAttributeAdapter</td>
+<td>提供 StringLengthAttribute 特性的适配器。</td>
+</tr>
+<tr>
+<td>
+TempDataDictionary</td>
+<td>表示仅从一个请求保持到下一个请求的数据集。</td>
+</tr>
+<tr>
+<td>
+TemplateInfo</td>
+<td>封装有关当前模板上下文的信息。</td>
+</tr>
+<tr>
+<td>
+UrlHelper</td>
+<td>包含用于为应用程序内的 ASP.NET MVC 生成 URL 的方法。</td>
+</tr>
+<tr>
+<td>
+UrlParameter</td>
+<td>表示路由过程中 MvcHandler 类使用的可选参数。</td>
+</tr>
+<tr>
+<td>
+ValidatableObjectAdapter</td>
+<td>提供可验证的对象适配器。</td>
+</tr>
+<tr>
+<td>
+ValidateAntiForgeryTokenAttribute</td>
+<td>表示用于阻止伪造请求的特性。</td>
+</tr>
+<tr>
+<td>
+ValidateInputAttribute</td>
+<td>表示一个特性，该特性用于标记必须验证其输入的操作方法。</td>
+</tr>
+<tr>
+<td>
+ValueProviderCollection</td>
+<td>表示应用程序的值提供程序对象的集合。</td>
+</tr>
+<tr>
+<td>
+ValueProviderDictionary</td>
+<td>
+<strong>已过时。</strong>表示应用程序的值提供程序的字典。</td>
+</tr>
+<tr>
+<td>
+ValueProviderFactories</td>
+<td>表示值提供程序工厂对象的容器。</td>
+</tr>
+<tr>
+<td>
+ValueProviderFactory</td>
+<td>表示用来创建值提供程序对象的工厂。</td>
+</tr>
+<tr>
+<td>
+ValueProviderFactoryCollection</td>
+<td>表示应用程序的值提供程序工厂的集合。</td>
+</tr>
+<tr>
+<td>
+ValueProviderResult</td>
+<td>表示将一个值（如表单发送的值或查询字符串中的值）绑定到操作方法参数属性或绑定到该参数本身的结果。</td>
+</tr>
+<tr>
+<td>
+ViewContext</td>
+<td>封装与呈现视图相关的信息。</td>
+</tr>
+<tr>
+<td>
+ViewDataDictionary</td>
+<td>表示一个容器，该容器用于在控制器和视图之间传递数据。</td>
+</tr>
+<tr>
+<td>
+ViewDataDictionary(TModel)</td>
+<td>表示一个容器，该容器用于在控制器和视图之间传递强类型数据。</td>
+</tr>
+<tr>
+<td>
+ViewDataInfo</td>
+<td>对开发模板所使用的当前模板内容和与模板交互的 HTML 帮助器的相关信息进行封装。</td>
+</tr>
+<tr>
+<td>
+ViewEngineCollection</td>
+<td>表示对应用程序可用的视图引擎的集合。</td>
+</tr>
+<tr>
+<td>
+ViewEngineResult</td>
+<td>表示定位视图引擎的结果。</td>
+</tr>
+<tr>
+<td>
+ViewEngines</td>
+<td>表示对应用程序可用的视图引擎的集合。</td>
+</tr>
+<tr>
+<td>
+ViewMasterPage</td>
+<td>表示生成母版视图页所需的信息。</td>
+</tr>
+<tr>
+<td>
+ViewMasterPage(TModel)</td>
+<td>表示生成强类型母版视图页所需的信息。</td>
+</tr>
+<tr>
+<td>
+ViewPage</td>
+<td>表示将视图呈现为 Web Forms 页所需的属性和方法。</td>
+</tr>
+<tr>
+<td>
+ViewPage(TModel)</td>
+<td>表示将强类型视图呈现为 Web Forms 页所需的信息。</td>
+</tr>
+<tr>
+<td>
+ViewResult</td>
+<td>表示一个类，该类用于使用由 IViewEngine 对象返回的 IView 实例来呈现视图。</td>
+</tr>
+<tr>
+<td>
+ViewResultBase</td>
+<td>表示一个用于为视图提供模型并向响应呈现视图的基类。</td>
+</tr>
+<tr>
+<td>
+ViewStartPage</td>
+<td>提供可用于实现视图启动（母版）页的抽象类。</td>
+</tr>
+<tr>
+<td>
+ViewTemplateUserControl</td>
+<td>提供 TemplateInfo 对象的容器。</td>
+</tr>
+<tr>
+<td>
+ViewTemplateUserControl(TModel)</td>
+<td>提供 TemplateInfo 对象的容器。</td>
+</tr>
+<tr>
+<td>
+ViewType</td>
+<td>表示视图的类型。</td>
+</tr>
+<tr>
+<td>
+ViewUserControl</td>
+<td>表示生成用户控件所需的信息。</td>
+</tr>
+<tr>
+<td>
+ViewUserControl(TModel)</td>
+<td>表示生成强类型用户控件所需的信息。</td>
+</tr>
+<tr>
+<td>
+VirtualPathProviderViewEngine</td>
+<td>表示 IViewEngine 接口的抽象基类实现。</td>
+</tr>
+<tr>
+<td>
+WebFormView</td>
+<td>表示在 ASP.NET MVC 中生成 Web Forms 页时所需的信息。</td>
+</tr>
+<tr>
+<td>
+WebFormViewEngine</td>
+<td>表示一个用于向响应呈现 Web Forms 页的视图引擎。</td>
+</tr>
+<tr>
+<td>
+WebViewPage</td>
+<td>表示呈现使用 ASP.NET Razor 语法的视图所需的属性和方法。</td>
+</tr>
+<tr>
+<td>
+WebViewPage(TModel)</td>
+<td>表示呈现使用 ASP.NET Razor 语法的视图所需的属性和方法。</td>
+</tr>
+</table>
+<p> </p>
+
+<h2>接口</h2>
+
+<table class="reference notranslate">
+<tr>
+<th>接口</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>
+IActionFilter</td>
+<td>定义操作筛选器中使用的方法。</td>
+</tr>
+<tr>
+<td>
+IActionInvoker</td>
+<td>定义操作调用程序的协定，该调用程序用于调用一个操作以响应 HTTP 请求。</td>
+</tr>
+<tr>
+<td>
+IAuthorizationFilter</td>
+<td>定义授权筛选器所需的方法。</td>
+</tr>
+<tr>
+<td>
+IClientValidatable</td>
+<td>为 ASP.NET MVC 验证框架提供一种用于在运行时发现验证程序是否支持客户端验证的方法。</td>
+</tr>
+<tr>
+<td>
+IController</td>
+<td>定义控制器所需的方法。</td>
+</tr>
+<tr>
+<td>
+IControllerActivator</td>
+<td>对使用依赖关系注入来实例化控制器的方式进行精细控制。</td>
+</tr>
+<tr>
+<td>
+IControllerFactory</td>
+<td>定义控制器工厂所需的方法。</td>
+</tr>
+<tr>
+<td>
+IDependencyResolver</td>
+<td>定义可简化服务位置和依赖关系解析的方法。</td>
+</tr>
+<tr>
+<td>
+IExceptionFilter</td>
+<td>定义异常筛选器所需的方法。</td>
+</tr>
+<tr>
+<td>
+IFilterProvider</td>
+<td>提供用于查找筛选器的接口。</td>
+</tr>
+<tr>
+<td>
+IMetadataAware</td>
+<td>提供用于向 AssociatedMetadataProvider 类公开特性的接口。</td>
+</tr>
+<tr>
+<td>
+IModelBinder</td>
+<td>定义模型联编程序所需的方法。</td>
+</tr>
+<tr>
+<td>
+IModelBinderProvider</td>
+<td>定义用于为实现 IModelBinder 接口的类动态实现模型绑定的方法。</td>
+</tr>
+<tr>
+<td>
+IMvcFilter</td>
+<td>定义用于指定筛选器顺序以及是否允许多个筛选器的成员。</td>
+</tr>
+<tr>
+<td>
+IResultFilter</td>
+<td>定义结果筛选器所需的方法。</td>
+</tr>
+<tr>
+<td>
+IRouteWithArea</td>
+<td>将路由与 ASP.NET MVC 应用程序中的区域关联。</td>
+</tr>
+<tr>
+<td>
+ITempDataProvider</td>
+<td>定义临时数据提供程序的协定，这些临时数据提供程序用于存储要在下一个请求中查看的数据。</td>
+</tr>
+<tr>
+<td>
+IUnvalidatedValueProvider</td>
+<td>表示一个可跳过请求验证的 IValueProvider 接口。</td>
+</tr>
+<tr>
+<td>
+IValueProvider</td>
+<td>定义 ASP.NET MVC 中的值提供程序所需的方法。</td>
+</tr>
+<tr>
+<td>
+IView</td>
+<td>定义视图所需的方法。</td>
+</tr>
+<tr>
+<td>
+IViewDataContainer</td>
+<td>定义视图数据字典所需的方法。</td>
+</tr>
+<tr>
+<td>
+IViewEngine</td>
+<td>定义视图引擎所需的方法。</td>
+</tr>
+<tr>
+<td>
+IViewLocationCache</td>
+<td>定义在内存中缓存视图位置所需的方法。</td>
+</tr>
+<tr>
+<td>
+IViewPageActivator</td>
+<td>对使用依赖关系注入创建视图页的方式进行精细控制。</td>
+</tr>
+</table>
+<br />	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/aspnet/mvc-publish.html" rel="prev"> ASP.NET MVC &#8211; 发布</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/aspnet/aspnet-intro.html" rel="next">ASP.NET Web Forms 教程</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.529 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 20:36:19 -->
+
+<!-- super cache -->

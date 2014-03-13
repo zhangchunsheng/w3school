@@ -1,0 +1,461 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>AppML 案例简介 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='XML Schema 参考手册' href='http://www.w3cschool.cc/schema/schema-elements-ref.html' />
+<link rel='next' title='AppML 案例原型' href='http://www.w3cschool.cc/appml/appml-case-prototyping.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/appml/appml-case-intro.html' />
+<meta name="keywords" content="AppML 案例简介,AppML 教程">
+<meta name="description" content="&lt;AppML&gt; 案例研究 - 简介  此案例研究演示了如何构建一个完整的 &lt;AppML&gt; 互联网应用程序，具有针对数据库中的若干表进行信息列举、编辑和搜索的功能。   我们将创建什么 我们将使用已有的数据库，名为 Demo。 对于数据库中的每个表，我们将：  创建原型模型 	创建原型 HTML 页面 	创建应用程序模型 	创建 HTML 模板 	创建完整的应用程序   Demo 数据库 对于案例研究，我们使用 M..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>AppML 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-tutorial.html" >
+	AppML 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-howto.html" >
+	如何使用 AppML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-download.html" >
+	AppML 下载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-architecture.html" >
+	AppML 架构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-reference.html" >
+	AppML 参考手册	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-intro.html" >
+	AppML 案例简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-prototyping.html" >
+	AppML 案例原型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-models.html" >
+	AppML 案例模型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-templates.html" >
+	AppML 案例模板	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-employees.html" >
+	AppML 案例 Employees	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-customers.html" >
+	AppML 案例 Customers	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-products.html" >
+	AppML 案例 Products	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-webstandards.html" >
+	AppML 案例未来	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/appml/appml-reference.html" rel="prev"> AppML 参考手册</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/appml/appml-case-prototyping.html" rel="next">AppML 案例原型</a> &raquo;</div>
+	</div>
+
+	<h1>
+<span class="color_h1">&lt;AppML&gt; </span>案例研究 - 简介</h1>
+<hr />
+<p class="intro">此案例研究演示了如何构建一个完整的 &lt;AppML&gt; 互联网应用程序，具有针对数据库中的若干表进行信息列举、编辑和搜索的功能。</p>
+
+<hr />
+<h2>我们将创建什么</h2>
+<p>我们将使用已有的数据库，名为 Demo。</p>
+<p>对于数据库中的每个表，我们将：</p>
+<ul>
+<li>创建原型模型</li>
+	<li>创建原型 HTML 页面</li>
+	<li>创建应用程序模型</li>
+	<li>创建 HTML 模板</li>
+	<li>创建完整的应用程序</li>
+</ul>
+<hr />
+<h2>Demo 数据库</h2>
+<p>对于案例研究，我们使用 MS Office 预装的 Northwind 数据库的一个子集。</p>
+<p>这个数据库是众所周知的，不论是使用 PHP 还是经典 ASP 抑或是 ASP.NET，都易于测试。</p>
+<p>Demo 数据库包含了若干带有数据的表，如下所示：</p>
+<h2>Customers</h2>
+<table class="reference notranslate">
+    <tr>
+      <th>Customer</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Around the Horn</td>
+      <td>120 Hanover Sq.</td>
+      <td>London</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>Berglunds snabbkjøp</td>
+      <td>Berguvsvägen 8</td>
+      <td>Luleå </td>
+      <td>Sweden</td>
+    </tr>
+    <tr>
+      <td>Blauer See Delikatessen</td>
+      <td>Forsterstr. 57</td>
+      <td>Mannheim</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Blondel père et fils</td>
+      <td>24, place Kléber</td>
+      <td>Strasbourg</td>
+      <td>France</td>
+    </tr>
+    <tr>
+      <td>Bólido Comidas preparadas</td>
+      <td>C/ Araquil, 67</td>
+      <td>Madrid</td>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <td>Bottom-Dollar Markets</td>
+      <td>23 Tsawassen Blvd.</td>
+      <td>Tsawassen</td>
+      <td>Canada</td>
+    </tr>
+</table>
+<br />
+
+
+<h2>Suppliers</h2>
+
+<table class="reference notranslate">
+    <tr>
+    <th class="db">Supplier</th>
+    <th class="db">Address</th>
+    <th class="db">City</th>
+    <th class="db">Country</th>
+    </tr>
+    <tr>
+      <td>Exotic Liquid</td>
+      <td>49 Gilbert St.</td>
+      <td>London</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>New Orleans Cajun Delights</td>
+      <td>P.O. Box 78934</td>
+      <td>New Orleans</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <td>Grandma Kelly's Homestead</td>
+      <td>707 Oxford Rd.</td>
+      <td>Ann Arbor</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <td>Tokyo Traders</td>
+      <td>9-8 SekimaiMusashino-shi</td>
+      <td>Tokyo</td>
+      <td>Japan</td>
+    </tr>
+    <tr>
+      <td>Cooperativa de Quesos 'Las Cabras'</td>
+      <td>Calle del Rosal 4</td>
+      <td>Oviedo</td>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <td>Mayumi's</td>
+      <td>92 Setsuko Chuo-ku</td>
+      <td>Osaka</td>
+      <td>Japan</td>
+    </tr>
+    <tr>
+      <td>Pavlova, Ltd.</td>
+      <td>74 Rose St. Moonie Ponds</td>
+      <td>Melbourne</td>
+      <td>Australia</td>
+    </tr>
+    <tr>
+      <td>Specialty Biscuits, Ltd.</td>
+      <td>29 King's Way</td>
+      <td>Manchester</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>PB Kn ckebr d AB</td>
+      <td>Kaloadagatan 13</td>
+      <td>G teborg</td>
+      <td>Sweden</td>
+    </tr>
+    <tr>
+      <td>Refrescos Americanas LTDA</td>
+      <td>Av. das Americanas 12.890</td>
+      <td>S o Paulo</td>
+      <td>Brazil</td>
+    </tr>
+</table>
+<br />
+
+<h2>Products
+</h2>
+
+<table class="reference notranslate">
+    <tr>
+      <th class="db">Produc</th>
+      <th class="db">QuantityPerUnit</th>
+      <th class="db">UnitPrice</th>
+      <th class="db">UnitsInStock</th>
+    </tr>
+    <tr>
+      <td>Chai</td>
+      <td>10 boxes x 20 bags</td>
+      <td>18</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>Chang</td>
+      <td>24 - 12 oz bottles</td>
+      <td>19</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>Aniseed Syrup</td>
+      <td>12 - 550 ml bottles</td>
+      <td>10</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>Chai</td>
+      <td>10 boxes x 20 bags</td>
+      <td>18</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>Chef Anton's Gumbo Mix</td>
+      <td>36 boxes</td>
+      <td>21</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Grandma's Boysenberry Spread</td>
+      <td>12 - 8 oz jars</td>
+      <td>25</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <td>Uncle Bob's Organic Dried Pears</td>
+      <td>12 - 1 lb pkgs.</td>
+      <td>30</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Northwoods Cranberry Sauce</td>
+      <td>12 - 12 oz jars</td>
+      <td>40</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Mishi Kobe Niku</td>
+      <td>18 - 500 g pkgs.</td>
+      <td>97</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>Ikura</td>
+      <td>12 - 200 ml jars</td>
+      <td>31</td>
+      <td>31</td>
+    </tr>
+</table>
+<br /><br />	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/appml/appml-reference.html" rel="prev"> AppML 参考手册</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/appml/appml-case-prototyping.html" rel="next">AppML 案例原型</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.128 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 19:41:19 -->
+
+<!-- super cache -->

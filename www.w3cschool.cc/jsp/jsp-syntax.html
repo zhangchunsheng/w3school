@@ -1,0 +1,910 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>JSP 语法 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='SQLite AND/OR 运算符' href='http://www.w3cschool.cc/sqlite/sqlite-and-or-clauses.html' />
+<link rel='next' title='SQLite Update 语句' href='http://www.w3cschool.cc/sqlite/sqlite-update.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jsp/jsp-syntax.html' />
+<meta name="keywords" content="JSP 语法,JSP 教程">
+<meta name="description" content="JSP 语法   本小节将会简单地介绍一下JSP开发中的基础语法。     	脚本程序 脚本程序可以包含任意量的Java语句、变量、方法或表达式，只要它们在脚本语言中是有效的。  脚本程序的语法格式：     或者，您也可以编写与其等价的XML语句，就像下面这样：      代码片段    任何文本、HTML标签、JSP元素必须写在脚本程序的外面。  下面给出一个示例，同时也是本教程的第一个JSP示例：  Hello World  He..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JSP 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-tutorial.html" >
+	JSP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-intro.html" >
+	JSP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-setup.html" >
+	JSP 开发环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-architecture.html" >
+	JSP 结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-life-cycle.html" >
+	JSP 生命周期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-syntax.html" >
+	JSP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-directives.html" >
+	JSP 指令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-actions.html" >
+	JSP动作元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-implicit-objects.html" >
+	JSP 隐含对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-client-request.html" >
+	JSP 客户端请求	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-server-response.html" >
+	JSP服务器响应	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-http-status-codes.html" >
+	JSP HTTP状态码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-form-processing.html" >
+	JSP 表单处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-writing-filters.html" >
+	JSP 过滤器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-cookies.html" >
+	JSP Cookies处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-session.html" >
+	JSP Session	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-file-uploading.html" >
+	JSP 文件上传	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-handling-date.html" >
+	JSP 日期处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-page-redirect.html" >
+	JSP 页面重定向	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-hits-counter.html" >
+	JSP 点击量统计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-auto-refresh.html" >
+	JSP 自动刷新	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-sending-email.html" >
+	JSP 发送邮件	</a>
+	<br><h2 class="left"><span class="left_h2">JSP 高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-jstl.html" >
+	JSP 标准标签库（JSTL）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-database-access.html" >
+	JSP 连接数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-xml-data.html" >
+	JSP XML数据处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-javabean.html" >
+	JSP JavaBean	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-custom-tags.html" >
+	JSP自定义标签	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-expression-language.html" >
+	JSP 表达式语言	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-exception-handling.html" >
+	JSP 异常处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-debugging.html" >
+	JSP 调试	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-internationalization.html" >
+	JSP 国际化	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsp/jsp-life-cycle.html" rel="prev"> JSP 生命周期</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsp/jsp-directives.html" rel="next">JSP 指令</a> &raquo;</div>
+	</div>
+
+	<h1>JSP <span class="color_h1">语法</span>
+</h1>
+<div class="tutintro">
+<p>本小节将会简单地介绍一下JSP开发中的基础语法。
+</p>
+</div>
+<hr />
+<h2>
+	脚本程序</h2>
+<p>脚本程序可以包含任意量的Java语句、变量、方法或表达式，只要它们在脚本语言中是有效的。</p>
+<p>
+脚本程序的语法格式：</p>
+<pre>
+&lt;% 代码片段 %&gt;
+</pre>
+<p>
+或者，您也可以编写与其等价的XML语句，就像下面这样：</p>
+<pre>
+&lt;jsp:scriptlet&gt;
+   代码片段
+&lt;/jsp:scriptlet&gt;
+</pre>
+<p>
+任何文本、HTML标签、JSP元素必须写在脚本程序的外面。</p>
+<p>
+下面给出一个示例，同时也是本教程的第一个JSP示例：</p>
+<pre>
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+Hello World!&lt;br/&gt;
+&lt;%
+out.println("Your IP address is " + request.getRemoteAddr());
+%&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p><b>注意：</b>请确保Apache Tomcat已经安装在C:\apache-tomcat-7.0.2目录下并且运行环境已经正确设置。</p>
+<p>
+将以上代码保存在hello.jsp中，然后将它放置在 C:\apache-tomcat-7.0.2\webapps\ROOT目录下，打开浏览器并在地址栏中输入http://localhost:8080/hello.jsp。运行后得到以下结果：</p>
+<p>
+<img  src="http://www.w3cschool.cc/wp-content/uploads/2014/01/jsp_hello_world.jpg" >
+
+</p>
+<hr />
+<h2>
+	JSP声明</h2>
+<p>一个声明语句可以声明一个或多个变量、方法，供后面的Java代码使用。在JSP文件中，您必须先声明这些变量和方法然后才能使用它们。</p>
+<p>
+JSP声明的语法格式：</p>
+<pre>
+&lt;%! declaration; [ declaration; ]+ ... %&gt;
+</pre>
+<p>
+或者，您也可以编写与其等价的XML语句，就像下面这样：</p>
+<pre>
+&lt;jsp:declaration&gt;
+   代码片段
+&lt;/jsp:declaration&gt;
+</pre>
+<p>
+程序示例：</p>
+<pre>
+&lt;%! int i = 0; %&gt; 
+&lt;%! int a, b, c; %&gt; 
+&lt;%! Circle a = new Circle(2.0); %&gt; 
+</pre>
+<hr />
+<h2>
+	JSP表达式</h2><p>
+一个JSP表达式中包含的脚本语言表达式，先被转化成String，然后插入到表达式出现的地方。</p><p>
+由于表达式的值会被转化成String，所以您可以在一个文本行中使用表达式而不用去管它是否是HTML标签。</p><p>
+
+表达式元素中可以包含任何符合Java语言规范的表达式，但是不能使用分号来结束表达式。</p><p>
+JSP表达式的语法格式：</p>
+<pre>
+&lt;%= 表达式 %&gt;
+</pre>
+<p>
+同样，您也可以编写与之等价的XML语句：</p>
+<pre>
+&lt;jsp:expression&gt;
+   表达式
+&lt;/jsp:expression&gt;
+</pre><p>
+程序示例：</p>
+<pre>
+&lt;html&gt; 
+&lt;head&gt;&lt;/head&gt; 
+&lt;body&gt;
+&lt;p&gt;
+   Today's date: &lt;%= (new java.util.Date()).toLocaleString()%&gt;
+&lt;/p&gt;
+&lt;/body&gt; 
+&lt;/html&gt; 
+</pre>
+<p>运行后得到以下结果：</p>
+<pre>
+Today's date: 11-Sep-2013 21:24:25
+</pre><hr />
+<h2>
+	JSP注释</h2>
+<p>JSP注释主要有两个作用：为代码作注释以及将某段代码注释掉。</p>
+<p>
+JSP注释的语法格式：</p>
+<pre>
+&lt;%-- 这里可以填写 JSP 注释 --%&gt;
+</pre><p>
+程序示例：</p>
+<pre>
+&lt;html&gt; 
+&lt;head&gt;&lt;/head&gt; 
+&lt;body&gt; 
+&lt;h2&gt;A Test of Comments&lt;/h2&gt; 
+&lt;%-- 该部分注释在网页中不会被显示--%&gt; 
+&lt;/body&gt; 
+&lt;/html&gt; 
+</pre>
+<p>
+运行后得到以下结果：</p>
+<pre>
+A Test of Comments
+</pre>
+<p>
+不同情况下使用注释的语法规则：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				<strong>语法</strong></th>
+			<th>
+				描述</th>
+		</tr>
+		<tr>
+			<td>
+				&lt;%-- 注释 --%&gt;</td>
+			<td>
+				JSP注释，注释内容不会被发送至浏览器甚至不会被编译</td>
+		</tr>
+		<tr>
+			<td>
+				&lt;!-- 注释 --&gt;</td>
+			<td>
+				HTML注释，通过浏览器查看网页源代码时可以看见注释内容</td>
+		</tr>
+		<tr>
+			<td>
+				&lt;\%</td>
+			<td>
+				代表静态 &lt;%常量</td>
+		</tr>
+		<tr>
+			<td>
+				%\&gt;</td>
+			<td>
+				代表静态 %&gt; 常量</td>
+		</tr>
+		<tr>
+			<td>
+				\'</td>
+			<td>
+				在属性中使用的单引号</td>
+		</tr>
+		<tr>
+			<td>
+				\"</td>
+			<td>
+				在属性中使用的双引号</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+<h2>
+	JSP指令</h2>
+	<p>
+JSP指令用来设置与整个JSP页面相关的属性。	</p>
+<p>
+JSP指令语法格式：</p>
+<pre>
+&lt;%@ directive attribute="value" %&gt;
+</pre>
+<p>
+这里有三种指令标签：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				<strong>指令</strong></th>
+			<th>
+				<strong>描述</strong></th>
+		</tr>
+		<tr>
+			<td>
+				&lt;%@ page ... %&gt;</td>
+			<td>
+				定义页面的依赖属性，比如脚本语言、error页面、缓存需求等等</td>
+		</tr>
+		<tr>
+			<td>
+				&lt;%@ include ... %&gt;</td>
+			<td>
+				包含其他文件</td>
+		</tr>
+		<tr>
+			<td>
+				&lt;%@ taglib ... %&gt;</td>
+			<td>
+				引入标签库的定义，可以是自定义标签</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+<h2>
+	JSP行为</h2>
+	<p>
+JSP行为标签使用XML语法结构来控制servlet引擎。它能够动态插入一个文件，重用JavaBean组件，引导用户去另一个页面，为Java插件产生相关的HTML等等。</p>
+<p>
+行为标签只有一种语法格式，它严格遵守XML标准：</p>
+<pre>
+&lt;jsp:action_name attribute="value" /&gt;
+</pre><p>
+行为标签基本上是一些预先就定义好的函数，下表罗列出了一些可用的JSP行为标签：：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				<strong>语法</strong></th>
+			<th>
+				<b>描述</b></th>
+		</tr>
+		<tr>
+			<td>
+				jsp:include</td>
+			<td>
+				用于在当前页面中包含静态或动态资源</td>
+		</tr>
+		<tr>
+			<td>
+				jsp:useBean</td>
+			<td>
+				寻找和初始化一个JavaBean组件</td>
+		</tr>
+		<tr>
+			<td>
+				jsp:setProperty</td>
+			<td>
+				设置 JavaBean组件的值</td>
+		</tr>
+		<tr>
+			<td>
+				jsp:getProperty</td>
+			<td>
+				将&nbsp;JavaBean组件的值插入到 output中</td>
+		</tr>
+		<tr>
+			<td>
+				jsp:forward</td>
+			<td>
+				从一个JSP文件向另一个文件传递一个包含用户请求的request对象</td>
+		</tr>
+		<tr>
+			<td>
+				jsp:plugin</td>
+			<td>
+				用于在生成的HTML页面中包含Applet和JavaBean对象</td>
+		</tr>
+		<tr>
+			<td>
+				jsp:element</td>
+			<td>
+				动态创建一个XML元素</td>
+		</tr>
+		<tr>
+			<td>
+				jsp:attribute</td>
+			<td>
+				定义动态创建的XML元素的属性</td>
+		</tr>
+		<tr>
+			<td>
+				jsp:body</td>
+			<td>
+				定义动态创建的XML元素的主体</td>
+		</tr>
+		<tr>
+			<td>
+				jsp:text</td>
+			<td>
+				用于封装模板数据</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+<h2>
+	JSP隐含对象</h2><p>
+JSP支持九个自动定义的变量，江湖人称隐含对象。这九个隐含对象的简介见下表：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				<strong>对象</strong></th>
+			<th>
+				<strong>描述</strong></th>
+		</tr>
+		<tr>
+			<td>
+				request</td>
+			<td>
+				<strong>HttpServletRequest</strong>类的实例</td>
+		</tr>
+		<tr>
+			<td>
+				response</td>
+			<td>
+				<strong>HttpServletResponse</strong>类的实例</td>
+		</tr>
+		<tr>
+			<td>
+				out</td>
+			<td>
+				<strong>PrintWriter</strong>类的实例，用于把结果输出至网页上</td>
+		</tr>
+		<tr>
+			<td>
+				session</td>
+			<td>
+				<strong>HttpSession</strong>类的实例</td>
+		</tr>
+		<tr>
+			<td>
+				application</td>
+			<td>
+				<strong>ServletContext</strong>类的实例，与应用上下文有关</td>
+		</tr>
+		<tr>
+			<td>
+				config</td>
+			<td>
+				<strong>ServletConfig</strong>类的实例</td>
+		</tr>
+		<tr>
+			<td>
+				pageContext</td>
+			<td>
+				<strong>PageContext</strong>类的实例，提供对JSP页面所有对象以及命名空间的访问</td>
+		</tr>
+		<tr>
+			<td>
+				page</td>
+			<td>
+				类似于Java类中的this关键字</td>
+		</tr>
+		<tr>
+			<td>
+				Exception</td>
+			<td>
+				<strong>Exception</strong>类的对象，代表发生错误的JSP页面中对应的异常对象</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+<h2>
+	控制流语句</h2><p>
+JSP提供对Java语言的全面支持。您可以在JSP程序中使用Java API甚至建立Java代码块，包括判断语句和循环语句等等。</p>
+<h2>
+	判断语句</h2><p>
+If…else块，请看下面这个例子：</p>
+<pre>
+&lt;%! int day = 3; %&gt; 
+&lt;html&gt; 
+&lt;head&gt;&lt;/head&gt; 
+&lt;body&gt;
+&lt;% if (day == 1 | day == 7) { %&gt;
+      &lt;p&gt; Today is weekend&lt;/p&gt;
+&lt;% } else { %&gt;
+      &lt;p&gt; Today is not weekend&lt;/p&gt;
+&lt;% } %&gt;
+&lt;/body&gt; 
+&lt;/html&gt; 
+</pre>
+<p>
+运行后得到以下结果：
+</p>
+<pre>
+Today is not weekend
+</pre>
+<p>
+现在来看看switch…case块，与if…else块有很大的不同，它使用out.println()，并且整个都装在脚本程序的标签中，就像下面这样：</p>
+<pre>
+&lt;%! int day = 3; %&gt; 
+&lt;html&gt; 
+&lt;head&gt;&lt;/head&gt; 
+&lt;body&gt;
+&lt;% 
+switch(day) {
+case 0:
+   out.println("It\'s Sunday.");
+   break;
+case 1:
+   out.println("It\'s Monday.");
+   break;
+case 2:
+   out.println("It\'s Tuesday.");
+   break;
+case 3:
+   out.println("It\'s Wednesday.");
+   break;
+case 4:
+   out.println("It\'s Thursday.");
+   break;
+case 5:
+   out.println("It\'s Friday.");
+   break;
+default:
+   out.println("It's Saturday.");
+}
+%&gt;
+&lt;/body&gt; 
+&lt;/html&gt; 
+</pre>
+<p>
+运行后得出以下结果：</p>
+<pre>
+It's Wednesday.
+</pre>
+	循环语句</h2>
+	<p>
+在JSP程序中可以使用Java的三个基本循环类型：for，while，和 do…while。</p><p>
+让我们来看看for循环的例子：</p>
+<pre>
+&lt;%! int fontSize; %&gt; 
+&lt;html&gt; 
+&lt;head&gt;&lt;/head&gt; 
+&lt;body&gt;
+&lt;%for ( fontSize = 1; fontSize &lt;= 3; fontSize++){ %&gt;
+   &lt;font color="green" size="&lt;%= fontSize %&gt;"&gt;
+    JSP Tutorial
+   &lt;/font&gt;&lt;br /&gt;
+&lt;%}%&gt;
+&lt;/body&gt; 
+&lt;/html&gt; 
+</pre>
+<p>
+运行后得到以下结果：</p>
+<div>
+	<span style="color:#008000;">JSP Tutorial<br />
+	<span style="font-size: 14px;">JSP Tutorial</span><br />
+	<span style="font-size: 16px;">JSP Tutorial</span></span>
+</div>
+<p>
+将上例改用while循环来写：</p>
+<pre>
+&lt;%! int fontSize; %&gt; 
+&lt;html&gt; 
+&lt;head&gt;&lt;/head&gt; 
+&lt;body&gt;
+&lt;%while ( fontSize &lt;= 3){ %&gt;
+   &lt;font color="green" size="&lt;%= fontSize %&gt;"&gt;
+    JSP Tutorial
+   &lt;/font&gt;&lt;br /&gt;
+&lt;%fontSize++;%&gt;
+&lt;%}%&gt;
+&lt;/body&gt; 
+&lt;/html&gt; 
+</pre>
+运行后得到同样的结果：<br />
+<div>
+	<span style="color:#008000;">JSP Tutorial<br />
+	<span style="font-size: 14px;">JSP Tutorial</span><br />
+	<span style="font-size: 16px;">JSP Tutorial</span></span></div>
+<h2>
+	JSP运算符</h2><p>
+JSP支持所有Java逻辑和算术运算符。</p><p>
+下表罗列出了JSP常见运算符，优先级从高到底：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				<strong>类别</strong></th>
+			<th>
+				<strong>操作符</strong></th>
+			<th>
+				<strong>结合性</strong></th>
+		</tr>
+		<tr>
+			<td>
+				后缀</td>
+			<td>
+				() [] . (点运算符)</td>
+			<td>
+				左到右</td>
+		</tr>
+		<tr>
+			<td>
+				一元</td>
+			<td>
+				++ - - ! ~</td>
+			<td>
+				右到左</td>
+		</tr>
+		<tr>
+			<td>
+				可乘性</td>
+			<td>
+				* / %&nbsp;</td>
+			<td>
+				左到右</td>
+		</tr>
+		<tr>
+			<td>
+				可加性</td>
+			<td>
+				+ -&nbsp;</td>
+			<td>
+				左到右</td>
+		</tr>
+		<tr>
+			<td>
+				移位</td>
+			<td>
+				&gt;&gt; &gt;&gt;&gt; &lt;&lt; &nbsp;</td>
+			<td>
+				左到右&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				关系</td>
+			<td>
+				&gt; &gt;= &lt; &lt;= &nbsp;</td>
+			<td>
+				左到右</td>
+		</tr>
+		<tr>
+			<td>
+				相等/不等</td>
+			<td>
+				== !=&nbsp;</td>
+			<td>
+				左到右</td>
+		</tr>
+		<tr>
+			<td>
+				位与</td>
+			<td>
+				&amp;&nbsp;</td>
+			<td>
+				左到右</td>
+		</tr>
+		<tr>
+			<td>
+				位异或</td>
+			<td>
+				^&nbsp;</td>
+			<td>
+				左到右</td>
+		</tr>
+		<tr>
+			<td>
+				位或</td>
+			<td>
+				|&nbsp;</td>
+			<td>
+				左到右</td>
+		</tr>
+		<tr>
+			<td>
+				逻辑与</td>
+			<td>
+				&amp;&amp;&nbsp;</td>
+			<td>
+				左到右</td>
+		</tr>
+		<tr>
+			<td>
+				逻辑或</td>
+			<td>
+				||&nbsp;</td>
+			<td>
+				左到右</td>
+		</tr>
+		<tr>
+			<td>
+				条件判断</td>
+			<td>
+				?:&nbsp;</td>
+			<td>
+				右到左</td>
+		</tr>
+		<tr>
+			<td>
+				赋值</td>
+			<td>
+				= += -= *= /= %= &gt;&gt;= &lt;&lt;= &amp;= ^= |=&nbsp;</td>
+			<td>
+				右到左</td>
+		</tr>
+		<tr>
+			<td>
+				逗号&nbsp;</td>
+			<td>
+				,&nbsp;</td>
+			<td>
+				左到右&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+<h2>
+	JSP常量</h2><p>
+JSP语言定义了以下几个常量：</p>
+<ul>
+	<li>
+		Boolean：true and false</li>
+	<li>
+		Integer：与Java中的一样</li>
+	<li>
+		Floating point：与Java中的一样</li>
+	<li>
+		String：以单引号或双引号开始和结束。 " 被转义成 \"，'被转义成 \'， \ 被转义成\\</li>
+	<li>
+		Null：null</li>
+</ul>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsp/jsp-life-cycle.html" rel="prev"> JSP 生命周期</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsp/jsp-directives.html" rel="next">JSP 指令</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.206 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 01:58:20 -->
+
+<!-- super cache -->

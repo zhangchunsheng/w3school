@@ -1,0 +1,567 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>ASP Global.asa | w3cschool菜鸟教程</title>
+	<link rel='prev' title='ASP 引用文件' href='http://www.w3cschool.cc/asp/asp-incfiles.html' />
+<link rel='next' title='ASP 使用 CDOSYS 发送电子邮件' href='http://www.w3cschool.cc/asp/asp-send-email.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/asp/asp-globalasa.html' />
+<meta name="keywords" content="ASP Global.asa,ASP 教程">
+<meta name="description" content="ASP Global.asa 文件   Global.asa 文件 Global.asa 文件是一个可选的文件，它可包含被 ASP 应用程序中每个页面访问的对象、变量和方法的声明。 所有合法的浏览器脚本（JavaScript、VBScript、JScript、PerlScript 等等）都能在 Global.asa 中使用。  Global.asa 文件只能包含下列内容：  Application 事件   Session 事件   &..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>ASP 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-tutorial.html" >
+	ASP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-intro.html" >
+	ASP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-install.html" >
+	ASP 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-syntax.html" >
+	ASP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-variables.html" >
+	ASP 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-procedures.html" >
+	ASP 程序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-inputforms.html" >
+	ASP 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-cookies.html" >
+	ASP Cookies	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-sessions.html" >
+	ASP Session	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-applications.html" >
+	ASP Application	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-incfiles.html" >
+	ASP #include	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-globalasa.html" >
+	ASP Global.asa	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-send-email.html" >
+	ASP 发送电子邮件	</a>
+	<br><h2 class="left"><span class="left_h2">ASP 对象</span></h2>	<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-response.html" >
+	ASP Response	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-request.html" >
+	ASP Request	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-application.html" >
+	ASP Application	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-session.html" >
+	ASP Session	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-server.html" >
+	ASP Server	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-error.html" >
+	ASP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-filesystem.html" >
+	ASP FileSystem	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-textstream.html" >
+	ASP TextStream	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-drive.html" >
+	ASP Drive	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-file.html" >
+	ASP File	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-folder.html" >
+	ASP Folder	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-dictionary.html" >
+	ASP Dictionary	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ado.html" >
+	ASP ADO	</a>
+	<br><h2 class="left"><span class="left_h2">ASP 组件</span></h2>	<a target="_top" href="http://www.w3cschool.cc/asp/asp-adrotator.html" >
+	ASP AdRotator	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-browser.html" >
+	ASP BrowserCap	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-contentlinking.html" >
+	ASP Content Linking	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-contentrotator.html" >
+	ASP Content Rotator	</a>
+	<br><h2 class="left"><span class="left_h2">ASP 与 AJAX</span></h2>	<a target="_top" href="http://www.w3cschool.cc/asp/asp-ajax-intro.html" >
+	AJAX 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ajax-asp.html" >
+	AJAX ASP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ajax-database.html" >
+	AJAX 数据库	</a>
+	<br><h2 class="left"><span class="left_h2">ASP 总结</span></h2>	<a target="_top" href="http://www.w3cschool.cc/asp/asp-quickref.html" >
+	ASP 快速参考	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-summary.html" >
+	ASP 总结	</a>
+	<br><h2 class="left"><span class="left_h2">ASP 实例</span></h2>	<a target="_top" href="http://www.w3cschool.cc/asp/asp-examples.html" >
+	ASP 实例	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/asp/asp-incfiles.html" rel="prev"> ASP 引用文件</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/asp/asp-send-email.html" rel="next">ASP 使用 CDOSYS 发送电子邮件</a> &raquo;</div>
+	</div>
+
+	<h1>ASP <span class="color_h1">Global.asa 文件</span>
+</h1>
+<hr />
+<h2>Global.asa 文件</h2>
+<p>Global.asa 文件是一个可选的文件，它可包含被 ASP 应用程序中每个页面访问的对象、变量和方法的声明。</p>
+<p>所有合法的浏览器脚本（JavaScript、VBScript、JScript、PerlScript 等等）都能在 Global.asa 中使用。</p>
+
+<p>Global.asa 文件只能包含下列内容：</p>
+<ul>
+<li>Application 事件</li>
+  <li>Session 事件</li>
+  <li>&lt;object&gt; 声明</li>
+  <li>TypeLibrary 声明</li>
+  <li>#include 指令</li>
+</ul>
+<p><b>注释：</b>Global.asa 文件必须存放在 ASP 应用程序的根目录中，而且每个应用程序只能有一个 Global.asa 文件。</p>
+<hr />
+<h2>Global.asa 中的事件</h2>
+<p>在 Global.asa 中，您可以告诉 application 和 session 对象当 application/session 开始时做什么，当 application/session 结束时做什么。完成这项任务的代码被放置在事件句柄中。Global.asa 文件能包含四种类型的事件：</p>
+<b>Application_OnStart</b> - 此事件会在第一个用户调用 ASP 应用程序的第一个页面时发生。此事件会在 Web 服务器重启或者 Global.asa 文件被编辑之后发生。"Session_OnStart" 事件会在此事件发生之后立即发生。
+<p><b>Session_OnStart</b> - 此事件会在每当新用户请求他（她）在 ASP 应用程序中的第一个页面时发生。</p>
+<p><b>Session_OnEnd</b> - 此事件会在每当用户结束 session 时发生。在规定的时间（默认的时间为 20 分钟）内如果用户没有请求任何页面，用户 session 就会结束。</p>
+<p><b>Application_OnEnd</b> - 此事件会在最后一个用户结束其 session 之后发生。典型的情况是，此事件会在 Web 服务器停止时发生。这个子程序用于在应用程序停止后清除设置，比如删除记录或者向文本文件中写入信息。</p>
+<p>一个 Global.asa 文件可能如下所示：</p>
+
+<div class="code notranslate"><div>
+
+&lt;script language="vbscript" runat="server"&gt;<br /><br />
+sub Application_OnStart<br />
+  '<i>some code</i><br />
+end sub<br /><br />
+sub Application_OnEnd<br />
+  '<i>some code</i><br />
+end sub<br /><br />
+sub Session_OnStart<br />
+  '<i>some code</i><br />
+end sub<br /><br />
+sub Session_OnEnd<br />
+  '<i>some code</i><br />
+end sub<br /><br />
+&lt;/script&gt;</div></div>
+
+<p><b>注释：</b>由于我们无法在 Global.asa 文件中使用 ASP 的脚本分隔符 (&lt;% 和 %&gt;) 插入脚本，我们需要把子例程放置在 HTML 的 &lt;script&gt; 元素内部。</p>
+<hr />
+<h2>&lt;object&gt; 声明</h2>
+<p>可通过使用 &lt;object&gt; 标签在 Global.asa 文件中创建带有 session 或者 application 作用域的对象。</p>
+<p><b>注释：</b>&lt;object&gt; 标签应位于 &lt;script&gt; 标签外部！</p>
+
+<h3>语法</h3>
+
+<div class="code notranslate"><div>
+
+&lt;object runat="server" scope="<i>scope</i>" id="<i>id</i>"
+{progid="<i>progID</i>"|classid="<i>classID</i>"}&gt;<br />
+....<br />
+&lt;/object&gt;</div></div>
+
+<br /><table class="reference notranslate">
+<tr>
+<th align="left" valign="top" width="20%">参数</th>
+    <th align="left" valign="top" width="80%">描述</th>
+  </tr>
+<tr>
+<td valign="top">scope </td>
+    <td valign="top">设置对象（Session 或 Application）的作用域。</td>
+  </tr>
+<tr>
+<td valign="top">id </td>
+    <td valign="top">为对象指定一个唯一的 id。</td>
+  </tr>
+<tr>
+<td valign="top">ProgID </td>
+    <td valign="top">与 ClassID 关联的 id。ProgID 的格式是：[Vendor.]Component[.Version]。
+    <p>ProgID 或 ClassID 必需被指定。</p>
+</td>
+  </tr>
+<tr>
+<td valign="top">ClassID </td>
+    <td valign="top">为 COM 类对象指定一个唯一的 id。<p>ProgID 或 ClassID 必需被指定。</p>
+</td>
+  </tr>
+</table>
+<h3>实例</h3>
+<p>第一个实例通过使用 ProgID 参数创建了一个名为 "MyAd" 的 session 作用域对象：</p>
+
+<div class="code notranslate"><div>
+&lt;object runat="server" scope="session" id="MyAd"
+progid="MSWC.AdRotator"&gt;<br />
+&lt;/object&gt;</div></div>
+
+<p>第二个实例通过使用 ClassID 参数创建了一个名为 "MyConnection" 的 application 作用域对象：</p>
+
+<div class="code notranslate"><div>
+
+&lt;object runat="server" scope="application" id="MyConnection"<br />
+classid="Clsid:8AD3067A-B3FC-11CF-A560-00A0C9081C21"&gt;<br />
+&lt;/object&gt;</div></div>
+
+<p>在 Global.asa 文件中声明的对象可被应用程序中的任何脚本使用：</p>
+
+<div class="code notranslate"><div>
+
+GLOBAL.ASA:<br /><br />
+&lt;object runat="server" scope="session" id="MyAd"
+progid="MSWC.AdRotator"&gt;<br />
+&lt;/object&gt;<br /><br />
+您可以从 ASP 应用程序中的任意页面引用 "MyAd" 对象：<br /><br />
+某个 .ASP 文件：<br /><br />
+&lt;%=MyAd.GetAdvertisement("/banners/adrot.txt")%&gt;</div></div>
+<br /><hr />
+<h2>TypeLibrary 声明</h2>
+<p>TypeLibrary（类型库）是一个容器，其中装有对应于 COM 对象的 DLL 文件。通过在 Global.asa 文件中包含对 TypeLibrary 的调用，可以访问 COM 对象的常量，同时 ASP 代码也能更好地报告错误。如果您的 Web 应用程序依赖于已在类型库中声明的数据类型的 COM 对象，您可以在 Global.asa 中对类型库进行声明。</p>
+
+<h3>语法</h3>
+
+<div class="code notranslate"><div>
+
+&lt;!--METADATA TYPE="TypeLib"<br />
+file="<i>filename</i>"
+uuid="<i>id</i>"
+version="<i>number</i>"
+lcid="<i>localeid</i>"<br />
+--&gt;</div></div>
+<br /><table class="reference notranslate">
+<tr>
+<th align="left" valign="top" width="20%">参数</th>
+    <th align="left" valign="top" width="80%">描述</th>
+  </tr>
+<tr>
+<td valign="top">file</td>
+    <td valign="top">规定指向类型库的绝对路径。
+      <p>file 参数或者 uuid 参数，两者缺一不可。</p>
+</td>
+  </tr>
+<tr>
+<td valign="top">uuid</td>
+    <td valign="top">规定了类型库的唯一的标识符。
+      <p>file 参数或者 uuid 参数，两者缺一不可。</p>
+</td>
+  </tr>
+<tr>
+<td valign="top">version</td>
+    <td valign="top">可选。用于选择版本。如果没有找到需要的版本，将使用最接近的版本。</td>
+  </tr>
+<tr>
+<td valign="top">lcid</td>
+    <td valign="top">可选。用于类型库的地区标识符。</td>
+  </tr>
+</table>
+<h3>错误值</h3>
+
+<p>服务器会返回以下的错误消息之一：</p>
+
+<table class="reference notranslate">
+<tr>
+<th align="left" valign="top" width="20%">错误代码</th>
+    <th align="left" valign="top" width="80%">描述</th>
+  </tr>
+<tr>
+<td valign="top">ASP 0222</td>
+    <td valign="top">无效的类型库规范</td>
+  </tr>
+<tr>
+<td valign="top">ASP 0223</td>
+    <td valign="top">没有找到类型库</td>
+  </tr>
+<tr>
+<td valign="top">ASP 0224</td>
+    <td valign="top">无法加载类型库</td>
+  </tr>
+<tr>
+<td valign="top">ASP 0225</td>
+    <td valign="top">无法包装类型库</td>
+  </tr>
+</table>
+<p><b>注释：</b>METADATA 标签可出现在 Global.asa 文件中的任何位置（在 &lt;script&gt; 标签的内外皆可）。然而，我们还是推荐将 METADATA 标签放置于 Global.asa 文件的顶部。</p>
+<hr />
+<h2>限定</h2>
+<p>关于可以在 Global.asa 文件中引用的内容的限定：</p>
+<ul>
+<li>您无法显示 Global.asa 文件中的文本。此文件无法显示信息。</li>
+  <li>您只能在 Application_OnStart 和 Application_OnEnd 子例程中使用 Server 和 Application 对象。在 Session_OnEnd 子例程中，您可以使用 Server、Application 和 Session 对象。在 Session_OnStart 子例程中，您可以使用任何内建的对象。</li>
+</ul>
+<hr />
+<h2>如何使用子例程</h2>
+<p>Global.asa 常用于初始化变量。</p>
+<p>下面的实例演示了如何检测访客首次到达 Web 站点的确切时间。时间存储在名为 "started" 的 Session 对象中，并且 "started" 变量的值可被应用程序中的任何 ASP 页面访问：</p>
+
+<div class="code notranslate"><div>
+
+&lt;script language="vbscript" runat="server"&gt;<br />
+sub Session_OnStart<br />
+Session("started")=now()<br />
+end sub<br />
+&lt;/script&gt;</div></div>
+
+<p>Global.asa 也可用于控制页面访问。</p>
+
+<p>下面的实例演示了如何把每个新的访客重定向到另一个页面，在这个例子中会定向到一个名为 "newpage.asp" 的页面：</p>
+
+<div class="code notranslate"><div>
+
+&lt;script language="vbscript" runat="server"&gt;<br />
+sub Session_OnStart<br />
+Response.Redirect("newpage.asp")<br />
+end sub<br />
+&lt;/script&gt;</div></div>
+
+<p>您可以在 Global.asa 文件中包含函数。</p>
+<p>在下面的实例中，当 Web 服务器启动时，Application_OnStart 子例程也会启动。然后，Application_OnStart 子例程会调用另一个名为 "getcustomers" 的子例程。"getcustomers" 子例程会打开一个数据库，然后从 "customers" 表中取回一个记录集。此记录集会赋值给一个数组，在不查询数据库的情况下，任何 ASP 页面都能够访问这个数组：</p>
+
+<div class="code notranslate"><div>
+
+&lt;script language="vbscript" runat="server"&gt;<br /><br />
+sub Application_OnStart<br />
+getcustomers<br />
+end sub<br /><br />
+sub getcustomers<br />
+set conn=Server.CreateObject("ADODB.Connection")<br />
+conn.Provider="Microsoft.Jet.OLEDB.4.0"<br />
+conn.Open "c:/webdata/northwind.mdb"<br />
+set rs=conn.execute("select name from customers")<br />
+Application("customers")=rs.GetRows<br />
+rs.Close<br />
+conn.Close<br />
+end sub<br /><br />
+&lt;/script&gt;</div></div>
+<br /><hr />
+<h2>Global.asa 实例</h2>
+<p>在这个实例中，我们将创建一个计算当前访客数量的 Global.asa 文件。</p>
+<ul>
+<li>当服务器启动时，Application_OnStart 设置 Application 变量 "visitors" 的值为 0。</li>
+  <li>每当有新的访客来访时，Session_OnStart 子例程就会给变量 "visitors" 加 1。</li>
+  <li>每当 Session_OnEnd 子例程被触发时，该子例程就会从变量 "visitors" 减 1。</li>
+</ul>
+<p>Global.asa 文件：</p>
+
+<div class="code notranslate"><div>
+
+&lt;script language="vbscript" runat="server"&gt;<br /><br />
+Sub Application_OnStart<br />
+Application("visitors")=0<br />
+End Sub<br /><br />
+Sub Session_OnStart<br />
+Application.Lock<br />
+Application("visitors")=Application("visitors")+1<br />
+Application.UnLock<br />
+End Sub<br /><br />
+Sub Session_OnEnd<br />
+Application.Lock<br />
+Application("visitors")=Application("visitors")-1<br />
+Application.UnLock<br />
+End Sub<br /><br />
+&lt;/script&gt;</div></div>
+
+<p>在 ASP 文件中，显示当前访客的数量：</p>
+
+<div class="code notranslate"><div>
+
+	&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;p&gt;There are &lt;%response.write(Application("visitors"))%&gt;
+online now!&lt;/p&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</div></div>
+<br />	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/asp/asp-incfiles.html" rel="prev"> ASP 引用文件</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/asp/asp-send-email.html" rel="next">ASP 使用 CDOSYS 发送电子邮件</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.304 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 03:48:47 -->
+
+<!-- super cache -->

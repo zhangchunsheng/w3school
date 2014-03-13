@@ -1,0 +1,517 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>JSP Session | w3cschool菜鸟教程</title>
+	<link rel='prev' title='JSP Cookies处理' href='http://www.w3cschool.cc/jsp/jsp-cookies.html' />
+<link rel='next' title='JSP 文件上传' href='http://www.w3cschool.cc/jsp/jsp-file-uploading.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jsp/jsp-session.html' />
+<meta name="keywords" content="JSP Session,JSP 教程">
+<meta name="description" content="JSP Session HTTP是无状态协议，这意味着每次客户端检索网页时，都要单独打开一个服务器连接，因此服务器不会记录下先前客户端请求的任何信息。  有三种方法来维持客户端与服务器的会话：  	Cookies 网络服务器可以指定一个唯一的session ID作为cookie来代表每个客户端，用来识别这个客户端接下来的请求。  这可能不是一种有效的方式，因为很多时候浏览器并不一定支持cookie，所以我们不建议使用这种方法来维持会话。..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JSP 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-tutorial.html" >
+	JSP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-intro.html" >
+	JSP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-setup.html" >
+	JSP 开发环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-architecture.html" >
+	JSP 结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-life-cycle.html" >
+	JSP 生命周期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-syntax.html" >
+	JSP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-directives.html" >
+	JSP 指令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-actions.html" >
+	JSP动作元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-implicit-objects.html" >
+	JSP 隐含对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-client-request.html" >
+	JSP 客户端请求	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-server-response.html" >
+	JSP服务器响应	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-http-status-codes.html" >
+	JSP HTTP状态码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-form-processing.html" >
+	JSP 表单处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-writing-filters.html" >
+	JSP 过滤器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-cookies.html" >
+	JSP Cookies处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-session.html" >
+	JSP Session	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-file-uploading.html" >
+	JSP 文件上传	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-handling-date.html" >
+	JSP 日期处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-page-redirect.html" >
+	JSP 页面重定向	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-hits-counter.html" >
+	JSP 点击量统计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-auto-refresh.html" >
+	JSP 自动刷新	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-sending-email.html" >
+	JSP 发送邮件	</a>
+	<br><h2 class="left"><span class="left_h2">JSP 高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-jstl.html" >
+	JSP 标准标签库（JSTL）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-database-access.html" >
+	JSP 连接数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-xml-data.html" >
+	JSP XML数据处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-javabean.html" >
+	JSP JavaBean	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-custom-tags.html" >
+	JSP自定义标签	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-expression-language.html" >
+	JSP 表达式语言	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-exception-handling.html" >
+	JSP 异常处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-debugging.html" >
+	JSP 调试	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-internationalization.html" >
+	JSP 国际化	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsp/jsp-cookies.html" rel="prev"> JSP Cookies处理</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsp/jsp-file-uploading.html" rel="next">JSP 文件上传</a> &raquo;</div>
+	</div>
+
+	<h1>JSP Session</h1>
+<p>HTTP是无状态协议，这意味着每次客户端检索网页时，都要单独打开一个服务器连接，因此服务器不会记录下先前客户端请求的任何信息。</p>
+<p>
+有三种方法来维持客户端与服务器的会话：</p><hr />
+<h2>
+	Cookies</h2><p>
+网络服务器可以指定一个唯一的session ID作为cookie来代表每个客户端，用来识别这个客户端接下来的请求。</p>
+<p>
+这可能不是一种有效的方式，因为很多时候浏览器并不一定支持cookie，所以我们不建议使用这种方法来维持会话。</p><hr />
+<h2>
+	隐藏表单域</h2><p>
+一个网络服务器可以发送一个隐藏的HTML表单域和一个唯一的session ID，就像下面这样：
+<pre>
+&lt;input type="hidden" name="sessionid" value="12345"&gt;
+</pre>
+<p>
+这个条目意味着，当表单被提交时，指定的名称和值将会自动包含在GET或POST数据中。每当浏览器发送一个请求，session_id的值就可以用来保存不同浏览器的轨迹。</p>
+<p>
+这种方式可能是一种有效的方式，但点击&lt;A HREF&gt;标签中的超链接时不会产生表单提交事件，因此隐藏表单域也不支持通用会话跟踪。</p><hr />
+<h2>
+	重写URL</h2><p>
+您可以在每个URL后面添加一些额外的数据来区分会话，服务器能够根据这些数据来关联session标识符。</p>
+<p>
+举例来说，http://w3cschool.cc/file.htm;sessionid=12345， session标识符为sessionid=12345，服务器可以用这个数据来识别客户端。</p>
+<p>
+相比而言，重写URL是更好的方式来，就算浏览器不支持cookies也能工作，但缺点是您必须为每个URL动态指定session ID，就算这是个简单的HTML页面。</p>
+<hr />
+<h2>
+	session对象</h2><p>
+除了以上几种方法外，JSP利用servlet提供的HttpSession接口来识别一个用户，存储这个用户的所有访问信息。</p>
+<p>
+默认情况下，JSP允许会话跟踪，一个新的HttpSession对象将会自动地为新的客户端实例化。禁止会话跟踪需要显式地关掉它，通过将page指令中session属性值设为false来实现，就像下面这样：
+<pre>
+&lt;%@ page session="false" %&gt;
+</pre>
+<p>
+JSP引擎将隐含的session对象暴露给开发者。由于提供了session对象，开发者就可以方便地存储或检索数据。</p>
+<p>
+下表列出了session对象的一些重要方法：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				<strong>S.N.</strong></th>
+			<th>
+				<strong>方法</strong><strong> &amp; </strong><strong>描述</strong></th>
+		</tr>
+		<tr>
+			<td>
+				1</td>
+			<td>
+				<strong>public Object getAttribute(String name)</strong></p>
+				返回session对象中与指定名称绑定的对象，如果不存在则返回null</td>
+		</tr>
+		<tr>
+			<td>
+				2</td>
+			<td>
+				<strong>public Enumeration getAttributeNames()</strong></p>
+				返回session对象中所有的对象名称</td>
+		</tr>
+		<tr>
+			<td>
+				3</td>
+			<td>
+				<strong>public long getCreationTime()</strong></p>
+				返回session对象被创建的时间， 以毫秒为单位，从1970年1月1号凌晨开始算起</td>
+		</tr>
+		<tr>
+			<td>
+				4</td>
+			<td>
+				<strong>public String getId()</strong></p>
+				返回session对象的ID</td>
+		</tr>
+		<tr>
+			<td>
+				5</td>
+			<td>
+				<strong>public long getLastAccessedTime()</strong></p>
+				返回客户端最后访问的时间，以毫秒为单位，从1970年1月1号凌晨开始算起</td>
+		</tr>
+		<tr>
+			<td>
+				6</td>
+			<td>
+				<strong>public int getMaxInactiveInterval()</strong></p>
+				返回最大时间间隔，以秒为单位，servlet 容器将会在这段时间内保持会话打开</td>
+		</tr>
+		<tr>
+			<td>
+				7</td>
+			<td>
+				<strong>public void invalidate()</strong></p>
+				将session无效化，解绑任何与该session绑定的对象</td>
+		</tr>
+		<tr>
+			<td>
+				8</td>
+			<td>
+				<strong>public boolean isNew(</strong></p>
+				返回是否为一个新的客户端，或者客户端是否拒绝加入session</td>
+		</tr>
+		<tr>
+			<td>
+				9</td>
+			<td>
+				<strong>public void removeAttribute(String name)</strong></p>
+				移除session中指定名称的对象</td>
+		</tr>
+		<tr>
+			<td>
+				10</td>
+			<td>
+				<strong>public void setAttribute(String name, Object value)&nbsp;</strong></p>
+				使用指定的名称和值来产生一个对象并绑定到session中</td>
+		</tr>
+		<tr>
+			<td>
+				11</td>
+			<td>
+				<strong>public void setMaxInactiveInterval(int interval)</strong></p>
+				用来指定时间，以秒为单位，servlet容器将会在这段时间内保持会话有效</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+<h2>JSP Session应用</h2><p>
+这个例子描述了如何使用HttpSession对象来获取创建时间和最后一次访问时间。我们将会为request对象关联一个新的session对象，如果这个对象尚未存在的话。</p>
+
+<pre>
+&lt;%@ page import="java.io.*,java.util.*" %&gt;
+&lt;%
+   // 获取session创建时间
+   Date createTime = new Date(session.getCreationTime());
+   // 获取最后访问页面的时间
+   Date lastAccessTime = new Date(session.getLastAccessedTime());
+
+   String title = "Welcome Back to my website";
+   Integer visitCount = new Integer(0);
+   String visitCountKey = new String("visitCount");
+   String userIDKey = new String("userID");
+   String userID = new String("ABCD");
+
+   // 检测网页是否由新的访问用户
+   if (session.isNew()){
+      title = "Welcome to my website";
+      session.setAttribute(userIDKey, userID);
+      session.setAttribute(visitCountKey,  visitCount);
+   } 
+   visitCount = (Integer)session.getAttribute(visitCountKey);
+   visitCount = visitCount + 1;
+   userID = (String)session.getAttribute(userIDKey);
+   session.setAttribute(visitCountKey,  visitCount);
+%&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h1&gt;Session Tracking&lt;/h1&gt;
+&lt;/center&gt;
+&lt;table border="1" align="center"&gt; 
+&lt;tr bgcolor="#949494"&gt;
+   &lt;th&gt;Session info&lt;/th&gt;
+   &lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt; 
+&lt;tr&gt;
+   &lt;td&gt;id&lt;/td&gt;
+   &lt;td&gt;&lt;% out.print( session.getId()); %&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;tr&gt;
+   &lt;td&gt;Creation Time&lt;/td&gt;
+   &lt;td&gt;&lt;% out.print(createTime); %&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;tr&gt;
+   &lt;td&gt;Time of Last Access&lt;/td&gt;
+   &lt;td&gt;&lt;% out.print(lastAccessTime); %&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;tr&gt;
+   &lt;td&gt;User ID&lt;/td&gt;
+   &lt;td&gt;&lt;% out.print(userID); %&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;tr&gt;
+   &lt;td&gt;Number of visits&lt;/td&gt;
+   &lt;td&gt;&lt;% out.print(visitCount); %&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;/table&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>
+试着访问http://localhost:8080/main.jsp ，第一次运行时将会得到如下结果：</p>
+<p>
+<img src="http://www.w3cschool.cc/wp-content/uploads/2014/01/session-1.jpg" />
+</p>
+<p>
+再次访问，将会得到如下结果：</p>
+<p>
+<img src="http://www.w3cschool.cc/wp-content/uploads/2014/01/session-2.jpg" />
+</p>
+<hr />
+<h2>
+	删除Session数据</h2><p>
+当处理完一个用户的会话数据后，您可以有如下选择：</p>
+<ul>
+	<li><strong>
+		移除一个特定的属性：</strong><p>调用public void removeAttribute(String name)&nbsp; 方法来移除指定的属性。</p></li>
+	<li><strong>
+		删除整个会话：</strong><p>调用public void invalidate() 方法来使整个session无效。</p></li>
+	<li><strong>
+		设置会话有效期：</strong><p>调用 public void setMaxInactiveInterval(int interval)&nbsp; 方法来设置session超时。</p></li>
+	<li><strong>
+		登出用户：</strong><p>支持servlet2.4版本的服务器，可以调用 logout()方法来登出用户，并且使所有相关的session无效。</p></li>
+	<li><strong>
+		配置web.xml文件：</strong><p>如果使用的是Tomcat，可以向下面这样配置web.xml文件：</p></li>
+</ul>
+
+<pre>
+  &lt;session-config&gt;
+    &lt;session-timeout&gt;15&lt;/session-timeout&gt;
+  &lt;/session-config&gt;
+</pre>
+<p>
+超时以分钟为单位，Tomcat中的默认的超时时间是30分钟。</p>
+<p>
+Servlet中的getMaxInactiveInterval( ) 方法以秒为单位返回超时时间。如果在web.xml中配置的是15分钟，则getMaxInactiveInterval( ) 方法将会返回900。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsp/jsp-cookies.html" rel="prev"> JSP Cookies处理</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsp/jsp-file-uploading.html" rel="next">JSP 文件上传</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.216 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:36:41 -->
+
+<!-- super cache -->

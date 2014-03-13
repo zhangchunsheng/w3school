@@ -1,0 +1,831 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Python 运算符 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='HTML frameset rows 属性' href='http://www.w3cschool.cc/tags/att-frameset-rows.html' />
+<link rel='next' title='Python 条件语句' href='http://www.w3cschool.cc/python/python-if-statement.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/python/python-operators.html' />
+<meta name="keywords" content="Python 运算符,Python基础教程">
+<meta name="description" content="Python 运算符 什么是运算符？ 本章节主要说明Python的运算符。举个简单的例子 4 +5 = 9 。 例子中，4和5被称为操作数，“+”号为运算符。 Python语言支持以下类型的运算符:  算术运算符 比较（关系）运算符 赋值运算符 逻辑运算符 位运算符 成员运算符 身份运算符 运算符优先级  接下来让我们一个个来学习Python的运算符。 Python算术运算符 以下假设变量a为10，变量b为20：   运算符描述实例  ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Python基础教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tutorial.html" >
+	Python基础教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-intro.html" >
+	Python 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-install.html" >
+	Python环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-basic-syntax.html" >
+	Python 基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-variable-types.html" >
+	Python 变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-operators.html" >
+	Python 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-if-statement.html" >
+	Python 条件语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-loops.html" >
+	Python 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-while-loop.html" >
+	Python While循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-for-loop.html" >
+	Python for 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-nested-loops.html" >
+	Python 循环嵌套	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-break-statement.html" >
+	Python break 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-continue-statement.html" >
+	Python continue  语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-pass-statement.html" >
+	Python pass 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-numbers.html" >
+	Python 数字	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-strings.html" >
+	Python 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-lists.html" >
+	Python 列表(Lists)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tuples.html" >
+	Python 元组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-dictionary.html" >
+	Python 字典(Dictionary)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-date-time.html" >
+	Python 日期和时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-functions.html" >
+	Python函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-modules.html" >
+	Python模块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-files-io.html" >
+	Python 文件I/O	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-exceptions.html" >
+	Python 异常处理	</a>
+	<br><h2 class="left"><span class="left_h2">Python</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/python/python-object.html" >
+	Python面向对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-reg-expressions.html" >
+	Python正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-cgi.html" >
+	Python CGI编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-mysql.html" >
+	python操作mysql数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-email.html" >
+	Python使用SMTP发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-multithreading.html" >
+	Python多线程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-xml.html" >
+	python XML解析	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-gui-tkinter.html" >
+	python GUI编程(Tkinter)	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/python-variable-types.html" rel="prev"> Python 变量类型</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/python-if-statement.html" rel="next">Python 条件语句</a> &raquo;</div>
+	</div>
+
+	<h1>Python <span class="color_h1">运算符</span></h1>
+<hr /><h2>什么是运算符？</h2>
+<p>本章节主要说明Python的运算符。举个简单的例子<strong> 4 +5 = 9 </strong>。
+例子中，4和5被称为操作数，"+"号为运算符。</p>
+<p>Python语言支持以下类型的运算符:</p>
+<ul>
+<li><a href="#ysf1">算术运算符</a></li>
+<li><a href="#ysf2">比较（关系）运算符</a></li>
+<li><a href="#ysf3">赋值运算符</a></li>
+<li><a href="#ysf4">逻辑运算符</a></li>
+<li><a href="#ysf5">位运算符</a></li>
+<li><a href="#ysf6">成员运算符</a></li>
+<li><a href="#ysf7">身份运算符</a></li>
+<li><a href="#ysf8">运算符优先级</a></li>
+</ul>
+<p>接下来让我们一个个来学习Python的运算符。</p><hr />
+<h2 id="ysf1">Python算术运算符</h2>
+<p>以下假设变量a为10，变量b为20：</p>
+<table class="reference">
+<tbody><tr>
+<th>运算符</th><th>描述</th><th>实例</th>
+</tr>
+<tr>
+<td>+</td><td>加 - 两个对象相加</td><td> a + b 输出结果 30</td>
+</tr>
+<tr>
+<td>-</td><td>减 - 得到负数或是一个数减去另一个数</td><td> a - b 输出结果 -10</td>
+</tr>
+<tr>
+<td>*</td><td>乘 - 两个数相乘或是返回一个被重复若干次的字符串</td><td> a * b 输出结果 200</td>
+</tr>
+<tr>
+<td>/</td><td>除 - x除以y</td><td> b / a 输出结果 2</td>
+</tr>
+<tr>
+<td>%</td><td>取模 - 返回除法的余数</td><td> b % a 输出结果 0</td>
+</tr>
+<tr>
+<td>**</td><td>幂 - 返回x的y次幂</td><td> a**b 输出结果 20</td>
+</tr>
+<tr>
+<td>//</td><td>取整除 - 返回商的整数部分</td><td> 9//2 输出结果 4 , 9.0//2.0 输出结果 4.0</td>
+</tr>
+</tbody></table>
+
+<p>以下实例演示了Python所有算术运算符的操作：</p>
+
+<pre>
+#!/usr/bin/python
+
+a = 21
+b = 10
+c = 0
+
+c = a + b
+print "Line 1 - Value of c is ", c
+
+c = a - b
+print "Line 2 - Value of c is ", c 
+
+c = a * b
+print "Line 3 - Value of c is ", c 
+
+c = a / b
+print "Line 4 - Value of c is ", c 
+
+c = a % b
+print "Line 5 - Value of c is ", c
+
+a = 2
+b = 3
+c = a**b 
+print "Line 6 - Value of c is ", c
+
+a = 10
+b = 5
+c = a//b 
+print "Line 7 - Value of c is ", c
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Line 1 - Value of c is 31
+Line 2 - Value of c is 11
+Line 3 - Value of c is 210
+Line 4 - Value of c is 2
+Line 5 - Value of c is 1
+Line 6 - Value of c is 8
+Line 7 - Value of c is 2
+</pre>
+
+<hr /><h2 id="ysf2">Python比较运算符</h2>
+<p>以下假设变量a为10，变量b为20：</p>
+<table class="reference">
+<tbody><tr>
+<th width="10%">运算符</th><th>描述</th><th>实例</th>
+</tr>
+<tr>
+<td>==</td><td> 等于 - 比较对象是否相等</td><td> (a == b) 返回 False。 </td>
+</tr>
+<tr>
+<td>!=</td><td> 不等于 - 比较两个对象是否不相等</td><td> (a != b) 返回 true. </td>
+</tr>
+<tr>
+<td>&lt;&gt;</td><td>不等于 -  比较两个对象是否不相等</td><td> (a &lt;&gt; b) 返回 true。这个运算符类似 != 。</td>
+</tr>
+<tr>
+<td>&gt;</td><td> 大于 - 返回x是否大于y</td><td> (a &gt; b) 返回 False。</td>
+</tr>
+<tr>
+<td>&lt;</td><td> 小于 - 返回x是否小于y。所有比较运算符返回1表示真，返回0表示假。这分别与特殊的变量True和False等价。注意，这些变量名的大写。</td><td> (a &lt; b) 返回 true。 </td>
+</tr>
+<tr>
+<td>&gt;=</td><td> 大于等于	- 返回x是否大于等于y。</td><td> (a &gt;= b) 返回 False。</td>
+
+</tr>
+<tr>
+<td>&lt;=</td><td> 小于等于 -	返回x是否小于等于y。</td><td> (a &lt;= b) 返回 true。 </td>
+</tr>
+</tbody></table>
+<p>以下实例演示了Python所有比较运算符的操作：</p>
+<pre>
+#!/usr/bin/python
+
+a = 21
+b = 10
+c = 0
+
+if ( a == b ):
+   print "Line 1 - a is equal to b"
+else:
+   print "Line 1 - a is not equal to b"
+
+if ( a != b ):
+   print "Line 2 - a is not equal to b"
+else:
+   print "Line 2 - a is equal to b"
+
+if ( a &lt;&gt; b ):
+   print "Line 3 - a is not equal to b"
+else:
+   print "Line 3 - a is equal to b"
+
+if ( a &lt; b ):
+   print "Line 4 - a is less than b" 
+else:
+   print "Line 4 - a is not less than b"
+
+if ( a &gt; b ):
+   print "Line 5 - a is greater than b"
+else:
+   print "Line 5 - a is not greater than b"
+
+a = 5;
+b = 20;
+if ( a &lt;= b ):
+   print "Line 6 - a is either less than or equal to  b"
+else:
+   print "Line 6 - a is neither less than nor equal to  b"
+
+if ( b &gt;= a ):
+   print "Line 7 - b is either greater than  or equal to b"
+else:
+   print "Line 7 - b is neither greater than  nor equal to b"
+</pre>  
+
+<p>以上实例输出结果：</p>
+<pre>
+Line 1 - a is not equal to b
+Line 2 - a is not equal to b
+Line 3 - a is not equal to b
+Line 4 - a is not less than b
+Line 5 - a is greater than b
+Line 6 - a is either less than or equal to b
+Line 7 - b is either greater than or equal to b 
+</pre> 
+<hr /><h2 id="ysf3">Python赋值运算符</h2> 
+<p>以下假设变量a为10，变量b为20：</p>
+<table class="reference">
+<tbody><tr>
+<th>运算符</th><th>描述</th><th>实例</th>
+</tr>
+<tr>
+<td>=</td><td>简单的赋值运算符</td><td> c = a + b 将 a + b 的运算结果赋值为 c</td>
+</tr>
+<tr>
+<td>+=</td><td>加法赋值运算符</td><td> c += a 等效于 c = c + a</td>
+</tr>
+<tr>
+<td>-=</td><td>减法赋值运算符</td><td> c -= a 等效于 c = c - a</td>
+</tr>
+<tr>
+<td>*=</td><td>乘法赋值运算符</td><td> c *= a 等效于 c = c * a</td>
+</tr>
+<tr>
+<td>/=</td><td>除法赋值运算符</td><td> c /= a 等效于 c = c / a</td>
+</tr>
+<tr>
+<td>%=</td><td>取模赋值运算符</td><td> c %= a 等效于 c = c % a</td>
+</tr>
+<tr>
+<td>**=</td><td>幂赋值运算符</td><td> c **= a 等效于 c = c ** a</td>
+</tr>
+<tr>
+<td>//=</td><td> 取整除赋值运算符</td><td> c //= a 等效于 c = c // a</td>
+</tr>
+</tbody></table>
+<p>以下实例演示了Python所有赋值运算符的操作：</p>
+<pre>
+#!/usr/bin/python
+
+a = 21
+b = 10
+c = 0
+
+c = a + b
+print "Line 1 - Value of c is ", c
+
+c += a
+print "Line 2 - Value of c is ", c 
+
+c *= a
+print "Line 3 - Value of c is ", c 
+
+c /= a 
+print "Line 4 - Value of c is ", c 
+
+c  = 2
+c %= a
+print "Line 5 - Value of c is ", c
+
+c **= a
+print "Line 6 - Value of c is ", c
+
+c //= a
+print "Line 7 - Value of c is ", c
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Line 1 - Value of c is 31
+Line 2 - Value of c is 52
+Line 3 - Value of c is 1092
+Line 4 - Value of c is 52
+Line 5 - Value of c is 2
+Line 6 - Value of c is 2097152
+Line 7 - Value of c is 99864
+</pre>
+<hr /><h2 id="ysf5">Python位运算符</h2> 
+<p>
+按位运算符是把数字看作二进制来进行计算的。Python中的按位运算法则如下：</p>
+<table class="reference">
+<tbody><tr>
+<th>运算符</th><th>描述</th><th>实例</th>
+</tr>
+<tr>
+<td>&amp;</td><td> 按位与运算符</td><td> (a &amp; b) 输出结果 12 ，二进制解释： 0000 1100</td>
+</tr>
+<tr>
+<td>|</td><td> 按位或运算符</td><td> (a | b) 输出结果 61 ，二进制解释： 0011 1101</td>
+</tr>
+<tr>
+<td>^</td><td> 按位异或运算符 </td><td> (a ^ b) 输出结果 49 ，二进制解释： 0011 0001</td>
+</tr>
+<tr>
+<td>~</td><td> 按位取反运算符 </td><td> (~a ) 输出结果 -61 ，二进制解释： 1100 0011， 在一个有符号二进制数的补码形式。</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td><td>左移动运算符 </td><td> a &lt;&lt; 2 输出结果 240 ，二进制解释： 1111 0000</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td><td> 右移动运算符</td><td> a &gt;&gt; 2 输出结果 15 ，二进制解释： 0000 1111</td>
+</tr>
+</tbody></table>
+<p>以下实例演示了Python所有位运算符的操作：</p>
+<pre>
+#!/usr/bin/python
+
+a = 60            # 60 = 0011 1100 
+b = 13            # 13 = 0000 1101 
+c = 0
+
+c = a &amp; b;        # 12 = 0000 1100
+print "Line 1 - Value of c is ", c
+
+c = a | b;        # 61 = 0011 1101 
+print "Line 2 - Value of c is ", c
+
+c = a ^ b;        # 49 = 0011 0001
+print "Line 3 - Value of c is ", c
+
+c = ~a;           # -61 = 1100 0011
+print "Line 4 - Value of c is ", c
+
+c = a &lt;&lt; 2;       # 240 = 1111 0000
+print "Line 5 - Value of c is ", c
+
+c = a &gt;&gt; 2;       # 15 = 0000 1111
+print "Line 6 - Value of c is ", c
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Line 1 - Value of c is 12
+Line 2 - Value of c is 61
+Line 3 - Value of c is 49
+Line 4 - Value of c is -61
+Line 5 - Value of c is 240
+Line 6 - Value of c is 15
+</pre>
+<hr /><h2 id="ysf4">Python逻辑运算符</h2>
+<p>Python语言支持逻辑运算符，以下假设变量a为10，变量b为20：</p>
+<table class="reference">
+<tbody><tr>
+<th>运算符</th><th>描述</th><th>实例</th>
+</tr>
+<tr>
+<td>and</td><td> 布尔"与" - 如果x为False，x and y返回False，否则它返回y的计算值。</td><td> (a and b) 返回 true。</td>
+</tr>
+<tr>
+<td>or</td><td>布尔"或"	- 如果x是True，它返回True，否则它返回y的计算值。</td><td> (a or b) 返回 true。</td>
+</tr>
+<tr><td>not</td><td>布尔"非" - 如果x为True，返回False。如果x为False，它返回True。</td><td> not(a and b) 返回 false。 </td>
+</tr>
+</tbody></table>
+<p>以下实例演示了Python所有逻辑运算符的操作：</p>
+<pre>
+#!/usr/bin/python
+
+a = 10
+b = 20
+c = 0
+
+if ( a and b ):
+   print "Line 1 - a and b are true"
+else:
+   print "Line 1 - Either a is not true or b is not true"
+
+if ( a or b ):
+   print "Line 2 - Either a is true or b is true or both are true"
+else:
+   print "Line 2 - Neither a is true nor b is true"
+
+
+a = 0
+if ( a and b ):
+   print "Line 3 - a and b are true"
+else:
+   print "Line 3 - Either a is not true or b is not true"
+
+if ( a or b ):
+   print "Line 4 - Either a is true or b is true or both are true"
+else:
+   print "Line 4 - Neither a is true nor b is true"
+
+if not( a and b ):
+   print "Line 5 - a and b are true"
+else:
+   print "Line 5 - Either a is not true or b is not true"
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Line 1 - a and b are true
+Line 2 - Either a is true or b is true or both are true
+Line 3 - Either a is not true or b is not true
+Line 4 - Either a is true or b is true or both are true
+Line 5 - a and b are true
+</pre>
+<hr /><h2 id="ysf6">Python成员运算符</h2> 
+<p>除了以上的一些运算符之外，Python还支持成员运算符，测试实例中包含了一系列的成员，包括字符串，列表或元组。</p>
+<table class="reference">
+<tbody><tr>
+<th>运算符</th><th>描述</th><th>实例</th>
+</tr>
+<tr>
+<td>in</td><td>
+如果在指定的序列中找到值返回True，否则返回False。</td>
+<td> x 在 y序列中 , 如果x在y序列中返回True。</td>
+</tr>
+<tr>
+<td>not in</td><td>如果在指定的序列中没有找到值返回True，否则返回False。</td>
+<td>x 不在 y序列中 , 如果x不在y序列中返回True。</td>
+</tr>
+</tbody></table>
+<p>以下实例演示了Python所有成员运算符的操作：</p>
+<pre>
+#!/usr/bin/python
+
+a = 10
+b = 20
+list = [1, 2, 3, 4, 5 ];
+
+if ( a in list ):
+   print "Line 1 - a is available in the given list"
+else:
+   print "Line 1 - a is not available in the given list"
+
+if ( b not in list ):
+   print "Line 2 - b is not available in the given list"
+else:
+   print "Line 2 - b is available in the given list"
+
+a = 2
+if ( a in list ):
+   print "Line 3 - a is available in the given list"
+else:
+   print "Line 3 - a is not available in the given list"
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Line 1 - a is not available in the given list
+Line 2 - b is not available in the given list
+Line 3 - a is available in the given list
+</pre>
+<hr /><h2 id="ysf7">Python身份运算符</h2>
+<p> 
+身份运算符用于比较两个对象的存储单元</p>
+<table class="reference">
+<tbody><tr>
+<th>运算符</th><th>描述</th><th>实例</th>
+</tr>
+<tr>
+<td>is</td><td>
+is是判断两个标识符是不是引用自一个对象</td><td> x is y, 如果 id(x)  等于 id(y) , <b>is</b> 返回结果 1</td>
+</tr>
+<tr>
+<td>is not</td><td>is not是判断两个标识符是不是引用自不同对象</td><td> x is not y, 如果 id(x) 不等于 id(y). <b>is not</b> 返回结果 1 </td>
+</tr>
+</tbody></table>
+
+<p>以下实例演示了Python所有身份运算符的操作：</p>
+<pre>
+#!/usr/bin/python
+
+a = 20
+b = 20
+
+if ( a is b ):
+   print "Line 1 - a and b have same identity"
+else:
+   print "Line 1 - a and b do not have same identity"
+
+if ( id(a) == id(b) ):
+   print "Line 2 - a and b have same identity"
+else:
+   print "Line 2 - a and b do not have same identity"
+
+b = 30
+if ( a is b ):
+   print "Line 3 - a and b have same identity"
+else:
+   print "Line 3 - a and b do not have same identity"
+
+if ( a is not b ):
+   print "Line 4 - a and b do not have same identity"
+else:
+   print "Line 4 - a and b have same identity"
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Line 1 - a and b have same identity
+Line 2 - a and b have same identity
+Line 3 - a and b do not have same identity
+Line 4 - a and b do not have same identity 
+</pre>
+<hr /><h2 id="ysf8">Python运算符优先级</h2>
+<p>以下表格列出了从最高到最低优先级的所有运算符：</p>
+<table class="reference">
+<tbody><tr><th>运算符</th><th>描述</th></tr>
+<tr>
+<td>**</td>
+<td>指数 (最高优先级)</td>
+</tr><tr>
+<td>~ + -</td>
+<td>按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)</td>
+</tr><tr>
+<td>* / % //</td>
+<td>乘，除，取模和取整除</td>
+</tr><tr>
+<td>+ -</td>
+<td>加法减法</td>
+</tr><tr>
+<td>&gt;&gt; &lt;&lt;</td>
+<td>右移，左移运算符</td>
+</tr><tr>
+<td>&amp;</td>
+<td>位 'AND'</td>
+</tr><tr>
+<td>^ |</td>
+<td>位运算符</td>
+</tr><tr>
+<td>&lt;= &lt; &gt; &gt;=</td>
+<td>比较运算符</td>
+</tr><tr>
+<td>&lt;&gt; == !=</td>
+<td>等于运算符</td>
+</tr>
+<tr>
+<td>= %= /= //= -= += *= **=</td>
+<td>赋值运算符</td>
+</tr>
+<tr>
+<td>is is not</td>
+<td>身份运算符</td>
+</tr>
+<tr>
+<td>in not in</td>
+<td>成员运算符</td>
+</tr><tr>
+<td>not or and</td>
+<td>逻辑运算符</td>
+</tr>
+</tbody></table>
+
+<p>以下实例演示了Python所有运算符优先级的操作：</p>
+<pre>
+#!/usr/bin/python
+
+a = 20
+b = 10
+c = 15
+d = 5
+e = 0
+
+e = (a + b) * c / d       #( 30 * 15 ) / 5
+print "Value of (a + b) * c / d is ",  e
+
+e = ((a + b) * c) / d     # (30 * 15 ) / 5
+print "Value of ((a + b) * c) / d is ",  e
+
+e = (a + b) * (c / d);    # (30) * (15/5)
+print "Value of (a + b) * (c / d) is ",  e
+
+e = a + (b * c) / d;      #  20 + (150/5)
+print "Value of a + (b * c) / d is ",  e
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Value of (a + b) * c / d is 90
+Value of ((a + b) * c) / d is 90
+Value of (a + b) * (c / d) is 90
+Value of a + (b * c) / d is 50
+</pre>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/python-variable-types.html" rel="prev"> Python 变量类型</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/python-if-statement.html" rel="next">Python 条件语句</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.267 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 22:16:19 -->
+
+<!-- super cache -->

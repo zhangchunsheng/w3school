@@ -1,0 +1,414 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>AppML 参考手册 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='XSL-FO 参考手册' href='http://www.w3cschool.cc/xslfo/xslfo-reference.html' />
+<link rel='next' title='XML Schema all 元素' href='http://www.w3cschool.cc/schema/el-all.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/appml/appml-reference.html' />
+<meta name="keywords" content="AppML 参考手册,AppML 教程">
+<meta name="description" content="&lt;AppML&gt; 参考手册    &lt;AppML&gt; 数据模型：    &lt;appml security='security'&gt; &lt;datasource&gt;Datasource definition goes here&lt;/datasource&gt; &lt;filters&gt;Filter definitions goes here (if any)&lt;/filters&gt; &lt..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>AppML 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-tutorial.html" >
+	AppML 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-howto.html" >
+	如何使用 AppML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-download.html" >
+	AppML 下载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-architecture.html" >
+	AppML 架构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-reference.html" >
+	AppML 参考手册	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-intro.html" >
+	AppML 案例简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-prototyping.html" >
+	AppML 案例原型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-models.html" >
+	AppML 案例模型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-templates.html" >
+	AppML 案例模板	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-employees.html" >
+	AppML 案例 Employees	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-customers.html" >
+	AppML 案例 Customers	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-case-products.html" >
+	AppML 案例 Products	</a>
+		<a target="_top" href="http://www.w3cschool.cc/appml/appml-webstandards.html" >
+	AppML 案例未来	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/appml/appml-architecture.html" rel="prev"> AppML 架构</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/appml/appml-case-intro.html" rel="next">AppML 案例简介</a> &raquo;</div>
+	</div>
+
+	<h1>
+<span class="color_h1">&lt;AppML&gt;</span> 参考手册</h1>
+
+<hr />
+<h2> &lt;AppML&gt; 数据模型：</h2>
+
+<div class="code notranslate">
+<div>
+&lt;appml security="<em>security</em>"&gt;<br /><br />
+&lt;datasource&gt;<br /><em>Datasource definition goes here<br /></em>&lt;/datasource&gt;<br /><br />
+&lt;filters&gt;<br /><em>Filter definitions goes here (if any)<br /></em>&lt;/filters&gt;<br /><br />
+&lt;update&gt;<br /><em>Update definitions goes here (if any)<br /></em>&lt;/update&gt;<br /><br />
+&lt;anything&gt;<br /><em>Anything you want to add to the model<br /></em>&lt;/anything&gt;<br /><br />&lt;/appml&gt;</div>
+</div>
+<br /><hr />
+<h2>&lt;AppML&gt;安全</h2>
+<p>&lt;AppML&gt; 安全通过 &lt;AppML&gt; 标签中的安全属性设置。</p>
+
+<div class="code notranslate">
+<div>
+&lt;appml security="artists"&gt;</div>
+</div>
+<p>以上应用开头包含了安全定义属性，只允许 artists 用户登陆。</p>
+<p>在这种情况下，用户登录的用户名必须为 "artists"组的成员。</p>
+<hr />
+<h2> &lt;datasource&gt; 元素</h2>
+<p> &lt;AppML&gt;应用的的 &lt;datasource&gt;  元素定义了4个不同数据类型的:</p>
+<h3>子元素（只有一个可以适用）</h3>
+<table class="reference notranslate">
+<tr>
+<th width="30%">元素</th>
+    <th>描述</th>
+  </tr>
+<tr>
+<td>&lt;database&gt;</td>
+    <td>定义数据类型</td>
+  </tr>
+<tr>
+<td>&lt;xmlfile&gt;</td>
+    <td>定义 XML 源文件</td>
+  </tr>
+<tr>
+<td>&lt;csvfile&gt;</td>
+    <td>定义一个逗号分隔的文本文件</td>
+  </tr>
+</table>
+<br /><hr />
+<h2> &lt;database&gt; 元素</h2>
+<p> &lt;database&gt; 元素定义了数据库 </p>
+<h3>子元素</h3>
+<table class="reference notranslate">
+<tr>
+<th width="30%">元素</th>
+    <th>描述</th>
+  </tr>
+<tr>
+<td>&lt;connection&gt;</td>
+    <td>链接数据库名</td>
+  </tr>
+<tr>
+<td>&lt;execute&gt;</td>
+    <td>数据检索前执行的SQL语句（可选）</td>
+  </tr>
+<tr>
+<td>&lt;sql&gt;</td>
+    <td>用于检索数据的SQL语句</td>
+  </tr>
+<tr>
+<td>&lt;maintable&gt;</td>
+    <td>应用程序的主表（可选）</td>
+  </tr>
+<tr>
+<td>&lt;keyfield&gt;</td>
+    <td>主表的键字段（可选）</td>
+  </tr>
+</table>
+<br /><hr />
+<h2>存储在SQL数据库中的数据</h2>
+<p>这是面向数据的应用程序最常用的解决方案。</p>
+<div class="code notranslate">
+<div>
+&lt;datasource&gt;<br />
+&lt;database&gt;<br />
+&lt;connection&gt;CDDataBase&lt;/connection&gt;<br />
+&lt;sql&gt;SELECT Artist, Title, Country FROM CD_Catalog&lt;/sql&gt;<br />
+&lt;/database&gt;<br />
+&lt;/datasource&gt; 
+</div>
+</div>
+<p>上面的模型可以从"CDDataBase"数据库的"CD_Catalog"表中选择三个数据选项 (Artist, Title, Country) 。 </p>
+<p>结果返回的行数是未知的。</p>
+
+
+<hr />
+<h2>存储在 XML 文件中的数据</h2>
+<p>&lt;AppML&gt; 可以从XML文件中读取数据: </p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+&lt;appml&gt;<br /><br />
+&lt;datasource&gt;<br />
+&lt;xmlfile src="cd_catalog.xml"&gt;<br /><br />
+&lt;record&gt;CD&lt;/record&gt;<br /><br />
+&lt;item&gt;<br />
+&lt;name&gt;Title&lt;/name&gt;<br />
+&lt;nodename&gt;TITLE&lt;/nodename&gt;<br />
+&lt;/item&gt;<br /><br />
+&lt;item&gt;<br />
+&lt;name&gt;Artist&lt;/name&gt;<br />
+&lt;nodename&gt;ARTIST&lt;/nodename&gt;<br />
+&lt;/item&gt;<br />
+&lt;item&gt;<br /><br />
+&lt;name&gt;Country&lt;/name&gt;<br />
+&lt;nodename&gt;COUNTRY&lt;/nodename&gt;<br />
+&lt;/item&gt;<br /><br />
+&lt;/xmlfile&gt;<br />
+&lt;/datasource&gt;<br /><br />
+&lt;/appml&gt;</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryappml_from_xml" target="_blank">尝试一下 »</a>
+</div>
+<p>此方法能够将数据存储在服务器上的XML文件。</p>
+
+<hr />
+<h2>数据存储在 文本（Text）文件中</h2>
+<p>&lt;AppML&gt; 可以从文本文件中读取数据： </p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+&lt;appml&gt;<br /><br />
+&lt;datasource&gt;<br />
+&lt;csvfile src="cd_catalog.txt"&gt;<br /><br />
+&lt;item&gt;<br />
+&lt;name&gt;Title&lt;/name&gt;<br />
+&lt;index&gt;1&lt;/index&gt;<br />
+&lt;/item&gt;<br /><br />
+&lt;item&gt;<br />
+&lt;name&gt;Artist&lt;/name&gt;<br />
+&lt;index&gt;2&lt;/index&gt;<br />
+&lt;/item&gt;<br /><br />
+&lt;item&gt;<br />
+&lt;name&gt;Price&lt;/name&gt;<br />
+&lt;index&gt;5&lt;/index&gt;<br />
+&lt;/item&gt;<br /><br />
+&lt;/csvfile&gt;<br />
+&lt;/datasource&gt;<br /><br />
+&lt;/appml&gt; 
+</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryappml_from_txt" target="_blank">尝试一下 »</a>
+</div>
+<p>此方法可以在服务器上的将数据存储在文本文件中。</p>
+ 
+<hr />
+<h2>如果需要你可以创建数据库</h2>
+<p>&lt;AppML&gt; 如果有需要你可以创建一个数据库：</p>
+<div class="code notranslate">
+<div>
+&lt;database&gt;<br />
+&lt;connection&gt;CDDataBase&lt;/connection&gt;<br /><br />
+&lt;execute&gt;<br />
+CREATE TABLE CD_catalog
+(<br />CD_Id INT IDENTITY,<br />Title NVARCHAR(255),<br />Artist NVARCHAR(255),<br />Country NVARCHAR(255),<br />Company NVARCHAR(255),<br />Price NUMBER,Published INT)<br />
+&lt;/execute&gt;<br /><br />
+&lt;/database&gt;
+</div>
+</div>
+<p>完善快速原型模型！</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/appml/appml-architecture.html" rel="prev"> AppML 架构</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/appml/appml-case-intro.html" rel="next">AppML 案例简介</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.128 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 19:41:18 -->
+
+<!-- super cache -->

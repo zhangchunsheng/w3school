@@ -1,0 +1,490 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Java 抽象类 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Java 多态' href='http://www.w3cschool.cc/java/java-polymorphism.html' />
+<link rel='next' title='java 封装' href='http://www.w3cschool.cc/java/java-encapsulation.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/java/java-abstraction.html' />
+<meta name="keywords" content="Java 抽象类,Java 教程">
+<meta name="description" content="Java 抽象类   在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。  抽象类除了不能实例化对象之外，类的其它功能依然存在，成员变量、成员方法和构造方法的访问方式和普通类一样。 由于抽象类不能实例化对象，所以抽象类必须被继承，才能被使用。也是因为这个原因，通常在设计阶段决定要不要设计抽象类。 父类包含了子类集合的常见..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Java 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-tutorial.html" >
+	Java 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-intro.html" >
+	Java 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-environment-setup.html" >
+	Java开发环境配置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-syntax.html" >
+	Java基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-object-classes.html" >
+	Java对象和类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-datatypes.html" >
+	Java基本数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-variable-types.html" >
+	Java变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-modifier-types.html" >
+	Java修饰符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-operators.html" >
+	Java运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-loop.html" >
+	Java循环结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-if-else-switch.html" >
+	Java分支结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-number.html" >
+	Java Number类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-character.html" >
+	Java Character类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-string.html" >
+	Java String类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-stringbuffer.html" >
+	Java StringBuffer和StringBuilder类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-array.html" >
+	Java 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-date-time.html" >
+	Java日期时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-regular-expressions.html" >
+	Java正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-methods.html" >
+	Java 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-files-io.html" >
+	Java 流(Stream)、文件(File)和IO	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-exceptions.html" >
+	Java 异常处理	</a>
+	<br><h2 class="left">Java <span class="left_h2">面向对象</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-inheritance.html" >
+	Java 继承	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-override-overload.html" >
+	Java 重写(Override)与重载(Overload)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-polymorphism.html" >
+	Java 多态	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-abstraction.html" >
+	Java 抽象类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-encapsulation.html" >
+	java 封装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-interfaces.html" >
+	Java 接口	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-package.html" >
+	Java 包(package)	</a>
+	<br><h2 class="left">Java <span class="left_h2">高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-data-structures.html" >
+	Java 数据结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-collections.html" >
+	Java 集合框架	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-generics.html" >
+	Java 泛型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-serialization.html" >
+	Java序列化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-networking.html" >
+	Java 网络编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-sending-email.html" >
+	Java 发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-multithreading.html" >
+	Java 多线程编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-applet-basics.html" >
+	Java Applet基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-documentation.html" >
+	Java 文档注释	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-polymorphism.html" rel="prev"> Java 多态</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-encapsulation.html" rel="next">java 封装</a> &raquo;</div>
+	</div>
+
+	<h1>Java 抽象类</h1>
+<hr />
+
+<p>在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。
+</p>
+<p>抽象类除了不能实例化对象之外，类的其它功能依然存在，成员变量、成员方法和构造方法的访问方式和普通类一样。</p>
+<p>由于抽象类不能实例化对象，所以抽象类必须被继承，才能被使用。也是因为这个原因，通常在设计阶段决定要不要设计抽象类。</p>
+<p>父类包含了子类集合的常见的方法，但是由于父类本身是抽象的，所以不能使用这些方法。</p>
+<hr /><h2>抽象类</h2>
+<p>在Java语言中使用abstract class来定义抽象类。如下实例：</p>
+<pre>
+/* 文件名 : Employee.java */
+public abstract class Employee
+{
+   private String name;
+   private String address;
+   private int number;
+   public Employee(String name, String address, int number)
+   {
+      System.out.println("Constructing an Employee");
+      this.name = name;
+      this.address = address;
+      this.number = number;
+   }
+   public double computePay()
+   {
+     System.out.println("Inside Employee computePay");
+     return 0.0;
+   }
+   public void mailCheck()
+   {
+      System.out.println("Mailing a check to " + this.name
+       + " " + this.address);
+   }
+   public String toString()
+   {
+      return name + " " + address + " " + number;
+   }
+   public String getName()
+   {
+      return name;
+   }
+   public String getAddress()
+   {
+      return address;
+   }
+   public void setAddress(String newAddress)
+   {
+      address = newAddress;
+   }
+   public int getNumber()
+   {
+     return number;
+   }
+}
+</pre>
+<p>注意到该Employee类没有什么不同，尽管该类是抽象类，但是它仍然有3个成员变量，7个成员方法和1个构造方法。
+现在如果你尝试如下的例子：</p>
+<pre>
+/* 文件名 : AbstractDemo.java */
+public class AbstractDemo
+{
+   public static void main(String [] args)
+   {
+      /* 以下是不允许的，会引发错误 */
+      Employee e = new Employee("George W.", "Houston, TX", 43);
+
+      System.out.println("\n Call mailCheck using Employee reference--");
+      e.mailCheck();
+    }
+}
+</pre>
+<p>当你尝试编译AbstractDemo类时，会产生如下错误：</p>
+<pre>
+Employee.java:46: Employee is abstract; cannot be instantiated
+      Employee e = new Employee("George W.", "Houston, TX", 43);
+                   ^
+1 error
+</pre>
+<hr />
+<h2>继承抽象类</h2>
+<p>我们能通过一般的方法继承Employee类：</p>
+<pre>
+/* 文件名 : Salary.java */
+public class Salary extends Employee
+{
+   private double salary; //Annual salary
+   public Salary(String name, String address, int number, double
+      salary)
+   {
+       super(name, address, number);
+       setSalary(salary);
+   }
+   public void mailCheck()
+   {
+       System.out.println("Within mailCheck of Salary class ");
+       System.out.println("Mailing check to " + getName()
+       + " with salary " + salary);
+   }
+   public double getSalary()
+   {
+       return salary;
+   }
+   public void setSalary(double newSalary)
+   {
+       if(newSalary &gt;= 0.0)
+       {
+          salary = newSalary;
+       }
+   }
+   public double computePay()
+   {
+      System.out.println("Computing salary pay for " + getName());
+      return salary/52;
+   }
+}
+</pre>
+<p>尽管我们不能实例化一个Employee类的对象，但是如果我们实例化一个Salary类对象，该对象将从Employee类继承3个成员变量和7个成员方法。</p>
+<pre>
+/* 文件名 : AbstractDemo.java */
+public class AbstractDemo
+{
+   public static void main(String [] args)
+   {
+      Salary s = new Salary("Mohd Mohtashim", "Ambehta, UP", 3, 3600.00);
+      Employee e = new Salary("John Adams", "Boston, MA", 2, 2400.00);
+
+      System.out.println("Call mailCheck using Salary reference --");
+      s.mailCheck();
+
+      System.out.println("\n Call mailCheck using Employee reference--");
+      e.mailCheck();
+    }
+}
+</pre>
+<p>以上程序编译运行结果如下：</p>
+<pre>
+Constructing an Employee
+Constructing an Employee
+Call mailCheck using  Salary reference --
+Within mailCheck of Salary class
+Mailing check to Mohd Mohtashim with salary 3600.0
+
+Call mailCheck using Employee reference--
+Within mailCheck of Salary class
+Mailing check to John Adams with salary 2400.
+</pre>
+<hr />
+<h2>抽象方法</h2>
+<p>
+如果你想设计这样一个类，该类包含一个特别的成员方法，该方法的具体实现由它的子类确定，那么你可以在父类中声明该方法为抽象方法。</p><p>
+Abstract关键字同样可以用来声明抽象方法，抽象方法只包含一个方法名，而没有方法体。</p><p>
+抽象方法没有定义，方法名后面直接跟一个分号，而不是花括号。</p>
+<pre>
+public abstract class Employee
+{
+   private String name;
+   private String address;
+   private int number;
+   
+   public abstract double computePay();
+   
+   //其余代码
+}
+</pre>
+<p>声明抽象方法会造成以下两个结果：</p>
+<ul>
+	<li value="23">
+		如果一个类包含抽象方法，那么该类必须是抽象类。</li>
+	<li value="23">
+		任何子类必须重写父类的抽象方法，或者声明自身为抽象类。</li>
+</ul>
+<p>继承抽象方法的子类必须重载该方法。否则，该子类也必须声明为抽象类。最终，必须有子类实现该抽象方法，否则，从最初的父类到最终的子类都不能用来实例化对象。</p>
+<p>如果Salary类继承了Employee类，那么它必须实现computePay()方法：</p>
+<pre>
+/* 文件名 : Salary.java */
+public class Salary extends Employee
+{
+   private double salary; // Annual salary
+  
+   public double computePay()
+   {
+      System.out.println("Computing salary pay for " + getName());
+      return salary/52;
+   }
+
+   //其余代码
+}
+</pre>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-polymorphism.html" rel="prev"> Java 多态</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-encapsulation.html" rel="next">java 封装</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.315 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:28:14 -->
+
+<!-- super cache -->

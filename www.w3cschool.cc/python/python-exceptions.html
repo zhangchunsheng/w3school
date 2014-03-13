@@ -1,0 +1,591 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Python 异常处理 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Python 文件I/O' href='http://www.w3cschool.cc/python/python-files-io.html' />
+<link rel='next' title='Python index()方法' href='http://www.w3cschool.cc/python/att-string-index.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/python/python-exceptions.html' />
+<meta name="keywords" content="Python 异常处理,Python基础教程">
+<meta name="description" content="Python 异常处理  python提供了两个非常重要的功能来处理python程序在运行中出现的异常和错误。你可以使用该功能来调试python程序。  异常处理: 本站Python教程会具体介绍。  断言(Assertions):本站Python教程会具体介绍。    python标准异常    异常名称 描述   BaseExceptiona 所有异常的基类 SystemExitb python 解释器请求退出 KeyboardIn..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Python基础教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tutorial.html" >
+	Python基础教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-intro.html" >
+	Python 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-install.html" >
+	Python环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-basic-syntax.html" >
+	Python 基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-variable-types.html" >
+	Python 变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-operators.html" >
+	Python 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-if-statement.html" >
+	Python 条件语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-loops.html" >
+	Python 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-while-loop.html" >
+	Python While循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-for-loop.html" >
+	Python for 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-nested-loops.html" >
+	Python 循环嵌套	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-break-statement.html" >
+	Python break 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-continue-statement.html" >
+	Python continue  语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-pass-statement.html" >
+	Python pass 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-numbers.html" >
+	Python 数字	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-strings.html" >
+	Python 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-lists.html" >
+	Python 列表(Lists)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tuples.html" >
+	Python 元组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-dictionary.html" >
+	Python 字典(Dictionary)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-date-time.html" >
+	Python 日期和时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-functions.html" >
+	Python函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-modules.html" >
+	Python模块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-files-io.html" >
+	Python 文件I/O	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-exceptions.html" >
+	Python 异常处理	</a>
+	<br><h2 class="left"><span class="left_h2">Python</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/python/python-object.html" >
+	Python面向对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-reg-expressions.html" >
+	Python正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-cgi.html" >
+	Python CGI编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-mysql.html" >
+	python操作mysql数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-email.html" >
+	Python使用SMTP发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-multithreading.html" >
+	Python多线程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-xml.html" >
+	python XML解析	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-gui-tkinter.html" >
+	python GUI编程(Tkinter)	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/python-files-io.html" rel="prev"> Python 文件I/O</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/att-string-index.html" rel="next">Python index()方法</a> &raquo;</div>
+	</div>
+
+	<h1>Python 异常处理</h1>
+<p>
+python提供了两个非常重要的功能来处理python程序在运行中出现的异常和错误。你可以使用该功能来调试python程序。
+</p><ul><li>
+异常处理: 本站Python教程会具体介绍。
+</li><li>
+断言(Assertions):本站Python教程会具体介绍。
+</li></ul>
+<hr />
+<h2>
+python标准异常</h2>
+<table class="reference">
+<tr>
+<th>
+异常名称</th><th> 描述</th>
+<tr>
+<tr><td>
+BaseExceptiona</td><td> 所有异常的基类</td></tr><tr><td>
+SystemExitb python </td><td>解释器请求退出</td></tr><tr><td>
+KeyboardInterruptc</td><td> 用户中断执行(通常是输入^C)</td></tr><tr><td>
+Exceptiond </td><td>常规错误的基类</td></tr><tr><td>
+StopIteratione </td><td>迭代器没有更多的值</td></tr><tr><td>
+GeneratorExita </td><td>生成器(generator)发生异常来通知退出</td></tr><tr><td>
+SystemExith </td><td>Python 解释器请求退出</td></tr><tr><td>
+StandardErrorg</td><td> 所有的内建标准异常的基类</td></tr><tr><td>
+ArithmeticErrord </td><td>所有数值计算错误的基类</td></tr><tr><td>
+FloatingPointErrord </td><td>浮点计算错误</td></tr><tr><td>
+OverflowError</td><td> 数值运算超出最大限制</td></tr><tr><td>
+ZeroDivisionError</td><td> 除(或取模)零 (所有数据类型)</td></tr><tr><td>
+AssertionErrord</td><td> 断言语句失败</td></tr><tr><td>
+AttributeError</td><td> 对象没有这个属性</td></tr><tr><td>
+EOFError </td><td>没有内建输入,到达EOF 标记</td></tr><tr><td>
+EnvironmentErrord </td><td>操作系统错误的基类</td></tr><tr><td>
+IOError </td><td>输入/输出操作失败</td></tr><tr><td>
+OSErrord </td><td>操作系统错误</td></tr><tr><td>
+WindowsErrorh Windows</td><td> 系统调用失败</td></tr><tr><td>
+ImportError </td><td>导入模块/对象失败</td></tr><tr><td>
+KeyboardInterruptf </td><td>用户中断执行(通常是输入^C)</td></tr><tr><td>
+LookupErrord </td><td>无效数据查询的基类</td></tr><tr><td>
+IndexError</td><td> 序列中没有没有此索引(index)</td></tr><tr><td>
+KeyError</td><td> 映射中没有这个键</td></tr><tr><td>
+MemoryError</td><td> 内存溢出错误(对于Python 解释器不是致命的)</td></tr><tr><td>
+NameError</td><td> 未声明/初始化对象 (没有属性)</td></tr><tr><td>
+UnboundLocalErrorh </td><td>访问未初始化的本地变量</td></tr><tr><td>
+ReferenceErrore</td><td> 弱引用(Weak reference)试图访问已经垃圾回收了的对象</td></tr><tr><td>
+RuntimeError </td><td>一般的运行时错误</td></tr><tr><td>
+NotImplementedErrord</td><td> 尚未实现的方法</td></tr><tr><td>
+SyntaxError</td><td>Python 语法错误</td></tr><tr><td>
+IndentationErrorg</td><td> 缩进错误</td></tr><tr><td>
+TabErrorg</td><td> Tab 和空格混用</td></tr><tr><td>
+SystemError 一般的解释器系统错误</td></tr><tr><td>
+TypeError</td><td> 对类型无效的操作</td></tr><tr><td>
+ValueError </td><td>传入无效的参数</td></tr><tr><td>
+UnicodeErrorh </td><td>Unicode 相关的错误</td></tr><tr><td>
+UnicodeDecodeErrori </td><td>Unicode 解码时的错误</td></tr><tr><td>
+UnicodeEncodeErrori </td><td>Unicode 编码时错误</td></tr><tr><td>
+
+UnicodeTranslateErrorf</td><td> Unicode 转换时错误</td></tr><tr><td>
+Warningj </td><td>警告的基类</td></tr><tr><td>
+DeprecationWarningj</td><td> 关于被弃用的特征的警告</td></tr><tr><td>
+FutureWarningi </td><td>关于构造将来语义会有改变的警告</td></tr><tr><td>
+OverflowWarningk</td><td> 旧的关于自动提升为长整型(long)的警告</td></tr><tr><td>
+PendingDeprecationWarningi</td><td> 关于特性将会被废弃的警告</td></tr><tr><td>
+RuntimeWarningj </td><td>可疑的运行时行为(runtime behavior)的警告</td></tr><tr><td>
+SyntaxWarningj</td><td> 可疑的语法的警告</td></tr><tr><td>
+UserWarningj</td><td> 用户代码生成的警告</td></tr></table>
+
+<h2>什么是异常？</h2><p>
+异常即是一个事件，该事件会在程序执行过程中发生，影响了程序的正常执行。
+</p><p>
+一般情况下，在Python无法正常处理程序时就会发生一个异常。
+</p><p>
+异常是Python对象，表示一个错误。
+</p><p>
+当Python脚本发生异常时我们需要捕获处理它，否则程序会终止执行。
+</p><hr />
+<h2>异常处理</h2>
+<p>
+捕捉异常可以使用ry/except语句。
+</p><p>
+try/except语句用来检测try语句块中的错误，从而让except语句捕获异常信息并处理。
+</p><p>
+如果你不想在异常发生时结束你的程序，只需在try里捕获它。
+</p><p>
+语法：
+</p><p>
+以下为简单的<em>try....except...else</em>的语法：
+</p>
+<pre>
+try:
+&lt;语句&gt;        #运行别的代码
+except &lt;名字&gt;：
+&lt;语句&gt;        #如果在try部份引发了'name'异常
+except &lt;名字&gt;，&lt;数据&gt;:
+&lt;语句&gt;        #如果引发了'name'异常，获得附加的数据
+else:
+&lt;语句&gt;        #如果没有异常发生
+</pre>
+<p>
+try的工作原理是，当开始一个try语句后，python就在当前程序的上下文中作标记，这样当异常出现时就可以回到这里，try子句先执行，接下来会发生什么依赖于执行时是否出现异常。
+</p><ul>
+<li>
+如果当try后的语句执行时发生异常，python就跳回到try并执行第一个匹配该异常的except子句，异常处理完毕，控制流就通过整个try语句（除非在处理异常时又引发新的异常）。
+</li><li>如果在try后的语句里发生了异常，却没有匹配的except子句，异常将被递交到上层的try，或者到程序的最上层（这样将结束程序，并打印缺省的出错信息）。
+</li><li>如果在try子句执行时没有发生异常，python将执行else语句后的语句（如果有else的话），然后控制流通过整个try语句。
+</li></ul>
+
+<h3>实例</h3>
+<p>下面是简单的例子，它打开一个文件，在该文件中的内容写入内容，且并未发生异常：</p>
+<pre>
+#!/usr/bin/python
+
+try:
+   fh = open("testfile", "w")
+   fh.write("This is my test file for exception handling!!")
+except IOError:
+   print "Error: can\'t find file or read data"
+else:
+   print "Written content in the file successfully"
+   fh.close()
+</pre>
+<p>以上程序输出结果：</p>
+<pre>
+ Written content in the file successfully
+</pre>
+ <h3>实例</h3>
+ <p>下面是简单的例子，它打开一个文件，在该文件中的内容写入内容，但文件没有写入权限，发生了异常：</p>
+<pre>
+#!/usr/bin/python
+
+try:
+   fh = open("testfile", "w")
+   fh.write("This is my test file for exception handling!!")
+except IOError:
+   print "Error: can\'t find file or read data"
+else:
+   print "Written content in the file successfully"
+</pre>
+ <p>以上程序输出结果：</p>
+<pre>
+Error: can't find file or read data
+</pre><hr />
+ <h2>使用except而不带任何异常类型 <h2>
+  <p>你可以不带任何异常类型使用except，如下实例：</p>
+<pre>
+try:
+   You do your operations here;
+   ......................
+except:
+   If there is any exception, then execute this block.
+   ......................
+else:
+   If there is no exception then execute this block. 
+</pre>
+ <p>以上方式try-except语句捕获所有发生的异常。但这不是一个很好的方式，我们不能通过该程序识别出具体的异常信息。因为它捕获所有的异常。 </p>
+<hr /><h2>使用except而带多种异常类型</h2>
+<p>
+你也可以使用相同的except语句来处理多个异常信息，如下所示：
+</p>
+<pre>
+try:
+   You do your operations here;
+   ......................
+except(Exception1[, Exception2[,...ExceptionN]]]):
+   If there is any exception from the given exception list, 
+   then execute this block.
+   ......................
+else:
+   If there is no exception then execute this block.  
+</pre>
+
+<hr /><h2>try-finally 语句</h2>
+<p>
+try-finally 语句无论是否发生异常都将执行最后的代码。
+</p>
+<pre>
+try:
+&lt;语句&gt;
+finally:
+&lt;语句&gt;    #退出try时总会执行
+raise
+</pre>
+<p><strong>注意：</strong>你可以使用except语句或者finally语句，但是两者不能同时使用。else语句也不能与finally语句同时使用</p>
+<h3>实例</h3>
+<pre>
+#!/usr/bin/python
+
+try:
+   fh = open("testfile", "w")
+   fh.write("This is my test file for exception handling!!")
+finally:
+   print "Error: can\'t find file or read data"
+</pre>
+<p>如果打开的文件没有可写权限，输出如下所示：</p>
+<pre>
+Error: can't find file or read data
+</pre>
+<p>同样的例子也可以写成如下方式：</p>
+<pre>
+#!/usr/bin/python
+
+try:
+   fh = open("testfile", "w")
+   try:
+      fh.write("This is my test file for exception handling!!")
+   finally:
+      print "Going to close the file"
+      fh.close()
+except IOError:
+   print "Error: can\'t find file or read data"
+</pre>
+
+<p>当在try块中抛出一个异常，立即执行finally块代码。</p> <p>
+finally块中的所有语句执行后，异常被再次提出，并执行except块代码。</p> <p>
+参数的内容不同于异常。</p> 
+<hr />
+<h2>异常的参数</h2><p>
+一个异常可以带上参数，可作为输出的异常信息参数。</p> <p>
+你可以通过except语句来捕获异常的参数，如下所示：</p> 
+<pre>
+try:
+   You do your operations here;
+   ......................
+except ExceptionType, Argument:
+   You can print value of Argument here...
+</pre>
+<p>
+变量接收的异常值通常包含在异常的语句中。在元组的表单中变量可以接收一个或者多个值。</p>
+<p>元组通常包含错误字符串，错误数字，错误位置。</p>
+
+<h3>实例</h3>
+<p>
+以下为单个异常的实例：
+</p>
+<pre>
+#!/usr/bin/python
+
+# Define a function here.
+def temp_convert(var):
+   try:
+      return int(var)
+   except ValueError, Argument:
+      print "The argument does not contain numbers\n", Argument
+
+# Call above function here.
+temp_convert("xyz");
+</pre>
+<p>以上程序执行结果如下：</p>
+<pre>
+The argument does not contain numbers
+invalid literal for int() with base 10: 'xyz'
+</pre>
+
+<hr /><h3>触发异常</h3>
+
+<p>我们可以使用raise语句自己触发异常</p>
+<p>raise语法格式如下：</p>
+<pre>
+raise [Exception [, args [, traceback]]]
+</pre>
+<p>语句中Exception是异常的类型（例如，NameError）参数是一个异常参数值。该参数是可选的，如果不提供，异常的参数是"None"。</p>
+<p>最后一个参数是可选的（在实践中很少使用），如果存在，是跟踪异常对象。</p>
+
+<h3>实例</h3>
+<p>一个异常可以是一个字符串，类或对象。 Python的内核提供的异常，大多数都是实例化的类，这是一个类的实例的参数。</p>
+<p>定义一个异常非常简单，如下所示：</p>
+<pre>
+def functionName( level ):
+   if level &lt; 1:
+      raise "Invalid level!", level
+      # The code below to this would not be executed
+      # if we raise the exception
+</pre>
+<p><strong>注意：</strong>为了能够捕获异常，"except"语句必须有用相同的异常来抛出类对象或者字符串。</p>
+<p>例如我们捕获以上异常，"except"语句如下所示：</p>
+<pre>
+try:
+   Business Logic here...
+except "Invalid level!":
+   Exception handling here...
+else:
+   Rest of the code here...
+</pre>
+<hr /><h2>用户自定义异常</h2>
+<p>通过创建一个新的异常类，程序可以命名它们自己的异常。异常应该是典型的继承自Exception类，通过直接或间接的方式。</p>
+<p>以下为与RuntimeError相关的实例,实例中创建了一个类，基类为RuntimeError，用于在异常触发时输出更多的信息。</p>
+<p>在try语句块中，用户自定义的异常后执行except块语句，变量 e 是用于创建Networkerror类的实例。</p>
+
+<pre>
+class Networkerror(RuntimeError):
+   def __init__(self, arg):
+      self.args = arg
+</pre>
+<p>在你定义以上类后，你可以触发该异常，如下所示：</p>
+<pre>
+try:
+   raise Networkerror("Bad hostname")
+except Networkerror,e:
+   print e.args
+</pre>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/python-files-io.html" rel="prev"> Python 文件I/O</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/att-string-index.html" rel="next">Python index()方法</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.276 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 21:47:08 -->
+
+<!-- super cache -->

@@ -1,0 +1,537 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap 清单组/价格表 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Bootstrap 图像' href='http://www.w3cschool.cc/bootstrap/bootstrap-image.html' />
+<link rel='next' title='jQuery EasyUI 教程' href='http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/bootstrap/bootstrap-list-group.html' />
+<meta name="keywords" content="Bootstrap 清单组/价格表,Bootstrap 教程">
+<meta name="description" content="Bootstrap 使用清单组组件创建价格表 目标 价格表是销售产品或服务的任何网站的主要成分之一。即使 Boortstrap 3（与之前的版本一样）没有直接提供价格表组件，但是它提供了列表组组件。设计该组件的目的是为了渲染复杂的定制内容。利用这个特征，我们将在本教中创建一个简单的价格表，并解释制作一个列表组所用到的 CSS 规则，并说明如何定制它。  查看演示  典型的外观  您可以 在线查看演示，下面是实例代码。         U..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Bootstrap 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html" >
+	Bootstrap 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-intro.html" >
+	Bootstrap 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-css-overview.html" >
+	Bootstrap CSS 概览	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-grid-system.html" >
+	Bootstrap 网格系统	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-layout.html" >
+	Bootstrap 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-responsive-design.html" >
+	Bootstrap 响应式设计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typography.html" >
+	Bootstrap 排版	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tables.html" >
+	Bootstrap 表格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-forms.html" >
+	Bootstrap 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-icons.html" >
+	Bootstrap 图标	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button-tutorial.html" >
+	Bootstrap 按钮	</a><a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-image.html" >
+	Bootstrap 图像	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-glyphicons.html">
+	Bootstrap Glyphicons	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-list-group.html">
+	Bootstrap 清单组/价格表	</a>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-nav.html" >
+	Bootstrap 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-navbar.html" >
+	Bootstrap 导航条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-inlinelabels-badges.html" >
+	Bootstrap 内联标签和徽章	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-thumbnails.html" >
+	Bootstrap 缩略图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-progress-bars.html" >
+	Bootstrap 进度条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-breadcrumbs.html" >
+	Bootstrap 面包屑导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-pagination.html" >
+	Bootstrap 分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-alerts-errors.html" >
+	Bootstrap 警告和错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-less.html" >
+	Bootstrap LESS	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-media-object.html">
+	Bootstrap多媒体对象	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-panels.html">
+	Bootstrap面板	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-wells.html">
+	Bootstrap wells	</a>
+<br><h2 class="left"><span class="left_h2">Bootstrap JavaScript</span></h2>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-modals.html" >
+	Bootstrap 模态框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-popover.html" >
+	Bootstrap 弹出框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-dropdown.html" >
+	Bootstrap 下拉菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-scrollspy.html" >
+	Bootstrap 滚动监听	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-carousel.html" >
+	Bootstrap 轮播	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typeahead.html" >
+	Bootstrap Typeahead	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button.html" >
+	Bootstrap 按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-collapse.html" >
+	Bootstrap 折叠	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-ui-editor.html" >
+	Bootstrap UI 编辑器	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-image.html" rel="prev"> Bootstrap 图像</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-ui-editor.html" rel="next">Bootstrap UI 编辑器</a> &raquo;</div>
+	</div>
+
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/bootstrap/bootstrap.css" >
+
+<h1>Bootstrap <span class="color_h1">使用清单组组件创建价格表</span></h1>
+<h2 class="tutheader">目标</h2>
+<p>价格表是销售产品或服务的任何网站的主要成分之一。即使 Boortstrap 3（与之前的版本一样）没有直接提供价格表组件，但是它提供了列表组组件。设计该组件的目的是为了渲染复杂的定制内容。利用这个特征，我们将在本教中创建一个简单的价格表，并解释制作一个列表组所用到的 CSS 规则，并说明如何定制它。</p> 
+<p><a href="/try/demo_source/bootstrap-price-table-example.htm" target="_blank"><button class="btn btn-info btn-lg">查看演示</button></a></p>
+<p><img src="/wp-content/uploads/2013/12/pricing-table-screenshot.png" alt="pricing table screenshot"></p>
+<h2 class="tutheader">典型的外观</h2>
+<img src="/wp-content/uploads/2013/12/list-group-example-screenshot.png" alt="list group example screenshot">
+<p>您可以 <a href="/try/tryit.php?filename=bootstrap-list-group-example" target="_blank">在线查看演示</a>，下面是实例代码。</p>
+<pre name="code" class="html">
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+  &lt;ul class="list-group col-lg-4"&gt;
+  &lt;li class="list-group-item"&gt;Unlimited Users&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Unlimited storage&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Forum support&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;More....&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;More.....&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h3>list-group 和 list-group-item</h3>
+<p><em>list-group</em> class 的 CSS 规则如下</p>
+<pre name="code" class="css">
+.list-group {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+.list-group-item:first-child {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+</pre>
+<h3>徽章（badges）</h3>
+<p>您可以使用 <em>徽章（badges）</em> 组件来包含 list-group。下面代码演示了如何实现这点。</p>
+<pre name="code" class="html">
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+  &lt;ul class="list-group col-lg-4"&gt;
+  &lt;li class="list-group-item"&gt;&lt;span class="badge"&gt;Very important&lt;/span&gt;Unlimited Users&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Unlimited storage&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Forum support&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;More....&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;More.....&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>您可以 <a href="/try/tryit.php?filename=bootstrap-list-group-with-badges-example" target="_blank">点击这里，在线查看演示</a>。下面显示了定位列表组内的徽章的 CSS 代码。</p>
+<pre name="code" class="css">
+.list-group-item &gt; .badge {
+  float: right;
+}
+
+.list-group-item &gt; .badge + .badge {
+  margin-right: 5px;
+}
+</pre>
+<p>请注意，由于 float:right，会强制列表组项目内的世纪内容靠右。</p>
+<h3>链接项目</h3>
+<pre name="code" class="html">
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+  &lt;div class="list-group col-lg-4"&gt;
+  &lt;a href="#" class="list-group-item active"&gt;
+    The pricing list
+  &lt;/a&gt;
+  &lt;a href="#" class="list-group-item"&gt;Unlimited users&lt;/a&gt;
+  &lt;a href="#" class="list-group-item"&gt;Unlimited storage&lt;/a&gt;
+  &lt;a href="#" class="list-group-item"&gt;email support&lt;/a&gt;
+  &lt;a href="#" class="list-group-item"&gt;More...&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>您可以 <a href="/try/tryit.php?filename=bootstrap-list-group-with-linked-items-example" target="_blank">点击这里，在线查看演示</a>。下面显示了定位列表组内的链接项目的 CSS 代码。</p>
+<pre name="code" class="css">
+a.list-group-item {
+  color: #555555;
+}
+
+a.list-group-item .list-group-item-heading {
+  color: #333333;
+}
+
+a.list-group-item:hover,
+a.list-group-item:focus {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+a.list-group-item.active,
+a.list-group-item.active:hover,
+a.list-group-item.active:focus {
+  z-index: 2;
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #428bca;
+}
+
+a.list-group-item.active .list-group-item-heading,
+a.list-group-item.active:hover .list-group-item-heading,
+a.list-group-item.active:focus .list-group-item-heading {
+  color: inherit;
+}
+
+a.list-group-item.active .list-group-item-text,
+a.list-group-item.active:hover .list-group-item-text,
+a.list-group-item.active:focus .list-group-item-text {
+  color: #e1edf7;
+}
+</pre>
+<h3>自定义内容</h3>
+<p><a href="/try/tryit.php?filename=bootstrap-list-group-with-custom-content-example" target="_blank">在线查看实例</a>，该实例演示了带有自定义内容的列表组。下面显示了出现在 Bootstrap 的 CSS 中的 HTML 和 CSS 代码。</p>
+<pre name="code" class="html">
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+  &lt;div class="list-group col-lg-4"&gt;
+  &lt;a href="#" class="list-group-item active"&gt;
+    &lt;h4 class="list-group-item-heading"&gt;List group item heading&lt;/h4&gt;
+    &lt;p class="list-group-item-text"&gt;...&lt;/p&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>CSS 代码</p>
+<pre name="code" class="css">
+.list-group-item-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.list-group-item-text {
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+</pre>
+<h3>价格表</h3>
+<p>现在，我们将采取列表组组件的节本结构，并把它转换成一个简单而有吸引力的价格表。</p>
+<p>下面是一个包含我们用于创建价格表的基本 HTML 代码。请注意，我们已经在最后一个列表项内添加按钮。对于最左边和最右边的列，我们使用 Bootstrap 的默认按钮。对于中间的列，我们添加带有不同的 class（warning） 的按钮，使它看起来与众不同。此外，我们还在中间列的第一个列表项中添加了一个徽章。</p>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="dist/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;&lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+  &lt;ul class="list-group col-lg-4"&gt;
+  &lt;li class="list-group-item"&gt;Bronze Package&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Unlimited users&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Unlimited storage&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Forum Support&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;$9/Month&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;&lt;a href="#"&gt;&lt;button class="btn btn-lg btn-default"&gt;Buy Now&lt;/button&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--second--&gt;
+&lt;ul class="list-group col-lg-4"&gt;
+  &lt;li class="list-group-item"&gt;Gold Package&lt;span class="badge"&gt;Most Preferred&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Unlimited users&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Unlimited storage&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;24X7 Support&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;$25/Month&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;&lt;a href="#"&gt;&lt;button class="btn btn-warning btn-lg"&gt;Buy Now&lt;/button&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--third--&gt;
+&lt;ul class="list-group col-lg-4"&gt;
+  &lt;li class="list-group-item"&gt;Silver Package&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Unlimited users&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Unlimited storage&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;email support&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;$15/Month&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;&lt;a href="#"&gt;&lt;button class="btn btn-lg btn-default"&gt;Buy Now&lt;/button&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+    &lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+    &lt;script src="dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>现在，我们将通过添加 CSS class 来直接定制外观和感观。CSS 代码的第一个片段会添加一些的顶部填充到页面中。</p>
+<pre name="code" class="css">
+body {
+  padding-top: 70px
+  }
+</pre>
+<p>然后，通过添加下面的 CSS 代码，我们将定制背景颜色，字体颜色，文本对齐方式和列表项内容的字体尺寸。</p>
+<pre name="code" class="css">
+ul.list-group.col-lg-4 &gt; li {
+  background-color: #c952ca;
+  color: white;
+  text-align: center;
+  font-size:125%;
+  }
+</pre>
+<p>但如果我们想让中间列的第一个列表项看起来与众不同，我们需要添加下面的 CSS 代码。我们使用 <em>:first-child</em> 伪元素来访问所需的列表项。</p>
+<pre name="code" class="css">
+ul.list-group.col-lg-4 &gt; li.list-group-item:first-child{
+  background-color: #64086f;
+  font-size: 200%; 
+  }
+</pre>
+<p>为了让徽章显得与众不同，我们再添加下面的 CSS 代码。</p>
+<pre name="code" class="css">
+  .badge {
+  background-color: #FAFAD2;
+  color:#FF8C00;
+  }
+</pre>
+<p>您可以 <a href="/try/tryit.php?filename=bootstrap-price-table-example" target="_blank">点击这里，在线查看实例</a>。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-image.html" rel="prev"> Bootstrap 图像</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-ui-editor.html" rel="next">Bootstrap UI 编辑器</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		$("pre").css('background-image', 'none');
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 3.204 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 20:01:14 -->
+
+<!-- super cache -->

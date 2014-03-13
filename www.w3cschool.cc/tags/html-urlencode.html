@@ -1,0 +1,1613 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML URL 编码参考手册 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='HTML 符号实体参考手册' href='http://www.w3cschool.cc/tags/html-symbols.html' />
+<link rel='next' title='HTML 语言代码参考手册' href='http://www.w3cschool.cc/tags/html-language-codes.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/tags/html-urlencode.html' />
+<meta name="keywords" content="HTML URL 编码参考手册,HTML 参考手册">
+<meta name="description" content="HTML URL 编码 参考手册   URL 编码会将字符转换为可通过因特网传输的格式。   URL - 统一资源定位器 Web 浏览器通过 URL 从 web 服务器请求页面。 URL 是网页的地址，比如： http://www.w3cschool.cc。  URL 编码 URL 只能使用 ASCII 字符集来通过因特网进行发送。 由于 URL 常常会包含 ASCII 集合之外的字符，URL 必须转换为有效的 ASCII 格式。 UR..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>HTML 参考手册</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-reference.html" >
+	HTML 标签列表(字母排序)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-byfunc.html" >
+	HTML 标签列表（功能排序）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-standardattributes.html" >
+	HTML 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-eventattributes.html" >
+	HTML 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-canvas.html" >
+	HTML 画布	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-av-dom.html" >
+	HTML 音频/视频	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-elementsdoctypes.html" >
+	HTML 有效DOCTYPES	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-colorname.html" >
+	HTML 颜色名	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-colorpicker.html" >
+	HTML 拾色器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-charactersets.html" >
+	HTML 字符集	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-ascii.html" >
+	HTML ASCII	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-entities.html" >
+	HTML ISO-8859-1	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-symbols.html" >
+	HTML 符号	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-urlencode.html" >
+	HTML URL 编码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-language-codes.html" >
+	HTML 语言代码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-httpmessages.html" >
+	HTTP 消息	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-httpmethods.html" >
+	HTTP 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-keyboardshortcuts.html" >
+	键盘快捷键	</a>
+	<br/><h2 class="left"><span class="left_h2">HTML</span> 标签</h2>	<a target="_top" href="http://www.w3cschool.cc/tags/tag-comment.html" >
+	&lt;!--&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-doctype.html" >
+	&lt;!DOCTYPE&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-a.html" >
+	&lt;a&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-abbr.html" >
+	&lt;abbr&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-acronym.html" >
+	&lt;acronym&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-address.html" >
+	&lt;address&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-applet.html" >
+	&lt;applet&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-area.html" >
+	&lt;area&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-article.html" >
+	&lt;article&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-aside.html" >
+	&lt;aside&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-audio.html" >
+	&lt;audio&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-b.html" >
+	&lt;b&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-base.html" >
+	&lt;base&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-basefont.html" >
+	&lt;basefont&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-bdi.html" >
+	&lt;bdi&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-bdo.html" >
+	&lt;bdo&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-big.html" >
+	&lt;big&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-blockquote.html" >
+	&lt;blockquote&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-body.html" >
+	&lt;body&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-br.html" >
+	&lt;br&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-button.html" >
+	&lt;button&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-canvas.html" >
+	&lt;canvas&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-caption.html" >
+	&lt;caption&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-center.html" >
+	&lt;center&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-cite.html" >
+	&lt;cite&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-code.html" >
+	&lt;code&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-col.html" >
+	&lt;col&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-colgroup.html" >
+	&lt;colgroup&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-command.html" >
+	&lt;command&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-datalist.html" >
+	&lt;datalist&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dd.html" >
+	&lt;dd&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-del.html" >
+	&lt;del&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-details.html" >
+	&lt;details&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dfn.html" >
+	&lt;dfn&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dialog.html" >
+	&lt;dialog&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dir.html" >
+	&lt;dir&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-div.html" >
+	&lt;div&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dl.html" >
+	&lt;dl&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dt.html" >
+	&lt;dt&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-em.html" >
+	&lt;em&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-embed.html" >
+	&lt;embed&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-fieldset.html" >
+	&lt;fieldset&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-figcaption.html" >
+	&lt;figcaption&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-figure.html" >
+	&lt;figure&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-font.html" >
+	&lt;font&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-footer.html" >
+	&lt;footer&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-form.html" >
+	&lt;form&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-frame.html" >
+	&lt;frame&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-frameset.html" >
+	&lt;frameset&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-head.html" >
+	&lt;head&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-header.html" >
+	&lt;header&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-hgroup.html" >
+	&lt;hgroup&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-hn.html" >
+	&lt;h1&gt; - &lt;h6&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-hr.html" >
+	&lt;hr&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-i.html" >
+	&lt;i&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-iframe.html" >
+	&lt;iframe&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-img.html" >
+	&lt;img&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-input.html" >
+	&lt;input&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-ins.html" >
+	&lt;ins&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-kbd.html" >
+	&lt;kbd&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-keygen.html" >
+	&lt;keygen&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-label.html" >
+	&lt;label&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-legend.html" >
+	&lt;legend&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-li.html" >
+	&lt;li&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-link.html" >
+	&lt;link&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-map.html" >
+	&lt;map&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-mark.html" >
+	&lt;mark&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-menu.html" >
+	&lt;menu&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-meta.html" >
+	&lt;meta&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-meter.html" >
+	&lt;meter&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-nav.html" >
+	&lt;nav&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-noframes.html" >
+	&lt;noframes&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-noscript.html" >
+	&lt;noscript&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-object.html" >
+	&lt;object&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-ol.html" >
+	&lt;ol&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-optgroup.html" >
+	&lt;optgroup&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-option.html" >
+	&lt;option&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-output.html" >
+	&lt;output&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-p.html" >
+	&lt;p&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-param.html" >
+	&lt;param&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-pre.html" >
+	&lt;pre&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-html.html" >
+	&lt;html&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-progress.html" >
+	&lt;progress&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-q.html" >
+	&lt;q&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-rp.html" >
+	&lt;rp&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-rt.html" >
+	&lt;rt&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-ruby.html" >
+	&lt;ruby&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-s.html" >
+	&lt;s&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-samp.html" >
+	&lt;samp&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-script.html" >
+	&lt;script&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-section.html" >
+	&lt;section&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-select.html" >
+	&lt;select&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-small.html" >
+	&lt;small&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-source.html" >
+	&lt;source&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-span.html" >
+	&lt;span&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-strike.html" >
+	&lt;strike&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-strong.html" >
+	&lt;strong&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-style.html" >
+	&lt;style&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-sub.html" >
+	&lt;sub&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-summary.html" >
+	&lt;summary&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-sup.html" >
+	&lt;sup&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-table.html" >
+	&lt;table&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-tbody.html" >
+	&lt;tbody&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-td.html" >
+	&lt;td&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-textarea.html" >
+	&lt;textarea&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-tfoot.html" >
+	&lt;tfoot&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-th.html" >
+	&lt;th&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-thead.html" >
+	&lt;thead&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-time.html" >
+	&lt;time&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-title.html" >
+	&lt;title&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-tr.html" >
+	&lt;tr&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-track.html" >
+	&lt;track&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-tt.html" >
+	&lt;tt&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-u.html" >
+	&lt;u&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-ul.html" >
+	&lt;ul&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-var.html" >
+	&lt;var&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-video.html" >
+	&lt;video&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-wbr.html" >
+	&lt;wbr&gt;	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/tags/html-symbols.html" rel="prev"> HTML 符号实体参考手册</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/tags/html-language-codes.html" rel="next">HTML 语言代码参考手册</a> &raquo;</div>
+	</div>
+
+	<h1>HTML <span class="color_h1">URL 编码</span> 参考手册</h1>
+
+<hr />
+<p class="intro">URL 编码会将字符转换为可通过因特网传输的格式。</p>
+<hr />
+
+<h2>URL - 统一资源定位器</h2>
+<p>Web 浏览器通过 URL 从 web 服务器请求页面。</p>
+<p>URL 是网页的地址，比如： <b>http://www.w3cschool.cc</b>。</p>
+<hr />
+<h2>URL 编码</h2>
+<p>URL 只能使用 <a href="ref-ascii.html">ASCII 字符集</a>来通过因特网进行发送。</p>
+<p>由于 URL 常常会包含 ASCII 集合之外的字符，URL 必须转换为有效的 ASCII 格式。</p>
+<p>URL 编码使用 "%" 其后跟随两位的十六进制数来替换非 ASCII 字符。<br />
+</p>
+<p>URL 不能包含空格。URL 编码通常使用 + 来替换空格。</p>
+<hr />
+<h2>尝试一下</h2>
+
+<p>
+如果您点击下面的"提交"按钮，浏览器会在发送输入之前对其进行 URL 编码。服务器上的页面会显示出接收到的输入。</p>
+<form name="input" target="_blank" action="http://www.w3cschool.cc/try/html_form_submit.php" method="get">
+<input type="text" value="Hello Günter" name="text" size="30">
+<input type="submit" value="提交">
+</form>
+
+<p>
+试着输入一些其他字符，然后再次点击提交按钮。</p>
+<hr />
+
+<h2>URL 编码函数</h2>
+<p>JavaScript、PHP、ASP 都提供了对字符串进行URL编码的函数。</p>
+<p>JavaScript 中使用 encodeURI() 函数，PHP 中使用 rawurlencode() 函数，ASP 中使用 Server.URLEncode() 函数。</p>
+<p>点击"URL 编码"按钮，看看 JavaScript 函数是怎么对文本进行编码的。</p>
+<form name="changeform" action="http://www.w3cschool.cc/try/html_form_submit.php" target="_blank" method="post">
+<input type="text" name="txt" id="txt" value="Hello Günter" size="30">
+<input name="submit" type="button" value="URL 编码" onclick="urlencode()">
+</form>
+<span id="encodingresult"></span>
+<p><b>注释：</b>JavaScript 函数将空格编码成 %20 。</p>
+<hr />
+<h2>URL 编码参考手册</h2>
+
+<table class="reference notranslate">
+    <tbody><tr>
+      <th align="left">ASCII 字符</th>
+      <th align="left">URL-编码</th>
+      </tr>
+    <tr>
+      <td>space</td>
+      <td>%20</td>
+    </tr>
+    <tr>
+      <td>!</td>
+      <td>%21</td>
+    </tr>
+    <tr>
+      <td>"</td>
+      <td>%22</td>
+    </tr>
+    <tr>
+      <td>#</td>
+      <td>%23</td>
+    </tr>
+    <tr>
+      <td>$</td>
+      <td>%24</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>%25</td>
+    </tr>
+    <tr>
+      <td>&amp;</td>
+      <td>%26</td>
+    </tr>
+    <tr>
+      <td>'</td>
+      <td>%27</td>
+    </tr>
+    <tr>
+      <td>(</td>
+      <td>%28</td>
+    </tr>
+    <tr>
+      <td>)</td>
+      <td>%29</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>%2A</td>
+    </tr>
+    <tr>
+      <td>+</td>
+      <td>%2B</td>
+    </tr>
+    <tr>
+      <td>,</td>
+      <td>%2C</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>%2D</td>
+    </tr>
+    <tr>
+      <td>.</td>
+      <td>%2E</td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>%2F</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>%30</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>%31</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>%32</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>%33</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>%34</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>%35</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>%36</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>%37</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>%38</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>%39</td>
+    </tr>
+    <tr>
+      <td>:</td>
+      <td>%3A</td>
+    </tr>
+    <tr>
+      <td>;</td>
+      <td>%3B</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>%3C</td>
+    </tr>
+    <tr>
+      <td>=</td>
+      <td>%3D</td>
+    </tr>
+    <tr>
+      <td>&gt;</td>
+      <td>%3E</td>
+    </tr>
+    <tr>
+      <td>?</td>
+      <td>%3F</td>
+    </tr>
+    <tr>
+      <td>@</td>
+      <td>%40</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>%41</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>%42</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>%43</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>%44</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>%45</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>%46</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>%47</td>
+    </tr>
+    <tr>
+      <td>H</td>
+      <td>%48</td>
+    </tr>
+    <tr>
+      <td>I</td>
+      <td>%49</td>
+    </tr>
+    <tr>
+      <td>J</td>
+      <td>%4A</td>
+    </tr>
+    <tr>
+      <td>K</td>
+      <td>%4B</td>
+    </tr>
+    <tr>
+      <td>L</td>
+      <td>%4C</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>%4D</td>
+    </tr>
+    <tr>
+      <td>N</td>
+      <td>%4E</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>%4F</td>
+    </tr>
+    <tr>
+      <td>P</td>
+      <td>%50</td>
+    </tr>
+    <tr>
+      <td>Q</td>
+      <td>%51</td>
+    </tr>
+    <tr>
+      <td>R</td>
+      <td>%52</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>%53</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>%54</td>
+    </tr>
+    <tr>
+      <td>U</td>
+      <td>%55</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>%56</td>
+    </tr>
+    <tr>
+      <td>W</td>
+      <td>%57</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>%58</td>
+    </tr>
+    <tr>
+      <td>Y</td>
+      <td>%59</td>
+    </tr>
+    <tr>
+      <td>Z</td>
+      <td>%5A</td>
+    </tr>
+    <tr>
+      <td>[</td>
+      <td>%5B</td>
+    </tr>
+    <tr>
+      <td>\</td>
+      <td>%5C</td>
+    </tr>
+    <tr>
+      <td>]</td>
+      <td>%5D</td>
+    </tr>
+    <tr>
+      <td>^</td>
+      <td>%5E</td>
+    </tr>
+    <tr>
+      <td>_</td>
+      <td>%5F</td>
+    </tr>
+    <tr>
+      <td>`</td>
+      <td>%60</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>%61</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>%62</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>%63</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>%64</td>
+    </tr>
+    <tr>
+      <td>e</td>
+      <td>%65</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>%66</td>
+    </tr>
+    <tr>
+      <td>g</td>
+      <td>%67</td>
+    </tr>
+    <tr>
+      <td>h</td>
+      <td>%68</td>
+    </tr>
+    <tr>
+      <td>i</td>
+      <td>%69</td>
+    </tr>
+    <tr>
+      <td>j</td>
+      <td>%6A</td>
+    </tr>
+    <tr>
+      <td>k</td>
+      <td>%6B</td>
+    </tr>
+    <tr>
+      <td>l</td>
+      <td>%6C</td>
+    </tr>
+    <tr>
+      <td>m</td>
+      <td>%6D</td>
+    </tr>
+    <tr>
+      <td>n</td>
+      <td>%6E</td>
+    </tr>
+    <tr>
+      <td>o</td>
+      <td>%6F</td>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>%70</td>
+    </tr>
+    <tr>
+      <td>q</td>
+      <td>%71</td>
+    </tr>
+    <tr>
+      <td>r</td>
+      <td>%72</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>%73</td>
+    </tr>
+    <tr>
+      <td>t</td>
+      <td>%74</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>%75</td>
+    </tr>
+    <tr>
+      <td>v</td>
+      <td>%76</td>
+    </tr>
+    <tr>
+      <td>w</td>
+      <td>%77</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>%78</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>%79</td>
+    </tr>
+    <tr>
+      <td>z</td>
+      <td>%7A</td>
+    </tr>
+    <tr>
+      <td>{</td>
+      <td>%7B</td>
+    </tr>
+    <tr>
+      <td>|</td>
+      <td>%7C</td>
+    </tr>
+    <tr>
+      <td>}</td>
+      <td>%7D</td>
+    </tr>
+    <tr>
+      <td>~</td>
+      <td>%7E</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%7F</td>
+    </tr>
+    <tr>
+      <td>`</td>
+      <td>%80</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%81</td>
+    </tr>
+    <tr>
+      <td>‚</td>
+      <td>%82</td>
+    </tr>
+    <tr>
+      <td>ƒ</td>
+      <td>%83</td>
+    </tr>
+    <tr>
+      <td>„</td>
+      <td>%84</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>%85</td>
+    </tr>
+    <tr>
+      <td>†</td>
+      <td>%86</td>
+    </tr>
+    <tr>
+      <td>‡</td>
+      <td>%87</td>
+    </tr>
+    <tr>
+      <td>ˆ</td>
+      <td>%88</td>
+    </tr>
+    <tr>
+      <td>‰</td>
+      <td>%89</td>
+    </tr>
+    <tr>
+      <td>Š</td>
+      <td>%8A</td>
+    </tr>
+    <tr>
+      <td>‹</td>
+      <td>%8B</td>
+    </tr>
+    <tr>
+      <td>Œ</td>
+      <td>%8C</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%8D</td>
+    </tr>
+    <tr>
+      <td>Ž</td>
+      <td>%8E</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%8F</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%90</td>
+    </tr>
+    <tr>
+      <td>'</td>
+      <td>%91</td>
+    </tr>
+    <tr>
+      <td>'</td>
+      <td>%92</td>
+    </tr>
+    <tr>
+      <td>"</td>
+      <td>%93</td>
+    </tr>
+    <tr>
+      <td>"</td>
+      <td>%94</td>
+    </tr>
+    <tr>
+      <td>•</td>
+      <td>%95</td>
+    </tr>
+    <tr>
+      <td>–</td>
+      <td>%96</td>
+    </tr>
+    <tr>
+      <td>—</td>
+      <td>%97</td>
+    </tr>
+    <tr>
+      <td>˜</td>
+      <td>%98</td>
+    </tr>
+    <tr>
+      <td>™</td>
+      <td>%99</td>
+    </tr>
+    <tr>
+      <td>š</td>
+      <td>%9A</td>
+    </tr>
+    <tr>
+      <td>›</td>
+      <td>%9B</td>
+    </tr>
+    <tr>
+      <td>œ</td>
+      <td>%9C</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%9D</td>
+    </tr>
+    <tr>
+      <td>ž</td>
+      <td>%9E</td>
+    </tr>
+    <tr>
+      <td>Ÿ</td>
+      <td>%9F</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%A0</td>
+    </tr>
+    <tr>
+      <td>¡</td>
+      <td>%A1</td>
+    </tr>
+    <tr>
+      <td>¢</td>
+      <td>%A2</td>
+    </tr>
+    <tr>
+      <td>£</td>
+      <td>%A3</td>
+    </tr>
+    <tr>
+      <td>¤</td>
+      <td>%A4</td>
+    </tr>
+    <tr>
+      <td>¥</td>
+      <td>%A5</td>
+    </tr>
+    <tr>
+      <td>¦</td>
+      <td>%A6</td>
+    </tr>
+    <tr>
+      <td>§</td>
+      <td>%A7</td>
+    </tr>
+    <tr>
+      <td>¨</td>
+      <td>%A8</td>
+    </tr>
+    <tr>
+      <td>©</td>
+      <td>%A9</td>
+    </tr>
+    <tr>
+      <td>ª</td>
+      <td>%AA</td>
+    </tr>
+    <tr>
+      <td>«</td>
+      <td>%AB</td>
+    </tr>
+    <tr>
+      <td>¬</td>
+      <td>%AC</td>
+    </tr>
+    <tr>
+      <td>­</td>
+      <td>%AD</td>
+    </tr>
+    <tr>
+      <td>®</td>
+      <td>%AE</td>
+    </tr>
+    <tr>
+      <td>¯</td>
+      <td>%AF</td>
+    </tr>
+    <tr>
+      <td>°</td>
+      <td>%B0</td>
+    </tr>
+    <tr>
+      <td>±</td>
+      <td>%B1</td>
+    </tr>
+    <tr>
+      <td>²</td>
+      <td>%B2</td>
+    </tr>
+    <tr>
+      <td>³</td>
+      <td>%B3</td>
+    </tr>
+    <tr>
+      <td>´</td>
+      <td>%B4</td>
+    </tr>
+    <tr>
+      <td>µ</td>
+      <td>%B5</td>
+    </tr>
+    <tr>
+      <td>¶</td>
+      <td>%B6</td>
+    </tr>
+    <tr>
+      <td>·</td>
+      <td>%B7</td>
+    </tr>
+    <tr>
+      <td>¸</td>
+      <td>%B8</td>
+    </tr>
+    <tr>
+      <td>¹</td>
+      <td>%B9</td>
+    </tr>
+    <tr>
+      <td>º</td>
+      <td>%BA</td>
+    </tr>
+    <tr>
+      <td>»</td>
+      <td>%BB</td>
+    </tr>
+    <tr>
+      <td>¼</td>
+      <td>%BC</td>
+    </tr>
+    <tr>
+      <td>½</td>
+      <td>%BD</td>
+    </tr>
+    <tr>
+      <td>¾</td>
+      <td>%BE</td>
+    </tr>
+    <tr>
+      <td>¿</td>
+      <td>%BF</td>
+    </tr>
+    <tr>
+      <td>À</td>
+      <td>%C0</td>
+    </tr>
+    <tr>
+      <td>Á</td>
+      <td>%C1</td>
+    </tr>
+    <tr>
+      <td>Â</td>
+      <td>%C2</td>
+    </tr>
+    <tr>
+      <td>Ã</td>
+      <td>%C3</td>
+    </tr>
+    <tr>
+      <td>Ä</td>
+      <td>%C4</td>
+    </tr>
+    <tr>
+      <td>Å</td>
+      <td>%C5</td>
+    </tr>
+    <tr>
+      <td>Æ</td>
+      <td>%C6</td>
+    </tr>
+    <tr>
+      <td>Ç</td>
+      <td>%C7</td>
+    </tr>
+    <tr>
+      <td>È</td>
+      <td>%C8</td>
+    </tr>
+    <tr>
+      <td>É</td>
+      <td>%C9</td>
+    </tr>
+    <tr>
+      <td>Ê</td>
+      <td>%CA</td>
+    </tr>
+    <tr>
+      <td>Ë</td>
+      <td>%CB</td>
+    </tr>
+    <tr>
+      <td>Ì</td>
+      <td>%CC</td>
+    </tr>
+    <tr>
+      <td>Í</td>
+      <td>%CD</td>
+    </tr>
+    <tr>
+      <td>Î</td>
+      <td>%CE</td>
+    </tr>
+    <tr>
+      <td>Ï</td>
+      <td>%CF</td>
+    </tr>
+    <tr>
+      <td>Ð</td>
+      <td>%D0</td>
+    </tr>
+    <tr>
+      <td>Ñ</td>
+      <td>%D1</td>
+    </tr>
+    <tr>
+      <td>Ò</td>
+      <td>%D2</td>
+    </tr>
+    <tr>
+      <td>Ó</td>
+      <td>%D3</td>
+    </tr>
+    <tr>
+      <td>Ô</td>
+      <td>%D4</td>
+    </tr>
+    <tr>
+      <td>Õ</td>
+      <td>%D5</td>
+    </tr>
+    <tr>
+      <td>Ö</td>
+      <td>%D6</td>
+    </tr>
+    <tr>
+      <td>×</td>
+      <td>%D7</td>
+    </tr>
+    <tr>
+      <td>Ø</td>
+      <td>%D8</td>
+    </tr>
+    <tr>
+      <td>Ù</td>
+      <td>%D9</td>
+    </tr>
+    <tr>
+      <td>Ú</td>
+      <td>%DA</td>
+    </tr>
+    <tr>
+      <td>Û</td>
+      <td>%DB</td>
+    </tr>
+    <tr>
+      <td>Ü</td>
+      <td>%DC</td>
+    </tr>
+    <tr>
+      <td>Ý</td>
+      <td>%DD</td>
+    </tr>
+    <tr>
+      <td>Þ</td>
+      <td>%DE</td>
+    </tr>
+    <tr>
+      <td>ß</td>
+      <td>%DF</td>
+    </tr>
+    <tr>
+      <td>à</td>
+      <td>%E0</td>
+    </tr>
+    <tr>
+      <td>á</td>
+      <td>%E1</td>
+    </tr>
+    <tr>
+      <td>â</td>
+      <td>%E2</td>
+    </tr>
+    <tr>
+      <td>ã</td>
+      <td>%E3</td>
+    </tr>
+    <tr>
+      <td>ä</td>
+      <td>%E4</td>
+    </tr>
+    <tr>
+      <td>å</td>
+      <td>%E5</td>
+    </tr>
+    <tr>
+      <td>æ</td>
+      <td>%E6</td>
+    </tr>
+    <tr>
+      <td>ç</td>
+      <td>%E7</td>
+    </tr>
+    <tr>
+      <td>è</td>
+      <td>%E8</td>
+    </tr>
+    <tr>
+      <td>é</td>
+      <td>%E9</td>
+    </tr>
+    <tr>
+      <td>ê</td>
+      <td>%EA</td>
+    </tr>
+    <tr>
+      <td>ë</td>
+      <td>%EB</td>
+    </tr>
+    <tr>
+      <td>ì</td>
+      <td>%EC</td>
+    </tr>
+    <tr>
+      <td>í</td>
+      <td>%ED</td>
+    </tr>
+    <tr>
+      <td>î</td>
+      <td>%EE</td>
+    </tr>
+    <tr>
+      <td>ï</td>
+      <td>%EF</td>
+    </tr>
+    <tr>
+      <td>ð</td>
+      <td>%F0</td>
+    </tr>
+    <tr>
+      <td>ñ</td>
+      <td>%F1</td>
+    </tr>
+    <tr>
+      <td>ò</td>
+      <td>%F2</td>
+    </tr>
+    <tr>
+      <td>ó</td>
+      <td>%F3</td>
+    </tr>
+    <tr>
+      <td>ô</td>
+      <td>%F4</td>
+    </tr>
+    <tr>
+      <td>õ</td>
+      <td>%F5</td>
+    </tr>
+    <tr>
+      <td>ö</td>
+      <td>%F6</td>
+    </tr>
+    <tr>
+      <td>÷</td>
+      <td>%F7</td>
+    </tr>
+    <tr>
+      <td>ø</td>
+      <td>%F8</td>
+    </tr>
+    <tr>
+      <td>ù</td>
+      <td>%F9</td>
+    </tr>
+    <tr>
+      <td>ú</td>
+      <td>%FA</td>
+    </tr>
+    <tr>
+      <td>û</td>
+      <td>%FB</td>
+    </tr>
+    <tr>
+      <td>ü</td>
+      <td>%FC</td>
+    </tr>
+    <tr>
+      <td>ý</td>
+      <td>%FD</td>
+    </tr>
+    <tr>
+      <td>þ</td>
+      <td>%FE</td>
+    </tr>
+    <tr>
+      <td>ÿ</td>
+      <td>%FF</td>
+    </tr>
+    </tbody></table>
+
+<br />
+<hr />
+<h2>URL 编码参考手册</h2>
+
+<p>ASCII 设备控制字符最初被设计为用来控制诸如打印机和磁带驱动器之类的硬件设备。在URL中这些字符不会起任何作用。</p>
+
+<table class="reference notranslate">
+    <tbody><tr>
+      <th align="left">ASCII 字符</th>
+      <th align="left">描述</th>
+      <th align="left">URL-编码</th>
+      </tr>
+    <tr>
+      <td>NUL</td>
+      <td>null character</td>
+      <td>%00</td>
+    </tr>
+    <tr>
+      <td>SOH</td>
+      <td>start of header</td>
+      <td>%01</td>
+    </tr>
+    <tr>
+      <td>STX</td>
+      <td>start of text</td>
+      <td>%02</td>
+    </tr>
+    <tr>
+      <td>ETX</td>
+      <td>end of text</td>
+      <td>%03</td>
+    </tr>
+    <tr>
+      <td>EOT</td>
+      <td>end of transmission</td>
+      <td>%04</td>
+    </tr>
+    <tr>
+      <td>ENQ</td>
+      <td>enquiry</td>
+      <td>%05</td>
+    </tr>
+    <tr>
+      <td>ACK</td>
+      <td>acknowledge</td>
+      <td>%06</td>
+    </tr>
+    <tr>
+      <td>BEL</td>
+      <td>bell (ring)</td>
+      <td>%07</td>
+    </tr>
+    <tr>
+      <td>BS</td>
+      <td>backspace</td>
+      <td>%08</td>
+    </tr>
+    <tr>
+      <td>HT</td>
+      <td>horizontal tab</td>
+      <td>%09</td>
+    </tr>
+    <tr>
+      <td>LF</td>
+      <td>line feed</td>
+      <td>%0A</td>
+    </tr>
+    <tr>
+      <td>VT</td>
+      <td>vertical tab</td>
+      <td>%0B</td>
+    </tr>
+    <tr>
+      <td>FF</td>
+      <td>form feed</td>
+      <td>%0C</td>
+    </tr>
+    <tr>
+      <td>CR</td>
+      <td>carriage return</td>
+      <td>%0D</td>
+    </tr>
+    <tr>
+      <td>SO</td>
+      <td>shift out</td>
+      <td>%0E</td>
+    </tr>
+    <tr>
+      <td>SI</td>
+      <td>shift in</td>
+      <td>%0F</td>
+    </tr>
+    <tr>
+      <td>DLE</td>
+      <td>data link escape</td>
+      <td>%10</td>
+    </tr>
+    <tr>
+      <td>DC1</td>
+      <td>device control 1</td>
+      <td>%11</td>
+    </tr>
+    <tr>
+      <td>DC2</td>
+      <td>device control 2</td>
+      <td>%12</td>
+    </tr>
+    <tr>
+      <td>DC3</td>
+      <td>device control 3</td>
+      <td>%13</td>
+    </tr>
+    <tr>
+      <td>DC4</td>
+      <td>device control 4</td>
+      <td>%14</td>
+    </tr>
+    <tr>
+      <td>NAK</td>
+      <td>negative acknowledge</td>
+      <td>%15</td>
+    </tr>
+    <tr>
+      <td>SYN</td>
+      <td>synchronize</td>
+      <td>%16</td>
+    </tr>
+    <tr>
+      <td>ETB</td>
+      <td>end transmission block</td>
+      <td>%17</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>cancel</td>
+      <td>%18</td>
+    </tr>
+    <tr>
+      <td>EM</td>
+      <td>end of medium</td>
+      <td>%19</td>
+    </tr>
+    <tr>
+      <td>SUB</td>
+      <td>substitute</td>
+      <td>%1A</td>
+    </tr>
+    <tr>
+      <td>ESC</td>
+      <td>escape</td>
+      <td>%1B</td>
+    </tr>
+    <tr>
+      <td>FS</td>
+      <td>file separator</td>
+      <td>%1C</td>
+    </tr>
+    <tr>
+      <td>GS</td>
+      <td>group separator</td>
+      <td>%1D</td>
+    </tr>
+    <tr>
+      <td>RS</td>
+      <td>record separator</td>
+      <td>%1E</td>
+    </tr>
+    <tr>
+      <td>US</td>
+      <td>unit separator</td>
+      <td>%1F</td>
+    </tr>
+    </tbody></table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/tags/html-symbols.html" rel="prev"> HTML 符号实体参考手册</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/tags/html-language-codes.html" rel="next">HTML 语言代码参考手册</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.894 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-12 14:48:32 -->
+
+<!-- super cache -->

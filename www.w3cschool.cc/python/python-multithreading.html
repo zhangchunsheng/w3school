@@ -1,0 +1,603 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Python多线程 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='ASP.NET Visible 属性' href='http://www.w3cschool.cc/aspnet/prop-control-standard-visible.html' />
+<link rel='next' title='ASP.NET AutoPostBack 属性' href='http://www.w3cschool.cc/aspnet/prop-webcontrol-listcontrol-autopostback.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/python/python-multithreading.html' />
+<meta name="keywords" content="Python多线程,Python基础教程">
+<meta name="description" content="Python多线程 多线程类似于同时执行多个不同程序，多线程运行有如下优点：  使用线程可以把占据长时间的程序中的任务放到后台去处理。 用户界面可以更加吸引人，这样比如用户点击了一个按钮去触发某些事件的处理，可以弹出一个进度条来显示处理的进度 程序的运行速度可能加快 在一些等待的任务实现上如用户输入、文件读写和网络收发数据等，线程就比较有用了。在这种情况下我们可以释放一些珍贵的资源如内存占用等等。  线程在执行过程中与进程还是有区别的。..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Python基础教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tutorial.html" >
+	Python基础教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-intro.html" >
+	Python 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-install.html" >
+	Python环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-basic-syntax.html" >
+	Python 基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-variable-types.html" >
+	Python 变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-operators.html" >
+	Python 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-if-statement.html" >
+	Python 条件语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-loops.html" >
+	Python 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-while-loop.html" >
+	Python While循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-for-loop.html" >
+	Python for 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-nested-loops.html" >
+	Python 循环嵌套	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-break-statement.html" >
+	Python break 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-continue-statement.html" >
+	Python continue  语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-pass-statement.html" >
+	Python pass 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-numbers.html" >
+	Python 数字	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-strings.html" >
+	Python 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-lists.html" >
+	Python 列表(Lists)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tuples.html" >
+	Python 元组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-dictionary.html" >
+	Python 字典(Dictionary)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-date-time.html" >
+	Python 日期和时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-functions.html" >
+	Python函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-modules.html" >
+	Python模块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-files-io.html" >
+	Python 文件I/O	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-exceptions.html" >
+	Python 异常处理	</a>
+	<br><h2 class="left"><span class="left_h2">Python</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/python/python-object.html" >
+	Python面向对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-reg-expressions.html" >
+	Python正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-cgi.html" >
+	Python CGI编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-mysql.html" >
+	python操作mysql数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-email.html" >
+	Python使用SMTP发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-multithreading.html" >
+	Python多线程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-xml.html" >
+	python XML解析	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-gui-tkinter.html" >
+	python GUI编程(Tkinter)	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/att-string-isdecimal.html" rel="prev"> Python isdecimal()方法</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/python-xml.html" rel="next">python XML解析</a> &raquo;</div>
+	</div>
+
+	<h1>Python多线程</h1>
+<p>多线程类似于同时执行多个不同程序，多线程运行有如下优点：</p>
+<ul>
+<li>使用线程可以把占据长时间的程序中的任务放到后台去处理。</li>
+<li>用户界面可以更加吸引人，这样比如用户点击了一个按钮去触发某些事件的处理，可以弹出一个进度条来显示处理的进度</li>
+<li>程序的运行速度可能加快</li>
+<li>在一些等待的任务实现上如用户输入、文件读写和网络收发数据等，线程就比较有用了。在这种情况下我们可以释放一些珍贵的资源如内存占用等等。</li>
+</ul>
+<p>线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。
+</p>
+<p>每个线程都有他自己的一组CPU寄存器，称为线程的上下文，该上下文反映了线程上次运行该线程的CPU寄存器的状态。
+</p><p>指令指针和堆栈指针寄存器是线程上下文中两个最重要的寄存器，线程总是在进程得到上下文中运行的，这些地址都用于标志拥有线程的进程地址空间中的内存。
+</p>
+<ul>
+
+<li>线程可以被抢占（中断）。</li>
+<li>在其他线程正在运行时，线程可以暂时搁置（也称为睡眠） -- 这就是线程的退让。
+</li>
+</ul>
+<br />
+<h2>开始学习Python线程</h2>
+<p>Python中使用线程有两种方式：函数或者用类来包装线程对象。</p>
+<p>函数式：调用thread模块中的start_new_thread()函数来产生新线程。语法如下:</p>
+<pre>
+thread.start_new_thread ( function, args[, kwargs] )
+</pre>
+<p>参数说明:</p>
+<ul>
+<li>function - 线程函数。</li>
+<li>args - 传递给线程函数的参数,他必须是个tuple类型。</li>
+<li>kwargs - 可选参数。</li>
+</ul>
+<p>实例：</p>
+<pre>
+#!/usr/bin/python
+
+import thread
+import time
+
+# 为线程定义一个函数
+def print_time( threadName, delay):
+   count = 0
+   while count &lt; 5:
+      time.sleep(delay)
+      count += 1
+      print "%s: %s" % ( threadName, time.ctime(time.time()) )
+
+# 创建两个线程
+try:
+   thread.start_new_thread( print_time, ("Thread-1", 2, ) )
+   thread.start_new_thread( print_time, ("Thread-2", 4, ) )
+except:
+   print "Error: unable to start thread"
+
+while 1:
+   pass
+</pre>
+<p>执行以上程序输出结果如下：</p>
+<pre>
+Thread-1: Thu Jan 22 15:42:17 2009
+Thread-1: Thu Jan 22 15:42:19 2009
+Thread-2: Thu Jan 22 15:42:19 2009
+Thread-1: Thu Jan 22 15:42:21 2009
+Thread-2: Thu Jan 22 15:42:23 2009
+Thread-1: Thu Jan 22 15:42:23 2009
+Thread-1: Thu Jan 22 15:42:25 2009
+Thread-2: Thu Jan 22 15:42:27 2009
+Thread-2: Thu Jan 22 15:42:31 2009
+Thread-2: Thu Jan 22 15:42:35 2009
+</pre>
+<p>线程的结束一般依靠线程函数的自然结束；也可以在线程函数中调用thread.exit()，他抛出SystemExit exception，达到退出线程的目的。
+</p>
+<hr />
+<h2>线程模块</h2>
+<p>Python通过两个标准库thread和threading提供对线程的支持。thread提供了低级别的、原始的线程以及一个简单的锁。</p>
+<p>thread 模块提供的其他方法： </p>
+<ul>
+<li>threading.currentThread(): 返回当前的线程变量。 </li>
+<li>threading.enumerate(): 返回一个包含正在运行的线程的list。正在运行指线程启动后、结束前，不包括启动前和终止后的线程。 </li>
+<li>threading.activeCount(): 返回正在运行的线程数量，与len(threading.enumerate())有相同的结果。</li>
+</ul>
+<p>除了使用方法外，线程模块同样提供了Thread类来处理线程，Thread类提供了以下方法:</p>
+<ul>
+<li><b>run():</b> 用以表示线程活动的方法。</li>
+<li><b>start():</b>启动线程活动。</p></li>
+<li><b> join([time]):</b> 等待至线程中止。这阻塞调用线程直至线程的join() 方法被调用中止-正常退出或者抛出未处理的异常-或者是可选的超时发生。</li>
+<li><b> isAlive():</b> 返回线程是否活动的。</li>
+<li><b> getName():</b> 返回线程名。</li>
+<li><b> setName():</b> 设置线程名。</li>
+</ul>
+<hr />
+<h2>使用Threading模块创建线程</h2>
+<p>使用Threading模块创建线程，直接从threading.Thread继承，然后重写__init__方法和run方法：</p>
+<pre>
+#!/usr/bin/python
+
+import threading
+import time
+
+exitFlag = 0
+
+class myThread (threading.Thread):   #继承父类threading.Thread
+    def __init__(self, threadID, name, counter):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+        self.counter = counter
+    def run(self):                   #把要执行的代码写到run函数里面 线程在创建后会直接运行run函数 
+        print "Starting " + self.name
+        print_time(self.name, self.counter, 5)
+        print "Exiting " + self.name
+
+def print_time(threadName, delay, counter):
+    while counter:
+        if exitFlag:
+            thread.exit()
+        time.sleep(delay)
+        print "%s: %s" % (threadName, time.ctime(time.time()))
+        counter -= 1
+
+# 创建新线程
+thread1 = myThread(1, "Thread-1", 1)
+thread2 = myThread(2, "Thread-2", 2)
+
+# 开启线程
+thread1.start()
+thread2.start()
+
+print "Exiting Main Thread"
+</pre>
+<p>以上程序执行结果如下；</p>
+<pre>
+Starting Thread-1
+Starting Thread-2
+Exiting Main Thread
+Thread-1: Thu Mar 21 09:10:03 2013
+Thread-1: Thu Mar 21 09:10:04 2013
+Thread-2: Thu Mar 21 09:10:04 2013
+Thread-1: Thu Mar 21 09:10:05 2013
+Thread-1: Thu Mar 21 09:10:06 2013
+Thread-2: Thu Mar 21 09:10:06 2013
+Thread-1: Thu Mar 21 09:10:07 2013
+Exiting Thread-1
+Thread-2: Thu Mar 21 09:10:08 2013
+Thread-2: Thu Mar 21 09:10:10 2013
+Thread-2: Thu Mar 21 09:10:12 2013
+Exiting Thread-2
+</pre>
+<hr />
+<h2>线程同步</h2>
+<p>如果多个线程共同对某个数据修改，则可能出现不可预料的结果，为了保证数据的正确性，需要对多个线程进行同步。
+</p>
+<p>
+使用Thread对象的Lock和Rlock可以实现简单的线程同步，这两个对象都有acquire方法和release方法，对于那些需要每次只允许一个线程操作的数据，可以将其操作放到acquire和release方法之间。如下：
+</p>
+<p>多线程的优势在于可以同时运行多个任务（至少感觉起来是这样）。但是当线程需要共享数据时，可能存在数据不同步的问题。</p>
+<p>
+考虑这样一种情况：一个列表里所有元素都是0，线程"set"从后向前把所有元素改成1，而线程"print"负责从前往后读取列表并打印。</p>
+<p>
+那么，可能线程"set"开始改的时候，线程"print"便来打印列表了，输出就成了一半0一半1，这就是数据的不同步。为了避免这种情况，引入了锁的概念。
+</p>
+<p>
+锁有两种状态——锁定和未锁定。每当一个线程比如"set"要访问共享数据时，必须先获得锁定；如果已经有别的线程比如"print"获得锁定了，那么就让线程"set"暂停，也就是同步阻塞；等到线程"print"访问完毕，释放锁以后，再让线程"set"继续。
+</p>
+<p>
+经过这样的处理，打印列表时要么全部输出0，要么全部输出1，不会再出现一半0一半1的尴尬场面。</p>
+<p>实例：</p>
+<pre>
+#!/usr/bin/python
+
+import threading
+import time
+
+class myThread (threading.Thread):
+    def __init__(self, threadID, name, counter):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+        self.counter = counter
+    def run(self):
+        print "Starting " + self.name
+       # 获得锁，成功获得锁定后返回True
+       # 可选的timeout参数不填时将一直阻塞直到获得锁定
+       # 否则超时后将返回False
+        threadLock.acquire()
+        print_time(self.name, self.counter, 3)
+        # 释放锁
+        threadLock.release()
+
+def print_time(threadName, delay, counter):
+    while counter:
+        time.sleep(delay)
+        print "%s: %s" % (threadName, time.ctime(time.time()))
+        counter -= 1
+
+threadLock = threading.Lock()
+threads = []
+
+# 创建新线程
+thread1 = myThread(1, "Thread-1", 1)
+thread2 = myThread(2, "Thread-2", 2)
+
+# 开启新线程
+thread1.start()
+thread2.start()
+
+# 添加线程到线程列表
+threads.append(thread1)
+threads.append(thread2)
+
+# 等待所有线程完成
+for t in threads:
+    t.join()
+print "Exiting Main Thread"
+</pre>
+<hr />
+<h2>线程优先级队列（ Queue）
+</h2>
+<p> Python的Queue模块中提供了同步的、线程安全的队列类，包括FIFO（先入先出)队列Queue，LIFO（后入先出）队列LifoQueue，和优先级队列PriorityQueue。这些队列都实现了锁原语，能够在多线程中直接使用。可以使用队列来实现线程间的同步。</p>
+
+<p>Queue模块中的常用方法:<p>
+<ul>
+<li>Queue.qsize() 返回队列的大小 </li>
+<li>Queue.empty() 如果队列为空，返回True,反之False </li>
+<li>Queue.full() 如果队列满了，返回True,反之False</li>
+<li>Queue.full 与 maxsize 大小对应 </li>
+<li>Queue.get([block[, timeout]])获取队列，timeout等待时间 </li>
+<li>Queue.get_nowait() 相当Queue.get(False)</li>
+<li>Queue.put(item) 写入队列，timeout等待时间 </li>
+<li>Queue.put_nowait(item) 相当Queue.put(item, False)</li>
+<li>Queue.task_done() 在完成一项工作之后，Queue.task_done()函数向任务已经完成的队列发送一个信号</li>
+<li>Queue.join() 实际上意味着等到队列为空，再执行别的操作</li>
+</ul>
+<p>实例:</p>
+<pre>
+#!/usr/bin/python
+
+import Queue
+import threading
+import time
+
+exitFlag = 0
+
+class myThread (threading.Thread):
+    def __init__(self, threadID, name, q):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+        self.q = q
+    def run(self):
+        print "Starting " + self.name
+        process_data(self.name, self.q)
+        print "Exiting " + self.name
+
+def process_data(threadName, q):
+    while not exitFlag:
+        queueLock.acquire()
+        if not workQueue.empty():
+            data = q.get()
+            queueLock.release()
+            print "%s processing %s" % (threadName, data)
+        else:
+            queueLock.release()
+        time.sleep(1)
+
+threadList = ["Thread-1", "Thread-2", "Thread-3"]
+nameList = ["One", "Two", "Three", "Four", "Five"]
+queueLock = threading.Lock()
+workQueue = Queue.Queue(10)
+threads = []
+threadID = 1
+
+# 创建新线程
+for tName in threadList:
+    thread = myThread(threadID, tName, workQueue)
+    thread.start()
+    threads.append(thread)
+    threadID += 1
+
+# 填充队列
+queueLock.acquire()
+for word in nameList:
+    workQueue.put(word)
+queueLock.release()
+
+# 等待队列清空
+while not workQueue.empty():
+    pass
+
+# 通知线程是时候退出
+exitFlag = 1
+
+# 等待所有线程完成
+for t in threads:
+    t.join()
+print "Exiting Main Thread"
+</pre>
+<p>以上程序执行结果：</p>
+<pre>
+Starting Thread-1
+Starting Thread-2
+Starting Thread-3
+Thread-1 processing One
+Thread-2 processing Two
+Thread-3 processing Three
+Thread-1 processing Four
+Thread-2 processing Five
+Exiting Thread-3
+Exiting Thread-1
+Exiting Thread-2
+Exiting Main Thread
+</pre>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/att-string-isdecimal.html" rel="prev"> Python isdecimal()方法</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/python-xml.html" rel="next">python XML解析</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.278 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:33:56 -->
+
+<!-- super cache -->

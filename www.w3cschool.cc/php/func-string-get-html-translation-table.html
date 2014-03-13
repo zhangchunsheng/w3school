@@ -1,0 +1,584 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>PHP get_html_translation_table() 函数 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='PHP fprintf() 函数' href='http://www.w3cschool.cc/php/func-string-fprintf.html' />
+<link rel='next' title='PHP hebrev() 函数' href='http://www.w3cschool.cc/php/func-string-hebrev.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/php/func-string-get-html-translation-table.html' />
+<meta name="keywords" content="PHP get_html_translation_table() 函数,PHP 基础">
+<meta name="description" content="PHP get_html_translation_table() 函数  PHP String 参考手册   实例 输出 htmlspecialchars 函数使用的翻译表：   	&lt;?php print_r (get_html_translation_table()); // HTML_SPECIALCHARS is default. 	?&gt; 运行实例 »   定义和用法  get_html_translation_tab..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>PHP 基础</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-tutorial.html" >
+	PHP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-intro.html" >
+	PHP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-install.html" >
+	PHP 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-syntax.html" >
+	PHP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-variables.html" >
+	PHP 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-string.html" >
+	PHP 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-operators.html" >
+	PHP 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-if-else.html" >
+	PHP If...Else	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-switch.html" >
+	PHP Switch	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-arrays.html" >
+	PHP 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-arrays-sort.html" >
+	PHP 数组排序	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-superglobals.html">
+	PHP超级全局变量	</a>	<a target="_top" href="http://www.w3cschool.cc/php/php-looping.html" >
+	PHP While 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-looping-for.html" >
+	PHP For 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-functions.html" >
+	PHP 函数	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-magic-constant.html">
+	PHP 魔术变量	</a>
+<br><h2 class="left"><span class="left_h2">PHP</span> 表单</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-forms.html" >
+	PHP 表单	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-form-validation.html">
+	PHP 表单验证</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-required.html">
+	PHP表单 - 必需字段</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-url-email.html">
+	PHP表单 - 验证邮件和URL</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-complete.html">
+	PHP 完整表单实例</a>	<a target="_top" href="http://www.w3cschool.cc/php/php-get.html" >
+	PHP $_GET 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-post.html" >
+	PHP $_POST 变量	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-arrays-multi.html" >
+	PHP 多维数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-date.html" >
+	PHP 日期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-includes.html" >
+	PHP 包含	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-file.html" >
+	PHP 文件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-file-upload.html" >
+	PHP 文件上传	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-cookies.html" >
+	PHP Cookies	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-sessions.html" >
+	PHP Sessions	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mail.html" >
+	PHP E-mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-secure-mail.html" >
+	PHP 安全 E-mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-error.html" >
+	PHP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-exception.html" >
+	PHP Exception	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-filter.html" >
+	PHP Filter	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 数据库</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-intro.html" >
+	PHP MySQL 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-connect.html" >
+	PHP MySQL Connect	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-create.html" >
+	PHP MySQL Create	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-insert.html" >
+	PHP MySQL Insert	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-select.html" >
+	PHP MySQL Select	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-where.html" >
+	PHP MySQL Where	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-order-by.html" >
+	PHP MySQL Order By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-update.html" >
+	PHP MySQL Update	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-delete.html" >
+	PHP MySQL Delete	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-db-odbc.html" >
+	PHP ODBC	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> XML</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-xml-parser-expat.html" >
+	XML Expat Parser	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-xml-dom.html" >
+	XML DOM	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-xml-simplexml.html" >
+	XML SimpleXML	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 与 AJAX</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-intro.html" >
+	AJAX 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-php.html" >
+	AJAX PHP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-database.html" >
+	AJAX 数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-xml.html" >
+	AJAX XML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-livesearch.html" >
+	AJAX Live Search	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-rss-reader.html" >
+	AJAX RSS Reader	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-poll.html" >
+	AJAX Poll	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 参考手册</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-ref-array.html" >
+	PHP Array	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-calendar.html" >
+	PHP Calendar	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-curl.html">PHP cURL </a>	<a target="_top" href="http://www.w3cschool.cc/php/php-ref-date.html" >
+	PHP Date	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-directory.html" >
+	PHP Directory	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-error.html" >
+	PHP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-filesystem.html" >
+	PHP Filesystem	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-filter.html" >
+	PHP Filter	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-ftp.html" >
+	PHP FTP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-http.html" >
+	PHP HTTP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-libxml.html" >
+	PHP Libxml	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-mail.html" >
+	PHP Mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-math.html" >
+	PHP Math	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-misc.html" >
+	PHP Misc	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-mysqli.html" >
+	PHP MySQLi	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-simplexml.html" >
+	PHP SimpleXML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-string.html" >
+	PHP String	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-xml.html" >
+	PHP XML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-zip.html" >
+	PHP Zip	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-timezones.html" >
+	PHP Timezones	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/php/func-string-fprintf.html" rel="prev"> PHP fprintf() 函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/php/func-string-hebrev.html" rel="next">PHP hebrev() 函数</a> &raquo;</div>
+	</div>
+
+	<h1>PHP <span class="color_h1">get_html_translation_table()</span> 函数</h1>
+<p><a href="php-ref-string.html"><img class="navup" src="/images/up.gif" alt="PHP String 参考手册"> PHP String 参考手册</a></p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<p>输出 htmlspecialchars 函数使用的翻译表：</p>
+<div class="example_code notranslate">
+
+	&lt;?php<br />
+print_r (get_html_translation_table()); // HTML_SPECIALCHARS is default.<br />
+	?&gt;</div>
+<br /><a target="_blank" class="showbtn" href="/try/showphp.php?filename=demo_func_string_gethtmltranslationtab">运行实例 »</a>
+</div>
+<hr />
+<h2>定义和用法</h2>
+
+<p>get_html_translation_table() 函数返回 <a href="func-string-htmlentities.html">htmlentities()</a> 和
+<a href="func-string-htmlspecialchars.html">htmlspecialchars()</a> 函数使用的翻译表。</p>
+<p><b>提示：</b>一些字符可以按照若干种方式进行编码。get_html_translation_table() 函数返回最普通的编码。</p>
+<hr />
+<h2>语法</h2>
+
+<div class="code notranslate"><div>
+
+get_html_translation_table(<em>function,flags,character-set</em>)
+
+</div></div>
+<br /><table class="reference notranslate">
+<tr>
+<th width="20%">参数</th>
+    <th width="80%">描述</th>
+  </tr>
+<tr>
+<td><em>function</em></td>
+    <td>可选。规定返回哪个翻译表。<p>可能的值：</p>
+	<ul>
+<li>HTML_SPECIALCHARS - 默认。翻译某些需要 URL 编码的字符，以便正确地显示在 HTML 页面上。</li>
+		<li>HTML_ENTITIES - 翻译所有需要 URL 编码的字符，以便正确地显示在 HTML 页面上。</li>
+	</ul>
+</td>
+  </tr>
+<tr>
+<td><em>flags</em></td>
+    <td>可选。规定翻译表将包含哪种引号以及翻译表用于哪种文档类型。
+	<p>可用的引号类型：</p>
+	<ul>
+<li>ENT_COMPAT - 默认。翻译表包含双引号实体，不包含单引号实体。</li>
+		<li>ENT_QUOTES - 翻译表包含双引号实体和单引号实体。</li>
+		<li>ENT_NOQUOTES - 翻译表不包含双引号实体和单引号实体。</li>
+	</ul>
+<p>规定翻译表适用的文档类型的附加 flags：</p>
+	<ul>
+<li>ENT_HTML401 - 默认。HTML 4.01 的翻译表。</li>
+		<li>ENT_HTML5 - HTML 5 的翻译表。</li>
+		<li>ENT_XML1 - XML 1 的翻译表。</li>
+		<li>ENT_XHTML - XHTML 的翻译表。</li>
+	</ul>
+</td>
+  </tr>
+<tr>
+<td><em>character-set</em></td>
+    <td>可选。一个规定了要使用的字符集的字符串。<p>允许的值：</p>
+	<ul>
+<li>UTF-8 - 默认。ASCII 兼容多字节的 8 位 Unicode</li>
+		<li>ISO-8859-1 - 西欧</li>
+		<li>ISO-8859-15 - 西欧（加入欧元符号 + ISO-8859-1 中丢失的法语和芬兰语字母）</li>
+		<li>cp866 - DOS 专用 Cyrillic 字符集</li>
+		<li>cp1251 - Windows 专用 Cyrillic 字符集</li>
+		<li>cp1252 - Windows 专用西欧字符集</li>
+		<li>KOI8-R - 俄语</li>
+		<li>BIG5 - 繁体中文，主要在台湾使用</li>
+		<li>GB2312 - 简体中文，国家标准字符集</li>
+		<li>BIG5-HKSCS - 带香港扩展的 Big5</li>
+		<li>Shift_JIS - 日语</li>
+		<li>EUC-JP - 日语</li>
+		<li>MacRoman - Mac 操作系统使用的字符集</li>
+	</ul>
+<p><b>注释：</b>在 PHP 5.4 之前的版本，无法被识别的字符集将被忽略并由 ISO-8859-1 替代。自 PHP 5.4 起，无法被识别的字符集将被忽略并由 UTF-8 替代。</p>
+	</td>
+  </tr>
+</table>
+<h2>技术细节</h2>
+<table class="tecspec">
+<tr>
+<th align="left" width="20%">返回值：</th>
+	<td width="80%">以数组形式返回翻译表，原始字符作为键名，实体作为键值。</td>
+</tr>
+<tr>
+<th align="left">PHP 版本：</th>
+	<td>4+</td>
+</tr>
+<tr>
+<th align="left">更新日志：</th>
+	<td>在 PHP 5 中，<em>character-set</em> 参数的默认值改为 UTF-8。<br /><br />在 PHP 5.4 中，新增了用于规定翻译表适用的文档类型的附加 flags：ENT_HTML401、ENT_HTML5、ENT_XML1 和 ENT_XHTML。<br /><br />在 PHP 5.3.4 中，新增了 <em>character-set</em> 参数。</td>
+</tr>
+</table>
+<br /><hr />
+<h2>更多实例</h2>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<p>HTML_SPECIALCHARS 的翻译表：</p>
+<div class="example_code notranslate">
+	&lt;?php<br />
+print_r (get_html_translation_table(HTML_SPECIALCHARS));<br />
+	?&gt;</div>
+<p>Displaying character and entity name:</p>
+<div class="example_code notranslate">
+	Array<br />(<br />  ["] =&gt; &amp;quot;<br />  [&amp;] =&gt; &amp;amp;<br />  [&lt;] =&gt; &amp;lt;<br />  [&gt;] =&gt; &amp;gt;<br />
+	)
+</div>
+<br />
+</div>
+<hr />
+<br /><div class="example">
+<h2 class="example">实例 2</h2>
+<p>HTML_ENTITIES 的翻译表：</p>
+<div class="example_code notranslate">
+
+&lt;?php<br />
+print_r (get_html_translation_table(HTML_ENTITIES));<br />
+?&gt;
+
+</div>
+<p>显示字符及其对应的实体名称：</p>
+<div class="example_code notranslate">
+	Array<br />(<br />&nbsp; ["] =&gt; &amp;quot;<br />&nbsp; [&amp;] =&gt; &amp;amp;<br />&nbsp; [&lt;] =&gt; &amp;lt;<br />&nbsp; [&gt;] =&gt; &amp;gt;<br />
+	&nbsp;
+	[ ] =&gt; &amp;nbsp;<br />&nbsp; [¡] =&gt; &amp;iexcl;<br />&nbsp; [¢] =&gt; &amp;cent;<br />&nbsp; [£] =&gt; &amp;pound;<br />&nbsp; [¤] =&gt; 
+	&amp;curren;<br />&nbsp; [¥] =&gt; &amp;yen;<br />&nbsp; [¦] =&gt; &amp;brvbar;<br />&nbsp; [§] =&gt; &amp;sect;<br />&nbsp; [¨] =&gt; &amp;uml;<br />
+	&nbsp;
+	[©] =&gt; &amp;copy;<br />&nbsp; [ª] =&gt; &amp;ordf;<br />&nbsp; [«] =&gt; &amp;laquo;<br />&nbsp; [¬] =&gt; &amp;not;<br />&nbsp; [­] =&gt; 
+	&amp;shy;<br />&nbsp; [®] =&gt; &amp;reg;<br />&nbsp; [¯] =&gt; &amp;macr;<br />&nbsp; [°] =&gt; &amp;deg;<br />&nbsp; [±] =&gt; &amp;plusmn;<br />
+	&nbsp;
+	[²] =&gt; &amp;sup2;<br />&nbsp; [³] =&gt; &amp;sup3;<br />&nbsp; [´] =&gt; &amp;acute;<br />&nbsp; [µ] =&gt; &amp;micro;<br />&nbsp; [¶] =&gt; 
+	&amp;para;<br />&nbsp; [·] =&gt; &amp;middot;<br />&nbsp; [¸] =&gt; &amp;cedil;<br />&nbsp; [¹] =&gt; &amp;sup1;<br />&nbsp; [º] =&gt; &amp;ordm;<br />
+	&nbsp;
+	[»] =&gt; &amp;raquo;<br />&nbsp; [¼] =&gt; &amp;frac14;<br />&nbsp; [½] =&gt; &amp;frac12;<br />&nbsp; [¾] =&gt; &amp;frac34;<br />
+	&nbsp;
+	[¿] =&gt; &amp;iquest;<br />&nbsp; [À] =&gt; &amp;Agrave;<br />&nbsp; [Á] =&gt; &amp;Aacute;<br />&nbsp; [Â] =&gt; &amp;Acirc;<br />
+	&nbsp;
+	[Ã] =&gt; &amp;Atilde;<br />&nbsp; [Ä] =&gt; &amp;Auml;<br />&nbsp; [Å] =&gt; &amp;Aring;<br />&nbsp; [Æ] =&gt; &amp;AElig;<br />&nbsp; [Ç] 
+	=&gt; &amp;Ccedil;<br />&nbsp; [È] =&gt; &amp;Egrave;<br />&nbsp; [É] =&gt; &amp;Eacute;<br />&nbsp; [Ê] =&gt; &amp;Ecirc;<br />&nbsp; [Ë] 
+	=&gt; &amp;Euml;<br />&nbsp; [Ì] =&gt; &amp;Igrave;<br />&nbsp; [Í] =&gt; &amp;Iacute;<br />&nbsp; [Î] =&gt; &amp;Icirc;<br />&nbsp; [Ï] =&gt; 
+	&amp;Iuml;<br />&nbsp; [Ð] =&gt; &amp;ETH;<br />&nbsp; [Ñ] =&gt; &amp;Ntilde;<br />&nbsp; [Ò] =&gt; &amp;Ograve;<br />&nbsp; [Ó] =&gt; &amp;Oacute;<br />
+	&nbsp;
+	[Ô] =&gt; &amp;Ocirc;<br />&nbsp; [Õ] =&gt; &amp;Otilde;<br />&nbsp; [Ö] =&gt; &amp;Ouml;<br />&nbsp; [×] =&gt; &amp;times;<br />&nbsp; [Ø] 
+	=&gt; &amp;Oslash;<br />&nbsp; [Ù] =&gt; &amp;Ugrave;<br />&nbsp; [Ú] =&gt; &amp;Uacute;<br />&nbsp; [Û] =&gt; &amp;Ucirc;<br />&nbsp; [Ü] 
+	=&gt; &amp;Uuml;<br />&nbsp; [Ý] =&gt; &amp;Yacute;<br />&nbsp; [Þ] =&gt; &amp;THORN;<br />&nbsp; [ß] =&gt; &amp;szlig;<br />&nbsp; [à] =&gt; &amp;agrave;<br />
+	&nbsp;
+	[á] =&gt; &amp;aacute;<br />&nbsp; [â] =&gt; &amp;acirc;<br />&nbsp; [ã] =&gt; &amp;atilde;<br />&nbsp; [ä] =&gt; &amp;auml;<br />&nbsp; [å] 
+	=&gt; &amp;aring;<br />&nbsp; [æ] =&gt; &amp;aelig;<br />&nbsp; [ç] =&gt; &amp;ccedil;<br />&nbsp; [è] =&gt; &amp;egrave;<br />&nbsp; [é] =&gt; 
+	&amp;eacute;<br />&nbsp; [ê] =&gt; &amp;ecirc;<br />&nbsp; [ë] =&gt; &amp;euml;<br />&nbsp; [ì] =&gt; &amp;igrave;<br />&nbsp; [í] =&gt; &amp;iacute;<br />
+	&nbsp;
+	[î] =&gt; &amp;icirc;<br />&nbsp; [ï] =&gt; &amp;iuml;<br />&nbsp; [ð] =&gt; &amp;eth;<br />&nbsp; [ñ] =&gt; &amp;ntilde;<br />&nbsp; [ò] =&gt; 
+	&amp;ograve;<br />&nbsp; [ó] =&gt; &amp;oacute;<br />&nbsp; [ô] =&gt; &amp;ocirc;<br />&nbsp; [õ] =&gt; &amp;otilde;<br />&nbsp; [ö] =&gt; &amp;ouml;<br />
+	&nbsp;
+	[÷] =&gt; &amp;divide;<br />&nbsp; [ø] =&gt; &amp;oslash;<br />&nbsp; [ù] =&gt; &amp;ugrave;<br />&nbsp; [ú] =&gt; &amp;uacute;<br />
+	&nbsp;
+	[û] =&gt; &amp;ucirc;<br />&nbsp; [ü] =&gt; &amp;uuml;<br />&nbsp; [ý] =&gt; &amp;yacute;<br />&nbsp; [þ] =&gt; &amp;thorn;<br />&nbsp; [ÿ] 
+	=&gt; &amp;yuml;<br />&nbsp; [Œ] =&gt; &amp;OElig;<br />&nbsp; [œ] =&gt; &amp;oelig;<br />&nbsp; [Š] =&gt; &amp;Scaron;<br />&nbsp; [š] =&gt; &amp;scaron;<br />
+	&nbsp;
+	[Ÿ] =&gt; &amp;Yuml;<br />&nbsp; [ƒ] =&gt; &amp;fnof;<br />&nbsp; [ˆ] =&gt; &amp;circ;<br />&nbsp; [˜] =&gt; &amp;tilde;<br />&nbsp; [&#913;] =&gt; 
+	&amp;Alpha;<br />&nbsp; [&#914;] =&gt; &amp;Beta;<br />&nbsp; [&#915;] =&gt; &amp;Gamma;<br />&nbsp; [&#916;] =&gt; &amp;Delta;<br />&nbsp; [&#917;] =&gt; 
+	&amp;Epsilon;<br />&nbsp; [&#918;] =&gt; &amp;Zeta;<br />&nbsp; [&#919;] =&gt; &amp;Eta;<br />&nbsp; [&#920;] =&gt; &amp;Theta;<br />&nbsp; [&#921;] =&gt; 
+	&amp;Iota;<br />&nbsp; [&#922;] =&gt; &amp;Kappa;<br />&nbsp; [&#923;] =&gt; &amp;Lambda;<br />&nbsp; [&#924;] =&gt; &amp;Mu;<br />&nbsp; [&#925;] =&gt; &amp;Nu;<br />
+	&nbsp;
+	[&#926;] =&gt; &amp;Xi;<br />&nbsp; [&#927;] =&gt; &amp;Omicron;<br />&nbsp; [&#928;] =&gt; &amp;Pi;<br />&nbsp; [&#929;] =&gt; &amp;Rho;<br />&nbsp; [&#931;] =&gt; 
+	&amp;Sigma;<br />&nbsp; [&#932;] =&gt; &amp;Tau;<br />&nbsp; [&#933;] =&gt; &amp;Upsilon;<br />&nbsp; [&#934;] =&gt; &amp;Phi;<br />&nbsp; [&#935;] =&gt; &amp;Chi;<br />
+	&nbsp;
+	[&#936;] =&gt; &amp;Psi;<br />&nbsp; [&#937;] =&gt; &amp;Omega;<br />&nbsp; [&#945;] =&gt; &amp;alpha;<br />&nbsp; [&#946;] =&gt; &amp;beta;<br />&nbsp; [&#947;] =&gt; 
+	&amp;gamma;<br />&nbsp; [&#948;] =&gt; &amp;delta;<br />&nbsp; [&#949;] =&gt; &amp;epsilon;<br />&nbsp; [&#950;] =&gt; &amp;zeta;<br />&nbsp; [&#951;] =&gt; 
+	&amp;eta;<br />&nbsp; [&#952;] =&gt; &amp;theta;<br />&nbsp; [&#953;] =&gt; &amp;iota;<br />&nbsp; [&#954;] =&gt; &amp;kappa;<br />&nbsp; [&#955;] =&gt; 
+	&amp;lambda;<br />&nbsp; [&#956;] =&gt; &amp;mu;<br />&nbsp; [&#957;] =&gt; &amp;nu;<br />&nbsp; [&#958;] =&gt; &amp;xi;<br />&nbsp; [&#959;] =&gt; &amp;omicron;<br />
+	&nbsp;
+	[&#960;] =&gt; &amp;pi;<br />&nbsp; [&#961;] =&gt; &amp;rho;<br />&nbsp; [&#962;] =&gt; &amp;sigmaf;<br />&nbsp; [&#963;] =&gt; &amp;sigma;<br />&nbsp; [&#964;] =&gt; 
+	&amp;tau;<br />&nbsp; [&#965;] =&gt; &amp;upsilon;<br />&nbsp; [&#966;] =&gt; &amp;phi;<br />&nbsp; [&#967;] =&gt; &amp;chi;<br />&nbsp; [&#968;] =&gt; &amp;psi;<br />
+	&nbsp;
+	[&#969;] =&gt; &amp;omega;<br />&nbsp; [&#977;] =&gt; &amp;thetasym;<br />&nbsp; [&#978;] =&gt; &amp;upsih;<br />&nbsp; [&#982;] =&gt; &amp;piv;<br />&nbsp; [&#8194;] 
+	=&gt; &amp;ensp;<br />&nbsp; [&#8195;] =&gt; &amp;emsp;<br />&nbsp; [&#8201;] =&gt; &amp;thinsp;<br />&nbsp; [&#8204;] =&gt; &amp;zwnj;<br />&nbsp; [&#8205;] =&gt; &amp;zwj;<br />
+	&nbsp;
+	[&#8206;] =&gt; &amp;lrm;<br />&nbsp; [&#8207;] =&gt; &amp;rlm;<br />&nbsp; [–] =&gt; &amp;ndash;<br />&nbsp; [—] =&gt; &amp;mdash;<br />&nbsp; ['] =&gt; &amp;lsquo;<br />
+	&nbsp;
+	['] =&gt; &amp;rsquo;<br />&nbsp; [‚] =&gt; &amp;sbquo;<br />&nbsp; ["] =&gt; &amp;ldquo;<br />&nbsp; ["] =&gt; &amp;rdquo;<br />&nbsp; [„] 
+	=&gt; &amp;bdquo;<br />&nbsp; [†] =&gt; &amp;dagger;<br />&nbsp; [‡] =&gt; &amp;Dagger;<br />&nbsp; [•] =&gt; &amp;bull;<br />&nbsp; […] =&gt; 
+	&amp;hellip;<br />&nbsp; [‰] =&gt; &amp;permil;<br />&nbsp; [&#8242;] =&gt; &amp;prime;<br />&nbsp; [&#8243;] =&gt; &amp;Prime;<br />&nbsp; [‹] =&gt; &amp;lsaquo;<br />
+	&nbsp;
+	[›] =&gt; &amp;rsaquo;<br />&nbsp; [&#8254;] =&gt; &amp;oline;<br />&nbsp; [&#8260;] =&gt; &amp;frasl;<br />&nbsp; [€] =&gt; &amp;euro;<br />&nbsp; [&#8465;] 
+	=&gt; &amp;image;<br />&nbsp; [&#8472;] =&gt; &amp;weierp;<br />&nbsp; [&#8476;] =&gt; &amp;real;<br />&nbsp; [™] =&gt; &amp;trade;<br />&nbsp; [&#8501;] =&gt; &amp;alefsym;<br />
+	&nbsp;
+	[&#8592;] =&gt; &amp;larr;<br />&nbsp; [&#8593;] =&gt; &amp;uarr;<br />&nbsp; [&#8594;] =&gt; &amp;rarr;<br />&nbsp; [&#8595;] =&gt; &amp;darr;<br />&nbsp; [&#8596;] =&gt; &amp;harr;<br />
+	&nbsp;
+	[&#8629;] =&gt; &amp;crarr;<br />&nbsp; [&#8656;] =&gt; &amp;lArr;<br />&nbsp; [&#8657;] =&gt; &amp;uArr;<br />&nbsp; [&#8658;] =&gt; &amp;rArr;<br />&nbsp; [&#8659;] =&gt; 
+	&amp;dArr;<br />&nbsp; [&#8660;] =&gt; &amp;hArr;<br />&nbsp; [&#8704;] =&gt; &amp;forall;<br />&nbsp; [&#8706;] =&gt; &amp;part;<br />&nbsp; [&#8707;] =&gt; 
+	&amp;exist;<br />&nbsp; [&#8709;] =&gt; &amp;empty;<br />&nbsp; [&#8711;] =&gt; &amp;nabla;<br />&nbsp; [&#8712;] =&gt; &amp;isin;<br />&nbsp; [&#8713;] =&gt; &amp;notin;<br />
+	&nbsp;
+	[&#8715;] =&gt; &amp;ni;<br />&nbsp; [&#8719;] =&gt; &amp;prod;<br />&nbsp; [&#8721;] =&gt; &amp;sum;<br />&nbsp; [&#8722;] =&gt; &amp;minus;<br />&nbsp; [&#8727;] =&gt; &amp;lowast;<br />
+	&nbsp;
+	[&#8730;] =&gt; &amp;radic;<br />&nbsp; [&#8733;] =&gt; &amp;prop;<br />&nbsp; [&#8734;] =&gt; &amp;infin;<br />&nbsp; [&#8736;] =&gt; &amp;ang;<br />&nbsp; [&#8743;] =&gt; 
+	&amp;and;<br />&nbsp; [&#8744;] =&gt; &amp;or;<br />&nbsp; [&#8745;] =&gt; &amp;cap;<br />&nbsp; [&#8746;] =&gt; &amp;cup;<br />&nbsp; [&#8747;] =&gt; &amp;int;<br />&nbsp; [&#8756;] 
+	=&gt; &amp;there4;<br />&nbsp; [&#8764;] =&gt; &amp;sim;<br />&nbsp; [&#8773;] =&gt; &amp;cong;<br />&nbsp; [&#8776;] =&gt; &amp;asymp;<br />&nbsp; [&#8800;] =&gt; 
+	&amp;ne;<br />&nbsp; [&#8801;] =&gt; &amp;equiv;<br />&nbsp; [&#8804;] =&gt; &amp;le;<br />&nbsp; [&#8805;] =&gt; &amp;ge;<br />&nbsp; [&#8834;] =&gt; &amp;sub;<br />&nbsp; [&#8835;] 
+	=&gt; &amp;sup;<br />&nbsp; [&#8836;] =&gt; &amp;nsub;<br />&nbsp; [&#8838;] =&gt; &amp;sube;<br />&nbsp; [&#8839;] =&gt; &amp;supe;<br />&nbsp; [&#8853;] =&gt; &amp;oplus;<br />
+	&nbsp;
+	[&#8855;] =&gt; &amp;otimes;<br />&nbsp; [&#8869;] =&gt; &amp;perp;<br />&nbsp; [&#8901;] =&gt; &amp;sdot;<br />&nbsp; [&#8968;] =&gt; &amp;lceil;<br />&nbsp; [&#8969;] 
+	=&gt; &amp;rceil;<br />&nbsp; [&#8970;] =&gt; &amp;lfloor;<br />&nbsp; [&#8971;] =&gt; &amp;rfloor;<br />&nbsp; [&#9001;] =&gt; &amp;lang;<br />&nbsp; [&#9002;] =&gt; 
+	&amp;rang;<br />&nbsp; [&#9674;] =&gt; &amp;loz;<br />&nbsp; [&#9824;] =&gt; &amp;spades;<br />&nbsp; [&#9827;] =&gt; &amp;clubs;<br />&nbsp; [&#9829;] =&gt; 
+	&amp;hearts;<br />&nbsp; [&#9830;] =&gt; &amp;diams;<br />)
+
+</div>
+<br />
+</div>
+<br />
+
+<hr />
+<a href="php-ref-string.html"><img class="navup" src="/images/up.gif" alt="PHP String 参考手册"> PHP String 参考手册</a>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/php/func-string-fprintf.html" rel="prev"> PHP fprintf() 函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/php/func-string-hebrev.html" rel="next">PHP hebrev() 函数</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.389 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 20:09:32 -->
+
+<!-- super cache -->

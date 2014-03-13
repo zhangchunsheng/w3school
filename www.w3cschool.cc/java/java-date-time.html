@@ -1,0 +1,1442 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Java日期时间 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Java 数组' href='http://www.w3cschool.cc/java/java-array.html' />
+<link rel='next' title='Java正则表达式' href='http://www.w3cschool.cc/java/java-regular-expressions.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/java/java-date-time.html' />
+<meta name="keywords" content="Java日期时间,Java 教程">
+<meta name="description" content="Java 日期时间  java.util包提供了Date类来封装当前的日期和时间。  Date类提供两个构造函数来实例化Date对象。 第一个构造函数使用当前日期和时间来初始化对象。  Date( )   第二个构造函数接收一个参数，该参数是从1970年1月1日起的微秒数。   Date(long millisec)   Date对象创建以后，可以调用下面的方法。  	 		 			 				序号 			 				方法和描述 		 		..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Java 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-tutorial.html" >
+	Java 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-intro.html" >
+	Java 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-environment-setup.html" >
+	Java开发环境配置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-syntax.html" >
+	Java基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-object-classes.html" >
+	Java对象和类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-datatypes.html" >
+	Java基本数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-variable-types.html" >
+	Java变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-modifier-types.html" >
+	Java修饰符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-operators.html" >
+	Java运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-loop.html" >
+	Java循环结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-if-else-switch.html" >
+	Java分支结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-number.html" >
+	Java Number类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-character.html" >
+	Java Character类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-string.html" >
+	Java String类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-stringbuffer.html" >
+	Java StringBuffer和StringBuilder类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-array.html" >
+	Java 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-date-time.html" >
+	Java日期时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-regular-expressions.html" >
+	Java正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-methods.html" >
+	Java 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-files-io.html" >
+	Java 流(Stream)、文件(File)和IO	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-exceptions.html" >
+	Java 异常处理	</a>
+	<br><h2 class="left">Java <span class="left_h2">面向对象</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-inheritance.html" >
+	Java 继承	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-override-overload.html" >
+	Java 重写(Override)与重载(Overload)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-polymorphism.html" >
+	Java 多态	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-abstraction.html" >
+	Java 抽象类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-encapsulation.html" >
+	java 封装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-interfaces.html" >
+	Java 接口	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-package.html" >
+	Java 包(package)	</a>
+	<br><h2 class="left">Java <span class="left_h2">高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-data-structures.html" >
+	Java 数据结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-collections.html" >
+	Java 集合框架	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-generics.html" >
+	Java 泛型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-serialization.html" >
+	Java序列化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-networking.html" >
+	Java 网络编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-sending-email.html" >
+	Java 发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-multithreading.html" >
+	Java 多线程编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-applet-basics.html" >
+	Java Applet基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-documentation.html" >
+	Java 文档注释	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-array.html" rel="prev"> Java 数组</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-regular-expressions.html" rel="next">Java正则表达式</a> &raquo;</div>
+	</div>
+
+	<h1>Java 日期时间</h1>
+<p>
+java.util包提供了Date类来封装当前的日期和时间。
+
+Date类提供两个构造函数来实例化Date对象。</p><p>
+第一个构造函数使用当前日期和时间来初始化对象。</p>
+<pre>
+Date( )
+</pre>
+<p>
+第二个构造函数接收一个参数，该参数是从1970年1月1日起的微秒数。
+</p>
+<pre>
+Date(long millisec)
+</pre>
+<p>
+Date对象创建以后，可以调用下面的方法。</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th style="width:38px;">
+				序号</th>
+			<th style="width:538px;">
+				方法和描述</th>
+		</tr>
+		<tr>
+			<td style="width:38px;">
+				1</td>
+			<td style="width:538px;">
+				<strong>boolean after(Date date)</strong><br />
+				若当调用此方法的Date对象在指定日期之后返回true,否则返回false。</td>
+		</tr>
+		<tr>
+			<td style="width:38px;">
+				2</td>
+			<td style="width:538px;">
+				<strong>boolean before(Date date)</strong><br />
+				若当调用此方法的Date对象在指定日期之前返回true,否则返回false。</td>
+		</tr>
+		<tr>
+			<td style="width:38px;">
+				3</td>
+			<td style="width:538px;">
+				<strong>Object clone( )</strong><br />
+				返回此对象的副本。</td>
+		</tr>
+		<tr>
+			<td style="width:38px;">
+				4</td>
+			<td style="width:538px;">
+				<strong>int compareTo(Date date)</strong><br />
+				比较当调用此方法的Date对象和指定日期。两者相等时候返回0。调用对象在指定日期之前则返回负数。调用对象在指定日期之后则返回正数。</td>
+		</tr>
+		<tr>
+			<td style="width:38px;">
+				5</td>
+			<td style="width:538px;">
+				<strong>int compareTo(Object obj)</strong><br />
+				若obj是Date类型则操作等同于compareTo(Date) 。否则它抛出ClassCastException。</td>
+		</tr>
+		<tr>
+			<td style="width:38px;">
+				6</td>
+			<td style="width:538px;">
+				<strong>boolean equals(Object date)</strong><br />
+				当调用此方法的Date对象和指定日期相等时候返回true,否则返回false。</td>
+		</tr>
+		<tr>
+			<td style="width:38px;">
+				7</td>
+			<td style="width:538px;">
+				<strong>long getTime( )</strong><br />
+				返回自 1970 年 1 月 1 日 00:00:00 GMT 以来此 Date 对象表示的毫秒数。</td>
+		</tr>
+		<tr>
+			<td style="width:38px;">
+				8</td>
+			<td style="width:538px;">
+				<strong>int hashCode( )</strong><br />
+				&nbsp;返回此对象的哈希码值。</td>
+		</tr>
+		<tr>
+			<td style="width:38px;">
+				9</td>
+			<td style="width:538px;">
+				<strong>void setTime(long time)</strong><br />
+				&nbsp;<br />
+				用自1970年1月1日00:00:00 GMT以后time毫秒数设置时间和日期。</td>
+		</tr>
+		<tr>
+			<td style="width:38px;">
+				10</td>
+			<td style="width:538px;">
+				<strong>String toString( )</strong><br />
+				转换Date对象为String表示形式，并返回该字符串。</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+<h2>获取当前日期时间</h2>
+<p>
+Java中获取当前日期和时间很简单，使用Date对象的 toString()方法来打印当前日期和时间，如下所示：
+</p>
+<pre>
+import java.util.Date;
+  
+public class DateDemo {
+   public static void main(String args[]) {
+       // 初始化 Date 对象
+       Date date = new Date();
+        
+       // 使用 toString() 函数显示日期时间
+       System.out.println(date.toString());
+   }
+}
+</pre>
+<p>以上实例编译运行结果如下:</p>
+<pre>
+Mon May 04 09:51:52 CDT 2013
+</pre><hr />
+<h2>日期比较</h2>
+<p>Java使用以下三种方法来比较两个日期：</p>
+<ul>
+	<li>
+		使用getTime( ) 方法获取两个日期（自1970年1月1日经历的微妙数值），然后比较这两个值。</li>
+	<li>
+		使用方法before()，after()和equals()。例如，一个月的12号比18号早，则new Date(99, 2, 12).before(new Date (99, 2, 18))返回true。</li>
+	<li>
+		使用compareTo()方法，它是由Comparable接口定义的，Date类实现了这个接口。</li>
+</ul>
+<hr />
+<h2>使用SimpleDateFormat格式化日期</h2>
+<p>SimpleDateFormat是一个以语言环境敏感的方式来格式化和分析日期的类。SimpleDateFormat允许你选择任何用户自定义日期时间格式来运行。例如：
+</p>
+<pre>
+import java.util.*;
+import java.text.*;
+
+public class DateDemo {
+   public static void main(String args[]) {
+
+      Date dNow = new Date( );
+      SimpleDateFormat ft = 
+      new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+
+      System.out.println("Current Date: " + ft.format(dNow));
+   }
+}
+</pre>
+<p>以上实例编译运行结果如下:</p>
+<pre>
+Current Date: Sun 2004.07.18 at 04:14:09 PM PDT
+</pre>
+<hr />
+<h2>简单的DateFormat格式化编码</h2>
+<p>时间模式字符串用来指定时间格式。在此模式中，所有的ASCII字母被保留为模式字母，定义如下：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th style="width:66px;">
+				<strong>字母</strong></th>
+			<th style="width:151px;">
+				<strong>描述</strong></th>
+			<th style="width:128px;">
+				<strong>示例</strong></th>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				G</td>
+			<td style="width:151px;">
+				纪元标记</td>
+			<td style="width:128px;">
+				AD</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				y</td>
+			<td style="width:151px;">
+				四位年份</td>
+			<td style="width:128px;">
+				2001</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				M</td>
+			<td style="width:151px;">
+				月份</td>
+			<td style="width:128px;">
+				July or 07</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				d</td>
+			<td style="width:151px;">
+				一个月的日期</td>
+			<td style="width:128px;">
+				10</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				h</td>
+			<td style="width:151px;">
+				&nbsp;A.M./P.M. (1~12)格式小时</td>
+			<td style="width:128px;">
+				12</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				H</td>
+			<td style="width:151px;">
+				一天中的小时 (0~23)</td>
+			<td style="width:128px;">
+				22</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				m</td>
+			<td style="width:151px;">
+				分钟数</td>
+			<td style="width:128px;">
+				30</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				s</td>
+			<td style="width:151px;">
+				秒数</td>
+			<td style="width:128px;">
+				55</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				S</td>
+			<td style="width:151px;">
+				微妙数</td>
+			<td style="width:128px;">
+				234</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				E</td>
+			<td style="width:151px;">
+				星期几</td>
+			<td style="width:128px;">
+				Tuesday</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				D</td>
+			<td style="width:151px;">
+				一年中的日子</td>
+			<td style="width:128px;">
+				360</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				F</td>
+			<td style="width:151px;">
+				一个月中第几周的周几</td>
+			<td style="width:128px;">
+				2 (second Wed. in July)</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				w</td>
+			<td style="width:151px;">
+				一年中第几周</td>
+			<td style="width:128px;">
+				40</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				W</td>
+			<td style="width:151px;">
+				一个月中第几周</td>
+			<td style="width:128px;">
+				1</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				a</td>
+			<td style="width:151px;">
+				A.M./P.M. 标记</td>
+			<td style="width:128px;">
+				PM</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				k</td>
+			<td style="width:151px;">
+				一天中的小时(1~24)</td>
+			<td style="width:128px;">
+				24</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				K</td>
+			<td style="width:151px;">
+				&nbsp;A.M./P.M. (0~11)格式小时</td>
+			<td style="width:128px;">
+				10</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				z</td>
+			<td style="width:151px;">
+				时区</td>
+			<td style="width:128px;">
+				Eastern Standard Time</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				'</td>
+			<td style="width:151px;">
+				文字定界符</td>
+			<td style="width:128px;">
+				Delimiter</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				"</td>
+			<td style="width:151px;">
+				单引号</td>
+			<td style="width:128px;">
+				`</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+<h2>使用printf格式化日期</h2>
+<p>printf方法可以很轻松地格式化时间和日期。使用两个字母格式，它以t开头并且以下面表格中的一个字母结尾。例如：</p>
+<pre>
+import java.util.Date;
+
+public class DateDemo {
+
+  public static void main(String args[]) {
+     // 初始化 Date 对象
+     Date date = new Date();
+
+     // 使用toString()显示日期和时间
+     String str = String.format("Current Date/Time : %tc", date );
+
+     System.out.printf(str);
+  }
+}
+</pre>
+<p>以上实例编译运行结果如下:</p>
+<pre>
+Current Date/Time : Sat Dec 15 16:37:57 MST 2012
+</pre>
+<p>如果你需要重复提供日期，那么利用这种方式来格式化它的每一部分就有点复杂了。因此，可以利用一个格式化字符串指出要被格式化的参数的索引。</p>
+<p>索引必须紧跟在%后面，而且必须以$结束。例如：</p>
+<pre>
+import java.util.Date;
+  
+public class DateDemo {
+
+   public static void main(String args[]) {
+       // 初始化 Date 对象
+       Date date = new Date();
+        
+       // 使用toString()显示日期和时间
+       System.out.printf("%1$s %2$tB %2$td, %2$tY", 
+                         "Due date:", date);
+   }
+}
+</pre>
+<p>以上实例编译运行结果如下:</p>
+<pre>
+Due date: February 09, 2004
+</pre>
+<p>或者，你可以使用&lt;标志。它表明先前被格式化的参数要被再次使用。例如：</p>
+<pre>
+import java.util.Date;
+  
+public class DateDemo {
+
+   public static void main(String args[]) {
+       // 初始化 Date 对象
+       Date date = new Date();
+        
+       // 显示格式化时间
+       System.out.printf("%s %tB %&lt;te, %&lt;tY", 
+                         "Due date:", date);
+   }
+}
+</pre>
+<p>以上实例编译运行结果如下:</p>
+<pre>
+Due date: February 09, 2004
+</pre><hr />
+<h2>日期和时间转换字符</h2>
+<table class="reference">
+	<tbody>
+		<tr>
+			<td style="width:66px;">
+				<strong>字符</strong></td>
+			<td style="width:319px;">
+				<strong>描述</strong></td>
+			<td style="width:184px;">
+				<strong>例子</strong></td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				c</td>
+			<td style="width:319px;">
+				完整的日期和时间</td>
+			<td style="width:184px;">
+				Mon May 04 09:51:52 CDT 2009</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				F</td>
+			<td style="width:319px;">
+				ISO 8601 格式日期</td>
+			<td style="width:184px;">
+				2004-02-09</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				D</td>
+			<td style="width:319px;">
+				U.S. 格式日期 (月/日/年)</td>
+			<td style="width:184px;">
+				02/09/2004</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				T</td>
+			<td style="width:319px;">
+				24小时时间</td>
+			<td style="width:184px;">
+				18:05:19</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				r</td>
+			<td style="width:319px;">
+				12小时时间</td>
+			<td style="width:184px;">
+				06:05:19 pm</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				R</td>
+			<td style="width:319px;">
+				24小时时间，不包含秒</td>
+			<td style="width:184px;">
+				18:05</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				Y</td>
+			<td style="width:319px;">
+				4位年份(包含前导0)</td>
+			<td style="width:184px;">
+				2004</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				y</td>
+			<td style="width:319px;">
+				年份后2位(包含前导0)</td>
+			<td style="width:184px;">
+				04</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				C</td>
+			<td style="width:319px;">
+				年份前2位(包含前导0)</td>
+			<td style="width:184px;">
+				20</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				B</td>
+			<td style="width:319px;">
+				月份全称</td>
+			<td style="width:184px;">
+				February</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				b</td>
+			<td style="width:319px;">
+				月份简称</td>
+			<td style="width:184px;">
+				Feb</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				n</td>
+			<td style="width:319px;">
+				2位月份(包含前导0)</td>
+			<td style="width:184px;">
+				02</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				d</td>
+			<td style="width:319px;">
+				2位日子(包含前导0)</td>
+			<td style="width:184px;">
+				03</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				e</td>
+			<td style="width:319px;">
+				2位日子(不包含前导0)</td>
+			<td style="width:184px;">
+				9</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				A</td>
+			<td style="width:319px;">
+				星期全称</td>
+			<td style="width:184px;">
+				Monday</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				a</td>
+			<td style="width:319px;">
+				星期简称</td>
+			<td style="width:184px;">
+				Mon</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				j</td>
+			<td style="width:319px;">
+				3位年份(包含前导0)</td>
+			<td style="width:184px;">
+				069</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				H</td>
+			<td style="width:319px;">
+				2位小时(包含前导0), 00 到 23</td>
+			<td style="width:184px;">
+				18</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				k</td>
+			<td style="width:319px;">
+				2位小时(不包含前导0), &nbsp;0 到 23</td>
+			<td style="width:184px;">
+				18</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				I</td>
+			<td style="width:319px;">
+				2位小时(包含前导0), 01 到 12</td>
+			<td style="width:184px;">
+				06</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				l</td>
+			<td style="width:319px;">
+				2位小时(不包含前导0), &nbsp;1 到 12</td>
+			<td style="width:184px;">
+				6</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				M</td>
+			<td style="width:319px;">
+				2位分钟(包含前导0)</td>
+			<td style="width:184px;">
+				05</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				S</td>
+			<td style="width:319px;">
+				2位秒数(包含前导0)</td>
+			<td style="width:184px;">
+				19</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				L</td>
+			<td style="width:319px;">
+				3位毫秒(包含前导0)</td>
+			<td style="width:184px;">
+				047</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				N</td>
+			<td style="width:319px;">
+				9位纳秒(包含前导0)</td>
+			<td style="width:184px;">
+				047000000</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				P</td>
+			<td style="width:319px;">
+				大写上下午标志</td>
+			<td style="width:184px;">
+				PM</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				p</td>
+			<td style="width:319px;">
+				小写上下午标志</td>
+			<td style="width:184px;">
+				pm</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				z</td>
+			<td style="width:319px;">
+				从GMT的RFC 822数字偏移</td>
+			<td style="width:184px;">
+				-0800</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				Z</td>
+			<td style="width:319px;">
+				时区</td>
+			<td style="width:184px;">
+				PST</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				s</td>
+			<td style="width:319px;">
+				自 1970-01-01 00:00:00 GMT的秒数</td>
+			<td style="width:184px;">
+				1078884319</td>
+		</tr>
+		<tr>
+			<td style="width:66px;">
+				Q</td>
+			<td style="width:319px;">
+				自 1970-01-01 00:00:00 GMT的毫妙</td>
+			<td style="width:184px;">
+				1078884319047</td>
+		</tr>
+	</tbody>
+</table>
+<p>还有其他有用的日期和时间相关的类。对于更多的细节，你可以参考到Java标准文档。
+</p>
+<hr />
+<h2>解析字符串为时间</h2>
+<p>
+SimpleDateFormat 类有一些附加的方法，特别是parse()，它试图按照给定的SimpleDateFormat 对象的格式化存储来解析字符串。例如：
+</p>
+<pre>
+import java.util.*;
+import java.text.*;
+  
+public class DateDemo {
+
+   public static void main(String args[]) {
+      SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd"); 
+
+      String input = args.length == 0 ? "1818-11-11" : args[0]; 
+
+      System.out.print(input + " Parses as "); 
+
+      Date t; 
+
+      try { 
+          t = ft.parse(input); 
+          System.out.println(t); 
+      } catch (ParseException e) { 
+          System.out.println("Unparseable using " + ft); 
+      }
+   }
+}
+</pre>
+<p>以上实例编译运行结果如下:</p>
+<pre>
+$ java DateDemo
+1818-11-11 Parses as Wed Nov 11 00:00:00 GMT 1818
+$ java DateDemo 2007-12-01
+2007-12-01 Parses as Sat Dec 01 00:00:00 GMT 2007
+</pre>
+<hr />Java 休眠(sleep)</h2>
+<p>你可以让程序休眠一毫秒的时间或者到您的计算机的寿命长的任意段时间。例如，下面的程序会休眠10秒：</p>
+<pre>
+import java.util.*;
+  
+public class SleepDemo {
+   public static void main(String args[]) {
+      try { 
+         System.out.println(new Date( ) + "\n"); 
+         Thread.sleep(5*60*10); 
+         System.out.println(new Date( ) + "\n"); 
+      } catch (Exception e) { 
+          System.out.println("Got an exception!"); 
+      }
+   }
+}
+</pre>
+<p>以上实例编译运行结果如下:</p>
+<pre>
+Sun May 03 18:04:41 GMT 2009
+
+Sun May 03 18:04:51 GMT 2009
+</pre>
+<hr />
+<h2>测量时间</h2>
+<p>下面的一个例子表明如何测量时间间隔（以毫秒为单位）：</p>
+<pre>
+import java.util.*;
+  
+public class DiffDemo {
+
+   public static void main(String args[]) {
+      try {
+         long start = System.currentTimeMillis( );
+         System.out.println(new Date( ) + "\n");
+         Thread.sleep(5*60*10);
+         System.out.println(new Date( ) + "\n");
+         long end = System.currentTimeMillis( );
+         long diff = end - start;
+         System.out.println("Difference is : " + diff);
+      } catch (Exception e) {
+         System.out.println("Got an exception!");
+      }
+   }
+}
+</pre>
+<p>以上实例编译运行结果如下:</p>
+<pre>
+Sun May 03 18:16:51 GMT 2009
+
+Sun May 03 18:16:57 GMT 2009
+
+Difference is : 5993
+</pre>
+<hr />
+<h2>Calendar类</h2>
+<p>我们现在已经能够格式化并创建一个日期对象了，但是我们如何才能设置和获取日期数据的特定部分呢，比如说小时，日，或者分钟? 我们又如何在日期的这些部分加上或者减去值呢? 答案是使用Calendar 类。 </p>
+
+<p>Calendar类的功能要比Date类强大很多，而且在实现方式上也比Date类要复杂一些。</p>
+<p>Calendar类是一个抽象类，在实际使用时实现特定的子类的对象，创建对象的过程对程序员来说是透明的，只需要使用getInstance方法创建即可。</p>
+<h3>创建一个代表系统当前日期的Calendar对象</h3>
+<pre>
+Calendar c = Calendar.getInstance();//默认是当前日期
+</pre>
+<h3>创建一个指定日期的Calendar对象</h3>
+<p>使用Calendar类代表特定的时间，需要首先创建一个Calendar的对象，然后再设定该对象中的年月日参数来完成。</p>
+<pre>
+//创建一个代表2009年6月12日的Calendar对象
+Calendar c1 = Calendar.getInstance();
+c1.set(2009, 6 - 1, 12);
+</pre>
+<h3>Calendar类对象字段类型</h3>
+<p>Calendar类中用一下这些常量表示不同的意义，jdk内的很多类其实都是采用的这种思想</p>
+<table class="reference">
+	<tbody>
+<tr><th>常量</th><th>描述</th></tr>		
+<tr><td>Calendar.YEAR</td><td>年份</td></tr>
+<tr><td>Calendar.MONTH</td><td>月份</td></tr>
+<tr><td>Calendar.DATE</td><td>日期</td></tr>
+<tr><td>Calendar.DAY_OF_MONTH</td><td>日期，和上面的字段意义完全相同</td></tr>
+<tr><td>Calendar.HOUR</td><td>12小时制的小时</td></tr>
+<tr><td>Calendar.HOUR_OF_DAY</td><td>24小时制的小时</td></tr>
+<tr><td>Calendar.MINUTE</td><td>分钟</td></tr>
+<tr><td>Calendar.SECOND</td><td>秒</td></tr>
+<tr><td>Calendar.DAY_OF_WEEK</td><td>星期几</td>
+ </tr>
+	</tbody>
+</table>
+<h3>Calendar类对象信息的设置</h3>
+<p><strong>Set设置</strong></p>
+<p>如：</p><pre>Calendar c1 = Calendar.getInstance();</pre>
+<p>调用：</p><pre>
+public final void set(int year,int month,int date)
+</pre><pre>
+c1.set(2009, 6 - 1, 12);//把Calendar对象c1的年月日分别设这为：2009、6、12
+</pre>
+<p>利用字段类型设置</p>
+<p>如果只设定某个字段，例如日期的值，则可以使用如下set方法：</p>
+<pre>public void set(int field,int value)</pre>
+
+<p>把 c1对象代表的日期设置为10号，其它所有的数值会被重新计算</p>
+<pre>
+c1.set(Calendar.DATE,10);
+</pre>
+<p>把c1对象代表的年份设置为2008年，其他的所有数值会被重新计算</p>
+<pre>
+c1.set(Calendar.YEAR,2008);
+</pre>
+      <p>其他字段属性set的意义以此类推</p>
+<p><strong>Add设置</strong></p>
+<pre>
+Calendar c1 = Calendar.getInstance();
+</pre>
+
+<p>把c1对象的日期加上10，也就是c1所表的日期的10天后的日期，其它所有的数值会被重新计算</p>
+<pre>
+c1.add(Calendar.DATE, 10);
+</pre>
+
+<p>把c1对象的日期加上10，也就是c1所表的日期的10天前的日期，其它所有的数值会被重新计算</p>
+<pre>
+&lt;pre&gt;c1.add(Calendar.DATE, -10);</pre>
+<p>其他字段属性的add的意义以此类推</p>
+<h3>Calendar类对象信息的获得</h3>
+<pre>
+Calendar c1 = Calendar.getInstance();
+// 获得年份
+int year = c1.get(Calendar.YEAR);
+// 获得月份
+int month = c1.get(Calendar.MONTH) + 1;
+// 获得日期
+int date = c1.get(Calendar.DATE);
+// 获得小时
+int hour = c1.get(Calendar.HOUR_OF_DAY);
+// 获得分钟
+int minute = c1.get(Calendar.MINUTE);
+// 获得秒
+int second = c1.get(Calendar.SECOND);
+// 获得星期几（注意（这个与Date类是不同的）：1代表星期日、2代表星期1、3代表星期二，以此类推）
+int day = c1.get(Calendar.DAY_OF_WEEK);
+</pre>
+<hr />
+
+<h2>GregorianCalendar类</h2>
+<p>Calendar类实现了公历日历，GregorianCalendar是Calendar类的一个具体实现。
+</p><p>Calendar 的getInstance（）方法返回一个默认用当前的语言环境和时区初始化的GregorianCalendar对象。GregorianCalendar定义了两个字段：AD和BC。这些代表公历定义的两个时代。
+</p><p>下面列出GregorianCalendar对象的几个构造方法：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<td style="width:47px;">
+				<strong>序号</strong></td>
+			<td style="width:529px;">
+				<strong>构造函数和说明</strong></td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				1</td>
+			<td style="width:529px;">
+				<strong>GregorianCalendar() </strong><br />
+				在具有默认语言环境的默认时区内使用当前时间构造一个默认的 GregorianCalendar。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				2</td>
+			<td style="width:529px;">
+				<strong>GregorianCalendar(int year, int month, int date) </strong><br />
+				在具有默认语言环境的默认时区内构造一个带有给定日期设置的 GregorianCalendar</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				3</td>
+			<td style="width:529px;">
+				<strong>GregorianCalendar(int year, int month, int date, int hour, int minute) </strong><br />
+				为具有默认语言环境的默认时区构造一个具有给定日期和时间设置的 GregorianCalendar。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				4</td>
+			<td style="width:529px;">
+				<strong>GregorianCalendar(int year, int month, int date, int hour, int minute, int second) </strong><br />
+				&nbsp; 为具有默认语言环境的默认时区构造一个具有给定日期和时间设置的 GregorianCalendar。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				5</td>
+			<td style="width:529px;">
+				<strong>GregorianCalendar(Locale aLocale) </strong><br />
+				在具有给定语言环境的默认时区内构造一个基于当前时间的 GregorianCalendar。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				6</td>
+			<td style="width:529px;">
+				<strong>GregorianCalendar(TimeZone zone) </strong><br />
+				在具有默认语言环境的给定时区内构造一个基于当前时间的 GregorianCalendar。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				7</td>
+			<td style="width:529px;">
+				<strong>GregorianCalendar(TimeZone zone, Locale aLocale) </strong><br />
+				&nbsp;在具有给定语言环境的给定时区内构造一个基于当前时间的 GregorianCalendar。</td>
+		</tr>
+	</tbody>
+</table>
+<p>这里是GregorianCalendar 类提供的一些有用的方法列表：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<td style="width:47px;">
+				<strong>序号</strong></td>
+			<td style="width:529px;">
+				<strong>方法和说明</strong></td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				1</td>
+			<td style="width:529px;">
+				<strong>void add(int field, int amount) </strong><br />
+				根据日历规则，将指定的（有符号的）时间量添加到给定的日历字段中。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				2</td>
+			<td style="width:529px;">
+				<strong>protected void computeFields() </strong><br />
+				转换UTC毫秒值为时间域值</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				3</td>
+			<td style="width:529px;">
+				<strong>protected void computeTime() </strong><br />
+				覆盖Calendar ，转换时间域值为UTC毫秒值</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				4</td>
+			<td style="width:529px;">
+				<strong>boolean equals(Object obj) </strong><br />
+				比较此 GregorianCalendar 与指定的 Object。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				5</td>
+			<td style="width:529px;">
+				<strong>int get(int field) </strong><br />
+				获取指定字段的时间值</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				6</td>
+			<td style="width:529px;">
+				<strong>int getActualMaximum(int field) </strong><br />
+				返回当前日期，给定字段的最大值</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				7</td>
+			<td style="width:529px;">
+				<strong>int getActualMinimum(int field) </strong><br />
+				返回当前日期，给定字段的最小值</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				8</td>
+			<td style="width:529px;">
+				<strong>int getGreatestMinimum(int field) </strong><br />
+				&nbsp;返回此 GregorianCalendar 实例给定日历字段的最高的最小值。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				9</td>
+			<td style="width:529px;">
+				<strong>Date getGregorianChange() </strong><br />
+				获得格里高利历的更改日期。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				10</td>
+			<td style="width:529px;">
+				<strong>int getLeastMaximum(int field) </strong><br />
+				返回此 GregorianCalendar 实例给定日历字段的最低的最大值</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				11</td>
+			<td style="width:529px;">
+				<strong>int getMaximum(int field) </strong><br />
+				返回此 GregorianCalendar 实例的给定日历字段的最大值。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				12</td>
+			<td style="width:529px;">
+				<strong>Date getTime()</strong><br />
+				获取日历当前时间。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				13</td>
+			<td style="width:529px;">
+				<strong>long getTimeInMillis() </strong><br />
+				获取用长整型表示的日历的当前时间</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				14</td>
+			<td style="width:529px;">
+				<strong>TimeZone getTimeZone() </strong><br />
+				获取时区。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				15</td>
+			<td style="width:529px;">
+				<strong>int getMinimum(int field) </strong><br />
+				返回给定字段的最小值。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				16</td>
+			<td style="width:529px;">
+				<strong>int hashCode() </strong><br />
+				重写hashCode.</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				17</td>
+			<td style="width:529px;">
+				<strong>boolean isLeapYear(int year)</strong><br />
+				确定给定的年份是否为闰年。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				18</td>
+			<td style="width:529px;">
+				<strong>void roll(int field, boolean up) </strong><br />
+				在给定的时间字段上添加或减去（上/下）单个时间单元，不更改更大的字段。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				19</td>
+			<td style="width:529px;">
+				<strong>void set(int field, int value) </strong><br />
+				用给定的值设置时间字段。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				20</td>
+			<td style="width:529px;">
+				<strong>void set(int year, int month, int date) </strong><br />
+				设置年、月、日的值。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				21</td>
+			<td style="width:529px;">
+				<strong>void set(int year, int month, int date, int hour, int minute) </strong><br />
+				设置年、月、日、小时、分钟的值。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				22</td>
+			<td style="width:529px;">
+				<strong>void set(int year, int month, int date, int hour, int minute, int second) </strong><br />
+				设置年、月、日、小时、分钟、秒的值。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				23</td>
+			<td style="width:529px;">
+				<strong>void setGregorianChange(Date date) </strong><br />
+				设置 GregorianCalendar 的更改日期。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				24</td>
+			<td style="width:529px;">
+				<strong>void setTime(Date date) </strong><br />
+				用给定的日期设置Calendar的当前时间。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				25</td>
+			<td style="width:529px;">
+				<strong>void setTimeInMillis(long millis) </strong><br />
+				用给定的long型毫秒数设置Calendar的当前时间。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				26</td>
+			<td style="width:529px;">
+				<strong>void setTimeZone(TimeZone value) </strong><br />
+				用给定时区值设置当前时区。</td>
+		</tr>
+		<tr>
+			<td style="width:47px;">
+				27</td>
+			<td style="width:529px;">
+				<strong>String toString() </strong><br />
+				返回代表日历的字符串。</td>
+		</tr>
+	</tbody>
+</table>
+<h3>实例</h3>
+<pre>
+import java.util.*;
+  
+public class GregorianCalendarDemo {
+
+   public static void main(String args[]) {
+      String months[] = {
+      "Jan", "Feb", "Mar", "Apr",
+      "May", "Jun", "Jul", "Aug",
+      "Sep", "Oct", "Nov", "Dec"};
+      
+      int year;
+      // 初始化 Gregorian 日历
+      // 使用当前时间和日期
+      // 默认为本地时间和时区
+      GregorianCalendar gcalendar = new GregorianCalendar();
+      // 显示当前时间和日期的信息
+      System.out.print("Date: ");
+      System.out.print(months[gcalendar.get(Calendar.MONTH)]);
+      System.out.print(" " + gcalendar.get(Calendar.DATE) + " ");
+      System.out.println(year = gcalendar.get(Calendar.YEAR));
+      System.out.print("Time: ");
+      System.out.print(gcalendar.get(Calendar.HOUR) + ":");
+      System.out.print(gcalendar.get(Calendar.MINUTE) + ":");
+      System.out.println(gcalendar.get(Calendar.SECOND));
+      
+      // 测试当前年份是否为闰年
+      if(gcalendar.isLeapYear(year)) {
+         System.out.println("当前年份是闰年");
+      }
+      else {
+         System.out.println("当前年份不是闰年");
+      }
+   }
+}
+</pre>
+<p>以上实例编译运行结果如下：</p>
+<pre>
+Date: Apr 22 2009
+Time: 11:25:27
+当前年份不是闰年
+</pre>
+<p>关于Calender 类的完整列表，你可以参考标准的Java文档。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-array.html" rel="prev"> Java 数组</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-regular-expressions.html" rel="next">Java正则表达式</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.258 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 04:03:27 -->
+
+<!-- super cache -->

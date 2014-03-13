@@ -1,0 +1,399 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery EasyUI 数据网格 &#8211; 创建列组合 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery EasyUI 数据网格 &#8211; 自定义排序' href='http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid14.html' />
+<link rel='next' title='jQuery EasyUI 数据网格 &#8211; 添加复选框' href='http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid10.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid9.html' />
+<meta name="keywords" content="jQuery EasyUI 数据网格 &#8211; 创建列组合,jQuery EasyUI教程">
+<meta name="description" content="pre { white-space: pre-wrap; }   jQuery EasyUI 数据网格 - 创建列组合  easyui 的数据网格（DataGrid）可以创建列组合，如下所示：   在本实例中，我们使用平面数据来填充数据网格（DataGrid）的数据，并把 listprice、unitcost、addr1、status 列组合在一个单一的列下。 为了创建列组合，您应该定义数据网格（datagrid）插件的 columns..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>jQuery EasyUI教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html" >
+	jQuery EasyUI 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-intro.html" >
+	jQuery EasyUI 简介	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 应用</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud1.html" >
+	jEasyUI 创建 CRUD 应用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud2.html" >
+	jEasyUI 创建 CRUD 数据网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud3.html" >
+	jEasyUI 表单的 CRUD 应用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-rssreader.html" >
+	jEasyUI  创建 RSS 阅读器	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 拖放</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-basic.html" >
+	jEasyUI 基本的拖动和放置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-shopping.html" >
+	jEasyUI 创建拖放的购物车	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-timetable.html" >
+	jEasyUI 创建学校课程表	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 菜单与按钮</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-menu.html" >
+	jEasyUI 创建简单的菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-linkbutton.html" >
+	jEasyUI 创建链接按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-menubutton.html" >
+	jEasyUI 创建菜单按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-splitbutton.html" >
+	jEasyUI 创建分割按钮	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 布局</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-layout.html" >
+	jEasyUI 创建边框布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-panel.html" >
+	jEasyUI 创建复杂布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-accordion.html" >
+	jEasyUI 创建折叠面板	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs1.html" >
+	jEasyUI 创建标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs2.html" >
+	jEasyUI 动态添加标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs3.html" >
+	jEasyUI 添加自动播放标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-xp.html" >
+	jEasyUI 创建 XP 风格左侧面板	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 数据网格</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid1.html" >
+	jEasyUI 转换 HTML 表格为数据网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid3.html" >
+	jEasyUI 取得选中行数据	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid24.html" >
+	jEasyUI 添加查询功能	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid4.html" >
+	jEasyUI 添加工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid19.html" >
+	jEasyUI 创建复杂工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid5.html" >
+	jEasyUI 设置冻结列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid6.html" >
+	jEasyUI 动态改变列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid7.html" >
+	jEasyUI 格式化列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid8.html" >
+	jEasyUI 设置排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid14.html" >
+	jEasyUI 自定义排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid9.html" >
+	jEasyUI 创建列组合	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid10.html" >
+	jEasyUI 添加复选框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid11.html" >
+	jEasyUI 自定义分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid12.html" >
+	jEasyUI 启用行内编辑	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid23.html" >
+	jEasyUI 扩展编辑器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid15.html" >
+	jEasyUI 列运算	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid13.html" >
+	jEasyUI 合并单元格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid16.html" >
+	jEasyUI 创建自定义视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid17.html" >
+	jEasyUI 创建页脚摘要	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid18.html" >
+	jEasyUI 条件设置行背景颜色	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid20.html" >
+	jEasyUI 创建属性网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid21.html" >
+	jEasyUI 扩展行显示细节	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid22.html" >
+	jEasyUI 创建子网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid27.html" >
+	jEasyUI 显示海量数据	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid2.html" >
+	jEasyUI 添加分页组件	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 窗口</h2>
+<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win1.html">
+	jEasyUI 创建简单窗口	</a>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win2.html" >
+	jEasyUI 自定义窗口工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win3.html" >
+	jEasyUI 窗口与布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-dlg1.html" >
+	jEasyUI 创建对话框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-dlg2.html" >
+	jEasyUI 自定义对话框	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 树形菜单</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree1.html" >
+	jEasyUI 使用标记创建树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree2.html" >
+	jEasyUI 创建异步树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree3.html" >
+	jEasyUI 树形菜单添加节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree4.html" >
+	jEasyUI 创建带复选框的树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree5.html" >
+	jEasyUI 树形菜单拖放控制	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree6.html" >
+	jEasyUI 树形菜单加载父/子节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid1.html" >
+	jEasyUI 创建基础树形网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid2.html" >
+	jEasyUI 创建复杂树形网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid3.html" >
+	jEasyUI 树形网格动态加载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid4.html" >
+	jEasyUI 树形网格添加分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid5.html" >
+	jEasyUI 树形网格惰性加载节点	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 表单</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form1.html" >
+	jEasyUI 创建异步提交表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form3.html" >
+	jEasyUI 表单验证	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form2.html" >
+	jEasyUI 创建树形下拉框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form4.html" >
+	jEasyUI 格式化下拉框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form5.html" >
+	jEasyUI 过滤下拉数据网格	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 参考手册</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-ref-plugins.html" >
+	jQuery EasyUI 插件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-ref-extension.html" >
+	jQuery EasyUI 扩展	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid14.html" rel="prev"> jQuery EasyUI 数据网格 &#8211; 自定义排序</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid10.html" rel="next">jQuery EasyUI 数据网格 &#8211; 添加复选框</a> &raquo;</div>
+	</div>
+
+	<style>
+pre {
+white-space: pre-wrap;
+}
+</style>
+
+<h1>jQuery EasyUI 数据网格 - <span class="color_h1">创建列组合</span></h1>
+
+<p>easyui 的数据网格（DataGrid）可以创建列组合，如下所示：</p>
+<img src="/wp-content/uploads/2013/12/datagrid9_1.png"/>
+
+<p>在本实例中，我们使用平面数据来填充数据网格（DataGrid）的数据，并把 listprice、unitcost、addr1、status 列组合在一个单一的列下。</p>
+<p>为了创建列组合，您应该定义数据网格（datagrid）插件的 columns 数据。列的每个元素是定义一组可使用 rowspan 或 colspan 属性来进行组合的单元格。</p>
+<p>下面的代码实现了上面的实例：</p>
+<pre style="color:#006600">
+	&lt;table id="tt" title="Column Group" class="easyui-datagrid" style="width:550px;height:250px"
+			url="data/datagrid_data.json"
+			singleSelect="true" iconCls="icon-save" rownumbers="true"&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th rowspan="2" field="itemid" width="80"&gt;Item ID&lt;/th&gt;
+				&lt;th rowspan="2" field="productid" width="80"&gt;Product ID&lt;/th&gt;
+				&lt;th colspan="4"&gt;Item Details&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;th field="listprice" width="80" align="right"&gt;List Price&lt;/th&gt;
+				&lt;th field="unitcost" width="80" align="right"&gt;Unit Cost&lt;/th&gt;
+				&lt;th field="attr1" width="100"&gt;Attribute&lt;/th&gt;
+				&lt;th field="status" width="60" align="center"&gt;Stauts&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+	&lt;/table&gt;
+</pre>
+
+<h2>下载 jQuery EasyUI 实例</h2>
+<p><a href="/try/jeasyui/download/jeasyui-datagrid-datagrid9.zip">jeasyui-datagrid-datagrid9.zip</a></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid14.html" rel="prev"> jQuery EasyUI 数据网格 &#8211; 自定义排序</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid10.html" rel="next">jQuery EasyUI 数据网格 &#8211; 添加复选框</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.281 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 08:45:31 -->
+
+<!-- super cache -->

@@ -1,0 +1,447 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>ASP Session 对象 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='ASP Cookies' href='http://www.w3cschool.cc/asp/asp-cookies.html' />
+<link rel='next' title='ASP Application 对象' href='http://www.w3cschool.cc/asp/asp-applications.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/asp/asp-sessions.html' />
+<meta name="keywords" content="ASP Session 对象,ASP 教程">
+<meta name="description" content="ASP Session 对象  Session 对象用于存储关于用户会话（session）的信息，或者更改用户会话（session）的设置。  Session 对象 当您在计算机上操作某个应用程序时，您打开它，做些更改，然后关闭它。这很像一次对话（Session）。计算机知道您是谁。它清楚您在何时打开和关闭应用程序。然而，在因特网上问题出现了：由于 HTTP 地址无法保持状态，Web 服务器并不知道您是谁以及您做了什么。  ASP 通过..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>ASP 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-tutorial.html" >
+	ASP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-intro.html" >
+	ASP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-install.html" >
+	ASP 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-syntax.html" >
+	ASP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-variables.html" >
+	ASP 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-procedures.html" >
+	ASP 程序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-inputforms.html" >
+	ASP 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-cookies.html" >
+	ASP Cookies	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-sessions.html" >
+	ASP Session	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-applications.html" >
+	ASP Application	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-incfiles.html" >
+	ASP #include	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-globalasa.html" >
+	ASP Global.asa	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-send-email.html" >
+	ASP 发送电子邮件	</a>
+	<br><h2 class="left"><span class="left_h2">ASP 对象</span></h2>	<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-response.html" >
+	ASP Response	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-request.html" >
+	ASP Request	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-application.html" >
+	ASP Application	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-session.html" >
+	ASP Session	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-server.html" >
+	ASP Server	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-error.html" >
+	ASP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-filesystem.html" >
+	ASP FileSystem	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-textstream.html" >
+	ASP TextStream	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-drive.html" >
+	ASP Drive	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-file.html" >
+	ASP File	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-folder.html" >
+	ASP Folder	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ref-dictionary.html" >
+	ASP Dictionary	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ado.html" >
+	ASP ADO	</a>
+	<br><h2 class="left"><span class="left_h2">ASP 组件</span></h2>	<a target="_top" href="http://www.w3cschool.cc/asp/asp-adrotator.html" >
+	ASP AdRotator	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-browser.html" >
+	ASP BrowserCap	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-contentlinking.html" >
+	ASP Content Linking	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-contentrotator.html" >
+	ASP Content Rotator	</a>
+	<br><h2 class="left"><span class="left_h2">ASP 与 AJAX</span></h2>	<a target="_top" href="http://www.w3cschool.cc/asp/asp-ajax-intro.html" >
+	AJAX 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ajax-asp.html" >
+	AJAX ASP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-ajax-database.html" >
+	AJAX 数据库	</a>
+	<br><h2 class="left"><span class="left_h2">ASP 总结</span></h2>	<a target="_top" href="http://www.w3cschool.cc/asp/asp-quickref.html" >
+	ASP 快速参考	</a>
+		<a target="_top" href="http://www.w3cschool.cc/asp/asp-summary.html" >
+	ASP 总结	</a>
+	<br><h2 class="left"><span class="left_h2">ASP 实例</span></h2>	<a target="_top" href="http://www.w3cschool.cc/asp/asp-examples.html" >
+	ASP 实例	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/asp/asp-cookies.html" rel="prev"> ASP Cookies</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/asp/asp-applications.html" rel="next">ASP Application 对象</a> &raquo;</div>
+	</div>
+
+	<h1>ASP <span class="color_h1">Session</span> 对象</h1>
+<hr />
+<p class="intro">Session 对象用于存储关于用户会话（session）的信息，或者更改用户会话（session）的设置。</p>
+<hr />
+<h2>Session 对象</h2>
+<p>当您在计算机上操作某个应用程序时，您打开它，做些更改，然后关闭它。这很像一次对话（Session）。计算机知道您是谁。它清楚您在何时打开和关闭应用程序。然而，在因特网上问题出现了：由于 HTTP 地址无法保持状态，Web 服务器并不知道您是谁以及您做了什么。</p>
+
+<p>ASP 通过为每个用户创建一个唯一的 cookie 来解决这个问题。cookie 被传送至用户的计算机上，它含有可识别用户的信息。这种接口被称作 Session 对象。</p>
+
+<p>Session 对象用于存储关于用户会话（session）的信息，或者更改用户会话（session）的设置。</p>
+<p>存储于 Session 对象中的变量存储单一用户的信息，并且对于应用程序中的所有页面都是可用的。存储于 session 变量中的公共信息通常是 name、id 和参数。服务器会为每个新的用户创建一个新的 Session，并在 session 失效时撤销掉这个 Session 对象。</p>
+<hr />
+<h2>Session 何时开始？</h2>
+<p>Session 开始于：</p>
+<ul>
+<li>某个新用户请求了一个 ASP 文件，并且 Global.asa 文件引用了 Session_OnStart 子程序</li>
+  <li>某个值存储在 Session 变量中</li>
+  <li>某个用户请求了一个 ASP 文件，并且 Global.asa 使用 &lt;object&gt; 标签通过 session 的 scope 来实例化某个对象</li>
+</ul>
+<hr />
+<h2>Session 何时结束？</h2>
+<p>如果用户没有在规定的时间内在应用程序中请求或者刷新页面，session 就会结束。默认值为 20 分钟。</p>
+<p>如果您想要将超时的时间间隔设置为比默认值更短或更长，可以使用 <b>Timeout</b> 属性。</p>
+<p>下面的实例设置了一个 5 分钟的超时时间间隔：</p>
+
+<div class="code notranslate"><div>
+
+&lt;%<br />
+Session.Timeout=5<br />
+%&gt;</div></div>
+
+<p>要立即结束 session，请使用 <b>Abandon</b> 方法：</p>
+
+<div class="code notranslate"><div>
+
+&lt;%<br />
+Session.Abandon<br />
+%&gt;</div></div>
+
+<p><b>注释：</b>使用 session 时主要的问题是它们该在何时结束。我们不会知道用户最近的请求是否是最后的请求。因此我们不清楚该让 session "存活"多久。为某个空闲的 session 等待太久会耗尽服务器的资源。然而如果 session 被过早地删除，用户就不得不一遍又一遍地重新开始，这是因为服务器已经删除了所有的信息。寻找合适的超时间隔时间是很困难的！</p>
+
+<p><img src="/images/lamp.gif" alt="Tip"><b>提示：</b>在 session 变量中仅存储少量的数据！</p>
+<hr />
+<h2>存储和取回 Session 变量</h2>
+<p>Session 对象最大的优点是可在其中存储变量，以供后续的网页读取，其应用范围是很广的。</p>
+<p>下面的实例把 "Donald Duck" 赋值给名为 <i>username</i> 的 Session 变量，并把 "50" 赋值给名为 <i>age</i> 的 Session 变量：</p>
+
+<div class="code notranslate"><div>
+
+&lt;%<br />
+Session("username")="Donald Duck"<br />
+Session("age")=50<br />
+%&gt;</div></div>
+
+<p>当值被存储在 session 变量中，它就能被 ASP 应用程序中的任何页面使用：</p>
+
+<div class="code notranslate"><div>
+Welcome &lt;%Response.Write(Session("username"))%&gt;</div></div>
+
+<p>上面这行代码返回的结果是: "Welcome Donald Duck"。</p>
+<p>您也可以在 Session 对象中存储用户参数，然后通过访问这些参数来决定向用户返回什么页面。</p>
+<p>下面的实例规定，假如用户使用低显示器分辨率，则返回纯文本版本的页面：</p>
+
+<div class="code notranslate"><div>
+
+&lt;%If Session("screenres")="low" Then%&gt;<br />
+   
+  This is the text version of the page<br />
+&lt;%Else%&gt;<br />
+   
+  This is the multimedia version of the page<br />
+&lt;%End If%&gt;</div></div>
+<br /><hr />
+<h2>移除 Session 变量</h2>
+<p>Contents 集合包含所有的 session 变量。</p>
+<p>可通过 Remove 方法来移除 session 变量。</p>
+<p>在下面的实例中，如果 session 变量 "age" 的值小于 18，则移除 session 变量 "sale"：</p>
+
+<div class="code notranslate"><div>
+
+&lt;%<br />
+If Session.Contents("age")&lt;18 then<br />
+   
+  Session.Contents.Remove("sale")<br />
+End If<br />
+%&gt;</div></div>
+
+<p>如需移除 session 中的所有变量，请使用 RemoveAll 方法：</p>
+
+<div class="code notranslate"><div>
+
+&lt;%<br />
+Session.Contents.RemoveAll()<br />
+%&gt;</div></div>
+<br /><hr />
+<h2>遍历 Contents 集合</h2>
+<p>Contents 集合包含所有的 session 变量。您可以通过遍历 Contents 集合，来查看其中存储的变量：</p>
+
+<div class="code notranslate"><div>
+
+&lt;%<br />
+Session("username")="Donald Duck"<br />
+Session("age")=50<br /><br />
+dim i<br />
+For Each i in Session.Contents<br />
+   
+  Response.Write(i &amp; "&lt;br&gt;")<br />
+Next<br />
+%&gt;</div></div>
+
+<p>结果：</p>
+
+<div class="code notranslate"><div>
+
+username<br />
+age</div></div>
+
+<p>如果您不知道 Contents 集合中的项目数量，您可以使用 Count 属性：</p>
+
+<div class="code notranslate"><div>
+
+&lt;%<br />
+dim i<br />
+dim j<br />
+j=Session.Contents.Count<br />
+Response.Write("Session variables: " &amp; j)<br />
+For i=1 to j<br />
+   
+  Response.Write(Session.Contents(i) &amp; "&lt;br&gt;")<br />
+Next<br />
+%&gt;</div></div>
+
+<p>结果：</p>
+
+<div class="code notranslate"><div>
+
+Session variables: 2<br />
+Donald Duck<br />
+50</div></div>
+<br /><hr />
+<h2>遍历 StaticObjects 集合</h2>
+<p>您可以通过遍历 StaticObjects 集合，来查看存储在 Session 对象中的所有对象的值：</p>
+
+<div class="code notranslate"><div>
+
+&lt;%<br />
+dim i<br />
+For Each i in Session.StaticObjects<br />
+   
+  Response.Write(i &amp; "&lt;br&gt;")<br />
+Next<br />
+%&gt;</div></div>
+<br />	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/asp/asp-cookies.html" rel="prev"> ASP Cookies</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/asp/asp-applications.html" rel="next">ASP Application 对象</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.644 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 19:40:53 -->
+
+<!-- super cache -->

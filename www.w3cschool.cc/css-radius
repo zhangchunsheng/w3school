@@ -1,0 +1,613 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS圆角制作器 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='站点地图' href='http://www.w3cschool.cc/sitemap' />
+<link rel='next' title='CSS3代码在线生成器' href='http://www.w3cschool.cc/css3tool' />
+<link rel='canonical' href='http://www.w3cschool.cc/css-radius' />
+<meta name="keywords" content="CSS圆角制作器">
+<meta name="description" content="CSS圆角制作器  CSS圆角制作器可以在线生成圆角的css代码。在四个角的输入框中，任意输入个数字试试看，即可看到神奇圆角效果的同时也会生成对应的CSS3代码。 注：也可以在输入框中使用上下箭头改变数值，另外IE9以下的老浏览器不支持CSS3，因此看不到效果。                                                #container {             width: 550px;   ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+
+<h2 class="left">前端工具集</h2>
+<a href="/jsontool" target="_blank" title="JSON格式化工具">JSON格式化工具</a>
+<a href="/css-radius" title="CSS圆角制作器">CSS圆角制作器</a>
+<a href="/css3tool" target="_blank" title="CSS代码在线生成器">CSS代码在线生成器</a>
+<a href="/csspack" title="CSS压缩/格式化工具">CSS压缩/格式化工具</a>
+<a href="/runcode" target="_blank" title="HTML/CSS/Javascript在线代码运行工具">HTML/CSS/JS代码运行工具</a>
+<a href="/rgb2hex" target="_blank" title="RGB转16进制工具">RGB转16进制工具</a>
+
+</div>
+<div id="main">
+	
+	 <h1>CSS圆角制作器</h1>
+<hr /><br />
+<p>CSS圆角制作器可以在线生成圆角的css代码。在四个角的输入框中，任意输入个数字试试看，即可看到神奇圆角效果的同时也会生成对应的CSS3代码。
+</p><p><strong>注：</strong>也可以在输入框中使用上下箭头改变数值，另外IE9以下的老浏览器不支持CSS3，因此看不到效果。</p>
+    <style type="text/css" media="screen">
+       
+        
+       
+        
+        #container {
+            width: 550px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+            #container .input_wrapper {
+                position: absolute;
+                width: 100px;
+                height: 50px;
+            }
+                
+                #container .input_wrapper#input_wrapper_tl {
+                    top: -2px;
+                    left: -115px;
+                    text-align: right;
+                }
+                
+                #container .input_wrapper#input_wrapper_tr {
+                    top: -2px;
+                    right: -115px;
+                    text-align: left;
+                }
+                
+                #container .input_wrapper#input_wrapper_bl {
+                    bottom: -2px;
+                    left: -115px;
+                    text-align: right;
+                }
+                
+                #container .input_wrapper#input_wrapper_br {
+                    bottom: -2px;
+                    right: -115px;
+                    text-align: left;
+                }
+                
+                #container .input_wrapper input {
+                    text-align: right;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 82px;
+                    padding: 2px 8px;
+                    border: 1px solid #2f2f2f;
+                    outline: none;
+                    background: #393939;
+                    font: bold 15px Arial, Helvetica, sans-serif;
+                    color: #fff;
+                }
+                
+                    #container .input_wrapper#input_wrapper_tr input,
+                    #container .input_wrapper#input_wrapper_br input {
+                        text-align: left;
+                        right: auto;
+                        left: 0;
+                    }
+                    
+                    #container .input_wrapper#input_wrapper_bl input,
+                    #container .input_wrapper#input_wrapper_br input {
+                        top: auto;
+                        bottom: -1px;
+                    }
+                
+                #container .input_wrapper input.chars_1 { width: 10px }
+                #container .input_wrapper input.chars_2 { width: 18px }
+                #container .input_wrapper input.chars_3 { width: 26px }
+                #container .input_wrapper input.chars_4 { width: 34px }
+                
+            #container #surface {
+                background: #e9eaee;
+                border: 2px solid #ffffff;
+                padding: 44px 40px 20px 40px;
+                width: 460px;
+                margin: 0 auto;
+                text-align: center;
+                box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+                -moz-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+                -webkit-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+            }
+            
+                #container #surface textarea {
+                    background: #fafafc;
+                    border: 1px solid #a3a3a3;
+                    resize: none;
+                    width: 430px;
+                    height: 240px;
+                    outline: none;
+                    font: normal 15px Monaco, 'Courier New', monospace;
+                    line-height: 20px;
+                    padding: 9px 10px;
+                    color: #2f2f2f;
+                    overflow: hidden;
+                }
+                
+                #container #surface #options {
+                    margin: 10px 0 0 0;
+                }
+                
+                    #container #surface #options input {
+                        margin-right: 2px;
+                    }
+                    
+                    #container #surface #options label {
+                        margin-right: 6px;
+                        color: #393939;
+                    }
+                    
+                    #container #surface #options label.last {
+                        margin-right: 0;
+                    }
+    </style>
+    <script src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/js/prototype.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var master_dir = false;
+        var master_radius = 0;
+        
+        var is_master_radius = new Array();
+        is_master_radius['tl'] = true;
+        is_master_radius['tr'] = true;
+        is_master_radius['br'] = true;
+        is_master_radius['bl'] = true;
+                
+        var options = new Array();
+        options['css3']   = true;
+        options['webkit'] = true;
+        options['gecko']  = true;        
+    </script>
+	    
+    <div id="container">
+        <div class="input_wrapper" id="input_wrapper_tl">
+            <input type="text" id="input_tl" class="chars_2" value="0" onkeypress="return observe_input_keypress(event)">
+        </div>
+        <div class="input_wrapper" id="input_wrapper_tr">
+            <input type="text" id="input_tr" class="chars_2" value="0" onkeypress="return observe_input_keypress(event)">
+        </div>
+        <div class="input_wrapper" id="input_wrapper_br">
+            <input type="text" id="input_br" class="chars_2" value="0" onkeypress="return observe_input_keypress(event)">
+        </div>
+        <div class="input_wrapper" id="input_wrapper_bl">
+            <input type="text" id="input_bl" class="chars_2" value="0" onkeypress="return observe_input_keypress(event)">
+        </div>
+        
+        <div id="surface" style="border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px;">
+            <textarea id="code" readonly="readonly"></textarea>
+            
+            <div id="options">
+                <input type="checkbox" checked="true" id="opt_webkit"><label for="opt_webkit"> WebKit</label> 
+                <input type="checkbox" checked="true" id="opt_gecko"><label for="opt_gecko" class="last"> Gecko</label> 
+                <input type="checkbox" checked="true" id="opt_css3"><label for="opt_css3"> CSS3</label>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        function update_input_class(dir) {
+            value = $('input_' + dir).value;
+            
+            if (value.length === 0 || value.length === 1) {
+                $('input_' + dir).className = 'chars_1';
+            } else if (value.length == 2) {
+                $('input_' + dir).className = 'chars_2';
+            } else if (value.length == 3) {
+                $('input_' + dir).className = 'chars_3';
+            } else if (value.length == 4) {
+                $('input_' + dir).className = 'chars_4';
+            } else {
+                $('input_' + dir).className = '';
+            }
+        }
+        
+        function update_options() {
+            options['css3']   = $('opt_css3').checked;
+            options['webkit'] = $('opt_webkit').checked;
+            options['gecko']  = $('opt_gecko').checked;
+        }
+        
+        function generate_code(option, master, tl_radius, tr_radius, br_radius, bl_radius) {
+            var radii = [tl_radius, tr_radius, br_radius, bl_radius];
+            
+            var code_short = '';
+            var code_tl = '';
+            var code_tr = '';
+            var code_br = '';
+            var code_bl = '';
+            
+            if (option == 'css3') {
+                var declaration_short = 'border-radius: ';
+                var declaration_tl    = 'border-top-left-radius: ';
+                var declaration_tr    = 'border-top-right-radius: ';
+                var declaration_br    = 'border-bottom-right-radius: ';
+                var declaration_bl    = 'border-bottom-left-radius: ';
+            } else if (option == 'webkit') {
+                var declaration_short = '-webkit-border-radius: ';
+                var declaration_tl    = '-webkit-border-top-left-radius: ';
+                var declaration_tr    = '-webkit-border-top-right-radius: ';
+                var declaration_br    = '-webkit-border-bottom-right-radius: ';
+                var declaration_bl    = '-webkit-border-bottom-left-radius: ';
+            } else if (option == 'gecko') {
+                var declaration_short = '-moz-border-radius: ';
+                var declaration_tl    = '-moz-border-radius-topleft: ';
+                var declaration_tr    = '-moz-border-radius-topright: ';
+                var declaration_br    = '-moz-border-radius-bottomright: ';
+                var declaration_bl    = '-moz-border-radius-bottomleft: ';
+            }
+            
+            if (tl_radius || tr_radius || bl_radius || br_radius) {
+                if (radii.uniq().length === 1) {
+                    master_radius = radii.uniq().reduce();
+                    
+                    if (master_radius != 0) code_short += declaration_short + master_radius + "px;\n";
+                } else if (radii.uniq().length == 2) {
+                    var non_master_radius = radii.without(master_radius);
+                    var non_master_radius_count = non_master_radius.size();
+                    non_master_radius = non_master_radius.uniq().reduce();
+                    
+                    if (non_master_radius_count === 1) {
+                        if (master_radius != 0) code_short += declaration_short + master_radius + (master_radius == 0 ? '' : "px") + ";\n";
+                        
+                        if (tl_radius &#038;& tl_radius != master_radius) code_tl += declaration_tl + tl_radius + (tl_radius == 0 ? '' : "px") + ";\n";
+                        if (tr_radius &#038;& tr_radius != master_radius) code_tr += declaration_tr + tr_radius + (tr_radius == 0 ? '' : "px") + ";\n";
+                        if (br_radius &#038;& br_radius != master_radius) code_br += declaration_br + br_radius + (br_radius == 0 ? '' : "px") + ";\n";
+                        if (bl_radius &#038;& bl_radius != master_radius) code_bl += declaration_bl + bl_radius + (bl_radius == 0 ? '' : "px") + ";\n";
+                    } else if (non_master_radius_count == 2) {
+                        if (non_master_radius == 0) {
+                            if (tl_radius &#038;& tl_radius != 0) code_tl += declaration_tl + master_radius + (master_radius == 0 ? '' : "px") + ";\n";
+                            if (tr_radius &#038;& tr_radius != 0) code_tr += declaration_tr + master_radius + (master_radius == 0 ? '' : "px") + ";\n";
+                            if (br_radius &#038;& br_radius != 0) code_br += declaration_br + master_radius + (master_radius == 0 ? '' : "px") + ";\n";
+                            if (bl_radius &#038;& bl_radius != 0) code_bl += declaration_bl + master_radius + (master_radius == 0 ? '' : "px") + ";\n";
+                        } else {
+                            if (master_radius != 0) code_short += declaration_short + master_radius + (master_radius == 0 ? '' : "px") + ";\n";
+                            
+                            if (tl_radius &#038;& tl_radius != master_radius) code_tl += declaration_tl + tl_radius + (tl_radius == 0 ? '' : "px") + ";\n";
+                            if (tr_radius &#038;& tr_radius != master_radius) code_tr += declaration_tr + tr_radius + (tr_radius == 0 ? '' : "px") + ";\n";
+                            if (br_radius &#038;& br_radius != master_radius) code_br += declaration_br + br_radius + (br_radius == 0 ? '' : "px") + ";\n";
+                            if (bl_radius &#038;& bl_radius != master_radius) code_bl += declaration_bl + bl_radius + (bl_radius == 0 ? '' : "px") + ";\n";
+                        }
+                    } else if (non_master_radius_count == 3) {
+                        if (non_master_radius == 0) {
+                            if (tl_radius != 0) code_tl += declaration_tl + tl_radius + (tl_radius == 0 ? '' : "px") + ";\n";
+                            if (tr_radius != 0) code_tr += declaration_tr + tr_radius + (tr_radius == 0 ? '' : "px") + ";\n";
+                            if (br_radius != 0) code_br += declaration_br + br_radius + (br_radius == 0 ? '' : "px") + ";\n";
+                            if (bl_radius != 0) code_bl += declaration_bl + bl_radius + (bl_radius == 0 ? '' : "px") + ";\n";
+                        } else {
+                            if (non_master_radius != 0) code_short += declaration_short + non_master_radius + (non_master_radius == 0 ? '' : "px") + ";\n";
+                            
+                            if (tl_radius &#038;& tl_radius != non_master_radius) code_tl += declaration_tl + tl_radius + (tl_radius == 0 ? '' : "px") + ";\n";
+                            if (tr_radius &#038;& tr_radius != non_master_radius) code_tr += declaration_tr + tr_radius + (tr_radius == 0 ? '' : "px") + ";\n";
+                            if (br_radius &#038;& br_radius != non_master_radius) code_br += declaration_br + br_radius + (br_radius == 0 ? '' : "px") + ";\n";
+                            if (bl_radius &#038;& bl_radius != non_master_radius) code_bl += declaration_bl + bl_radius + (bl_radius == 0 ? '' : "px") + ";\n";
+                        }
+                    }
+                } else if (radii.compact().uniq().length == 3 || radii.compact().uniq().length == 4) {
+                    if (tl_radius &#038;& tl_radius != 0) code_tl += declaration_tl + tl_radius + (tl_radius == 0 ? '' : "px") + ";\n";
+                    if (tr_radius &#038;& tr_radius != 0) code_tr += declaration_tr + tr_radius + (tr_radius == 0 ? '' : "px") + ";\n";
+                    if (br_radius &#038;& br_radius != 0) code_br += declaration_br + br_radius + (br_radius == 0 ? '' : "px") + ";\n";
+                    if (bl_radius &#038;& bl_radius != 0) code_bl += declaration_bl + bl_radius + (bl_radius == 0 ? '' : "px") + ";\n";
+                }
+            }
+            
+            return code_short + code_tl + code_tr + code_br + code_bl;
+        }
+        
+        function update_textarea() {
+            var tl_radius = $('input_tl').value.strip();
+            var tr_radius = $('input_tr').value.strip();
+            var br_radius = $('input_br').value.strip();
+            var bl_radius = $('input_bl').value.strip();
+            
+            master_radius = master_radius.strip();
+            
+            var code = '';
+            if (options['webkit']) code += generate_code('webkit', master_radius, tl_radius, tr_radius, br_radius, bl_radius);
+            if (options['gecko'])  code += generate_code('gecko',  master_radius, tl_radius, tr_radius, br_radius, bl_radius);
+            if (options['css3'])   code += generate_code('css3',   master_radius, tl_radius, tr_radius, br_radius, bl_radius);
+            
+            $('code').value = code.strip();
+        }
+        
+        function apply_radii() {
+            var tl_radius = $('input_tl').value > 125 ? 125 : (! $('input_tl').value ? 0 : $('input_tl').value.strip());
+            var tr_radius = $('input_tr').value > 125 ? 125 : (! $('input_tr').value ? 0 : $('input_tr').value.strip());
+            var br_radius = $('input_br').value > 125 ? 125 : (! $('input_br').value ? 0 : $('input_br').value.strip());
+            var bl_radius = $('input_bl').value > 125 ? 125 : (! $('input_bl').value ? 0 : $('input_bl').value.strip());
+            
+            if ($('surface').style.borderTopLeftRadius != 'undefined') {
+                $('surface').style.borderTopLeftRadius = tl_radius + 'px';
+                $('surface').style.borderTopRightRadius = tr_radius + 'px';
+                $('surface').style.borderBottomRightRadius = br_radius + 'px';
+                $('surface').style.borderBottomLeftRadius = bl_radius + 'px';
+            }
+            
+            if ($('surface').style.WebkitBorderTopLeftRadius != 'undefined') {
+                $('surface').style.WebkitBorderTopLeftRadius = tl_radius + 'px';
+                $('surface').style.WebkitBorderTopRightRadius = tr_radius + 'px';
+                $('surface').style.WebkitBorderBottomRightRadius = br_radius + 'px';
+                $('surface').style.WebkitBorderBottomLeftRadius = bl_radius + 'px';
+            }
+            
+            if ($('surface').style.MozBorderRadiusTopright != 'undefined') {
+                $('surface').style.MozBorderRadiusTopleft = tl_radius + 'px';
+                $('surface').style.MozBorderRadiusTopright = tr_radius + 'px';
+                $('surface').style.MozBorderRadiusBottomright = br_radius + 'px';
+                $('surface').style.MozBorderRadiusBottomleft = bl_radius + 'px';
+            }
+        }
+        
+        function observe_input_value(dir, value) {
+            if (! master_dir) {
+                master_dir = dir;
+                master_radius = $('input_' + master_dir).value;
+            }
+            
+            if (dir == master_dir) {
+                master_radius = $('input_' + master_dir).value;
+                
+                if (master_dir != 'tl' &#038;& is_master_radius['tl']) $('input_tl').value = master_radius;
+                if (master_dir != 'tr' &#038;& is_master_radius['tr']) $('input_tr').value = master_radius;
+                if (master_dir != 'br' &#038;& is_master_radius['br']) $('input_br').value = master_radius;
+                if (master_dir != 'bl' &#038;& is_master_radius['bl']) $('input_bl').value = master_radius;
+                
+            } else if (value != master_radius) {
+                is_master_radius[dir] = false;
+            }
+            
+            update_input_class('tl');
+            update_input_class('tr');
+            update_input_class('br');
+            update_input_class('bl');
+            
+            update_textarea();
+            apply_radii();
+        }
+        
+        function observe_input_keydown(e, dir) {
+            var code = e.charCode ? e.charCode : e.keyCode;
+            
+            var increment = e.shiftKey ? 10 : 1;
+            
+            if (code == Event.KEY_UP) {
+                $('input_' + dir).value = parseInt($('input_' + dir).value) + increment;
+            } else if (code == Event.KEY_DOWN) {
+                if ((parseInt($('input_' + dir).value) - increment) >= 0) {
+                    $('input_' + dir).value = parseInt($('input_' + dir).value) - increment;
+                } else {
+                    $('input_' + dir).value = 0;
+                }
+            }
+        }
+        
+        function observe_input_keypress(e) {
+            var code = e.charCode ? e.charCode : e.keyCode;
+            
+            if (! e.shiftKey &#038;& ! e.ctrlKey &#038;& ! e.altKey &#038;& ! e.metaKey &#038;& code != 46 &#038;& (code > 31 &#038;& (code < 48 || code > 57))) return false;
+            return true;
+        }
+        
+        function observe_option(opt, checked) {
+            update_options();
+            if (master_radius) update_textarea();
+        }
+        
+        function focus_textarea() {
+            $('code').activate();
+            setTimeout("$('code').activate()", 100);
+        }
+        
+        new Form.Element.Observer('input_tl', 0.15, function (el, value) { observe_input_value('tl', value) });
+        new Form.Element.Observer('input_tr', 0.15, function (el, value) { observe_input_value('tr', value) });
+        new Form.Element.Observer('input_bl', 0.15, function (el, value) { observe_input_value('bl', value) });
+        new Form.Element.Observer('input_br', 0.15, function (el, value) { observe_input_value('br', value) });
+        
+        $('input_tl').observe('keydown', function (e) { observe_input_keydown(e, 'tl') });
+        $('input_tr').observe('keydown', function (e) { observe_input_keydown(e, 'tr') });
+        $('input_bl').observe('keydown', function (e) { observe_input_keydown(e, 'bl') });
+        $('input_br').observe('keydown', function (e) { observe_input_keydown(e, 'br') });
+        
+        $('input_tl').observe('click', function (e) { $('input_tl').activate() });
+        $('input_tr').observe('click', function (e) { $('input_tr').activate() });
+        $('input_bl').observe('click', function (e) { $('input_bl').activate() });
+        $('input_br').observe('click', function (e) { $('input_br').activate() });
+        
+        new Form.Element.Observer('opt_css3',   0.15, function (el) { observe_option('css3',   el.checked) });
+        new Form.Element.Observer('opt_webkit', 0.15, function (el) { observe_option('webkit', el.checked) });
+        new Form.Element.Observer('opt_gecko',  0.15, function (el) { observe_option('gecko',  el.checked) });
+    </script>
+    
+ 
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.118 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:27:24 -->
+
+<!-- super cache -->

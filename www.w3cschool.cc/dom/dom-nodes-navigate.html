@@ -1,0 +1,422 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>XML DOM &#8211; 导航节点 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='XML DOM 浏览器差异' href='http://www.w3cschool.cc/dom/dom-mozilla-vs-ie.html' />
+<link rel='next' title='jQuery 简介' href='http://www.w3cschool.cc/jquery/jquery-intro.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/dom/dom-nodes-navigate.html' />
+<meta name="keywords" content="XML DOM &#8211; 导航节点,XML DOM 教程">
+<meta name="description" content="XML DOM - 导航节点   可通过使用节点间的关系对节点进行导航。  导航 DOM 节点 通过节点间的关系访问节点树中的节点，通常称为导航节点（'navigating nodes'）。 在 XML DOM 中，节点的关系被定义为节点的属性：  parentNode 	childNodes 	firstChild 	lastChild 	nextSibling 	previousSibling  下面的图像展示了 books.xml..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>XML DOM 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-tutorial.html" >
+	XML DOM 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-intro.html" >
+	DOM 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes.html" >
+	DOM 节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodetree.html" >
+	DOM 节点树	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-parser.html" >
+	DOM 解析	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-loadxmldoc.html" >
+	DOM 加载函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-methods.html" >
+	DOM 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-access.html" >
+	DOM 访问	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-info.html" >
+	DOM 节点信息	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-nodelist.html" >
+	DOM 节点列表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-traverse.html" >
+	DOM 遍历	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-mozilla-vs-ie.html" >
+	DOM 浏览器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-navigate.html" >
+	DOM 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-get.html" >
+	DOM 获取节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-set.html" >
+	DOM 改变节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-remove.html" >
+	DOM 删除节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-replace.html" >
+	DOM 替换节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-create.html" >
+	DOM 创建节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-add.html" >
+	DOM 添加节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodes-clone.html" >
+	DOM 克隆节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-httprequest.html" >
+	DOM XMLHttpRequest	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodetype.html" >
+	DOM 节点类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-node.html" >
+	DOM Node	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-nodelist.html" >
+	DOM NodeList	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-namednodemap.html" >
+	DOM NamedNodeMap	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-document.html" >
+	DOM Document	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-documentimplementation.html" >
+	DOM DocumentImpl	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-documenttype.html" >
+	DOM DocumentType	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-processinginstruction.html" >
+	DOM ProcessingInst	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-element.html" >
+	DOM Element	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-attribute.html" >
+	DOM Attribute	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-text.html" >
+	DOM Text	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-cdatasection.html" >
+	DOM CDATA	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-comment.html" >
+	DOM Comment	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-http.html" >
+	DOM XMLHttpRequest	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-errors.html" >
+	DOM ParseError Obj	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-errors-crossbrowser.html" >
+	DOM 解析器错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-summary.html" >
+	DOM 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/xml-dom-examples.html" >
+	DOM 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/dom/dom-validate.html" >
+	DOM 验证	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/dom/dom-mozilla-vs-ie.html" rel="prev"> XML DOM 浏览器差异</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/dom/dom-nodes-get.html" rel="next">XML DOM &#8211; 获取节点值</a> &raquo;</div>
+	</div>
+
+	<h1>XML DOM - <span class="color_h1">导航节点</span>
+</h1>
+<hr />
+<p class="intro">可通过使用节点间的关系对节点进行导航。</p>
+<hr />
+<h2>导航 DOM 节点</h2>
+<p>通过节点间的关系访问节点树中的节点，通常称为导航节点（"navigating nodes"）。</p>
+<p>在 XML DOM 中，节点的关系被定义为节点的属性：</p>
+<ul>
+<li>parentNode</li>
+	<li>childNodes</li>
+	<li>firstChild</li>
+	<li>lastChild</li>
+	<li>nextSibling</li>
+	<li>previousSibling</li>
+</ul>
+<p>下面的图像展示了 <a target="_blank" href="/try/demo_source/books.xml">books.xml</a> 中节点树的一个部分，并说明了节点之间的关系：</p>
+<p><img src="/wp-content/uploads/2013/09/navigate.gif" alt="Node tree" width="335" height="354"></p>
+<hr />
+<h2>DOM - 父节点</h2>
+<p>所有的节点都仅有一个父节点。下面的代码导航到 &lt;book&gt; 的父节点：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+xmlDoc=loadXMLDoc("books.xml");<br /><br />
+x=xmlDoc.getElementsByTagName("book")[0];<br />
+document.write(x.parentNode.nodeName);
+</div>
+<br /><a target="_blank" href="/try/try.php?filename=try_dom_nav_parentnode" class="tryitbtn">尝试一下 »</a>
+</div>
+<p>实例解释：</p>
+<ol>
+<li>使用 <a href="dom-loadxmldoc.html">loadXMLDoc()</a> 把 "<a target="_blank" href="/try/demo_source/books.xml">books.xml</a>" 载入 xmlDoc 中</li>
+	<li>获取第一个 &lt;book&gt; 元素</li>
+	<li>输出 "x" 的父节点的节点名称</li>
+</ol>
+<hr />
+<h2>避免空的文本节点</h2>
+<p>Firefox 以及其他一些浏览器，把空的空白或换行当作文本节点，而 Internet Explorer 不会这么做。</p>
+<p>这会在使用以下属性：firstChild、lastChild、nextSibling、previousSibling 时产生一个问题。</p>
+<p>为了避免导航到空的文本节点（元素节点之间的空格和换行符），我们使用一个函数来检查节点类型：</p>
+
+<div class="code notranslate"><div>
+
+function get_nextSibling(n)<br />
+{<br />
+y=n.nextSibling;<br />
+while (y.nodeType!=1)<br />
+   
+  {<br />
+   
+  y=y.nextSibling;<br />
+   
+  }<br />
+return y;<br />
+}
+</div></div>
+<p>上面的函数允许您使用 get_nextSibling（<i>node</i>）来代替 <i>node</i>.nextSibling 属性。</p>
+<p>代码解释：</p>
+<p>元素节点的类型是 1。如果同级节点不是元素节点，就移动到下一个节点，直到找到元素节点为止。通过这个办法，在 Internet Explorer 和 Firefox 中，都可以得到相同的结果。</p>
+<hr />
+<h2>获取第一个子元素</h2>
+<p>下面的代码显示第一个 &lt;book&gt; 的第一个元素：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;script src="loadxmldoc.js"&gt;<br />
+&lt;/script&gt;<br />
+&lt;script&gt;<br />
+//check if the first node is an element node<br />
+function get_firstChild(n)<br />
+{<br />
+y=n.firstChild;<br />
+while (y.nodeType!=1)<br />
+  {<br />
+  y=y.nextSibling;<br />
+  }<br />
+return y;<br />
+}<br />
+&lt;/script&gt;<br />
+&lt;/head&gt;<br /><br />
+&lt;body&gt;<br />
+&lt;script&gt;<br />
+xmlDoc=loadXMLDoc("books.xml");<br /><br />
+x=get_firstChild(xmlDoc.getElementsByTagName("book")[0]);<br />
+document.write(x.nodeName);<br />
+&lt;/script&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+</div>
+<p>输出：</p>
+<div class="example_code notranslate">
+title
+</div>
+<br /><a target="_blank" href="/try/try.php?filename=try_dom_nav_firstchild" class="tryitbtn">尝试一下 »</a>
+</div>
+<p>实例解释：</p>
+<ol>
+<li>使用 <a href="dom-loadxmldoc.html">loadXMLDoc()</a> 把 "<a target="_blank" href="/try/demo_source/books.xml">books.xml</a>" 载入 xmlDoc 中</li>
+	<li>在第一个 &lt;book&gt; 元素上使用 get_firstChild 函数，来获取第一个子节点（属于元素节点）</li>
+	<li>输出第一个子节点（属于元素节点）的节点名称</li>
+</ol>
+<hr />
+<div class="tryit_ex">
+<img src="/images/tryitimg.gif" width="40" height="46px" alt="实例s"><h2>更多实例</h2>
+</div>
+<p><a target="_blank" href="/try/try.php?filename=try_dom_nav_lastchild">lastChild()</a><br />
+本例使用 lastChild() 方法和一个自定义函数来获取节点的最后一个子节点</p>
+<p><a target="_blank" href="/try/try.php?filename=try_dom_nav_nextsibling">nextSibling()</a><br />
+本例使用 nextSibling() 方法和一个自定义函数来获取节点的下一个同级节点</p>
+<p><a target="_blank" href="/try/try.php?filename=try_dom_nav_prevsibling">previousSibling()</a><br />
+本例使用 previousSibling() 方法和一个自定义函数来获取节点的上一个同级节点</p>
+<br />	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/dom/dom-mozilla-vs-ie.html" rel="prev"> XML DOM 浏览器差异</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/dom/dom-nodes-get.html" rel="next">XML DOM &#8211; 获取节点值</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.345 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 03:25:33 -->
+
+<!-- super cache -->

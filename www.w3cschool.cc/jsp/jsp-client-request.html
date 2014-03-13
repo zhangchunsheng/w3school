@@ -1,0 +1,700 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>JSP 客户端请求 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='JSP 隐含对象' href='http://www.w3cschool.cc/jsp/jsp-implicit-objects.html' />
+<link rel='next' title='JSP服务器响应' href='http://www.w3cschool.cc/jsp/jsp-server-response.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jsp/jsp-client-request.html' />
+<meta name="keywords" content="JSP 客户端请求,JSP 教程">
+<meta name="description" content="JSP 客户端请求  当浏览器请求一个网页时，它会向网络服务器发送一系列不能被直接读取的信息，因为这些信息是作为HTTP信息头的一部分来传送的。您可以查阅HTTP协议来获得更多的信息。   下表列出了浏览器端信息头的一些重要内容，在以后的网络编程中将会经常见到这些信息：  	 		 			 				信息 			 				描述 		 		 			 				Accept 			 				指定浏览器或其他客户端可以处理的MIME类型。它的值通..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JSP 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-tutorial.html" >
+	JSP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-intro.html" >
+	JSP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-setup.html" >
+	JSP 开发环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-architecture.html" >
+	JSP 结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-life-cycle.html" >
+	JSP 生命周期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-syntax.html" >
+	JSP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-directives.html" >
+	JSP 指令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-actions.html" >
+	JSP动作元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-implicit-objects.html" >
+	JSP 隐含对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-client-request.html" >
+	JSP 客户端请求	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-server-response.html" >
+	JSP服务器响应	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-http-status-codes.html" >
+	JSP HTTP状态码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-form-processing.html" >
+	JSP 表单处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-writing-filters.html" >
+	JSP 过滤器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-cookies.html" >
+	JSP Cookies处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-session.html" >
+	JSP Session	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-file-uploading.html" >
+	JSP 文件上传	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-handling-date.html" >
+	JSP 日期处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-page-redirect.html" >
+	JSP 页面重定向	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-hits-counter.html" >
+	JSP 点击量统计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-auto-refresh.html" >
+	JSP 自动刷新	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-sending-email.html" >
+	JSP 发送邮件	</a>
+	<br><h2 class="left"><span class="left_h2">JSP 高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-jstl.html" >
+	JSP 标准标签库（JSTL）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-database-access.html" >
+	JSP 连接数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-xml-data.html" >
+	JSP XML数据处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-javabean.html" >
+	JSP JavaBean	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-custom-tags.html" >
+	JSP自定义标签	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-expression-language.html" >
+	JSP 表达式语言	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-exception-handling.html" >
+	JSP 异常处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-debugging.html" >
+	JSP 调试	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-internationalization.html" >
+	JSP 国际化	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsp/jsp-implicit-objects.html" rel="prev"> JSP 隐含对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsp/jsp-server-response.html" rel="next">JSP服务器响应</a> &raquo;</div>
+	</div>
+
+	<h1>JSP 客户端请求</h1>
+ <p>当浏览器请求一个网页时，它会向网络服务器发送一系列不能被直接读取的信息，因为这些信息是作为HTTP信息头的一部分来传送的。您可以查阅HTTP协议来获得更多的信息。</p>
+ <p>
+下表列出了浏览器端信息头的一些重要内容，在以后的网络编程中将会经常见到这些信息：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				<strong>信息</strong></th>
+			<th>
+				<strong>描述</strong></th>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				Accept</td>
+			<td style="width:403px;">
+				指定浏览器或其他客户端可以处理的MIME类型。它的值通常为&nbsp;<strong>image/png</strong>&nbsp;或&nbsp;<strong>image/jpeg</strong></td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				Accept-Charset</td>
+			<td style="width:403px;">
+				指定浏览器要使用的字符集。比如 ISO-8859-1</td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				Accept-Encoding</td>
+			<td style="width:403px;">
+				指定编码类型。它的值通常为&nbsp;<strong>gzip</strong>&nbsp;或<strong>compress</strong></td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				Accept-Language</td>
+			<td style="width:403px;">
+				指定客户端首选语言，servlet会优先返回以当前语言构成的结果集，如果servlet支持这种语言的话。比如 en，en-us，ru等等</td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				Authorization</td>
+			<td style="width:403px;">
+				在访问受密码保护的网页时识别不同的用户</td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				Connection</td>
+			<td style="width:403px;">
+				表明客户端是否可以处理HTTP持久连接。持久连接允许客户端或浏览器在一个请求中获取多个文件。<strong>Keep-Alive</strong>&nbsp;表示启用持久连接</td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				Content-Length</td>
+			<td style="width:403px;">
+				仅适用于POST请求，表示 POST 数据的字节数</td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				Cookie</td>
+			<td style="width:403px;">
+				返回先前发送给浏览器的cookies至服务器</td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				Host</td>
+			<td style="width:403px;">
+				指出原始URL中的主机名和端口号</td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				If-Modified-Since</td>
+			<td style="width:403px;">
+				表明只有当网页在指定的日期被修改后客户端才需要这个网页。 服务器发送304码给客户端，表示没有更新的资源</td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				If-Unmodified-Since</td>
+			<td style="width:403px;">
+				与If-Modified-Since相反， 只有文档在指定日期后仍未被修改过，操作才会成功</td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				Referer</td>
+			<td style="width:403px;">
+				标志着所引用页面的URL。比如，如果你在页面1，然后点了个链接至页面2，那么页面1的URL就会包含在浏览器请求页面2的信息头中</td>
+		</tr>
+		<tr>
+			<td style="width:157px;">
+				User-Agent</td>
+			<td style="width:403px;">
+				用来区分不同浏览器或客户端发送的请求，并对不同类型的浏览器返回不同的内容</td>
+		</tr>
+	</tbody>
+</table><hr />
+<h2>
+	HttpServletRequest类</h2> <p>
+request对象是javax.servlet.http.HttpServletRequest类的实例。每当客户端请求一个页面时，JSP引擎就会产生一个新的对象来代表这个请求。</p>
+ <p>
+request对象提供了一系列方法来获取HTTP信息头，包括表单数据，cookies，HTTP方法等等。</p>
+ <p>
+接下来将会介绍一些在JSP编程中常用的获取HTTP信息头的方法。详细内容请见下表：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				<strong>序号</strong></th>
+			<th>
+				<strong>方法</strong><strong>&amp; </strong><strong>描述</strong></th>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				1</td>
+			<td style="width:517px;">
+				<strong>Cookie[] getCookies()</strong></p>
+				返回客户端所有的Cookie的数组</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				2</td>
+			<td style="width:517px;">
+				<strong>Enumeration getAttributeNames()</strong></p>
+				返回request对象的所有属性名称的集合</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				3</td>
+			<td style="width:517px;">
+				<strong>Enumeration getHeaderNames()</strong></p>
+				返回所有HTTP头的名称集合</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				4</td>
+			<td style="width:517px;">
+				<strong>Enumeration getParameterNames()</strong></p>
+				返回请求中所有参数的集合</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				5</td>
+			<td style="width:517px;">
+				<strong>HttpSession getSession()</strong></p>
+				返回request对应的session对象，如果没有，则创建一个</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				6</td>
+			<td style="width:517px;">
+				<strong>HttpSession getSession(boolean create)</strong></p>
+				返回request对应的session对象，如果没有并且参数create为true，则返回一个新的session对象</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				7</td>
+			<td style="width:517px;">
+				<strong>Locale getLocale()</strong></p>
+				返回当前页的Locale对象，可以在response中设置</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				8</td>
+			<td style="width:517px;">
+				<strong>Object getAttribute(String name)</strong></p>
+				返回名称为name的属性值，如果不存在则返回null。</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				9</td>
+			<td style="width:517px;">
+				<strong>ServletInputStream getInputStream()</strong></p>
+				返回请求的输入流</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				10</td>
+			<td style="width:517px;">
+				<strong>String getAuthType()</strong></p>
+				返回认证方案的名称，用来保护servlet，比如 "BASIC" 或者 "SSL" 或 null 如果 JSP没设置保护措施</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				11</td>
+			<td style="width:517px;">
+				<strong>String getCharacterEncoding()</strong></p>
+				返回request的字符编码集名称</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				12</td>
+			<td style="width:517px;">
+				<strong>String getContentType()</strong></p>
+				返回request主体的MIME类型，若未知则返回null</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				13</td>
+			<td style="width:517px;">
+				<strong>String getContextPath()</strong></p>
+				返回request URI中指明的上下文路径</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				14</td>
+			<td style="width:517px;">
+				<strong>String getHeader(String name)</strong></p>
+				返回name指定的信息头</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				15</td>
+			<td style="width:517px;">
+				<strong>String getMethod()</strong></p>
+				返回此request中的HTTP方法，比如 GET,，POST，或PUT</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				16</td>
+			<td style="width:517px;">
+				<strong>String getParameter(String name)</strong></p>
+				返回此request中name指定的参数，若不存在则返回null</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				17</td>
+			<td style="width:517px;">
+				<strong>String getPathInfo()</strong></p>
+				返回任何额外的与此request URL相关的路径</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				18</td>
+			<td style="width:517px;">
+				<strong>String getProtocol()</strong></p>
+				返回此request所使用的协议名和版本</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				19</td>
+			<td style="width:517px;">
+				<strong>String getQueryString()</strong></p>
+				返回此 request URL包含的查询字符串</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				20</td>
+			<td style="width:517px;">
+				<strong>String getRemoteAddr()</strong></p>
+				返回客户端的IP地址</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				21</td>
+			<td style="width:517px;">
+				<strong>String getRemoteHost()</strong></p>
+				返回客户端的完整名称</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				22</td>
+			<td style="width:517px;">
+				<strong>String getRemoteUser()</strong></p>
+				返回客户端通过登录认证的用户，若用户未认证则返回null</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				23</td>
+			<td style="width:517px;">
+				<strong>String getRequestURI()</strong></p>
+				返回request的URI</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				24</td>
+			<td style="width:517px;">
+				<strong>String getRequestedSessionId()</strong></p>
+				返回request指定的session ID</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				25</td>
+			<td style="width:517px;">
+				<strong>String getServletPath()</strong></p>
+				返回所请求的servlet路径</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				26</td>
+			<td style="width:517px;">
+				<strong>String[] getParameterValues(String name)</strong></p>
+				返回指定名称的参数的所有值，若不存在则返回null</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				27</td>
+			<td style="width:517px;">
+				<strong>boolean isSecure()</strong></p>
+				返回request是否使用了加密通道，比如HTTPS</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				28</td>
+			<td style="width:517px;">
+				<strong>int getContentLength()</strong></p>
+				返回request主体所包含的字节数，若未知的返回-1</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				29</td>
+			<td style="width:517px;">
+				<strong>int getIntHeader(String name)</strong></p>
+				返回指定名称的request信息头的值</td>
+		</tr>
+		<tr>
+			<td style="width:43px;">
+				30</td>
+			<td style="width:517px;">
+				<strong>int getServerPort()</strong></p>
+				返回服务器端口号</td>
+		</tr>
+	</tbody>
+</table><hr />
+<h2>
+	HTTP信息头示例</h2> <p>
+在这个例子中，我们会使用HttpServletRequest类的getHeaderNames()方法来读取HTTP信息头。这个方法以枚举的形式返回当前HTTP请求的头信息。</p>
+ <p>
+获取Enumeration对象后，用标准的方式来遍历Enumeration对象，用hasMoreElements()方法来确定什么时候停止，用nextElement()方法来获得每个参数的名字。</p>
+
+
+<pre>
+&lt;%@ page import="java.io.*,java.util.*" %&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h2&gt;HTTP Header Request Example&lt;/h2&gt;
+&lt;table width="100%" border="1" align="center"&gt;
+&lt;tr bgcolor="#949494"&gt;
+&lt;th&gt;Header Name&lt;/th&gt;&lt;th&gt;Header Value(s)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;%
+   Enumeration headerNames = request.getHeaderNames();
+   while(headerNames.hasMoreElements()) {
+      String paramName = (String)headerNames.nextElement();
+      out.print("&lt;tr&gt;&lt;td&gt;" + paramName + "&lt;/td&gt;\n");
+      String paramValue = request.getHeader(paramName);
+      out.println("&lt;td&gt; " + paramValue + "&lt;/td&gt;&lt;/tr&gt;\n");
+   }
+%&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><p>
+访问main.jsp，将会得到以下结果：</p>
+<h1>
+HTTP Header Request Example
+</h1>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				Header Name</th>
+			<th>
+				Header Value(s)</th>
+		</tr>
+		<tr>
+			<td>
+				accept</td>
+			<td>
+				*/*</td>
+		</tr>
+		<tr>
+			<td>
+				accept-language</td>
+			<td>
+				en-us</td>
+		</tr>
+		<tr>
+			<td>
+				user-agent</td>
+			<td>
+				Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; InfoPath.2; MS-RTC LM 8)</td>
+		</tr>
+		<tr>
+			<td>
+				accept-encoding</td>
+			<td>
+				gzip, deflate</td>
+		</tr>
+		<tr>
+			<td>
+				host</td>
+			<td>
+				localhost:8080</td>
+		</tr>
+		<tr>
+			<td>
+				connection</td>
+			<td>
+				Keep-Alive</td>
+		</tr>
+		<tr>
+			<td>
+				cache-control</td>
+			<td>
+				no-cache</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+您可以在上面代码中尝试HttpServletRequest类的其它方法。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsp/jsp-implicit-objects.html" rel="prev"> JSP 隐含对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsp/jsp-server-response.html" rel="next">JSP服务器响应</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.210 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 21:59:40 -->
+
+<!-- super cache -->

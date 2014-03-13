@@ -1,0 +1,628 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>NoSQL 简介 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='地图 API setMapTypeId() 方法' href='http://www.w3cschool.cc/googleapi/ref-setmaptypeid.html' />
+<link rel='next' title='Bootstrap 教程' href='http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/mongodb/nosql.html' />
+<meta name="keywords" content="NoSQL 简介,MongoDB 教程">
+<meta name="description" content="NoSQL 简介   NoSQL(NoSQL = Not Only SQL )，意即“不仅仅是SQL”。 在现代的计算系统上每天网络上都会产生庞大的数据量。这些数据有很大一部分是由关系数据库管理系统（RDMBSs）来处理。 1970年 E.F.Codd’s提出的关系模型的论文 'A relational model of data for large shared data banks”，这使得数据建模和应用程序编程更加简单。通过应用实..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>MongoDB 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-tutorial.html" >
+	MongoDB 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/nosql.html" >
+	NoSQL 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-intro.html" >
+	MongoDB 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-window-install.html" >
+	window平台安装MongoDB	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-linux-install.html" >
+	Linux平台安装MongoDB	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-databases-documents-collections.html" >
+	MongoDB - 数据库，对象，集合	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-connections.html" >
+	MongoDB 连接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-install-php-driver.html" >
+	PHP安装MongoDB扩展	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-insert.html" >
+	MongoDB 数据插入	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-update.html" >
+	MongoDB update()函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-remove.html" >
+	MongoDB remove()函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-query.html" >
+	MongoDB 查询	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-operators.html" >
+	MongoDB条件操作符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-operators-type.html" >
+	MongoDB条件操作符 - $type	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-limit-skip.html" >
+	MongoDB Limit与Skip方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-sort.html" >
+	MongoDB 排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-indexing.html" >
+	MongoDB 索引	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-aggregate.html" >
+	MongoDB 聚合(aggregate)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-replication.html" >
+	MongoDB 复制(副本集)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-sharding.html" >
+	MongoDB 分片	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-mongodump-mongorerstore.html" >
+	MongoDB 备份与恢复	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-mongostat-mongotop.html" >
+	MongoDB 监控	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-java.html" >
+	MongoDB Java	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-php.html" >
+	MongoDB PHP	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/mongodb/mongodb-tutorial.html" rel="prev"> MongoDB 教程</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/mongodb/mongodb-intro.html" rel="next">MongoDB 简介</a> &raquo;</div>
+	</div>
+
+	<h1>NoSQL <span class="color_h1">简介</span></h1>
+<div class="tutintro">
+
+<p>NoSQL(NoSQL = Not Only SQL )，意即"不仅仅是SQL"。</p>
+<p>在现代的计算系统上每天网络上都会产生庞大的数据量。</p><p>这些数据有很大一部分是由关系数据库管理系统（RDMBSs）来处理。 1970年 E.F.Codd's提出的关系模型的论文 "A relational model of data for large shared data banks"，这使得数据建模和应用程序编程更加简单。</p><p>通过应用实践证明，关系模型是非常适合于客户服务器编程，远远超出预期的利益，今天它是结构化数据存储在网络和商务应用的主导技术。
+</p><p>NoSQL 是一项全新的数据库革命性运动，早期就有人提出，发展至2009年趋势越发高涨。NoSQL的拥护者们提倡运用非关系型的数据存储，相对于铺天盖地的关系型数据库运用，这一概念无疑是一种全新的思维的注入。</p>
+</div>
+
+<h2 class="tutheader">关系型数据库遵循ACID规则</h2>
+<p>事务在英文中是transaction，和现实世界中的交易很类似，它有如下四个特性：<p>
+<p><strong>1、A (Atomicity) 原子性</strong><br />
+原子性很容易理解，也就是说事务里的所有操作要么全部做完，要么都不做，事务成功的条件是事务里的所有操作都成功，只要有一个操作失败，整个事务就失败，需要回滚。<br />
+<p>比如银行转账，从A账户转100元至B账户，分为两个步骤：1）从A账户取100元；2）存入100元至B账户。这两步要么一起完成，要么一起不完成，如果只完成第一步，第二步失败，钱会莫名其妙少了100元。<p>
+
+<p><strong>2、C (Consistency) 一致性</strong><br />
+一致性也比较容易理解，也就是说数据库要一直处于一致的状态，事务的运行不会改变数据库原本的一致性约束。<br />
+<p>例如现有完整性约束a+b=10，如果一个事务改变了a，那么必须得改变b，使得事务结束后依然满足a+b=10，否则事务失败。</p>
+
+<p><strong>3、I (Isolation) 独立性</strong><br />
+所谓的独立性是指并发的事务之间不会互相影响，如果一个事务要访问的数据正在被另外一个事务修改，只要另外一个事务未提交，它所访问的数据就不受未提交事务的影响。<br />
+比如现有有个交易是从A账户转100元至B账户，在这个交易还未完成的情况下，如果此时B查询自己的账户，是看不到新增加的100元的。</p>
+
+
+<p><strong>4、D (Durability) 持久性</strong><br />
+持久性是指一旦事务提交后，它所做的修改将会永久的保存在数据库上，即使出现宕机也不会丢失。</p>
+<br />
+<h2 class="tutheader">分布式系统</h2>
+<p>分布式系统（distributed system）由多台计算机和通信的软件组件通过计算机网络连接（本地网络或广域网）组成。</p><p>分布式系统是建立在网络之上的软件系统。正是因为软件的特性，所以分布式系统具有高度的内聚性和透明性。</p><p>因此，网络和分布式系统之间的区别更多的在于高层软件（特别是操作系统），而不是硬件。</p>
+
+<p>分布式系统可以应用在在不同的平台上如：Pc、工作站、局域网和广域网上等。</p>
+<br />
+<h2  class="tutheader">分布式计算的优点</h2>
+<p><strong>可靠性（容错） ：</strong><br />
+分布式计算系统中的一个重要的优点是可靠性。一台服务器的系统崩溃并不影响到其余的服务器。</p>
+
+<p><strong>可扩展性：</strong><br />
+在分布式计算系统可以根据需要增加更多的机器。</p>
+
+
+<p><strong>资源共享：</strong><br />
+共享数据是必不可少的应用，如银行，预订系统。</p>
+
+
+<p><strong>灵活性：</strong><br />
+由于该系统是非常灵活的，它很容易安装，实施和调试新的服务。</p>
+
+<p><strong>更快的速度：</strong><br />
+分布式计算系统可以有多台计算机的计算能力，使得它比其他系统有更快的处理速度。</p>
+
+<p><strong>开放系统：</strong><br />
+由于它是开放的系统，本地或者远程都可以访问到该服务。</p>
+
+<p><strong>更高的性能：</strong><br />
+相较于集中式计算机网络集群可以提供更高的性能（及更好的性价比）。</p>
+<br />
+<h2  class="tutheader">分布式计算的缺点</h2>
+<p><strong>故障排除：
+ ：</strong><br />
+故障排除和诊断问题。</p>
+
+<p><strong>软件：
+</strong><br />
+更少的软件支持是分布式计算系统的主要缺点。</p>
+
+
+<p><strong>网络：</strong><br />网络基础设施的问题，包括：传输问题，高负载，信息丢失等。</p>
+
+
+<p><strong>安全性：
+</strong><br />
+开发系统的特性让分布式计算系统存在着数据的安全性和共享的风险等问题。</p>
+<br/>
+<h2  class="tutheader">什么是NoSQL?</h2>
+<p>NoSQL，指的是非关系型的数据库。NoSQL有时也称作Not Only SQL的缩写，是对不同于传统的关系型数据库的数据库管理系统的统称。</p>
+<p>NoSQL用于超大规模数据的存储。（例如谷歌或Facebook每天为他们的用户收集万亿比特的数据）。这些类型的数据存储不需要固定的模式，无需多余操作就可以横向扩展。</p>
+<h2 class="tutheader">为什么使用NoSQL ?</h2>
+<p>今天我们可以通过第三方平台（如：Google,Facebook等）可以很容易的访问和抓取数据。用户的个人信息，社交网络，地理位置，用户生成的数据和用户操作日志已经成倍的增加。我们如果要对这些用户数据进行挖掘，那SQL数据库已经不适合这些应用了, NoSQL数据库的发展也却能很好的处理这些大的数据。</p>
+<img src="http://www.w3cschool.cc/wp-content/uploads/2013/10/web-data-image.png" alt="web-data-image" width="551" height="371" class="alignnone size-full wp-image-3519" /><br />
+<h2 class="tutheader">实例</h2>
+<p>社会化关系网:</p>
+<div class="code"><div>
+
+
+Each record: UserID1, UserID2 <br />
+Separate records: UserID, first_name,last_name, age, gender,... <br />
+Task: Find all friends of friends of friends of ... friends of a given user.
+
+
+</div></div>
+
+<p>Wikipedia 页面 :</p>
+<div class="code"><div>
+Large collection of documents <br />
+Combination of structured and unstructured data <br />
+Task: Retrieve all pages regarding athletics of Summer Olympic before 1950.</div></div>
+<br />
+<h2 class="tutheader">RDBMS vs NoSQL</h2>
+ 
+<p><strong>RDBMS </strong><br />
+         	   -
+         	  高度组织化结构化数据 <br />
+         	   -  结构化查询语言（SQL） (SQL) <br />
+         	   -
+         	   数据和关系都存储在单独的表中。 <br />
+         	   - 数据操纵语言，数据定义语言
+         	   <br />
+         	   - 严格的一致性<br />
+         	 - 基础事务</p>
+         	 <p><strong>NoSQL </strong><br />
+         	   - 代表着不仅仅是SQL<br />
+         	   - 没有声明性查询语言<br />
+         	   - 没有预定义的模式<br />
+         	   -键 - 值对存储，列存储，文档存储，图形数据库<br />
+         	   - 最终一致性，而非ACID属性<br />
+         	   - 非结构化和不可预知的数据<br />
+         	   - CAP定理 <br />
+         	   - 高性能，高可用性和可伸缩性</p>
+<img src="http://www.w3cschool.cc/wp-content/uploads/2013/10/bigdata.png" alt="bigdata" width="600" height="326" class="alignnone size-full wp-image-3520" />
+<br />
+<h2 class="tutheader">NoSQL 简史</h2>
+<p>NoSQL一词最早出现于1998年，是Carlo Strozzi开发的一个轻量、开源、不提供SQL功能的关系数据库。</p>
+<p>2009年，Last.fm的Johan Oskarsson发起了一次关于分布式开源数据库的讨论[2]，来自Rackspace的Eric Evans再次提出了NoSQL的概念，这时的NoSQL主要指非关系型、分布式、不提供ACID的数据库设计模式。</p>
+<p>2009年在亚特兰大举行的"no:sql(east)"讨论会是一个里程碑，其口号是"select fun, profit from real_world where relational=false;"。因此，对NoSQL最普遍的解释是"非关联型的"，强调Key-Value Stores和文档数据库的优点，而不是单纯的反对RDBMS。</p>
+<br />
+<h2 class="tutheader"> CAP定理（CAP theorem）</h2>
+<p>在计算机科学中, CAP定理（CAP theorem）, 又被称作 布鲁尔定理（Brewer's theorem）, 它指出对于一个分布式计算系统来说，不可能同时满足以下三点:</p>
+<ul>
+<li><strong>一致性(Consistency)</strong> (所有节点在同一时间具有相同的数据)</li>
+<li><strong>可用性(Availability)</strong> (保证每个请求不管成功或者失败都有响应)</li>
+<li><strong>分隔容忍(Partition tolerance)</strong> (系统中任意信息的丢失或失败不会影响系统的继续运作)</li>
+</ul>
+<p>CAP理论的核心是：一个分布式系统不可能同时很好的满足一致性，可用性和分区容错性这三个需求，最多只能同时较好的满足两个。</p>
+<p>因此，根据 CAP 原理将 NoSQL 数据库分成了满足 CA 原则、满足 CP 原则和满足 AP 原则三 大类：</p>
+<ul><li>CA - 单点集群，满足一致性，可用性的系统，通常在可扩展性上不太强大。</li>
+<li>CP - 满足一致性，分区容忍必的系统，通常性能不是特别高。</li>
+<li>AP - 满足可用性，分区容忍性的系统，通常可能对一致性要求低一些。</li> </ul>
+<img src="http://www.w3cschool.cc/wp-content/uploads/2013/10/cap-theoram-image.png" alt="cap-theoram-image" width="671" height="578" class="alignnone size-full wp-image-3521" />
+<br /><h2 class="tutheader">NoSQL的优点/缺点</h2>
+<p>优点:</p>
+<ul><li>
+- 高可扩展性</li>
+<li>- 分布式计算</li>
+<li>- 低成本</li>
+<li>- 架构的灵活性，半结构化数据</li>
+<li>- 没有复杂的关系
+</li></ul>
+<p>缺点:</p><ul>
+<li>- 没有标准化</li>
+<li>- 有限的查询功能（到目前为止）</li>
+<li>- 最终一致是不直观的程序</li></ul>
+<br /><h2 class="tutheader">BASE</h2>
+<p>BASE：Basically Available, Soft-state, Eventually Consistent。 由  Eric Brewer 定义。</p>
+<p>CAP理论的核心是：一个分布式系统不可能同时很好的满足一致性，可用性和分区容错性这三个需求，最多只能同时较好的满足两个。</p>
+<p>BASE是NoSQL数据库通常对可用性及一致性的弱要求原则:</p>
+<ul><li>Basically Availble --基本可用</li>
+<li>Soft-state --软状态/柔性事务。
+"Soft state" 可以理解为"无连接"的, 而 "Hard state" 是"面向连接"的</li>
+<li>Eventual Consistency --最终一致性
+最终一致性， 也是是 ACID 的最终目的。</li></ul><br />
+<h2 class="tutheader">ACID vs BASE</h2>
+<table class="reference">
+               <tbody><tr>
+                 <th>ACID</th>
+                 <th>BASE</th>
+               </tr>
+               <tr>
+                 <td>原子性(<strong>A</strong>tomicity)</td>
+                 <td>基本可用(<strong>B</strong>asically <strong>A</strong>vailable) </td>
+               </tr>
+               <tr>
+                 <td>一致性(<strong>C</strong>onsistency)</td>
+                 <td>软状态/柔性事务(<strong>S</strong>oft state) </td>
+               </tr>
+               <tr>
+                 <td>隔离性(<strong>I</strong>solation)</td>
+                 <td>
+最终一致性
+(<strong>E</strong>ventual consistency) </td>
+               </tr>
+               <tr>
+                 <td>持久性
+(<strong>D</strong>urable)</td>
+                 <td>&nbsp;</td>
+               </tr>
+             </tbody></table>
+<br />
+<h2 class="tutheader">NoSQL 数据库分类</h2>
+<table class="reference">
+	<tbody>
+		<tr>
+			<td>
+				
+					类型
+				
+			</td>
+			<td>
+			
+					部分代表
+				</p>
+			</td>
+			<td>
+				特点
+			</td>
+		</tr>
+		<tr>
+			<td>
+				列存储
+			</td>
+			<td>
+				<p>
+					<span style="font-size:14px;font-family:宋体;">Hbase</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+				<p>
+					<span style="font-size:14px;font-family:宋体;">Cassandra</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+				<p>
+					<span style="font-size:14px;font-family:宋体;">Hypertable</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="190" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">顾名思义，是按列存储数据的。最大的特点是方便存储结构化和半结构化数据，方便做数据压缩，对针对某一列或者某几列的查询有非常大的IO优势。</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="181" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">文档存储</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="183" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;"><a href="http://www.yiibai.com/mongodb" target="_blank">MongoDB</a></span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+				<p>
+					<span style="font-size:14px;font-family:宋体;">CouchDB</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="190" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">文档存储一般用类似json的格式存储，存储的内容是文档型的。这样也就有有机会对某些字段建立索引，实现关系数据库的某些功能。</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="181" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">key-value存储</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="183" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">Tokyo&nbsp;Cabinet&nbsp;/&nbsp;Tyrant</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+				<p>
+					<span style="font-size:14px;font-family:宋体;">Berkeley&nbsp;DB</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+				<p>
+					<span style="font-size:14px;font-family:宋体;">MemcacheDB</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+				<p>
+					<span style="font-size:14px;font-family:宋体;">Redis</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="190" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">可以通过key快速查询到其value。一般来说，存储不管value的格式，照单全收。（Redis包含了其他功能）</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="181" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">图存储</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="183" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">Neo4J</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+				<p>
+					<span style="font-size:14px;font-family:宋体;">FlockDB</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="190" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">图形关系的最佳存储。使用传统关系数据库来解决的话性能低下，而且设计使用不方便。</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="181" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">对象存储</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="183" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">db4o</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+				<p>
+					<span style="font-size:14px;font-family:宋体;">Versant</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="190" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">通过类似面向对象语言的语法操作数据库，通过对象的方式存取数据。</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="181" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">xml数据库</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="183" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">Berkeley&nbsp;DB&nbsp;XML</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+				<p>
+					<span style="font-size:14px;font-family:宋体;">BaseX</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+			<td width="190" valign="top" style="border:0.7500pt outset #000000;">
+				<p>
+					<span style="font-size:14px;font-family:宋体;">高效的存储XML数据，并支持XML的内部查询语法，比如XQuery,Xpath。</span><span style="font-size:12.0000pt;font-family:'宋体';"></span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table><br />
+<h2 class="tutheader">谁在使用</h2>
+现在已经有很多公司使用了NoSQ：
+<ul><li>Google</li>
+
+<li>Facebook</li>
+
+<li>Mozilla</li>
+
+<li>Adobe</li>
+
+<li>Foursquare</li>
+
+<li>LinkedIn</li>
+
+<li>Digg</li>
+
+<li>McGraw-Hill Education</li>
+
+<li>Vermont Public Radio</li>
+</ul>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/mongodb/mongodb-tutorial.html" rel="prev"> MongoDB 教程</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/mongodb/mongodb-intro.html" rel="next">MongoDB 简介</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.147 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:32:10 -->
+
+<!-- super cache -->

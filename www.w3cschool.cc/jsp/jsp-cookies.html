@@ -1,0 +1,596 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>JSP Cookies处理 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='JSP 过滤器' href='http://www.w3cschool.cc/jsp/jsp-writing-filters.html' />
+<link rel='next' title='JSP Session' href='http://www.w3cschool.cc/jsp/jsp-session.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jsp/jsp-cookies.html' />
+<meta name="keywords" content="JSP Cookies处理,JSP 教程">
+<meta name="description" content="JSP Cookies处理 Cookies是存储在客户机的文本文件，它们保存了大量轨迹信息。在servlet技术基础上，JSP显然能够提供对HTTP cookies的支持。  通常有三个步骤来识别回头客：  	 		服务器脚本发送一系列cookies至浏览器。比如名字，年龄，ID号码等等。 	 		浏览器在本地机中存储这些信息，以备不时之需。 	 		当下一次浏览器发送任何请求至服务器时，它会同时将这些cookies信息发送给服务器，然..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JSP 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-tutorial.html" >
+	JSP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-intro.html" >
+	JSP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-setup.html" >
+	JSP 开发环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-architecture.html" >
+	JSP 结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-life-cycle.html" >
+	JSP 生命周期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-syntax.html" >
+	JSP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-directives.html" >
+	JSP 指令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-actions.html" >
+	JSP动作元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-implicit-objects.html" >
+	JSP 隐含对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-client-request.html" >
+	JSP 客户端请求	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-server-response.html" >
+	JSP服务器响应	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-http-status-codes.html" >
+	JSP HTTP状态码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-form-processing.html" >
+	JSP 表单处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-writing-filters.html" >
+	JSP 过滤器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-cookies.html" >
+	JSP Cookies处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-session.html" >
+	JSP Session	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-file-uploading.html" >
+	JSP 文件上传	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-handling-date.html" >
+	JSP 日期处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-page-redirect.html" >
+	JSP 页面重定向	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-hits-counter.html" >
+	JSP 点击量统计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-auto-refresh.html" >
+	JSP 自动刷新	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-sending-email.html" >
+	JSP 发送邮件	</a>
+	<br><h2 class="left"><span class="left_h2">JSP 高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-jstl.html" >
+	JSP 标准标签库（JSTL）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-database-access.html" >
+	JSP 连接数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-xml-data.html" >
+	JSP XML数据处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-javabean.html" >
+	JSP JavaBean	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-custom-tags.html" >
+	JSP自定义标签	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-expression-language.html" >
+	JSP 表达式语言	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-exception-handling.html" >
+	JSP 异常处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-debugging.html" >
+	JSP 调试	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-internationalization.html" >
+	JSP 国际化	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsp/jsp-writing-filters.html" rel="prev"> JSP 过滤器</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsp/jsp-session.html" rel="next">JSP Session</a> &raquo;</div>
+	</div>
+
+	<h1>JSP Cookies处理</h1>
+<p>Cookies是存储在客户机的文本文件，它们保存了大量轨迹信息。在servlet技术基础上，JSP显然能够提供对HTTP cookies的支持。</p>
+<p>
+通常有三个步骤来识别回头客：</p>
+<ul>
+	<li>
+		服务器脚本发送一系列cookies至浏览器。比如名字，年龄，ID号码等等。</li>
+	<li>
+		浏览器在本地机中存储这些信息，以备不时之需。</li>
+	<li>
+		当下一次浏览器发送任何请求至服务器时，它会同时将这些cookies信息发送给服务器，然后服务器使用这些信息来识别用户或者干些其它事情。</li>
+</ul><p>
+本章节将会传授您如何去设置或重设cookie的方法，还有如何访问它们及如何删除它们。</p><hr />
+<h2>
+	Cookie剖析</h2><p>
+Cookies通常在HTTP信息头中设置（虽然JavaScript能够直接在浏览器中设置cookies）。在JSP中，设置一个cookie需要发送如下的信息头给服务器：
+<pre>
+HTTP/1.1 200 OK
+Date: Fri, 04 Feb 2000 21:03:38 GMT
+Server: Apache/1.3.9 (UNIX) PHP/4.0b3
+Set-Cookie: name=xyz; expires=Friday, 04-Feb-07 22:03:38 GMT; 
+                 path=/; domain=tutorialspoint.com
+Connection: close
+Content-Type: text/html
+</pre>
+<p>
+正如您所见，Set-Cookie信息头包含一个键值对，一个GMT（格林尼治标准）时间，一个路径，一个域名。键值对会被编码为URL。有效期域是个指令，告诉浏览器在什么时候之后就可以清除这个cookie。</p>
+<p>
+如果浏览器被配置成可存储cookies，那么它将会保存这些信息直到过期。如果用户访问的任何页面匹配了cookie中的路径和域名，那么浏览器将会重新将这个cookie发回给服务器。浏览器端的信息头长得就像下面这样：
+<pre>
+GET / HTTP/1.0
+Connection: Keep-Alive
+User-Agent: Mozilla/4.6 (X11; I; Linux 2.2.6-15apmac ppc)
+Host: zink.demon.co.uk:1126
+Accept: image/gif, */*
+Accept-Encoding: gzip
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+Cookie: name=xyz
+</pre>
+<p>
+JSP脚本通过request对象中的getCookies()方法来访问这些cookies，这个方法会返回一个Cookie对象的数组。</p><hr />
+<h2>
+	Servlet Cookies 方法</h2><p>
+下表列出了Cookie对象中常用的方法：</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				<strong>序号</strong></th>
+			<th>
+				<strong>方法</strong><strong> &amp; </strong><strong>描述</strong></th>
+		</tr>
+		<tr>
+			<td>
+				1</td>
+			<td>
+				<strong>public void setDomain(String pattern)</strong></p>
+				设置cookie的域名，比如w3cschool.cc</td>
+		</tr>
+		<tr>
+			<td>
+				2</td>
+			<td>
+				<strong>public String getDomain()</strong></p>
+				获取cookie的域名，比如w3cschool.cc</td>
+		</tr>
+		<tr>
+			<td>
+				3</td>
+			<td>
+				<strong>public void setMaxAge(int expiry)</strong></p>
+				设置cookie有效期，以秒为单位，默认有效期为当前session的存活时间</td>
+		</tr>
+		<tr>
+			<td>
+				4</td>
+			<td>
+				<strong>public int getMaxAge()</strong></p>
+				获取cookie有效期，以秒为单位，默认为-1 ，表明cookie会活到浏览器关闭为止</td>
+		</tr>
+		<tr>
+			<td>
+				5</td>
+			<td>
+				<strong>public String getName()</strong></p>
+				返回 cookie的名称，名称创建后将不能被修改</td>
+		</tr>
+		<tr>
+			<td>
+				6</td>
+			<td>
+				<strong>public void setValue(String newValue)</strong></p>
+				设置 cookie的值</td>
+		</tr>
+		<tr>
+			<td>
+				7</td>
+			<td>
+				<strong>public String getValue()</strong></p>
+				获取cookie的值</td>
+		</tr>
+		<tr>
+			<td>
+				8</td>
+			<td>
+				<strong>public void setPath(String uri)</strong></p>
+				设置cookie 的路径，默认为当前页面目录下的所有URL，还有此目录下的所有子目录</td>
+		</tr>
+		<tr>
+			<td>
+				9</td>
+			<td>
+				<strong>public String getPath()</strong></p>
+				获取cookie 的路径</td>
+		</tr>
+		<tr>
+			<td>
+				10</td>
+			<td>
+				<strong>public void setSecure(boolean flag)</strong></p>
+				指明cookie是否要加密传输</td>
+		</tr>
+		<tr>
+			<td>
+				11</td>
+			<td>
+				<strong>public void setComment(String purpose)</strong></p>
+				设置注释描述 cookie的目的。当浏览器将cookie展现给用户时，注释将会变得非常有用</td>
+		</tr>
+		<tr>
+			<td>
+				12</td>
+			<td>
+				<strong>public String getComment()</strong></p>
+				返回描述cookie目的的注释，若没有则返回null</td>
+		</tr>
+	</tbody>
+</table><hr />
+<h2>
+	使用JSP设置Cookies</h2><p>
+使用JSP设置cookie包含三个步骤：</p>
+<p><strong>
+(1)创建一个Cookie对象： </strong>调用Cookie的构造函数，使用一个cookie名称和值做参数，它们都是字符串。
+</p>
+<pre>
+Cookie cookie = new Cookie("key","value");
+</pre><p>
+请务必牢记，名称和值中都不能包含空格或者如下的字符：</p>
+<pre>
+[ ] ( ) = , " / ? @ : ;
+</pre>
+<p><strong>
+(2) 设置有效期：</strong>调用setMaxAge()函数表明cookie在多长时间（以秒为单位）内有效。下面的操作将有效期设为了24小时。</p>
+<pre>
+cookie.setMaxAge(60*60*24); 
+</pre>
+<p><strong>
+(3) 将cookie发送至HTTP响应头中：</strong>调用response.addCookie()函数来向HTTP响应头中添加cookies。</p>
+<pre>
+response.addCookie(cookie);
+</pre><hr />
+<h3>实例演示</h3>
+<pre>
+&lt;%
+   // 为 first_name 和 last_name设置cookie      
+   Cookie firstName = new Cookie("first_name",
+ 			  request.getParameter("first_name"));
+   Cookie lastName = new Cookie("last_name",
+			  request.getParameter("last_name"));
+
+   // 设置cookie过期时间为24小时。
+   firstName.setMaxAge(60*60*24); 
+   lastName.setMaxAge(60*60*24); 
+
+   // 在响应头部添加cookie
+   response.addCookie( firstName );
+   response.addCookie( lastName );
+%&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h1&gt;Setting Cookies&lt;/h1&gt;
+&lt;/center&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;b&gt;First Name:&lt;/b&gt;
+   &lt;%= request.getParameter("first_name")%&gt;
+&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;b&gt;Last  Name:&lt;/b&gt;
+   &lt;%= request.getParameter("last_name")%&gt;
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><p>
+将上面两个文件放在&lt;Tomcat安装目录&gt;/webapps/ROOT目录下，然后访问http://localhost:8080/hello.jsp，将会得到如下输出结果：</p>
+<p>
+<img src="http://www.w3cschool.cc/wp-content/uploads/2014/01/form-1.jpg" />
+</p><p>
+试着输入First Name和Last Name，然后点击提交按钮，它将会在您的屏幕中显示first name和last name，并且设置first name和last name两个cookie，下一次点击提交按钮时会发给服务器。</p>
+<hr />
+<h2>
+	使用JSP读取Cookies</h2><p>
+想要读取cookies，您就需要调用request.getCookies()方法来获得一个javax.servlet.http.Cookie对象的数组，然后遍历这个数组，使用getName()方法和getValue()方法来获取每一个cookie的名称和值。</p>
+<h3实例演示</h3><p>
+让我们来读取上个例子中的cookies。</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h1&gt;Reading Cookies&lt;/h1&gt;
+&lt;/center&gt;
+&lt;%
+   Cookie cookie = null;
+   Cookie[] cookies = null;
+   // 获取cookies的数据,是一个数组
+   cookies = request.getCookies();
+   if( cookies != null ){
+      out.println("&lt;h2&gt; Found Cookies Name and Value&lt;/h2&gt;");
+      for (int i = 0; i &lt; cookies.length; i++){
+         cookie = cookies[i];
+         out.print("Name : " + cookie.getName( ) + ",  ");
+         out.print("Value: " + cookie.getValue( )+" &lt;br/&gt;");
+      }
+  }else{
+      out.println("&lt;h2&gt;No cookies founds&lt;/h2&gt;");
+  }
+%&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><p>
+如果您把first name cookie设置成"John"，last name设置成"Player"，访问 http://localhost:8080/main.jsp，将会得到如下输出结果：
+</p>
+<pre>
+Found Cookies Name and Value
+Name : first_name, Value: John 
+Name : last_name, Value: Player
+</pre><hr />
+<h2>
+	使用JSP删除Cookies</h2><p>
+删除cookies非常简单。如果您想要删除一个cookie，按照下面给的步骤来做就行了：</p>
+<ul>
+	<li>
+		获取一个已经存在的cookie然后存储在Cookie对象中。</li>
+	<li>
+		将cookie的有效期设置为0。</li>
+	<li>
+		将这个cookie重新添加进响应头中。</li>
+</ul><hr />
+<h3>
+	实例演示</h3><p>
+下面的程序删除一个名为"first_name"的cookie，当您下次运行main.jsp时，first_name将会为null。</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h1&gt;Reading Cookies&lt;/h1&gt;
+&lt;/center&gt;
+&lt;%
+   Cookie cookie = null;
+   Cookie[] cookies = null;
+   // 获取当前域名下的cookies，是一个数组
+   cookies = request.getCookies();
+   if( cookies != null ){
+      out.println("&lt;h2&gt; Found Cookies Name and Value&lt;/h2&gt;");
+      for (int i = 0; i &lt; cookies.length; i++){
+         cookie = cookies[i];
+         if((cookie.getName( )).compareTo("first_name") == 0 ){
+            cookie.setMaxAge(0);
+            response.addCookie(cookie);
+            out.print("Deleted cookie: " + 
+            cookie.getName( ) + "&lt;br/&gt;");
+         }
+         out.print("Name : " + cookie.getName( ) + ",  ");
+         out.print("Value: " + cookie.getValue( )+" &lt;br/&gt;");
+      }
+  }else{
+      out.println(
+      "&lt;h2&gt;No cookies founds&lt;/h2&gt;");
+  }
+%&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>
+访问它，将会得到如下输出结果：</p>
+<pre>
+Cookies Name and Value
+Deleted cookie : first_name
+Name : first_name, Value: John
+Name : last_name, Value: Player
+</pre><p>
+再次访问http://localhost:8080/main.jsp，将会得到如下结果：</p>
+<pre>
+Found Cookies Name and Value
+Name : last_name, Value: Player
+</pre><p>
+您也可以手动在浏览器中删除cookies。点击Tools菜单项，然后选择Internet Options，点击Delete Cookies，就能删除所有cookies了。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsp/jsp-writing-filters.html" rel="prev"> JSP 过滤器</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsp/jsp-session.html" rel="next">JSP Session</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.529 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 18:41:22 -->
+
+<!-- super cache -->

@@ -1,0 +1,565 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 实例 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='PHP 安全 E-mail' href='http://www.w3cschool.cc/php/php-secure-mail.html' />
+<link rel='next' title='PHP 错误处理' href='http://www.w3cschool.cc/php/php-error.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/css/css-examples.html' />
+<meta name="keywords" content="CSS 实例,CSS 教程">
+<meta name="description" content="CSS 实例 CSS背景 设置页面的背景颜色 设置不同元素的背景颜色 设置一个图像作为页面的背景 错误的的背景图片 如何在水平方向重复背景图像 如何定位背景图像 一个固定的背景图片（这个图片不会随页面的其余部分滚动） 在一个声明的所有背景属性 高级的背景例子 &nbsp; 背景属性的解释 CSS文本 设置不同元素的文本颜色 文本对齐 移除链接下划线 装饰文字 控制文本中的字母 缩进文本 指定了字符之间的空间 指定了行与行之间的空间 设置..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>CSS 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-tutorial.html" >
+	CSS 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-intro.html" >
+	CSS 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-syntax.html" >
+	CSS 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-id-class.html" >
+	CSS Id 和 Class选择器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-howto.html" >
+	CSS 创建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-background.html" >
+	CSS Backgrounds(背景)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-text.html" >
+	CSS Text(文本)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-font.html" >
+	CSS Fonts(字体)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-link.html" >
+	CSS 链接(link)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-list.html" >
+	CSS 列表样式(ul)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-table.html" >
+	CSS Table(表格)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-boxmodel.html" >
+	CSS 框模型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-border.html" >
+	CSS Border(边框)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-outline.html" >
+	CSS 轮廓（outline）属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-margin.html" >
+	CSS Margin(外边距)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-padding.html" >
+	CSS Padding（填充）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-grouping-nesting.html" >
+	CSS 分组和嵌套	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-dimension.html" >
+	CSS 尺寸 (Dimension)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-display-visibility.html" >
+	CSS Display(显示)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-positioning.html" >
+	CSS Positioning(定位)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-float.html" >
+	CSS Float(浮动)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-align.html" >
+	CSS Align( 对齐)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-pseudo-classes.html" >
+	CSS 伪类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-pseudo-elements.html" >
+	CSS 伪元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-navbar.html" >
+	CSS 导航栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-image-gallery.html" >
+	CSS 图片廊	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-image-transparency.html" >
+	CSS 图像透明/不透明	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-image-sprites.html" >
+	CSS 图像拼合技术	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-mediatypes.html" >
+	CSS 媒体类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-attribute-selectors.html" >
+	CSS 属性选择器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-summary.html" >
+	CSS 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-examples.html" >
+	CSS 实例	</a>
+	<br><h2 class="left"><span class="left_h2">CSS3</span> 教程</h2>
+<a target="_top" href="http://www.w3cschool.cc/css3/css3-tutorial.html" >
+	CSS3 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-intro.html" >
+	CSS3 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-borders.html" >
+	CSS3 边框（Borders）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-backgrounds.html" >
+	CSS3 背景	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-text-effects.html" >
+	CSS3 文本效果	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-fonts.html" >
+	CSS3 字体	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-2dtransforms.html" >
+	CSS3 2D 转换	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-3dtransforms.html" >
+	CSS3 3D 转换	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-transitions.html" >
+	CSS3 过渡	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-animations.html" >
+	CSS3 动画	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-multiple-columns.html" >
+	CSS3 多列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-user-interface.html" >
+	CSS3 用户界面	</a>
+<br>
+<h2 class="left"><span class="left_h2">CSS</span> 参考手册</h2>
+<a target="_top" href="/cssref/css-reference.html" >CSS 参考手册</a>
+<a target="_top" href="/cssref/css-selectors.html">CSS 选择器</a>
+<a target="_top" href="/cssref/css-ref-aural.html">CSS 语音参考</a>
+<a target="_top" href="/cssref/css-websafe-fonts.html">CSS Web安全字体</a>
+<a target="_top" href="/cssref/css-units.html">CSS 单位</a>
+<a target="_top" href="/cssref/css-colors.html">CSS 颜色</a>
+<a target="_top" href="/cssref/css-colors-legal.html">CSS 颜色值</a>
+<a target="_top" href="/cssref/css-colornames.html">CSS 颜色名</a>
+<a target="_top" href="/cssref/css-colorsfull.html">CSS 十六进制颜色</a></div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/css/css-summary.html" rel="prev"> CSS 总结</a></div>
+		<div class="next"></div>
+	</div>
+
+	<h1>CSS <span class="color_h1">实例</span></h1>
+<h2 class="tutheader">CSS背景</h2>
+<p><a href="/try/try.php?filename=trycss_background-color_body" target="_blank">设置页面的背景颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_background-color_elements" target="_blank">设置不同元素的背景颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_background-image" target="_blank">设置一个图像作为页面的背景</a></p>
+<p><a href="/try/try.php?filename=trycss_background-image_bad" target="_blank">错误的的背景图片</a></p>
+<p><a href="/try/try.php?filename=trycss_background-image_gradient2" target="_blank">如何在水平方向重复背景图像</a></p>
+<p><a href="/try/try.php?filename=trycss_background-image_position" target="_blank">如何定位背景图像</a></p>
+<p><a href="/try/try.php?filename=trycss_background-attachment" target="_blank">一个固定的背景图片（这个图片不会随页面的其余部分滚动）</a></p>
+<p><a href="/try/try.php?filename=trycss_background_shorthand" target="_blank">在一个声明的所有背景属性</a></p>
+<p><a href="/try/try.php?filename=trycss_background_shorthand2" target="_blank">高级的背景例子</a></p>
+<p>&nbsp;</p>
+<p><a href="css-background.html"><b>背景属性的解释</b></a></p>
+<h2 class="tutheader">CSS文本</h2>
+<p><a href="/try/try.php?filename=trycss_color" target="_blank">设置不同元素的文本颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_text-align_all" target="_blank">文本对齐</a></p>
+<p><a href="/try/try.php?filename=trycss_text-decoration_link" target="_blank">移除链接下划线</a></p>
+<p><a href="/try/try.php?filename=trycss_text-decoration" target="_blank">装饰文字</a></p>
+<p><a href="/try/try.php?filename=trycss_text-transform" target="_blank">控制文本中的字母</a></p>
+<p><a href="/try/try.php?filename=trycss_text-indent" target="_blank">缩进文本</a></p>
+<p><a href="/try/try.php?filename=trycss_letter-spacing" target="_blank">指定了字符之间的空间</a></p>
+<p><a href="/try/try.php?filename=trycss_line-height" target="_blank">指定了行与行之间的空间</a></p>
+<p><a href="/try/try.php?filename=trycss_text-direction" target="_blank">设置元素的文本方向</a></p>
+<p><a href="/try/try.php?filename=trycss_text-word-spacing" target="_blank">增加单词之间的空格</a></p>
+<p><a href="/try/try.php?filename=trycss_text-white-space" target="_blank">在一个元素内禁用文字换行</a></p>
+<p><a href="/try/try.php?filename=trycss_vertical-align" target="_blank">内部文字图像的垂直对齐</a></p>
+<p>&nbsp;</p>
+<p><a href="css-text.html" target="_blank"><b>Text属性的解释</b></a></p>
+<h2 class="tutheader">CSS的字体</h2>
+<p><a href="/try/try.php?filename=trycss_font-family" target="_blank">设置文本的字体</a></p>
+<p><a href="/try/try.php?filename=trycss_font-size" target="_blank">设置字体大小</a></p>
+<p><a href="/try/try.php?filename=trycss_font-size_px" target="_blank">用px设置的字体的大小</a></p>
+<p><a href="/try/try.php?filename=trycss_font-size_em" target="_blank">用em设置的字体的大小</a></p>
+<p><a href="/try/try.php?filename=trycss_font-size_percent_em" target="_blank">用百分比和em设置字体的大小</a></p>
+<p><a href="/try/try.php?filename=trycss_font-style" target="_blank">设置字体样式</a></p>
+<p><a href="/try/try.php?filename=trycss_font-variant" target="_blank">设置字体的异体</a></p>
+<p><a href="/try/try.php?filename=trycss_font-weight" target="_blank">设置字体的粗细</a></p>
+<p><a href="/try/try.php?filename=trycss_font" target="_blank">在一个声明的所有字体属性</a></p>
+<p>&nbsp;</p>
+<p><a href="css-font.html" target="_blank"><b>Font属性的解释</b></a></p>
+<h2 class="tutheader">CSS链接</h2>
+<p><a href="/try/try.php?filename=trycss_link" target="_blank">为访问/未访问链接添加不同的颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_link_decoration" target="_blank">在链接上使用文本装饰</a></p>
+<p><a href="/try/try.php?filename=trycss_link_background" target="_blank">指定链接的背景颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_link2" target="_blank">超链接添加其他样式</a></p>
+<p><a href="/try/try.php?filename=trycss_link_advanced" target="_blank">高级 - 创建链接框</a></p>
+<p>&nbsp;</p>
+<p><a href="css-link.html" target="_blank"><b>链接属性的解释</b></a></p>
+<h2 class="tutheader">CSS列表</h2>
+<p><a href="/try/try.php?filename=trycss_list-style-type_all" target="_blank">列表中所有不同的列表项标记</a></p>
+<p><a href="/try/try.php?filename=trycss_list-style-image" target="_blank">设置作为列表项标记的图像</a></p>
+<p><a href="/try/try.php?filename=trycss_list-style-image_crossbrow" target="_blank">使用Crossbrowser解决方案设置一个列表项标记的图像</a></p>
+<p><a href="/try/try.php?filename=trycss_list-style" target="_blank">在一个声明中的所有列表属性</a></p>
+<p>&nbsp;</p>
+<p><a href="css-list.html" target="_blank"><b>列表属性的解释</b></a></p>
+<h2 class="tutheader">CSS表格</h2>
+<p><a href="/try/try.php?filename=trycss_table_border" target="_blank">指定一个表的Th，TD元素和黑色边框</a></p>
+<p><a href="/try/try.php?filename=trycss_table_border-collapse" target="_blank">使用border-collapse</a></p>
+<p><a href="/try/try.php?filename=trycss_table_width" target="_blank">指定表格的宽度和高度</a></p>
+<p><a href="/try/try.php?filename=trycss_table_align" target="_blank">设置内容的水平对齐方式（文本对齐）</a></p>
+<p><a href="/try/try.php?filename=trycss_table_vertical-align" target="_blank">设置内容的垂直对齐（垂直对齐）</a></p>
+<p><a href="/try/try.php?filename=trycss_table_padding" target="_blank">指定TH和TD元素的填充</a></p>
+<p><a href="/try/try.php?filename=trycss_table_color" target="_blank">指定表格边框的颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_table_caption-side" target="_blank">设置表格标题的位置</a></p>
+<p><a href="/try/try.php?filename=trycss_table_fancy" target="_blank">创建一个奇特的表</a></p>
+<p>&nbsp;</p>
+<p><a href="css-table.html" target="_blank"><b>表格属性的解释</b></a></p>
+<h2 class="tutheader">CSS盒模型</h2>
+<p><a href="/try/try.php?filename=trycss_boxmodel_width" target="_blank">指定元素的总宽度为250像素</a></p>
+<p><a href="/try/try.php?filename=trycss_boxmodel_width_doctype" target="_blank">使用Crossbrowser解决方案指定元素的总宽度为250像素的 </a></p>
+<p>&nbsp;</p>
+<p><a href="css-boxmodel.html" target="_blank"><b>盒模型的解释</b></a></p>
+<h2 class="tutheader">CSS边框</h2>
+<p><a href="/try/try.php?filename=trycss_border-width" target="_blank">设置四个边框的宽度</a></p>
+<p><a href="/try/try.php?filename=trycss_border-top-width" target="_blank">设置上边框的宽度</a></p>
+<p><a href="/try/try.php?filename=trycss_border-bottom-width" target="_blank">设置底部边框的宽度</a></p>
+<p><a href="/try/try.php?filename=trycss_border-left-width" target="_blank">设置左边框的宽度</a></p>
+<p><a href="/try/try.php?filename=trycss_border-right-width" target="_blank">设置右边框的宽度</a></p>
+<p>&nbsp;</p>
+<p><a href="/try/try.php?filename=trycss_border-style" target="_blank">设置四个边框的样式</a></p>
+<p><a href="/try/try.php?filename=trycss_border-top-style" target="_blank">设置上边框的样式</a></p>
+<p><a href="/try/try.php?filename=trycss_border-bottom-style" target="_blank">设置下边框的样式</a></p>
+<p><a href="/try/try.php?filename=trycss_border-left-style" target="_blank">设置左边框的样式</a></p>
+<p><a href="/try/try.php?filename=trycss_border-right-style" target="_blank">设置右边框的样式</a></p>
+<p>&nbsp;</p>
+<p><a href="/try/try.php?filename=trycss_border-color" target="_blank">设置四个边框的颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_border-top-color" target="_blank">设置上边框的颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_border-bottom-color" target="_blank">设置下边框的颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_border-left-color" target="_blank">设置左边框的颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_border-right-color" target="_blank">设置右边框的颜色</a></p>
+<p>&nbsp;</p>
+<p><a href="/try/try.php?filename=trycss_border" target="_blank">在一个声明中的所有边框属性</a></p>
+<p>&nbsp;</p>
+<p><a href="/try/try.php?filename=trycss_border-style2" target="_blank">每边设置不同的边框</a></p>
+<p><a href="/try/try.php?filename=trycss_border-top" target="_blank">在一个声明中的所有顶部边框属性</a></p>
+<p><a href="/try/try.php?filename=trycss_border-bottom" target="_blank">在一个声明中的所有下边框属性</a></p>
+<p><a href="/try/try.php?filename=trycss_border-left" target="_blank">在一个声明中的所有左边框属性</a></p>
+<p><a href="/try/try.php?filename=trycss_border-right" target="_blank">在一个声明中的所有右边框属性</a></p>
+<p>&nbsp;</p>
+<p><a href="css-border.html" target="_blank"><b>边框属性的解释</b></a></p>
+<h2 class="tutheader">CSS轮廓</h2>
+<p><a href="/try/try.php?filename=trycss_outline" target="_blank">围绕一个元素（outline），绘制一条线</a></p>
+<p><a href="/try/try.php?filename=trycss_outline-style" target="_blank">设置轮廓的样式</a></p>
+<p><a href="/try/try.php?filename=trycss_outline-color" target="_blank">设置轮廓颜色</a></p>
+<p><a href="/try/try.php?filename=trycss_outline-width" target="_blank">设置轮廓的宽度</a></p>
+<p>&nbsp;</p>
+<p><a href="css-outline.html" target="_blank"><b>轮廓属性的解释</b></a></p>
+<h2 class="tutheader">CSS边距</h2>
+<p><a href="/try/try.php?filename=trycss_margin-sides" target="_blank">指定一个元素的边距</a></p>
+<p><a href="/try/try.php?filename=trycss_margin_shorthand" target="_blank">边距缩写属性</a></p>
+<p><a href="/try/try.php?filename=trycss_margin-top" target="_blank">文本顶部边距设置的值使用厘米</a></p>
+<p><a href="/try/try.php?filename=trycss_margin-bottom_percent" target="_blank">使用百分比值设置文本的底部边缘</a></p>
+<p><a href="/try/try.php?filename=trycss_margin-left" target="_blank">使用厘米值设置文本的左边距</a></p>
+<p>&nbsp;</p>
+<p><a href="css-margin.html" target="_blank"><b>Margin属性的解释</b></a></p>
+<h2 class="tutheader">CSS填充</h2>
+<p><a href="/try/try.php?filename=trycss_padding-left" target="_blank">设置元素的左部填充</a></p>
+<p><a href="/try/try.php?filename=trycss_padding-right" target="_blank">设置元素的右部填充</a></p>
+<p><a href="/try/try.php?filename=trycss_padding-top" target="_blank">设置元素的顶部填充</a></p>
+<p><a href="/try/try.php?filename=trycss_padding-bottom" target="_blank">设置元素的底部填充</a></p>
+<p><a href="/try/try.php?filename=trycss_padding" target="_blank">在一个声明中的所有填充属性</a></p>
+<p>&nbsp;</p>
+<p><a href="css-padding.html" target="_blank"><b>padding属性的解释</b></a></p>
+<h2 class="tutheader">CSS分组和嵌套</h2>
+<p><a href="/try/try.php?filename=trycss_grouping" target="_blank">组选择器</a></p>
+<p><a href="/try/try.php?filename=trycss_nesting" target="_blank">嵌套选择器</a></p>
+<p>&nbsp;</p>
+<p><a href="css-grouping-nesting.html" target="_blank"><b>分组和嵌套解释</b></a></p>
+<h2 class="tutheader">CSS尺寸</h2>
+<p><a href="/try/try.php?filename=trycss_dim_height" target="_blank">使用像素值设置图像的高度</a></p>
+<p><a href="/try/try.php?filename=trycss_dim_height_percent" target="_blank">使用百分比设置图像的高度</a></p>
+<p><a href="/try/try.php?filename=trycss_dim_width" target="_blank">使用像素值来设置元素的宽度</a></p>
+<p><a href="/try/try.php?filename=trycss_dim_width_percent" target="_blank">使用百分比来设置元素的宽度</a></p>
+<p><a href="/try/try.php?filename=trycss_dim_max-height" target="_blank">设置元素的最大高度</a></p>
+<p><a href="/try/try.php?filename=trycss_dim_max-width" target="_blank">使用像素值设置元素的最大宽度</a></p>
+<p><a href="/try/try.php?filename=trycss_dim_max-width_percent" target="_blank">使用百分比来设置元素的最大宽度</a></p>
+<p><a href="/try/try.php?filename=trycss_dim_min-height" target="_blank">设置元素的最低高度</a></p>
+<p><a href="/try/try.php?filename=trycss_dim_min-width" target="_blank">使用像素值来设置元素的最小宽度</a></p>
+<p><a href="/try/try.php?filename=trycss_dim_min-width_percent" target="_blank">使用百分比来设置元素的最小宽度</a></p>
+<p>&nbsp;</p>
+<p><a href="css-dimension.html" target="_blank"><b>尺寸属性的解释</b></a></p>
+<h2 class="tutheader">CSS显示</h2>
+<p><a href="/try/try.php?filename=trycss_visibility_hidden" target="_blank">如何隐藏一个元素(visibility:hidden)</a></p>
+<p><a href="/try/try.php?filename=trycss_display_none" target="_blank">如何不显示元素(display:none)</a></p>
+<p><a href="/try/try.php?filename=trycss_display" target="_blank">如何显示一个元素的内联元素</a></p>
+<p><a href="/try/try.php?filename=trycss_display_block" target="_blank">如何显示一个元素的块元素</a></p>
+<p><a href="/try/try.php?filename=trycss_visibility_collapse" target="_blank">H如何使用表格的collapse属性</a></p>
+<p>&nbsp;</p>
+<p><a href="css-display-visibility.html" target="_blank"><b>Display属性的解释</b></a></p>
+<h2 class="tutheader">CSS定位</h2>
+<p><a href="/try/try.php?filename=trycss_position_fixed" target="_blank">元素相对浏览器窗口的位置</a></p>
+<p><a href="/try/try.php?filename=trycss_position_relative" target="_blank">元素的相对定位</a></p>
+<p><a href="/try/try.php?filename=trycss_position_absolute" target="_blank">元素的绝对定位</a></p>
+<p><a href="/try/try.php?filename=trycss_zindex" target="_blank">重叠的元素</a></p>
+<p><a href="/try/try.php?filename=trycss_clip" target="_blank">设置元素的形状</a></p>
+<p><a href="/try/try.php?filename=trycss_overflow" target="_blank">如何使用滚动条来显示元素内溢出的内容</a></p>
+<p><a href="/try/try.php?filename=trycss_pos_overflow_auto" target="_blank">如何设置浏览器自动溢出处理</a></p>
+<p><a href="/try/try.php?filename=trycss_position_top" target="_blank">使用像素值设置图像的顶部</a></p>
+<p><a href="/try/try.php?filename=trycss_position_bottom" target="_blank">使用像素值设置图像的底部</a></p>
+<p><a href="/try/try.php?filename=trycss_position_left" target="_blank">使用像素值设置图像的左边</a></p>
+<p><a href="/try/try.php?filename=trycss_position_right" target="_blank">使用像素值设置图像的右边</a></p>
+<p><a href="/try/try.php?filename=trycss_cursor" target="_blank">更改光标</a></p>
+<p>&nbsp;</p>
+<p><a href="css-positioning.html" target="_blank"><b>定位属性的解释</b></a></p>
+<h2 class="tutheader">CSS浮动</h2>
+<p><a href="/try/try.php?filename=trycss_float" target="_blank">简单的使用float属性</a></p>
+<p><a href="/try/try.php?filename=trycss_float2" target="_blank">为图像添加边框和边距并浮动到段落的左侧</a></p>
+<p><a href="/try/try.php?filename=trycss_float3" target="_blank">标题和图片向右侧浮动</a></p>
+<p><a href="/try/try.php?filename=trycss_float4" target="_blank">让段落的第一个字母浮动到左侧</a></p>
+<p><a href="/try/try.php?filename=trycss_float_elements" target="_blank">使用float属性创建一个图片廊</a></p>
+<p><a href="/try/try.php?filename=trycss_float_clear" target="_blank">开启float - clear属性</a></p>
+<p><a href="/try/try.php?filename=trycss_float5" target="_blank">创建一个水平菜单</a></p>
+<p><a href="/try/try.php?filename=trycss_float6" target="_blank">创建一个没有表格的网页</a></p>
+<p>&nbsp;</p>
+<p><a href="css-float.html" target="_blank"><b>Float属性的解释</b></a></p>
+<h2 class="tutheader">CSS对齐元素</h2>
+<p><a href="/try/try.php?filename=trycss_align_container" target="_blank">使用margin的中间调整</a></p>
+<p><a href="/try/try.php?filename=trycss_align_pos" target="_blank">左/右位置对齐</a></p>
+<p><a href="/try/try.php?filename=trycss_align_pos_crossbrowser" target="_blank">使用Crossbrowser解决方案，设置左/右位置对齐</a></p>
+<p><a href="/try/try.php?filename=trycss_align_float" target="_blank">左/右对齐，浮动</a></p>
+<p><a href="/try/try.php?filename=trycss_align_float_crossbrowser" target="_blank">使用Crossbrowser解决方案，设置左/右位置对齐，浮动</a></p>
+<p>&nbsp;</p>
+<p><a href="css-align.html" target="_blank"><b>对齐属性解释</b></a></p>
+<h2 class="tutheader">CSS生成的内容</h2>
+<p><a href="/try/try.php?filename=trycss_gen_content" target="_blank">把括号内的URL用content属性插入到每个链接后面</a></p>
+<p><a href="/try/try.php?filename=trycss_gen_counter-reset" target="_blank">章节和分节的编号是"第1节"，"1.1"，"1.2"等</a></p>
+<p><a href="/try/try.php?filename=trycss_gen_quotes" target="_blank">quotes 属性指定了引号</a></p>
+
+<h2 class="tutheader">CSS伪类</h2>
+<p><a href="/try/try.php?filename=trycss_link" target="_blank">添加不同颜色的超链接</a></p>
+<p><a href="/try/try.php?filename=trycss_link2" target="_blank">给超链接添加其他样式</a></p>
+<p><a href="/try/try.php?filename=trycss_link_focus" target="_blank">使用：焦点</a></p>
+<p><a href="/try/try.php?filename=trycss_first-child1" target="_blank">:first-child - 匹配了第一个p元素</a></p>
+<p><a href="/try/try.php?filename=trycss_first-child2" target="_blank">:first-child - 匹配了第一个p元素中的I元素</a></p>
+<p><a href="/try/try.php?filename=trycss_first-child3" target="_blank">:first-child - 匹配了第一个p元素中的所有I元素</a></p>
+<p><a href="/try/try.php?filename=trycss_lang" target="_blank">使用:lang</a></p>
+<p>&nbsp;</p>
+<p><a href="css-pseudo-classes.html" target="_blank"><b>伪类的解释</b></a></p>
+
+<h2 class="tutheader">CSS伪元素</h2>
+<p><a href="/try/try.php?filename=trycss_firstletter" target="_blank">把文本的第一个字母设为特殊的字母</a></p>
+<p><a href="/try/try.php?filename=trycss_firstline" target="_blank">把第一行文字设置为特殊</a></p>
+<p><a href="/try/try.php?filename=trycss_firstline_letter" target="_blank">把第一行文字的第一个字母设置为特殊</a></p>
+<p><a href="/try/try.php?filename=trycss_before" target="_blank">使用：在一个元素之前插入一些内容</a></p>
+<p><a href="/try/try.php?filename=trycss_after" target="_blank">使用：在一个元素之后插入一些内容</a></p>
+<p>&nbsp;</p>
+<p><a href="css-pseudo_elements.html" target="_blank"><b>伪元素的解释</b></a></p>
+
+<h2 class="tutheader">CSS导航栏</h2>
+<p><a href="/try/try.php?filename=trycss_navbar_vertical_advanced" target="_blank">垂直导航栏的全样式</a></p>
+<p><a href="/try/try.php?filename=trycss_navbar_horizontal_float_advanced" target="_blank">水平导航栏的全样式</a></p>
+<p>&nbsp;</p>
+<p><a href="css-navbar.html" target="_blank"><b>导航栏的解释</b></a></p>
+
+<h2 class="tutheader">CSS图片廊</h2>
+<p><a href="/try/try.php?filename=trycss_image_gallery" target="_blank">图片廊</a></p>
+<p>&nbsp;</p>
+<p><a href="css-image-gallery.html" target="_blank"><b>图片廊解释</b></a></p>
+
+<h2 class="tutheader">CSS图像的不透明度</h2>
+<p><a href="/try/try.php?filename=trycss_image_transparency" target="_blank">创建透明图像 - 鼠标悬停效果</a></p>
+<p><a href="/try/try.php?filename=trycss_transparency" target="_blank">创建一个背景图像与文本的透明框</a></p>
+<p>&nbsp;</p>
+<p><a href="css-image-transparency.html" target="_blank"><b>图像的不透明度解释</b></a></p>
+
+<h2 class="tutheader">CSS图像拼合</h2>
+<p><a href="/try/try.php?filename=trycss_sprites_img" target="_blank">图像拼合</a></p>
+<p><a href="/try/try.php?filename=trycss_sprites_nav" target="_blank">图像拼合-导航列表</a></p>
+<p><a href="/try/try.php?filename=trycss_sprites_hover_nav" target="_blank">悬停效果与图像拼合</a></p>
+<p>&nbsp;</p>
+<p><a href="css-image-sprites.html" target="_blank"><b>图像拼合解释</b></a></p>
+
+<h2 class="tutheader">CSS属性选择器</h2>
+<p><a href="/try/try.php?filename=trycss_attselector_att" target="_blank">选择具有title属性的元素</a></p>
+<p><a href="/try/try.php?filename=trycss_attselector_value" target="_blank">选择标题=一个特定值的元素</a></p>
+<p><a href="/try/try.php?filename=trycss_attselector_valuelist_space" target="_blank">选择标题=一个特定值的元素(使用（~）分隔属性和值)</a></p>
+<p><a href="/try/try.php?filename=trycss_attselector_valuelist_hyphen" target="_blank">选择标题=一个特定值的元素(使用（|）分隔属性和值)</a></p>
+<p>&nbsp;</p>
+<p><a href="css-attribute-selectors.html" target="_blank"><b>属性选择器解释</b></a></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/css/css-summary.html" rel="prev"> CSS 总结</a></div>
+		<div class="next"></div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.186 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 20:11:17 -->
+
+<!-- super cache -->

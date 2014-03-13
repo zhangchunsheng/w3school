@@ -1,0 +1,770 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 Canvas | w3cschool菜鸟教程</title>
+	<link rel='prev' title='HTML &lt;tbody&gt; 标签' href='http://www.w3cschool.cc/tags/tag-tbody.html' />
+<link rel='next' title='HTML &lt;thead&gt; 标签' href='http://www.w3cschool.cc/tags/tag-thead.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/html/html5-canvas.html' />
+<meta name="keywords" content="HTML5 Canvas,HTML 基础">
+<meta name="description" content="HTML5 Canvas   &lt;canvas&gt; 标签定义图形，比如图表和其他图像，您必须使用脚本来绘制图形。。 在画布上（Canvas）画一个红色矩形，梯度矩形，彩色矩形，和一些彩色的文字。  你的浏览器不支持 HTML5 的 &lt;canvas&gt; 元素.   var c=document.getElementById('myCanvas'); var canvOK=1; try {c.getContext('2d'..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>HTML 基础</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-tutorial.html" >
+	HTML 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-intro.html" >
+	HTML 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-editors.html" >
+	HTML 编辑器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-basic.html" >
+	HTML 基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-elements.html" >
+	HTML 元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-attributes.html" >
+	HTML 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-headings.html" >
+	HTML 标题	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-paragraphs.html" >
+	HTML 段落	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-formatting.html" >
+	HTML 文本格式化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-links.html" >
+	HTML 链接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-head.html" >
+	HTML 头部	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-css.html" >
+	HTML CSS	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-images.html" >
+	HTML 图像	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-tables.html" >
+	HTML 表格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-lists.html" >
+	HTML 列表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-blocks.html" >
+	HTML 区块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-layouts.html" >
+	HTML 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-forms.html" >
+	HTML 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-iframes.html" >
+	HTML 框架	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-colors.html" >
+	HTML 颜色	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-colornames.html" >
+	HTML 颜色名	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-colorvalues.html" >
+	HTML 颜色值	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-scripts.html" >
+	HTML 脚本	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-entities.html" >
+	HTML 字符实体	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-ur.html" >
+	HTML URL 	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-quicklist.html" >
+	HTML 速查列表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-summary.html" >
+	HTML 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-xhtml.html" >
+	XHTML 简介	</a>
+	<br/><h2 class="left"><span class="left_h2">HTML5</span></h2>	<a target="_top" href="http://www.w3cschool.cc/html/html5-intro.html" >
+	HTML5 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-new-element.html" >
+	HTML5 新元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-canvas.html" >
+	HTML5 Canvas	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-svg.html" >
+	HTML5 内联 SVG	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-draganddrop.html" >
+	HTML5 拖放	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-geolocation.html" >
+	HTML5 地理定位	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-video.html" >
+	HTML5 Video(视频)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-audio.html" >
+	HTML5 Audio(音频)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-form-input-types.html" >
+	HTML5 Input 类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-form-elements.html" >
+	HTML5 表单元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-form-attributes.html" >
+	HTML5 表单属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-semantic-elements.html" >
+	HTML5 语义元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-webstorage.html" >
+	HTML5 Web 存储	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-app-cache.html" >
+	HTML5 应用程序缓存	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-webworkers.html" >
+	HTML5 Web Workers	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-serversentevents.html" >
+	HTML5 SSE	</a>
+	<br/><h2 class="left"><span class="left_h2">HTML</span> 媒体</h2>	<a target="_top" href="http://www.w3cschool.cc/html/html-media.html" >
+	HTML 媒体(Media)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-object.html" >
+	HTML 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-sounds.html" >
+	HTML 音频(Audio)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-videos.html" >
+	HTML视频（Videos）播放	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-examples.html" >
+	HTML 实例	</a>
+	<br><h2 class="left"><span class="left_h2">HTML</span> 参考手册</h2>
+<a target="_top" href="http://www.w3cschool.cc/tags/html-reference.html" >
+	HTML 标签列表(字母排序)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-byfunc.html" >
+	HTML 标签列表（功能排序）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-standardattributes.html" >
+	HTML 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-eventattributes.html" >
+	HTML 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-canvasreference.html" >
+	HTML 画布	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-audiovideo.html" >
+	HTML 音频/视频	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-elementsdoctypes.html" >
+	HTML 有效DOCTYPES	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-colorname.html" >
+	HTML 颜色名	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-colorpicker.html" >
+	HTML 拾色器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-charactersets.html" >
+	HTML 字符集	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-ascii.html" >
+	HTML ASCII	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-entities.html" >
+	HTML ISO-8859-1	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-symbols.html" >
+	HTML 符号	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-urlencode.html" >
+	HTML URL 编码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-language-codes.html" >
+	HTML 语言代码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-httpmessages.html" >
+	HTTP 消息	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-httpmethods.html" >
+	HTTP 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-keyboardshortcuts.html" >
+	键盘快捷键	</a></div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/html/html5-new-element.html" rel="prev"> HTML5 新元素</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/html/html5-svg.html" rel="next">HTML5 内联 SVG</a> &raquo;</div>
+	</div>
+
+	<h1>HTML5 <span class="color_h1">Canvas</span>
+</h1>
+<hr />
+<p class="intro">&lt;canvas&gt; 标签定义图形，比如图表和其他图像，您必须使用脚本来绘制图形。。</p>
+<p class="intro">在画布上（Canvas）画一个红色矩形，梯度矩形，彩色矩形，和一些彩色的文字。</p>
+<canvas id="myCanvas" width="270" height="160" style="border:1px solid #c3c3c3;">
+你的浏览器不支持 HTML5 的 &lt;canvas&gt; 元素.
+</canvas>
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.fillStyle="#FF0000";
+	ctx.fillRect(20,20,100,50);
+	
+	var grd=ctx.createLinearGradient(140,20,240,70);
+    grd.addColorStop(0,"black");
+    grd.addColorStop(1,"white");
+    ctx.fillStyle=grd;
+    ctx.fillRect(140,20,100,50);
+    
+    var grd2=ctx.createLinearGradient(20,90,120,90);
+    grd2.addColorStop(0,"black");
+    grd2.addColorStop("0.3","magenta");
+    grd2.addColorStop("0.5","blue");
+    grd2.addColorStop("0.6","green");
+    grd2.addColorStop("0.8","yellow");
+    grd2.addColorStop(1,"red");
+    ctx.fillStyle=grd2;
+    ctx.fillRect(20,90,100,50);
+    
+    ctx.font="30px Verdana";
+    var grd3=ctx.createLinearGradient(140,20,240,90);
+    grd3.addColorStop(0,"black");
+    grd3.addColorStop("0.3","magenta");
+    grd3.addColorStop("0.6","blue");
+    grd3.addColorStop("0.8","green");
+    grd3.addColorStop(1,"red");
+    ctx.strokeStyle=grd3;
+    ctx.strokeText("Smile!",140,120); 
+	}
+	</script>
+<br /><hr />
+<h2>什么是 Canvas?</h2>
+<p> HTML5 &lt;canvas&gt; 元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成.</p>
+<p>&lt;canvas&gt; 标签只是图形容器，您必须使用脚本来绘制图形。</p>
+<p>你可以通过多种方法使用Canva绘制路径,盒、圆、字符以及添加图像。</p>
+<hr />
+<h2>浏览器支持</h2>
+<p>
+<img src="/images/compatible_ie.gif" width="31" height="30" alt="Internet Explorer" title="Internet Explorer"><img src="/images/compatible_firefox.gif" width="31" height="30" alt="Firefox" title="Firefox"><img src="/images/compatible_opera.gif" width="28" height="30" alt="Opera" title="Opera"><img src="/images/compatible_chrome.gif" width="31" height="30" alt="Google Chrome" title="Google Chrome"><img src="/images/compatible_safari.gif" width="28" height="30" alt="Safari" title="Safari"></p>
+<p>Internet Explorer 9+, Firefox, Opera, Chrome, 和 Safari 支持 &lt;canvas&gt; 元素.</p>
+<p><b>注意:</b> Internet Explorer 8 及更早 IE 版本的浏览器不支持 &lt;canvas&gt; 元素.</p>
+<hr />
+<h2>创建一个画布（Canvas）</h2>
+<p>一个画布在网页中是一个矩形框，通过canvas&gt; 元素来绘制.</p>
+<p><b>注意:</b> 默认情况下 &lt;canvas&gt; 元素没有边框和内容。</p>
+
+<p>&lt;canvas&gt;简单实例如下:</p>
+<div class="code notranslate"><div>
+&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+</div></div>
+
+<p><b>注意:</b> 标签通常需要指定一个id属性 (脚本中经常引用), 
+width 和 height 属性定义的画布的大小.</p>
+<p><b>提示:</b>你可以在HTML页面中使用多个  &lt;canvas&gt; 元素.</p>
+
+<p>使用 style 属性来添加边框:</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+&lt;canvas id="myCanvas" width="200" height="100"<br />
+style="border:1px solid 
+#000000;"&gt;<br />
+&lt;/canvas&gt;
+</div>
+<br /><a target="_blank" href="/try/try.php?filename=tryhtml5_canvas_empty" class="tryitbtn">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>使用 JavaScript 来绘制图像</h2>
+<p>canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成：<p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+&lt;script&gt;<br />
+var c=document.getElementById("myCanvas");<br />
+var ctx=c.getContext("2d");<br />
+ctx.fillStyle="#FF0000";<br />
+ctx.fillRect(0,0,150,75);<br />
+&lt;/script&gt;
+</div>
+<br /><a target="_blank" href="/try/try.php?filename=tryhtml5_canvas_first" class="tryitbtn">尝试一下 »</a>
+</div>
+
+<p><b>实例解析:</b></p>
+<p>首先，找到 &lt;canvas&gt; 元素:</p>
+<div class="code notranslate"><div>
+var c=document.getElementById("myCanvas");
+</div></div>
+
+<p>然后，创建 context 对象：</p>
+<div class="code notranslate"><div>
+var ctx=c.getContext("2d");
+</div></div>
+
+<p>getContext("2d") 对象是内建的 HTML5 对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
+</p>
+<p>下面的两行代码绘制一个红色的矩形：</p>
+<div class="code notranslate"><div>
+ctx.fillStyle="#FF0000";<br />
+ctx.fillRect(0,0,150,75);
+</div></div>
+
+<p>设置fillStyle属性可以是CSS颜色，渐变，或图案。fillStyle
+默认设置是#000000（黑色）。</p>
+<p> fillRect(<i>x,y,width,height</i>) 方法定义了矩形当前的填充方式。</p>
+<hr />
+<h2>Canvas 坐标</h2>
+<p>canvas 是一个二维网格。</p>
+<p>canvas 的左上角坐标为 (0,0)</p>
+<p>上面的 fillRect 方法拥有参数 (0,0,150,75)。</p>
+<p>意思是：在画布上绘制 150x75 的矩形，从左上角开始 (0,0)。</p>
+<p><b>坐标实例</b></p>
+<p>如下图所示，画布的 X 和 Y 坐标用于在画布上对绘画进行定位。鼠标移动的矩形框上，显示定位坐标。</p>
+<div>
+<div style="width:230px;height:20px;text-align:center;clear:both">X</div>
+<div style="width:20px;padding-top:40px;float:left">Y</div>
+<div style="width:402px;float:left">
+<iframe src="/try/demo_source/tryhtml5_canvas_coordinates.htm" frameborder="0" style="border:0;overflow:hidden;width:400px;height:120px;"></iframe>
+</div>
+
+
+</div>
+
+<hr />
+<h2>Canvas - 路径</h2>
+<p>在Canvas上画线，我们将使用以下两种方法：</p>
+<ul>
+<li>moveTo(<i>x,y</i>) 定义线条开始坐标</li>
+	<li>lineTo(<i>x,y</i>) 定义线条结束坐标</li>
+</ul>
+<p>绘制线条我们必须使用到 "ink" 的方法，就像stroke().</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<p>定义开始坐标(0,0), 和结束坐标 (200,100). 然后使用 stroke() 方法来绘制线条:</p>
+
+<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">
+你的浏览器不支持 HTML5 的 &lt;canvas&gt; 元素.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas2");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.moveTo(0,0);
+	ctx.lineTo(200,100);
+	ctx.stroke();
+	}
+</script> 
+<p>JavaScript:</p>
+<div class="example_code notranslate">
+	var c=document.getElementById("myCanvas");<br />var ctx=c.getContext("2d");<br />
+	ctx.moveTo(0,0);<br />ctx.lineTo(200,100);<br />
+	ctx.stroke();</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_canvas_tut_path" target="_blank">尝试一下 »</a>
+</div>
+
+<p>在canvas中绘制圆形, 我们将使用以下方法:</p>
+<ul>
+<li>arc(x,y,r,start,stop)</li>
+</ul>
+<p>实际上我们在绘制圆形时使用了 "ink" 的方法, 比如 stroke() 或者 fill().</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<p>使用 arc() 方法 绘制一个圆:</p>
+<canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">
+你的浏览器不支持 HTML5 的 &lt;canvas&gt; 元素.
+</canvas>
+<script>
+var c=document.getElementById("myCanvas3");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(95,50,40,0,2*Math.PI);
+	ctx.stroke();
+	}
+</script>
+<p>JavaScript:</p>
+<div class="example_code notranslate">
+	var c=document.getElementById("myCanvas");<br />var ctx=c.getContext("2d");<br />
+	ctx.beginPath();<br />ctx.arc(95,50,40,0,2*Math.PI);<br />ctx.stroke();</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_canvas_tut_path2" target="_blank">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>Canvas - 文本</h2>
+<p>使用 canvas 绘制文本，重要的属性和方法如下：</p>
+<ul>
+<li>font - 定义字体</li>
+	<li>fillText(<i>text,x,y</i>) - 在canvas上填充"filled" 的文本</li>
+	<li>strokeText(<i>text,x,y</i>) - 在canvas上填充的文本(no fill)</li>
+</ul>
+<p>使用 fillText():</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<p>用"Arial"字体绘制一个高30px的文字：</p>
+<canvas id="myCanvas4" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">
+你的浏览器不支持 HTML5 的 &lt;canvas&gt; 元素.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas4");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+    var ctx=c.getContext("2d");
+    ctx.font="30px Arial";
+    ctx.fillText("Hello World",10,50);
+	}
+	</script>
+<p>JavaScript:</p>
+<div class="example_code notranslate">
+	var c=document.getElementById("myCanvas");<br />var ctx=c.getContext("2d");<br />
+	ctx.font="30px Arial";<br />ctx.fillText("Hello World",10,50);</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_canvas_tut_text" target="_blank">尝试一下 »</a>
+</div>
+
+<p>使用 strokeText():</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<p>Write a 30px high text (no fill) on the canvas, using the font "Arial":</p>
+<canvas id="myCanvas5" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">
+你的浏览器不支持 HTML5 的 &lt;canvas&gt; 元素.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas5");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+    var ctx=c.getContext("2d");
+    ctx.font="30px Arial";
+    ctx.strokeText("Hello World",10,50);
+	}
+	</script>
+<p>JavaScript:</p>
+<div class="example_code notranslate">
+	var c=document.getElementById("myCanvas");<br />var ctx=c.getContext("2d");<br />
+	ctx.font="30px Arial";<br />ctx.strokeText("Hello World",10,50);</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_canvas_tut_text2" target="_blank">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>Canvas -  渐变</h2>
+<p> 渐变可以填充在矩形, 圆形, 线条, 文本等等, 各种形状可以自己定义不同的颜色。</p>
+<p>以下有两种不同的方式来设置Canvas渐变There are two different types of gradients:</p>
+<ul>
+<li>createLinearGradient(<i>x,y,x1,y1</i>) - 创建线条梯度</li>
+	<li>createRadialGradient(<i>x,y,r,x1,y1,r1</i>) - 创建一个径向/圆梯度</li>
+</ul>
+<p>当我们使用渐变对象，必须使用两种或两种以上的停止颜色。</p>
+<p> addColorStop()方法指定颜色停止，参数使用坐标来描述，可以是0至1.</p>
+<p>使用渐变，设置设置fillStyle或strokeStyle的值为
+梯度，然后绘制形状，如矩形，文本，或一条线。</p>
+<p>使用 createLinearGradient():</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<p>创建一个线性梯度。使用梯度填充矩形:</p>
+<canvas id="myCanvas6" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">
+你的浏览器不支持 HTML5 的 &lt;canvas&gt; 元素.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas6");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+    var ctx=c.getContext("2d");
+    var grd=ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+    ctx.fillStyle=grd;
+    ctx.fillRect(10,10,150,80);
+	}
+	</script>
+<p>JavaScript:</p>
+<div class="example_code notranslate">
+	var c=document.getElementById("myCanvas");<br />
+	var ctx=c.getContext("2d");<br /><br />
+	// Create gradient<br />
+	var grd=ctx.createLinearGradient(0,0,200,0);<br />
+	grd.addColorStop(0,"red");<br />
+	grd.addColorStop(1,"white");<br /><br />
+	// Fill with gradient<br />
+	ctx.fillStyle=grd;<br />
+	ctx.fillRect(10,10,150,80);</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_canvas_tut_grad" target="_blank">尝试一下 »</a>
+</div>
+
+<p>使用 createRadialGradient():</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<p>创建一个径向/圆梯度。使用梯度填充矩形：</p>
+<canvas id="myCanvas7" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">
+你的浏览器不支持 HTML5 的 &lt;canvas&gt; 元素.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas7");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+    var ctx=c.getContext("2d");
+    // Create gradient
+    var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+    // Fill with gradient
+    ctx.fillStyle=grd;
+    ctx.fillRect(10,10,150,80);
+	}
+	</script>
+<p>JavaScript:</p>
+<div class="example_code notranslate">
+	var c=document.getElementById("myCanvas");<br />
+	var ctx=c.getContext("2d");<br /><br />
+	// Create gradient<br />
+	var grd=ctx.createRadialGradient(75,50,5,90,60,100);<br />
+	grd.addColorStop(0,"red");<br />
+	grd.addColorStop(1,"white");<br /><br />
+	// Fill with gradient<br />
+	ctx.fillStyle=grd;<br />
+	ctx.fillRect(10,10,150,80);</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_canvas_tut_grad2" target="_blank">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>Canvas - 图像</h2>
+<p>把一幅图像放置到画布上, 使用以下方法:</p>
+<ul>
+<li>drawImage(<i>image,x,y</i>)</li>
+</ul>
+<div class="example">
+<h2 class="example">使用图像:</h2>
+<p><img id="scream" src="/images/img_the_scream.jpg" alt="The Scream"></p>
+<h2 class="example">实例</h2>
+<p>把一幅图像放置到画布上:</p>
+<canvas id="myCanvas8" width="250" height="300" style="border:1px solid #d3d3d3;background:#ffffff;">
+你的浏览器不支持 HTML5 的 &lt;canvas&gt; 元素.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas8");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+    var ctx=c.getContext("2d");
+    var img=document.getElementById("scream");
+    ctx.drawImage(img,10,10);
+	}
+	</script>
+<p>JavaScript:</p>
+<div class="example_code notranslate">
+	var c=document.getElementById("myCanvas");<br />
+	var ctx=c.getContext("2d");<br />
+	var img=document.getElementById("scream");<br />
+	ctx.drawImage(img,10,10);</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_canvas_tut_img" target="_blank">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>HTML Canvas 参考手册</h2>
+<p>标签的完整属性可以参考<a href="/tags/ref-canvas.html">Canvas 参考手册.</a></p>
+<h2>The HTML &lt;canvas&gt; Tag</h2>
+<table class="reference notranslate">
+<tr>
+<th align="left" width="150">Tag</th>
+<th align="left">描述</th>
+</tr>
+<tr>
+<td><a href="/tags/tag-canvas.html">&lt;canvas&gt;</a></td>
+<td>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。</td>
+</tr>
+</table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/html/html5-new-element.html" rel="prev"> HTML5 新元素</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/html/html5-svg.html" rel="next">HTML5 内联 SVG</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.287 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 21:24:13 -->
+
+<!-- super cache -->

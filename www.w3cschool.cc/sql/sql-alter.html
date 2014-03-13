@@ -1,0 +1,513 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>SQL ALTER TABLE 语句 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='SQL 撤销索引、表以及数据库' href='http://www.w3cschool.cc/sql/sql-drop.html' />
+<link rel='next' title='SQL AUTO INCREMENT 字段' href='http://www.w3cschool.cc/sql/sql-autoincrement.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/sql/sql-alter.html' />
+<meta name="keywords" content="SQL ALTER TABLE 语句,SQL 基础">
+<meta name="description" content="SQL ALTER TABLE 语句  ALTER TABLE 语句 ALTER TABLE 语句用于在已有的表中添加、删除或修改列。 SQL ALTER TABLE 语法 如需在表中添加列，请使用下面的语法:   ALTER TABLE table_name ADD column_name datatype  如需删除表中的列，请使用下面的语法（请注意，某些数据库系统不允许这种在数据库表中删除列的方式）：   ALTER TABLE ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>SQL 基础</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-tutorial.html" >
+	SQL 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-intro.html" >
+	SQL 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-syntax.html" >
+	SQL 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-select.html" >
+	SQL SELECT	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-distinct.html" >
+	SQL SELECT DISTINCT	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-where.html" >
+	SQL WHERE	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-and-or.html" >
+	SQL AND &amp; OR	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-orderby.html" >
+	SQL ORDER BY	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-insert.html" >
+	SQL INSERT INTO	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-update.html" >
+	SQL UPDATE	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-delete.html" >
+	SQL DELETE	</a>
+	<br><h2 class="left"><span class="left_h2">SQL</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/sql/sql-top.html" >
+	SQL SELECT TOP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-like.html" >
+	SQL LIKE	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-wildcards.html" >
+	SQL 通配符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-in.html" >
+	SQL IN	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-between.html" >
+	SQL BETWEEN	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-alias.html" >
+	SQL 别名	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-join.html" >
+	SQL 连接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-join-inner.html" >
+	SQL INNER JOIN	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-join-left.html" >
+	SQL LEFT JOIN	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-join-right.html" >
+	SQL RIGHT JOIN	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-join-full.html" >
+	SQL FULL JOIN	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-union.html" >
+	SQL UNION	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-select-into.html" >
+	SQL SELECT INTO	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-insert-into-select.html" >
+	SQL INSERT INTO SELECT	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-create-db.html" >
+	SQL CREATE DB	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-create-table.html" >
+	SQL CREATE TABLE	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-constraints.html" >
+	SQL 约束	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-notnull.html" >
+	SQL NOT NULL	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-unique.html" >
+	SQL UNIQUE	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-primarykey.html" >
+	SQL PRIMARY KEY	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-foreignkey.html" >
+	SQL FOREIGN KEY	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-check.html" >
+	SQL CHECK	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-default.html" >
+	SQL DEFAULT	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-create-index.html" >
+	SQL CREATE INDEX	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-drop.html" >
+	SQL DROP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-alter.html" >
+	SQL ALTER	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-autoincrement.html" >
+	SQL Auto Increment	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-view.html" >
+	SQL 视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-dates.html" >
+	SQL 日期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-null-values.html" >
+	SQL NULL 值	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-isnull.html" >
+	SQL NULL 函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-datatypes-general.html" >
+	SQL 通用数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-datatypes.html" >
+	SQL DB 数据类型	</a>
+	<br><h2 class="left"><span class="left_h2">SQL</span> 函数</h2>	<a target="_top" href="http://www.w3cschool.cc/sql/sql-function.html" >
+	SQL 函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-avg.html" >
+	SQL AVG()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-count.html" >
+	SQL COUNT()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-first.html" >
+	SQL FIRST()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-last.html" >
+	SQL LAST()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-max.html" >
+	SQL MAX()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-min.html" >
+	SQL MIN()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-sum.html" >
+	SQL SUM()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-groupby.html" >
+	SQL GROUP BY	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-having.html" >
+	SQL HAVING	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-ucase.html" >
+	SQL UCASE()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-lcase.html" >
+	SQL LCASE()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-mid.html" >
+	SQL MID()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-len.html" >
+	SQL LEN()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-round.html" >
+	SQL ROUND()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-now.html" >
+	SQL NOW()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-func-format.html" >
+	SQL FORMAT()	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-quickref.html" >
+	SQL 快速参考	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-hosting.html" >
+	SQL 主机	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sql/sql-summary.html" >
+	SQL 总结	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/sql/sql-drop.html" rel="prev"> SQL 撤销索引、表以及数据库</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/sql/sql-autoincrement.html" rel="next">SQL AUTO INCREMENT 字段</a> &raquo;</div>
+	</div>
+
+	<h1>SQL <span class="color_h1">ALTER TABLE</span> 语句</h1>
+<hr />
+<h2>ALTER TABLE 语句</h2>
+<p>ALTER TABLE 语句用于在已有的表中添加、删除或修改列。</p>
+<h3>SQL ALTER TABLE 语法</h3>
+<p>如需在表中添加列，请使用下面的语法:</p>
+
+<div class="code notranslate"><div>
+ALTER TABLE table_name<br />
+ADD column_name datatype</div></div>
+
+<p>如需删除表中的列，请使用下面的语法（请注意，某些数据库系统不允许这种在数据库表中删除列的方式）：</p>
+
+<div class="code notranslate"><div>
+ALTER TABLE table_name<br />
+DROP COLUMN column_name</div></div>
+
+<p>要改变表中列的数据类型，请使用下面的语法：</p>
+
+<p><b>SQL Server / MS Access：</b></p>
+
+<div class="code notranslate"><div>
+ALTER TABLE table_name<br />
+ALTER COLUMN column_name datatype</div></div>
+
+<p><b>My SQL / Oracle：</b></p>
+
+<div class="code notranslate"><div>
+ALTER TABLE table_name<br />
+MODIFY COLUMN column_name datatype</div></div>
+<br /><hr />
+<h2>SQL ALTER TABLE 实例</h2>
+<p>请看 "Persons" 表：</p>
+<table class="reference notranslate">
+<tr>
+<th align="left">P_Id</th>
+    <th align="left">LastName</th>
+    <th align="left">FirstName</th>
+    <th align="left">Address</th>
+    <th align="left">City</th>
+  </tr>
+<tr>
+<td>1</td>
+    <td>Hansen</td>
+    <td>Ola</td>
+    <td>Timoteivn 10</td>
+    <td>Sandnes</td>
+  </tr>
+<tr>
+<td>2</td>
+    <td>Svendson</td>
+    <td>Tove</td>
+    <td>Borgvn 23</td>
+    <td>Sandnes</td>
+  </tr>
+<tr>
+<td>3</td>
+    <td>Pettersen</td>
+    <td>Kari</td>
+    <td>Storgt 20</td>
+    <td>Stavanger</td>
+  </tr>
+</table>
+<p>现在，我们想在 "Persons" 表中添加一个名为 "DateOfBirth" 的列。</p>
+<p>我们使用下面的 SQL 语句：</p>
+
+<div class="code notranslate"><div>
+ALTER TABLE Persons<br />
+ADD DateOfBirth date</div></div>
+
+<p>请注意，新列 "DateOfBirth" 的类型是 date，可以存放日期。数据类型规定列中可以存放的数据的类型。如需了解 MS Access、MySQL 和 SQL Server 中可用的数据类型，请访问我们完整的 <a href="sql-datatypes.html">数据类型参考手册</a>。</p>
+
+<p>现在，"Persons" 表将如下所示：</p>
+<table class="reference notranslate">
+<tr>
+<th align="left">P_Id</th>
+    <th align="left">LastName</th>
+    <th align="left">FirstName</th>
+    <th align="left">Address</th>
+    <th align="left">City</th>
+    <th align="left">DateOfBirth</th>
+  </tr>
+<tr>
+<td>1</td>
+    <td>Hansen</td>
+    <td>Ola</td>
+    <td>Timoteivn 10</td>
+    <td>Sandnes</td>
+    <td> </td>
+  </tr>
+<tr>
+<td>2</td>
+    <td>Svendson</td>
+    <td>Tove</td>
+    <td>Borgvn 23</td>
+    <td>Sandnes</td>
+    <td> </td>
+  </tr>
+<tr>
+<td>3</td>
+    <td>Pettersen</td>
+    <td>Kari</td>
+    <td>Storgt 20</td>
+    <td>Stavanger</td>
+    <td> </td>
+  </tr>
+</table>
+<br /><hr />
+<h2>改变数据类型实例</h2>
+<p>现在，我们想要改变 "Persons" 表中 "DateOfBirth" 列的数据类型。</p>
+<p>我们使用下面的 SQL 语句：</p>
+
+<div class="code notranslate"><div>
+ALTER TABLE Persons<br />
+ALTER COLUMN DateOfBirth year</div></div>
+
+<p>请注意，现在 "DateOfBirth" 列的类型是 year，可以存放 2 位或 4 位格式的年份。</p>
+<hr />
+<h2>DROP COLUMN 实例</h2>
+<p>接下来，我们想要删除 "Person" 表中的 "DateOfBirth" 列。</p>
+<p>我们使用下面的 SQL 语句：</p>
+
+<div class="code notranslate"><div>
+ALTER TABLE Persons<br />
+DROP COLUMN DateOfBirth</div></div>
+
+<p>现在，"Persons" 表将如下所示：</p>
+<table class="reference notranslate">
+<tr>
+<th align="left">P_Id</th>
+    <th align="left">LastName</th>
+    <th align="left">FirstName</th>
+    <th align="left">Address</th>
+    <th align="left">City</th>
+  </tr>
+<tr>
+<td>1</td>
+    <td>Hansen</td>
+    <td>Ola</td>
+    <td>Timoteivn 10</td>
+    <td>Sandnes</td>
+  </tr>
+<tr>
+<td>2</td>
+    <td>Svendson</td>
+    <td>Tove</td>
+    <td>Borgvn 23</td>
+    <td>Sandnes</td>
+  </tr>
+<tr>
+<td>3</td>
+    <td>Pettersen</td>
+    <td>Kari</td>
+    <td>Storgt 20</td>
+    <td>Stavanger</td>
+  </tr>
+</table>
+<br />	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/sql/sql-drop.html" rel="prev"> SQL 撤销索引、表以及数据库</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/sql/sql-autoincrement.html" rel="next">SQL AUTO INCREMENT 字段</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.260 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 03:30:06 -->
+
+<!-- super cache -->

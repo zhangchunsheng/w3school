@@ -1,0 +1,429 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 实例 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='HTML DOM 总结' href='http://www.w3cschool.cc/htmldom/htmldom-summary.html' />
+<link rel='next' title='XML DOM baseURI 属性' href='http://www.w3cschool.cc/dom/prop-attr-baseuri.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/htmldom/htmldom-examples.html' />
+<meta name="keywords" content="DOM 实例,HTML DOM">
+<meta name="description" content="HTML DOM 实例   使用JavaScript访问和操作的HTML DOM对象的例子。  Document 对象  使用 document.write() 输出文本 使用 document.write() 输出 HTML 返回文档中锚的数目 返回文档中第一个锚的 innerHTML 返回文档中表单的数目 返回文档中第一个表单的名字 返回文档中的图像数 返回文档中第一个图像的ID 返回文档中的链接数 返回文档中的第一个链接的ID 返..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>HTML DOM</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-tutorial.html" >
+	HTML DOM 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-intro.html" >
+	HTML DOM 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-nodes.html" >
+	HTML DOM 节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-methods.html" >
+	HTML DOM 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-properties.html" >
+	HTML DOM 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-access.html" >
+	HTML DOM 访问	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-modify.html" >
+	HTML DOM 修改	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-content.html" >
+	HTML DOM  修改 HTML 内容	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-elements.html" >
+	HTML DOM 元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-events.html" >
+	HTML DOM 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-navigation.html" >
+	HTML DOM 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-summary.html" >
+	HTML DOM 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-examples.html" >
+	DOM 实例	</a>
+	<br><h2 class="left"><span class="left_h2">DOM</span> 参考手册</h2>
+<a target="_top" href="/jsref/jsref-tutorial.html">HTML DOM 对象</a></div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/htmldom/htmldom-summary.html" rel="prev"> HTML DOM 总结</a></div>
+		<div class="next"></div>
+	</div>
+
+	<h1>HTML DOM <span class="color_h1">实例</span>
+</h1>
+<hr />
+<p class="intro">使用JavaScript访问和操作的HTML DOM对象的例子。</p>
+
+<h2 class="tutheader">Document 对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=js_text" target="_blank">使用 document.write() 输出文本</a></li>
+<li><a href="/try/try.php?filename=js_formattext" target="_blank">使用 document.write() 输出 HTML</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_anchors" target="_blank">返回文档中锚的数目</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_anchors2" target="_blank">返回文档中第一个锚的 innerHTML</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_forms" target="_blank">返回文档中表单的数目</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_forms2" target="_blank">返回文档中第一个表单的名字</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_images" target="_blank">返回文档中的图像数</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_images2" target="_blank">返回文档中第一个图像的ID</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_links" target="_blank">返回文档中的链接数</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_links2" target="_blank">返回文档中的第一个链接的ID</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_cookie" target="_blank">返回文档中的所有cookies的名称/值对</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_domain" target="_blank">返回加载的文档的服务器域名</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_lastmodified" target="_blank">返回文档的最后一次修改时间</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_referrer" target="_blank">返回加载的当前文档的URL</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_title" target="_blank">返回文档的标题</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_url" target="_blank">返回文档的完整的URL</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_open" target="_blank">打开输出流，向流中输入文本</a></li>
+
+<li><a href="/try/try.php?filename=tryjsref_doc_writeln" target="_blank">write() 和 writeln()的不同</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_getelementbyid" target="_blank">用指定的ID弹出一个元素的innerHTML</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_getelementsbyname" target="_blank">用指定的Name弹出元素的数量</a></li>
+<li><a href="/try/try.php?filename=tryjsref_doc_getelementsbytagname" target="_blank">用指定的tagname弹出元素的数量</a></li>
+
+<br />
+<li>更多的Document  对象的例子，在我们的<a href="tag/" target="_blank">JavaScript&nbsp; 参考手册。</a></li>
+</ul>
+<h2 class="tutheader">Anchor  对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=tryjsref_anchor_charset" target="_blank">返回和设置链接的charset属性</a></li>
+<li><a href="/try/try.php?filename=tryjsref_anchor_href" target="_blank">返回和设置链接的href属性</a></li>
+<li><a href="/try/try.php?filename=tryjsref_anchor_hreflang" target="_blank">返回和设置链接的hreflang属性</a></li>
+<li><a href="/try/try.php?filename=tryjsref_anchor_name" target="_blank">返回一个锚的名字</a></li>
+<li><a href="/try/try.php?filename=tryjsref_anchor_rel" target="_blank">返回当前的文件和链接的文档之间的关系</a></li>
+<li><a href="/try/try.php?filename=tryjsref_anchor_target" target="_blank">改变链接的target属性</a></li>
+<li><a href="/try/try.php?filename=tryjsref_anchor_type" target="_blank">返回一个链接的type属性的值</a></li>
+<br />
+<li>更多的Anchor 对象的例子，在我们的<a href="tag/" target="_blank">JavaScript&nbsp; 参考手册。</a></li>
+</ul>
+<h2 class="tutheader">Area  对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=tryjsref_area_alt" target="_blank">返回图像映射某个区域的替代文字</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_coords" target="_blank">返回图像映射某个区域的坐标</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_hash" target="_blank">返回一个区域的href属性的锚部分</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_host" target="_blank">返回的主机名：图像映射的某个区域的端口</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_hostname" target="_blank">返回图像映射的某个区域的hostname</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_port" target="_blank">返回图像映射的某个区域的port</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_href" target="_blank">返回图像映射的某个区域的href</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_pathname" target="_blank">返回图像映射的某个区域的pathname</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_protocol" target="_blank">返回图像映射的某个区域的protocol</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_search" target="_blank">返回一个区域的href属性的querystring部分</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_shape" target="_blank">返回图像映射的某个区域的shape</a></li>
+<li><a href="/try/try.php?filename=tryjsref_area_target" target="_blank">返回图像映射的某个区域的target的值</a></li>
+<br />
+<li>更多的Area  对象的例子，在我们的<a href="tag/" target="_blank">JavaScript 参考手册。</a></li>
+</ul>
+<h2 class="tutheader">Base   对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=tryjsref_base_href" target="_blank">返回页面上所有相对URL的基URL</a></li>
+<li><a href="/try/try.php?filename=tryjsref_base_target" target="_blank">返回页面上所有相对链接的基链接</a></li>
+<br />
+<li>更多的Base  对象对象的例子，在我们的<a href="tag/" target="_blank">JavaScript 参考手册。</a></li>
+</ul>
+<h2 class="tutheader">Button  对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=tryjsref_button_disabled" target="_blank">当点击完button不可用</a></li>
+<li><a href="/try/try.php?filename=tryjsref_button_name" target="_blank">返回一个button的name</a></li>
+<li><a href="/try/try.php?filename=tryjsref_button_type" target="_blank">返回一个button的type</a></li>
+<li><a href="/try/try.php?filename=tryjsref_button_value" target="_blank">返回一个button的value</a></li>
+<li><a href="/try/try.php?filename=tryjsref_button_form" target="_blank">返回一个button所属表的ID</a></li>
+<br />
+<li>更多Button  对象实例在我们的<a href="tag/" target="_blank"><b>JavaScript 参考手册。</b></a></li>
+</ul>
+
+<h2 class="tutheader">Form   对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=tryjsref_form_elements" target="_blank">返回一个表单中所有元素的value</a></li>
+<li><a href="/try/try.php?filename=tryjsref_form_acceptcharset" target="_blank">返回一个表单acceptCharset属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_form_action" target="_blank">返回一个表单action属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_form_enctype" target="_blank">返回表单中的enctype属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_form_length" target="_blank">返回一个表单中元素的数量</a></li>
+<li><a href="/try/try.php?filename=tryjsref_form_method" target="_blank">返回发送表单数据的方法</a></li>
+<li><a href="/try/try.php?filename=tryjsref_form_name" target="_blank">返回一个表单的name</a></li>
+<li><a href="/try/try.php?filename=tryjsref_form_target" target="_blank">返回一个表单target属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_form_reset" target="_blank">重置表单</a></li>
+<li><a href="/try/try.php?filename=tryjsref_form_submit" target="_blank">提交表单</a></li>
+<br />
+<li>更多Button  对象实例在我们的<a href="tag/" target="_blank"><b>JavaScript 参考手册。</b></a></li>
+</ul>
+
+<h2 class="tutheader">Frame/IFrame  对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=tryjsref_iframe_align" target="_blank">对iframe排版</a></li>
+<li><a href="/try/try.php?filename=tryjsref_iframe_contentdocument" target="_blank">改变一个包含在iframe中的文档的背景颜色</a></li>
+<li><a href="/try/try.php?filename=tryjsref_iframe_frameborder" target="_blank">返回一个iframe中的frameborder属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_iframe_frameborder2" target="_blank">删除iframe的frameborder</a></li>
+<li><a href="/try/try.php?filename=tryjsref_iframe_height" target="_blank">改变iframe的高度和宽度</a></li>
+
+<li><a href="/try/try.php?filename=tryjsref_iframe_longdesc" target="_blank">返回一个iframe中的longdesc属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_iframe_marginheight" target="_blank">返回一个iframe中的marginheight属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_iframe_marginwidth" target="_blank">返回一个iframe中的marginwidth属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_iframe_name" target="_blank">返回一个iframe中的name属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_iframe_scrolling" target="_blank">返回和设置一个iframe中的scrolling属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_iframe_src" target="_blank">改变一个iframe的src</a></li>
+<br />
+<li>更多Frame/IFrame  对象实例在我们的<a href="tag/" target="_blank"><b>JavaScript 参考手册。</b></a></li>
+</ul>
+
+<h2 class="tutheader">Image   对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=tryjsref_img_align" target="_blank">对image排版</a></li>
+<li><a href="/try/try.php?filename=tryjsref_img_alt" target="_blank">返回image的替代文本</a></li>
+<li><a href="/try/try.php?filename=tryjsref_img_border" target="_blank">给image加上border</a></li>
+<li><a href="/try/try.php?filename=tryjsref_img_height" target="_blank">改变image的高度和宽度</a></li>
+<li><a href="/try/try.php?filename=tryjsref_img_hspace" target="_blank">设置image的hspace和vspace属性</a></li>
+
+<li><a href="/try/try.php?filename=tryjsref_img_longdesc" target="_blank">返回image的longdesc属性的值</a></li>
+<li><a href="/try/try.php?filename=tryjsref_img_lowsrc" target="_blank">创建一个链接指向一个低分辨率的image</a></li>
+<li><a href="/try/try.php?filename=tryjsref_img_name" target="_blank">返回image的name</a></li>
+<li><a href="/try/try.php?filename=tryjsref_img_src" target="_blank">改变image的src</a></li>
+<li><a href="/try/try.php?filename=tryjsref_img_usemap" target="_blank">返回一个客户端图像映射的usemap的值</a></li>
+<br />
+<li>更多Image  对象实例在我们的<a href="tag/" target="_blank"><b>JavaScript 参考手册。</b></a></li>
+</ul>
+
+<h2 class="tutheader">Event   对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=try_dom_event_button" target="_blank">哪个鼠标键被点击了？</a></li>
+<li><a href="/try/try.php?filename=try_dom_event_keycode" target="_blank">被按下的键盘键的keycode？</a></li>
+<li><a href="/try/try.php?filename=try_dom_event_clientxy" target="_blank">鼠标的坐标？</a></li>
+<li><a href="/try/try.php?filename=try_dom_event_screenxy" target="_blank">鼠标相对于屏幕的坐标？</a></li>
+<li><a href="/try/try.php?filename=try_dom_event_shiftkey" target="_blank">shift键被按下了吗？</a></li>
+<li><a href="/try/try.php?filename=try_dom_event_srcelement" target="_blank">哪个元素被按下了？</a></li>
+<li><a href="/try/try.php?filename=try_dom_event_type" target="_blank">哪个事件发生了？</a></li>
+</ul>
+<h2 class="tutheader">Option and Select  对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=try_dom_select_disabled" target="_blank">禁用和启用下拉列表</a></li>
+<li><a href="/try/try.php?filename=try_dom_select_form" target="_blank">获得有下拉列表的表单的ID</a></li>
+<li><a href="/try/try.php?filename=try_dom_select_length" target="_blank">获得下拉列表的选项数量</a></li>
+<li><a href="/try/try.php?filename=try_dom_select_size" target="_blank">将下拉列表变成多行列表</a></li>
+<li><a href="/try/try.php?filename=try_dom_select_multiple" target="_blank">在下拉列表中选择多个选项</a></li>
+<li><a href="/try/try.php?filename=try_dom_select_options" target="_blank">弹出下拉列表中被选中的选项</a></li>
+<li><a href="/try/try.php?filename=try_dom_option_index" target="_blank">弹出下拉列表中被选中的选项的索引</a></li>
+<li><a href="/try/try.php?filename=try_dom_option_settext" target="_blank">改变下拉列表中被选中的选项的文本</a></li>
+<li><a href="/try/try.php?filename=try_dom_select_remove" target="_blank">删除下拉列表中的选项</a></li>
+</ul>
+<h2 class="tutheader">Table, TableHeader, TableRow, TableData  对象</h2>
+<ul class="dd">
+<li><a href="/try/try.php?filename=try_dom_table_border" target="_blank">改变表格边框的宽度</a></li>
+<li><a href="/try/try.php?filename=try_dom_table_paddspac" target="_blank">改变表格的cellpadding和cellspacing</a></li>
+<li><a href="/try/try.php?filename=try_dom_table_frame" target="_blank">指定表格的frame</a></li>
+<li><a href="/try/try.php?filename=try_dom_table_rules" target="_blank">为表格指定规则</a></li>
+<li><a href="/try/try.php?filename=try_dom_table_rows" target="_blank">一个行的innerHTML</a></li>
+
+<li><a href="/try/try.php?filename=try_dom_table_cells" target="_blank">一个单元格的innerHTML</a></li>
+<li><a href="/try/try.php?filename=try_dom_table_createcaption" target="_blank">为表格创建一个标题</a></li>
+<li><a href="/try/try.php?filename=try_dom_table_deleterow" target="_blank">删除表格中的行</a></li>
+<li><a href="/try/try.php?filename=try_dom_table_insertrow" target="_blank">添加表格中的行</a></li>
+<li><a href="/try/try.php?filename=try_dom_tablerow_insertcell" target="_blank">添加表格行中的单元格</a></li>
+
+<li><a href="/try/try.php?filename=try_dom_tablerow_align" target="_blank">单元格内容水平对齐</a></li>
+<li><a href="/try/try.php?filename=try_dom_tablerow_valign" target="_blank">单元格内容垂直对齐</a></li>
+<li><a href="/try/try.php?filename=try_dom_tablecell_align" target="_blank">对单个单元格的内容水平对齐</a></li>
+<li><a href="/try/try.php?filename=try_dom_tablecell_valign" target="_blank">对单个单元格的内容垂直对齐</a></li>
+<li><a href="/try/try.php?filename=try_dom_tablerow_cells" target="_blank">改变单元格的内容</a></li>
+<li><a href="/try/try.php?filename=try_dom_tablecell_colspan" target="_blank">改变行的内容</a></li>
+</ul>
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/htmldom/htmldom-summary.html" rel="prev"> HTML DOM 总结</a></div>
+		<div class="next"></div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.122 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 20:29:21 -->
+
+<!-- super cache -->

@@ -1,0 +1,1152 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>PHP 5 Timezones | w3cschool菜鸟教程</title>
+	<link rel='prev' title='JavaScript 比较和逻辑运算符' href='http://www.w3cschool.cc/js/js-comparisons.html' />
+<link rel='next' title='JavaScript If&#8230;Else 语句' href='http://www.w3cschool.cc/js/js-if-else.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/php/php-ref-timezones.html' />
+<meta name="keywords" content="PHP 5 Timezones,PHP 基础">
+<meta name="description" content="PHP 5 时区   PHP 支持的时区 下面是 PHP 支持的时区的完整列表，这些对一些 PHP 日期函数很有用。  非洲   美洲   南极洲   北冰洋   亚洲     大西洋     大洋洲     欧洲     印度洋   太平洋   非洲   Africa/Abidjan     Africa/Accra     Africa/Addis_Ababa     Africa/Algiers     Africa/Asmara..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>PHP 基础</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-tutorial.html" >
+	PHP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-intro.html" >
+	PHP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-install.html" >
+	PHP 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-syntax.html" >
+	PHP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-variables.html" >
+	PHP 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-string.html" >
+	PHP 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-operators.html" >
+	PHP 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-if-else.html" >
+	PHP If...Else	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-switch.html" >
+	PHP Switch	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-arrays.html" >
+	PHP 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-arrays-sort.html" >
+	PHP 数组排序	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-superglobals.html">
+	PHP超级全局变量	</a>	<a target="_top" href="http://www.w3cschool.cc/php/php-looping.html" >
+	PHP While 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-looping-for.html" >
+	PHP For 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-functions.html" >
+	PHP 函数	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-magic-constant.html">
+	PHP 魔术变量	</a>
+<br><h2 class="left"><span class="left_h2">PHP</span> 表单</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-forms.html" >
+	PHP 表单	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-form-validation.html">
+	PHP 表单验证</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-required.html">
+	PHP表单 - 必需字段</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-url-email.html">
+	PHP表单 - 验证邮件和URL</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-complete.html">
+	PHP 完整表单实例</a>	<a target="_top" href="http://www.w3cschool.cc/php/php-get.html" >
+	PHP $_GET 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-post.html" >
+	PHP $_POST 变量	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-arrays-multi.html" >
+	PHP 多维数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-date.html" >
+	PHP 日期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-includes.html" >
+	PHP 包含	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-file.html" >
+	PHP 文件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-file-upload.html" >
+	PHP 文件上传	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-cookies.html" >
+	PHP Cookies	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-sessions.html" >
+	PHP Sessions	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mail.html" >
+	PHP E-mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-secure-mail.html" >
+	PHP 安全 E-mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-error.html" >
+	PHP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-exception.html" >
+	PHP Exception	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-filter.html" >
+	PHP Filter	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 数据库</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-intro.html" >
+	PHP MySQL 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-connect.html" >
+	PHP MySQL Connect	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-create.html" >
+	PHP MySQL Create	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-insert.html" >
+	PHP MySQL Insert	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-select.html" >
+	PHP MySQL Select	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-where.html" >
+	PHP MySQL Where	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-order-by.html" >
+	PHP MySQL Order By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-update.html" >
+	PHP MySQL Update	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-delete.html" >
+	PHP MySQL Delete	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-db-odbc.html" >
+	PHP ODBC	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> XML</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-xml-parser-expat.html" >
+	XML Expat Parser	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-xml-dom.html" >
+	XML DOM	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-xml-simplexml.html" >
+	XML SimpleXML	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 与 AJAX</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-intro.html" >
+	AJAX 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-php.html" >
+	AJAX PHP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-database.html" >
+	AJAX 数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-xml.html" >
+	AJAX XML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-livesearch.html" >
+	AJAX Live Search	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-rss-reader.html" >
+	AJAX RSS Reader	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-poll.html" >
+	AJAX Poll	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 参考手册</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-ref-array.html" >
+	PHP Array	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-calendar.html" >
+	PHP Calendar	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-curl.html">PHP cURL </a>	<a target="_top" href="http://www.w3cschool.cc/php/php-ref-date.html" >
+	PHP Date	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-directory.html" >
+	PHP Directory	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-error.html" >
+	PHP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-filesystem.html" >
+	PHP Filesystem	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-filter.html" >
+	PHP Filter	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-ftp.html" >
+	PHP FTP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-http.html" >
+	PHP HTTP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-libxml.html" >
+	PHP Libxml	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-mail.html" >
+	PHP Mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-math.html" >
+	PHP Math	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-misc.html" >
+	PHP Misc	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-mysqli.html" >
+	PHP MySQLi	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-simplexml.html" >
+	PHP SimpleXML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-string.html" >
+	PHP String	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-xml.html" >
+	PHP XML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-zip.html" >
+	PHP Zip	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-timezones.html" >
+	PHP Timezones	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/php/php-ajax-poll.html" rel="prev"> PHP 实例 AJAX 投票</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/php/func-array.html" rel="next">PHP array() 函数</a> &raquo;</div>
+	</div>
+
+	<h1>PHP 5 <span class="color_h1">时区</span>
+</h1>
+<hr />
+<h2>PHP 支持的时区</h2>
+<p>下面是 PHP 支持的时区的完整列表，这些对一些 PHP 日期函数很有用。</p>
+<ul style="margin-top:0px;margin-bottom:0px">
+<li><a href="#africa">非洲</a></li>
+  <li><a href="#america">美洲</a></li>
+  <li><a href="#antarctica">南极洲</a></li>
+  <li><a href="#arctic">北冰洋</a></li>
+  <li><a href="#asia">亚洲</a></li>  
+  <li><a href="#atlantic">大西洋</a></li>  
+  <li><a href="#australia">大洋洲</a></li>  
+  <li><a href="#europe">欧洲</a></li>  
+  <li><a href="#indian">印度洋</a></li>
+  <li><a href="#pacific">太平洋</a></li>
+</ul>
+<br /><hr />
+<h2><a id="africa">非洲</a></h2>
+<table class="reference notranslate">
+<tr>
+<td width="20%">Africa/Abidjan</td>
+    <td width="20%">Africa/Accra</td>
+    <td width="20%">Africa/Addis_Ababa</td>
+    <td width="20%">Africa/Algiers</td>
+    <td width="20%">Africa/Asmara</td>
+  </tr>
+<tr>
+<td>Africa/Asmera</td>
+    <td>Africa/Bamako</td>
+    <td>Africa/Bangui</td>
+    <td>Africa/Banjul</td>
+    <td>Africa/Bissau</td>
+  </tr>
+<tr>
+<td>Africa/Blantyre</td>
+    <td>Africa/Brazzaville</td>
+    <td>Africa/Bujumbura</td>
+    <td>Africa/Cairo</td>
+    <td>Africa/Casablanca</td>
+    </tr>
+<tr>
+<td>Africa/Ceuta</td>
+    <td>Africa/Conakry</td>
+    <td>Africa/Dakar</td>
+    <td>Africa/Dar_es_Salaam</td>
+    <td>Africa/Djibouti</td>
+    </tr>
+<tr>
+<td>Africa/Douala</td>
+    <td>Africa/El_Aaiun</td>
+    <td>Africa/Freetown</td>
+    <td>Africa/Gaborone</td>
+    <td>Africa/Harare</td>
+    </tr>
+<tr>
+<td>Africa/Johannesburg</td>
+    <td>Africa/Juba</td>
+    <td>Africa/Kampala</td>
+    <td>Africa/Khartoum</td>
+    <td>Africa/Kigali</td>
+  </tr>
+<tr>
+<td>Africa/Kinshasa</td>
+    <td>Africa/Lagos</td>
+    <td>Africa/Libreville</td>
+    <td>Africa/Lome</td>
+    <td>Africa/Luanda</td>
+  </tr>
+<tr>
+<td>Africa/Lubumbashi</td>
+    <td>Africa/Lusaka</td>
+    <td>Africa/Malabo</td>
+    <td>Africa/Maputo</td>
+    <td>Africa/Maseru</td>
+  </tr>
+<tr>
+<td>Africa/Mbabane</td>
+    <td>Africa/Mogadishu</td>
+    <td>Africa/Monrovia</td>
+    <td>Africa/Nairobi</td>
+    <td>Africa/Ndjamena</td>
+    </tr>
+<tr>
+<td>Africa/Niamey</td>
+    <td>Africa/Nouakchott</td>
+    <td>Africa/Ouagadougou</td>
+    <td>Africa/Porto-Novo</td>
+    <td>Africa/Sao_Tome</td>
+    </tr>
+<tr>
+<td>Africa/Timbuktu</td>
+    <td>Africa/Tripoli</td>
+    <td>Africa/Tunis</td>
+    <td>Africa/Windhoek</td>
+    <td> </td>
+    </tr>
+</table>
+<h2><a id="america">美洲</a></h2>
+<table class="reference notranslate">
+<tr>
+<td width="33%">America/Adak</td>
+    <td width="33%">America/Anchorage</td>
+    <td width="34%">America/Anguilla</td>
+  </tr>
+<tr>
+<td>America/Antigua</td>
+    <td>America/Araguaina</td>
+    <td>America/Argentina/Buenos_Aires</td>
+  </tr>
+<tr>
+<td>America/Argentina/Catamarca</td>
+    <td>America/Argentina/ComodRivadavia</td>
+    <td>America/Argentina/Cordoba</td>
+    </tr>
+<tr>
+<td>America/Argentina/Jujuy</td>
+    <td>America/Argentina/La_Rioja</td>
+    <td>America/Argentina/Mendoza</td>
+    </tr>
+<tr>
+<td>America/Argentina/Rio_Gallegos</td>
+    <td>America/Argentina/Salta</td>
+    <td>America/Argentina/San_Juan</td>
+    </tr>
+<tr>
+<td>America/Argentina/San_Luis</td>
+    <td>America/Argentina/Tucuman</td>
+    <td>America/Argentina/Ushuaia</td>
+    </tr>
+<tr>
+<td>America/Aruba</td>
+    <td>America/Asuncion</td>
+    <td>America/Atikokan</td>
+    </tr>
+<tr>
+<td>America/Atka</td>
+    <td>America/Bahia</td>
+    <td>America/Bahia_Banderas</td>
+    </tr>
+<tr>
+<td>America/Barbados</td>
+    <td>America/Belem</td>
+    <td>America/Belize</td>
+    </tr>
+<tr>
+<td>America/Blanc-Sablon</td>
+    <td>America/Boa_Vista</td>
+    <td>America/Bogota</td>
+    </tr>
+<tr>
+<td>America/Boise</td>
+    <td>America/Buenos_Aires</td>
+    <td>America/Cambridge_Bay</td>
+    </tr>
+<tr>
+<td>America/Campo_Grande</td>
+    <td>America/Cancun</td>
+    <td>America/Caracas</td>
+    </tr>
+<tr>
+<td>America/Catamarca</td>
+    <td>America/Cayenne</td>
+    <td>America/Cayman</td>
+    </tr>
+<tr>
+<td>America/Chicago</td>
+    <td>America/Chihuahua</td>
+    <td>America/Coral_Harbour</td>
+    </tr>
+<tr>
+<td>America/Cordoba</td>
+    <td>America/Costa_Rica</td>
+    <td>America/Creston</td>
+    </tr>
+<tr>
+<td>America/Cuiaba</td>
+    <td>America/Curacao</td>
+    <td>America/Danmarkshavn</td>
+    </tr>
+<tr>
+<td>America/Dawson</td>
+    <td>America/Dawson_Creek</td>
+    <td>America/Denver</td>
+    </tr>
+<tr>
+<td>America/Detroit</td>
+    <td>America/Dominica</td>
+    <td>America/Edmonton</td>
+    </tr>
+<tr>
+<td>America/Eirunepe</td>
+    <td>America/El_Salvador</td>
+    <td>America/Ensenada</td>
+    </tr>
+<tr>
+<td>America/Fort_Wayne</td>
+    <td>America/Fortaleza</td>
+    <td>America/Glace_Bay</td>
+    </tr>
+<tr>
+<td>America/Godthab</td>
+    <td>America/Goose_Bay</td>
+    <td>America/Grand_Turk</td>
+    </tr>
+<tr>
+<td>America/Grenada</td>
+    <td>America/Guadeloupe</td>
+    <td>America/Guatemala</td>
+    </tr>
+<tr>
+<td>America/Guayaquil</td>
+    <td>America/Guyana</td>
+    <td>America/Halifax</td>
+    </tr>
+<tr>
+<td>America/Havana</td>
+    <td>America/Hermosillo</td>
+    <td>America/Indiana/Indianapolis</td>
+    </tr>
+<tr>
+<td>America/Indiana/Knox</td>
+    <td>America/Indiana/Marengo</td>
+    <td>America/Indiana/Petersburg</td>
+    </tr>
+<tr>
+<td>America/Indiana/Tell_City</td>
+    <td>America/Indiana/Vevay</td>
+    <td>America/Indiana/Vincennes</td>
+    </tr>
+<tr>
+<td>America/Indiana/Winamac</td>
+    <td>America/Indianapolis</td>
+    <td>America/Inuvik</td>
+    </tr>
+<tr>
+<td>America/Iqaluit</td>
+    <td>America/Jamaica</td>
+    <td>America/Jujuy</td>
+    </tr>
+<tr>
+<td>America/Juneau</td>
+    <td>America/Kentucky/Louisville</td>
+    <td>America/Kentucky/Monticello</td>
+    </tr>
+<tr>
+<td>America/Knox_IN</td>
+    <td>America/Kralendijk</td>
+    <td>America/La_Paz</td>
+    </tr>
+<tr>
+<td>America/Lima</td>
+    <td>America/Los_Angeles</td>
+    <td>America/Louisville</td>
+    </tr>
+<tr>
+<td>America/Lower_Princes</td>
+    <td>America/Maceio</td>
+    <td>America/Managua</td>
+    </tr>
+<tr>
+<td>America/Manaus</td>
+    <td>America/Marigot</td>
+    <td>America/Martinique</td>
+    </tr>
+<tr>
+<td>America/Matamoros</td>
+    <td>America/Mazatlan</td>
+    <td>America/Mendoza</td>
+    </tr>
+<tr>
+<td>America/Menominee</td>
+    <td>America/Merida</td>
+    <td>America/Metlakatla</td>
+    </tr>
+<tr>
+<td>America/Mexico_City</td>
+    <td>America/Miquelon</td>
+    <td>America/Moncton</td>
+    </tr>
+<tr>
+<td>America/Monterrey</td>
+    <td>America/Montevideo</td>
+    <td>America/Montreal</td>
+    </tr>
+<tr>
+<td>America/Montserrat</td>
+    <td>America/Nassau</td>
+    <td>America/New_York</td>
+    </tr>
+<tr>
+<td>America/Nipigon</td>
+    <td>America/Nome</td>
+    <td>America/Noronha</td>
+    </tr>
+<tr>
+<td>America/North_Dakota/Beulah</td>
+    <td>America/North_Dakota/Center</td>
+    <td>America/North_Dakota/New_Salem</td>
+    </tr>
+<tr>
+<td>America/Ojinaga</td>
+    <td>America/Panama</td>
+    <td>America/Pangnirtung</td>
+    </tr>
+<tr>
+<td>America/Paramaribo</td>
+    <td>America/Phoenix</td>
+    <td>America/Port-au-Prince</td>
+    </tr>
+<tr>
+<td>America/Port_of_Spain</td>
+    <td>America/Porto_Acre</td>
+    <td>America/Porto_Velho</td>
+    </tr>
+<tr>
+<td>America/Puerto_Rico</td>
+    <td>America/Rainy_River</td>
+    <td>America/Rankin_Inlet</td>
+    </tr>
+<tr>
+<td>America/Recife</td>
+    <td>America/Regina</td>
+    <td>America/Resolute</td>
+    </tr>
+<tr>
+<td>America/Rio_Branco</td>
+    <td>America/Rosario</td>
+    <td>America/Santa_Isabel</td>
+    </tr>
+<tr>
+<td>America/Santarem</td>
+    <td>America/Santiago</td>
+    <td>America/Santo_Domingo</td>
+    </tr>
+<tr>
+<td>America/Sao_Paulo</td>
+    <td>America/Scoresbysund</td>
+    <td>America/Shiprock</td>
+    </tr>
+<tr>
+<td>America/Sitka</td>
+    <td>America/St_Barthelemy</td>
+    <td>America/St_Johns</td>
+    </tr>
+<tr>
+<td>America/St_Kitts</td>
+    <td>America/St_Lucia</td>
+    <td>America/St_Thomas</td>
+    </tr>
+<tr>
+<td>America/St_Vincent</td>
+    <td>America/Swift_Current</td>
+    <td>America/Tegucigalpa</td>
+    </tr>
+<tr>
+<td>America/Thule</td>
+    <td>America/Thunder_Bay</td>
+    <td>America/Tijuana</td>
+    </tr>
+<tr>
+<td>America/Toronto</td>
+    <td>America/Tortola</td>
+    <td>America/Vancouver</td>
+    </tr>
+<tr>
+<td>America/Virgin</td>
+    <td>America/Whitehorse</td>
+    <td>America/Winnipeg</td>
+    </tr>
+<tr>
+<td>America/Yakutat</td>
+    <td>America/Yellowknife</td>
+    <td> </td>
+    </tr>
+</table>
+<h2><a id="antarctica">南极洲</a></h2>
+<table class="reference notranslate">
+<tr>
+<td width="20%">Antarctica/Casey</td>
+    <td width="20%">Antarctica/Davis</td>
+    <td width="20%">Antarctica/DumontDUrville</td>
+    <td width="20%">Antarctica/Macquarie</td>
+    <td width="20%">Antarctica/Mawson</td>
+  </tr>
+<tr>
+<td>Antarctica/McMurdo</td>
+    <td>Antarctica/Palmer</td>
+    <td>Antarctica/Rothera</td>
+    <td>Antarctica/South_Pole</td>
+    <td>Antarctica/Syowa</td>
+  </tr>
+<tr>
+<td>Antarctica/Vostok</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    </tr>
+</table>
+<h2><a id="arctic">北冰洋</a></h2>
+<table class="reference notranslate"><tr>
+<td width="100%">Arctic/Longyearbyen</td>
+  </tr></table>
+<h2><a id="asia">亚洲</a></h2>
+<table class="reference notranslate">
+<tr>
+<td width="20%">Asia/Aden</td>
+    <td width="20%">Asia/Almaty</td>
+    <td width="20%">Asia/Amman</td>
+    <td width="20%">Asia/Anadyr</td>
+    <td width="20%">Asia/Aqtau</td>
+  </tr>
+<tr>
+<td>Asia/Aqtobe</td>
+    <td>Asia/Ashgabat</td>
+    <td>Asia/Ashkhabad</td>
+    <td>Asia/Baghdad</td>
+    <td>Asia/Bahrain</td>
+  </tr>
+<tr>
+<td>Asia/Baku</td>
+    <td>Asia/Bangkok</td>
+    <td>Asia/Beirut</td>
+    <td>Asia/Bishkek</td>
+    <td>Asia/Brunei</td>
+    </tr>
+<tr>
+<td>Asia/Calcutta</td>
+    <td>Asia/Choibalsan</td>
+    <td>Asia/Chongqing</td>
+    <td>Asia/Chungking</td>
+    <td>Asia/Colombo</td>
+    </tr>
+<tr>
+<td>Asia/Dacca</td>
+    <td>Asia/Damascus</td>
+    <td>Asia/Dhaka</td>
+    <td>Asia/Dili</td>
+    <td>Asia/Dubai</td>
+    </tr>
+<tr>
+<td>Asia/Dushanbe</td>
+    <td>Asia/Gaza</td>
+    <td>Asia/Harbin</td>
+    <td>Asia/Hebron</td>
+    <td>Asia/Ho_Chi_Minh</td>
+  </tr>
+<tr>
+<td>Asia/Hong_Kong</td>
+    <td>Asia/Hovd</td>
+    <td>Asia/Irkutsk</td>
+    <td>Asia/Istanbul</td>
+    <td>Asia/Jakarta</td>
+  </tr>
+<tr>
+<td>Asia/Jayapura</td>
+    <td>Asia/Jerusalem</td>
+    <td>Asia/Kabul</td>
+    <td>Asia/Kamchatka</td>
+    <td>Asia/Karachi</td>
+  </tr>
+<tr>
+<td>Asia/Kashgar</td>
+    <td>Asia/Kathmandu</td>
+    <td>Asia/Katmandu</td>
+    <td>Asia/Khandyga</td>
+    <td>Asia/Kolkata</td>
+    </tr>
+<tr>
+<td>Asia/Krasnoyarsk</td>
+    <td>Asia/Kuala_Lumpur</td>
+    <td>Asia/Kuching</td>
+    <td>Asia/Kuwait</td>
+    <td>Asia/Macao</td>
+    </tr>
+<tr>
+<td>Asia/Macau</td>
+    <td>Asia/Magadan</td>
+    <td>Asia/Makassar</td>
+    <td>Asia/Manila</td>
+    <td>Asia/Muscat</td>
+    </tr>
+<tr>
+<td>Asia/Nicosia</td>
+    <td>Asia/Novokuznetsk</td>
+    <td>Asia/Novosibirsk</td>
+    <td>Asia/Omsk</td>
+    <td>Asia/Oral</td>
+    </tr>
+<tr>
+<td>Asia/Phnom_Penh</td>
+    <td>Asia/Pontianak</td>
+    <td>Asia/Pyongyang</td>
+    <td>Asia/Qatar</td>
+    <td>Asia/Qyzylorda</td>
+    </tr>
+<tr>
+<td>Asia/Rangoon</td>
+    <td>Asia/Riyadh</td>
+    <td>Asia/Saigon</td>
+    <td>Asia/Sakhalin</td>
+    <td>Asia/Samarkand</td>
+    </tr>
+<tr>
+<td>Asia/Seoul</td>
+    <td>Asia/Shanghai</td>
+    <td>Asia/Singapore</td>
+    <td>Asia/Taipei</td>
+    <td>Asia/Tashkent</td>
+    </tr>
+<tr>
+<td>Asia/Tbilisi</td>
+    <td>Asia/Tehran</td>
+    <td>Asia/Tel_Aviv</td>
+    <td>Asia/Thimbu</td>
+    <td>Asia/Thimphu</td>
+    </tr>
+<tr>
+<td>Asia/Tokyo</td>
+    <td>Asia/Ujung_Pandang</td>
+    <td>Asia/Ulaanbaatar</td>
+    <td>Asia/Ulan_Bator</td>
+    <td>Asia/Urumqi</td>
+    </tr>
+<tr>
+<td>Asia/Ust-Nera</td>
+    <td>Asia/Vientiane</td>
+    <td>Asia/Vladivostok</td>
+    <td>Asia/Yakutsk</td>
+    <td>Asia/Yekaterinburg</td>
+    </tr>
+<tr>
+<td>Asia/Yerevan</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    </tr>
+</table>
+<h2><a id="atlantic">大西洋</a></h2>
+<table class="reference notranslate">
+<tr>
+<td width="20%">Atlantic/Azores</td>
+    <td width="20%">Atlantic/Bermuda</td>
+    <td width="20%">Atlantic/Canary</td>
+    <td width="20%">Atlantic/Cape_Verde</td>
+    <td width="20%">Atlantic/Faeroe</td>
+  </tr>
+<tr>
+<td>Atlantic/Faroe</td>
+    <td>Atlantic/Jan_Mayen</td>
+    <td>Atlantic/Madeira</td>
+    <td>Atlantic/Reykjavik</td>
+    <td>Atlantic/South_Georgia</td>
+  </tr>
+<tr>
+<td>Atlantic/St_Helena</td>
+    <td>Atlantic/Stanley</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    </tr>
+</table>
+<h2><a id="australia">大洋洲</a></h2>
+<table class="reference notranslate">
+<tr>
+<td width="20%">Australia/ACT</td>
+    <td width="20%">Australia/Adelaide</td>
+    <td width="20%">Australia/Brisbane</td>
+    <td width="20%">Australia/Broken_Hill</td>
+    <td width="20%">Australia/Canberra</td>
+  </tr>
+<tr>
+<td>Australia/Currie</td>
+    <td>Australia/Darwin</td>
+    <td>Australia/Eucla</td>
+    <td>Australia/Hobart</td>
+    <td>Australia/LHI</td>
+  </tr>
+<tr>
+<td>Australia/Lindeman</td>
+    <td>Australia/Lord_Howe</td>
+    <td>Australia/Melbourne</td>
+    <td>Australia/North</td>
+    <td>Australia/NSW</td>
+    </tr>
+<tr>
+<td>Australia/Perth</td>
+    <td>Australia/Queensland</td>
+    <td>Australia/South</td>
+    <td>Australia/Sydney</td>
+    <td>Australia/Tasmania</td>
+    </tr>
+<tr>
+<td>Australia/Victoria</td>
+    <td>Australia/West</td>
+    <td>Australia/Yancowinna</td>
+    <td> </td>
+    <td> </td>
+    </tr>
+</table>
+<h2><a id="europe">欧洲</a></h2>
+<table class="reference notranslate">
+<tr>
+<td width="20%">Europe/Amsterdam</td>
+    <td width="20%">Europe/Andorra</td>
+    <td width="20%">Europe/Athens</td>
+    <td width="20%">Europe/Belfast</td>
+    <td width="20%">Europe/Belgrade</td>
+  </tr>
+<tr>
+<td>Europe/Berlin</td>
+    <td>Europe/Bratislava</td>
+    <td>Europe/Brussels</td>
+    <td>Europe/Bucharest</td>
+    <td>Europe/Budapest</td>
+  </tr>
+<tr>
+<td>Europe/Busingen</td>
+    <td>Europe/Chisinau</td>
+    <td>Europe/Copenhagen</td>
+    <td>Europe/Dublin</td>
+    <td>Europe/Gibraltar</td>
+    </tr>
+<tr>
+<td>Europe/Guernsey</td>
+    <td>Europe/Helsinki</td>
+    <td>Europe/Isle_of_Man</td>
+    <td>Europe/Istanbul</td>
+    <td>Europe/Jersey</td>
+    </tr>
+<tr>
+<td>Europe/Kaliningrad</td>
+    <td>Europe/Kiev</td>
+    <td>Europe/Lisbon</td>
+    <td>Europe/Ljubljana</td>
+    <td>Europe/London</td>
+    </tr>
+<tr>
+<td>Europe/Luxembourg</td>
+    <td>Europe/Madrid</td>
+    <td>Europe/Malta</td>
+    <td>Europe/Mariehamn</td>
+    <td>Europe/Minsk</td>
+    </tr>
+<tr>
+<td>Europe/Monaco</td>
+    <td>Europe/Moscow</td>
+    <td>Europe/Nicosia</td>
+    <td>Europe/Oslo</td>
+    <td>Europe/Paris</td>
+    </tr>
+<tr>
+<td>Europe/Podgorica</td>
+    <td>Europe/Prague</td>
+    <td>Europe/Riga</td>
+    <td>Europe/Rome</td>
+    <td>Europe/Samara</td>
+    </tr>
+<tr>
+<td>Europe/San_Marino</td>
+    <td>Europe/Sarajevo</td>
+    <td>Europe/Simferopol</td>
+    <td>Europe/Skopje</td>
+    <td>Europe/Sofia</td>
+    </tr>
+<tr>
+<td>Europe/Stockholm</td>
+    <td>Europe/Tallinn</td>
+    <td>Europe/Tirane</td>
+    <td>Europe/Tiraspol</td>
+    <td>Europe/Uzhgorod</td>
+    </tr>
+<tr>
+<td>Europe/Vaduz</td>
+    <td>Europe/Vatican</td>
+    <td>Europe/Vienna</td>
+    <td>Europe/Vilnius</td>
+    <td>Europe/Volgograd</td>
+    </tr>
+<tr>
+<td>Europe/Warsaw</td>
+    <td>Europe/Zagreb</td>
+    <td>Europe/Zaporozhye</td>
+    <td>Europe/Zurich</td>
+    <td> </td>
+    </tr>
+</table>
+<h2><a id="indian">印度洋</a></h2>
+<table class="reference notranslate">
+<tr>
+<td width="20%">Indian/Antananarivo</td>
+    <td width="20%">Indian/Chagos</td>
+    <td width="20%">Indian/Christmas</td>
+    <td width="20%">Indian/Cocos</td>
+    <td width="20%">Indian/Comoro</td>
+  </tr>
+<tr>
+<td>Indian/Kerguelen</td>
+    <td>Indian/Mahe</td>
+    <td>Indian/Maldives</td>
+    <td>Indian/Mauritius</td>
+    <td>Indian/Mayotte</td>
+  </tr>
+<tr>
+<td>Indian/Reunion</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    </tr>
+</table>
+<h2><a id="pacific">太平洋</a></h2>
+<table class="reference notranslate">
+<tr>
+<td width="20%">Pacific/Apia</td>
+    <td width="20%">Pacific/Auckland</td>
+    <td width="20%">Pacific/Chatham</td>
+    <td width="20%">Pacific/Chuuk</td>
+    <td width="20%">Pacific/Easter</td>
+  </tr>
+<tr>
+<td>Pacific/Efate</td>
+    <td>Pacific/Enderbury</td>
+    <td>Pacific/Fakaofo</td>
+    <td>Pacific/Fiji</td>
+    <td>Pacific/Funafuti</td>
+  </tr>
+<tr>
+<td>Pacific/Galapagos</td>
+    <td>Pacific/Gambier</td>
+    <td>Pacific/Guadalcanal</td>
+    <td>Pacific/Guam</td>
+    <td>Pacific/Honolulu</td>
+    </tr>
+<tr>
+<td>Pacific/Johnston</td>
+    <td>Pacific/Kiritimati</td>
+    <td>Pacific/Kosrae</td>
+    <td>Pacific/Kwajalein</td>
+    <td>Pacific/Majuro</td>
+    </tr>
+<tr>
+<td>Pacific/Marquesas</td>
+    <td>Pacific/Midway</td>
+    <td>Pacific/Nauru</td>
+    <td>Pacific/Niue</td>
+    <td>Pacific/Norfolk</td>
+    </tr>
+<tr>
+<td>Pacific/Noumea</td>
+    <td>Pacific/Pago_Pago</td>
+    <td>Pacific/Palau</td>
+    <td>Pacific/Pitcairn</td>
+    <td>Pacific/Pohnpei</td>
+    </tr>
+<tr>
+<td>Pacific/Ponape</td>
+    <td>Pacific/Port_Moresby</td>
+    <td>Pacific/Rarotonga</td>
+    <td>Pacific/Saipan</td>
+    <td>Pacific/Samoa</td>
+    </tr>
+<tr>
+<td>Pacific/Tahiti</td>
+    <td>Pacific/Tarawa</td>
+    <td>Pacific/Tongatapu</td>
+    <td>Pacific/Truk</td>
+    <td>Pacific/Wake</td>
+    </tr>
+<tr>
+<td>Pacific/Wallis</td>
+    <td>Pacific/Yap</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    </tr>
+</table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/php/php-ajax-poll.html" rel="prev"> PHP 实例 AJAX 投票</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/php/func-array.html" rel="next">PHP array() 函数</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.432 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 03:27:34 -->
+
+<!-- super cache -->

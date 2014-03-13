@@ -1,0 +1,359 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>MongoDB 分片 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery EasyUI 扩展 &#8211; RTL 支持' href='http://www.w3cschool.cc/jeasyui/ext-rtl.html' />
+<link rel='next' title='MongoDB 备份(mongodump)与恢复(mongorerstore)' href='http://www.w3cschool.cc/mongodb/mongodb-mongodump-mongorerstore.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/mongodb/mongodb-sharding.html' />
+<meta name="keywords" content="MongoDB 分片,MongoDB 教程">
+<meta name="description" content="MongoDB 分片  分片 在Mongodb里面存在另一种集群，就是分片技术,可以满足MongoDB数据量大量增长的需求。 当MongoDB存储海量的数据时，一台机器可能不足以存储数据也足以提供可接受的读写吞吐量。这时，我们就可以通过在多台机器上分割数据，使得数据库系统能存储和处理更多的数据。   为什么使用分片  复制所有的写入操作到主节点 延迟的敏感数据会在主节点查询 单个副本集限制在12个节点 当请求量巨大时会出现内存不足。 本..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>MongoDB 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-tutorial.html" >
+	MongoDB 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/nosql.html" >
+	NoSQL 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-intro.html" >
+	MongoDB 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-window-install.html" >
+	window平台安装MongoDB	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-linux-install.html" >
+	Linux平台安装MongoDB	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-databases-documents-collections.html" >
+	MongoDB - 数据库，对象，集合	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-connections.html" >
+	MongoDB 连接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-install-php-driver.html" >
+	PHP安装MongoDB扩展	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-insert.html" >
+	MongoDB 数据插入	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-update.html" >
+	MongoDB update()函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-remove.html" >
+	MongoDB remove()函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-query.html" >
+	MongoDB 查询	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-operators.html" >
+	MongoDB条件操作符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-operators-type.html" >
+	MongoDB条件操作符 - $type	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-limit-skip.html" >
+	MongoDB Limit与Skip方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-sort.html" >
+	MongoDB 排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-indexing.html" >
+	MongoDB 索引	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-aggregate.html" >
+	MongoDB 聚合(aggregate)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-replication.html" >
+	MongoDB 复制(副本集)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-sharding.html" >
+	MongoDB 分片	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-mongodump-mongorerstore.html" >
+	MongoDB 备份与恢复	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-mongostat-mongotop.html" >
+	MongoDB 监控	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-java.html" >
+	MongoDB Java	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-php.html" >
+	MongoDB PHP	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/mongodb/mongodb-replication.html" rel="prev"> MongoDB 复制(副本集)</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/mongodb/mongodb-mongodump-mongorerstore.html" rel="next">MongoDB 备份(mongodump)与恢复(mongorerstore)</a> &raquo;</div>
+	</div>
+
+	<h1>MongoDB 分片</h1>
+<hr />
+<h2>分片</h2>
+<p>在Mongodb里面存在另一种集群，就是分片技术,可以满足MongoDB数据量大量增长的需求。</p>
+<p>当MongoDB存储海量的数据时，一台机器可能不足以存储数据也足以提供可接受的读写吞吐量。这时，我们就可以通过在多台机器上分割数据，使得数据库系统能存储和处理更多的数据。 </p>
+<hr />
+<h2>为什么使用分片</h2>
+<ul>
+<li>复制所有的写入操作到主节点</li>
+<li>延迟的敏感数据会在主节点查询</li>
+<li>单个副本集限制在12个节点</li>
+<li>当请求量巨大时会出现内存不足。</li>
+<li>本地磁盘不足</li>
+<li>垂直扩展价格昂贵</li>
+</ul>
+<hr />
+<h2>MongoDB分片</h2>
+<p>下图展示了在MongoDB中使用分片集群结构分布：</p><p>
+<img src="http://www.w3cschool.cc/wp-content/uploads/2013/12/sharding.png" /></p>
+<p>上图中主要有如下所述三个主要组件：</p>
+<ul>
+<li><strong>
+Shard:</strong><p>用于存储实际的数据块，实际生产环境中一个shard server角色可由几台机器组个一个relica set承担，防止主机单点故障
+</p></li><li><strong>
+Config Server:</strong><p>mongod实例，存储了整个 ClusterMetadata，其中包括 chunk信息。
+</p></li><li><strong>
+Query Routers:</strong><p>前端路由，客户端由此接入，且让整个集群看上去像单一数据库，前端应用可以透明使用。</p></li></ul>
+<hr />
+<h2>分片实例</h2>
+<p>分片结构端口分布如下：</p>
+<pre>
+Shard Server 1：27020
+Shard Server 2：27021
+Shard Server 3：27022
+Shard Server 4：27023
+Config Server ：27100
+Route Process：40000
+</pre>
+<p>步骤一：启动Shard Server</p>
+<pre>
+[root@100 /]# mkdir -p /www/mongoDB/shard/s0
+[root@100 /]# mkdir -p /www/mongoDB/shard/s1
+[root@100 /]# mkdir -p /www/mongoDB/shard/s2
+[root@100 /]# mkdir -p /www/mongoDB/shard/s3
+[root@100 /]# mkdir -p /www/mongoDB/shard/log
+[root@100 /]# /usr/local/mongoDB/bin/mongod --port 27020 --dbpath=/www/mongoDB/shard/s0 --logpath=/www/mongoDB/shard/log/s0.log --logappend --fork
+....
+[root@100 /]# /usr/local/mongoDB/bin/mongod --port 27023 --dbpath=/www/mongoDB/shard/s3 --logpath=/www/mongoDB/shard/log/s3.log --logappend --fork
+</pre>
+<p>步骤二：
+启动Config Server</p>
+<pre>
+[root@100 /]# mkdir -p /www/mongoDB/shard/config
+[root@100 /]# /usr/local/mongoDB/bin/mongod --port 27100 --dbpath=/www/mongoDB/shard/config --logpath=/www/mongoDB/shard/log/config.log --logappend --fork
+</pre>
+<p><strong>注意：</strong>这里我们完全可以像启动普通mongodb服务一样启动，不需要添加—shardsvr和configsvr参数。因为这两个参数的作用就是改变启动端口的，所以我们自行指定了端口就可以。
+
+</p>
+<p>步骤三：
+启动Route Process</p>
+<pre>
+/usr/local/mongoDB/bin/mongos --port 40000 --configdb localhost:27100 --fork --logpath=/www/mongoDB/shard/log/route.log --chunkSize 500
+</pre>
+<p>
+mongos启动参数中，chunkSize这一项是用来指定chunk的大小的，单位是MB，默认大小为200MB.</p>
+<p>步骤四：
+配置Sharding</p>
+<p>接下来，我们使用MongoDB Shell登录到mongos，添加Shard节点</p>
+<pre>
+[root@100 shard]# /usr/local/mongoDB/bin/mongo admin --port 40000
+MongoDB shell version: 2.0.7
+connecting to: 127.0.0.1:40000/admin
+mongos&gt; db.runCommand({ addshard:"localhost:27020" })
+{ "shardAdded" : "shard0000", "ok" : 1 }
+......
+mongos&gt; db.runCommand({ addshard:"localhost:27029" })
+{ "shardAdded" : "shard0009", "ok" : 1 }
+mongos&gt; db.runCommand({ enablesharding:"test" }) #设置分片存储的数据库
+{ "ok" : 1 }
+mongos&gt; db.runCommand({ shardcollection: "test.log", key: { id:1,time:1}})
+{ "collectionsharded" : "test.log", "ok" : 1 }
+</pre>
+<p>步骤五：
+程序代码内无需太大更改，直接按照连接普通的mongo数据库那样，将数据库连接接入接口40000</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/mongodb/mongodb-replication.html" rel="prev"> MongoDB 复制(副本集)</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/mongodb/mongodb-mongodump-mongorerstore.html" rel="next">MongoDB 备份(mongodump)与恢复(mongorerstore)</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.167 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 12:43:32 -->
+
+<!-- super cache -->

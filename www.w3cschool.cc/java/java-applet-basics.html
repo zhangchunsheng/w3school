@@ -1,0 +1,709 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Java Applet基础 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Java 多线程编程' href='http://www.w3cschool.cc/java/java-multithreading.html' />
+<link rel='next' title='Java 文档注释' href='http://www.w3cschool.cc/java/java-documentation.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/java/java-applet-basics.html' />
+<meta name="keywords" content="Java Applet基础,Java 教程">
+<meta name="description" content="Java Applet基础   applet是一种Java程序。它一般运行在支持Java的Web浏览器内。因为它有完整的Java API支持,所以applet是一个全功能的Java应用程序。 如下所示是独立的Java应用程序和applet程序之间重要的不同：  	 		Java中applet类继承了 java.applet.Applet类 	 		Applet类没有定义main()，所以一个 Applet程序不会调用main()方法， ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Java 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-tutorial.html" >
+	Java 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-intro.html" >
+	Java 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-environment-setup.html" >
+	Java开发环境配置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-syntax.html" >
+	Java基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-object-classes.html" >
+	Java对象和类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-datatypes.html" >
+	Java基本数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-variable-types.html" >
+	Java变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-modifier-types.html" >
+	Java修饰符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-operators.html" >
+	Java运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-loop.html" >
+	Java循环结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-if-else-switch.html" >
+	Java分支结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-number.html" >
+	Java Number类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-character.html" >
+	Java Character类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-string.html" >
+	Java String类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-stringbuffer.html" >
+	Java StringBuffer和StringBuilder类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-array.html" >
+	Java 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-date-time.html" >
+	Java日期时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-regular-expressions.html" >
+	Java正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-methods.html" >
+	Java 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-files-io.html" >
+	Java 流(Stream)、文件(File)和IO	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-exceptions.html" >
+	Java 异常处理	</a>
+	<br><h2 class="left">Java <span class="left_h2">面向对象</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-inheritance.html" >
+	Java 继承	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-override-overload.html" >
+	Java 重写(Override)与重载(Overload)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-polymorphism.html" >
+	Java 多态	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-abstraction.html" >
+	Java 抽象类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-encapsulation.html" >
+	java 封装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-interfaces.html" >
+	Java 接口	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-package.html" >
+	Java 包(package)	</a>
+	<br><h2 class="left">Java <span class="left_h2">高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-data-structures.html" >
+	Java 数据结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-collections.html" >
+	Java 集合框架	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-generics.html" >
+	Java 泛型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-serialization.html" >
+	Java序列化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-networking.html" >
+	Java 网络编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-sending-email.html" >
+	Java 发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-multithreading.html" >
+	Java 多线程编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-applet-basics.html" >
+	Java Applet基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-documentation.html" >
+	Java 文档注释	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-multithreading.html" rel="prev"> Java 多线程编程</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-documentation.html" rel="next">Java 文档注释</a> &raquo;</div>
+	</div>
+
+	<h1>Java Applet基础
+</h1><p>
+ applet是一种Java程序。它一般运行在支持Java的Web浏览器内。因为它有完整的Java API支持,所以applet是一个全功能的Java应用程序。</p><p>
+如下所示是独立的Java应用程序和applet程序之间重要的不同：</p>
+<ul>
+	<li>
+		Java中applet类继承了 java.applet.Applet类</li>
+	<li>
+		Applet类没有定义main()，所以一个 Applet程序不会调用main()方法，</li>
+	<li>
+		Applets被设计为嵌入在一个HTML页面。</li>
+	<li>
+		当用户浏览包含Applet的HTML页面，Applet的代码就被下载到用户的机器上。</li>
+	<li>
+		要查看一个applet需要JVM。 JVM可以是Web浏览器的一个插件，或一个独立的运行时环境。</li>
+	<li>
+		用户机器上的JVM创建一个applet类的实例，并调用Applet生命周期过程中的各种方法。</li>
+	<li>
+		Applets有Web浏览器强制执行的严格的安全规则，applet的安全机制被称为沙箱安全。</li>
+	<li>
+		applet需要的其他类可以用Java归档（JAR）文件的形式下载下来。</li>
+</ul>
+<hr />
+<h2>
+Applet的生命周期
+</h2>
+<p>
+Applet类中的四个方法给你提供了一个框架，你可以再该框架上开发小程序：
+</p>
+<ul><li><strong>
+init: </strong>该方法的目的是为你的applet提供所需的任何初始化。在Applet标记内的param标签被处理后调用该方法。</li><li><strong>
+start:</strong> 浏览器调用init方法后，该方法被自动调用。每当用户从其他页面返回到包含Applet的页面时，则调用该方法。</li><li><strong>
+stop:</strong>当用户从包含applet的页面移除的时候，该方法自动被调用。因此，可以在相同的applet中反复调用该方法。</li><li><strong>
+destroy: </strong>此方法仅当浏览器正常关闭时调用。因为applets只有在HTML网页上有效，所以你不应该在用户离开包含Applet的页面后遗漏任何资源.</li><li><strong>
+paint:</strong> 该方法在start()方法之后立即被调用，或者在applet需要重绘在浏览器的时候调用。paint()方法实际上继承于java.awt。</li></ul>
+<hr /><h2>"Hello, World" Applet:
+</h2>
+<p>
+下面是一个简单的Applet程序HelloWorldApplet.java:
+</p>
+<pre>
+import java.applet.*;
+import java.awt.*;
+ 
+public class HelloWorldApplet extends Applet
+{
+   public void paint (Graphics g)
+   {
+      g.drawString ("Hello World", 25, 50);
+   }
+}
+</pre>
+<p>
+这些import语句将以下类导入到我们的applet类中：
+</p>
+<pre>
+java.applet.Applet.
+java.awt.Graphics.
+</pre>
+<p>
+没有这些import语句，Java编译器就识别不了Applet和Graphics类。
+</p>
+<hr />
+<h2>
+Applet 类</h2>
+<p>
+每一个applet都是java.applet.Applet 类的子类，基础的Applet类提供了供衍生类调用的方法,以此来得到浏览器上下文的信息和服务。
+</p><p>
+这些方法做了如下事情：</p>
+<ul><li>
+得到applet的参数</li><li>
+得到包含applet的HTML文件的网络位置</li><li>
+得到applet类目录的网络位置</li><li>
+打印浏览器的状态信息</li><li>
+获取一张图片</li><li>
+获取一个音频片段</li><li>
+播放一个音频片段</li><li>
+调整此 applet 的大小</li></ul>
+<p>除此之外，Applet类还提供了一个接口，该接口供Viewer或浏览器来获取applet的信息，并且来控制applet的执行。
+</p><p>Viewer可能是：</p><ul><li>
+请求applet作者、版本和版权的信息</li><li>
+请求applet识别的参数的描述</li><li>
+初始化applet</li><li>
+销毁applet</li><li>
+开始执行applet</li><li>
+结束执行applet</li></ul><p>
+Applet类提供了对这些方法的默认实现，这些方法可以在需要的时候重写。</p><p>
+"Hello，World"applet都是按标准编写的。唯一被重写的方法是paint方法。</p>
+<hr />
+<h2>
+Applet的调用</h2>
+<p>
+applet是一种Java程序。它一般运行在支持Java的Web浏览器内。因为它有完整的Java API支持,所以applet是一个全功能的Java应用程序。
+</p>
+<p>
+&lt;applet&gt;标签是在HTML文件中嵌入applet的基础。以下是一个调用"Hello World"applet的例子；
+</p>
+<pre>
+&lt;html&gt;
+
+&lt;hr /&gt;
+&lt;applet code="HelloWorldApplet.class" width="320" height="120"&gt;
+If your browser was Java-enabled, a "Hello, World"
+message would appear here.
+&lt;/applet&gt;
+&lt;hr /&gt;
+&lt;/html&gt;
+</pre>
+<p><strong>
+注意: </strong>你可以参照HTML Applet标签来更多的了解从HTML中调用applet的方法。</p><p>
+&lt;applet&gt;标签的属性指定了要运行的Applet类。Width和height用来指定applet运行面板的初始大小。applet必须使用&lt;/applet&gt;标签来关闭。</p><p>
+如果applet接受参数，那么参数的值需要在<param>标签里添加，该标签位于&lt;applet&gt;和&lt;/applet&gt;之间。浏览器忽略了applet标签之间的文本和其他标签。</p><p>
+不支持Java的浏览器不能执行&lt;applet&gt;和&lt;/applet&gt;。因此，在标签之间显示并且和applet没有关系的任何东西，在不支持的Java的浏览器里是可见的。</p><p>
+Viewer或者浏览器在文档的位置寻找编译过的Java代码，要指定文档的路径，得使用&lt;applet&gt;标签的codebase属性指定。</p><p>
+如下所示：</p>
+<pre>
+&lt;applet codebase="http://amrood.com/applets"
+code="HelloWorldApplet.class" width="320" height="120"&gt;
+</pre>
+<p>
+如果applet所在一个包中而不是默认包，那么所在的包必须在code属性里指定，例如：
+</p>
+<pre>
+&lt;applet code="mypackage.subpackage.TestApplet.class"
+           width="320" height="120"&gt;
+</pre>
+<h2><h2>获得applet参数</h2>
+<p>
+
+下面的例子演示了如何使用一个applet响应来设置文件中指定的参数。该Applet显示了一个黑色棋盘图案和第二种颜色。</p><p>
+第二种颜色和每一列的大小通过文档中的applet的参数指定。</p><p>
+CheckerApplet 在init()方法里得到它的参数。也可以在paint()方法里得到它的参数。然而，在applet开始得到值并保存了设置，而不是每一次刷新的时候都得到值，这样是很方便，并且高效的。
+</p><p>applet viewer或者浏览器在applet每次运行的时候调用init()方法。在加载applet之后，Viewer立即调用init()方法（Applet.init()什么也没做），重写该方法的默认实现，添加一些自定义的初始化代码。
+</p><p>Applet.getParameter()方法通过给出参数名称得到参数值。如果得到的值是数字或者其他非字符数据，那么必须解析为字符串类型。
+</p><p>下例是CheckerApplet.java的梗概：</p>
+<pre>
+import java.applet.*;
+import java.awt.*;
+public class CheckerApplet extends Applet
+{
+   int squareSize = 50;// 初始化默认大小
+   public void init () {}
+   private void parseSquareSize (String param) {}
+   private Color parseColor (String param) {}
+   public void paint (Graphics g) {}
+}
+</pre>
+<p>
+下面是CheckerApplet类的init()方法和私有的parseSquareSize()方法：</p>
+<pre>
+public void init ()
+{
+   String squareSizeParam = getParameter ("squareSize");
+   parseSquareSize (squareSizeParam);
+   String colorParam = getParameter ("color");
+   Color fg = parseColor (colorParam);
+   setBackground (Color.black);
+   setForeground (fg);
+}
+private void parseSquareSize (String param)
+{
+   if (param == null) return;
+   try {
+      squareSize = Integer.parseInt (param);
+   }
+   catch (Exception e) {
+     // 保留默认值
+   }
+}
+</pre>
+<p>
+该applet调用parseSquareSize()，来解析squareSize参数。parseSquareSize()调用了库方法Integer. parseInt()，该方法将一个字符串解析为一个整数，当参数无效的时候，Integer.parseInt()抛出异常。
+</p><p>因此，parseSquareSize()方法也是捕获异常的，并不允许applet接受无效的输入。
+</p><p>Applet调用parseColor()方法将颜色参数解析为一个Color值。parseColor()方法做了一系列字符串的比较，来匹配参数的值和预定义颜色的名字。你需要实现这些方法来使applet工作。
+</p>
+<hr /><h2>
+指定applet参数</h2>
+<p>
+如下的例子是一个HTML文件，其中嵌入了CheckerApplet类。HTML文件通过使用<param>标签的方法给applet指定了两个参数。
+</p>
+<pre>
+&lt;html&gt;
+
+&lt;hr /&gt;
+&lt;applet code="CheckerApplet.class" width="480" height="320"&gt;
+&lt;param name="color" value="blue"&gt;
+&lt;param name="squaresize" value="30"&gt;
+&lt;/applet&gt;
+&lt;hr /&gt;
+&lt;/html&gt;
+</pre>
+<p><strong>
+注意: </strong>参数名字大小写不敏感。</p>
+<hr />
+<h2>应用程序转换成Applet
+</h2><p>
+将图形化的Java应用程序（是指，使用AWT的应用程序和使用java程序启动器启动的程序）转换成嵌入在web页面里的applet是很简单的。</p><p>
+下面是将应用程序转换成applet的几个步骤：</p>
+<ul><li>
+编写一个HTML页面，该页面带有能加载applet代码的标签。</li><li>
+编写一个JApplet类的子类，将该类设置为public。否则，applet不能被加载。</li><li>
+消除应用程序的main()方法。不要为应用程序构造框架窗口，因为你的应用程序要显示在浏览器中。</li><li>
+将应用程序中框架窗口的构造方法里的初始化代码移到applet的init()方法中，你不必显示的构造applet对象，浏览器将通过调用init()方法来实例化一个对象。</li><li>
+移除对setSize()方法的调用，对于applet来讲，大小已经通过HTML文件里的width和height参数设定好了。</li><li>
+移除对 setDefaultCloseOperation()方法的调用。Applet不能被关闭，它随着浏览器的退出而终止。</li><li>
+如果应用程序调用了setTitle()方法，消除对该方法的调用。applet不能有标题栏。（当然你可以给通过html的title标签给网页自身命名）</li><li>
+不要调用setVisible(true),applet是自动显示的。</li></ul>
+<hr />
+<h2>
+事件处理</h2>
+<p>
+
+Applet类从Container类继承了许多事件处理方法。Container类定义了几个方法，例如：processKeyEvent()和processMouseEvent()，用来处理特别类型的事件，还有一个捕获所有事件的方法叫做processEvent。
+</p><p>为了响应一个事件，applet必须重写合适的事件处理方法。</p>
+<pre>
+import java.awt.event.MouseListener;
+import java.awt.event.MouseEvent;
+import java.applet.Applet;
+import java.awt.Graphics;
+ 
+public class ExampleEventHandling extends Applet
+                             implements MouseListener {
+ 
+    StringBuffer strBuffer;
+ 
+    public void init() {
+         addMouseListener(this);
+         strBuffer = new StringBuffer();
+        addItem("initializing the apple ");
+    }
+ 
+    public void start() {
+        addItem("starting the applet ");
+    }
+ 
+    public void stop() {
+        addItem("stopping the applet ");
+    }
+ 
+    public void destroy() {
+        addItem("unloading the applet");
+    }
+ 
+    void addItem(String word) {
+        System.out.println(word);
+        strBuffer.append(word);
+        repaint();
+    }
+ 
+    public void paint(Graphics g) {
+         //Draw a Rectangle around the applet's display area.
+        g.drawRect(0, 0,
+                      getWidth() - 1,
+                      getHeight() - 1);
+ 
+         //display the string inside the rectangle.
+        g.drawString(strBuffer.toString(), 10, 20);
+    }
+ 
+  
+    public void mouseEntered(MouseEvent event) {
+    }
+    public void mouseExited(MouseEvent event) {
+    }
+    public void mousePressed(MouseEvent event) {
+    }
+    public void mouseReleased(MouseEvent event) {
+    }
+ 
+    public void mouseClicked(MouseEvent event) {
+         addItem("mouse clicked! ");
+    }
+}
+</pre>
+<p>
+如下调用该applet：</p>
+<pre>
+&lt;html&gt;
+
+&lt;hr /&gt;
+&lt;applet code="ExampleEventHandling.class"
+width="300" height="300"&gt;
+&lt;/applet&gt;
+&lt;hr /&gt;
+&lt;/html&gt;
+</pre>
+<p>
+最开始运行，applet显示 "initializing the applet. Starting the applet."，然后你一点击矩形框，就会显示"mouse clicked" 。
+</p>
+<hr /><h2>显示图片</h2>
+<p>
+applet能显示GIF,JPEG,BMP等其他格式的图片。为了在applet中显示图片，你需要使用java.awt.Graphics类的drawImage()方法。
+</p><p>
+如下实例演示了显示图片的所有步骤：</p>
+<pre>
+import java.applet.*;
+import java.awt.*;
+import java.net.*;
+public class ImageDemo extends Applet
+{
+  private Image image;
+  private AppletContext context;
+  public void init()
+  {
+      context = this.getAppletContext();
+      String imageURL = this.getParameter("image");
+      if(imageURL == null)
+      {
+         imageURL = "java.jpg";
+      }
+      try
+      {
+         URL url = new URL(this.getDocumentBase(), imageURL);
+         image = context.getImage(url);
+      }catch(MalformedURLException e)
+      {
+         e.printStackTrace();
+         // Display in browser status bar
+         context.showStatus("Could not load image!");
+      }
+   }
+   public void paint(Graphics g)
+   {
+      context.showStatus("Displaying image");
+      g.drawImage(image, 0, 0, 200, 84, null);
+      g.drawString("www.javalicense.com", 35, 100);
+   } 
+}
+</pre><p>
+如下调用该applet：</p>
+<pre>
+&lt;html&gt;
+
+&lt;hr /&gt;
+&lt;applet code="ImageDemo.class" width="300" height="200"&gt;
+&lt;param name="image" value="java.jpg"&gt;
+&lt;/applet&gt;
+&lt;hr /&gt;
+&lt;/html&gt;
+</pre>
+<hr /><h2>播放音频</h2>
+<p>
+
+Applet能通过使用java.applet包中的AudioClip接口播放音频。AudioClip接口定义了三个方法：</p>
+<ul><li><strong>
+public void play():</strong> 从一开始播放音频片段一次。</li><li><strong>
+public void loop(): </strong> 循环播放音频片段</li><li><strong>
+public void stop(): </strong> 停止播放音频片段</li></ul>
+<p>
+为了得到AudioClip对象，你必须调用Applet类的getAudioClip()方法。无论URL指向的是否是一个真实的音频文件，该方法都会立即返回结果。
+</p><p>直到要播放音频文件时，该文件才会下载下来。</p><p>
+如下实例演示了播放音频的所有步骤：</p>
+<pre>
+import java.applet.*;
+import java.awt.*;
+import java.net.*;
+public class AudioDemo extends Applet
+{
+   private AudioClip clip;
+   private AppletContext context;
+   public void init()
+   {
+      context = this.getAppletContext();
+      String audioURL = this.getParameter("audio");
+      if(audioURL == null)
+      {
+         audioURL = "default.au";
+      }
+      try
+      {
+         URL url = new URL(this.getDocumentBase(), audioURL);
+         clip = context.getAudioClip(url);
+      }catch(MalformedURLException e)
+      {
+         e.printStackTrace();
+         context.showStatus("Could not load audio file!");
+      }
+   }
+   public void start()
+   {
+      if(clip != null)
+      {
+         clip.loop();
+      }
+   }
+   public void stop()
+   {
+      if(clip != null)
+      {
+         clip.stop();
+      }
+   }
+}
+</pre>
+<p>
+如下调用applet：</p>
+<pre>
+&lt;html&gt;
+
+&lt;hr /&gt;
+&lt;applet code="ImageDemo.class" width="0" height="0"&gt;
+&lt;param name="audio" value="test.wav"&gt;
+&lt;/applet&gt;
+&lt;hr /&gt;
+</pre>
+<p>
+你可以使用你电脑上的test.wav来测试上面的实例。
+</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-multithreading.html" rel="prev"> Java 多线程编程</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-documentation.html" rel="next">Java 文档注释</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.584 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:05:23 -->
+
+<!-- super cache -->

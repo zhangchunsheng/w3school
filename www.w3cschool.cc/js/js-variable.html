@@ -1,0 +1,485 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript  变量 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='JavaScript 注释' href='http://www.w3cschool.cc/js/js-comments.html' />
+<link rel='next' title='JavaScript 数据类型' href='http://www.w3cschool.cc/js/js-datatypes.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/js/js-variables.html' />
+<meta name="keywords" content="JavaScript  变量,JS 教程">
+<meta name="description" content="JavaScript  变量   变量是用于存储信息的'容器'。   实例 	 		var x=5;var y=6; var z=x+y;  尝试一下 »   就像代数那样 x=5 y=6 z=x+y 在代数中，我们使用字母（比如 x）来保存值（比如 5）。 通过上面的表达式 z=x+y，我们能够计算出 z 的值为 11。 在 JavaScript 中，这些字母被称为变量。      您可以把变量看做存储数据的容器。    JavaSc..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JS 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-tutorial.html" >
+	JavaScript 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-intro.html" >
+	JavaScript 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-howto.html" >
+	JavaScript 用法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-whereto.html" >
+	JavaScript 输出	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-statements.html" >
+	JavaScript 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-comments.html" >
+	JavaScript 注释	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-variables.html" >
+	JavaScript  变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-datatypes.html" >
+	JavaScript 数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-intro.html" >
+	JavaScript 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-functions.html" >
+	JavaScript 函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-operators.html" >
+	JavaScript 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-comparisons.html" >
+	JavaScript 比较	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-if-else.html" >
+	JavaScript 条件语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-switch.html" >
+	JavaScript Switch	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-loop-for.html" >
+	JavaScript for 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-loop-while.html" >
+	JavaScript while	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-break.html" >
+	JavaScript Breaks	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-errors.html" >
+	JavaScript  错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-form-validation.html" >
+	JavaScript 表单验证	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> HTML DOM</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom.html" >
+	DOM 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-html.html" >
+	DOM HTML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-css.html" >
+	DOM CSS	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-events.html" >
+	DOM 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-elements.html" >
+	DOM 元素	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-objects.html" >
+	JavaScript 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-number.html" >
+	JavaScript Number 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-string.html" >
+	JavaScript String	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-date.html" >
+	JavaScript Date（日期）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-array.html" >
+	JavaScript  Array（数组）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-boolean.html" >
+	JavaScript Boolean（布尔）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-math.html" >
+	JavaScript Math（算数）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-regexp.html" >
+	JavaScript RegExp 对象	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 浏览器BOM</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-window.html" >
+	JavaScript Window	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-screen.html" >
+	JavaScript Window Screen	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-location.html" >
+	JavaScript Window Location	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-history.html" >
+	JavaScript Window History	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-navigator.html" >
+	JavaScript Navigator	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-popup.html" >
+	JavaScript 弹窗	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-timing.html" >
+	JavaScript 计时事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-cookies.html" >
+	JavaScript Cookies	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 库</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-libraries.html" >
+	JavaScript 库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-lib-jquery.html" >
+	JavaScript 测试 jQuery	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-lib-prototype.html" >
+	JavaScript 测试 Prototype	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 实例</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-examples.html" >
+	JavaScript 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-objects.html" >
+	JavaScript 对象实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-browser.html" >
+	JavaScript 浏览器对象实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-dom.html" >
+	JavaScript HTML DOM 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-summary.html" >
+	JavaScript 总结	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 参考手册</h2>
+<a target="_top" href="/jsref/jsref-tutorial.html">JavaScript 对象</a>
+<a target="_top" href="/jsref/dom-obj-document.html">HTML DOM 对象</a></div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/js/js-comments.html" rel="prev"> JavaScript 注释</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/js/js-datatypes.html" rel="next">JavaScript 数据类型</a> &raquo;</div>
+	</div>
+
+	<h1>JavaScript <span class="color_h1"> 变量</span>
+</h1>
+<hr />
+<p class="intro">变量是用于存储信息的"容器"。</p>
+
+<div class="example">
+<h2 class="example_head">实例</h2>
+	<div class="example_code notranslate">
+		var x=5;<br />var y=6;<br />
+var z=x+y;<br />
+</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryjs_data1" target="_blank">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>就像代数那样</h2>
+<p>x=5<br />
+y=6<br />
+z=x+y</p>
+<p>在代数中，我们使用字母（比如 x）来保存值（比如 5）。</p>
+<p>通过上面的表达式 z=x+y，我们能够计算出 z 的值为 11。</p>
+<p>在 JavaScript 中，这些字母被称为变量。</b> </p>
+
+<table class="lamp"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>
+您可以把变量看做存储数据的容器。
+</td>
+</tr></table>
+<br /><hr />
+<h2>JavaScript 变量</h2>
+<p>与代数一样，JavaScript 变量可用于存放值（比如 x=5）和表达式（比如 z=x+y）。</p>
+
+<p>变量可以使用短名称（比如 x 和 y），也可以使用描述性更好的名称（比如 age, sum, totalvolume）。</p>
+<ul>
+<li>变量必须以字母开头</li>
+<li>变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）</li>
+<li>变量名称对大小写敏感（y 和 Y 是不同的变量）</li>
+</ul>
+<table class="lamp"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>
+JavaScript 语句和 JavaScript 变量都对大小写敏感。
+</td>
+</tr></table>
+<br /><hr />
+<h2>JavaScript 数据类型</h2>
+<p>JavaScript 变量还能保存其他数据类型，比如文本值 (name=&quot;Bill Gates&quot;)。</p>
+
+<p>在 JavaScript 中，类似 &quot;Bill Gates&quot; 这样一条文本被称为字符串。</p>
+
+<p>JavaScript 变量有很多种类型，但是现在，我们只关注数字和字符串。</p>
+
+<p>当您向变量分配文本值时，应该用双引号或单引号包围这个值。</p>
+
+<p>当您向变量赋的值是数值时，不要使用引号。如果您用引号包围数值，该值会被作为文本来处理。</p>
+
+<div class="example">
+<h2 class="example_head">实例</h2>
+<div class="example_code notranslate">
+	var pi=3.14;<br />var person="John Doe";<br />var answer='Yes I am!';<br />
+</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryjs_data2" target="_blank">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>声明（创建） JavaScript 变量</h2>
+<p>在 JavaScript 中创建变量通常称为"声明"变量。
+ </p>
+<p>我们使用 var 关键词来声明变量：</p>
+
+<div class="code notranslate">
+<div>
+var carname;
+</div>
+</div>
+
+<p>变量声明之后，该变量是空的（它没有值）。
+</p>
+<p>如需向变量赋值，请使用等号：</p>
+
+<div class="code notranslate">
+<div>
+carname="Volvo";
+</div>
+</div>
+
+<p>不过，您也可以在声明变量时对其赋值：</p>
+
+<div class="code notranslate"><div>
+var carname="Volvo";</div></div>
+
+<p>在下面的例子中，我们创建了名为 carname 的变量，并向其赋值 "Volvo"，然后把它放入 id="demo" 的 HTML 段落中：
+</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+&lt;p id="demo"&gt;&lt;/p&gt;<br />
+var carname="Volvo";<br />
+document.getElementById("demo").innerHTML=carname;
+</div>
+<br /><a target="_blank" href="/try/try.php?filename=tryjs_variables1" class="tryitbtn">尝试一下 »</a>
+</div>
+<br /><table class="lamp"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>一个好的编程习惯是，在代码开始处，统一对需要的变量进行声明。
+</td>
+</tr></table>
+<br /><hr />
+<h2>一条语句，多个变量</h2>
+<p>您可以在一条语句中声明很多变量。该语句以 var 开头，并使用逗号分隔变量即可：</p>
+
+<div class="code notranslate">
+<div>
+var lastname="Doe", age=30, job="carpenter";
+</div>
+</div>
+
+<p>声明也可横跨多行： </p>
+
+<div class="code notranslate">
+<div>
+var lastname="Doe",<br />
+age=30,<br />
+job="carpenter";
+</div>
+</div>
+<br /><hr />
+<h2>Value = undefined</h2>
+<p>在计算机程序中，经常会声明无值的变量。未使用值来声明的变量，其值实际上是 undefined。</p>
+
+<p>在执行过以下语句后，变量 carname 的值将是 undefined：</p>
+<div class="code notranslate">
+<div>
+var carname;</div>
+</div>
+<br /><hr />
+<h2>重新声明 JavaScript 变量</h2>
+<p>如果重新声明 JavaScript 变量，该变量的值不会丢失：</p>
+
+<p>在以下两条语句执行后，变量 carname 的值依然是 &quot;Volvo&quot;：</p>
+<div class="code notranslate">
+<div>
+var
+carname="Volvo"; <br />
+var carname;</div>
+</div>
+<br /><hr />
+<h2>JavaScript 算数</h2>
+<p>您可以通过 JavaScript 变量来做算数，使用的是 = 和 + 这类运算符：</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+y=5;<br />
+x=y+2;
+</div>
+<br /><a target="_blank" href="/try/try.php?filename=tryjs_oper_add" class="tryitbtn">尝试一下 »</a>
+</div>
+
+<p>您将在本教程稍后的章节学到更多有关 JavaScript 运算符的知识。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/js/js-comments.html" rel="prev"> JavaScript 注释</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/js/js-datatypes.html" rel="next">JavaScript 数据类型</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.174 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 20:03:59 -->
+
+<!-- super cache -->

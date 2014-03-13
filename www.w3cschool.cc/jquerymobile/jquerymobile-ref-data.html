@@ -1,0 +1,1205 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Mobile Data 属性 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='XPath 语法' href='http://www.w3cschool.cc/xpath/xpath-syntax.html' />
+<link rel='next' title='jQuery Mobile 图标' href='http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-icons.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-data.html' />
+<meta name="keywords" content="jQuery Mobile Data 属性,jQuery Mobile">
+<meta name="description" content="jQuery Mobile Data 属性   jQuery Data 属性 jQuery Mobile 使用 HTML5 data-* 属性来为移动设备创建更具触摸友好性和吸引性的外观。 在下面的参考列表中，粗体显示的值为默认值。  按钮 带有 data-role='button' 的超链接。button 元素、工具栏中的链接以及 input 字段都会自动渲染成按钮样式，不需要添加 data-role='button'。   Data..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>jQuery Mobile</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html" >
+	jQuery Mobile 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-intro.html" >
+	jQuery Mobile 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-install.html" >
+	jQuery Mobile 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-pages.html" >
+	jQuery Mobile 页面	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-transitions.html" >
+	jQuery Mobile 页面切换	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-buttons.html" >
+	jQuery Mobile 按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-icons.html" >
+	jQuery Mobile 按钮图标	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-toolbars.html" >
+	jQuery Mobile 工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-navbars.html" >
+	jQuery Mobile 导航栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-collapsibles.html" >
+	jQuery Mobile 可折叠块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-grids.html" >
+	jQuery Mobile 网格	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 列表</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-list-views.html" >
+	jQuery Mobile 列表视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-list-content.html" >
+	jQuery Mobile 列表内容	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 表单</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-basic.html" >
+	jQuery Mobile 表单基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-inputs.html" >
+	jQuery Mobile 表单输入	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-select.html" >
+	jQuery Mobile 表单选择	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-sliders.html" >
+	jQuery Mobile 表单滑动条	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 主题</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-themes.html" >
+	jQuery Mobile 主题	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 事件</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events.html" >
+	jQuery Mobile 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-touch.html" >
+	jQuery Mobile 触摸事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-scroll.html" >
+	jQuery Mobile 滚屏事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-orientation.html" >
+	jQuery Mobile 方向改变事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-examples.html" >
+	jQuery Mobile 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-data.html" >
+	jQuery Mobile Data 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-icons.html" >
+	jQuery Mobile 图标	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-events.html" >
+	jQuery Mobile 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-page.html" >
+	jQuery Mobile页面事件	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-examples.html" rel="prev"> jQuery Mobile 实例</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-icons.html" rel="next">jQuery Mobile 图标</a> &raquo;</div>
+	</div>
+
+	<h1>jQuery Mobile <span class="color_h1">Data 属性</span>
+</h1>
+<hr />
+<h2>jQuery Data 属性</h2>
+<p>jQuery Mobile 使用 <a href="/tags/att-object-data.html">HTML5 data-* 属性</a>来为移动设备创建更具触摸友好性和吸引性的外观。</p>
+<p>在下面的参考列表中，<strong>粗体显示的值</strong>为默认值。</p>
+<hr />
+<h2>按钮</h2>
+<p>带有 <span class="marked">data-role="button"</span> 的超链接。button 元素、工具栏中的链接以及 input 字段都会自动渲染成按钮样式，不需要添加 data-role="button"。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-corners</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定按钮是否圆角</td>
+</tr>
+<tr>
+<td>data-icon</td>
+<td><a href="jquerymobile-ref-icons.html">Icons 参考手册</a></td>
+<td>规定按钮的图表。默认没有图标。</td>
+</tr>
+<tr>
+<td>data-iconpos</td>
+<td>
+<strong>left</strong> | right | top | bottom | notext</td>
+<td>规定图标的位置</td>
+</tr>
+<tr>
+<td>data-iconshadow</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定按钮图标是否有阴影</td>
+</tr>
+<tr>
+<td>data-inline</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定按钮是否内联</td>
+</tr>
+<tr>
+<td>data-mini</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定按钮是小尺寸还是常规尺寸</td>
+</tr>
+<tr>
+<td>data-shadow</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定按钮是否有阴影</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定按钮的主题颜色</td>
+</tr>
+</table>
+<br /><table class="lamp" id="table2"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>如需组合多个按钮，请使用带有 data-role="controlgroup" 属性和 data-type="horizontal|vertical" 的容器来规定是否水平或垂直组合按钮。</td>
+</tr></table>
+<br /><hr />
+<h2>复选框</h2>
+<p>带有 <span class="marked">type="checkbox"</span> 的成双成对的 label 和 input。它们会被自动渲染程按钮样式，data-role 不是必需的。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-mini</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定复选框是小尺寸还是常规尺寸</td>
+</tr>
+<tr>
+<td>data-role</td>
+<td>none</td>
+<td>防止 jQuery Mobile 把复选框渲染成按钮样式</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定复选框的主题颜色</td>
+</tr>
+</table>
+<br /><table class="lamp" id="table2"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>如需组合多个复选框，请使用带有 data-role="controlgroup" 属性和 data-type="horizontal|vertical" 的容器来规定是否水平或垂直组合复选框。</td>
+</tr></table>
+<br /><hr />
+<h2>可折叠块</h2>
+<p>在带有 <span class="marked">data-role="collapsible"</span> 的容器内部的后跟任意 HTML 标记的标题元素。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-collapsed</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定内容是折叠还是展开</td>
+</tr>
+<tr>
+<td>data-collapsed-icon</td>
+<td><a href="jquerymobile-ref-icons.html">Icons 参考手册</a></td>
+<td>规定可折叠按钮的图标。默认是 "plus"</td>
+</tr>
+<tr>
+<td>data-content-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定可折叠内容的主题颜色。是否为可折叠内容添加圆角</td>
+</tr>
+<tr>
+<td>data-expanded-icon</td>
+<td><a href="jquerymobile-ref-icons.html">Icons 参考手册</a></td>
+<td>规定当内容展开时可折叠按钮的图标。默认是 "minus"</td>
+</tr>
+<tr>
+<td>data-iconpos</td>
+<td>
+<strong>left</strong> | right | top | bottom</td>
+<td>规定图标的位置</td>
+</tr>
+<tr>
+<td>data-inset</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定可折叠按钮是否渲染成圆角且带外边距</td>
+</tr>
+<tr>
+<td>data-mini</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定可折叠按钮是小尺寸还是常规尺寸</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定可折叠按钮的主题颜色</td>
+</tr>
+</table>
+<br /><hr />
+<h2>可折叠集合</h2>
+<p>在带有 <span class="marked">data-role="collapsible-set"</span> 的容器内部的可折叠内容块。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-collapsed-icon</td>
+<td><a href="jquerymobile-ref-icons.html">Icons 参考手册</a></td>
+<td>规定可折叠按钮的图标。默认是 "plus"</td>
+</tr>
+<tr>
+<td>data-content-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定可折叠按钮的主题颜色</td>
+</tr>
+<tr>
+<td>data-expanded-icon</td>
+<td><a href="jquerymobile-ref-icons.html">Icons 参考手册</a></td>
+<td>规定当内容展开时可折叠按钮的图标。默认是 "minus"</td>
+</tr>
+<tr>
+<td>data-iconpos</td>
+<td>
+<strong>left</strong> | right | top | bottom | notext</td>
+<td>规定图标的位置</td>
+</tr>
+<tr>
+<td>data-inset</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定可折叠块是否渲染成圆角且带外边距</td>
+</tr>
+<tr>
+<td>data-mini</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定可折叠按钮是小尺寸还是常规尺寸</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定可折叠集合的主题颜色</td>
+</tr>
+</table>
+<br /><hr />
+<h2>内容</h2>
+<p>带有 <span class="marked">data-role="content"</span> 的容器。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定内容的主题颜色。默认是 "c"</td>
+</tr>
+</table>
+<br /><hr />
+<h2>控件组</h2>
+<p>带有 <span class="marked">data-role="controlgroup"</span> 的 &lt;div&gt; 或 &lt;fieldset&gt; 容器。 
+组合单个类型（基于链接的按钮、单选按钮、复选框、select 元素）的多个按钮样式的 input。对于组合表单复选框和单选按钮，推荐在带有 data-role="fieldcontain" 的 &lt;div&gt; 内使用 &lt;fieldset&gt; 容器来改进标签样式。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-mini</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定控件组是小尺寸还是常规尺寸</td>
+</tr>
+<tr>
+<td>data-type</td>
+<td>horizontal | <strong>vertical</strong>
+</td>
+<td>规定控件组是水平显示还是垂直显示</td>
+</tr>
+</table>
+<br /><hr />
+<h2>对话框</h2>
+<p>带有 <span class="marked">data-role="dialog"</span> 的容器或带有 <span class="marked">data-rel="dialog"</span> 的链接。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-close-btn-text</td>
+<td><em>sometext</em></td>
+<td>规定对话框关闭按钮的文本</td>
+</tr>
+<tr>
+<td>data-dom-cache</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定是否清除各个页面的 jQuery DOM 缓存（如果设置为 true，您必须自己管理 DOM 并在所有移动设备上进行测试）</td>
+</tr>
+<tr>
+<td>data-overlay-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定对话框页面的蒙版（背景）颜色</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定对话框页面的主题颜色</td>
+</tr>
+<tr>
+<td>data-title</td>
+<td><em>sometext</em></td>
+<td>规定对话框页面的标题</td>
+</tr>
+</table>
+<br /><hr />
+<h2>增强</h2>
+<p>带有 <span class="marked">data-enhance="false"</span> 或 <span class="marked">data-ajax="false"</span> 的容器。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-enhance</td>
+<td>
+<strong>true </strong>| false</td>
+<td>如果设置为 "true"（默认），jQuery Mobile 会自动渲染页面，使其更适合于移动设备。如果设置为 "false"，框架将不会渲染页面</td>
+</tr>
+<tr>
+<td>data-ajax</td>
+<td>
+<strong>true </strong>| false</td>
+<td>规定是否通过 ajax 加载页面</td>
+</tr>
+</table>
+<p><strong>注意：</strong>data-enhance="false" 必须与 $.mobile.ignoreContentEnabled=true" 一同使用来阻止 jQuery Mobile 自动渲染页面。</p>
+<p>当 $.mobile.ignoreContentEnabled 设置为 true 时，data-ajax="false" 容器内的任何链接或表单元素将会被框架的导航功能忽略。</p>
+<hr />
+<h2>域容器</h2>
+<p>包围在 label/表单元素对周围的带有 <span class="marked">data-role="fieldcontain"</span> 的容器。</p>
+<hr />
+<h2>固定工具栏</h2>
+<p>带有 <span class="marked">data-role="header"</span> 或 <span class="marked">data-role="footer"</span>，并带有 <span class="marked">data-position="fixed"</span> 属性的容器。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-disable-page-zoom</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定用户是否能缩放页面</td>
+</tr>
+<tr>
+<td>data-fullscreen</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定工具栏是否一直固定在顶部或底部</td>
+</tr>
+<tr>
+<td>data-tap-toggle</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定用户是否能够通过点击改变工具栏的可见性</td>
+</tr>
+<tr>
+<td>data-transition</td>
+<td>
+<strong>slide</strong> | fade | none</td>
+<td>规定当点击发生时的切换效果</td>
+</tr>
+<tr>
+<td>data-update-page-padding</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定页面顶部和底部的内边距是否在 resize、transition 和 "updatelayout" 事件发生时更新（jQuery Mobile 在 "pageshow" 事件发生时总是更新内边距）</td>
+</tr>
+<tr>
+<td>data-visible-on-page-show</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定当父页面显示时工具栏的可见性</td>
+</tr>
+</table>
+<br /><hr />
+<h2>翻转拨动开关</h2>
+<p>一个带有 <span class="marked">data-role="slider"</span> 的 &lt;select&gt; 元素和两个 &lt;option&gt; 元素。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-mini</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定开关是小尺寸还是常规尺寸</td>
+</tr>
+<tr>
+<td>data-role</td>
+<td>none</td>
+<td>防止 jQuery Mobile 把拨动开关渲染成按钮样式</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定拨动开关的主题颜色</td>
+</tr>
+<tr>
+<td>data-track-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定轨道的主题颜色</td>
+</tr>
+</table>
+<br /><hr />
+<h2>尾部栏</h2>
+<p>带有 <span class="marked">data-role="footer"</span> 的容器。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-id</td>
+<td><em>sometext</em></td>
+<td>规定唯一 ID。对于持续的尾部栏是必需的</td>
+</tr>
+<tr>
+<td>data-position</td>
+<td>
+<strong>inline</strong> | fixed</td>
+<td>规定尾部栏是与页面内容内联还是保持固定在底部</td>
+</tr>
+<tr>
+<td>data-fullscreen</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定尾部栏是固定在底部还是覆盖在页面内容上（查看范围更大）</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定尾部栏的主题颜色。默认是 "a"</td>
+</tr>
+</table>
+<p><strong>注意：</strong>如需启用全屏定位，请使用 data-position="fixed"，然后添加 data-fullscreen 属性到元素上。</p>
+<hr />
+<h2>头部栏</h2>
+<p>带有 <span class="marked">data-role="header"</span> 的容器。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-id</td>
+<td><em>sometext</em></td>
+<td>规定唯一 ID。对于持续的头部栏是必需的</td>
+</tr>
+<tr>
+<td>data-position</td>
+<td>
+<strong>inline</strong> | fixed</td>
+<td>规定头部栏是与页面内容内联还是保持固定在顶部</td>
+</tr>
+<tr>
+<td>data-fullscreen</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定头部栏是固定在顶部还是覆盖在页面内容上（查看范围更大）</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定头部栏的主题颜色。默认是 "a"</td>
+</tr>
+</table>
+<p><strong>注意：</strong>如需启用全屏定位，请使用 data-position="fixed"，然后添加 data-fullscreen 属性到元素上。</p>
+<hr />
+<h2>链接</h2>
+<p>所有的链接，包含那些带有 data-role="button" 的链接和表单提交按钮。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-ajax</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定是否通过 ajax 加载页面来提高用户体验和交互。如果设置为 false，jQuery Mobile 将会执行一个正常的页面请求。</td>
+</tr>
+<tr>
+<td>data-direction</td>
+<td>reverse</td>
+<td>反向转换动画（仅用于页面和对话框）</td>
+</tr>
+<tr>
+<td>data-dom-cache</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定是否清除各个页面的 jQuery DOM 缓存（如果设置为 true，您必须自己管理 DOM 并在所有移动设备上进行测试）</td>
+</tr>
+<tr>
+<td>data-prefetch</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定是否预先读取页面到 DOM 中，以便当用户访问它们时可用</td>
+</tr>
+<tr>
+<td>data-rel</td>
+<td>back | dialog | external | popup</td>
+<td>规定链接行为的选项。Back - 回退到历史记录中的前一个页面。Dialog - 以对话框形式打开链接，不保存到历史记录中。External - 用于链接到另一个域。Popup - 打开一个弹出窗口。</td>
+</tr>
+<tr>
+<td>data-transition</td>
+<td>
+<strong>fade</strong> | flip | flow | pop | slide | slidedown | slidefade | slideup | turn | 
+none</td>
+<td>规定一个页面切换到下一个页面的效果。请查看我们的 <a href="jquerymobile-transitions.html">jQuery Mobile 页面切换</a>章节。</td>
+</tr>
+<tr>
+<td>data-position-to</td>
+<td>
+<strong>origin</strong> | jQuery selector | window</td>
+<td>规定弹出框的位置。Origin - 默认。定位弹窗在打开它的链接上。jQuery selector - 定位弹窗在指定元素上。Window - 定位弹窗在窗口屏幕的中央。</td>
+</tr>
+</table>
+<br /><hr />
+<h2>列表</h2>
+<p>带有 <span class="marked">data-role="listview"</span> 的 &lt;ol&gt; 或 &lt;ul&gt;。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-autodividers</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定是否自动划分列表项</td>
+</tr>
+<tr>
+<td>data-count-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定计数气泡的主题颜色。默认是 "c"</td>
+</tr>
+<tr>
+<td>data-divider-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定列表分隔的主题颜色。默认是 "b"</td>
+</tr>
+<tr>
+<td>data-filter</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定是否在列表中添加搜索框</td>
+</tr>
+<tr>
+<td>data-filter-placeholder</td>
+<td><em>sometext</em></td>
+<td>规定搜索框内的文本。默认是 "Filter items..."</td>
+</tr>
+<tr>
+<td>data-filter-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定搜索过滤的主题颜色。默认是 "c"</td>
+</tr>
+<tr>
+<td>data-icon</td>
+<td><a href="jquerymobile-ref-icons.html">Icons 参考手册</a></td>
+<td>规定列表的图标</td>
+</tr>
+<tr>
+<td>data-inset</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定列表是否渲染成圆角且带外边距</td>
+</tr>
+<tr>
+<td>data-split-icon</td>
+<td><a href="jquerymobile-ref-icons.html">Icons 参考手册</a></td>
+<td>规定分割按钮的图表。默认是 "arrow-r"</td>
+</tr>
+<tr>
+<td>data-split-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定分割按钮的主题颜色。默认是 "b"</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定列表的主题颜色</td>
+</tr>
+</table>
+<br /><hr />
+<h2>列表项</h2>
+<p>带有 <span class="marked">data-role="listview"</span> 的 &lt;ol&gt; 或 &lt;ul&gt; 内的 &lt;li&gt;。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-filtertext</td>
+<td><em>sometext</em></td>
+<td>规定当过滤元素时要搜索的文本。该文本将会被过滤，而不是实际的列表项文本</td>
+</tr>
+<tr>
+<td>data-icon</td>
+<td><a href="jquerymobile-ref-icons.html">Icons 参考手册</a></td>
+<td>规定列表项图标</td>
+</tr>
+<tr>
+<td>data-role</td>
+<td>list-divider</td>
+<td>规定列表项的分隔</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z) </td>
+<td>规定列表项的主题颜色</td>
+</tr>
+</table>
+<p><strong>注意：</strong>data-icon 属性只作用于带有链接的列表项。</p>
+<hr />
+<h2>导航栏</h2>
+<p>带有 <span class="marked">data-role="navbar"</span> 容器内部的 &lt;li&gt; 元素。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-icon</td>
+<td><a href="jquerymobile-ref-icons.html">Icons 参考手册</a></td>
+<td>规定列表项的图标</td>
+</tr>
+<tr>
+<td>data-iconpos</td>
+<td>left | right | <strong>top</strong> | bottom | notext</td>
+<td>规定图标的位置</td>
+</tr>
+</table>
+<br /><table class="lamp" id="table2"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>导航栏从他们的父容器中继承了主题样本。为导航栏设置 data-theme 属性是不可能的。可以为导航栏中的每个链接单独设置 data-theme 属性。</td>
+</tr></table>
+<br /><hr />
+<h2>页面</h2>
+<p>带有 <span class="marked">data-role="page"</span> 的容器。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-add-back-btn</td>
+<td>true | <strong>false</strong>
+</td>
+<td>自动添加后退按钮，仅限头部栏</td>
+</tr>
+<tr>
+<td>data-back-btn-text</td>
+<td><em>sometext</em></td>
+<td>规定后退按钮的一些文本</td>
+</tr>
+<tr>
+<td>data-back-btn-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定后退按钮的主题颜色</td>
+</tr>
+<tr>
+<td>data-close-btn-text</td>
+<td>
+<em>letter</em> (a-z) </td>
+<td>规定对话框上关闭按钮的一些文本</td>
+</tr>
+<tr>
+<td>data-dom-cache</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定是否清除各个页面的 jQuery DOM 缓存（如果设置为 true，您必须自己管理 DOM 并在所有移动设备上进行测试）</td>
+</tr>
+<tr>
+<td>data-overlay-theme</td>
+<td>
+<em>letter</em> (a-z) </td>
+<td>规定对话框页面的蒙版（背景）颜色</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z) </td>
+<td>规定页面的主题颜色。默认是 "c"</td>
+</tr>
+<tr>
+<td>data-title</td>
+<td><em>sometext</em></td>
+<td>规定页面标题</td>
+</tr>
+<tr>
+<td>data-url</td>
+<td>url</td>
+<td>更新 URL 的值，而不是用于请求页面的 URL</td>
+</tr>
+</table>
+<br /><hr />
+<h2>弹窗</h2>
+<p>带有 <span class="marked">data-role="popup"</span> 的容器。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-corners</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定弹窗是否圆角</td>
+</tr>
+<tr>
+<td>data-overlay-theme</td>
+<td>
+<em>letter</em> (a-z) </td>
+<td>规定弹出框的蒙版（背景）颜色。默认是透明背景（无） </td>
+</tr>
+<tr>
+<td>data-shadow</td>
+<td>
+<strong>true</strong> | false</td>
+<td>规定弹出框是否有阴影</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z) </td>
+<td>规定弹出框的主题颜色。默认是继承的，"none" 设置弹窗为透明的</td>
+</tr>
+<tr>
+<td>data-tolerance</td>
+<td>30, 15, 30, 15 </td>
+<td>规定窗口边缘（上 top、右 right、下 bottom、左 left）的距离</td>
+</tr>
+</table>
+<p>带有 <span class="marked">data-rel="popup"</span> 的锚：</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-position-to</td>
+<td>
+<strong>origin</strong> | jQuery selector | window</td>
+<td>>规定弹出框的位置。Origin - 默认。定位弹窗在打开它的链接上。jQuery selector - 定位弹窗在指定元素上。Window - 定位弹窗在窗口屏幕的中央。</td>
+</tr>
+<tr>
+<td>data-rel</td>
+<td>popup</td>
+<td>用于打开弹出框</td>
+</tr>
+<tr>
+<td>data-transition</td>
+<td>fade | flip | flow | pop | slide | slidedown | slidefade | slideup | turn | 
+<strong>none</strong>
+</td>
+<td>规定一个页面切换到下一个页面的效果。请查看我们的 <a href="jquerymobile-transitions.html">jQuery Mobile 页面切换</a>章节。</td>
+</tr>
+</table>
+<br /><hr />
+<h2>单选按钮</h2>
+<p>带有 <span class="marked">type="radio"</span> 的成双成对的 label 和 input。它们会被自动渲染程按钮样式，data-role 不是必需的。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-mini</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定按钮是小尺寸还是常规尺寸</td>
+</tr>
+<tr>
+<td>data-role</td>
+<td>none</td>
+<td>防止 jQuery Mobile 渲染单选按钮的样式为增强状态的按钮，使元素以 HTML 原生的状态显示</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定单选按钮的主题颜色</td>
+</tr>
+</table>
+<br /><table class="lamp" id="table2"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>如需组合多个单选按钮，请使用带有 data-role="controlgroup" 属性和 data-type="horizontal|vertical" 的容器来规定是否水平或垂直组合单选按钮。</td>
+</tr></table>
+<br /><hr />
+<h2>选择</h2>
+<p>所有的 <span class="marked">&lt;select&gt;</span> 元素。这些会被自动渲染成按钮样式，date-role 是不必需的。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-icon</td>
+<td><a href="jquerymobile-ref-icons.html">Icons 参考手册</a></td>
+<td>规定 select 元素的图标。默认是 "arrow-d"</td>
+</tr>
+<tr>
+<td>data-iconpos</td>
+<td>left | <strong>right</strong> | top | bottom | notext</td>
+<td>规定图标的位置</td>
+</tr>
+<tr>
+<td>data-inline</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定 select 元素是否内联</td>
+</tr>
+<tr>
+<td>data-mini</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定 select 元素是小尺寸还是常规尺寸</td>
+</tr>
+<tr>
+<td>data-native-menu</td>
+<td>
+<strong>true</strong> | false</td>
+<td>当设置为 false 时，它使用 jQuery 自带的自定义的选择菜单（如果您想要让选择菜单在所有的移动设备上都显示相同，则推荐这么使用）</td>
+</tr>
+<tr>
+<td>data-overlay-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定 jQuery 自带的自定义的选择菜单的主题颜色（与 data-native-menu="false" 一起使用）</td>
+</tr>
+<tr>
+<td>data-placeholder</td>
+<td>true | <strong>false</strong>
+</td>
+<td>可在一个非原生的选择菜单的 &lt;option&gt; 元素上设置</td>
+</tr>
+<tr>
+<td>data-role</td>
+<td>none</td>
+<td>防止 jQuery Mobile 把 select 元素渲染成按钮样式</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z)</td>
+<td>规定 select 元素的主题颜色</td>
+</tr>
+</table>
+<br /><table class="lamp" id="table2"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>如需组合多个 select 元素，请使用带有 data-role="controlgroup" 属性和 data-type="horizontal|vertical" 的容器来规定是否水平或垂直组合 select 元素。</td>
+</tr></table>
+<br /><hr />
+<h2>滑动块</h2>
+<p>带有 <span class="marked">type="range"</span> 的输入框。这些会被自动渲染成按钮样式，date-role 是不必需的。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-highlight</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定滑动轨道是否高亮突出显示</td>
+</tr>
+<tr>
+<td>data-mini</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定滑动块是小尺寸还是常规尺寸</td>
+</tr>
+<tr>
+<td>data-role</td>
+<td>none</td>
+<td>防止 jQuery Mobile 渲染滑动块控件为按钮样式</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z) </td>
+<td>规定滑动块控件（输入框、手柄和轨道）的主题颜色</td>
+</tr>
+<tr>
+<td>data-track-theme</td>
+<td>
+<em>letter</em> (a-z) </td>
+<td>规定滑动块轨道的主题颜色</td>
+</tr>
+</table>
+<br /><hr />
+<h2>文本输入框 &amp; 文本输入域</h2>
+<p>带有 <span class="marked">type="text|search|etc."</span> 的 input 或 <span class="marked">textarea 元素</span>。这些会被自动渲染成按钮样式，date-role 是不必需的。</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">Data-属性</th>
+<th width="20%">值</th>
+<th width="60%">描述</th>
+</tr>
+<tr>
+<td>data-mini</td>
+<td>true | <strong>false</strong>
+</td>
+<td>规定输入框是小尺寸还是常规尺寸</td>
+</tr>
+<tr>
+<td>data-role</td>
+<td>none</td>
+<td>防止 jQuery Mobile 把输入框/输入域渲染成按钮样式</td>
+</tr>
+<tr>
+<td>data-theme</td>
+<td>
+<em>letter</em> (a-z) </td>
+<td>规定输入字段的主题颜色</td>
+</tr>
+</table>
+<br /><br />	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-examples.html" rel="prev"> jQuery Mobile 实例</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-icons.html" rel="next">jQuery Mobile 图标</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.719 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 18:58:37 -->
+
+<!-- super cache -->

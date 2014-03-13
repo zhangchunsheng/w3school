@@ -1,0 +1,340 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>XSD 简易元素 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='XML schema 元素' href='http://www.w3cschool.cc/schema/schema-schema.html' />
+<link rel='next' title='XML Schema 属性' href='http://www.w3cschool.cc/schema/schema-simple-attributes.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/schema/schema-simple.html' />
+<meta name="keywords" content="XSD 简易元素,XML Schema 教程">
+<meta name="description" content="XSD 简易元素   XML Schema 可定义 XML 文件的元素。 简易元素指那些只包含文本的元素。它不会包含任何其他的元素或属性。  什么是简易元素？ 简易元素指那些仅包含文本的元素。它不会包含任何其他的元素或属性。 不过，“仅包含文本”这个限定却很容易造成误解。文本有很多类型。它可以是 XML Schema 定义中包括的类型中的一种（布尔、字符串、数据等等），或者它也可以是您自行定义的定制类型。 您也可向数据类型添加限定（即 ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>XML Schema 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-tutorial.html" >
+	XML Schema 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-intro.html" >
+	XML Schemas 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-why.html" >
+	为什么使用 XML Schema？	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-howto.html" >
+	如何使用 XML Schema	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-schema.html" >
+	XML schema 元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-simple.html" >
+	XSD 简易元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-simple-attributes.html" >
+	XML Schema 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-facets.html" >
+	XML Schema 限定 / Facets	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-complex.html" >
+	XML Schema  复合元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-complex-empty.html" >
+	XML Schema  复合空元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-complex-elements.html" >
+	XML Schema  复合类型 - 仅含元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-complex-text.html" >
+	XML Schema 复合元素 - 仅含文本	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-complex-mixed.html" >
+	XML Schema 复合类型 - 混合内容	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-complex-indicators.html" >
+	XML Schema 指示器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-complex-any.html" >
+	XML Schema any 元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-complex-anyattribute.html" >
+	XML Schema anyAttribute 元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-complex-subst.html" >
+	XML Schema 元素替换	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-example.html" >
+	XML Schema 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-dtypes-string.html" >
+	XML Schema 字符串数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-dtypes-date.html" >
+	XML Schema 日期/时间 数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-dtypes-numeric.html" >
+	XML Schema 数值数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-dtypes-misc.html" >
+	XML Schema 杂项数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-editor.html" >
+	XML 编辑器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-summary.html" >
+	XML Schema 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/schema/schema-elements-ref.html" >
+	XML Schema 参考手册	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/schema/schema-schema.html" rel="prev"> XML schema 元素</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/schema/schema-simple-attributes.html" rel="next">XML Schema 属性</a> &raquo;</div>
+	</div>
+
+	<h1>XSD <span class="color_h1">简易元素</span>
+</h1>
+<hr />
+<p class="intro">XML Schema 可定义 XML 文件的元素。</p>
+<p class="intro">简易元素指那些只包含文本的元素。它不会包含任何其他的元素或属性。</p>
+<hr />
+<h2>什么是简易元素？</h2>
+<p>简易元素指那些仅包含文本的元素。它不会包含任何其他的元素或属性。</p>
+<p>不过，"仅包含文本"这个限定却很容易造成误解。文本有很多类型。它可以是 XML Schema 定义中包括的类型中的一种（布尔、字符串、数据等等），或者它也可以是您自行定义的定制类型。</p>
+<p>您也可向数据类型添加限定（即 facets），以此来限制它的内容，或者您可以要求数据匹配某种特定的模式。</p>
+<hr />
+<h2>定义简易元素
+</h2>
+<p>定义简易元素的语法： </p>
+
+<div class="code notranslate"><div>
+&lt;xs:element name="xxx" type="yyy"/&gt;
+</div></div>
+
+<p>此处 xxx 指元素的名称，yyy 指元素的数据类型。XML Schema 拥有很多内建的数据类型。</p>
+
+<h3>最常用的类型是：</h3>
+<ul>
+	<li>xs:string</li>
+	<li>xs:decimal</li>
+	<li>xs:integer</li>
+	<li>xs:boolean</li>
+	<li>xs:date</li>
+	<li>xs:time</li>
+</ul>
+
+<h3>实例</h3>
+<p>这是一些 XML 元素：</p>
+
+<div class="code notranslate"><div>
+
+&lt;lastname&gt;Refsnes&lt;/lastname&gt;<br />
+&lt;age&gt;36&lt;/age&gt;<br />
+&lt;dateborn&gt;1970-03-27&lt;/dateborn&gt;
+</div></div>
+
+<p>这是相应的简易元素定义：</p>
+
+<div class="code notranslate"><div>
+
+&lt;xs:element name="lastname" type="xs:string"/&gt;<br />
+&lt;xs:element name="age" type="xs:integer"/&gt;<br />
+&lt;xs:element name="dateborn" type="xs:date"/&gt;
+</div></div>
+<br /><hr />
+<h2>简易元素的默认值和固定值</h2>
+<p>简易元素可拥有指定的默认值或固定值。</p>
+<p>当没有其他的值被规定时，默认值就会自动分配给元素。</p>
+
+<p>在下面的例子中，缺省值是 &quot;red&quot;：</p>
+
+
+<div class="code notranslate"><div>
+&lt;xs:element name="color" type="xs:string" default="red"/&gt;
+</div></div>
+
+<p>固定值同样会自动分配给元素，并且您无法规定另外一个值。</p>
+<p>在下面的例子中，固定值是 &quot;red&quot;：</p>
+
+
+<div class="code notranslate"><div>
+&lt;xs:element name="color" type="xs:string" fixed="red"/&gt;
+</div></div>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/schema/schema-schema.html" rel="prev"> XML schema 元素</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/schema/schema-simple-attributes.html" rel="next">XML Schema 属性</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.173 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 19:42:34 -->
+
+<!-- super cache -->

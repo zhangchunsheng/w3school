@@ -1,0 +1,662 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>MySQL 数据类型 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='MySQL 选择数据库' href='http://www.w3cschool.cc/mysql/mysql-select-database.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/mysql/mysql-data-types.html' />
+<meta name="keywords" content="MySQL 数据类型,MySQL 教程">
+<meta name="description" content="MySQL 数据类型 MySQL中定义数据字段的类型对你数据库的优化是非常重要的。  MySQL支持多种类型，大致可以分为三类：数值、日期/时间和字符串(字符)类型。   数值类型 MySQL支持所有标准SQL数值数据类型。 这些类型包括严格数值数据类型(INTEGER、SMALLINT、DECIMAL和NUMERIC)，以及近似数值数据类型(FLOAT、REAL和DOUBLE PRECISION)。 关键字INT是INTEGER的同义..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>MySQL 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/mysql/mysql-tutorial.html" >
+	MySQL 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mysql/mysql-install.html" >
+	MySQL 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mysql/mysql-administration.html" >
+	MySQL 管理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mysql/mysql-php-syntax.html" >
+	MySQL PHP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mysql/mysql-connection.html" >
+	MySQL 连接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mysql/mysql-create-database.html" >
+	 MySQL 创建数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mysql/mysql-drop-database.html" >
+	MySQL 删除数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mysql/mysql-select-database.html" >
+	MySQL 选择数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mysql/mysql-data-types.html" >
+	MySQL 数据类型	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/mysql/mysql-select-database.html" rel="prev"> MySQL 选择数据库</a></div>
+		<div class="next"></div>
+	</div>
+
+	<h1>MySQL 数据类型</h1>
+<p>MySQL中定义数据字段的类型对你数据库的优化是非常重要的。
+<p>
+MySQL支持多种类型，大致可以分为三类：数值、日期/时间和字符串(字符)类型。
+</p>
+<hr />
+<h2>数值类型</h2>
+<p>MySQL支持所有标准SQL数值数据类型。</p>
+<p>这些类型包括严格数值数据类型(INTEGER、SMALLINT、DECIMAL和NUMERIC)，以及近似数值数据类型(FLOAT、REAL和DOUBLE PRECISION)。</p>
+<p>关键字INT是INTEGER的同义词，关键字DEC是DECIMAL的同义词。</p>
+<p>
+BIT数据类型保存位字段值，并且支持MyISAM、MEMORY、InnoDB和BDB表。
+</p>
+<p>
+作为SQL标准的扩展，MySQL也支持整数类型TINYINT、MEDIUMINT和BIGINT。下面的表显示了需要的每个整数类型的存储和范围。
+</p>
+
+<table class="reference">
+<tbody>
+<tr>
+<th width="10%">
+<strong>类型
+</th>
+<th width="15%">
+<strong>大小
+</th>
+<th width="30%">
+<strong>范围（有符号）
+</th>
+<th width="30%">
+<strong>范围（无符号）
+</th>
+<th width="15%">
+<strong>用途
+</th>
+</tr>
+<tr>
+<td>
+TINYINT
+</td>
+<td>
+1 字节
+</td>
+<td>
+(-128，127)
+</td>
+<td>
+(0，255)
+</td>
+<td>
+小整数值
+</td>
+</tr>
+<tr>
+<td>
+SMALLINT
+</td>
+<td>
+2 字节
+</td>
+<td>
+(-32 768，32 767)
+</td>
+<td>
+(0，65 535)
+</td>
+<td>
+大整数值
+</td>
+</tr>
+<tr>
+<td>
+MEDIUMINT
+</td>
+<td>
+3 字节
+</td>
+<td>
+(-8 388 608，8 388 607)
+</td>
+<td>
+(0，16 777 215)
+</td>
+<td>
+大整数值
+</td>
+</tr>
+<tr>
+<td>
+INT或INTEGER
+</td>
+<td>
+4 字节
+</td>
+<td>
+(-2 147 483 648，2 147 483 647)
+</td>
+<td>
+(0，4 294 967 295)
+</td>
+<td>
+大整数值
+</td>
+</tr>
+<tr>
+<td>
+BIGINT
+</td>
+<td>
+8 字节
+</td>
+<td>
+(-9 233 372 036 854 775 808，9 223 372 036 854 775 807)
+</td>
+<td>
+(0，18 446 744 073 709 551 615)
+</td>
+<td>
+极大整数值
+</td>
+</tr>
+<tr>
+<td>
+FLOAT
+</td>
+<td>
+4 字节
+</td>
+<td>
+(-3.402 823 466 E+38，1.175 494 351 E-38)，0，(1.175 494 351 E-38，3.402 823 466 351 E+38)
+</td>
+<td>
+0，(1.175 494 351 E-38，3.402 823 466 E+38)
+</td>
+<td>
+单精度<br />浮点数值
+</td>
+</tr>
+<tr>
+<td>
+DOUBLE
+</td>
+<td>
+8 字节
+</td>
+<td>
+(1.797 693 134 862 315 7 E+308，2.225 073 858 507 201 4 E-308)，0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)
+</td>
+<td>
+0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)
+</td>
+<td>
+双精度<br />浮点数值
+</td>
+</tr>
+<tr>
+<td>
+DECIMAL
+</td>
+<td>
+对DECIMAL(M,D) ，如果M&gt;D，为M+2否则为D+2
+</td>
+<td>
+依赖于M和D的值
+</td>
+<td>
+依赖于M和D的值
+</td>
+<td>
+小数值
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>日期和时间类型</h2>
+<p>
+表示时间值的日期和时间类型为DATETIME、DATE、TIMESTAMP、TIME和YEAR。</p>
+<p>每个时间类型有一个有效值范围和一个"零"值，当指定不合法的MySQL不能表示的值时使用"零"值。</p>
+<p>TIMESTAMP类型有专有的自动更新特性，将在后面描述。</p>
+
+<table class="reference">
+<tbody>
+<tr>
+<th width="10%">
+类型
+</th >
+<th width="10%">
+大小<br />(字节)
+</th >
+<th width="40%">
+范围
+</th >
+<th >
+格式
+</th >
+<th >
+用途
+</th >
+</tr>
+<tr>
+<td width="10%">
+DATE
+</td>
+<td width="10%">
+3
+</td>
+<td width="40%">
+1000-01-01/9999-12-31
+</td>
+<td>
+YYYY-MM-DD
+</td>
+<td>
+日期值
+</td>
+</tr>
+<tr>
+<td width="10%">
+TIME
+</td>
+<td width="10%">
+3
+</td>
+<td width="40%">
+'-838:59:59'/'838:59:59'
+</td>
+<td>
+HH:MM:SS
+</td>
+<td>
+时间值或持续时间
+</td>
+</tr>
+<tr>
+<td width="10%">
+YEAR
+</td>
+<td width="10%">
+1
+</td>
+<td width="40%">
+1901/2155
+</td>
+<td>
+YYYY
+</td>
+<td>
+年份值
+</td>
+</tr>
+<tr>
+<td width="10%">
+DATETIME
+</td>
+<td width="10%">
+8
+</td>
+<td width="40%">
+1000-01-01 00:00:00/9999-12-31 23:59:59
+</td>
+<td>
+YYYY-MM-DD HH:MM:SS
+</td>
+<td>
+混合日期和时间值
+</td>
+</tr>
+<tr>
+<td width="10%">
+TIMESTAMP
+</td>
+<td width="10%">
+8
+</td>
+<td width="40%">
+1970-01-01 00:00:00/2037 年某时
+</td>
+<td>
+YYYYMMDD HHMMSS
+</td>
+<td>
+混合日期和时间值，时间戳
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>字符串类型</h2>
+<p>字符串类型指CHAR、VARCHAR、BINARY、VARBINARY、BLOB、TEXT、ENUM和SET。该节描述了这些类型如何工作以及如何在查询中使用这些类型。
+</p>
+
+<table class="reference">
+<tbody>
+<tr>
+<th width="20%">
+类型
+</th>
+<th width="25%">
+大小
+</th>
+<th width="55%">
+用途
+</th>
+</tr>
+<tr>
+<td>
+CHAR
+</td>
+<td>
+0-255字节
+</td>
+<td>
+定长字符串
+</td>
+</tr>
+<tr>
+<td>
+VARCHAR
+</td>
+<td>
+0-255字节
+</td>
+<td>
+变长字符串
+</td>
+</tr>
+<tr>
+<td>
+TINYBLOB
+</td>
+<td>
+0-255字节
+</td>
+<td>
+不超过 255 个字符的二进制字符串
+</td>
+</tr>
+<tr>
+<td>
+TINYTEXT
+</td>
+<td>
+0-255字节
+</td>
+<td>
+短文本字符串
+</td>
+</tr>
+<tr>
+<td>
+BLOB
+</td>
+<td>
+0-65 535字节
+</td>
+<td>
+二进制形式的长文本数据
+</td>
+</tr>
+<tr>
+<td>
+TEXT
+</td>
+<td>
+0-65 535字节
+</td>
+<td>
+长文本数据
+</td>
+</tr>
+<tr>
+<td>
+MEDIUMBLOB
+</td>
+<td>
+0-16 777 215字节
+</td>
+<td>
+二进制形式的中等长度文本数据
+</td>
+</tr>
+<tr>
+<td>
+MEDIUMTEXT
+</td>
+<td>
+0-16 777 215字节
+</td>
+<td>
+中等长度文本数据
+</td>
+</tr>
+<tr>
+<td>
+LOGNGBLOB
+</td>
+<td>
+0-4 294 967 295字节
+</td>
+<td>
+二进制形式的极大文本数据
+</td>
+</tr>
+<tr>
+<td>
+LONGTEXT
+</td>
+<td>
+0-4 294 967 295字节
+</td>
+<td>
+极大文本数据
+</td>
+</tr>
+</tbody>
+</table>
+<p>CHAR和VARCHAR类型类似，但它们保存和检索的方式不同。它们的最大长度和是否尾部空格被保留等方面也不同。在存储或检索过程中不进行大小写转换。</p>
+<p>BINARY和VARBINARY类类似于CHAR和VARCHAR，不同的是它们包含二进制字符串而不要非二进制字符串。也就是说，它们包含字节字符串而不是字符字符串。这说明它们没有字符集，并且排序和比较基于列值字节的数值值。</p>
+<p>BLOB是一个二进制大对象，可以容纳可变数量的数据。有4种BLOB类型：TINYBLOB、BLOB、MEDIUMBLOB和LONGBLOB。它们只是可容纳值的最大长度不同。
+</p><p>
+有4种TEXT类型：TINYTEXT、TEXT、MEDIUMTEXT和LONGTEXT。这些对应4种BLOB类型，有相同的最大长度和存储需求。
+</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/mysql/mysql-select-database.html" rel="prev"> MySQL 选择数据库</a></div>
+		<div class="next"></div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.118 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-11 21:59:43 -->
+
+<!-- super cache -->

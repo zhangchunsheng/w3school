@@ -1,0 +1,405 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>PHP link() 函数 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='PHP is_writeable() 函数' href='http://www.w3cschool.cc/php/func-filesystem-is-writeable.html' />
+<link rel='next' title='PHP linkinfo() 函数' href='http://www.w3cschool.cc/php/func-filesystem-linkinfo.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/php/func-filesystem-link.html' />
+<meta name="keywords" content="PHP link() 函数,PHP 基础">
+<meta name="description" content="PHP link() 函数   完整的 PHP Filesystem 参考手册  定义和用法  link() 函数创建一个从指定名称连接的现存目标文件开始的硬连接。 如果成功，该函数返回 TRUE。如果失败，则返回 FALSE。 语法    link(target,link)     参数     描述     target     必需。     link     必需。      提示和注释  注释：这不是一个 HTML 连接，而是..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>PHP 基础</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-tutorial.html" >
+	PHP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-intro.html" >
+	PHP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-install.html" >
+	PHP 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-syntax.html" >
+	PHP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-variables.html" >
+	PHP 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-string.html" >
+	PHP 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-operators.html" >
+	PHP 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-if-else.html" >
+	PHP If...Else	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-switch.html" >
+	PHP Switch	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-arrays.html" >
+	PHP 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-arrays-sort.html" >
+	PHP 数组排序	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-superglobals.html">
+	PHP超级全局变量	</a>	<a target="_top" href="http://www.w3cschool.cc/php/php-looping.html" >
+	PHP While 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-looping-for.html" >
+	PHP For 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-functions.html" >
+	PHP 函数	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-magic-constant.html">
+	PHP 魔术变量	</a>
+<br><h2 class="left"><span class="left_h2">PHP</span> 表单</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-forms.html" >
+	PHP 表单	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-form-validation.html">
+	PHP 表单验证</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-required.html">
+	PHP表单 - 必需字段</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-url-email.html">
+	PHP表单 - 验证邮件和URL</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-complete.html">
+	PHP 完整表单实例</a>	<a target="_top" href="http://www.w3cschool.cc/php/php-get.html" >
+	PHP $_GET 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-post.html" >
+	PHP $_POST 变量	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-arrays-multi.html" >
+	PHP 多维数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-date.html" >
+	PHP 日期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-includes.html" >
+	PHP 包含	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-file.html" >
+	PHP 文件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-file-upload.html" >
+	PHP 文件上传	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-cookies.html" >
+	PHP Cookies	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-sessions.html" >
+	PHP Sessions	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mail.html" >
+	PHP E-mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-secure-mail.html" >
+	PHP 安全 E-mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-error.html" >
+	PHP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-exception.html" >
+	PHP Exception	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-filter.html" >
+	PHP Filter	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 数据库</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-intro.html" >
+	PHP MySQL 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-connect.html" >
+	PHP MySQL Connect	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-create.html" >
+	PHP MySQL Create	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-insert.html" >
+	PHP MySQL Insert	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-select.html" >
+	PHP MySQL Select	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-where.html" >
+	PHP MySQL Where	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-order-by.html" >
+	PHP MySQL Order By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-update.html" >
+	PHP MySQL Update	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-delete.html" >
+	PHP MySQL Delete	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-db-odbc.html" >
+	PHP ODBC	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> XML</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-xml-parser-expat.html" >
+	XML Expat Parser	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-xml-dom.html" >
+	XML DOM	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-xml-simplexml.html" >
+	XML SimpleXML	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 与 AJAX</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-intro.html" >
+	AJAX 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-php.html" >
+	AJAX PHP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-database.html" >
+	AJAX 数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-xml.html" >
+	AJAX XML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-livesearch.html" >
+	AJAX Live Search	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-rss-reader.html" >
+	AJAX RSS Reader	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-poll.html" >
+	AJAX Poll	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 参考手册</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-ref-array.html" >
+	PHP Array	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-calendar.html" >
+	PHP Calendar	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-curl.html">PHP cURL </a>	<a target="_top" href="http://www.w3cschool.cc/php/php-ref-date.html" >
+	PHP Date	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-directory.html" >
+	PHP Directory	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-error.html" >
+	PHP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-filesystem.html" >
+	PHP Filesystem	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-filter.html" >
+	PHP Filter	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-ftp.html" >
+	PHP FTP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-http.html" >
+	PHP HTTP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-libxml.html" >
+	PHP Libxml	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-mail.html" >
+	PHP Mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-math.html" >
+	PHP Math	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-misc.html" >
+	PHP Misc	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-mysqli.html" >
+	PHP MySQLi	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-simplexml.html" >
+	PHP SimpleXML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-string.html" >
+	PHP String	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-xml.html" >
+	PHP XML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-zip.html" >
+	PHP Zip	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-timezones.html" >
+	PHP Timezones	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/php/func-filesystem-is-writeable.html" rel="prev"> PHP is_writeable() 函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/php/func-filesystem-linkinfo.html" rel="next">PHP linkinfo() 函数</a> &raquo;</div>
+	</div>
+
+	<h1>PHP <span class="color_h1">link()</span> 函数</h1>
+<hr />
+<a href="php-ref-filesystem.html"><img class="navup" src="/images/up.gif" alt="PHP Filesystem 参考手册"> 完整的 PHP Filesystem 参考手册</a>
+<hr />
+<h2>定义和用法</h2>
+
+<p>link() 函数创建一个从指定名称连接的现存目标文件开始的硬连接。</p>
+<p>如果成功，该函数返回 TRUE。如果失败，则返回 FALSE。</p>
+<h2>语法</h2>
+
+<div class="code notranslate"><div>
+
+link(target,link)
+
+</div></div>
+<br /><table class="reference notranslate">
+<tr>
+<th align="left" valign="top" width="20%">参数</th>
+    <th align="left" valign="top" width="80%">描述</th>
+  </tr>
+<tr>
+<td valign="top">target</td>
+    <td valign="top">必需。</td>
+  </tr>
+<tr>
+<td valign="top">link</td>
+    <td valign="top">必需。</td>
+  </tr>
+</table>
+<br /><hr />
+<h2>提示和注释</h2>
+
+<p><b>注释：</b>这不是一个 HTML 连接，而是一个文件系统中的连接。</p>
+
+<p><b>注释：</b>该函数不能作用于远程文件。</p>
+<hr />
+<a href="php-ref-filesystem.html"><img class="navup" src="/images/up.gif" alt="PHP Filesystem 参考手册"> 完整的 PHP Filesystem 参考手册</a>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/php/func-filesystem-is-writeable.html" rel="prev"> PHP is_writeable() 函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/php/func-filesystem-linkinfo.html" rel="next">PHP linkinfo() 函数</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.386 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 20:13:28 -->
+
+<!-- super cache -->

@@ -1,0 +1,461 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Python 日期和时间 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Objective C 基础知识' href='http://www.w3cschool.cc/ios/ios-objective-c.html' />
+<link rel='next' title='HTML style media 属性' href='http://www.w3cschool.cc/tags/att-style-media.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/python/python-date-time.html' />
+<meta name="keywords" content="Python 日期和时间,Python基础教程">
+<meta name="description" content="Python  日期和时间    Python程序能用很多方式处理日期和时间。转换日期格式是一个常见的例行琐事。Python有一个time and calendar模组可以帮忙。    什么是Tick？  时间间隔是以秒为单位的浮点小数。 每个时间戳都以自从1970年1月1日午夜（历元）经过了多长时间来表示。 Python附带的受欢迎的time模块下有很多函数可以转换常见日期格式。如函数time.time()用ticks计时单位返回从1..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Python基础教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tutorial.html" >
+	Python基础教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-intro.html" >
+	Python 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-install.html" >
+	Python环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-basic-syntax.html" >
+	Python 基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-variable-types.html" >
+	Python 变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-operators.html" >
+	Python 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-if-statement.html" >
+	Python 条件语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-loops.html" >
+	Python 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-while-loop.html" >
+	Python While循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-for-loop.html" >
+	Python for 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-nested-loops.html" >
+	Python 循环嵌套	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-break-statement.html" >
+	Python break 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-continue-statement.html" >
+	Python continue  语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-pass-statement.html" >
+	Python pass 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-numbers.html" >
+	Python 数字	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-strings.html" >
+	Python 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-lists.html" >
+	Python 列表(Lists)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tuples.html" >
+	Python 元组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-dictionary.html" >
+	Python 字典(Dictionary)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-date-time.html" >
+	Python 日期和时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-functions.html" >
+	Python函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-modules.html" >
+	Python模块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-files-io.html" >
+	Python 文件I/O	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-exceptions.html" >
+	Python 异常处理	</a>
+	<br><h2 class="left"><span class="left_h2">Python</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/python/python-object.html" >
+	Python面向对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-reg-expressions.html" >
+	Python正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-cgi.html" >
+	Python CGI编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-mysql.html" >
+	python操作mysql数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-email.html" >
+	Python使用SMTP发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-multithreading.html" >
+	Python多线程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-xml.html" >
+	python XML解析	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-gui-tkinter.html" >
+	python GUI编程(Tkinter)	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/python-dictionary.html" rel="prev"> Python 字典(Dictionary)</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/python-functions.html" rel="next">Python函数</a> &raquo;</div>
+	</div>
+
+	<h1>Python  <span class="color_h1">日期和时间</span></h1>
+<div class="tutintro">
+
+
+<p>Python程序能用很多方式处理日期和时间。转换日期格式是一个常见的例行琐事。Python有一个time and calendar模组可以帮忙。</p>
+</div>
+
+<br /><hr />
+<h2>什么是Tick？</h2>
+
+<p>时间间隔是以秒为单位的浮点小数。
+<p>每个时间戳都以自从1970年1月1日午夜（历元）经过了多长时间来表示。
+<p>Python附带的受欢迎的time模块下有很多函数可以转换常见日期格式。如函数time.time()用ticks计时单位返回从12:00am, January 1, 1970(epoch) 开始的记录的当前操作系统时间, 如下实例:<p>
+<pre>
+#!/usr/bin/python
+import time;  # This is required to include time module.
+
+ticks = time.time()
+print "Number of ticks since 12:00am, January 1, 1970:", ticks
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Number of ticks since 12:00am, January 1, 1970: 7186862.73399
+</pre>
+
+<p>
+Tick单位最适于做日期运算。但是1970年之前的日期就无法以此表示了。太遥远的日期也不行，UNIX和Windows只支持到2038年某日。
+</p>
+<br /><hr />
+<h2>什么是时间元组？</h2>
+<p>很多Python函数用一个元组装起来的9组数字处理时间:</p>
+<table class="reference">
+<tbody><tr>
+<th style="width:10%">序号
+</th><th style="width:40%">字段</th><th>值</th>
+</tr>
+<tr><td>0</td><td>4位数年</td><td>2008</td></tr>
+<tr><td>1</td><td>月</td><td>1 到 12</td></tr>
+<tr><td>2</td><td>日</td><td>1到31</td></tr>
+<tr><td>3</td><td>小时</td><td>0到23</td></tr>
+<tr><td>4</td><td>分钟</td><td0到59</td></tr>
+<tr><td>5</td><td>秒</td><td>0到61 (60或61 是闰秒)</td></tr>
+<tr><td>6</td><td>一周的第几日</td><td>0到6 (0是周一)</td></tr>
+<tr><td>7</td><td>一年的第几日</td><td>1到366 (儒略历)</td></tr>
+<tr><td>8</td><td>夏令时</td><td>-1, 0, 1, -1是决定是否为夏令时的旗帜</td></tr>
+</tbody></table>
+<p>上述也就是struct_time元组。这种结构具有如下属性：</p>
+<table class="reference">
+<tbody><tr>
+<th style="width:10%">序号</th><th style="width:40%">属性</th><th>值</th>
+</tr>
+<tr><td>0</td><td>tm_year</td><td>2008</td></tr>
+<tr><td>1</td><td>tm_mon</td><td>1 到 12</td></tr>
+<tr><td>2</td><td>tm_mday</td><td>1 到 31</td></tr>
+<tr><td>3</td><td>tm_hour</td><td>0 到 23</td></tr>
+<tr><td>4</td><td>tm_min</td><td>0 到 59</td></tr>
+<tr><td>5</td><td>tm_sec</td><td>0 到 61 (60或61 是闰秒)</td></tr>
+<tr><td>6</td><td>tm_wday</td><td>0到6 (0是周一)</td></tr>
+<tr><td>7</td><td>tm_yday</td><td>1 到 366(儒略历)</td></tr>
+<tr><td>8</td><td>tm_isdst</td><td>-1, 0, 1, -1是决定是否为夏令时的旗帜</td></tr>
+</tbody></table>
+<br /><hr />
+<h2>获取当前时间</h2>
+<p>从返回浮点数的时间辍方式向时间元组转换，只要将浮点数传递给如localtime之类的函数。</p>
+<pre>
+#!/usr/bin/python
+import time;
+
+localtime = time.localtime(time.time())
+print "Local current time :", localtime
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Local current time : time.struct_time(tm_year=2013, tm_mon=7, 
+tm_mday=17, tm_hour=21, tm_min=26, tm_sec=3, tm_wday=2, tm_yday=198, tm_isdst=0)
+</pre>
+<br /><hr />
+<h2>获取格式化的时间</h2>
+<p>你可以根据需求选取各种格式，但是最简单的获取可读的时间模式的函数是asctime():</p>
+<pre>
+#!/usr/bin/python
+import time;
+
+localtime = time.asctime( time.localtime(time.time()) )
+print "Local current time :", localtime
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Local current time : Tue Jan 13 10:17:09 2009
+</pre>
+
+<br /><hr />
+<h2>获取某月日历</h2>
+<p>Calendar模块有很广泛的方法用来处理年历和月历，例如打印某月的月历：</p>
+<pre>
+#!/usr/bin/python
+import calendar
+
+cal = calendar.month(2008, 1)
+print "Here is the calendar:"
+print cal;
+</pre>
+<p>以上实例输出结果：</p>
+<pre>
+Here is the calendar:
+    January 2008
+Mo Tu We Th Fr Sa Su
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+</pre>
+<br /><hr />
+<h2>Time模块</h2>
+<p>Time模块包含了以下内置函数，既有时间处理相的，也有转换时间格式的：</p>
+
+<table class="reference">
+<tbody><tr>
+<th style="width:5%">序号</th><th style="width:95%">函数及描述</th></tr>
+<tr><td>1</td><td><a href="att-time-altzone.html" target="_blank">time.altzone</a><br />返回格林威治西部的夏令时地区的偏移秒数。如果该地区在格林威治东部会返回负值（如西欧，包括英国）。对夏令时启用地区才能使用。</td></tr>
+<tr><td>2</td><td><a href="att-time-asctime.html" target="_blank">time.asctime([tupletime])</a><br />接受时间元组并返回一个可读的形式为"Tue Dec 11 18:07:14 2008"（2008年12月11日 周二18时07分14秒）的24个字符的字符串。</td></tr>
+<tr><td>3</td><td><a href="att-time-clock.html" target="_blank">time.clock( )</a><br />用以浮点数计算的秒数返回当前的CPU时间。用来衡量不同程序的耗时，比time.time()更有用。</td></tr>
+<tr><td>4</td><td><a href="att-time-ctime.html" target="_blank">time.ctime([secs])</a><br />作用相当于asctime(localtime(secs))，未给参数相当于asctime()</td></tr>
+<tr><td>5</td><td><a href="att-time-gmtime.html" target="_blank">time.gmtime([secs])</a><br />接收时间辍（1970纪元后经过的浮点秒数）并返回格林威治天文时间下的时间元组t。注：t.tm_isdst始终为0</td></tr>
+<tr><td>6</td><td><a href="att-time-localtime.html" target="_blank">time.localtime([secs])</a><br />接收时间辍（1970纪元后经过的浮点秒数）并返回当地时间下的时间元组t（t.tm_isdst可取0或1，取决于当地当时是不是夏令时）。</td></tr>
+<tr><td>7</td><td><a href="att-time-mktime.html" target="_blank">time.mktime(tupletime)</a><br />接受时间元组并返回时间辍（1970纪元后经过的浮点秒数）。</td></tr>
+<tr><td>8</td><td><a href="att-time-sleep.html" target="_blank">time.sleep(secs)</a><br />推迟调用线程的运行，secs指秒数。</td></tr>
+<tr><td>9</td><td><a href="att-time-strftime.html" target="_blank">time.strftime(fmt[,tupletime])</a><br />接收以时间元组，并返回以可读字符串表示的当地时间，格式由fmt决定。</td></tr>
+<tr><td>10</td><td><a href="att-time-strptime.html" target="_blank">time.strptime(str,fmt='%a %b %d %H:%M:%S %Y')</a><br />根据fmt的格式把一个时间字符串解析为时间元组。</td></tr>
+<tr><td>11</td><td><a href="att-time-time.html" target="_blank">time.time( )</a><br />返回当前时间的时间戳（1970纪元后经过的浮点秒数）。</td></tr>
+<tr><td>12</td><td><a href="att-time-tzset.html" target="_blank">time.tzset()</a><br />根据环境变量TZ重新初始化时间相关设置。 </td></tr>
+</tbody></table>
+<p>Time模块包含了以下2个非常重要的属性：</p>
+
+<table class="reference">
+<tbody><tr>
+<th style="width:5%">序号</th><th style="width:95%">属性及描述</th></tr>
+<tr><td>1</td><td><b>time.timezone</b><br />属性time.timezone是当地时区（未启动夏令时）距离格林威治的偏移秒数（>0，美洲;<=0大部分欧洲，亚洲，非洲）。</td></tr>
+<tr><td>2</td><td><b>time.tzname</b><br />属性time.tzname包含一对根据情况的不同而不同的字符串，分别是带夏令时的本地时区名称，和不带的。</td></tr>
+</tbody></table>
+<br /><hr />
+<h2>日历（Calendar）模块</h2>
+<p>此模块的函数都是日历相关的，例如打印某月的字符月历。</p>
+<p>星期一是默认的每周第一天，星期天是默认的最后一天。更改设置需调用calendar.setfirstweekday()函数。模块包含了以下内置函数：</p>
+<table class="reference">
+<tbody><tr>
+<th style="width:5%">序号</th><th style="width:95%">函数及描述</th></tr>
+<tr><td>1</td><td><b>calendar.calendar(year,w=2,l=1,c=6)</b><br />返回一个多行字符串格式的year年年历，3个月一行，间隔距离为c。 每日宽度间隔为w字符。每行长度为21* W+18+2* C。l是每星期行数。</td></tr>
+<tr><td>2</td><td><b>calendar.firstweekday( )</b><br />返回当前每周起始日期的设置。默认情况下，首次载入caendar模块时返回0，即星期一。</td></tr>
+<tr><td>3</td><td><b>calendar.isleap(year)</b><br />是闰年返回True，否则为false。</td></tr>
+<tr><td>4</td><td><b>calendar.leapdays(y1,y2)</b><br />返回在Y1，Y2两年之间的闰年总数。</td></tr>
+<tr><td>5</td><td><b>calendar.month(year,month,w=2,l=1)</b><br />返回一个多行字符串格式的year年month月日历，两行标题，一周一行。每日宽度间隔为w字符。每行的长度为7* w+6。l是每星期的行数。</td></tr>
+<tr><td>6</td><td><b>calendar.monthcalendar(year,month)</b><br />返回一个整数的单层嵌套列表。每个子列表装载代表一个星期的整数。Year年month月外的日期都设为0;范围内的日子都由该月第几日表示，从1开始。</td></tr>
+<tr><td>7</td><td><b>calendar.monthrange(year,month)</b><br />返回两个整数。第一个是该月的星期几的日期码，第二个是该月的日期码。日从0（星期一）到6（星期日）;月从1到12。</td></tr>
+<tr><td>8</td><td><b>calendar.prcal(year,w=2,l=1,c=6)</b><br />相当于 print calendar.calendar(year,w,l,c).</td></tr>
+<tr><td>9</td><td><b>calendar.prmonth(year,month,w=2,l=1)</b><br />相当于 print calendar.calendar（year，w，l，c）。</td></tr>
+<tr><td>10</td><td><b>calendar.setfirstweekday(weekday)</b><br />设置每周的起始日期码。0（星期一）到6（星期日）。</td></tr>
+<tr><td>11</td><td><b>calendar.timegm(tupletime)</b><br />和time.gmtime相反：接受一个时间元组形式，返回该时刻的时间辍（1970纪元后经过的浮点秒数）。</td></tr>
+<tr><td>12</td><td><b>calendar.weekday(year,month,day)</b><br />返回给定日期的日期码。0（星期一）到6（星期日）。月份为 1（一月） 到 12（12月）。</td></tr>
+</tbody></table>
+<br /><hr />
+<h2>其他相关模块和函数</h2>
+<p>在Python种，其他处理日期和时间的模块还有：</p>
+
+<ul>
+<li><a href="http://docs.python.org/library/datetime.html#module-datetime" target="_blank" rel="nofollow">datetime模块</a></li>
+<li><a href="http://www.twinsun.com/tz/tz-link.htm" target="_blank" rel="nofollow">pytz模块</a></li>
+<li><a href="http://labix.org/python-dateutil" target="_blank" rel="nofollow">ateutil模块</a></li>
+</ul>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/python-dictionary.html" rel="prev"> Python 字典(Dictionary)</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/python-functions.html" rel="next">Python函数</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.290 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 18:46:25 -->
+
+<!-- super cache -->

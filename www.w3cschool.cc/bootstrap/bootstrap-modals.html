@@ -1,0 +1,475 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap 模态框 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Bootstrap LESS' href='http://www.w3cschool.cc/bootstrap/bootstrap-less.html' />
+<link rel='next' title='Bootstrap 弹出框' href='http://www.w3cschool.cc/bootstrap/bootstrap-popover.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/bootstrap/bootstrap-modals.html' />
+<meta name="keywords" content="Bootstrap 模态框,Bootstrap 教程">
+<meta name="description" content="Bootstrap Modals（模态框） 描述 Bootstrap Modals（模态框）是使用定制的 Jquery 插件创建的。它可以用来创建模态窗口丰富用户体验，或者为用户添加实用功能。您可以在 Modals（模态框）中使用 Popover（弹出框）和 Tooltip（工具提示插件）。 在本教程中，将通过一些实例和解释来讨论如何使用 Bootstrap 创建模态窗口。同时，我们也会讨论用于定制的各种可用选项。 什么是必需的 您需要..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Bootstrap 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html" >
+	Bootstrap 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-intro.html" >
+	Bootstrap 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-css-overview.html" >
+	Bootstrap CSS 概览	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-grid-system.html" >
+	Bootstrap 网格系统	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-layout.html" >
+	Bootstrap 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-responsive-design.html" >
+	Bootstrap 响应式设计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typography.html" >
+	Bootstrap 排版	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tables.html" >
+	Bootstrap 表格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-forms.html" >
+	Bootstrap 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-icons.html" >
+	Bootstrap 图标	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button-tutorial.html" >
+	Bootstrap 按钮	</a><a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-image.html" >
+	Bootstrap 图像	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-glyphicons.html">
+	Bootstrap Glyphicons	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-list-group.html">
+	Bootstrap 清单组/价格表	</a>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-nav.html" >
+	Bootstrap 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-navbar.html" >
+	Bootstrap 导航条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-inlinelabels-badges.html" >
+	Bootstrap 内联标签和徽章	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-thumbnails.html" >
+	Bootstrap 缩略图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-progress-bars.html" >
+	Bootstrap 进度条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-breadcrumbs.html" >
+	Bootstrap 面包屑导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-pagination.html" >
+	Bootstrap 分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-alerts-errors.html" >
+	Bootstrap 警告和错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-less.html" >
+	Bootstrap LESS	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-media-object.html">
+	Bootstrap多媒体对象	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-panels.html">
+	Bootstrap面板	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-wells.html">
+	Bootstrap wells	</a>
+<br><h2 class="left"><span class="left_h2">Bootstrap JavaScript</span></h2>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-modals.html" >
+	Bootstrap 模态框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-popover.html" >
+	Bootstrap 弹出框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-dropdown.html" >
+	Bootstrap 下拉菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-scrollspy.html" >
+	Bootstrap 滚动监听	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-carousel.html" >
+	Bootstrap 轮播	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typeahead.html" >
+	Bootstrap Typeahead	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button.html" >
+	Bootstrap 按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-collapse.html" >
+	Bootstrap 折叠	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-ui-editor.html" >
+	Bootstrap UI 编辑器	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-less.html" rel="prev"> Bootstrap LESS</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-popover.html" rel="next">Bootstrap 弹出框</a> &raquo;</div>
+	</div>
+
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/bootstrap/bootstrap.css" >
+
+<h1>Bootstrap <span class="color_h1">Modals（模态框）</span></h1>
+<h2 class="tutheader">描述</h2>
+<p itemprop="description">Bootstrap Modals（模态框）是使用定制的 Jquery 插件创建的。它可以用来创建模态窗口丰富用户体验，或者为用户添加实用功能。您可以在 Modals（模态框）中使用 Popover（弹出框）和 Tooltip（工具提示插件）。</p>
+<p itemprop="description">在本教程中，将通过一些实例和解释来讨论如何使用 Bootstrap 创建模态窗口。同时，我们也会讨论用于定制的各种可用选项。</p>
+<h2 class="tutheader">什么是必需的</h2>
+<p itemprop="description">您需要 Jquery、Bootstrap CSS 和 JavaScript 文件 bootstrap-modal.js。这个 js 文件位于您下载的 Bootstrap 主文件夹中的 js 文件夹内。</p>
+<p itemprop="description">Jquery 位于您的 Bootstrap 主文件夹中的 docs &gt; assets &gt; js 下，名为 jquery.js。或者您可以直接访问 https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js 下载 Jquery。</p>
+<h2 class="tutheader">Bootstrap Modals（模态框）长什么样</h2>
+<p itemscope itemtype="http://schema.org/WebPageElement/Heading">下面的实例演示了 Bootstrap Modals（模态框）长什么样。</p>
+<p itemscope itemtype="http://schema.org/WebPageElement/Heading"><img src="/wp-content/uploads/2013/10/modals.png" alt="Bootstrap Modals" width="563" height="186"></p>
+<h2 class="tutheader">在您的网站中使用 Bootstrap Modals（模态框）</h2>
+<p id="firstexample">下面的实例演示了如何在网页中使用 Bootstrap Modals（模态框）。请注意，您不需要编写任何的 JavaScript 代码。实例后面附有相关的解释。</p>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="en"&gt; 
+&lt;head&gt; 
+&lt;meta charset="utf-8"&gt; 
+ 
+&lt;meta name="description" content="Creating Modal Window with Twitter Bootstrap"&gt;
+&lt;link href="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet"&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="container"&gt;
+&lt;h2&gt;Example of creating Modals with Twitter Bootstrap&lt;/h2&gt;
+&lt;div id="example" class="modal hide fade in" style="display: none; "&gt;
+&lt;div class="modal-header"&gt;
+&lt;a class="close" data-dismiss="modal"&gt;&times;&lt;/a&gt;
+&lt;h3&gt;This is a Modal Heading&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="modal-body"&gt;
+&lt;h4&gt;Text in a modal&lt;/h4&gt;
+&lt;p&gt;You can add some text here.&lt;/p&gt;		        
+&lt;/div&gt;
+&lt;div class="modal-footer"&gt;
+&lt;a href="#" class="btn btn-success"&gt;Call to action&lt;/a&gt;
+&lt;a href="#" class="btn" data-dismiss="modal"&gt;Close&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a data-toggle="modal" href="#example" class="btn btn-primary btn-large"&gt;Launch demo modal&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-modal.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            
+</pre>
+<p><a href="/try/demo_source/bootstrap-modal.htm" title="Bootstrap Modals Example" target="_blank">在线查看 Bootstrap Modals（模态框）实例。</a></p>
+<h2 class="tutheader">解释 </h2>
+<p itemprop="description">下面的表格解释了上面的代码。它将帮助您理解如何使用 Bootstrap Modals（模态框）。</p>
+            <table class="reference notranslate">
+              <tbody>
+                <tr>
+                  <th>代码</th>
+                  <th>解释</th>
+                </tr>
+                <tr>
+                  <td>div id=&quot;example&quot;</td>
+                  <td>分配给相关 div 的 id，id 的值指向后边要实现 modal（模态框）的 JavaScript。</td>
+                </tr>
+                <tr>
+                  <td> class=&quot;modal hide fade in&quot;</td>
+                  <td>Bootstrap CSS 的四个 class - modal、hide、fade 和 in，用于设置 modal（模态框）的布局。</td>
+                </tr>
+                <tr>
+                  <td>style=&quot;display: none;</td>
+                  <td>用于保持模态窗口可见，直到触发器触发（比如点击相关按钮）。</td>
+                </tr>
+                <tr>
+                  <td>&lt;div class=&quot;modal-header&quot;&gt;</td>
+                  <td>modal-header 适用于定义模态窗口标题样式的 class。</td>
+                </tr>
+                <tr>
+                  <td>a class=&quot;close&quot;</td>
+                  <td>CSS class close 用于设置模态窗口关闭按钮的样式。</td>
+                </tr>
+                <tr>
+                  <td>data-dismiss=&quot;modal&quot;</td>
+                  <td>data-dismiss 是一个定制的 HTML5 data 属性。用于关闭模态窗口。</td>
+                </tr>
+                <tr>
+                  <td>class="modal-body"</td>
+                  <td>modal-body 是 Bootstrap 的一个 CSS class，用于设置模态窗口主体的样式。</td>
+                </tr>
+                <tr>
+                  <td> class="modal-footer" </td>
+                  <td>modal-footer 是 Bootstrap 的一个 CSS class，用于设置模态窗口尾部的样式。</td>
+                </tr>
+                <tr>
+                  <td> class="btn btn-success" </td>
+                  <td>CSS class btn 和 btn-success 用于在模态窗口的尾部创建一个大号的按钮。您可以使用任何其他 Bootstrap 按钮代替。</td>
+                </tr>
+                <tr>
+                  <td> class="btn" </td>
+                  <td>Bootstrap CSS 的 按钮 class btn，用于在模态窗口的尾部创建一个小号的按钮。</td>
+                </tr>
+                <tr>
+                  <td> data-dismiss="modal" </td>
+                  <td>HTML5 定制的 data 属性 data-dismiss，用于关闭模态窗口。</td>
+                </tr>
+                <tr>
+                  <td> data-toggle="modal" </td>
+                  <td>HTML5 定制的 data 属性 data-toggle，用于打开模态窗口。</td>
+                </tr>
+                <tr>
+                  <td> class="btn btn-primary btn-large" </td>
+                  <td>设置按钮样式，点击该按钮则创建模态窗口。</td>
+                </tr>
+                <tr>
+                  <td>&lt;script src="https://ajax.googleapis.com/ajax/libs<br/>
+                    /jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;</td>
+                  <td>引用 Jquery 文件。</td>
+                </tr>
+                <tr>
+                  <td>&lt;script src="../bootstrap/twitter-bootstrap-v2><br/>
+                    /js/bootstrap-modal.js"&gt;&lt;/script&gt;</td>
+                  <td>引用 bootstrap modal（模态框）的 JS 文件。</td>
+                </tr>
+              </tbody>
+            </table>
+<br />
+<h2 class="tutheader">使用 JavaScript</h2>
+<p>您可以使用 JavaScript 来实现 Bootstrap 模态窗口。只需要在您的 JavaScript 中调用 modal() 即可。您的代码如下所示，您可以在 body 结束标签（即 &lt;/body&gt;）前引用它。</p>
+<pre name="code" class="js"> $(function ()  
+{ $("#identifier").modal();  
+});</pre>
+<p>其中 identifier 是一个 Jquery 选择器，用于标识相关的容器元素。接下来，我们来看看 options 都有哪些。</p>
+<h2 class="tutheader">选项</h2>
+<p>下面是一些通过 modal() 定制模态窗口外观和感观时可能使用到的选项。</p>
+<h2 class="subheading">backdrop</h2>
+<p>backdrop 选项用于包含一个 modal-backdrop 元素。</p>
+<p>如果您把"使用 JavaScript"实例中行号 2 的代码替换为下面的代码，即给 backdrop 选项赋值为 false，此时就不存在任何的 modal-backdrop。</p>
+<pre name="code" class="js">
+{ $("#example").modal({backdrop:false});
+</pre>
+<h2 class="subheading">keyboard</h2>
+<p>如果使用 keyboard 选项，当点击 escape 时则关闭模态窗口。它的类型是 boolean，默认值是 true。如果把 keyboard 选项的值设置为 false，此时即使点击 escape 也不会关闭模态窗口。</p>
+<p>如果您把"使用 JavaScript"实例中行号 2 的代码替换为下面的代码，即给 keyboard 选项赋值为 false，此时点击 escape 则不会关闭模态窗口。</p>
+<pre name="code" class="js">
+{ $("#example").modal({keyboard:false});
+</pre>
+<h2 class="subheading">show</h2>
+<p>如果使用 show 选项，当初始化的时候则会显示模态窗口。它的类型是 boolean，默认值是 true。如果把 show 选项的值设置为 false，在初始化时不会显示模态窗口。</p>
+<p>如果您把"使用 JavaScript"实例中行号 2 的代码替换为下面的代码，即给 show 选项赋值为 false，在初始化时不会显示模态窗口。</p>
+<pre name="code" class="js">
+{ $("#example").modal({show:false});
+</pre>
+<h2 class="tutheader">方法</h2>
+<p>下面是一些通过 modal() 使用到的方法。</p>
+<h2 class="subheading">.modal(options)</h2>
+<p>该方法把内容激活为一个 modal（模态框）。您可以引用一个可选的 object 类型的 options 参数。如果您在本教程的<a href="#firstexample">第一个实例</a>中的 &lt;/body&gt; 标签前添加下面的代码，此时就不存在任何的 modal（模态框） backdrop 元素。</p>
+<pre name="code" class="js">
+$('#example').modal({
+  backdrop: false
+})
+</pre>
+<h2 class="subheading">.modal('toggle')</h2>
+<p>该方法手动切换一个 modal（模态框）。如果您在本教程的<a href="#firstexample">第一个实例</a>中的 &lt;/body&gt; 标签前添加下面的代码，即可手动切换 modal（模态框）。</p>
+<pre name="code" class="js">
+$('#example').modal('toggle')
+</pre>
+<h2 class="subheading">.modal(show)</h2>
+<p>该方法可用于手动打开一个 modal（模态框）。如果您在本教程的<a href="#firstexample">第一个实例</a>中的 &lt;/body&gt; 标签前添加下面的代码，即可手动打开 modal（模态框）。</p>
+<pre name="code" class="js">$('#example').modal('show')</pre>
+<h2 class="subheading">.modal(hide)</h2>
+<p>该方法可用于手动隐藏一个 modal（模态框）。如果您在本教程的<a href="#firstexample">第一个实例</a>中的 &lt;/body&gt; 标签前添加下面的代码，即可手动隐藏 modal（模态框）。</p>
+<pre name="code" class="js">$('#example').modal('hide')</pre>
+<h2 class="tutheader">事件</h2>
+<p>下面是 Modals（模态框）相关的事件。这些事件用于截获并执行自己的代码。</p>
+<h2 class="subheading">show</h2>
+<p>当 show 实例方法被调用之后，此事件被立即触发。</p>
+<h2 class="subheading">shown</h2>
+<p>当模态框显示出来之后（同时 CSS 过渡效果也已执行完毕），此事件被触发。</p>
+<h2 class="subheading">hide</h2>
+<p>当 hide 实例方法被调用之后，此事件被立即触发。Immediately after the hide instance method has been called, this event is called.</p>
+<h2 class="subheading">hidden</h2>
+<p>当模态框向用户隐藏之后（同时 CSS 过渡效果也已执行完毕），此事件被触发。</p>
+<p><a href="/try/bootstrap/twitter-bootstrap.zip">点击这里，下载本教程中使用到的所有 HTML、CSS、JS 和图片文件。</a></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-less.html" rel="prev"> Bootstrap LESS</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-popover.html" rel="next">Bootstrap 弹出框</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		$("pre").css('background-image', 'none');
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.165 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:00:23 -->
+
+<!-- super cache -->

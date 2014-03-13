@@ -1,0 +1,483 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML DOM 事件 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='HTML DOM 元素' href='http://www.w3cschool.cc/htmldom/htmldom-elements.html' />
+<link rel='next' title='HTML DOM 导航' href='http://www.w3cschool.cc/htmldom/htmldom-navigation.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/htmldom/htmldom-events.html' />
+<meta name="keywords" content="HTML DOM 事件,HTML DOM">
+<meta name="description" content="HTML DOM - 事件   HTML DOM 允许 JavaScript 对 HTML 事件作出反应。   实例   	Mouse Over Me 	Click Me 	 	 	  	 	    对事件作出反应  当事件发生时，可以执行 JavaScript，比如当用户点击一个 HTML 元素时。  如需在用户点击某个元素时执行代码，请把 JavaScript 代码添加到 HTML 事件属性中：    onclick=JavaScr..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>HTML DOM</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-tutorial.html" >
+	HTML DOM 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-intro.html" >
+	HTML DOM 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-nodes.html" >
+	HTML DOM 节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-methods.html" >
+	HTML DOM 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-properties.html" >
+	HTML DOM 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-access.html" >
+	HTML DOM 访问	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-modify.html" >
+	HTML DOM 修改	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-content.html" >
+	HTML DOM  修改 HTML 内容	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-elements.html" >
+	HTML DOM 元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-events.html" >
+	HTML DOM 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-navigation.html" >
+	HTML DOM 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-summary.html" >
+	HTML DOM 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/htmldom/htmldom-examples.html" >
+	DOM 实例	</a>
+	<br><h2 class="left"><span class="left_h2">DOM</span> 参考手册</h2>
+<a target="_top" href="/jsref/jsref-tutorial.html">HTML DOM 对象</a></div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/htmldom/htmldom-elements.html" rel="prev"> HTML DOM 元素</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/htmldom/htmldom-navigation.html" rel="next">HTML DOM 导航</a> &raquo;</div>
+	</div>
+
+	<h1>HTML DOM - <span class="color_h1">事件</span>
+</h1>
+<hr />
+<p class="intro">HTML DOM 允许 JavaScript 对 HTML 事件作出反应。</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+<div style="width:100%;height:140px">
+	<div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;" onmouseover="this.innerHTML='Thank You'" onmouseout="this.innerHTML='Mouse Over Me'">Mouse Over Me</div>
+	<div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;" onclick="clickMeEvent(this)">Click Me</div>
+	<script type="application/javascript">
+	<!--
+	function clickMeEvent(obj)
+	{
+	if (obj.innerHTML=="Goodbye")
+		{
+		obj.style.display="none";
+		}
+	else if (obj.innerHTML=="Thank You")
+		{
+		obj.innerHTML="Goodbye";		
+		}
+	else if (obj.innerHTML=="Click Me<br />Click Me Again<br />And Again")
+		{
+		obj.innerHTML="Thank You";		
+		}
+	else if (obj.innerHTML=="Click Me<br />Click Me Again")
+		{
+		obj.innerHTML=obj.innerHTML+"<br />And Again";		
+		}
+	else
+		{
+		obj.innerHTML=obj.innerHTML+"<br />Click Me Again";
+		}
+	}
+	//-->
+	</script>
+
+	
+</div>	
+</div>
+</div>
+<br /><hr />
+<h2>对事件作出反应</h2>
+
+<p>当事件发生时，可以执行 JavaScript，比如当用户点击一个 HTML 元素时。</p>
+
+<p>如需在用户点击某个元素时执行代码，请把 JavaScript 代码添加到 HTML 事件属性中：</p>
+
+<div class="code notranslate"><div>
+
+onclick=<i>JavaScript</i>
+
+</div></div>
+
+<p>HTML 事件的例子：</p>
+
+<ul>
+<li>当用户点击鼠标时</li>
+<li>当网页已加载时</li>
+<li>当图片已加载时</li>
+<li>当鼠标移动到元素上时</li>
+<li>当输入字段被改变时</li>
+<li>当 HTML 表单被提交时</li>
+<li>当用户触发按键时</li>
+</ul>
+
+<p>在本例中，当用户点击时，会改变 &lt;h1&gt; 元素的内容：</p>
+
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />
+&lt;body&gt;<br />
+&lt;h1 onclick="this.innerHTML='Ooops!'"&gt;Click on this text!&lt;/h1&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+</div>
+<br /><a target="_blank" href="../dhtml/tryit.html?filename=trydhtml_event_onclick2" class="tryitbtn">尝试一下 »</a>
+</div>
+
+<p>在本例中，会从事件处理程序中调用函数：</p>
+
+
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;script&gt;<br />
+function changetext(id)<br />
+{<br />
+id.innerHTML="Ooops!";<br />
+}<br />
+&lt;/script&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;h1 onclick="changetext(this)"&gt;Click on this text!&lt;/h1&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+</div>
+<br /><a target="_blank" href="../dhtml/tryit.html?filename=trydhtml_event_onclick3" class="tryitbtn">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>HTML 事件属性</h2>
+
+<p>如需向 HTML 元素分配事件，您可以使用事件属性。</p>
+
+<div class="example">
+	<h2 class="example">实例</h2>
+	<p>向 button 元素分配一个 onclick 事件：</p>
+
+<div class="example_code notranslate">
+	&lt;button 
+	<span class="marked">onclick</span>="<span class="marked">displayDate()</span>"&gt;Try 
+	it&lt;/button&gt;</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtmldom_events1">尝试一下 »</a>
+</div>
+<p>在上面的例子中，当点击按钮时，会执行名为 displayDate 的函数。</p>
+
+<hr />
+<h2>使用 HTML DOM 来分配事件</h2>
+
+<p>HTML DOM 允许您使用 JavaScript 向 HTML 元素分配事件：</p>
+
+<div class="example">
+	<h2 class="example">实例</h2>
+	<p>为 button 元素分配 onclick 事件：</p>
+
+<div class="example_code notranslate">
+	&lt;script&gt;<br />document.getElementById("myBtn").<span class="marked">onclick</span>=function(){<span class="marked">displayDate()</span>};<br />
+	&lt;/script&gt;</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtmldom_events2">尝试一下 »</a>
+</div>
+<p>在上面的例子中，名为 displayDate 的函数被分配给了 id=myButn&quot; 的 HTML 元素。</p>
+
+<p>当按钮被点击时，将执行函数。</p>
+
+<hr />
+<h2>onload 和 onunload 事件</h2>
+
+<p>当用户进入或离开页面时，会触发 onload 和 onunload 事件。</p>
+
+<p>onload 事件可用于检查访客的浏览器类型和版本，以便基于这些信息来加载不同版本的网页。</p>
+
+<p>onload 和 onunload 事件可用于处理 cookies。</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+&lt;body <span class="marked">onload</span>="checkCookies()"&gt;
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtmldom_events_onload">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>onchange 事件</h2>
+
+<p>onchange 事件常用于输入字段的验证。</p>
+
+<p>下面的例子展示了如何使用 onchange。当用户改变输入字段的内容时，将调用 upperCase() 函数。</p>
+
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+&lt;input type="text" id="fname"
+<span class="marked">onchange</span>="upperCase()"&gt;</div>
+<br /><a target="_blank" href="/jsref/tryit.html?filename=tryjsref_onchange" class="tryitbtn">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>onmouseover 和 onmouseout 事件</h2>
+
+<p>onmouseover 和 onmouseout 事件可用于在鼠标指针移动到或离开元素时触发函数。</p>
+
+
+<div class="example">
+<h2 class="example">实例</h2>
+<p>一个简单的 onmouseover-onmouseout 实例:</p>
+<div class="example_code notranslate">
+<div style="width:100%;height:140px">
+	<div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center">Mouse Over Me</div>
+</div>	
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtmldom_events_mouseover">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>onmousedown、onmouseup 以及 onclick 事件</h2>
+
+<p>onmousedown、onmouseup 以及 onclick 事件是鼠标点击的全部过程。首先当某个鼠标按钮被点击时，触发 onmousedown 事件，然后，当鼠标按钮被松开时，会触发
+onmouseup 事件，最后，当鼠标点击完成时，触发 onclick 事件。</p>
+
+
+<div class="example">
+<h2 class="example">实例</h2>
+<p>一个简单的 onmousedown-onmouseup 实例：</p>
+
+<div class="example_code notranslate">
+<div style="width:100%;height:140px">
+	<div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center">Click Me</div>
+	
+	<!--
+	function mDown(obj)
+	{
+	obj.style.backgroundColor="#1ec5e5";
+	obj.innerHTML="Release Me"
+	}
+
+	function mUp(obj)
+	{
+	obj.style.backgroundColor="#D94A38";
+	obj.innerHTML="Thank You"
+	}
+
+	//-->
+	
+</div>	
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtmldom_events_mousedown">尝试一下 »</a>
+</div>
+
+<br /><hr />
+
+
+<h2>HTML DOM 事件对象参考手册</h2>
+
+<p>如需每个事件的完整描述和例子，请访问我们的 <a href="/jsref/jsref-tutorial.html">HTML DOM 参考手册</a>。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/htmldom/htmldom-elements.html" rel="prev"> HTML DOM 元素</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/htmldom/htmldom-navigation.html" rel="next">HTML DOM 导航</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.123 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 21:46:47 -->
+
+<!-- super cache -->

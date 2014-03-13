@@ -1,0 +1,516 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Python 基础语法 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='HTML form target 属性' href='http://www.w3cschool.cc/tags/att-form-target.html' />
+<link rel='next' title='Python 变量类型' href='http://www.w3cschool.cc/python/python-variable-types.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/python/python-basic-syntax.html' />
+<meta name="keywords" content="Python 基础语法,Python基础教程">
+<meta name="description" content="Python 基础语法  Python语言与Perl，C和Java等语言有许多相似之处。但是，也存在一些差异。 在本章中我们将来学习Python的基础语法，让你快速学会Python编程。   第一个Python程序 交互式编程 不通过脚本文件作为参数使用 Python 解释器的交互模式，提示窗口如下：  $ python Python 2.4.3 (#1, Nov 11 2010, 13:34:43) [GCC 4.1.2 200807..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Python基础教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tutorial.html" >
+	Python基础教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-intro.html" >
+	Python 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-install.html" >
+	Python环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-basic-syntax.html" >
+	Python 基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-variable-types.html" >
+	Python 变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-operators.html" >
+	Python 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-if-statement.html" >
+	Python 条件语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-loops.html" >
+	Python 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-while-loop.html" >
+	Python While循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-for-loop.html" >
+	Python for 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-nested-loops.html" >
+	Python 循环嵌套	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-break-statement.html" >
+	Python break 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-continue-statement.html" >
+	Python continue  语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-pass-statement.html" >
+	Python pass 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-numbers.html" >
+	Python 数字	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-strings.html" >
+	Python 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-lists.html" >
+	Python 列表(Lists)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tuples.html" >
+	Python 元组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-dictionary.html" >
+	Python 字典(Dictionary)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-date-time.html" >
+	Python 日期和时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-functions.html" >
+	Python函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-modules.html" >
+	Python模块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-files-io.html" >
+	Python 文件I/O	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-exceptions.html" >
+	Python 异常处理	</a>
+	<br><h2 class="left"><span class="left_h2">Python</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/python/python-object.html" >
+	Python面向对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-reg-expressions.html" >
+	Python正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-cgi.html" >
+	Python CGI编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-mysql.html" >
+	python操作mysql数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-email.html" >
+	Python使用SMTP发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-multithreading.html" >
+	Python多线程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-xml.html" >
+	python XML解析	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-gui-tkinter.html" >
+	python GUI编程(Tkinter)	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/python-install.html" rel="prev"> Python环境搭建</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/python-variable-types.html" rel="next">Python 变量类型</a> &raquo;</div>
+	</div>
+
+	<h1>Python <span class="color_h1">基础语法</span></h1>
+<div class="tutintro">
+<p>Python语言与Perl，C和Java等语言有许多相似之处。但是，也存在一些差异。</p>
+<p>在本章中我们将来学习Python的基础语法，让你快速学会Python编程。</p>
+</div>
+
+<hr /><h2>第一个Python程序</h2>
+<h3>交互式编程</h3>
+<p>不通过脚本文件作为参数使用 Python 解释器的交互模式，提示窗口如下：</p>
+<pre>
+$ python
+Python 2.4.3 (#1, Nov 11 2010, 13:34:43)
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-48)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt;
+</pre>
+<p>在 python 提示符中输入以下文本信息，然后按 Enter 键查看运行效果：</p>
+<pre>
+&gt;&gt;&gt; print "Hello, Python!";
+</pre>
+<p>在 Python  2.4.3 版本中,以上事例输出结果如下：</p>
+<pre>
+Hello, Python!
+</pre>
+<p>如果您运行的是新版本的Python，那么你就需要在print语句中使用括号如：</p>
+<pre>
+&gt;&gt;&gt;  print ("Hello, Python!");
+</pre>
+<h3>脚本式编程</h3>
+<p>通过脚本参数调用解释器开始执行脚本，直到脚本执行完毕。当脚本执行完成后，解释器不再有效。</p>
+
+<p>让我们写一个简单的Python脚本程序。所有Python文件将以.py为扩展名。将以下的源代码拷贝至test.py文件中。</p>
+<pre>
+print "Hello, Python!";
+</pre>
+<p>这里，假设你已经设置了Python解释器PATH变量。使用以下命令运行程序：</p>
+<pre>
+$ python test.py
+</pre>
+<p>输出结果：</p>
+<pre>
+Hello, Python!
+</pre>
+<p>让我们尝试另一种方式来执行Python脚本。修改test.py文件，如下所示：</p>
+<pre>
+#!/usr/bin/python
+
+print "Hello, Python!";
+</pre>
+<p>这里，假定您的Python解释器在/usr/bin目录中，使用以下命令执行脚本：</p>
+<pre>
+$ chmod +x test.py     # 脚本文件添加可执行权限
+$./test.py
+</pre>
+<p>输出结果：</p>
+<pre>
+Hello, Python!
+</pre>
+<hr /><h2>Python标识符</h2>
+<p>在python里，标识符有字母、数字、下划线组成。</p>
+<p>在python中，所有标识符可以包括英文、数字以及下划线（_），但不能以数字开头。</p>
+<p>python中的标识符是区分大小写的。</p>
+<p>以下划线开头的标识符是有特殊意义的。以单下划线开头（_foo）的代表不能直接访问的类属性，需通过类提供的接口进行访问，不能用"from xxx import *"而导入；</p>
+<p>以双下划线开头的（__foo）代表类的私有成员；以双下划线开头和结尾的（__foo__）代表python里特殊方法专用的标识，如__init__（）代表类的构造函数。</p>
+
+<hr /><h2>Python保留字符</h2>
+<p>下面的列表显示了在Python中的保留字。这些保留字不能用作常数或变数，或任何其他标识符名称。</p>
+<p>所有Python的关键字只包含小写字母。</p>
+<table class="reference">
+<tbody><tr><td>and</td><td>exec</td><td>not</td></tr>
+<tr><td>assert</td><td>finally</td><td>or</td></tr>
+<tr><td>break</td><td>for</td><td>pass</td></tr>
+<tr><td>class</td><td>from</td><td>print</td></tr>
+<tr><td>continue</td><td>global</td><td>raise</td></tr>
+<tr><td>def</td><td>if</td><td>return</td></tr>
+<tr><td>del</td><td>import</td><td>try</td></tr>
+<tr><td>elif</td><td>in</td><td>while</td></tr>
+<tr><td>else</td><td>is</td><td>with </td></tr>
+<tr><td>except</td><td>lambda</td><td>yield</td></tr>
+</tbody></table>
+<hr /><h2>行和缩进</h2>
+<p>学习Python与其他语言最大的区别就是，Python的代码块不使用大括号（{}）来控制类，函数以及其他逻辑判断。python最具特色的就是用缩进来写模块。</p>
+<p>缩进的空白数量是可变的，但是所有代码块语句必须包含相同的缩进空白数量，这个必须严格执行。如下所示：</p>
+<pre>
+if True:
+    print "True"
+else:
+  print "False"
+ </pre>
+ <p>以下代码将会执行错误：</p>
+ <pre>
+ if True:
+    print "Answer"
+    print "True"
+else:
+    print "Answer"
+  print "False"
+   </pre>
+<p>因此，在Python的代码块中必须使用相同数目的行首缩进空格数。</p>
+<p>以下实例包含了相同数目的行首缩进代码语句块的例子：</p>
+<pre>
+#!/usr/bin/python
+
+import sys
+
+try:
+  # open file stream
+  file = open(file_name, "w")
+except IOError:
+  print "There was an error writing to", file_name
+  sys.exit()
+print "Enter '", file_finish,
+print "' When finished"
+while file_text != file_finish:
+  file_text = raw_input("Enter text: ")
+  if file_text == file_finish:
+    # close the file
+    file.close
+    break
+  file.write(file_text)
+  file.write("\n")
+file.close()
+file_name = raw_input("Enter filename: ")
+if len(file_name) == 0:
+  print "Next time please enter something"
+  sys.exit()
+try:
+  file = open(file_name, "r")
+except IOError:
+  print "There was an error reading file"
+  sys.exit()
+file_text = file.read()
+file.close()
+print file_text
+  </pre>
+  <hr /><h2>多行语句</h2>
+ <p>Python语句中一般以新行作为为语句的结束符。</p>
+ <p>但是我们可以使用斜杠（ \）将一行的语句分为多行显示，如下所示：</p>
+   <pre>
+ total = item_one + \ 
+        item_two + \
+        item_three
+   </pre>
+ <p>语句中包含[], {} 或 () 括号就不需要使用多行连接符。如下实例：</p>
+  <pre>
+ days = ['Monday', 'Tuesday', 'Wednesday',
+        'Thursday', 'Friday']
+</pre>
+<hr /><h2>Python 引号</h2>
+<p>Python 接收单引号(' )，双引号(" )，三引号(''' """) 来表示字符串，引号的开始与结束必须的相同类型的。 </p>
+<p>其中三引号可以由多行组成，编写多行文本的快捷语法，常用语文档字符串，在文件的特定地点，被当做注释。</p>
+
+<pre>
+word = 'word'
+sentence = "This is a sentence."
+paragraph = """This is a paragraph. It is
+made up of multiple lines and sentences."""
+</pre>
+
+<hr /><h2>Python注释</h2>
+<p>python中单行注释采用 # 开头。</p>
+<p>python没有块注释，所以现在推荐的多行注释也是采用的 #比如：</p>
+<pre>
+#!/usr/bin/python
+
+# First comment
+print "Hello, Python!";  # second comment
+</pre>
+<p>输出结果：</p>
+<pre>
+Hello, Python!
+</pre>
+<p>注释可以在语句或表达式行末：</p>
+<pre>
+name = "Madisetti" # This is again comment
+</pre>
+<p>多条评论：</p>
+<pre>
+# This is a comment.
+# This is a comment, too.
+# This is a comment, too.
+# I said that already.
+</pre>
+<hr /><h2>Python空行</h2>
+<p>函数之间或类的方法之间用空行分隔，表示一段新的代码的开始。类和函数入口之间也用一行空行分隔，以突出函数入口的开始。</p>
+<p>空行与代码缩进不同，空行并不是Python语法的一部分。书写时不插入空行，Python解释器运行也不会出错。但是空行的作用在于分隔两段不同功能或含义的代码，便于日后代码的维护或重构。</p><p>记住：空行也是程序代码的一部分。</p>
+<hr /><h2>等待用户输入</h2>
+<p>下面的程序在按回车键后就会等待用户输入：</p>
+<pre>
+#!/usr/bin/python
+
+raw_input("\n\nPress the enter key to exit.")
+</pre>
+<p>以上代码中 ，"\n\n"在结果输出前会输出两个新的空行。一旦用户按下键时，程序将退出。</p>
+<hr /><h2>同一行显示多条语句</h2>
+Python可以在同一行中使用多条语句，语句之间使用分号(;)分割，以下是一个简单的实例：</p>
+<pre>
+import sys; x = 'foo'; sys.stdout.write(x + '\n')
+</pre>
+<hr /><h2>多个语句构成代码组</h2>
+<p>缩进相同的一组语句构成一个代码块，我们称之代码组。</p>
+<p>像if、while、def和class这样的复合语句，首行以关键字开始，以冒号( : )结束，该行之后的一行或多行代码构成代码组。</p>
+<p>我们将首行及后面的代码组称为一个子句(clause)。</p>
+<p>如下实例：</p>
+<pre>
+if expression : 
+   suite 
+elif expression :  
+   suite  
+else :  
+   suite 
+</pre>
+<hr /><h2>命令行参数</h2>
+<p>很多程序可以执行一些操作来查看一些基本信，Python可以使用-h参数查看各参数帮助信息：</p>
+<pre>
+$ python -h 
+usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ... 
+Options and arguments (and corresponding environment variables): 
+-c cmd : program passed in as string (terminates option list) 
+-d     : debug output from parser (also PYTHONDEBUG=x) 
+-E     : ignore environment variables (such as PYTHONPATH) 
+-h     : print this help message and exit 
+ 
+[ etc. ] 
+</pre>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/python-install.html" rel="prev"> Python环境搭建</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/python-variable-types.html" rel="next">Python 变量类型</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.277 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:00:52 -->
+
+<!-- super cache -->

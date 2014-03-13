@@ -1,0 +1,893 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery EasyUI 布局插件 &#8211; Panel 面板 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery EasyUI 基础插件 &#8211; Tooltip 提示框' href='http://www.w3cschool.cc/jeasyui/plugins-base-tooltip.html' />
+<link rel='next' title='jQuery EasyUI 布局插件 &#8211; Tabs 标签页/选项卡' href='http://www.w3cschool.cc/jeasyui/plugins-layout-tabs.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jeasyui/plugins-layout-panel.html' />
+<meta name="keywords" content="jQuery EasyUI 布局插件 &#8211; Panel 面板,jQuery EasyUI教程">
+<meta name="description" content="pre { white-space: pre-wrap; }   jQuery EasyUI 布局插件 - Panel 面板   jQuery EasyUI 插件   通过 $.fn.panel.defaults 重写默认的 defaults。 面板（panel）当做其他内容的容器使用。它是创建其他组件（比如：Layout 布局、Tabs 标签页/选项卡、Accordion 折叠面板，等等）的基础组件。它也提供内置的可折叠、可关闭、可最..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>jQuery EasyUI教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html" >
+	jQuery EasyUI 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-intro.html" >
+	jQuery EasyUI 简介	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 应用</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud1.html" >
+	jEasyUI 创建 CRUD 应用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud2.html" >
+	jEasyUI 创建 CRUD 数据网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud3.html" >
+	jEasyUI 表单的 CRUD 应用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-rssreader.html" >
+	jEasyUI  创建 RSS 阅读器	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 拖放</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-basic.html" >
+	jEasyUI 基本的拖动和放置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-shopping.html" >
+	jEasyUI 创建拖放的购物车	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-timetable.html" >
+	jEasyUI 创建学校课程表	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 菜单与按钮</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-menu.html" >
+	jEasyUI 创建简单的菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-linkbutton.html" >
+	jEasyUI 创建链接按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-menubutton.html" >
+	jEasyUI 创建菜单按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-splitbutton.html" >
+	jEasyUI 创建分割按钮	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 布局</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-layout.html" >
+	jEasyUI 创建边框布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-panel.html" >
+	jEasyUI 创建复杂布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-accordion.html" >
+	jEasyUI 创建折叠面板	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs1.html" >
+	jEasyUI 创建标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs2.html" >
+	jEasyUI 动态添加标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs3.html" >
+	jEasyUI 添加自动播放标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-xp.html" >
+	jEasyUI 创建 XP 风格左侧面板	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 数据网格</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid1.html" >
+	jEasyUI 转换 HTML 表格为数据网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid3.html" >
+	jEasyUI 取得选中行数据	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid24.html" >
+	jEasyUI 添加查询功能	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid4.html" >
+	jEasyUI 添加工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid19.html" >
+	jEasyUI 创建复杂工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid5.html" >
+	jEasyUI 设置冻结列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid6.html" >
+	jEasyUI 动态改变列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid7.html" >
+	jEasyUI 格式化列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid8.html" >
+	jEasyUI 设置排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid14.html" >
+	jEasyUI 自定义排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid9.html" >
+	jEasyUI 创建列组合	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid10.html" >
+	jEasyUI 添加复选框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid11.html" >
+	jEasyUI 自定义分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid12.html" >
+	jEasyUI 启用行内编辑	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid23.html" >
+	jEasyUI 扩展编辑器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid15.html" >
+	jEasyUI 列运算	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid13.html" >
+	jEasyUI 合并单元格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid16.html" >
+	jEasyUI 创建自定义视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid17.html" >
+	jEasyUI 创建页脚摘要	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid18.html" >
+	jEasyUI 条件设置行背景颜色	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid20.html" >
+	jEasyUI 创建属性网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid21.html" >
+	jEasyUI 扩展行显示细节	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid22.html" >
+	jEasyUI 创建子网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid27.html" >
+	jEasyUI 显示海量数据	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid2.html" >
+	jEasyUI 添加分页组件	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 窗口</h2>
+<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win1.html">
+	jEasyUI 创建简单窗口	</a>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win2.html" >
+	jEasyUI 自定义窗口工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win3.html" >
+	jEasyUI 窗口与布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-dlg1.html" >
+	jEasyUI 创建对话框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-dlg2.html" >
+	jEasyUI 自定义对话框	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 树形菜单</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree1.html" >
+	jEasyUI 使用标记创建树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree2.html" >
+	jEasyUI 创建异步树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree3.html" >
+	jEasyUI 树形菜单添加节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree4.html" >
+	jEasyUI 创建带复选框的树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree5.html" >
+	jEasyUI 树形菜单拖放控制	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree6.html" >
+	jEasyUI 树形菜单加载父/子节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid1.html" >
+	jEasyUI 创建基础树形网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid2.html" >
+	jEasyUI 创建复杂树形网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid3.html" >
+	jEasyUI 树形网格动态加载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid4.html" >
+	jEasyUI 树形网格添加分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid5.html" >
+	jEasyUI 树形网格惰性加载节点	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 表单</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form1.html" >
+	jEasyUI 创建异步提交表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form3.html" >
+	jEasyUI 表单验证	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form2.html" >
+	jEasyUI 创建树形下拉框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form4.html" >
+	jEasyUI 格式化下拉框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form5.html" >
+	jEasyUI 过滤下拉数据网格	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 参考手册</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-ref-plugins.html" >
+	jQuery EasyUI 插件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-ref-extension.html" >
+	jQuery EasyUI 扩展	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jeasyui/plugins-base-tooltip.html" rel="prev"> jQuery EasyUI 基础插件 &#8211; Tooltip 提示框</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jeasyui/plugins-layout-tabs.html" rel="next">jQuery EasyUI 布局插件 &#8211; Tabs 标签页/选项卡</a> &raquo;</div>
+	</div>
+
+	<style>
+pre {
+white-space: pre-wrap;
+}
+</style>
+
+<h1>jQuery EasyUI 布局插件 - <span class="color_h1">Panel 面板</span></h1>
+<hr />
+<a href="jeasyui-ref-plugins.html"><img class="navup" src="/images/up.gif" alt="jQuery EasyUI 插件"> jQuery EasyUI 插件</a>
+<hr />
+<div class="tutintro">
+<p>通过 $.fn.panel.defaults 重写默认的 defaults。</p>
+<p>面板（panel）当做其他内容的容器使用。它是创建其他组件（比如：Layout 布局、Tabs 标签页/选项卡、Accordion 折叠面板，等等）的基础组件。它也提供内置的可折叠、可关闭、可最大化、可最小化的行为以及其他自定义行为。面板（panel）可以简单地嵌入到网页的任何位置。</p>
+</div>
+<img src="/wp-content/uploads/2013/12/plugins_panel.png"/>
+
+<h2>用法</h2>
+<h4>创建面板（Panel）</h4>
+<p>1、通过标记创建面板（Panel）</p>
+<p>从标记创建面板（Panel）更容易。把 'easyui-panel' class 添加到 &lt;div&gt; 标记。</p>
+<pre style="color:#006600">
+&lt;div id="p" class="easyui-panel" title="My Panel"
+    style="width:500px;height:150px;padding:10px;background:#fafafa;"
+    data-options="iconCls:'icon-save',closable:true,
+    collapsible:true,minimizable:true,maximizable:true"&gt;
+    &lt;p&gt;panel content.&lt;/p&gt;
+    &lt;p&gt;panel content.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+<p>2、编程创建面板（Panel）</p>
+<p>让我们创建带右上角工具栏的面板（Panel）。</p>
+<pre style="color:#006600">
+&lt;div id="p" style="padding:10px;"&gt;
+    &lt;p&gt;panel content.&lt;/p&gt;
+    &lt;p&gt;panel content.&lt;/p&gt;
+&lt;/div&gt;
+$('#p').panel({
+    width:500,
+    height:150,
+    title:'My Panel',
+    tools:[{
+    iconCls:'icon-add',
+    handler:function(){alert('new')}
+    },{
+    iconCls:'icon-save',
+    handler:function(){alert('save')}
+    }]
+}); 
+</pre>
+<h4>移动面板（Panel）</h4>
+<p>调用 'move' 方法把面板（Panel）移动到新位置。</p>
+<pre style="color:#006600">
+$('#p').panel('move',{
+    left:100,
+    top:100
+}); 
+</pre>
+<h4>加载内容</h4>
+<p>让我们通过 ajax 加载面板（panel）内容并且当加载成功时显示一些信息。</p>
+<pre style="color:#006600">
+$('#p').panel({
+    href:'content_url.php',
+    onLoad:function(){
+		alert('loaded successfully');
+    }
+});
+</pre>
+
+<h2>属性</h2>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">类型</th>
+    <th align="left">描述</th>
+	<th align="left">默认值</th>
+</tr>
+<tr>
+	<td>id</td>
+    <td>string</td>
+    <td>面板（panel）的 id 属性。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>title</td>
+    <td>string</td>
+    <td>显示在面板（panel）头部的标题文字。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>iconCls</td>
+    <td>string</td>
+    <td>在面板（panel）里显示一个 16x16 图标的 CSS class。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>width</td>
+    <td>number</td>
+    <td>设置面板（panel）的宽度。</td>
+	<td>auto</td>
+</tr>
+<tr>
+	<td>height</td>
+    <td>number</td>
+    <td>设置面板（panel）的高度。</td>
+	<td>auto</td>
+</tr>
+<tr>
+	<td>left</td>
+    <td>number</td>
+    <td>设置面板（panel）的左边位置。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>top</td>
+    <td>number</td>
+    <td>设置面板（panel）的顶部位置。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>cls</td>
+    <td>string</td>
+    <td>给面板（panel）添加一个 CSS class。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>headerCls</td>
+    <td>string</td>
+    <td>给面板（panel）头部添加一个 CSS class。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>bodyCls</td>
+    <td>string</td>
+    <td>给面板（panel）主体添加一个 CSS class。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>style</td>
+    <td>object</td>
+    <td>给面板（panel）添加自定义格式的样式。<br />
+	改变面板（panel）边框宽度的代码实例：
+<pre style="color:#006600">
+&lt;div class="easyui-panel" style="width:200px;height:100px"
+		data-options="style:{borderWidth:2}"&gt;
+&lt;/div&gt;
+</pre>
+	</td>
+	<td>{}</td>
+</tr>
+<tr>
+	<td>fit</td>
+    <td>boolean</td>
+    <td>当设置为 true 时，面板（panel）的尺寸就适应它的父容器。下面的实例演示了自动调整尺寸到它的父容器的最大内部尺寸的面板（panel）。
+<pre style="color:#006600">
+&lt;div style="width:200px;height:100px;padding:5px"&gt;
+	&lt;div class="easyui-panel" style="width:200px;height:100px"
+			data-options="fit:true,border:false"&gt;
+		Embedded Panel
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>border</td>
+    <td>boolean</td>
+    <td>定义了是否显示面板（panel）的边框。</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>doSize</td>
+    <td>boolean</td>
+    <td>如果设置为 true，创建时面板（panel）就调整尺寸并做成布局。</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>noheader</td>
+    <td>boolean</td>
+    <td>如果设置为 true，面板（panel）的头部将不会被创建。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>content</td>
+    <td>string</td>
+    <td>面板（panel）主体内容。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>collapsible</td>
+    <td>boolean</td>
+    <td>定义是否显示折叠按钮。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>minimizable</td>
+    <td>boolean</td>
+    <td>定义是否显示最小化按钮。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>maximizable</td>
+    <td>boolean</td>
+    <td>定义是否显示最大化按钮。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>closable</td>
+    <td>boolean</td>
+    <td>定义是否显示关闭按钮。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>tools</td>
+    <td>array,selector</td>
+    <td>自定义工具组，可能的值：<br />
+		1、数组，每个元素包含 iconCls 和 handler 两个属性。<br />
+		2、选择器，指示工具组。<br />
+		<br />
+		面板（panel）工具组可通过已存在 &lt;div&gt; 标签声明：
+<pre style="color:#006600">
+&lt;div class="easyui-panel" style="width:300px;height:200px"
+		title="My Panel" data-options="iconCls:'icon-ok',tools:'#tt'"&gt;
+&lt;/div&gt;
+&lt;div id="tt"&gt;
+	&lt;a href="#" class="icon-add" onclick="javascript:alert('add')"&gt;&lt;/a&gt;
+	&lt;a href="#" class="icon-edit" onclick="javascript:alert('edit')"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+		面板（panel）工具组可通过数组定义：
+<pre style="color:#006600">
+&lt;div class="easyui-panel" style="width:300px;height:200px"
+		title="My Panel" data-options="iconCls:'icon-ok',tools:[
+				{
+					iconCls:'icon-add',
+					handler:function(){alert('add')}
+				},{
+					iconCls:'icon-edit',
+					handler:function(){alert('edit')}
+				}]"&gt;
+&lt;/div&gt;
+</pre>
+	</td>
+	<td>[]</td>
+</tr>
+<tr>
+	<td>collapsed</td>
+    <td>boolean</td>
+    <td>定义初始化面板（panel）是不是折叠的。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>minimized</td>
+    <td>boolean</td>
+    <td>定义初始化面板（panel）是不是最小化的。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>maximized</td>
+    <td>boolean</td>
+    <td>定义初始化面板（panel）是不是最大化的。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>closed</td>
+    <td>boolean</td>
+    <td>定义初始化面板（panel）是不是关闭的。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>href</td>
+    <td>string</td>
+    <td>一个 URL，用它加载远程数据并且显示在面板（panel）里。请注意，除非面板（panel）打开，否则内容不会被加载。这对创建一个惰性加载的面板（panel）很有用：
+<pre style="color:#006600">
+&lt;div id="pp" class="easyui-panel" style="width:300px;height:200px"
+		data-options="href='get_content.php',closed:true"&gt;
+&lt;/div&gt;
+&lt;a href="#" onclick="javascript:$('#pp').panel('open')"&gt;Open&lt;/a&gt;
+</pre>
+	</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>cache</td>
+    <td>boolean</td>
+    <td>设置为 true 就缓存从 href 加载的面板（panel）内容。</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>loadingMessage</td>
+    <td>string</td>
+    <td>当加载远程数据时在面板（panel）里显示一条信息。</td>
+	<td>Loading…</td>
+</tr>
+<tr>
+	<td>extractor</td>
+    <td>function</td>
+    <td>定义如何从 ajax 响应中提取内容，返回提取的数据。
+<pre style="color:#006600">
+extractor: function(data){
+	var pattern = /&lt;body[^&gt;]*&gt;((.|[\n\r])*)&lt;\/body&gt;/im;
+	var matches = pattern.exec(data);
+	if (matches){
+		return matches[1];	// only extract body content
+	} else {
+		return data;
+	}
+}
+</pre>
+	</td>
+	<td> </td>
+</tr>
+</table>
+
+<h2>事件</h2>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">参数</th>
+    <th align="left">描述</th>
+</tr>
+<tr>
+	<td>onLoad</td>
+    <td>none</td>
+    <td>当远程数据被加载时触发。</td>
+</tr>
+<tr>
+	<td>onBeforeOpen</td>
+    <td>none</td>
+    <td>面板（panel）打开前触发，返回 false 就停止打开。</td>
+</tr>
+<tr>
+	<td>onOpen</td>
+    <td>none</td>
+    <td>面板（panel）打开后触发。</td>
+</tr>
+<tr>
+	<td>onBeforeClose</td>
+    <td>none</td>
+    <td>面板（panel）关闭前触发，返回 false 就取消关闭。下面声明的面板（panel）不会关闭。
+<pre style="color:#006600">
+&lt;div class="easyui-panel" style="width:300px;height:200px;"
+		title="My Panel" data-options="onBeforeClose:function(){return false}"&gt;
+	The panel cannot be closed.
+&lt;/div&gt;
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>onClose</td>
+    <td>none</td>
+    <td>面板（panel）关闭后触发。</td>
+</tr>
+<tr>
+	<td>onBeforeDestroy</td>
+    <td>none</td>
+    <td>面板（panel）销毁前触发，返回false就取消销毁。</td>
+</tr>
+<tr>
+	<td>onDestroy</td>
+    <td>none</td>
+    <td>面板（panel）销毁后触发。</td>
+</tr>
+<tr>
+	<td>onBeforeCollapse</td>
+    <td>none</td>
+    <td>面板（panel）折叠前触发，返回false就停止折叠。</td>
+</tr>
+<tr>
+	<td>onCollapse</td>
+    <td>none</td>
+    <td>面板（panel）折叠后触发。</td>
+</tr>
+<tr>
+	<td>onBeforeExpand</td>
+    <td>none</td>
+    <td>面板（panel）展开前触发，返回false就停止展开。</td>
+</tr>
+<tr>
+	<td>onExpand</td>
+    <td>none</td>
+    <td>面板（panel）展开后触发。</td>
+</tr>
+<tr>
+	<td>onResize</td>
+    <td>width, height</td>
+    <td>面板（panel）调整尺寸后触发。<br />
+		width：新的外部宽度<br />
+		height：新的外部高度
+	</td>
+</tr>
+<tr>
+	<td>onMove</td>
+    <td>left,top</td>
+    <td>面板（panel）移动后触发。<br />
+		left：新的左边位置<br />
+		top：新的顶部位置
+	</td>
+</tr>
+<tr>
+	<td>onMaximize</td>
+    <td>none</td>
+    <td>窗口最大化后触发。</td>
+</tr>
+<tr>
+	<td>onRestore</td>
+    <td>none</td>
+    <td>窗口还原为它的原始尺寸后触发。</td>
+</tr>
+<tr>
+	<td>onMinimize</td>
+    <td>none</td>
+    <td>窗口最小化后触发。</td>
+</tr>
+</table>
+
+<h2>方法</h2>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">参数</th>
+    <th align="left">描述</th>
+</tr>
+<tr>
+	<td>options</td>
+    <td>none</td>
+    <td>返回选项（options）属性（property）。</td>
+</tr>
+<tr>
+	<td>panel</td>
+    <td>none</td>
+    <td>返回外部面板（panel）对象。</td>
+</tr>
+<tr>
+	<td>header</td>
+    <td>none</td>
+    <td>返回面板（panel）头部对象。</td>
+</tr>
+<tr>
+	<td>body</td>
+    <td>none</td>
+    <td>返回面板（panel）主体对象。</td>
+</tr>
+<tr>
+	<td>setTitle</td>
+    <td>title</td>
+    <td>设置头部的标题文本。</td>
+</tr>
+<tr>
+	<td>open</td>
+    <td>forceOpen</td>
+    <td>当 forceOpen 参数设置为 true 时，就绕过 onBeforeOpen 回调函数打开面板（panel）。</td>
+</tr>
+<tr>
+	<td>close</td>
+    <td>forceClose</td>
+    <td>当 forceClose 参数设置为 true 时，就绕过 onBeforeClose 回调函数关闭面板（panel）。</td>
+</tr>
+<tr>
+	<td>destroy</td>
+    <td>forceDestroy</td>
+    <td>当 forceDestroy 参数设置为 true 时，就绕过 onBeforeDestroy 回调函数销毁面板（panel）。</td>
+</tr>
+<tr>
+	<td>refresh</td>
+    <td>href</td>
+    <td>刷新面板（panel）加载远程数据。如果分配了 'href' 参数，将重写旧的 'href' 属性。<br />
+	代码实例：
+<pre style="color:#006600">
+// open a panel and then refresh its contents.
+$('#pp').panel('open').panel('refresh');
+// refresh contents with a new URL.
+$('#pp').panel('open').panel('refresh','new_content.php');
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>resize</td>
+    <td>options</td>
+    <td>设置面板（panel）尺寸并做布局。Options 对象包含下列属性：<br />
+	width：新的面板（panel）宽度<br />
+	height：新的面板（panel）宽度<br />
+	left：新的面板（panel）左边位置<br />
+	top：新的面板（panel）顶部位置<br />
+	<br />
+	代码实例：
+<pre style="color:#006600">
+$('#pp').panel('resize',{
+	width: 600,
+	height: 400
+});
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>move</td>
+    <td>options</td>
+    <td>移动面板（panel）到新位置。Options 对象包含下列属性：<br />
+	left：新的面板（panel）左边位置<br />
+	top：新的面板（panel）顶部位置
+	</td>
+</tr>
+<tr>
+	<td>maximize</td>
+    <td>none</td>
+    <td>面板（panel）适应它的容器的尺寸。</td>
+</tr>
+<tr>
+	<td>minimize</td>
+    <td>none</td>
+    <td>最小化面板（panel）。</td>
+</tr>
+<tr>
+	<td>restore</td>
+    <td>none</td>
+    <td>把最大化的面板（panel）还原为它原来的尺寸和位置。</td>
+</tr>
+<tr>
+	<td>collapse</td>
+    <td>animate</td>
+    <td>折叠面板（panel）主体。</td>
+</tr>
+<tr>
+	<td>expand</td>
+    <td>animate</td>
+    <td>展开面板（panel）主体。</td>
+</tr>
+</table>
+<hr />
+<a href="jeasyui-ref-plugins.html"><img class="navup" src="/images/up.gif" alt="jQuery EasyUI 插件"> jQuery EasyUI 插件</a>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jeasyui/plugins-base-tooltip.html" rel="prev"> jQuery EasyUI 基础插件 &#8211; Tooltip 提示框</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jeasyui/plugins-layout-tabs.html" rel="next">jQuery EasyUI 布局插件 &#8211; Tabs 标签页/选项卡</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.264 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 10:28:30 -->
+
+<!-- super cache -->

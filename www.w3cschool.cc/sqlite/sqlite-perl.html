@@ -1,0 +1,668 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>SQLite &#8211; Perl | w3cschool菜鸟教程</title>
+	<link rel='prev' title='SQLite &#8211; PHP' href='http://www.w3cschool.cc/sqlite/sqlite-php.html' />
+<link rel='next' title='SQLite &#8211; Python' href='http://www.w3cschool.cc/sqlite/sqlite-python.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/sqlite/sqlite-perl.html' />
+<meta name="keywords" content="SQLite &#8211; Perl,SQLite 教程">
+<meta name="description" content="SQLite - Perl  安装 SQLite3 可使用 Perl DBI 模块与 Perl 进行集成。Perl DBI 模块是 Perl 编程语言的数据库访问模块。它定义了一组提供标准数据库接口的方法、变量及规则。 下面显示了在 Linux/UNIX 机器上安装 DBI 模块的简单步骤：  $ wget http://search.cpan.org/CPAN/authors/id/T/TI/TIMB/DBI-1.625.tar.gz..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>SQLite 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html" >
+	SQLite 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-intro.html" >
+	SQLite 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-installation.html" >
+	SQLite 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-commands.html" >
+	SQLite 命令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-syntax.html" >
+	SQLite 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-data-types.html" >
+	SQLite 数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-create-database.html" >
+	SQLite 创建数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-attach-database.html" >
+	SQLite 附加数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-detach-database.html" >
+	SQLite 分离数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-create-table.html" >
+	SQLite 创建表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-drop-table.html" >
+	SQLite 删除表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-insert.html" >
+	SQLite Insert 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-select.html" >
+	SQLite Select 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-operators.html" >
+	SQLite 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-expressions.html" >
+	SQLite 表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-where-clause.html" >
+	SQLite Where 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-and-or-clauses.html" >
+	SQLite AND/OR 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-update.html" >
+	SQLite Update 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-delete.html" >
+	SQLite Delete 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-like-clause.html" >
+	SQLite Like 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-glob-clause.html" >
+	SQLite Glob 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-limit-clause.html" >
+	SQLite Limit 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-order-by.html" >
+	SQLite Order By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-group-by.html" >
+	SQLite Group By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-having-clause.html" >
+	SQLite Having 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-distinct-keyword.html" >
+	SQLite Distinct 关键字	</a>
+	<br><h2 class="left"><span class="left_h2">SQLite 高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-pragma.html" >
+	SQLite PRAGMA	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-constraints.html" >
+	SQLite 约束	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-joins.html" >
+	SQLite Joins	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-unions-clause.html" >
+	SQLite Unions 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-null-values.html" >
+	SQLite NULL 值	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-alias.html" >
+	SQLite 别名	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-trigger.html" >
+	SQLite 触发器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-index.html" >
+	SQLite 索引	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-indexed-by.html" >
+	SQLite Indexed By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-alter-command.html" >
+	SQLite Alter 命令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-truncate-table.html" >
+	SQLite Truncate Table	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-view.html" >
+	SQLite 视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-transaction.html" >
+	SQLite 事务	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-subquery.html" >
+	SQLite 子查询	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-autoincrement.html" >
+	SQLite Autoincrement	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-injection.html" >
+	SQLite 注入	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-explain.html" >
+	SQLite Explain	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-vacuum.html" >
+	SQLite Vacuum	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-date-time.html" >
+	SQLite 日期 & 时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-functions.html" >
+	SQLite 常用函数	</a>
+	<br><h2 class="left"><span class="left_h2">SQLite 接口</span></h2>	<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-c-cpp.html" >
+	SQLite - C/C++	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-java.html" >
+	SQLite - Java	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-php.html" >
+	SQLite - PHP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-perl.html" >
+	SQLite - Perl	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-python.html" >
+	SQLite - Python	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/sqlite/sqlite-php.html" rel="prev"> SQLite &#8211; PHP</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/sqlite/sqlite-python.html" rel="next">SQLite &#8211; Python</a> &raquo;</div>
+	</div>
+
+	<h1>SQLite - <span class="color_h1">Perl</span></h1>
+
+<h2>安装</h2>
+<p>SQLite3 可使用 Perl DBI 模块与 Perl 进行集成。Perl DBI 模块是 Perl 编程语言的数据库访问模块。它定义了一组提供标准数据库接口的方法、变量及规则。</p>
+<p>下面显示了在 Linux/UNIX 机器上安装 DBI 模块的简单步骤：</p>
+<pre class="result">
+$ wget http://search.cpan.org/CPAN/authors/id/T/TI/TIMB/DBI-1.625.tar.gz
+$ tar xvfz DBI-1.625.tar.gz
+$ cd DBI-1.625
+$ perl Makefile.PL
+$ make
+$ make install
+</pre>
+<p>如果您需要为 DBI 安装 SQLite 驱动程序，那么可按照以下步骤进行安装：</p>
+<pre class="result">
+$ wget http://search.cpan.org/CPAN/authors/id/M/MS/MSERGEANT/DBD-SQLite-1.11.tar.gz
+$ tar xvfz DBD-SQLite-1.11.tar.gz
+$ cd DBD-SQLite-1.11
+$ perl Makefile.PL
+$ make
+$ make install
+</pre>
+<h2>DBI 接口 API</h2>
+<p>以下是重要的 DBI 程序，可以满足您在 Perl 程序中使用 SQLite 数据库的需求。如果您需要了解更多细节，请查看 Perl DBI 官方文档。</p>
+<table class="reference notranslate">
+<tr><th width="5%">序号</th><th>API &amp; 描述</th></tr>
+<tr><td>1</td><td><b>DBI->connect($data_source, "", "", \%attr)</b><br />
+<p>建立一个到被请求的 $data_source 的数据库连接或者 session。如果连接成功，则返回一个数据库处理对象。</p>
+<p>数据源形式如下所示：<b>DBI:SQLite:dbname='test.db'</b>。其中，SQLite 是 SQLite 驱动程序名称，test.db 是 SQLite 数据库文件的名称。如果文件名 <i>filename</i> 赋值为 <b>':memory:'</b>，那么它将会在 RAM 中创建一个内存数据库，这只会在 session 的有效时间内持续。</p>
+<p>如果文件名 filename 为实际的设备文件名称，那么它将使用这个参数值尝试打开数据库文件。如果该名称的文件不存在，那么将创建一个新的命名为该名称的数据库文件。</p>
+<p>您可以保留第二个和第三个参数为空白字符串，最后一个参数用于传递各种属性，详见下面的实例讲解。</p>
+</td></tr>
+<tr><td>2</td><td><b>$dbh-&gt;do($sql)</b><br />
+<p>该例程准备并执行一个简单的 SQL 语句。返回受影响的行数，如果发生错误则返回 undef。返回值 -1 意味着行数未知，或不适用 ，或不可用。在这里，$dbh 是由 DBI->connect() 调用返回的处理。</p>
+</td></tr>
+<tr><td>3</td><td><b>$dbh->prepare($sql)</b><br />
+<p>该例程为数据库引擎后续执行准备一个语句，并返回一个语句处理对象。</p>
+</td></tr>
+<tr><td>4</td><td><b>$sth->execute()</b><br />
+<p>该例程执行任何执行预准备的语句需要的处理。如果发生错误则返回 undef。如果成功执行，则无论受影响的行数是多少，总是返回 true。在这里，$sth 是由 $dbh->prepare($sql) 调用返回的语句处理。</p>
+</td></tr>
+<tr><td>5</td><td><b>$sth->fetchrow_array()</b><br />
+<p>该例程获取下一行数据，并以包含各字段值的列表形式返回。在该列表中，Null 字段将作为 undef 值返回。 </p>
+</td></tr>
+<tr><td>6</td><td><b>$DBI::err</b><br />
+<p>这相当于 $h->err。其中，$h 是任何的处理类型，比如 $dbh、$sth 或 $drh。该程序返回最后调用的驱动程序（driver）方法的数据库引擎错误代码。</p>
+</td></tr>
+<tr><td>7</td><td><b>$DBI::errstr</b><br />
+<p>这相当于 $h->errstr。其中，$h 是任何的处理类型，比如 $dbh、$sth 或 $drh。该程序返回最后调用的 DBI 方法的数据库引擎错误消息。</p>
+</td></tr>
+<tr><td>8</td><td><b>$dbh-&gt;disconnect()</b><br />
+<p>该例程关闭之前调用 DBI->connect() 打开的数据库连接。</p>
+</table>
+<h2>连接数据库</h2>
+<p>下面的 Perl 代码显示了如何连接到一个现有的数据库。如果数据库不存在，那么它就会被创建，最后将返回一个数据库对象。</p>
+<pre class="prettyprint">
+#!/usr/bin/perl
+
+use DBI;
+use strict;
+
+my $driver   = "SQLite"; 
+my $database = "test.db";
+my $dsn = "DBI:$driver:dbname=$database";
+my $userid = "";
+my $password = "";
+my $dbh = DBI-&gt;connect($dsn, $userid, $password, { RaiseError =&gt; 1 }) 
+                      or die $DBI::errstr;
+
+print "Opened database successfully\n";
+</pre>
+<p>现在，让我们来运行上面的程序，在当前目录中创建我们的数据库 <b>test.db</b>。您可以根据需要改变路径。保存上面代码到 sqlite.pl 文件中，并按如下所示执行。如果数据库成功创建，那么会显示下面所示的消息：</p>
+<pre class="result">
+$ chmod +x sqlite.pl
+$ ./sqlite.pl
+Open database successfully
+</pre>
+<h2>创建表</h2>
+<p>下面的 Perl 代码段将用于在先前创建的数据库中创建一个表：</p>
+<pre class="prettyprint">
+#!/usr/bin/perl
+
+use DBI;
+use strict;
+
+my $driver   = "SQLite";
+my $database = "test.db";
+my $dsn = "DBI:$driver:dbname=$database";
+my $userid = "";
+my $password = "";
+my $dbh = DBI-&gt;connect($dsn, $userid, $password, { RaiseError =&gt; 1 })
+                      or die $DBI::errstr;
+print "Opened database successfully\n";
+
+my $stmt = qq(CREATE TABLE COMPANY
+      (ID INT PRIMARY KEY     NOT NULL,
+       NAME           TEXT    NOT NULL,
+       AGE            INT     NOT NULL,
+       ADDRESS        CHAR(50),
+       SALARY         REAL););
+my $rv = $dbh-&gt;do($stmt);
+if($rv &lt; 0){
+   print $DBI::errstr;
+} else {
+   print "Table created successfully\n";
+}
+$dbh-&gt;disconnect();
+</pre>
+<p>上述程序执行时，它会在 <b>test.db</b> 中创建 COMPANY 表，并显示下面所示的消息：</p>
+<pre class="result">
+Opened database successfully
+Table created successfully
+</pre>
+<p><b>注意：</b>如果您在任何操作中遇到了下面的错误： in case you see following error in any of the operation:</p>
+<pre class="result">
+DBD::SQLite::st execute failed: not an error(21) at dbdimp.c line 398
+</pre>
+<p>在这种情况下，您已经在 DBD-SQLite 安装中打开了可用的 dbdimp.c 文件，找到 <b> sqlite3_prepare()</b> 函数，并把它的第三个参数 0 改为 -1。最后使用 <b>make</b> 和 <b>make install</b> 安装 DBD::SQLite，即可解决问题。
+
+
+in this case you will have open dbdimp.c file available in DBD-SQLite installation and find out <b> sqlite3_prepare()</b> function and change its third argument to -1 instead of 0. Finally install DBD::SQLite using <b>make</b> and do <b>make install</b> to resolve the problem.</p>
+<h2>INSERT 操作</h2>
+<p>下面的 Perl 程序显示了如何在上面创建的 COMPANY 表中创建记录：</p>
+<pre class="prettyprint">
+#!/usr/bin/perl
+
+use DBI;
+use strict;
+
+my $driver   = "SQLite";
+my $database = "test.db";
+my $dsn = "DBI:$driver:dbname=$database";
+my $userid = "";
+my $password = "";
+my $dbh = DBI-&gt;connect($dsn, $userid, $password, { RaiseError =&gt; 1 })
+                      or die $DBI::errstr;
+print "Opened database successfully\n";
+
+my $stmt = qq(INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+      VALUES (1, 'Paul', 32, 'California', 20000.00 ));
+my $rv = $dbh-&gt;do($stmt) or die $DBI::errstr;
+
+$stmt = qq(INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+      VALUES (2, 'Allen', 25, 'Texas', 15000.00 ));
+$rv = $dbh-&gt;do($stmt) or die $DBI::errstr;
+
+$stmt = qq(INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+      VALUES (3, 'Teddy', 23, 'Norway', 20000.00 ));
+$rv = $dbh-&gt;do($stmt) or die $DBI::errstr;
+
+$stmt = qq(INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+      VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00 ););
+$rv = $dbh-&gt;do($stmt) or die $DBI::errstr;
+
+print "Records created successfully\n";
+$dbh-&gt;disconnect();
+</pre>
+<p>上述程序执行时，它会在 COMPANY 表中创建给定记录，并会显示以下两行：</p>
+<pre class="result">
+Opened database successfully
+Records created successfully
+</pre>
+<h2>SELECT 操作</h2>
+<p>下面的 Perl 程序显示了如何从前面创建的 COMPANY 表中获取并显示记录：</p>
+<pre class="prettyprint">
+#!/usr/bin/perl
+
+use DBI;
+use strict;
+
+my $driver   = "SQLite";
+my $database = "test.db";
+my $dsn = "DBI:$driver:dbname=$database";
+my $userid = "";
+my $password = "";
+my $dbh = DBI-&gt;connect($dsn, $userid, $password, { RaiseError =&gt; 1 })
+                      or die $DBI::errstr;
+print "Opened database successfully\n";
+
+my $stmt = qq(SELECT id, name, address, salary  from COMPANY;);
+my $sth = $dbh-&gt;prepare( $stmt );
+my $rv = $sth-&gt;execute() or die $DBI::errstr;
+if($rv &lt; 0){
+   print $DBI::errstr;
+}
+while(my @row = $sth-&gt;fetchrow_array()) {
+      print "ID = ". $row[0] . "\n";
+      print "NAME = ". $row[1] ."\n";
+      print "ADDRESS = ". $row[2] ."\n";
+      print "SALARY =  ". $row[3] ."\n\n";
+}
+print "Operation done successfully\n";
+$dbh-&gt;disconnect();
+</pre>
+<p>上述程序执行时，它会产生以下结果：</p>
+<pre class="result">
+Opened database successfully
+ID = 1
+NAME = Paul
+ADDRESS = California
+SALARY =  20000
+
+ID = 2
+NAME = Allen
+ADDRESS = Texas
+SALARY =  15000
+
+ID = 3
+NAME = Teddy
+ADDRESS = Norway
+SALARY =  20000
+
+ID = 4
+NAME = Mark
+ADDRESS = Rich-Mond
+SALARY =  65000
+
+Operation done successfully
+</pre>
+<h2>UPDATE 操作</h2>
+<p>下面的 Perl 代码显示了如何使用 UPDATE 语句来更新任何记录，然后从 COMPANY 表中获取并显示更新的记录：</p>
+<pre class="prettyprint">
+#!/usr/bin/perl
+
+use DBI;
+use strict;
+
+my $driver   = "SQLite";
+my $database = "test.db";
+my $dsn = "DBI:$driver:dbname=$database";
+my $userid = "";
+my $password = "";
+my $dbh = DBI-&gt;connect($dsn, $userid, $password, { RaiseError =&gt; 1 })
+                      or die $DBI::errstr;
+print "Opened database successfully\n";
+
+my $stmt = qq(UPDATE COMPANY set SALARY = 25000.00 where ID=1;);
+my $rv = $dbh-&gt;do($stmt) or die $DBI::errstr;
+if( $rv &lt; 0 ){
+   print $DBI::errstr;
+}else{
+   print "Total number of rows updated : $rv\n";
+}
+$stmt = qq(SELECT id, name, address, salary  from COMPANY;);
+my $sth = $dbh-&gt;prepare( $stmt );
+$rv = $sth-&gt;execute() or die $DBI::errstr;
+if($rv &lt; 0){
+   print $DBI::errstr;
+}
+while(my @row = $sth-&gt;fetchrow_array()) {
+      print "ID = ". $row[0] . "\n";
+      print "NAME = ". $row[1] ."\n";
+      print "ADDRESS = ". $row[2] ."\n";
+      print "SALARY =  ". $row[3] ."\n\n";
+}
+print "Operation done successfully\n";
+$dbh-&gt;disconnect();
+</pre>
+<p>上述程序执行时，它会产生以下结果：</p>
+<pre class="result">
+Opened database successfully
+Total number of rows updated : 1
+ID = 1
+NAME = Paul
+ADDRESS = California
+SALARY =  25000
+
+ID = 2
+NAME = Allen
+ADDRESS = Texas
+SALARY =  15000
+
+ID = 3
+NAME = Teddy
+ADDRESS = Norway
+SALARY =  20000
+
+ID = 4
+NAME = Mark
+ADDRESS = Rich-Mond
+SALARY =  65000
+
+Operation done successfully
+</pre>
+<h2>DELETE 操作</h2>
+<p>下面的 Perl 代码显示了如何使用 DELETE 语句删除任何记录，然后从 COMPANY 表中获取并显示剩余的记录：</p>
+<pre class="prettyprint">
+#!/usr/bin/perl
+
+use DBI;
+use strict;
+
+my $driver   = "SQLite";
+my $database = "test.db";
+my $dsn = "DBI:$driver:dbname=$database";
+my $userid = "";
+my $password = "";
+my $dbh = DBI-&gt;connect($dsn, $userid, $password, { RaiseError =&gt; 1 })
+                      or die $DBI::errstr;
+print "Opened database successfully\n";
+
+my $stmt = qq(DELETE from COMPANY where ID=2;);
+my $rv = $dbh-&gt;do($stmt) or die $DBI::errstr;
+if( $rv &lt; 0 ){
+   print $DBI::errstr;
+}else{
+   print "Total number of rows deleted : $rv\n";
+}
+$stmt = qq(SELECT id, name, address, salary  from COMPANY;);
+my $sth = $dbh-&gt;prepare( $stmt );
+$rv = $sth-&gt;execute() or die $DBI::errstr;
+if($rv &lt; 0){
+   print $DBI::errstr;
+}
+while(my @row = $sth-&gt;fetchrow_array()) {
+      print "ID = ". $row[0] . "\n";
+      print "NAME = ". $row[1] ."\n";
+      print "ADDRESS = ". $row[2] ."\n";
+      print "SALARY =  ". $row[3] ."\n\n";
+}
+print "Operation done successfully\n";
+$dbh-&gt;disconnect();
+</pre>
+<p>上述程序执行时，它会产生以下结果：</p>
+<pre class="result">
+Opened database successfully
+Total number of rows deleted : 1
+ID = 1
+NAME = Paul
+ADDRESS = California
+SALARY =  25000
+
+ID = 3
+NAME = Teddy
+ADDRESS = Norway
+SALARY =  20000
+
+ID = 4
+NAME = Mark
+ADDRESS = Rich-Mond
+SALARY =  65000
+
+Operation done successfully
+</pre>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/sqlite/sqlite-php.html" rel="prev"> SQLite &#8211; PHP</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/sqlite/sqlite-python.html" rel="next">SQLite &#8211; Python</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.666 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-06 22:27:47 -->
+
+<!-- super cache -->

@@ -1,0 +1,418 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap 缩略图 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Bootstrap 内联标签和徽章' href='http://www.w3cschool.cc/bootstrap/bootstrap-inlinelabels-badges.html' />
+<link rel='next' title='Bootstrap 进度条' href='http://www.w3cschool.cc/bootstrap/bootstrap-progress-bars.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/bootstrap/bootstrap-thumbnails.html' />
+<meta name="keywords" content="Bootstrap 缩略图,Bootstrap 教程">
+<meta name="description" content="Bootstrap 缩略图 简介 在本教程中，您将看到如何使用 Bootstrap 创建缩略图，即图像、录像、文本的网格。 缩略图有一个简单而又灵活的标记。同时，您可以使用已有的 bootstrap css class 比如 .span2 或 .span3 来设置缩略图的宽度和高度。 为什么使用缩略图 当在 Web 中创建用户经历，您通常需要创建一个图像或录像的网格。一个很好的例子就是需要展示产品图片的公司网站，这个时候，可能会用到缩略..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Bootstrap 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html" >
+	Bootstrap 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-intro.html" >
+	Bootstrap 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-css-overview.html" >
+	Bootstrap CSS 概览	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-grid-system.html" >
+	Bootstrap 网格系统	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-layout.html" >
+	Bootstrap 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-responsive-design.html" >
+	Bootstrap 响应式设计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typography.html" >
+	Bootstrap 排版	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tables.html" >
+	Bootstrap 表格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-forms.html" >
+	Bootstrap 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-icons.html" >
+	Bootstrap 图标	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button-tutorial.html" >
+	Bootstrap 按钮	</a><a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-image.html" >
+	Bootstrap 图像	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-glyphicons.html">
+	Bootstrap Glyphicons	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-list-group.html">
+	Bootstrap 清单组/价格表	</a>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-nav.html" >
+	Bootstrap 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-navbar.html" >
+	Bootstrap 导航条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-inlinelabels-badges.html" >
+	Bootstrap 内联标签和徽章	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-thumbnails.html" >
+	Bootstrap 缩略图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-progress-bars.html" >
+	Bootstrap 进度条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-breadcrumbs.html" >
+	Bootstrap 面包屑导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-pagination.html" >
+	Bootstrap 分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-alerts-errors.html" >
+	Bootstrap 警告和错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-less.html" >
+	Bootstrap LESS	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-media-object.html">
+	Bootstrap多媒体对象	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-panels.html">
+	Bootstrap面板	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-wells.html">
+	Bootstrap wells	</a>
+<br><h2 class="left"><span class="left_h2">Bootstrap JavaScript</span></h2>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-modals.html" >
+	Bootstrap 模态框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-popover.html" >
+	Bootstrap 弹出框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-dropdown.html" >
+	Bootstrap 下拉菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-scrollspy.html" >
+	Bootstrap 滚动监听	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-carousel.html" >
+	Bootstrap 轮播	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typeahead.html" >
+	Bootstrap Typeahead	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button.html" >
+	Bootstrap 按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-collapse.html" >
+	Bootstrap 折叠	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-ui-editor.html" >
+	Bootstrap UI 编辑器	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-inlinelabels-badges.html" rel="prev"> Bootstrap 内联标签和徽章</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-progress-bars.html" rel="next">Bootstrap 进度条</a> &raquo;</div>
+	</div>
+
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/bootstrap/bootstrap.css" >
+<h1>Bootstrap <span class="color_h1">缩略图</span></h1>
+<h2 class="tutheader">简介</h2>
+<p>在本教程中，您将看到如何使用 Bootstrap 创建缩略图，即图像、录像、文本的网格。</p>
+<p>缩略图有一个简单而又灵活的标记。同时，您可以使用已有的 bootstrap css class 比如 .span2 或 .span3 来设置缩略图的宽度和高度。</p>
+<h2 class="tutheader">为什么使用缩略图</h2>
+<p>当在 Web 中创建用户经历，您通常需要创建一个图像或录像的网格。一个很好的例子就是需要展示产品图片的公司网站，这个时候，可能会用到缩略图。</p>
+<h2 class="tutheader">使用默认缩略图实例</h2>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="Example of using default thumbnails from w3cschool.cc"&gt;
+    &lt;meta name="author" content=""&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="../bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet"&gt;
+	&lt;link href="../bootstrap/twitter-bootstrap-v2/docs/assets/css/example-fixed-layout.css" rel="stylesheet"&gt;
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML5 elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="//html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le fav and touch icons --&gt;
+    &lt;link rel="shortcut icon" href="../bootstrap/twitter-bootstrap-v2/docs/examples/images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="../bootstrap/twitter-bootstrap-v2/docs/examples/images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="../bootstrap/twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="../bootstrap/twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-114x114.png"&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div class="container"&gt;
+      &lt;ul class="thumbnails"&gt;
+  &lt;li class="span3"&gt;
+    &lt;a href="http://www.w3cschool.cc/php/php-tutorial.html" class="thumbnail"&gt;
+      &lt;img src="../bootstrap/php-thumb.png" alt="php tutorial" width="260" height="180" /&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+ &lt;li class="span4"&gt;
+    &lt;a href="http://www.w3cschool.cc/sql/sql-tutorial.html" class="thumbnail"&gt;
+      &lt;img src="../bootstrap/mysql-thumb.png" alt="mysql tutorial" width="300" height="180" /&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+ &lt;li class="span5"&gt;
+    &lt;a href="http://www.w3cschool.cc/js/js-tutorial.html" class="thumbnail"&gt;
+      &lt;img src="../bootstrap/js-thumb.png" alt="js tutorial" width="380" height="180" &gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;/div&gt; &lt;!-- /container --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p><a href="/try/tryit.php?filename=bootstrap-using-default-thumbnails" target="_blank">在线查看实例</a></p>
+<p>您可以定制默认的缩略图，并添加段落、标题列表或者其他类型的 HTML 内容。</p>
+<h2 class="tutheader">定制缩略图实例</h2>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="Example of thumbnails customized from w3cschool.cc"&gt;
+    &lt;meta name="author" content=""&gt;
+
+    &lt;!-- Le styles --&gt;
+    &lt;link href="../bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet"&gt;
+	&lt;link href="../bootstrap/twitter-bootstrap-v2/docs/assets/css/example-fixed-layout.css" rel="stylesheet"&gt;
+    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML5 elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="//html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Le fav and touch icons --&gt;
+    &lt;link rel="shortcut icon" href="../bootstrap/twitter-bootstrap-v2/docs/examples/images/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon" href="../bootstrap/twitter-bootstrap-v2/docs/examples/images/apple-touch-icon.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="72x72" href="../bootstrap/twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-72x72.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="114x114" href="../bootstrap/twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-114x114.png"&gt;
+  &lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class="container"&gt;
+&lt;ul class="thumbnails"&gt;
+        &lt;li class="span5"&gt;
+          &lt;div class="thumbnail"&gt;
+            &lt;img src="../bootstrap/shoes1.jpg" alt="product 1"&gt;
+            &lt;div class="caption"&gt;
+              &lt;h5&gt;Product detail&lt;/h5&gt;
+              &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 		magna aliqua.&lt;/p&gt;
+              &lt;p&gt;&lt;a href="#" class="btn btn-success"&gt;Buy&lt;/a&gt; &lt;a href="#" class="btn btn-warning"&gt;Try&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="span5"&gt;
+          &lt;div class="thumbnail"&gt;
+            &lt;img src="../bootstrap/shoes2.jpg" alt="product 2"&gt;
+            &lt;div class="caption"&gt;
+              &lt;h5&gt;Product detail&lt;/h5&gt;
+              &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+              &lt;p&gt;&lt;a href="#" class="btn btn-success"&gt;Buy&lt;/a&gt; &lt;a href="#" class="btn btn-warning"&gt;Try&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;hr /&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;&amp;copy; Company 2013&lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/div&gt; &lt;!-- /container --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p><a href="/try/tryit.php?filename=bootstrap-thumbnails-customized" target="_blank">在线查看实例</a></p>
+<p><a href="/try/bootstrap/twitter-bootstrap.zip">点击这里，下载本教程中使用到的所有 HTML、CSS、JS 和图片文件。</a></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-inlinelabels-badges.html" rel="prev"> Bootstrap 内联标签和徽章</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-progress-bars.html" rel="next">Bootstrap 进度条</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		$("pre").css('background-image', 'none');
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.195 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 20:06:42 -->
+
+<!-- super cache -->

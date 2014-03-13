@@ -1,0 +1,1074 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI API &#8211; 自动完成部件（Autocomplete Widget） | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery UI API &#8211; 折叠面板部件（Accordion Widget）' href='http://www.w3cschool.cc/jqueryui/api-accordion.html' />
+<link rel='next' title='jQuery UI API &#8211; 按钮部件（Button Widget）' href='http://www.w3cschool.cc/jqueryui/api-button.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jqueryui/api-autocomplete.html' />
+<meta name="keywords" content="jQuery UI API &#8211; 自动完成部件（Autocomplete Widget）,Jquery UI">
+<meta name="description" content="jQuery UI API - 自动完成部件（Autocomplete Widget）  所属类别  小部件（Widgets）   用法 描述：自动完成功能根据用户输入值进行搜索和过滤，让用户快速找到并从预设值列表中选择。 版本新增：1.8 任何可以接收输入的字段都可以转换为 Autocomplete，即，&lt;input&gt; 元素，&lt;textarea&gt; 元素及带有 contenteditable 属性的元素。 通过给..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Jquery UI</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html" >
+	jQuery UI 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-intro.html" >
+	jQuery UI 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-download.html" >
+	jQuery UI 下载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-use.html" >
+	jQuery UI 使用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-custom.html" >
+	jQuery UI 定制	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-work.html" >
+	jQuery UI 工作原理	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">主题</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme.html" >
+	jQuery UI 主题	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-themeroller.html" >
+	jQuery UI ThemeRoller	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-api.html" >
+	jQuery UI CSS 框架 API	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-design.html" >
+	jQuery UI 设计主题	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">部件库</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory.html" >
+	jQuery UI 部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-extend.html" >
+	jQuery UI 扩展小部件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-method.html" >
+	jQuery UI 小部件方法调用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-why.html" >
+	jQuery UI 为什么使用部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-how.html" >
+	jQuery UI 如何使用部件库	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-api.html" >
+	jQuery UI API 文档	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/api-accordion.html" rel="prev"> jQuery UI API &#8211; 折叠面板部件（Accordion Widget）</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/api-button.html" rel="next">jQuery UI API &#8211; 按钮部件（Button Widget）</a> &raquo;</div>
+	</div>
+
+	<h1>jQuery UI API - <span class="color_h1">自动完成部件（Autocomplete Widget）</span></h1>
+
+<h2>所属类别</h2>
+<p>
+<a href="/jqueryui/api-category-widgets.html">小部件（Widgets）</a>
+</p>
+
+<h2>用法</h2>
+<p><strong>描述：</strong>自动完成功能根据用户输入值进行搜索和过滤，让用户快速找到并从预设值列表中选择。</p>
+<p><strong>版本新增：</strong>1.8</p>
+<p>任何可以接收输入的字段都可以转换为 Autocomplete，即，<code>&lt;input&gt;</code> 元素，<code>&lt;textarea&gt;</code> 元素及带有 <code>contenteditable</code> 属性的元素。</p>
+<p>通过给 Autocomplete 字段焦点或者在其中输入字符，插件开始搜索匹配的条目并显示供选择的值的列表。通过输入更多的字符，用户可以过滤列表以获得更好的匹配。</p>
+<p>该部件可用于选择先前选定的值，比如输入文章标签或者输入从地址簿中输入地址邮件地址。Autocomplete 也可以用来填充相关的信息，比如输入一个城市的名称来获得该城市的邮政编码。</p>
+<p>您可以从本地源或者远程源获取数据：本地源适用于小数据集，例如，带有 50 个条目的地址簿；远程源适用于大数据集，比如，带有数百个或者成千上万个条目的数据库。如需了解更多有关自定义数据源的信息，请查看 <a href="#option-source"><code>source</code></a> 选项的文档。</p>
+
+<h3>键盘交互</h3>
+<p>当菜单打开时，下面的键盘命令可用：</p>
+<ul>
+	<li>UP - 移动焦点到上一个项目。如果在第一个项目上，则移动焦点到输入（input）。如果在输入（input）上，则移动焦点到最后一个项目。</li>
+	<li>DOWN - 移动焦点到下一个项目。如果在最后一个项目上，则移动焦点到输入（input）。如果在输入（input）上，则移动焦点到第一个项目。</li>
+	<li>ESCAPE - 关闭菜单。</li>
+	<li>ENTER - 选择当前获得焦点的项目，并关闭菜单。</li>
+	<li>TAB - 选择当前获得焦点的项目，关闭菜单，并移动焦点到下一个可聚焦（focusable）的元素。</li>
+	<li>PAGE UP/DOWN - 滚动一屏的项目（基于菜单的高度）。</li>
+</ul>
+<p>当菜单关闭时，下面的键盘命令可用：</p>
+<ul>
+	<li>UP/DOWN - 如果满足 <a href="#option-minLength"><code>minLength</code></a>，则打开菜单。</li>
+</ul>
+
+<h3 id="theming">主题化</h3>
+<p>自动完成部件（Autocomplete Widget）使用 <a href="/jqueryui/api-css-framework.html">jQuery UI CSS 框架</a> 来定义它的外观和感观的样式。如果需要使用自动完成部件指定的样式，则可以使用下面的 CSS class 名称：</p>
+<ul>
+	<li><code>ui-autocomplete</code>：用于显示匹配用户的 <a href="/jqueryui/api-menu.html#theming">菜单（menu）</a></li>
+	<li><code>ui-autocomplete-input</code>：自动完成部件（Autocomplete Widget）实例化的 input 元素。</li>
+</ul>
+
+<h3>依赖</h3>
+<ul>
+	<li><a href="/jqueryui/api-category-ui-core.html">UI 核心（UI Core）</a></li>
+	<li><a href="/jqueryui/api-jQuery-widget.html">部件库（Widget Factory）</a></li>
+	<li><a href="/jqueryui/api-position.html">定位（Position）</a></li>
+	<li><a href="/jqueryui/api-menu.html">菜单部件（Menu Widget）</a></li>
+</ul>
+
+<h3>附加说明</h3>
+<ul>
+	<li>该部件要求一些功能性的 CSS，否则将无法工作。如果您创建了一个自定义的主题，请使用小部件指定的 CSS 文件作为起点。</li>
+	<li>该部件以编程方式操作元素的值，因此当元素的值改变时不会触发原生的 <code>change</code> 事件。</li>
+</ul>
+
+<h3>快速导航</h3>
+<table class="reference notranslate">
+<tr>
+	<th width="25%">选项</th>
+	<th width="25%">方法</th>
+	<th width="25%">扩展点</th>
+    <th width="25%">事件</th>
+</tr>
+<tr>
+	<td>
+<div><a href="#option-appendTo">appendTo</a></div>
+<div><a href="#option-autoFocus">autoFocus</a></div>
+<div><a href="#option-delay">delay</a></div>
+<div><a href="#option-disabled">disabled</a></div>
+<div><a href="#option-minLength">minLength</a></div>
+<div><a href="#option-position">position</a></div>
+<div><a href="#option-source">source</a></div>
+	</td>
+	<td>
+<div><a href="#method-close">close</a></div>
+<div><a href="#method-destroy">destroy</a></div>
+<div><a href="#method-disable">disable</a></div>
+<div><a href="#method-enable">enable</a></div>
+<div><a href="#method-option">option</a></div>
+<div><a href="#method-search">search</a></div>
+<div><a href="#method-widget">widget</a></div>
+	</td>
+	<td>
+<div><a href="#method-_renderItem">_renderItem</a></div>
+<div><a href="#method-_renderMenu">_renderMenu</a></div>
+<div><a href="#method-_resizeMenu">_resizeMenu</a></div>
+	</td>
+    <td>
+<div><a href="#event-change">change</a></div>
+<div><a href="#event-close">close</a></div>
+<div><a href="#event-create">create</a></div>
+<div><a href="#event-focus">focus</a></div>
+<div><a href="#event-open">open</a></div>
+<div><a href="#event-response">response</a></div>
+<div><a href="#event-search">search</a></div>
+<div><a href="#event-select">select</a></div>
+	</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate" id="options">
+<tr>
+	<th width="15%">选项</th>
+	<th width="15%">类型</th>
+    <th width="60%">描述</th>
+	<th width="10%">默认值</th>
+</tr>
+<tr id="option-appendTo">
+	<td>appendTo</td>
+    <td>Selector</td>
+	<td>菜单应该被附加到哪一个元素。当该值为 <code>null</code> 时，输入域的父元素将检查 <code>ui-front</code> class。如果找到带有 <code>ui-front</code> class 的元素，菜单将被附加到该元素。如果未找到带有 <code>ui-front</code> class 的元素，不管值为多少，菜单将被附加到 body。<br />
+	<p><strong>注意：当建议菜单打开时，<code>appendTo</code> 选项不应改变。</strong></p>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>appendTo</code> 选项的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({ appendTo: "#someElem" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>appendTo</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var appendTo = $( ".selector" ).autocomplete( "option", "appendTo" );
+ 
+// setter
+$( ".selector" ).autocomplete( "option", "appendTo", "#someElem" );
+	</pre>
+	</td>
+	<td>null</td>
+</tr>
+<tr id="option-autoFocus">
+	<td>autoFocus</td>
+    <td>Boolean</td>
+	<td>如果设置为 <code>true</code>，当菜单显示时，第一个条目将自动获得焦点。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>autoFocus</code> 选项的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({ autoFocus: true });
+	</pre>
+	<p>在初始化后，获取或设置 <code>autoFocus</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var autoFocus = $( ".selector" ).autocomplete( "option", "autoFocus" );
+ 
+// setter
+$( ".selector" ).autocomplete( "option", "autoFocus", true );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-delay">
+	<td>delay</td>
+    <td>Integer</td>
+	<td>按键和执行搜索之间的延迟，以毫秒计。对于本地数据，采用零延迟是有意义的（更具响应性），但对于远程数据会产生大量的负荷，同时降低了响应性。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>delay</code> 选项的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({ delay: 500 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>delay</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var delay = $( ".selector" ).autocomplete( "option", "delay" );
+ 
+// setter
+$( ".selector" ).autocomplete( "option", "delay", 500 );
+	</pre>
+	</td>
+	<td>300</td>
+</tr>
+<tr id="option-disabled">
+	<td>disabled</td>
+    <td>Boolean</td>
+	<td>如果设置为 <code>true</code>，则禁用该 autocomplete。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>disabled</code> 选项的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({ disabled: true });
+	</pre>
+	<p>在初始化后，获取或设置 <code>disabled</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var disabled = $( ".selector" ).autocomplete( "option", "disabled" );
+ 
+// setter
+$( ".selector" ).autocomplete( "option", "disabled", true );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-minLength">
+	<td>minLength</td>
+    <td>Integer</td>
+	<td>执行搜索前用户必须输入的最小字符数。对于仅带有几项条目的本地数据，通常设置为零，但是当单个字符搜索会匹配几千项条目时，设置个高数值是很有必要的。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>minLength</code> 选项的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({ minLength: 0 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>minLength</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var minLength = $( ".selector" ).autocomplete( "option", "minLength" );
+ 
+// setter
+$( ".selector" ).autocomplete( "option", "minLength", 0 );
+	</pre>
+	</td>
+	<td>1</td>
+</tr>
+<tr id="option-position">
+	<td>position</td>
+    <td>Object</td>
+	<td>标识建议菜单的位置与相关的 input 元素有关系。<code>of</code> 选项默认为 input 元素，但是您可以指定另一个定位元素。如需了解各种选项的更多细节，请查看 <a href="/jqueryui/api-position.html"> jQuery UI 定位（Position）</a>。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>position</code> 选项的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({ position: { my : "right top", at: "right bottom" } });
+	</pre>
+	<p>在初始化后，获取或设置 <code>position</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var position = $( ".selector" ).autocomplete( "option", "position" );
+ 
+// setter
+$( ".selector" ).autocomplete( "option", "position", { my : "right top", at: "right bottom" } );
+	</pre>
+	</td>
+	<td>{ my: "left top", at: "left bottom", collision: "none" }</td>
+</tr>
+<tr id="option-source">
+	<td>source</td>
+    <td>Array 或 String 或 Function( Object request, Function response( Object data ) )</td>
+	<td>定义要使用的数据，必须指定。<br />
+	<p>独立于您要使用的变量，标签总是被视为文本。如果您想要标签被视为 html，您可以使用 <a href="https://github.com/scottgonzalez/jquery-ui-extensions/blob/master/src/autocomplete/jquery.ui.autocomplete.html.js" target="_blank">Scott González' html 扩展</a>。演示侧重于 <code>source</code> 选项的不同变量 - 您可以查找其中匹配您的使用情况的那个，并查看相关代码。</p>
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+		<li><strong>Array</strong>：可用于本地数据的一个数组。支持两种格式：
+		<ul>
+			<li>字符串数组：<code>[ "Choice1", "Choice2" ]</code></li>
+			<li>带有 <code>label</code> 和 <code>value</code> 属性的对象数组：<code>[ { label: "Choice1", value: "value1" }, ... ]</code></li>
+		</ul>
+		label 属性显示在建议菜单中。当用户选择一个条目时，value 将被插入到 input 元素中。如果只是指定了一个属性，则该属性将被视为 label 和 value，例如，如果您只提供了 <code>value</code> 属性，value 也会被视为标签。
+		</li>
+		<li><strong>String</strong>：当使用一个字符串，Autocomplete 插件希望该字符串指向一个能返回 JSON 数据的 URL 资源。它可以是在相同的主机上，也可以是在不同的主机上（必须提供 JSONP）。Autocomplete 插件不过滤结果，而是通过一个 <code>term</code> 字段添加了一个查询字符串，用于服务器端脚本过滤结果。例如，如果 <code>source</code> 选项设置为 <code>"http://example.com"</code>，且用户键入了 <code>foo</code>，GET 请求则为 <code>http://example.com?term=foo</code>。数据本身的格式可以与前面描述的本地数据的格式相同。</li>
+		<li><strong>Function</strong>：第三个变量，一个回调函数，提供最大的灵活性，可用于连接任何数据源到 Autocomplete。回调函数接受两个参数：
+		<ul>
+			<li>一个 <code>request</code> 对象，带有一个 <code>term</code> 属性，表示当前文本输入中的值。例如，如果用户在 city 字段输入 <code>"new yo"</code>，则 Autocomplete term 等同于 <code>"new yo"</code>。</li>
+			<li>一个 <code>response</code> 回调函数，提供单个参数：建议给用户的数据。该数据应基于被提供的 term 进行过滤，且可以是上面描述的本地数据的任何格式。用于在请求期间提供自定义 source 回调来处理错误。即使遇到错误，您也必须调用 <code>response</code> 回调函数。这就确保了小部件总是正确的状态。</li>
+		</ul>
+		<p>当过滤本地数据时，您可以使用内置的 <code>$.ui.autocomplete.escapeRegex</code> 函数。它会接受一个字符串参数，转义所有的正则表达式字符，让结果安全地传递到 <code>new RegExp()</code>。</p>
+		</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>source</code> 选项的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({ source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ] });
+	</pre>
+	<p>在初始化后，获取或设置 <code>source</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var source = $( ".selector" ).autocomplete( "option", "source" );
+ 
+// setter
+$( ".selector" ).autocomplete( "option", "source", [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ] );
+	</pre>
+	</td>
+	<td>none; must be specified</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate" id="methods">
+<tr>
+	<th width="15%">方法</th>
+	<th width="15%">返回</th>
+    <th width="70%">描述</th>
+</tr>
+<tr id="method-close">
+	<td>close()</td>
+    <td>jQuery (plugin only)</td>
+	<td>关闭 Autocomplete 菜单。当与 <code><a href="#method-search" target="_blank">search</a></code> 方法结合使用时，可用于关闭打开的菜单。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 close 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete( "close" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-destroy">
+	<td>destroy()</td>
+    <td>jQuery (plugin only)</td>
+	<td>完全移除 autocomplete 功能。这会把元素返回到它的预初始化状态。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 destroy 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete( "destroy" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-disable">
+	<td>disable()</td>
+    <td>jQuery (plugin only)</td>
+	<td>禁用 autocomplete。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 disable 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete( "disable" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-enable">
+	<td>enable()</td>
+    <td>jQuery (plugin only)</td>
+	<td>启用 autocomplete。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 enable 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete( "enable" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-option">
+	<td>option( optionName )</td>
+    <td>Object</td>
+	<td>获取当前与指定的 <code>optionName</code> 关联的值。<br />
+	<ul>
+	<li><strong>optionName</strong><br />
+	类型：String<br />
+	描述：要获取的选项的名称。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+var isDisabled = $( ".selector" ).autocomplete( "option", "disabled" );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option()</td>
+    <td>PlainObject</td>
+	<td>获取一个包含键/值对的对象，键/值对表示当前 autocomplete 选项哈希。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+var options = $( ".selector" ).autocomplete( "option" );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option( optionName, value )</td>
+    <td>jQuery (plugin only)</td>
+	<td>设置与指定的 <code>optionName</code> 关联的 autocomplete 选项的值。<br />
+	<ul>
+	<li><strong>optionName</strong><br />
+	类型：String<br />
+	描述：要设置的选项的名称。
+	</li>
+	<li><strong>value</strong><br />
+	类型：Object<br />
+	描述：要为选项设置的值。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete( "option", "disabled", true );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option( options )</td>
+    <td>jQuery (plugin only)</td>
+	<td>为 autocomplete 设置一个或多个选项。<br />
+	<ul>
+	<li><strong>options</strong><br />
+	类型：Object<br />
+	描述：要设置的 option-value 对。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete( "option", { disabled: true } );
+	</pre>
+	</td>
+</tr>
+<tr id="method-search">
+	<td>search( [value ] )</td>
+    <td>jQuery (plugin only)</td>
+	<td>触发 <a href="#event-search"><code>search</code></a> 事件，如果该事件未被取消则调用数据源。当被点击时，可被类似选择框按钮用来打开建议。当不带参数调用该方法时，则使用当前输入的值。可带一个空字符串和 <code>minLength: 0</code> 进行调用，来显示所有的条目。<br />
+	<ul>
+	<li><strong>value</strong><br />
+	类型：String
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 search 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete( "search", "" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-widget">
+	<td>widget()</td>
+    <td>jQuery</td>
+	<td>返回一个包含菜单元素的 <code>jQuery</code> 对象。虽然菜单项不断地被创建和销毁。菜单元素本身会在初始化时创建，并不断的重复使用。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 widget 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete( "widget" );
+	</pre>
+	</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate" id="extension-points">
+<tr>
+	<th width="15%">扩展点</th>
+	<th width="15%">返回</th>
+    <th width="70%">描述</th>
+</tr>
+<tr>
+	<td colspan="3">
+	自动完成部件（Autocomplete Widget）通过 <a href="/jqueryui/api-jQuery-widget.html">部件库（Widget Factory）</a> 创建的，且可被扩展。当对部件进行扩展时，您可以重载或者添加扩展部件的行为。下面提供的方法作为扩展点，与上面列出的 <a href="#methods">插件方法</a> 具有相同的 API 稳定性。如需了解更多有关小部件扩展的知识，请查看 <a href="/jqueryui/jqueryui-widget-extend.html">通过部件库（Widget Factory）扩展小部件</a>.
+	</td>
+</tr>
+<tr id="method-_renderItem">
+	<td>_renderItem( ul, item )</td>
+    <td>jQuery</td>
+	<td>Method that controls the creation of each option in the widget's menu. The method must create a new <code>&lt;li&gt;</code> element, append it to the menu, and return it.<br />
+	<p><em>Note: At this time the<code>&lt;ul&gt;</code> element created must contain an <code>&lt;a&gt;</code> element for compatibility with the <a href="/menu/">menu</a> widget. See the example below.</em></p>
+	<ul>
+	<li><strong>ul</strong><br />
+	类型：jQuery<br />
+	描述：新创建的 <code>&lt;li&gt;</code> 元素必须追加到的 <code>&lt;ul&gt;</code> 元素。
+	</li>
+	<li><strong>item</strong><br />
+	类型：Object<br />
+		<ul>
+		<li><strong>label</strong><br />
+		类型：String<br />
+		描述：条目显示的字符串。
+		</li>
+		<li><strong>item</strong><br />
+		类型：String<br />
+		描述：当条目被选中时插入到输入框中的值。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>添加条目的值作为 <code>&lt;li&gt;</code> 上的 data 属性。</p>
+	<pre style="white-space: pre-wrap;">
+_renderItem: function( ul, item ) {
+  return $( "&lt;li&gt;" )
+    .attr( "data-value", item.value )
+    .append( $( "&lt;a&gt;" ).text( item.label ) )
+    .appendTo( ul );
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_renderMenu">
+	<td>_renderMenu( ul, items )</td>
+    <td>jQuery (plugin only)</td>
+	<td>该方法负责在菜单显示前调整菜单尺寸。菜单元素可通过 <code>this.menu.element</code> 使用。<br />
+	<ul>
+	<li><strong>ul</strong><br />
+	类型：jQuery<br />
+	描述：一个要作为小部件的菜单使用的空的 <code>&lt;ul&gt;</code> 元素。
+	</li>
+	<li><strong>items</strong><br />
+	类型：Array<br />
+	描述：一个数组，数组元素为匹配用户输入的条目。每个条目是一个带有 <code>label</code> 和 <code>value</code> 属性的对象。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>添加一个 CSS class 名称到旧的菜单项。</p>
+	<pre style="white-space: pre-wrap;">
+_renderMenu: function( ul, items ) {
+  var that = this;
+  $.each( items, function( index, item ) {
+    that._renderItemData( ul, item );
+  });
+  $( ul ).find( "li:odd" ).addClass( "odd" );
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_resizeMenu">
+	<td>_resizeMenu()</td>
+    <td>jQuery (plugin only)</td>
+	<td>该方法负责在菜单显示前调整菜单尺寸。菜单元素可通过 <code>this.menu.element</code> 使用。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>菜单总是显示为 500 像素宽。</p>
+	<pre style="white-space: pre-wrap;">
+_resizeMenu: function() {
+  this.menu.element.outerWidth( 500 );
+}
+	</pre>
+	</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate" id="events">
+<tr>
+	<th width="15%">事件</th>
+	<th width="15%">类型</th>
+    <th width="70%">描述</th>
+</tr>
+<tr id="event-change">
+	<td>change( event, ui )</td>
+	<td>autocompletechange</td>
+	<td>如果输入域的值改变则触发该事件。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+		<ul>
+		<li><strong>item</strong><br />
+		类型：Object<br />
+		描述：从菜单中选择的条目，否则属性为 <code>null</code>。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 change 回调的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({
+  change: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 autocompletechange 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "autocompletechange", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-close">
+	<td>close( event, ui )</td>
+    <td>autocompleteclose</td>
+	<td>当菜单隐藏时触发。不是每一个 <code>close</code> 事件都伴随着 <code>change</code> 事件。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+	</li>
+	</ul>
+	<p>注意：<code>ui</code> 对象是空的，这里包含它是为了与其他事件保持一致性。</p>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 close 回调的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({
+  close: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 autocompleteclose 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "autocompleteclose", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-create">
+	<td>create( event, ui )</td>
+    <td>autocompletecreate</td>
+	<td>当创建 autocomplete 时触发。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+	</li>
+	</ul>
+	<p>注意：<code>ui</code> 对象是空的，这里包含它是为了与其他事件保持一致性。</p>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 create 回调的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({
+  create: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 autocompletecreate 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "autocompletecreate", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-focus">
+	<td>focus( event, ui )</td>
+    <td>autocompletefocus</td>
+	<td>当焦点移动到一个条目上（未选择）时触发。默认的动作是把文本域中的值替换为获得焦点的条目的值，即使该事件是通过键盘交互触发的。取消该事件会阻止值被更新，但不会阻止菜单项获得焦点。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+		<ul>
+		<li><strong>item</strong><br />
+		类型：Object<br />
+		描述：获得焦点的条目。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 focus 回调的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({
+  focus: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 autocompletefocus 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "autocompletefocus", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-open">
+	<td>open( event, ui )</td>
+    <td>autocompleteopen</td>
+	<td>当打开建议菜单或者更新建议菜单时触发。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+	</li>
+	</ul>
+	<p>注意：<code>ui</code> 对象是空的，这里包含它是为了与其他事件保持一致性。</p>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 open 回调的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({
+  open: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 autocompleteopen 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "autocompleteopen", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-response">
+	<td>response( event, ui )</td>
+    <td>autocompleteresponse</td>
+	<td>在搜索完成后菜单显示前触发。用于建议数据的本地操作，其中自定义的 <a href="#option-source"><code>source</code></a> 选项回调不是必需的。该事件总是在搜索完成时触发，如果搜索无结果或者禁用了 Autocomplete，导致菜单未显示，该事件一样会被触发。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+		<ul>
+		<li><strong>content</strong><br />
+		类型：Array<br />
+		描述：包含响应数据，且可被修改来改变显示结果。该数据已经标准化，所以如果您要修改数据，请确保每个条目都包含 <code>value</code> 和 <code>label</code> 属性。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 response 回调的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({
+  response: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 autocompleteresponse 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "autocompleteresponse", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-search">
+	<td>search( event, ui )</td>
+    <td>autocompletesearch</td>
+	<td>在搜索执行前满足 <a href="#option-minLength"><code>minLength</code></a> 和 <a href="#option-delay"><code>delay</code></a> 后触发。如果取消该事件，则不会提交请求，也不会提供建议条目。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+	</li>
+	</ul>
+	<p>注意：<code>ui</code> 对象是空的，这里包含它是为了与其他事件保持一致性。</p>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 search 回调的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({
+  search: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 autocompletesearch 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "autocompletesearch", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-select">
+	<td>select( event, ui )</td>
+    <td>autocompleteselect</td>
+	<td>当从菜单中选择条目时触发。默认的动作是把文本域中的值替换为被选中的条目的值。取消该事件会阻止值被更新，但不会阻止菜单关闭。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+		<ul>
+		<li><strong>item</strong><br />
+		类型：Object<br />
+		描述：一个带有被选项的 <code>label</code> 和 <code>value</code> 属性的对象。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 select 回调的 autocomplete：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).autocomplete({
+  select: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 autocompleteselect 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "autocompleteselect", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+</table>
+
+<h2>实例</h2>
+<strong>实例 1：</strong>
+<p>一个简单的 jQuery UI 自动完成（Autocomplete）。</p>
+<pre style="white-space: pre-wrap;">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  
+  &lt;link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"&gt;
+  &lt;script src="//code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+  &lt;script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;label for="autocomplete"&gt;选择一个编程语言：&lt;/label&gt;
+&lt;input id="autocomplete"&gt;
+ 
+&lt;script&gt;
+$( "#autocomplete" ).autocomplete({
+  source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
+});
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p><a href="/try/tryit.php?filename=jqueryui-api-autocomplete" target="_blank"><button class="btn btn-info btn-lg">查看演示</button></a></p>
+
+<strong>实例 2：</strong>
+<p>使用自定义源回调来匹配条件的开始。</p>
+<pre style="white-space: pre-wrap;">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  
+  &lt;link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"&gt;
+  &lt;script src="//code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+  &lt;script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;label for="autocomplete"&gt;选择一个编程语言：&lt;/label&gt;
+&lt;input id="autocomplete"&gt;
+ 
+&lt;script&gt;
+var tags = [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ];
+$( "#autocomplete" ).autocomplete({
+  source: function( request, response ) {
+          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+          response( $.grep( tags, function( item ){
+              return matcher.test( item );
+          }) );
+      }
+});
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p><a href="/try/tryit.php?filename=jqueryui-api-autocomplete-1" target="_blank"><button class="btn btn-info btn-lg">查看演示</button></a></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/api-accordion.html" rel="prev"> jQuery UI API &#8211; 折叠面板部件（Accordion Widget）</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/api-button.html" rel="next">jQuery UI API &#8211; 按钮部件（Button Widget）</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.212 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 21:04:38 -->
+
+<!-- super cache -->

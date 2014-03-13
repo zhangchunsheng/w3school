@@ -1,0 +1,436 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>ASP.NET Web Pages 布局 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='HTML5 表单元素' href='http://www.w3cschool.cc/html/html5-form-elements.html' />
+<link rel='next' title='ASP.NET Web Pages 文件夹' href='http://www.w3cschool.cc/aspnet/webpages-folders.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/aspnet/webpages-layout.html' />
+<meta name="keywords" content="ASP.NET Web Pages 布局,ASP.NET 教程">
+<meta name="description" content="ASP.NET Web Pages - 页面布局   通过 Web Pages ，创建一个布局一致的网站是很容易的事。  一致的外观 在因特网上，您会发现很过网站都具有一致的外观和风格：  每个页面有相同的头部 	每个页面有相同的底部 	每个页面有相同的样式和布局  通过 Web Pages ，您能非常高效地做到这点。您可以把重复使用的内容块（比如页面头部和底部）写在一个单独的文件中。 您还可以使用布局模板（布局文件）为站点的所有网页定..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>ASP.NET 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-tutorial.html" >
+	ASP.NET 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet.html" >
+	ASP.NET 简介	</a>
+	<br><h2 class="left"><span class="left_h2">WP 教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-intro.html" >
+	WebPages 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-razor.html" >
+	WebPages Razor	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-layout.html" >
+	WebPages 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-folders.html" >
+	WebPages 文件夹	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-global.html" >
+	WebPages 全局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-forms.html" >
+	WebPages 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-objects.html" >
+	WebPages 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-files.html" >
+	WebPages 文件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-helpers.html" >
+	WebPages 帮助器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-webgrid.html" >
+	WebPages WebGrid	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-chart.html" >
+	WebPages 图表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-email.html" >
+	WebPages Email	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-php.html" >
+	WebPages PHP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-publish.html" >
+	WebPages 发布	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-examples.html" >
+	WebPages 实例	</a>
+	<br><h2 class="left"><span class="left_h2">WP 参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-ref-classes.html" >
+	WebPages 类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-ref-websecurity.html" >
+	WebPages 安全	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-ref-database.html" >
+	WebPages 数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-ref-webmail.html" >
+	WebPages 邮局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/webpages-ref-helpers.html" >
+	WebPages 帮助器	</a>
+	<br><h2 class="left"><span class="left_h2">ASP.NET Razor</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-intro.html" >
+	Razor 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-syntax.html" >
+	Razor 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-cs-variables.html" >
+	Razor C# 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-cs-loops.html" >
+	Razor C# 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-cs-logic.html" >
+	Razor C# 逻辑	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-vb-variables.html" >
+	Razor VB 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-vb-loops.html" >
+	Razor VB 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/razor-vb-logic.html" >
+	Razor VB 逻辑	</a>
+	<br><h2 class="left"><span class="left_h2">ASP.NET MVC</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-intro.html" >
+	MVC 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-app.html" >
+	MVC 应用程序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-folders.html" >
+	MVC 文件夹	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-layout.html" >
+	MVC 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-controllers.html" >
+	MVC 控制器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-views.html" >
+	MVC 视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-database.html" >
+	MVC 数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-models.html" >
+	MVC 模型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-security.html" >
+	MVC 安全	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-htmlhelpers.html" >
+	MVC HTML 帮助器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-publish.html" >
+	MVC 发布	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/mvc-reference.html" >
+	MVC 参考手册	</a>
+	<br><h2 class="left"><span class="left_h2">WF 教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-intro.html" >
+	WebForms 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-pages.html" >
+	WebForms 页面	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-controls.html" >
+	WebForms 控件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-events.html" >
+	WebForms 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-forms.html" >
+	WebForms 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-viewstate.html" >
+	WebForms ViewState	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-textbox.html" >
+	WebForms TextBox	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-button.html" >
+	WebForms Button	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-databinding.html" >
+	WebForms 数据绑定	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-arraylist.html" >
+	WebForms ArrayList	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-hashtable.html" >
+	WebForms Hashtable	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-sortedlist.html" >
+	WebForms SortedList	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-xml.html" >
+	WebForms XML 文件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-repeater.html" >
+	WebForms Repeater	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-datalist.html" >
+	WebForms DataList	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-dbconnection.html" >
+	WebForms 数据库连接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-masterpages.html" >
+	WebForms 母版页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-navigation.html" >
+	WebForms 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-examples.html" >
+	WebForms 实例	</a>
+	<br><h2 class="left"><span class="left_h2">WF 参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-ref-htmlcontrols.html" >
+	WebForms HTML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-ref-webcontrols.html" >
+	WebForms Controls	</a>
+		<a target="_top" href="http://www.w3cschool.cc/aspnet/aspnet-ref-validationcontrols.html" >
+	WebForms Validation	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/aspnet/webpages-razor.html" rel="prev"> ASP.NET Web Pages Razor</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/aspnet/webpages-folders.html" rel="next">ASP.NET Web Pages 文件夹</a> &raquo;</div>
+	</div>
+
+	<h1>ASP.NET Web Pages <span class="color_h1">- 页面布局</span>
+</h1>
+<hr />
+<p class="intro">通过 Web Pages ，创建一个布局一致的网站是很容易的事。</p>
+<hr />
+<h2>一致的外观</h2>
+<p>在因特网上，您会发现很过网站都具有一致的外观和风格：</p>
+<ul>
+<li>每个页面有相同的头部</li>
+	<li>每个页面有相同的底部</li>
+	<li>每个页面有相同的样式和布局</li>
+</ul>
+<p>通过 Web Pages ，您能非常高效地做到这点。您可以把重复使用的内容块（比如页面头部和底部）写在一个单独的文件中。</p>
+<p>您还可以使用布局模板（布局文件）为站点的所有网页定义一致的布局。</p>
+<hr />
+<h2>Content Blocks（内容块）</h2>
+<p>许多网站都有一些内容是被显示在站点的每个页面中（比如页面头部和底部）。</p>
+<p>通过 Web Pages，您可以使用 <b>@RenderPage()</b> 方法从不同的文件导入内容。</p>
+<p>内容块（来自另一个文件）能被导入网页中的任何地方。内容块可以包含文本，标记和代码，就像任何普通的网页一样。</p>
+<p>将共同的头部和底部写成单独的文件，这样会帮您节省大量的工作。您不必在每个页面中书写相同的内容，当内容有变动时，您只要修改头部或者底部文件，就可以看到站点中的每个页面的相应内容都已更新。</p>
+<p>以下显示了它在代码中是如何呈现的：</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+&lt;html&gt;<br />
+&lt;body&gt;<br /><span class="marked">@RenderPage("header.cshtml")</span><br />
+&lt;h1&gt;Hello Web Pages&lt;/h1&gt; <br />
+&lt;p&gt;This is a paragraph&lt;/p&gt;<br /><span class="marked">@RenderPage("footer.cshtml")</span><br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</div>
+<br /><a class="showbtn" href="/try/showfile_c.php?filename=try_webpages_cs_002" target="_blank">运行实例 »</a>
+</div>
+<br /><hr />
+<h2>Layout Page（布局页）</h2>
+<p>在上一部分，您看到了，想在多个网页中显示相同内容是非常容易的。</p>
+<p>另一种创建一致外观的方法是使用布局页。一个布局页包含了网页的结构，而不是内容。当一个网页（内容页）链接到布局页，它会根据布局页（模板）的结构进行显示。</p>
+<p>布局页中使用 <strong>@RenderBody()</strong> 方法嵌入内容页，除此之外，它与一个正常的网页没有什么差别。</p>
+<p>每个内容页都必须以<strong>布局指令</strong>开始。</p>
+<p>以下显示了它在代码中是如何呈现的：</p>
+
+<div class="example">
+<h2 class="example">布局页：</h2>
+<div class="example_code notranslate">
+&lt;html&gt;<br />&lt;body&gt;<br />&lt;p&gt;This is header text&lt;/p&gt;<br /><span class="marked">@RenderBody()</span><br />
+&lt;p&gt;&amp;copy; 2012 W3CSchool. All rights reserved.&lt;/p&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;
+</div>
+<br /><h2 class="example">任何网页：</h2>
+<div class="example_code notranslate">
+<span class="marked">@{Layout="Layout.cshtml";}</span><br /><br />&lt;h1&gt;Welcome to W3CSchool.cc&lt;/h1&gt;<br /><br />&lt;p&gt;<br />Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat.<br />&lt;/p&gt;
+</div>
+<br /><a class="showbtn" href="/try/showfile_c.php?filename=try_webpages_cs_011" target="_blank">运行实例 »</a>
+</div>
+<br /><hr />
+<h2>D.R.Y. - Don't Repeat Yourself（不要自我重复）</h2>
+<p>通过 Content Blocks（内容块）和 Layout Pages（布局页）这两个 ASP.NET 工具，您可以让您的 Web 应用程序显示一致的外观。</p>
+<p>这两个工具能帮您节省大量的工作，您不必再每个页面上重复相同的信息。集中的标记、样式和代码让您的 Web 应用程序更易于管理，更易于维护。</p>
+
+<hr />
+<h2>防止文件被浏览</h2>
+<p>在 ASP.NET 中，文件的名称以下划线开头，可以防止这些文件在网上被浏览。</p>
+<p>如果您不想让您的内容块或者布局页被您的用户看到，可以重命名这些文件：</p>
+<p>_header.cshtm</p>
+<p>_footer.cshtml</p>
+<p>_Layout.cshtml</p>
+
+<hr />
+<h2>隐藏敏感信息</h2>
+<p>在 ASP.NET 中，隐藏敏感信息（数据库密码、电子邮件密码等等）最通用的方法是将这些信息保存在一个名为"_AppStart"的单独的文件中。</p>
+<div class="example">
+<h2 class="example">_AppStart.cshtml</h2>
+<div class="example_code notranslate">
+@{<br />WebMail.SmtpServer = "mailserver.example.com";<br />
+WebMail.EnableSsl = true;<br />WebMail.UserName = "username@example.com";<br />
+WebMail.Password = "your-password";<br />WebMail.From = "your-name-here@example.com";<br />
+}
+</div>
+</div>
+<br /><br />	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/aspnet/webpages-razor.html" rel="prev"> ASP.NET Web Pages Razor</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/aspnet/webpages-folders.html" rel="next">ASP.NET Web Pages 文件夹</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.412 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 10:41:46 -->
+
+<!-- super cache -->

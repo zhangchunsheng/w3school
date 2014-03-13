@@ -1,0 +1,1330 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 颜色 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='CSS 单位' href='http://www.w3cschool.cc/cssref/css-units.html' />
+<link rel='next' title='CSS 合法颜色值' href='http://www.w3cschool.cc/cssref/css-colors-legal.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/cssref/css-colors.html' />
+<meta name="keywords" content="CSS 颜色,CSS 参考手册">
+<meta name="description" content="CSS 颜色    颜色是由红（RED），绿（GREEN），蓝（BLUE ）光线的显示结合。   颜色值   CSS中定义颜色使用十六进制（hex）表示法为红，绿，蓝的颜色值结合。可以是最低值是0（十六进制00）到最高值是255（十六进制FF） 3个双位数字的十六进制值写法，以＃符号开始。   Color Examples   Color     Color HEX     Color RGB           #000000    ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>CSS 参考手册</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css-reference.html" >
+	CSS 参考手册	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css-selectors.html" >
+	CSS 选择器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css-ref-aural.html" >
+	CSS 语音参考	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css-websafe-fonts.html" >
+	CSS Web安全字体	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css-units.html" >
+	CSS 单位	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css-colors.html" >
+	CSS 颜色	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css-colors-legal.html" >
+	CSS 合法颜色值	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css-colornames.html" >
+	CSS 颜色名称	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css-colorsfull.html" >
+	CSS 颜色十六进制值	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-browsersupport.html" >
+	CSS 浏览器支持	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-animation-keyframes.html" >
+	@keyframes	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-animation.html" >
+	CSS3 Animation	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-animation-name.html" >
+	CSS3 animation-name	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-animation-duration.html" >
+	CSS3 animation-duration	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-animation-timing-function.html" >
+	CSS3 animation-timing-function	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-animation-delay.html" >
+	CSS3 animation-delay	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-animation-iteration-count.html" >
+	CSS3 animation-iteration-count	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-animation-direction-%e5%b1%9e%e6%80%a7.html" >
+	CSS3 animation-direction	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-animation-play-state.html" >
+	CSS3 animation-play-state	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-appearance.html" >
+	CSS3 appearance	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-backface-visibility.html" >
+	CSS3 backface-visibility	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-background.html" >
+	CSS background	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-background-attachment.html" >
+	CSS background-attachment	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-background-color.html" >
+	CSS background-color	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-background-image.html" >
+	background-image	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-background-position.html" >
+	background-position	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-background-repeat.html" >
+	background-repeat	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-background-clip.html" >
+	background-clip	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-background-origin.html" >
+	background-origin	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-background-size.html" >
+	background-size	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border.html" >
+	border	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-bottom.html" >
+	border-bottom	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-bottom_color.html" >
+	border-bottom-color	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-bottom-style.html" >
+	border-bottom-style	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-bottom-width.html" >
+	border-bottom-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-collapse.html" >
+	border-collapse	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-color.html" >
+	border-color	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-left.html" >
+	Border-left	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-left-color.html" >
+	border-left-color	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-left-style.html" >
+	border-left-style	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-left-width.html" >
+	border-left-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-righ.html" >
+	border-right	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-right-color.html" >
+	border-right-color	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-right-style.html" >
+	border-right-style	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-right-width.html" >
+	border-right-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-spacing.html" >
+	border-spacing	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-style.html" >
+	border-style	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-top.html" >
+	border-top	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-top-color.html" >
+	border-top-color	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-top-style.html" >
+	border-top-style	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-top-width.html" >
+	border-top-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-border-width.html" >
+	border-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-bottom-left-radius.html" >
+	border-bottom-left-radius	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-bottom-right-radius.html" >
+	border-bottom-right-radius	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-image.html" >
+	border-image	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-image-outset.html" >
+	border-image-outset	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-image-repeat.html" >
+	border-image-repeat	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-image-slice.html" >
+	border-image-slice	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-image-source.html" >
+	border-image-source	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-image-width.html" >
+	border-image-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-radius.html" >
+	border-radius	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-top-left-radius.html" >
+	border-top-left-radius	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-border-top-right-radius.html" >
+	border-top-right-radius	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-pos-bottom.html" >
+	bottom	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-box-align.html" >
+	box-align	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-box-direction.html" >
+	box-direction	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-box-flex.html" >
+	box-flex	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-box-flex-group.html" >
+	box-flex-group	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-box-lines.html" >
+	box-lines	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-box-ordinal-group.html" >
+	box-ordinal-group	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-box-orient.html" >
+	box-orient	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-box-pack.html" >
+	box-pack	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-box-sizing.html" >
+	box-sizing	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-box-shadow.html" >
+	box-shadow	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-tab-caption-side.html" >
+	caption-side	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-class-clear.html" >
+	clear	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-pos-clip.html" >
+	clip	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-text-color.html" >
+	color	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-column-count.html" >
+	column-count	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-column-fill.html" >
+	column-fill	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-column-gap.html" >
+	column-gap	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-column-rule.html" >
+	column-rule	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-column-rule-color.html" >
+	column-rule-color	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-column-rule-style.html" >
+	column-rule-style	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-column-rule-width.html" >
+	column-rule-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-column-span.html" >
+	column-span	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-column-width.html" >
+	column-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-columns.html" >
+	columns	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-gen-content.html" >
+	Content	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-gen-counter-increment.html" >
+	counter-increment	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-gen-counter-reset.html" >
+	counter-reset	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-class-cursor.html" >
+	cursor	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-text-direction.html" >
+	direction	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-class-display.html" >
+	display	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-tab-empty-cellsp.html" >
+	empty-cells	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-class-float.html" >
+	float	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-font-font.html" >
+	font	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-font-font-family.html" >
+	font-family	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-font-font-size.html" >
+	font-size	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-font-font-style.html" >
+	font-style	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-font-font-variant.html" >
+	font-variant	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-font-weight.html" >
+	font-weight	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-font-face-rule.html" >
+	@font-face	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-font-size-adjust.html" >
+	font-size-adjust	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-font-stretch.html" >
+	font-stretch	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-grid-columns.html" >
+	grid-columns	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-grid-rows.html" >
+	grid-rows	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-hanging-punctuation.html" >
+	hanging-punctuation	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-dim-height.html" >
+	height	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-icon.html" >
+	icon	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-pos-left.html" >
+	left	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-text-letter-spacing.html" >
+	letter-spacing	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-dim-line-height.html" >
+	line-height	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-list-style.html" >
+	list-style	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-list-style-image.html" >
+	list-style-image	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-list-style-position.html" >
+	list-style-position	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-list-style-type.html" >
+	list-style-type	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-margin.html" >
+	margin	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-margin-bottom.html" >
+	margin-bottom	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-margin-left.html" >
+	margin-left	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-margin-right.html" >
+	margin-right	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-margin-top.html" >
+	margin-top	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-dim-max-height.html" >
+	max-height	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-dim-max-width.html" >
+	max-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-dim-min-height.html" >
+	min-height	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-dim-min-width.html" >
+	min-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-nav-down.html" >
+	nav-down	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-nav-index.html" >
+	nav-index	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr_nav-left.html" >
+	nav-left	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-nav-right.html" >
+	nav-right	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-nav-up.html" >
+	nav-up	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-opacity.html" >
+	opacity	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-outline.html" >
+	Outline	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-outline-color.html" >
+	outline-color	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-outline-offset.html" >
+	outline-offset	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-outline-style.html" >
+	outline-style	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-outline-width.html" >
+	outline-width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-pos-overflow.html" >
+	overflow	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-overflow-x.html" >
+	overflow-x	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-overflow-y.html" >
+	overflow-y	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-padding.html" >
+	padding	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-padding-bottom.html" >
+	padding-bottom	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-padding-left.html" >
+	padding-left	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-padding-right.html" >
+	padding-right	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-padding-top.html" >
+	padding-top	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-print-pageba.html" >
+	page-break-after	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-print-pagebb.html" >
+	page-break-before	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-print-pagebi.html" >
+	page-break-inside	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-perspective.html" >
+	perspective	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-perspective-origin.html" >
+	perspective-origin	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-class-position.html" >
+	position	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-punctuation-trim.html" >
+	punctuation-trim	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-gen-quotes.html" >
+	quotes	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-resize.html" >
+	resize	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-pos_right.html" >
+	right	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-rotation.html" >
+	rotation	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-tab-table-layout.html" >
+	table-layout	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-target.html" >
+	target	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-target-name.html" >
+	target-name	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-target-new.html" >
+	target-new	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-target-position.html" >
+	target-position	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-text-text-align.html" >
+	text-align	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-text-text-decoration.html" >
+	text-decoration	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-text-text-indent.html" >
+	text-indent	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-text-justify.html" >
+	text-justify	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-text-outline.html" >
+	text-outline	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-text-overflow.html" >
+	text-overflow	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-text-shadow.html" >
+	text-shadow	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-text-text-transform.html" >
+	text-transform	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-text-wrap.html" >
+	text-wrap	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-pos-top.html" >
+	top	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-transform.html" >
+	transform	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-transform-origin.html" >
+	transform-origin	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-transform-style.html" >
+	transform-style	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-transition.html" >
+	transition	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-transition-property.html" >
+	transition-property	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-transition-duration.html" >
+	transition-duration	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-transition-timing-function.html" >
+	transition-timing-function	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-transition-delay.html" >
+	transition-delay	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-pos-vertical-align.html" >
+	vertical-align	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-class-visibility.html" >
+	visibility	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-dim-width.html" >
+	width	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-text-white-space.html" >
+	white-space	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-text-word-spacing.html" >
+	word-spacing	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-word-break.html" >
+	word-break	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/css3-pr-word-wrap.html" >
+	word-wrap	</a>
+		<a target="_top" href="http://www.w3cschool.cc/cssref/pr-pos-z-index.html" >
+	z-index	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/cssref/css-units.html" rel="prev"> CSS 单位</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/cssref/css-colors-legal.html" rel="next">CSS 合法颜色值</a> &raquo;</div>
+	</div>
+
+	<h1>CSS <span class="color_h1">颜色</span>
+</h1>
+<hr />
+<p class="intro">
+颜色是由红（RED），绿（GREEN），蓝（BLUE ）光线的显示结合。</p>
+
+<hr />
+<h2>颜色值
+</h2>
+
+<p>CSS中定义颜色使用十六进制（hex）表示法为红，绿，蓝的颜色值结合。可以是最低值是0（十六进制00）到最高值是255（十六进制FF）</p>
+<p>3个双位数字的十六进制值写法，以＃符号开始。</p>
+
+<div class="example">
+<h2 class="example">Color Examples</h2>
+<table class="reference notranslate">
+<tr>
+<th width="50%">Color</th>
+    <th width="25%">Color HEX</th>
+    <th width="25%">Color RGB</th>
+  </tr>
+<tr>
+<td bgcolor="#000000"> </td>
+    <td>#000000</td>
+    <td>rgb(0,0,0)</td>
+  </tr>
+<tr>
+<td bgcolor="#FF0000"> </td>
+    <td>#FF0000</td>
+    <td>rgb(255,0,0)</td>
+  </tr>
+<tr>
+<td bgcolor="#00FF00"> </td>
+    <td>#00FF00</td>
+    <td>rgb(0,255,0)</td>
+  </tr>
+<tr>
+<td bgcolor="#0000FF"> </td>
+    <td>#0000FF</td>
+    <td>rgb(0,0,255)</td>
+  </tr>
+<tr>
+<td bgcolor="#FFFF00"> </td>
+    <td>#FFFF00</td>
+    <td>rgb(255,255,0)</td>
+  </tr>
+<tr>
+<td bgcolor="#00FFFF"> </td>
+    <td>#00FFFF</td>
+    <td>rgb(0,255,255)</td>
+  </tr>
+<tr>
+<td bgcolor="#FF00FF"> </td>
+    <td>#FF00FF</td>
+    <td>rgb(255,0,255)</td>
+  </tr>
+<tr>
+<td bgcolor="#C0C0C0"> </td>
+    <td>#C0C0C0</td>
+    <td>rgb(192,192,192)</td>
+  </tr>
+<tr>
+<td bgcolor="#FFFFFF"> </td>
+    <td>#FFFFFF</td>
+    <td>rgb(255,255,255)</td>
+  </tr>
+</table>
+<br /><a target="_blank" href="/try/try.php?filename=trycss_colorhex" class="tryitbtn">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>16万个不同的颜色</h2>
+<p>红，绿，蓝值从0到255的结合，给出了总额超过16万不同的颜色（256 × 256 ×256）。</p>
+<p>现代大多数显示器能够显示至少16384种颜色。</p>
+<p>如果你看看下面的颜色表，你会看到从0到255不同的红灯颜色。</p>
+<p>要看到充满色彩混合时红灯从0到255变化，单击十六进制或RGB值。</p>
+<table class="reference">
+<tbody>
+<tr>
+<th align="left" width="50%">红光</th>
+<th align="left" width="20%">16进制值</th>
+<th align="left" width="30%">RGB</th>
+</tr>
+<tr>
+<td bgcolor="#000000"></td>
+<td>#000000</td>
+<td>rgb(0,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#080000"></td>
+<td>#080000</td>
+<td>rgb(8,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#100000"></td>
+<td>#100000</td>
+<td>rgb(16,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#180000"></td>
+<td>#180000</td>
+<td>rgb(24,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#200000"></td>
+<td>#200000</td>
+<td>rgb(32,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#280000"></td>
+<td>#280000</td>
+<td>rgb(40,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#300000"></td>
+<td>#300000</td>
+<td>rgb(48,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#380000"></td>
+<td>#380000</td>
+<td>rgb(56,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#400000"></td>
+<td>#400000</td>
+<td>rgb(64,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#480000"></td>
+<td>#480000</td>
+<td>rgb(72,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#500000"></td>
+<td>#500000</td>
+<td>rgb(80,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#580000"></td>
+<td>#580000</td>
+<td>rgb(88,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#600000"></td>
+<td>#600000</td>
+<td>rgb(96,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#680000"></td>
+<td>#680000</td>
+<td>rgb(104,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#700000"></td>
+<td>#700000</td>
+<td>rgb(112,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#780000"></td>
+<td>#780000</td>
+<td>rgb(120,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#800000"></td>
+<td>#800000</td>
+<td>rgb(128,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#880000"></td>
+<td>#880000</td>
+<td>rgb(136,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#900000"></td>
+<td>#900000</td>
+<td>rgb(144,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#980000"></td>
+<td>#980000</td>
+<td>rgb(152,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#A00000"></td>
+<td>#A00000</td>
+<td>rgb(160,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#A80000"></td>
+<td>#A80000</td>
+<td>rgb(168,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#B00000"></td>
+<td>#B00000</td>
+<td>rgb(176,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#B80000"></td>
+<td>#B80000</td>
+<td>rgb(184,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#C00000"></td>
+<td>#C00000</td>
+<td>rgb(192,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#C80000"></td>
+<td>#C80000</td>
+<td>rgb(200,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#D00000"></td>
+<td>#D00000</td>
+<td>rgb(208,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#D80000"></td>
+<td>#D80000</td>
+<td>rgb(216,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#E00000"></td>
+<td>#E00000</td>
+<td>rgb(224,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#E80000"></td>
+<td>#E80000</td>
+<td>rgb(232,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#F00000"></td>
+<td>#F00000</td>
+<td>rgb(240,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#F80000"></td>
+<td>#F80000</td>
+<td>rgb(248,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#FF0000"></td>
+<td>#FF0000</td>
+<td>rgb(255,0,0)</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2>灰阶</h2>
+灰阶代表了由最暗到最亮之间不同亮度的层次级别,为了使您更容易选择合适的灰色，我们已编制了灰色色调的表：
+<table class="reference">
+<tbody>
+<tr>
+<th align="left" width="50%">Gray Shades</th>
+<th align="left" width="20%">HEX</th>
+<th align="left" width="30%">RGB</th>
+</tr>
+<tr>
+<td bgcolor="#000000" width="50%"></td>
+<td width="20%">#000000</td>
+<td width="30%">rgb(0,0,0)</td>
+</tr>
+<tr>
+<td bgcolor="#080808" width="50%"></td>
+<td width="20%">#080808</td>
+<td width="30%">rgb(8,8,8)</td>
+</tr>
+<tr>
+<td bgcolor="#101010" width="50%"></td>
+<td width="20%">#101010</td>
+<td width="30%">rgb(16,16,16)</td>
+</tr>
+<tr>
+<td bgcolor="#181818" width="50%"></td>
+<td width="20%">#181818</td>
+<td width="30%">rgb(24,24,24)</td>
+</tr>
+<tr>
+<td bgcolor="#202020" width="50%"></td>
+<td width="20%">#202020</td>
+<td width="30%">rgb(32,32,32)</td>
+</tr>
+<tr>
+<td bgcolor="#282828" width="50%"></td>
+<td width="20%">#282828</td>
+<td width="30%">rgb(40,40,40)</td>
+</tr>
+<tr>
+<td bgcolor="#303030" width="50%"></td>
+<td width="20%">#303030</td>
+<td width="30%">rgb(48,48,48)</td>
+</tr>
+<tr>
+<td bgcolor="#383838" width="50%"></td>
+<td width="20%">#383838</td>
+<td width="30%">rgb(56,56,56)</td>
+</tr>
+<tr>
+<td bgcolor="#404040" width="50%"></td>
+<td width="20%">#404040</td>
+<td width="30%">rgb(64,64,64)</td>
+</tr>
+<tr>
+<td bgcolor="#484848" width="50%"></td>
+<td width="20%">#484848</td>
+<td width="30%">rgb(72,72,72)</td>
+</tr>
+<tr>
+<td bgcolor="#505050" width="50%"></td>
+<td width="20%">#505050</td>
+<td width="30%">rgb(80,80,80)</td>
+</tr>
+<tr>
+<td bgcolor="#585858" width="50%"></td>
+<td width="20%">#585858</td>
+<td width="30%">rgb(88,88,88)</td>
+</tr>
+<tr>
+<td bgcolor="#606060" width="50%"></td>
+<td width="20%">#606060</td>
+<td width="30%">rgb(96,96,96)</td>
+</tr>
+<tr>
+<td bgcolor="#686868" width="50%"></td>
+<td width="20%">#686868</td>
+<td width="30%">rgb(104,104,104)</td>
+</tr>
+<tr>
+<td bgcolor="#707070" width="50%"></td>
+<td width="20%">#707070</td>
+<td width="30%">rgb(112,112,112)</td>
+</tr>
+<tr>
+<td bgcolor="#787878" width="50%"></td>
+<td width="20%">#787878</td>
+<td width="30%">rgb(120,120,120)</td>
+</tr>
+<tr>
+<td bgcolor="#808080" width="50%"></td>
+<td width="20%">#808080</td>
+<td width="30%">rgb(128,128,128)</td>
+</tr>
+<tr>
+<td bgcolor="#888888" width="50%"></td>
+<td width="20%">#888888</td>
+<td width="30%">rgb(136,136,136)</td>
+</tr>
+<tr>
+<td bgcolor="#909090" width="50%"></td>
+<td width="20%">#909090</td>
+<td width="30%">rgb(144,144,144)</td>
+</tr>
+<tr>
+<td bgcolor="#989898" width="50%"></td>
+<td width="20%">#989898</td>
+<td width="30%">rgb(152,152,152)</td>
+</tr>
+<tr>
+<td bgcolor="#A0A0A0" width="50%"></td>
+<td width="20%">#A0A0A0</td>
+<td width="30%">rgb(160,160,160)</td>
+</tr>
+<tr>
+<td bgcolor="#A8A8A8" width="50%"></td>
+<td width="20%">#A8A8A8</td>
+<td width="30%">rgb(168,168,168)</td>
+</tr>
+<tr>
+<td bgcolor="#B0B0B0" width="50%"></td>
+<td width="20%">#B0B0B0</td>
+<td width="30%">rgb(176,176,176)</td>
+</tr>
+<tr>
+<td bgcolor="#B8B8B8" width="50%"></td>
+<td width="20%">#B8B8B8</td>
+<td width="30%">rgb(184,184,184)</td>
+</tr>
+<tr>
+<td bgcolor="#C0C0C0" width="50%"></td>
+<td width="20%">#C0C0C0</td>
+<td width="30%">rgb(192,192,192)</td>
+</tr>
+<tr>
+<td bgcolor="#C8C8C8" width="50%"></td>
+<td width="20%">#C8C8C8</td>
+<td width="30%">rgb(200,200,200)</td>
+</tr>
+<tr>
+<td bgcolor="#D0D0D0" width="50%"></td>
+<td width="20%">#D0D0D0</td>
+<td width="30%">rgb(208,208,208)</td>
+</tr>
+<tr>
+<td bgcolor="#D8D8D8" width="50%"></td>
+<td width="20%">#D8D8D8</td>
+<td width="30%">rgb(216,216,216)</td>
+</tr>
+<tr>
+<td bgcolor="#E0E0E0" width="50%"></td>
+<td width="20%">#E0E0E0</td>
+<td width="30%">rgb(224,224,224)</td>
+</tr>
+<tr>
+<td bgcolor="#E8E8E8" width="50%"></td>
+<td width="20%">#E8E8E8</td>
+<td width="30%">rgb(232,232,232)</td>
+</tr>
+<tr>
+<td bgcolor="#F0F0F0" width="50%"></td>
+<td width="20%">#F0F0F0</td>
+<td width="30%">rgb(240,240,240)</td>
+</tr>
+<tr>
+<td bgcolor="#F8F8F8" width="50%"></td>
+<td width="20%">#F8F8F8</td>
+<td width="30%">rgb(248,248,248)</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="50%"></td>
+<td width="20%">#FFFFFF</td>
+<td width="30%">rgb(255,255,255)</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2>网络安全色?</h2>
+<p>若干年前，当计算机支持最大256个不同的颜色，一个216"网络安全颜色"列表被建议作为Web标准，保留了40个固定的系统颜色。</p>
+
+<p>这在现在看来不是很重要，因为大多数计算机可以显示数百万种不同的色彩，但选择是留给你。</p>
+
+<p>跨浏览器的调色板创建，以确保所有的计算机将显示正确的颜色，运行一个256色调色板：</p>
+<table class="reference notranslate">
+<tbody>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#000000">000000</td>
+<td style="color: #ffffff;" align="center" bgcolor="#000033">000033</td>
+<td style="color: #ffffff;" align="center" bgcolor="#000066">000066</td>
+<td style="color: #ffffff;" align="center" bgcolor="#000099">000099</td>
+<td style="color: #ffffff;" align="center" bgcolor="#0000cc">0000CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#0000ff">0000FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#003300">003300</td>
+<td style="color: #ffffff;" align="center" bgcolor="#003333">003333</td>
+<td style="color: #ffffff;" align="center" bgcolor="#003366">003366</td>
+<td style="color: #ffffff;" align="center" bgcolor="#003399">003399</td>
+<td style="color: #ffffff;" align="center" bgcolor="#0033cc">0033CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#0033ff">0033FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#006600">006600</td>
+<td style="color: #ffffff;" align="center" bgcolor="#006633">006633</td>
+<td style="color: #ffffff;" align="center" bgcolor="#006666">006666</td>
+<td style="color: #ffffff;" align="center" bgcolor="#006699">006699</td>
+<td style="color: #ffffff;" align="center" bgcolor="#0066cc">0066CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#0066ff">0066FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#009900">009900</td>
+<td align="center" bgcolor="#009933">009933</td>
+<td align="center" bgcolor="#009966">009966</td>
+<td align="center" bgcolor="#009999">009999</td>
+<td align="center" bgcolor="#0099cc">0099CC</td>
+<td align="center" bgcolor="#0099ff">0099FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#00cc00">00CC00</td>
+<td align="center" bgcolor="#00cc33">00CC33</td>
+<td align="center" bgcolor="#00cc66">00CC66</td>
+<td align="center" bgcolor="#00cc99">00CC99</td>
+<td align="center" bgcolor="#00cccc">00CCCC</td>
+<td align="center" bgcolor="#00ccff">00CCFF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#00ff00">00FF00</td>
+<td align="center" bgcolor="#00ff33">00FF33</td>
+<td align="center" bgcolor="#00ff66">00FF66</td>
+<td align="center" bgcolor="#00ff99">00FF99</td>
+<td align="center" bgcolor="#00ffcc">00FFCC</td>
+<td align="center" bgcolor="#00ffff">00FFFF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#330000">330000</td>
+<td style="color: #ffffff;" align="center" bgcolor="#330033">330033</td>
+<td style="color: #ffffff;" align="center" bgcolor="#330066">330066</td>
+<td style="color: #ffffff;" align="center" bgcolor="#330099">330099</td>
+<td style="color: #ffffff;" align="center" bgcolor="#3300cc">3300CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#3300ff">3300FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#333300">333300</td>
+<td style="color: #ffffff;" align="center" bgcolor="#333333">333333</td>
+<td style="color: #ffffff;" align="center" bgcolor="#333366">333366</td>
+<td style="color: #ffffff;" align="center" bgcolor="#333399">333399</td>
+<td style="color: #ffffff;" align="center" bgcolor="#3333cc">3333CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#3333ff">3333FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#336600">336600</td>
+<td style="color: #ffffff;" align="center" bgcolor="#336633">336633</td>
+<td style="color: #ffffff;" align="center" bgcolor="#336666">336666</td>
+<td style="color: #ffffff;" align="center" bgcolor="#336699">336699</td>
+<td style="color: #ffffff;" align="center" bgcolor="#3366cc">3366CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#3366ff">3366FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#339900">339900</td>
+<td align="center" bgcolor="#339933">339933</td>
+<td align="center" bgcolor="#339966">339966</td>
+<td align="center" bgcolor="#339999">339999</td>
+<td align="center" bgcolor="#3399cc">3399CC</td>
+<td align="center" bgcolor="#3399ff">3399FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#33cc00">33CC00</td>
+<td align="center" bgcolor="#33cc33">33CC33</td>
+<td align="center" bgcolor="#33cc66">33CC66</td>
+<td align="center" bgcolor="#33cc99">33CC99</td>
+<td align="center" bgcolor="#33cccc">33CCCC</td>
+<td align="center" bgcolor="#33ccff">33CCFF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#33ff00">33FF00</td>
+<td align="center" bgcolor="#33ff33">33FF33</td>
+<td align="center" bgcolor="#33ff66">33FF66</td>
+<td align="center" bgcolor="#33ff99">33FF99</td>
+<td align="center" bgcolor="#33ffcc">33FFCC</td>
+<td align="center" bgcolor="#33ffff">33FFFF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#660000">660000</td>
+<td style="color: #ffffff;" align="center" bgcolor="#660033">660033</td>
+<td style="color: #ffffff;" align="center" bgcolor="#660066">660066</td>
+<td style="color: #ffffff;" align="center" bgcolor="#660099">660099</td>
+<td style="color: #ffffff;" align="center" bgcolor="#6600cc">6600CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#6600ff">6600FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#663300">663300</td>
+<td style="color: #ffffff;" align="center" bgcolor="#663333">663333</td>
+<td style="color: #ffffff;" align="center" bgcolor="#663366">663366</td>
+<td style="color: #ffffff;" align="center" bgcolor="#663399">663399</td>
+<td style="color: #ffffff;" align="center" bgcolor="#6633cc">6633CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#6633ff">6633FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#666600">666600</td>
+<td style="color: #ffffff;" align="center" bgcolor="#666633">666633</td>
+<td style="color: #ffffff;" align="center" bgcolor="#666666">666666</td>
+<td style="color: #ffffff;" align="center" bgcolor="#666699">666699</td>
+<td style="color: #ffffff;" align="center" bgcolor="#6666cc">6666CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#6666ff">6666FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#669900">669900</td>
+<td align="center" bgcolor="#669933">669933</td>
+<td align="center" bgcolor="#669966">669966</td>
+<td align="center" bgcolor="#669999">669999</td>
+<td align="center" bgcolor="#6699cc">6699CC</td>
+<td align="center" bgcolor="#6699ff">6699FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#66cc00">66CC00</td>
+<td align="center" bgcolor="#66cc33">66CC33</td>
+<td align="center" bgcolor="#66cc66">66CC66</td>
+<td align="center" bgcolor="#66cc99">66CC99</td>
+<td align="center" bgcolor="#66cccc">66CCCC</td>
+<td align="center" bgcolor="#66ccff">66CCFF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#66ff00">66FF00</td>
+<td align="center" bgcolor="#66ff33">66FF33</td>
+<td align="center" bgcolor="#66ff66">66FF66</td>
+<td align="center" bgcolor="#66ff99">66FF99</td>
+<td align="center" bgcolor="#66ffcc">66FFCC</td>
+<td align="center" bgcolor="#66ffff">66FFFF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#990000">990000</td>
+<td style="color: #ffffff;" align="center" bgcolor="#990033">990033</td>
+<td style="color: #ffffff;" align="center" bgcolor="#990066">990066</td>
+<td style="color: #ffffff;" align="center" bgcolor="#990099">990099</td>
+<td style="color: #ffffff;" align="center" bgcolor="#9900cc">9900CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#9900ff">9900FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#993300">993300</td>
+<td style="color: #ffffff;" align="center" bgcolor="#993333">993333</td>
+<td style="color: #ffffff;" align="center" bgcolor="#993366">993366</td>
+<td style="color: #ffffff;" align="center" bgcolor="#993399">993399</td>
+<td style="color: #ffffff;" align="center" bgcolor="#9933cc">9933CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#9933ff">9933FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#996600">996600</td>
+<td style="color: #ffffff;" align="center" bgcolor="#996633">996633</td>
+<td style="color: #ffffff;" align="center" bgcolor="#996666">996666</td>
+<td style="color: #ffffff;" align="center" bgcolor="#996699">996699</td>
+<td style="color: #ffffff;" align="center" bgcolor="#9966cc">9966CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#9966ff">9966FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#999900">999900</td>
+<td align="center" bgcolor="#999933">999933</td>
+<td align="center" bgcolor="#999966">999966</td>
+<td align="center" bgcolor="#999999">999999</td>
+<td align="center" bgcolor="#9999cc">9999CC</td>
+<td align="center" bgcolor="#9999ff">9999FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#99cc00">99CC00</td>
+<td align="center" bgcolor="#99cc33">99CC33</td>
+<td align="center" bgcolor="#99cc66">99CC66</td>
+<td align="center" bgcolor="#99cc99">99CC99</td>
+<td align="center" bgcolor="#99cccc">99CCCC</td>
+<td align="center" bgcolor="#99ccff">99CCFF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#99ff00">99FF00</td>
+<td align="center" bgcolor="#99ff33">99FF33</td>
+<td align="center" bgcolor="#99ff66">99FF66</td>
+<td align="center" bgcolor="#99ff99">99FF99</td>
+<td align="center" bgcolor="#99ffcc">99FFCC</td>
+<td align="center" bgcolor="#99ffff">99FFFF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#cc0000">CC0000</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc0033">CC0033</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc0066">CC0066</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc0099">CC0099</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc00cc">CC00CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc00ff">CC00FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#cc3300">CC3300</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc3333">CC3333</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc3366">CC3366</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc3399">CC3399</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc33cc">CC33CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc33ff">CC33FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#cc6600">CC6600</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc6633">CC6633</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc6666">CC6666</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc6699">CC6699</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc66cc">CC66CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#cc66ff">CC66FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#cc9900">CC9900</td>
+<td align="center" bgcolor="#cc9933">CC9933</td>
+<td align="center" bgcolor="#cc9966">CC9966</td>
+<td align="center" bgcolor="#cc9999">CC9999</td>
+<td align="center" bgcolor="#cc99cc">CC99CC</td>
+<td align="center" bgcolor="#cc99ff">CC99FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#cccc00">CCCC00</td>
+<td align="center" bgcolor="#cccc33">CCCC33</td>
+<td align="center" bgcolor="#cccc66">CCCC66</td>
+<td align="center" bgcolor="#cccc99">CCCC99</td>
+<td align="center" bgcolor="#cccccc">CCCCCC</td>
+<td align="center" bgcolor="#ccccff">CCCCFF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#ccff00">CCFF00</td>
+<td align="center" bgcolor="#ccff33">CCFF33</td>
+<td align="center" bgcolor="#ccff66">CCFF66</td>
+<td align="center" bgcolor="#ccff99">CCFF99</td>
+<td align="center" bgcolor="#ccffcc">CCFFCC</td>
+<td align="center" bgcolor="#ccffff">CCFFFF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#ff0000">FF0000</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff0033">FF0033</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff0066">FF0066</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff0099">FF0099</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff00cc">FF00CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff00ff">FF00FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#ff3300">FF3300</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff3333">FF3333</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff3366">FF3366</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff3399">FF3399</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff33cc">FF33CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff33ff">FF33FF</td>
+</tr>
+<tr>
+<td style="color: #ffffff;" align="center" bgcolor="#ff6600">FF6600</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff6633">FF6633</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff6666">FF6666</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff6699">FF6699</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff66cc">FF66CC</td>
+<td style="color: #ffffff;" align="center" bgcolor="#ff66ff">FF66FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#ff9900">FF9900</td>
+<td align="center" bgcolor="#ff9933">FF9933</td>
+<td align="center" bgcolor="#ff9966">FF9966</td>
+<td align="center" bgcolor="#ff9999">FF9999</td>
+<td align="center" bgcolor="#ff99cc">FF99CC</td>
+<td align="center" bgcolor="#ff99ff">FF99FF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#ffcc00">FFCC00</td>
+<td align="center" bgcolor="#ffcc33">FFCC33</td>
+<td align="center" bgcolor="#ffcc66">FFCC66</td>
+<td align="center" bgcolor="#ffcc99">FFCC99</td>
+<td align="center" bgcolor="#ffcccc">FFCCCC</td>
+<td align="center" bgcolor="#ffccff">FFCCFF</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#ffff00">FFFF00</td>
+<td align="center" bgcolor="#ffff33">FFFF33</td>
+<td align="center" bgcolor="#ffff66">FFFF66</td>
+<td align="center" bgcolor="#ffff99">FFFF99</td>
+<td align="center" bgcolor="#ffffcc">FFFFCC</td>
+<td align="center" bgcolor="#ffffff">FFFFFF</td>
+</tr>
+</tbody>
+</table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/cssref/css-units.html" rel="prev"> CSS 单位</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/cssref/css-colors-legal.html" rel="next">CSS 合法颜色值</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.449 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 09:29:33 -->
+
+<!-- super cache -->

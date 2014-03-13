@@ -1,0 +1,395 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>MongoDB 数据插入 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='PHP安装MongoDB扩展' href='http://www.w3cschool.cc/mongodb/mongodb-install-php-driver.html' />
+<link rel='next' title='MongoDB update()函数' href='http://www.w3cschool.cc/mongodb/mongodb-update.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/mongodb/mongodb-insert.html' />
+<meta name="keywords" content="MongoDB 数据插入,MongoDB 教程">
+<meta name="description" content="MongoDB  数据插入 描述 本章节中我们将向大家介绍如何将数据插入到MongoDB的集合中。 文档的数据结构和JSON基本一样。 所有存储在集合中的数据都是BSON格式。BSON是一种类json的一种二进制形式的存储格式,简称Binary JSON。  MongoDB数据库切换 以下命令可以使用“myinfo”数据库：  &gt; use myinfo switch to db myinfo   为MongoDB数据库定义一个文档..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>MongoDB 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-tutorial.html" >
+	MongoDB 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/nosql.html" >
+	NoSQL 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-intro.html" >
+	MongoDB 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-window-install.html" >
+	window平台安装MongoDB	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-linux-install.html" >
+	Linux平台安装MongoDB	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-databases-documents-collections.html" >
+	MongoDB - 数据库，对象，集合	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-connections.html" >
+	MongoDB 连接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-install-php-driver.html" >
+	PHP安装MongoDB扩展	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-insert.html" >
+	MongoDB 数据插入	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-update.html" >
+	MongoDB update()函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-remove.html" >
+	MongoDB remove()函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-query.html" >
+	MongoDB 查询	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-operators.html" >
+	MongoDB条件操作符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-operators-type.html" >
+	MongoDB条件操作符 - $type	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-limit-skip.html" >
+	MongoDB Limit与Skip方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-sort.html" >
+	MongoDB 排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-indexing.html" >
+	MongoDB 索引	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-aggregate.html" >
+	MongoDB 聚合(aggregate)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-replication.html" >
+	MongoDB 复制(副本集)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-sharding.html" >
+	MongoDB 分片	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-mongodump-mongorerstore.html" >
+	MongoDB 备份与恢复	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-mongostat-mongotop.html" >
+	MongoDB 监控	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-java.html" >
+	MongoDB Java	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-php.html" >
+	MongoDB PHP	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/mongodb/mongodb-install-php-driver.html" rel="prev"> PHP安装MongoDB扩展</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/mongodb/mongodb-update.html" rel="next">MongoDB update()函数</a> &raquo;</div>
+	</div>
+
+	<h1>MongoDB  <span class="color_h1">数据插入</span></h1>
+<h2 class="tutheader">描述</h2>
+<p>本章节中我们将向大家介绍如何将数据插入到MongoDB的集合中。</p>
+<p>文档的数据结构和JSON基本一样。</p>
+<p>所有存储在集合中的数据都是BSON格式。</p><p>BSON是一种类json的一种二进制形式的存储格式,简称Binary JSON</p>。
+<br />
+<h2 class="tutheader">MongoDB数据库切换</h2>
+<p>以下命令可以使用"myinfo"数据库：</p>
+<div class="code"><div>
+&gt; use myinfo
+switch to db myinfo
+</div></div>
+<p><img class="attachment-full" alt="mongo-switch-db" src="http://www.w3cschool.cc/wp-content/uploads/2013/10/mongo-switch-db.png" width="179" height="37" /></p><br />
+<h2 class="tutheader">为MongoDB数据库定义一个文档</h2>
+<p>以下文档可以存储在MongoDB中：</p>
+<div class="code"><div>
+&gt; document=({"user_id" : "ABCDBWN","password" :"ABCDBWN" ,"date_of_join" :<br />
+
+"15/10/2010" ,"education" :"B.C.A." , "profession" : "DEVELOPER","interest" :<br />
+
+"MUSIC","community_name" :["MODERN MUSIC", "CLASSICAL<br />
+
+MUSIC","WESTERN MUSIC"],"community_moder_id" : ["MR. BBB","MR. JJJ","MR<br />
+
+MMM"],"community_members" : [500,200,1500],"friends_id" :<br />
+
+["MMM123","NNN123","OOO123"],"ban_friends_id" :<br />
+
+["BAN123","BAN456","BAN789"]});<br />
+</div></div>
+
+<p>命令执行如下图所示：</p>
+<p><img class="attachment-full" alt="mongodb-insert-command" src="http://www.w3cschool.cc/wp-content/uploads/2013/10/mongodb-insert-command.png" width="643" height="72" /></p>
+
+<br />
+<h2 class="tutheader">显示已定义的文档</h2>
+<p>已定义的文档显示格式如下所示：</p>
+<p><img class="attachment-full" alt="mongodb-insert1" src="http://www.w3cschool.cc/wp-content/uploads/2013/10/mongodb-insert1.png" width="320" height="398" /></p>
+
+<br />
+<h2 class="tutheader">在集合中插入文档</h2>
+<p>将以上的文档数据存储到"myinfo" 数据库中的 "userdetails" 集合，执行如下命令：</p>
+<div class="code"><div>
+&gt; db.userdetails.insert(document)
+</div></div>
+<p><img class="attachment-full" alt="mongodb-insert3" src="http://www.w3cschool.cc/wp-content/uploads/2013/10/mongodb-insert3.png" width="281" height="39" /></p>
+<br />
+<h2 class="tutheader">使用换行符插入数据</h2>
+<p>当文档的数据较多的时候，我们可以使用换行符来分割文档数据，如下所示：</p>
+<div class="code">
+<div>&gt;document=({"user_id" : "ABCDBWN","password" :"ABCDBWN" ,"date_of_join" : "15/10/2010" ,<br />
+
+"education" :"B.C.A." , "profession" : "DEVELOPER","interest" : "MUSIC",<br />
+
+"community_name" :["MODERN MUSIC", "CLASSICAL MUSIC","WESTERN MUSIC"],<br />
+
+"community_moder_id" : ["MR. BBB","MR. JJJ","MR MMM"],<br />
+
+"community_members" : [500,200,1500],"friends_id" : ["MMM123","NNN123","OOO123"],<br />
+
+"ban_friends_id" :["BAN123","BAN456","BAN789"]});</div>
+</div>
+<p>命令执行如下图所示：</p>
+<p><img class="attachment-full" alt="mongodb-insert2" src="http://www.w3cschool.cc/wp-content/uploads/2013/10/mongodb-insert2.png" width="638" height="98" /></p>
+
+<br />
+<h2 class="tutheader">集合中直接插入数据（无定义文档）</h2>
+<p>数据可以不用定义文档通过shell直接插入：</p>
+<div class="code"><div>&gt;db.userdetails.insert({"user_id" : "xyz123","password" :"xyz123" ,"date_of_join" : "15/08/2010" ,<br />
+  "education" :"M.C.A." , "profession" : "Software consultant","interest" : "Film",<br />
+  "community" : [<br />
+         	   {<br />
+  "name" : "DDD FILM CLUB",<br />
+  "moder_id" : "MR. DBNA",<br />
+  "members" : "25000",<br />
+         	   },<br />
+         	   {<br />
+  "name" : "AXN MOVIES",<br />
+  "moder_id" : "DOGLUS HUNT",<br />
+  "members" : "15000",<br />
+         	   },<br />
+         	   {<br />
+  "name" : "UROPEAN FILM LOVERS",<br />
+  "moder_id" : "AMANT LUIS",<br />
+  "members" : "20000",<br />
+         	   }<br />
+         	   ],<br />
+  "friends" :[<br />
+         	   {<br />
+  "user_id" : "KKK258",<br />
+         	   },<br />
+         	   {<br />
+  "user_id" : "LLL147",<br />
+         	   },<br />
+         	   {<br />
+  "user_id" : "MMM369",<br />
+         	   }<br />
+         	   ],<br />
+  "ban_friends" :[<br />
+         	   {<br />
+  "user_id" : "BAN147"<br />
+         	   },<br />
+         	   {<br />
+  "user_id" : "BAN258"<br />
+         	   },<br />
+         	   {<br />
+  "user_id" : "BAN369"<br />
+         	   }<br />
+         	   ]<br />
+         	   });</div></div>
+
+<p>命令执行如下图所示：</p>
+<p><img class="attachment-full" alt="insert-data-into-a-collection-without-defining-a-document" src="http://www.w3cschool.cc/wp-content/uploads/2013/10/insert-data-into-a-collection-without-defining-a-document.png" width="642" height="561" /></p>
+<br />
+<h2 class="tutheader">查看集合中的数据</h2>
+<p>使用以下命令查看集合中的数据：</p>
+<div class="code">
+<div>&gt;db.userdetails.find();</div>
+</div>
+<p><img class="attachment-full" alt="view-the-inserted-data-into-the-collection" src="http://www.w3cschool.cc/wp-content/uploads/2013/10/view-the-inserted-data-into-the-collection.png" width="451" height="565" /></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/mongodb/mongodb-install-php-driver.html" rel="prev"> PHP安装MongoDB扩展</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/mongodb/mongodb-update.html" rel="next">MongoDB update()函数</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.156 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:37:17 -->
+
+<!-- super cache -->

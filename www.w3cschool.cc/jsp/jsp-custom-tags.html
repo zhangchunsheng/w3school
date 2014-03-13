@@ -1,0 +1,513 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>JSP自定义标签 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='JSP JavaBean' href='http://www.w3cschool.cc/jsp/jsp-javabean.html' />
+<link rel='next' title='JSP 表达式语言' href='http://www.w3cschool.cc/jsp/jsp-expression-language.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jsp/jsp-custom-tags.html' />
+<meta name="keywords" content="JSP自定义标签,JSP 教程">
+<meta name="description" content="JSP自定义标签 自定义标签是用户定义的JSP语言元素。当JSP页面包含一个自定义标签时将被转化为servlet，标签转化为对被     称为tag handler的对象的操作，即当servlet执行时Web container调用那些操作。 JSP标签扩展可以让你创建新的标签并且可以直接插入到一个JSP页面。 JSP 2.0规范中引入Simple Tag Handlers来编写这些自定义标记。 你可以继承SimpleTagSuppor..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JSP 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-tutorial.html" >
+	JSP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-intro.html" >
+	JSP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-setup.html" >
+	JSP 开发环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-architecture.html" >
+	JSP 结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-life-cycle.html" >
+	JSP 生命周期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-syntax.html" >
+	JSP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-directives.html" >
+	JSP 指令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-actions.html" >
+	JSP动作元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-implicit-objects.html" >
+	JSP 隐含对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-client-request.html" >
+	JSP 客户端请求	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-server-response.html" >
+	JSP服务器响应	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-http-status-codes.html" >
+	JSP HTTP状态码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-form-processing.html" >
+	JSP 表单处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-writing-filters.html" >
+	JSP 过滤器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-cookies.html" >
+	JSP Cookies处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-session.html" >
+	JSP Session	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-file-uploading.html" >
+	JSP 文件上传	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-handling-date.html" >
+	JSP 日期处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-page-redirect.html" >
+	JSP 页面重定向	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-hits-counter.html" >
+	JSP 点击量统计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-auto-refresh.html" >
+	JSP 自动刷新	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-sending-email.html" >
+	JSP 发送邮件	</a>
+	<br><h2 class="left"><span class="left_h2">JSP 高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-jstl.html" >
+	JSP 标准标签库（JSTL）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-database-access.html" >
+	JSP 连接数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-xml-data.html" >
+	JSP XML数据处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-javabean.html" >
+	JSP JavaBean	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-custom-tags.html" >
+	JSP自定义标签	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-expression-language.html" >
+	JSP 表达式语言	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-exception-handling.html" >
+	JSP 异常处理	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-debugging.html" >
+	JSP 调试	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsp/jsp-internationalization.html" >
+	JSP 国际化	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsp/jsp-javabean.html" rel="prev"> JSP JavaBean</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsp/jsp-expression-language.html" rel="next">JSP 表达式语言</a> &raquo;</div>
+	</div>
+
+	<h1>JSP自定义标签</h1>
+<p>自定义标签是用户定义的JSP语言元素。当JSP页面包含一个自定义标签时将被转化为servlet，标签转化为对被
+    称为tag handler的对象的操作，即当servlet执行时Web container调用那些操作。</p>
+<p>JSP标签扩展可以让你创建新的标签并且可以直接插入到一个JSP页面。 JSP 2.0规范中引入Simple Tag Handlers来编写这些自定义标记。</p>
+<p>你可以继承SimpleTagSupport类并重写的doTag()方法来开发一个最简单的自定义标签。</p>
+<hr />
+<h2>创建"Hello"标签</h2>
+<p>接下来，我们想创建一个自定义标签叫作&lt;ex:Hello&gt;，标签格式为：</p>
+<pre>
+&lt;ex:Hello /&gt;
+</pre>
+<p>要创建自定义的JSP标签，你首先必须创建处理标签的Java类。所以，让我们创建一个HelloTag类，如下所示：</p>
+<pre>
+package com.tutorialspoint;
+
+import javax.servlet.jsp.tagext.*;
+import javax.servlet.jsp.*;
+import java.io.*;
+
+public class HelloTag extends SimpleTagSupport {
+
+  public void doTag() throws JspException, IOException {
+    JspWriter out = getJspContext().getOut();
+    out.println("Hello Custom Tag!");
+  }
+}
+</pre>
+<p>以下代码重写了doTag()方法，方法中使用了getJspContext()方法来获取当前的JspContext对象，并将"Hello Custom Tag!"传递给JspWriter对象。</p>
+<p>编译以上类，并将其复制到环境变量CLASSPATH目录中。最后创建如下标签库：&lt;Tomcat安装目录&gt;webapps\ROOT\WEB-INF\custom.tld。</p>
+
+<pre>
+&lt;taglib&gt;
+  &lt;tlib-version&gt;1.0&lt;/tlib-version&gt;
+  &lt;jsp-version&gt;2.0&lt;/jsp-version&gt;
+  &lt;short-name&gt;Example TLD&lt;/short-name&gt;
+  &lt;tag&gt;
+    &lt;name&gt;Hello&lt;/name&gt;
+    &lt;tag-class&gt;com.tutorialspoint.HelloTag&lt;/tag-class&gt;
+    &lt;body-content&gt;empty&lt;/body-content&gt;
+  &lt;/tag&gt;
+&lt;/taglib&gt;
+</pre>
+<p>接下来，我们就可以在JSP文件中使用Hello标签：</p>
+<pre>
+&lt;%@ taglib prefix="ex" uri="WEB-INF/custom.tld"%&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;ex:Hello/&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>以上程序输出结果为：</p>
+<pre>
+Hello Custom Tag!
+</pre>
+<hr />
+<h2>访问标签体</h2>
+<p>你可以像标准标签库一样在标签中包含消息内容。如我们要在我们自定义的Hello中包含内容，格式如下：</p>
+<pre>
+&lt;ex:Hello&gt;
+   This is message body
+&lt;/ex:Hello&gt;
+</pre>
+<p>我们可以修改标签处理类文件，代码如下：</p>
+<pre>
+package com.tutorialspoint;
+
+import javax.servlet.jsp.tagext.*;
+import javax.servlet.jsp.*;
+import java.io.*;
+
+public class HelloTag extends SimpleTagSupport {
+
+   StringWriter sw = new StringWriter();
+   public void doTag()
+      throws JspException, IOException
+    {
+       getJspBody().invoke(sw);
+       getJspContext().getOut().println(sw.toString());
+    }
+
+}
+</pre>
+<p>接下来我们需要修改TLD文件，如下所示：
+</p>
+<pre>
+&lt;taglib&gt;
+  &lt;tlib-version&gt;1.0&lt;/tlib-version&gt;
+  &lt;jsp-version&gt;2.0&lt;/jsp-version&gt;
+  &lt;short-name&gt;Example TLD with Body&lt;/short-name&gt;
+  &lt;tag&gt;
+    &lt;name&gt;Hello&lt;/name&gt;
+    &lt;tag-class&gt;com.tutorialspoint.HelloTag&lt;/tag-class&gt;
+    &lt;body-content&gt;scriptless&lt;/body-content&gt;
+  &lt;/tag&gt;
+&lt;/taglib&gt;
+</pre>
+<p>现在我们可以在JSP使用修改后的标签，如下所示:</p>
+<pre>
+&lt;%@ taglib prefix="ex" uri="WEB-INF/custom.tld"%&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;ex:Hello&gt;
+        This is message body
+    &lt;/ex:Hello&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>以上程序输出结果如下所示：</p>
+<pre>
+This is message body
+</pre>
+<hr />
+<h2>自定义标签属性</h2>
+<p>你可以在自定义标准中设置各种属性，要接收属性，值自定义标签类必须实现setter方法， JavaBean 中的setter方法如下所示：</p>
+<pre>
+package com.tutorialspoint;
+
+import javax.servlet.jsp.tagext.*;
+import javax.servlet.jsp.*;
+import java.io.*;
+
+public class HelloTag extends SimpleTagSupport {
+
+   private String message;
+
+   public void setMessage(String msg) {
+      this.message = msg;
+   }
+
+   StringWriter sw = new StringWriter();
+
+   public void doTag()
+      throws JspException, IOException
+    {
+       if (message != null) {
+          /* 从属性中使用消息 */
+          JspWriter out = getJspContext().getOut();
+          out.println( message );
+       }
+       else {
+          /* 从内容体中使用消息 */
+          getJspBody().invoke(sw);
+          getJspContext().getOut().println(sw.toString());
+       }
+   }
+
+}
+</pre>
+<p>属性的名称是"message"，所以setter方法​​是的setMessage()。现在让我们在TLD文件中使用的&lt;attribute&gt;元素添加此属性：</p>
+<pre>
+&lt;taglib&gt;
+  &lt;tlib-version&gt;1.0&lt;/tlib-version&gt;
+  &lt;jsp-version&gt;2.0&lt;/jsp-version&gt;
+  &lt;short-name&gt;Example TLD with Body&lt;/short-name&gt;
+  &lt;tag&gt;
+    &lt;name&gt;Hello&lt;/name&gt;
+    &lt;tag-class&gt;com.tutorialspoint.HelloTag&lt;/tag-class&gt;
+    &lt;body-content&gt;scriptless&lt;/body-content&gt;
+    &lt;attribute&gt;
+       &lt;name&gt;message&lt;/name&gt;
+    &lt;/attribute&gt;
+  &lt;/tag&gt;
+&lt;/taglib&gt;
+</pre>
+<p>现在我们就可以在JSP文件中使用message属性了，如下所示：</p>
+<pre>
+&lt;%@ taglib prefix="ex" uri="WEB-INF/custom.tld"%&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;ex:Hello message="This is custom tag" /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>以上实例数据输出结果为：</p>
+<pre>
+This is custom tag
+</pre>
+<p>你还可以包含以下属性：</p>
+<table class="reference">
+<tbody><tr><th style="width:30%">属性 </th><th>描述</th></tr>
+<tr><td>name</td><td>定义属性的名称。每个标签的是属性名称必须是唯一的。</td></tr>
+<tr><td>required</td><td>指定属性是否是必须的或者可选的,如果设置为false为可选。</td></tr>
+<tr><td>rtexprvalue</td><td>声明在运行表达式时，标签属性是否有效。</td></tr>
+<tr><td>type</td><td>定义该属性的Java类类型 。默认指定为 <b>String</b></td></tr>
+<tr><td>description</td><td>描述信息</td></tr>
+<tr><td>fragment</td><td>如果声明了该属性,属性值将被视为一个 <b>JspFragment</b>。</td></tr>
+</tbody></table>
+<p>以下是指定相关的属性实例：</p>
+<pre>
+.....
+    &lt;attribute&gt;
+      &lt;name&gt;attribute_name&lt;/name&gt;
+      &lt;required&gt;false&lt;/required&gt;
+      &lt;type&gt;java.util.Date&lt;/type&gt;
+      &lt;fragment&gt;false&lt;/fragment&gt;
+    &lt;/attribute&gt;
+.....
+</pre>
+<p>如果你使用了两个属性，修改TLD文件，如下所示：</p>
+<pre>
+.....
+    &lt;attribute&gt;
+      &lt;name&gt;attribute_name1&lt;/name&gt;
+      &lt;required&gt;false&lt;/required&gt;
+      &lt;type&gt;java.util.Boolean&lt;/type&gt;
+      &lt;fragment&gt;false&lt;/fragment&gt;
+    &lt;/attribute&gt;
+    &lt;attribute&gt;
+      &lt;name&gt;attribute_name2&lt;/name&gt;
+      &lt;required&gt;true&lt;/required&gt;
+      &lt;type&gt;java.util.Date&lt;/type&gt;
+    &lt;/attribute&gt;
+.....
+</pre>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsp/jsp-javabean.html" rel="prev"> JSP JavaBean</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsp/jsp-expression-language.html" rel="next">JSP 表达式语言</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.200 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 10:21:16 -->
+
+<!-- super cache -->

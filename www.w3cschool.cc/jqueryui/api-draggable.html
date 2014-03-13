@@ -1,0 +1,1253 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI API &#8211; 可拖拽小部件（Draggable Widget） | w3cschool菜鸟教程</title>
+	<link rel='prev' title='PHP curl_setopt_array函数' href='http://www.w3cschool.cc/php/func-curl_setopt_array.html' />
+<link rel='next' title='PHP curl_setopt函数' href='http://www.w3cschool.cc/php/func-curl_setopt.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jqueryui/api-draggable.html' />
+<meta name="keywords" content="jQuery UI API &#8211; 可拖拽小部件（Draggable Widget）,Jquery UI">
+<meta name="description" content="jQuery UI API - 可拖拽小部件（Draggable Widget）  所属类别  交互（Interactions）   用法 描述：允许使用鼠标移动元素。 版本新增：1.0  依赖：  	UI 核心（UI Core） 	部件库（Widget Factory） 	鼠标交互（Mouse Interaction）   注释：让被选元素可被鼠标拖拽。如果您不只是拖拽，而是拖拽 &amp; 放置，请查看 jQuery UI 可放置（..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Jquery UI</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html" >
+	jQuery UI 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-intro.html" >
+	jQuery UI 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-download.html" >
+	jQuery UI 下载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-use.html" >
+	jQuery UI 使用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-custom.html" >
+	jQuery UI 定制	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-work.html" >
+	jQuery UI 工作原理	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">主题</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme.html" >
+	jQuery UI 主题	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-themeroller.html" >
+	jQuery UI ThemeRoller	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-api.html" >
+	jQuery UI CSS 框架 API	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-design.html" >
+	jQuery UI 设计主题	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">部件库</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory.html" >
+	jQuery UI 部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-extend.html" >
+	jQuery UI 扩展小部件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-method.html" >
+	jQuery UI 小部件方法调用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-why.html" >
+	jQuery UI 为什么使用部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-how.html" >
+	jQuery UI 如何使用部件库	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-api.html" >
+	jQuery UI API 文档	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/api-transfer-effect.html" rel="prev"> jQuery UI API &#8211; 转移特效（Transfer Effect）</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/api-droppable.html" rel="next">jQuery UI API &#8211; 可放置小部件（Droppable Widget）</a> &raquo;</div>
+	</div>
+
+	<h1>jQuery UI API - <span class="color_h1">可拖拽小部件（Draggable Widget）</span></h1>
+
+<h2>所属类别</h2>
+<p>
+<a href="/jqueryui/api-category-interactions.html">交互（Interactions）</a>
+</p>
+
+<h2>用法</h2>
+<p><strong>描述：</strong>允许使用鼠标移动元素。</p>
+<p><strong>版本新增：</strong>1.0</p>
+<p>
+<strong>依赖：</strong>
+<ul>
+	<li><a href="/jqueryui/api-category-ui-core.html">UI 核心（UI Core）</a></li>
+	<li><a href="/jqueryui/api-jQuery-widget.html">部件库（Widget Factory）</a></li>
+	<li><a href="/jqueryui/api-mouse.html">鼠标交互（Mouse Interaction）</a></li>
+</ul>
+</p>
+<p><strong>注释：</strong>让被选元素可被鼠标拖拽。如果您不只是拖拽，而是拖拽 &amp; 放置，请查看 <a href="/jqueryui/api-droppable.html">jQuery UI 可放置（Droppable）插件</a>，为可拖拽元素提供了一个放置目标。</p>
+
+<h3>快速导航</h3>
+<table class="reference notranslate">
+<tr>
+	<th width="34%">选项</th>
+	<th width="33%">方法</th>
+    <th width="33%">事件</th>
+</tr>
+<tr>
+	<td>
+<div><a href="#option-addClasses">addClasses</a></div>
+<div><a href="#option-appendTo">appendTo</a></div>
+<div><a href="#option-axis">axis</a></div>
+<div><a href="#option-cancel">cancel</a></div>
+<div><a href="#option-connectToSortable">connectToSortable</a></div>
+<div><a href="#option-containment">containment</a></div>
+<div><a href="#option-cursor">cursor</a></div>
+<div><a href="#option-cursorAt">cursorAt</a></div>
+<div><a href="#option-delay">delay</a></div>
+<div><a href="#option-disabled">disabled</a></div>
+<div><a href="#option-distance">distance</a></div>
+<div><a href="#option-grid">grid</a></div>
+<div><a href="#option-handle">handle</a></div>
+<div><a href="#option-helper">helper</a></div>
+<div><a href="#option-iframeFix">iframeFix</a></div>
+<div><a href="#option-opacity">opacity</a></div>
+<div><a href="#option-refreshPositions">refreshPositions</a></div>
+<div><a href="#option-revert">revert</a></div>
+<div><a href="#option-revertDuration">revertDuration</a></div>
+<div><a href="#option-scope">scope</a></div>
+<div><a href="#option-scroll">scroll</a></div>
+<div><a href="#option-scrollSensitivity">scrollSensitivity</a></div>
+<div><a href="#option-scrollSpeed">scrollSpeed</a></div>
+<div><a href="#option-snap">snap</a></div>
+<div><a href="#option-snapMode">snapMode</a></div>
+<div><a href="#option-snapTolerance">snapTolerance</a></div>
+<div><a href="#option-stack">stack</a></div>
+<div><a href="#option-zIndex">zIndex</a></div>
+	</td>
+	<td>
+<div><a href="#method-destroy">destroy</a></div>
+<div><a href="#method-disable">disable</a></div>
+<div><a href="#method-enable">enable</a></div>
+<div><a href="#method-option">option</a></div>
+<div><a href="#method-widget">widget</a></div>
+	</td>
+    <td>
+<div><a href="#event-create">create</a></div>
+<div><a href="#event-drag">drag</a></div>
+<div><a href="#event-start">start</a></div>
+<div><a href="#event-stop">stop</a></div>
+	</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate">
+<tr>
+	<th width="15%">选项</th>
+	<th width="15%">类型</th>
+    <th width="60%">描述</th>
+	<th width="10%">默认值</th>
+</tr>
+<tr id="option-addClasses">
+	<td>addClasses</td>
+    <td>Boolean</td>
+	<td>如果设置为 <code>false</code>，将阻止 <code>ui-draggable</code> class 被添加。当在数百个元素上调用 <code>.draggable()</code> 时，这么设置有利于性能优化。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>addClasses</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ addClasses: false });
+	</pre>
+	<p>在初始化后，获取或设置 <code>addClasses</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var addClasses = $( ".selector" ).draggable( "option", "addClasses" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "addClasses", false );
+	</pre>
+	</td>
+	<td>true</td>
+</tr>
+<tr id="option-appendTo">
+	<td>appendTo</td>
+    <td>jQuery 或 Element 或 Selector 或 String</td>
+	<td>当拖拽时，draggable 助手（helper）要追加到哪一个元素。<br />
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+	<li><strong>jQuery</strong>：一个 jQuery 对象，包含助手（helper）要追加到的元素。</li>
+	<li><strong>Element</strong>：要追加助手（helper）的元素。</li>
+	<li><strong>Selector</strong>：一个选择器，指定哪一个元素要追加助手（helper）。</li>
+	<li><strong>String</strong>：字符串 <code>"parent"</code> 将促使助手（helper）成为 draggable 的同级。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>appendTo</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ appendTo: "body" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>appendTo</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var appendTo = $( ".selector" ).draggable( "option", "appendTo" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "appendTo", "body" );
+	</pre>
+	</td>
+	<td>"parent"</td>
+</tr>
+<tr id="option-axis">
+	<td>axis</td>
+    <td>String</td>
+	<td>约束在水平轴 (x) 或垂直轴 (y) 上拖拽。可能的值：<code>"x"</code>, <code>"y"</code>。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>axis</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ axis: "x" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>axis</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var axis = $( ".selector" ).draggable( "option", "axis" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "axis", "x" );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-cancel">
+	<td>cancel</td>
+    <td>Selector</td>
+	<td>防止从指定的元素上开始拖拽。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>cancel</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ cancel: ".title" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>cancel</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var cancel = $( ".selector" ).draggable( "option", "cancel" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "cancel", ".title" );
+	</pre>
+	</td>
+	<td>"input, textarea, button, select, option"</td>
+</tr>
+<tr id="option-connectToSortable">
+	<td>connectToSortable</td>
+    <td>Selector</td>
+	<td>允许 draggable 放置在指定的 sortable 上。如果使用了该选项，一个 draggable 可被放置在一个 sortable 列表上，然后成为列表的一部分。注意：<code>helper</code> 选项必须设置为 <code>"clone"</code>，以便更好地工作。必须包含 <a href="/jqueryui/api-sortable.html">可排序小部件（Sortable Widget）</a>。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>connectToSortable</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ connectToSortable: "#my-sortable" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>connectToSortable</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var connectToSortable = $( ".selector" ).draggable( "option", "connectToSortable" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "connectToSortable", "#my-sortable" );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-containment">
+	<td>containment</td>
+    <td>Selector 或 Element 或 String 或 Array</td>
+	<td>约束在指定元素或区域的边界内拖拽。<br />
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+	<li><strong>Selector</strong>：可拖拽元素将被包含在 selector 第一个元素的边界内。如果未找到元素，则不设置 containment。</li>
+	<li><strong>Element</strong>：可拖拽元素将被韩寒在元素的边界。</li>
+	<li><strong>String</strong>：可能的值：<code>"parent"</code>、<code>"document"</code>、<code>"window"</code>。</li>
+	<li><strong>Array</strong>：一个数组， 以形式 <code>[ x1, y1, x2, y2 ]</code> 定义元素的边界。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>containment</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ containment: "parent" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>containment</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var containment = $( ".selector" ).draggable( "option", "containment" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "containment", "parent" );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-cursor">
+	<td>cursor</td>
+    <td>String</td>
+	<td>拖拽操作期间的 CSS 光标。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>cursor</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ cursor: "crosshair" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>cursor</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var cursor = $( ".selector" ).draggable( "option", "cursor" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "cursor", "crosshair" );
+	</pre>
+	</td>
+	<td>"auto"</td>
+</tr>
+<tr id="option-cursorAt">
+	<td>cursorAt</td>
+    <td>Object</td>
+	<td>设置拖拽助手（helper）相对于鼠标光标的偏移。坐标可通过一个或两个键的组合成一个哈希给出：<code>{ top, left, right, bottom }</code>。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>cursorAt</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ cursorAt: { left: 5 } });
+	</pre>
+	<p>在初始化后，获取或设置 <code>cursorAt</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var cursorAt = $( ".selector" ).draggable( "option", "cursorAt" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "cursorAt", { left: 5 } );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-delay">
+	<td>delay</td>
+    <td>Number</td>
+	<td>鼠标按下后直到拖拽开始为止的时间，以毫秒计。该选项可以防止点击在某个元素上时不必要的拖拽。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>delay</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ delay: 300 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>delay</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var delay = $( ".selector" ).draggable( "option", "delay" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "delay", 300 );
+	</pre>
+	</td>
+	<td>0</td>
+</tr>
+<tr id="option-disabled">
+	<td>disabled</td>
+    <td>Boolean</td>
+	<td>如果设置为 <code>true</code>，则禁用该 draggable。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>disabled</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ disabled: true });
+	</pre>
+	<p>在初始化后，获取或设置 <code>disabled</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var disabled = $( ".selector" ).draggable( "option", "disabled" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "disabled", true );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-distance">
+	<td>distance</td>
+    <td>Number</td>
+	<td>鼠标按下后拖拽开始前必须移动的距离，以像素计。该选项可以防止点击在某个元素上时不必要的拖拽。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>distance</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ distance: 10 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>distance</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var distance = $( ".selector" ).draggable( "option", "distance" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "distance", 10 );
+	</pre>
+	</td>
+	<td>1</td>
+</tr>
+<tr id="option-grid">
+	<td>grid</td>
+    <td>Array</td>
+	<td>对齐拖拽助手（helper）到网格，每个 x 和 y 像素。数组形式必须是 <code>[ x, y ]</code>。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>grid</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ grid: [ 50, 20 ] });
+	</pre>
+	<p>在初始化后，获取或设置 <code>grid</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var grid = $( ".selector" ).draggable( "option", "grid" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "grid", [ 50, 20 ] );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-handle">
+	<td>handle</td>
+    <td>Selector 或 Element</td>
+	<td>如果指定了该选项，则限制开始拖拽，除非鼠标在指定的元素上按下。只有可拖拽（draggable）元素的后代元素才允许被拖拽。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>handle</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ handle: "h2" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>handle</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var handle = $( ".selector" ).draggable( "option", "handle" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "handle", "h2" );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-helper">
+	<td>helper</td>
+    <td>String 或 Function()</td>
+	<td>允许一个 helper 元素用于拖拽显示。<br />
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+	<li><strong>String</strong>：如果设置为 <code>"clone"</code>，元素将被克隆，且克隆将被拖拽。</li>
+	<li><strong>Function</strong>：一个函数，将返回拖拽时要使用的 DOMElement。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>helper</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ helper: "clone" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>helper</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var helper = $( ".selector" ).draggable( "option", "helper" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "helper", "clone" );
+	</pre>
+	</td>
+	<td>"original"</td>
+</tr>
+<tr id="option-iframeFix">
+	<td>iframeFix</td>
+    <td>Boolean 或 Selector</td>
+	<td>防止拖拽期间 iframes 捕捉鼠标移动（mousemove ）事件。在与 <code>cursorAt</code> 选项结合使用时，或鼠标光标未覆盖在助手（helper）上时，非常有用。<br />
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+	<li><strong>Boolean</strong>：当设置为 <code>true</code> 时，透明遮罩将被放置在页面上所有 iframes 上。</li>
+	<li><strong>Selector</strong>：匹配 selector 的任意 iframes 将被透明遮罩覆盖。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>iframeFix</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ iframeFix: true });
+	</pre>
+	<p>在初始化后，获取或设置 <code>iframeFix</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var iframeFix = $( ".selector" ).draggable( "option", "iframeFix" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "iframeFix", true );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-opacity">
+	<td>opacity</td>
+    <td>Number</td>
+	<td>当被拖拽时助手（helper）的不透明度。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>opacity</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ opacity: 0.35 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>opacity</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var opacity = $( ".selector" ).draggable( "option", "opacity" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "opacity", 0.35 );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-refreshPositions">
+	<td>refreshPositions</td>
+    <td>Boolean</td>
+	<td>如果设置为 <code>true</code>，在每次鼠标移动（mousemove）时都会计算所有可放置的位置。注意：这解决了高度动态的问题，但是明显降低了性能。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>refreshPositions</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ refreshPositions: true });
+	</pre>
+	<p>在初始化后，获取或设置 <code>refreshPositions</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var refreshPositions = $( ".selector" ).draggable( "option", "refreshPositions" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "refreshPositions", true );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-revert">
+	<td>revert</td>
+    <td>Boolean 或 String 或 Function()</td>
+	<td>当拖拽停止时，元素是否还原到它的开始位置。<br />
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+	<li><strong>Boolean</strong>：如果设置为 <code>true</code>，元素总会还原。</li>
+	<li><strong>String</strong>：如果设置为 <code>"invalid"</code>，还原仅在 draggable 未放置在 droppable 上时发生，如果设置为 <code>"valid"</code> 则相反。</li>
+	<li><strong>Function</strong>：一个函数，确定元素是否还原到它的开始位置。该函数必须返回 <code>true</code> 才能还原元素。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>revert</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ revert: true });
+	</pre>
+	<p>在初始化后，获取或设置 <code>revert</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var revert = $( ".selector" ).draggable( "option", "revert" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "revert", true );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-revertDuration">
+	<td>revertDuration</td>
+    <td>Number</td>
+	<td>还原（revert）动画的持续时间，以毫秒计。如果 <code>revert</code> 选项是 <code>false</code> 则忽略。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>revertDuration</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ revertDuration: 200 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>revertDuration</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var revertDuration = $( ".selector" ).draggable( "option", "revertDuration" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "revertDuration", 200 );
+	</pre>
+	</td>
+	<td>500</td>
+</tr>
+<tr id="option-scope">
+	<td>scope</td>
+    <td>String</td>
+	<td>用于组合配套 draggable 和 droppable 项，除了 droppable 的 <code>accept</code> 选项之外。一个与 droppable 带有相同的 <code>scope</code> 值的 draggable 会被该 droppable 接受。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>scope</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ scope: "tasks" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>scope</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var scope = $( ".selector" ).draggable( "option", "scope" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "scope", "tasks" );
+	</pre>
+	</td>
+	<td>"default"</td>
+</tr>
+<tr id="option-scroll">
+	<td>scroll</td>
+    <td>Boolean</td>
+	<td>如果设置为 <code>true</code>，当拖拽时容器会自动滚动。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>scroll</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ scroll: false });
+	</pre>
+	<p>在初始化后，获取或设置 <code>scroll</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var scroll = $( ".selector" ).draggable( "option", "scroll" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "scroll", false );
+	</pre>
+	</td>
+	<td>true</td>
+</tr>
+<tr id="option-scrollSensitivity">
+	<td>scrollSensitivity</td>
+    <td>Number</td>
+	<td>从要滚动的视区边缘起的距离，以像素计。距离是相对于指针的，不是相对于 draggable。如果 <code>scroll</code> 选项是 <code>false</code> 则忽略。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>scrollSensitivity</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ scrollSensitivity: 100 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>scrollSensitivity</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var scrollSensitivity = $( ".selector" ).draggable( "option", "scrollSensitivity" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "scrollSensitivity", 100 );
+	</pre>
+	</td>
+	<td>20</td>
+</tr>
+<tr id="option-scrollSpeed">
+	<td>scrollSpeed</td>
+    <td>Number</td>
+	<td>当鼠标指针获取到在 <code>scrollSensitivity</code> 距离内时，窗体滚动的速度。如果 <code>scroll</code> 选项是 <code>false</code> 则忽略。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>scrollSpeed</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ scrollSpeed: 100 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>scrollSpeed</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var scrollSpeed = $( ".selector" ).draggable( "option", "scrollSpeed" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "scrollSpeed", 100 );
+	</pre>
+	</td>
+	<td>20</td>
+</tr>
+<tr id="option-snap">
+	<td>snap</td>
+    <td>Boolean 或 Selector</td>
+	<td>元素是否对齐到其他元素。<br />
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+	<li><strong>Boolean</strong>：当设置为 <code>true</code> 时，元素会对齐到其它可拖拽（draggable ）元素。</li>
+	<li><strong>Selector</strong>：一个选择器，指定要对齐到哪个元素。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>snap</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ snap: true });
+	</pre>
+	<p>在初始化后，获取或设置 <code>snap</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var snap = $( ".selector" ).draggable( "option", "snap" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "snap", true );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-snapMode">
+	<td>snapMode</td>
+    <td>String</td>
+	<td>决定 draggable 将对齐到对齐元素的哪个边缘。如果 <code>snap</code> 选项是 <code>false</code> 则忽略。可能的值：<code>"inner"</code>、<code>"outer"</code>、<code>"both"</code>。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>snapMode</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ snapMode: "inner" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>snapMode</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var snapMode = $( ".selector" ).draggable( "option", "snapMode" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "snapMode", "inner" );
+	</pre>
+	</td>
+	<td>"both"</td>
+</tr>
+<tr id="option-snapTolerance">
+	<td>snapTolerance</td>
+    <td>Number</td>
+	<td>从要发生对齐的对齐元素边缘起的距离，以像素计。如果 <code>snap</code> 选项是 <code>false</code> 则忽略。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>snapTolerance</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ snapTolerance: 30 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>snapTolerance</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var snapTolerance = $( ".selector" ).draggable( "option", "snapTolerance" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "snapTolerance", 30 );
+	</pre>
+	</td>
+	<td>20</td>
+</tr>
+<tr id="option-stack">
+	<td>stack</td>
+    <td>Selector</td>
+	<td>控制匹配选择器（selector）的元素集合的 z-index，总是在当前拖拽项的前面，在类似窗口管理器这样的事物中非常有用。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>stack</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ stack: ".products" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>stack</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var stack = $( ".selector" ).draggable( "option", "stack" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "stack", ".products" );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-zIndex">
+	<td>zIndex</td>
+    <td>Number</td>
+	<td>当被拖拽时，助手（helper）的 Z-index。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>zIndex</code> 选项的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({ zIndex: 100 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>zIndex</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var zIndex = $( ".selector" ).draggable( "option", "zIndex" );
+ 
+// setter
+$( ".selector" ).draggable( "option", "zIndex", 100 );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate">
+<tr>
+	<th width="15%">方法</th>
+	<th width="15%">返回</th>
+    <th width="70%">描述</th>
+</tr>
+<tr id="method-destroy">
+	<td>destroy()</td>
+    <td>jQuery (plugin only)</td>
+	<td>完全移除 draggable 功能。这会把元素返回到它的预初始化状态。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 destroy 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable( "destroy" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-disable">
+	<td>disable()</td>
+    <td>jQuery (plugin only)</td>
+	<td>禁用 draggable。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 disable 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable( "disable" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-enable">
+	<td>enable()</td>
+    <td>jQuery (plugin only)</td>
+	<td>启用 draggable。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 enable 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable( "enable" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-option">
+	<td>option( optionName )</td>
+    <td>Object</td>
+	<td>获取当前与指定的 <code>optionName</code> 关联的值。<br />
+	<ul>
+	<li><strong>optionName</strong><br />
+	类型：String<br />
+	描述：要获取的选项的名称。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+var isDisabled = $( ".selector" ).draggable( "option", "disabled" );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option()</td>
+    <td>PlainObject</td>
+	<td>获取一个包含键/值对的对象，键/值对表示当前 draggable 选项哈希。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+var options = $( ".selector" ).draggable( "option" );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option( optionName, value )</td>
+    <td>jQuery (plugin only)</td>
+	<td>设置与指定的 <code>optionName</code> 关联的 draggable 选项的值。<br />
+	<ul>
+	<li><strong>optionName</strong><br />
+	类型：String<br />
+	描述：要设置的选项的名称。
+	</li>
+	<li><strong>value</strong><br />
+	类型：Object<br />
+	描述：要为选项设置的值。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable( "option", "disabled", true );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option( options )</td>
+    <td>jQuery (plugin only)</td>
+	<td>为 draggable 设置一个或多个选项。<br />
+	<ul>
+	<li><strong>options</strong><br />
+	类型：Object<br />
+	描述：要设置的 option-value 对。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable( "option", { disabled: true } );
+	</pre>
+	</td>
+</tr>
+<tr id="method-widget">
+	<td>widget()</td>
+    <td>jQuery</td>
+	<td>返回一个包含 draggable 元素的 <code>jQuery</code> 对象。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 widget 方法：</p>
+	<pre style="white-space: pre-wrap;">
+var widget = $( ".selector" ).draggable( "widget" );
+	</pre>
+	</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate">
+<tr>
+	<th width="15%">事件</th>
+	<th width="15%">类型</th>
+    <th width="70%">描述</th>
+</tr>
+<tr id="event-create">
+	<td>create( event, ui )</td>
+    <td>dragcreate</td>
+	<td>当 draggable 被创建时触发。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+	</li>
+	</ul>
+	<p>注意：<code>ui</code> 对象是空的，这里包含它是为了与其他事件保持一致性。</p>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 create 回调的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({
+  create: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 dragcreate 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "dragcreate", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-drag">
+	<td>drag( event, ui )</td>
+    <td>drag</td>
+	<td>在拖拽期间当鼠标移动时触发。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+		<ul>
+		<li><strong>helper</strong><br />
+		类型：jQuery<br />
+		描述：jQuery 对象，表示被拖拽的助手（helper）。
+		</li>
+		<li><strong>position</strong><br />
+		类型：Object<br />
+		描述：助手（helper）的当前 CSS 位置，比如 <code>{ top, left }</code> 对象。
+		</li>
+		<li><strong>offset</strong><br />
+		类型：Object<br />
+		描述：助手（helper）的当前偏移位置，比如 <code>{ top, left }</code> 对象。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 drag 回调的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({
+  drag: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 drag 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "drag", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-start">
+	<td>start( event, ui )</td>
+    <td>dragstart</td>
+	<td>当拖拽开始时触发。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+		<ul>
+		<li><strong>helper</strong><br />
+		类型：jQuery<br />
+		描述：jQuery 对象，表示被拖拽的助手（helper）。
+		</li>
+		<li><strong>position</strong><br />
+		类型：Object<br />
+		描述：助手（helper）的当前 CSS 位置，比如 <code>{ top, left }</code> 对象。
+		</li>
+		<li><strong>offset</strong><br />
+		类型：Object<br />
+		描述：助手（helper）的当前偏移位置，比如 <code>{ top, left }</code> 对象。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 start 回调的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({
+  start: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 dragstart 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "dragstart", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-stop">
+	<td>stop( event, ui )</td>
+    <td>dragstop</td>
+	<td>当拖拽停止时触发。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+		<ul>
+		<li><strong>helper</strong><br />
+		类型：jQuery<br />
+		描述：jQuery 对象，表示被拖拽的助手（helper）。
+		</li>
+		<li><strong>position</strong><br />
+		类型：Object<br />
+		描述：助手（helper）的当前 CSS 位置，比如 <code>{ top, left }</code> 对象。
+		</li>
+		<li><strong>offset</strong><br />
+		类型：Object<br />
+		描述：助手（helper）的当前偏移位置，比如 <code>{ top, left }</code> 对象。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 stop 回调的 draggable：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).draggable({
+  stop: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 dragstop 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "dragstop", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+</table>
+
+<h2>实例</h2>
+<p>一个简单的 jQuery UI 可拖拽小部件（Draggable Widget）。</p>
+<pre style="white-space: pre-wrap;">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  
+  &lt;link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"&gt;
+  &lt;style&gt;
+  #draggable {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+  }
+  &lt;/style&gt;
+  &lt;script src="//code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+  &lt;script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;div id="draggable"&gt;请拖拽我！&lt;/div&gt;
+ 
+&lt;script&gt;
+$( "#draggable" ).draggable();
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p><a href="/try/tryit.php?filename=jqueryui-api-draggable" target="_blank"><button class="btn btn-info btn-lg">查看演示</button></a></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/api-transfer-effect.html" rel="prev"> jQuery UI API &#8211; 转移特效（Transfer Effect）</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/api-droppable.html" rel="next">jQuery UI API &#8211; 可放置小部件（Droppable Widget）</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.435 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 18:44:00 -->
+
+<!-- super cache -->

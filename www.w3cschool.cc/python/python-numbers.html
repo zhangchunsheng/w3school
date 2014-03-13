@@ -1,0 +1,411 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Python 数字 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Python 循环语句' href='http://www.w3cschool.cc/python/python-loops.html' />
+<link rel='next' title='Python  abs() 函数' href='http://www.w3cschool.cc/python/func-number-abs.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/python/python-numbers.html' />
+<meta name="keywords" content="Python 数字,Python基础教程">
+<meta name="description" content="Python  数字 Python 数字数据类型用于存储数值。 数据类型是不允许改变的,这就意味着如果改变数字数据类型得值，将重新分配内存空间。  以下实例在变量赋值时数字对象将被创建：  var1 = 1 var2 = 10  您也可以使用del语句删除一些数字对象引用。  del语句的语法是：  del var1[,var2[,var3[....,varN]]]]  您可以通过使用del语句删除单个或多个对象，例如：  del va..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Python基础教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tutorial.html" >
+	Python基础教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-intro.html" >
+	Python 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-install.html" >
+	Python环境搭建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-basic-syntax.html" >
+	Python 基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-variable-types.html" >
+	Python 变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-operators.html" >
+	Python 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-if-statement.html" >
+	Python 条件语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-loops.html" >
+	Python 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-while-loop.html" >
+	Python While循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-for-loop.html" >
+	Python for 循环语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-nested-loops.html" >
+	Python 循环嵌套	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-break-statement.html" >
+	Python break 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-continue-statement.html" >
+	Python continue  语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-pass-statement.html" >
+	Python pass 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-numbers.html" >
+	Python 数字	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-strings.html" >
+	Python 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-lists.html" >
+	Python 列表(Lists)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-tuples.html" >
+	Python 元组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-dictionary.html" >
+	Python 字典(Dictionary)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-date-time.html" >
+	Python 日期和时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-functions.html" >
+	Python函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-modules.html" >
+	Python模块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-files-io.html" >
+	Python 文件I/O	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-exceptions.html" >
+	Python 异常处理	</a>
+	<br><h2 class="left"><span class="left_h2">Python</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/python/python-object.html" >
+	Python面向对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-reg-expressions.html" >
+	Python正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-cgi.html" >
+	Python CGI编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-mysql.html" >
+	python操作mysql数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-email.html" >
+	Python使用SMTP发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-multithreading.html" >
+	Python多线程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-xml.html" >
+	python XML解析	</a>
+		<a target="_top" href="http://www.w3cschool.cc/python/python-gui-tkinter.html" >
+	python GUI编程(Tkinter)	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/python-loops.html" rel="prev"> Python 循环语句</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/func-number-abs.html" rel="next">Python  abs() 函数</a> &raquo;</div>
+	</div>
+
+	<h1>Python <span class="color_h1"> 数字</span></h1>
+<p>Python 数字数据类型用于存储数值。</p>
+<p>数据类型是不允许改变的,这就意味着如果改变数字数据类型得值，将重新分配内存空间。</p>
+
+<p>以下实例在变量赋值时数字对象将被创建：</p>
+<pre>
+var1 = 1
+var2 = 10
+</pre>
+<p>您也可以使用del语句删除一些数字对象引用。 </p>
+<p>del语句的语法是：</p>
+<pre>
+del var1[,var2[,var3[....,varN]]]]
+</pre>
+<p>您可以通过使用del语句删除单个或多个对象，例如：</p>
+<pre>
+del var
+del var_a, var_b
+</pre>
+<p>Python 支持四种不同的数值类型：</p>
+<ul>
+<li><strong>整型(Int)</strong> - 通常被称为是整型或整数，是正或负整数，不带小数点。</li>
+<li><strong>长整型(long integers)</strong> - 无限大小的整数，整数最后是一个大写或小写的L。</li>
+<li><strong>浮点型(floating point real values)</strong> - 浮点型由整数部分与小数部分组成，浮点型也可以使用科学计数法表示（2.5e2 = 2.5 x 10<sup>2</sup> = 250）</li>
+<li><strong>复数( (complex numbers))</strong> - 复数的虚部以字母J 或 j结尾 。如：2+3i</li>
+</ul>
+<table class="reference">
+<tbody><tr><th>int</th><th>long</th><th>float</th><th>complex</th></tr>
+<tr><td>10</td><td>51924361L</td><td>0.0</td><td>3.14j</td></tr>
+<tr><td>100</td><td>-0x19323L</td><td>15.20</td><td>45.j</td></tr>
+<tr><td>-786</td><td>0122L</td><td>-21.9</td><td>9.322e-36j</td></tr>
+<tr><td>080</td><td>0xDEFABCECBDAECBFBAEl</td><td>32.3+e18</td><td>.876j</td></tr>
+<tr><td>-0490</td><td>535633629843L</td><td>-90.</td><td>-.6545+0J</td></tr>
+<tr><td>-0x260</td><td>-052318172735L</td><td>-32.54e100</td><td>3e+26J</td></tr>
+<tr><td>0x69</td><td>-4721885298529L</td><td>70.2-E12</td><td>4.53e-7j</td></tr>
+</tbody></table>
+<ul>
+<li>长整型也可以使用小写"L"，但是还是建议您使用大写"L"，避免与数字"1"混淆。Python使用"L"来显示长整型。</li>
+<li>Python还支持复数，复数由实数部分和虚数部分构成，可以用a + bj,或者complex(a,b)表示，
+复数的实部a和虚部b都是浮点型
+</li>
+</ul>
+<br /><hr />
+<h2>Python数字类型转换</h2>
+<pre>
+int(x [,base ])         将x转换为一个整数  
+long(x [,base ])        将x转换为一个长整数  
+float(x )               将x转换到一个浮点数  
+complex(real [,imag ])  创建一个复数  
+str(x )                 将对象 x 转换为字符串  
+repr(x )                将对象 x 转换为表达式字符串  
+eval(str )              用来计算在字符串中的有效Python表达式,并返回一个对象  
+tuple(s )               将序列 s 转换为一个元组  
+list(s )                将序列 s 转换为一个列表  
+chr(x )                 将一个整数转换为一个字符  
+unichr(x )              将一个整数转换为Unicode字符  
+ord(x )                 将一个字符转换为它的整数值  
+hex(x )                 将一个整数转换为一个十六进制字符串  
+oct(x )                 将一个整数转换为一个八进制字符串  
+</pre>
+<br /><hr />
+<h2>Python数学函数</h2>
+<table class="reference">
+<tbody><tr>
+<th>函数</th><th>返回值 ( 描述 )</th></tr>
+<tr><td><a href="/python/func-number-abs.html">abs(x)</a></td><td>返回数字的绝对值，如abs(-10) 返回 10</td></tr>
+<tr><td><a href="/python/func-number-ceil.html">ceil(x) </a></td><td>返回数字的上入整数，如math.ceil(4.1) 返回 5</td></tr>
+<tr><td><a href="/python/func-number-cmp.html">cmp(x, y)</a></td><td> 如果 x &lt; y 返回 -1, 如果  x == y 返回 0,  如果 x &gt; y 返回 1</td></tr>
+<tr><td><a href="/python/func-number-exp.html">exp(x) </a></td><td>返回e的x次幂(e<sup>x</sup>),如math.exp(1) 返回2.718281828459045</td></tr>
+<tr><td><a href="/python/func-number-fabs.html">fabs(x)</a></td><td>返回数字的绝对值，如math.fabs(-10) 返回10.0</td></tr>
+<tr><td><a href="/python/func-number-floor.html">floor(x) </a></td><td>返回数字的下舍整数，如math.floor(4.9)返回 4</td></tr>
+<tr><td><a href="/python/func-number-log.html">log(x) </a></td><td>如math.log(math.e)返回1.0,math.log(100,10)返回2.0</td></tr>
+<tr><td><a href="/python/func-number-log10.html">log10(x) </a></td><td>返回以10为基数的x的对数，如math.log10(100)返回 2.0</td></tr>
+<tr><td><a href="/python/func-number-max.html">max(x1, x2,...) </a></td><td>返回给定参数的最大值，参数可以为序列。</td></tr>
+<tr><td><a href="/python/func-number-min.html">min(x1, x2,...) </a></td><td>返回给定参数的最小值，参数可以为序列。</td></tr>
+<tr><td><a href="/python/func-number-modf.html">modf(x) </a></td><td>返回x的整数部分与小数部分，两部分的数值符号与x相同，整数部分以浮点型表示。</td></tr>
+<tr><td><a href="/python/func-number-pow.html">pow(x, y)</a></td><td> x**y 运算后的值。</td></tr>
+<tr><td><a href="/python/func-number-round.html">round(x [,n])</a></td><td>返回浮点数x的四舍五入值，如给出n值，则代表舍入到小数点后的位数。</td></tr>
+<tr><td><a href="/python/func-number-sqrt.html">sqrt(x) </a></td><td>返回数字x的平方根，数字可以为负数，返回类型为实数，如math.sqrt(4)返回 2+0j</td></tr>
+</tbody></table>
+<br /><hr />
+<h2>Python随机数函数</h2>
+<p>随机数可以用于数学，游戏，安全等领域中，还经常被嵌入到算法中，用以提高算法效率，并提高程序的安全性。</p>
+<p>Python包含以下常用随机数函数：</p>
+<table class="reference">
+<tbody><tr>
+<th>函数</th><th>描述</th></tr>
+<tr><td><a href="/python/func-number-choice.html">choice(seq)</a></td><td>从序列的元素中随机挑选一个元素，比如random.choice(range(10))，从0到9中随机挑选一个整数。</td></tr>
+<tr><td><a href="/python/func-number-randrange.html">randrange ([start,] stop [,step]) </a></td><td>从指定范围内，按指定基数递增的集合中获取一个随机数，基数缺省值为1</td></tr>
+<tr><td><a href="/python/func-number-random.html">random() </a></td><td> 随机生成下一个实数，它在[0,1)范围内。</td></tr>
+<tr><td><a href="/python/func-number-seed.html">seed([x]) </a></td><td>改变随机数生成器的种子seed。如果你不了解其原理，你不必特别去设定seed，Python会帮你选择seed。</td></tr>
+<tr><td><a href="/python/func-number-shuffle.html">shuffle(lst) </a></td><td>将序列的所有元素随机排序</td></tr>
+<tr><td><a href="/python/func-number-uniform.html">uniform(x, y)</a></td><td>随机生成下一个实数，它在[x,y]范围内。</td></tr>
+</tbody></table>
+<br /><hr />
+<h2>Python三角函数</h2>
+<p>
+Python包括以下三角函数：</p>
+<table class="reference">
+<tbody><tr>
+<th>函数</th><th>描述</th></tr>
+<tr><td><a href="/python/func-number-acos.html">acos(x)</a></td><td>返回x的反余弦弧度值。</td></tr>
+<tr><td><a href="/python/func-number-asin.html">asin(x)</a></td><td>返回x的反正弦弧度值。<td></tr>
+<tr><td><a href="/python/func-number-atan.html">atan(x)</a></td><td>返回x的反正切弧度值。</td></tr>
+<tr><td><a href="/python/func-number-atan2.html">atan2(y, x)</a></td><td>返回给定的 X 及 Y 坐标值的反正切值。</td></tr>
+<tr><td><a href="/python/func-number-cos.html">cos(x)</a></td><td>返回x的弧度的余弦值。</td></tr>
+<tr><td><a href="/python/func-number-hypot.html">hypot(x, y)</a></td><td>返回欧几里德范数 sqrt(x*x + y*y)。 </td></tr>
+<tr><td><a href="/python/func-number-sin.html">sin(x)</a></td><td>返回的x弧度的正弦值。</td></tr>
+<tr><td><a href="/python/func-number-tan.html">tan(x)</a></td><td>返回x弧度的正切值。</td></tr>
+<tr><td><a href="/python/func-number-degrees.html">degrees(x)</a></td><td>将弧度转换为角度,如math.degrees(math.tan(1.0)) ,返回30.0</td></tr>
+<tr><td><a href="/python/func-number-radians.html">radians(x)</a></td><td>将角度转换为弧度</td></tr>
+</tbody></table>
+<br /><hr />
+<h2>Python数学常量</h2>
+<table class="reference">
+<tbody><tr>
+<th>常量</th><th>描述</th></tr>
+<tr><td>pi</td><td>数学常量 pi（圆周率，一般以π来表示）</td></tr>
+<tr><td>e</td><td>数学常量 e，e即自然常数（自然常数）。</td></tr>
+</tbody></table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/python/python-loops.html" rel="prev"> Python 循环语句</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/python/func-number-abs.html" rel="next">Python  abs() 函数</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.284 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:34:03 -->
+
+<!-- super cache -->

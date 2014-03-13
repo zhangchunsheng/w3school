@@ -1,0 +1,516 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 地理定位 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='HTML5 拖放' href='http://www.w3cschool.cc/html/html5-draganddrop.html' />
+<link rel='next' title='HTML5 Video(视频)' href='http://www.w3cschool.cc/html/html5-video.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/html/html5-geolocation.html' />
+<meta name="keywords" content="HTML5 地理定位,HTML 基础">
+<meta name="description" content="HTML5 Geolocation（地理定位）   HTML5 Geolocation（地理定位）用于定位用户的位置。  定位用户的位置 HTML5 Geolocation API 用于获得用户的地理位置。 鉴于该特性可能侵犯用户的隐私，除非用户同意，否则用户位置信息是不可用的。  浏览器支持   Internet Explorer 9+, Firefox, Chrome, Safari 和 Opera 支持Geolocation（地理..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>HTML 基础</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-tutorial.html" >
+	HTML 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-intro.html" >
+	HTML 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-editors.html" >
+	HTML 编辑器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-basic.html" >
+	HTML 基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-elements.html" >
+	HTML 元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-attributes.html" >
+	HTML 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-headings.html" >
+	HTML 标题	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-paragraphs.html" >
+	HTML 段落	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-formatting.html" >
+	HTML 文本格式化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-links.html" >
+	HTML 链接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-head.html" >
+	HTML 头部	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-css.html" >
+	HTML CSS	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-images.html" >
+	HTML 图像	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-tables.html" >
+	HTML 表格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-lists.html" >
+	HTML 列表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-blocks.html" >
+	HTML 区块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-layouts.html" >
+	HTML 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-forms.html" >
+	HTML 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-iframes.html" >
+	HTML 框架	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-colors.html" >
+	HTML 颜色	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-colornames.html" >
+	HTML 颜色名	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-colorvalues.html" >
+	HTML 颜色值	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-scripts.html" >
+	HTML 脚本	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-entities.html" >
+	HTML 字符实体	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-ur.html" >
+	HTML URL 	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-quicklist.html" >
+	HTML 速查列表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-summary.html" >
+	HTML 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-xhtml.html" >
+	XHTML 简介	</a>
+	<br/><h2 class="left"><span class="left_h2">HTML5</span></h2>	<a target="_top" href="http://www.w3cschool.cc/html/html5-intro.html" >
+	HTML5 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-new-element.html" >
+	HTML5 新元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-canvas.html" >
+	HTML5 Canvas	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-svg.html" >
+	HTML5 内联 SVG	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-draganddrop.html" >
+	HTML5 拖放	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-geolocation.html" >
+	HTML5 地理定位	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-video.html" >
+	HTML5 Video(视频)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-audio.html" >
+	HTML5 Audio(音频)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-form-input-types.html" >
+	HTML5 Input 类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-form-elements.html" >
+	HTML5 表单元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-form-attributes.html" >
+	HTML5 表单属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-semantic-elements.html" >
+	HTML5 语义元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-webstorage.html" >
+	HTML5 Web 存储	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-app-cache.html" >
+	HTML5 应用程序缓存	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-webworkers.html" >
+	HTML5 Web Workers	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html5-serversentevents.html" >
+	HTML5 SSE	</a>
+	<br/><h2 class="left"><span class="left_h2">HTML</span> 媒体</h2>	<a target="_top" href="http://www.w3cschool.cc/html/html-media.html" >
+	HTML 媒体(Media)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-object.html" >
+	HTML 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-sounds.html" >
+	HTML 音频(Audio)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-videos.html" >
+	HTML视频（Videos）播放	</a>
+		<a target="_top" href="http://www.w3cschool.cc/html/html-examples.html" >
+	HTML 实例	</a>
+	<br><h2 class="left"><span class="left_h2">HTML</span> 参考手册</h2>
+<a target="_top" href="http://www.w3cschool.cc/tags/html-reference.html" >
+	HTML 标签列表(字母排序)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-byfunc.html" >
+	HTML 标签列表（功能排序）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-standardattributes.html" >
+	HTML 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-eventattributes.html" >
+	HTML 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-canvasreference.html" >
+	HTML 画布	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-audiovideo.html" >
+	HTML 音频/视频	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-elementsdoctypes.html" >
+	HTML 有效DOCTYPES	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-colorname.html" >
+	HTML 颜色名	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-colorpicker.html" >
+	HTML 拾色器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-charactersets.html" >
+	HTML 字符集	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-ascii.html" >
+	HTML ASCII	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-entities.html" >
+	HTML ISO-8859-1	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-symbols.html" >
+	HTML 符号	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-urlencode.html" >
+	HTML URL 编码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-language-codes.html" >
+	HTML 语言代码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-httpmessages.html" >
+	HTTP 消息	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-httpmethods.html" >
+	HTTP 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-keyboardshortcuts.html" >
+	键盘快捷键	</a></div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/html/html5-draganddrop.html" rel="prev"> HTML5 拖放</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/html/html5-video.html" rel="next">HTML5 Video(视频)</a> &raquo;</div>
+	</div>
+
+	<h1>HTML5 <span class="color_h1">Geolocation（地理定位）</span>
+</h1>
+<hr />
+<p class="intro" id="demo">HTML5 Geolocation（地理定位）用于定位用户的位置。</p>
+<hr />
+<h2>定位用户的位置</h2>
+<p>HTML5 Geolocation API 用于获得用户的地理位置。</p>
+<p>鉴于该特性可能侵犯用户的隐私，除非用户同意，否则用户位置信息是不可用的。</p>
+<hr />
+<h2>浏览器支持</h2>
+<p>
+<img src="/images/compatible_ie.gif" width="31" height="30" alt="Internet Explorer" title="Internet Explorer"><img src="/images/compatible_firefox.gif" width="31" height="30" alt="Firefox" title="Firefox"><img src="/images/compatible_opera.gif" width="28" height="30" alt="Opera" title="Opera"><img src="/images/compatible_chrome.gif" width="31" height="30" alt="Google Chrome" title="Google Chrome"><img src="/images/compatible_safari.gif" width="28" height="30" alt="Safari" title="Safari"></p>
+<p>Internet Explorer 9+, Firefox, Chrome, Safari 和 Opera 支持Geolocation（地理定位）.</p>
+<p><b>注意: </b>Geolocation（地理定位）对于拥有 GPS 的设备，比如 iPhone，地理定位更加精确。</p>
+<hr />
+<h2>HTML5 - 使用地理定位</h2>
+<p>请使用 getCurrentPosition() 方法来获得用户的位置。</p>
+<p>下例是一个简单的地理定位实例，可返回用户位置的经度和纬度:</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;script&gt;<br />var x=document.getElementById("demo");<br />function 
+	getLocation()<br />  {<br />  if (navigator.geolocation)<br />    
+	{<br />    
+	navigator.geolocation.getCurrentPosition(showPosition);<br />    
+	}<br />  else{x.innerHTML="该浏览器不支持获取地理位置。";}<br />  }<br />
+	function showPosition(position)<br />  {<br />  x.innerHTML="Latitude: 
+	" + position.coords.latitude + <br />  "&lt;br&gt;Longitude: " + position.coords.longitude; <br />  }<br />&lt;/script&gt;</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_geolocation" target="_blank">尝试一下  »</a>
+</div>
+<p>实例解析:</p>
+<ul>
+<li>检测是否支持地理定位</li>
+<li>如果支持，则运行 getCurrentPosition() 方法。如果不支持，则向用户显示一段消息。</li>
+<li>如果getCurrentPosition()运行成功，则向参数showPosition中规定的函数返回一个coordinates对象</li>
+<li>showPosition() 函数获得并显示经度和纬度</li>
+</ul>
+<p>上面的例子是一个非常基础的地理定位脚本，不含错误处理。</p>
+<hr />
+<h2>处理错误和拒绝</h2>
+<p>getCurrentPosition() 方法的第二个参数用于处理错误。它规定当获取用户位置失败时运行的函数：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	function showError(error)<br />  {<br />  switch(error.code) <br />    
+	{<br />    case error.PERMISSION_DENIED:<br />      
+	x.innerHTML="用户拒绝对获取地理位置的请求。"<br />      
+	break;<br />    case error.POSITION_UNAVAILABLE:<br />      
+	x.innerHTML="位置信息是不可用的。"<br />      
+	break;<br />    case error.TIMEOUT:<br />      
+	x.innerHTML="请求用户地理位置超时。"<br />      
+	break;<br />    case error.UNKNOWN_ERROR:<br />      
+	x.innerHTML="未知错误。"<br />      
+	break;<br />    }<br />  }</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_geolocation_error" target="_blank">尝试一下  »</a>
+</div>
+<p>错误代码：</p>
+<ul>
+<li>Permission denied - 用户不允许地理定位</li>
+<li>Position unavailable - 无法获取当前位置</li>
+<li>Timeout - 操作超时</li>
+</ul>
+<hr />
+<h2>在地图中显示结果</h2>
+<p>如需在地图中显示结果，您需要访问可使用经纬度的地图服务，比如谷歌地图或百度地图：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	function showPosition(position)<br />{<br />var 
+	latlon=position.coords.latitude+","+position.coords.longitude;<br /><br />var 
+	img_url="http://maps.googleapis.com/maps/api/staticmap?center="<br />
+	+latlon+"&amp;zoom=14&amp;size=400x300&amp;sensor=false";<br /><br />
+	document.getElementById("mapholder").innerHTML="&lt;img src='"+img_url+"'&gt;";<br />
+	}<br />
+</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_geolocation_map" target="_blank">尝试一下  »</a>
+</div>
+<p>在上例中，我们使用返回的经纬度数据在谷歌地图中显示位置（使用静态图像）。/p>
+<p><a href="/try/try.php?filename=tryhtml5_geolocation_map_script" target="_blank">Google地图脚本</a><br />
+上面的链接向您演示如何使用脚本来显示带有标记、缩放和拖曳选项的交互式地图。</p>
+<hr />
+<h2>给定位置的信息</h2>
+<p>本页演示的是如何在地图上显示用户的位置。不过，地理定位对于给定位置的信息同样很有用处。</p>
+<p>实例:</p>
+<ul>
+<li>更新本地信息</li>
+<li>显示用户周围的兴趣点</li>
+<li>交互式车载导航系统 (GPS)</li>
+</ul>
+<hr />
+<h2>getCurrentPosition() 方法 - 返回数据</h2>
+<p>T若成功，则 getCurrentPosition() 方法返回对象。始终会返回 latitude、longitude 以及 accuracy 属性。如果可用，则会返回其他下面的属性。</p>
+<table class="reference notranslate">
+<tbody><tr>
+<th style="width:40%;">属性</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>coords.latitude</td>
+<td>十进制数的纬度</td>
+</tr>
+
+<tr>
+<td>coords.longitude</td>
+<td>十进制数的经度</td>
+</tr>
+
+<tr>
+<td>coords.accuracy</td>
+<td>位置精度</td>
+</tr>
+
+<tr>
+<td>coords.altitude</td>
+<td>海拔，海平面以上以米计</td>
+</tr>
+
+<tr>
+<td>coords.altitudeAccuracy</td>
+<td>位置的海拔精度</td>
+</tr>
+
+<tr>
+<td>coords.heading</td>
+<td>方向，从正北开始以度计</td>
+</tr>
+
+<tr>
+<td>coords.speed</td>
+<td>速度，以米/每秒计</td>
+</tr>
+
+<tr>
+<td>timestamp</td>
+<td>响应的日期/时间</td>
+</tr>
+</tbody></table>
+<br /><hr />
+<h2>Geolocation 对象 - 其他有趣的方法</h2>
+<p>watchPosition() - 返回用户的当前位置，并继续返回用户移动时的更新位置（就像汽车上的 GPS）。</p>
+<p>clearWatch() - 停止 watchPosition() 方法</p>
+<p>下面的例子展示 watchPosition() 方法。您需要一台精确的 GPS 设备来测试该例（比如 iPhone）： </p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;script&gt;<br />var x=document.getElementById("demo");<br />function 
+	getLocation()<br />  {<br />  if (navigator.geolocation)<br />    
+	{<br />    
+	navigator.geolocation.watchPosition(showPosition);<br />    
+	}<br />  else{x.innerHTML="该浏览器不支持获取地理位置。";}<br />  }<br />
+	function showPosition(position)<br />  {<br />  x.innerHTML="纬度: 
+	" + position.coords.latitude + <br />  "&lt;br&gt;经度: " + position.coords.longitude; <br />  }<br />&lt;/script&gt;</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryhtml5_geolocation_watchposition" target="_blank">尝试一下  »</a>
+</div>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/html/html5-draganddrop.html" rel="prev"> HTML5 拖放</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/html/html5-video.html" rel="next">HTML5 Video(视频)</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 1.493 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 22:08:22 -->
+
+<!-- super cache -->

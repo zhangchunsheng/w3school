@@ -1,0 +1,488 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>XSL-FO region-end 对象 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='XSL-FO region-body 对象' href='http://www.w3cschool.cc/xslfo/obj-region-body.html' />
+<link rel='next' title='XSL-FO region-start 对象' href='http://www.w3cschool.cc/xslfo/obj-region-start.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/xslfo/obj-region-end.html' />
+<meta name="keywords" content="XSL-FO region-end 对象,XSLFO 教程">
+<meta name="description" content="XSL-FO region-end 对象  XSL-FO 参考手册  定义和用法  &lt;fo:region-end&gt; 对象定义了页面的右部区域（右侧栏）。  XSL-FO 使用下列元素来定义页面的区域：   &lt;fo:region-body&gt; 定义了主体区域    &lt;fo:region-before&gt; 定义了顶部区域（页眉）   &lt;fo:region-after&gt; 定义了底部区域（页脚）   ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>XSLFO 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-tutorial.html" >
+	XSL-FO 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-intro.html" >
+	XSLFO 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-documents.html" >
+	XSLFO 文档	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-areas.html" >
+	XSLFO 区域	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-output.html" >
+	XSLFO 输出	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-flow.html" >
+	XSLFO 流	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-pages.html" >
+	XSLFO 页面	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-blocks.html" >
+	XSLFO 块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-lists.html" >
+	XSLFO 列表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-tables.html" >
+	XSLFO 表格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-xslt.html" >
+	XSLFO & XSLT	</a>
+		<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-software.html" >
+	XSLFO 软件	</a>
+	<br><h2 class="left"><span class="left_h2">XSLFO</span> 参考手册</h2>	<a target="_top" href="http://www.w3cschool.cc/xslfo/xslfo-reference.html" >
+	XSL-FO 对象	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/xslfo/obj-region-body.html" rel="prev"> XSL-FO region-body 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/xslfo/obj-region-start.html" rel="next">XSL-FO region-start 对象</a> &raquo;</div>
+	</div>
+
+	<h1>XSL-FO <span class="color_h1">region-end</span> 对象</h1>
+<a href="xslfo-reference.html"><img class="navup" src="/images/up.gif" alt="XSL-FO 参考手册"> XSL-FO 参考手册</a>
+<hr />
+<h2>定义和用法</h2>
+
+<p>&lt;fo:region-end&gt; 对象定义了页面的右部区域（右侧栏）。</p>
+
+<p>XSL-FO 使用下列元素来定义页面的区域：</p>
+
+<ul type="square">
+<li>&lt;fo:region-body&gt; 定义了主体区域 </li>
+  <li>&lt;fo:region-before&gt; 定义了顶部区域（页眉）</li>
+  <li>&lt;fo:region-after&gt; 定义了底部区域（页脚）</li>
+  <li>&lt;fo:region-start&gt; 定义了左部区域（左侧栏）</li>
+  <li>&lt;fo:region-end&gt; 定义了右部区域（右侧栏）</li>
+</ul>
+<p><b>注意：</b>region-before、region-after、region-start 以及 region-end 都是 region-body 的一部分。为了避免 region-body 内的文本覆盖其它区域的文本， region-body 的边距至少必须与上述四个子区域的尺寸相同。</p>
+
+<p><b>注意：</b>根据 XSL-FO 1.0 版本的推荐标准，padding 和 border-width 属性必须为 0。</p>
+
+<hr />
+<h2>语法</h2>
+
+<div class="code notranslate"><div>
+
+&lt;fo:region-end&gt;<br />
+  &lt;!--<br />
+    Contents:EMPTY<br />
+  --&gt;<br />
+&lt;/fo:region-end&gt;
+
+</div></div>
+<h2>属性</h2>
+<table class="reference notranslate">
+<tr>
+<th width="50%" align="left">属性 [A-B]</th>
+    <th width="50%" align="left">属性 [C-Z]</th>
+  </tr>
+<tr>
+<td>background-attachment</td>
+    <td>clip</td>
+    </tr>
+<tr>
+<td>background-color</td>
+    <td>
+    display-align</td>
+    </tr>
+<tr>
+<td>background-image</td>
+    <td>
+    extent</td>
+  </tr>
+<tr>
+<td>background-repeat</td>
+    <td>overflow</td>
+  </tr>
+<tr>
+<td>background-position-horizontal</td>
+    <td>
+    padding-after
+</td>
+  </tr>
+<tr>
+<td>background-position-vertical</td>
+    <td>
+    padding-before
+</td>
+  </tr>
+<tr>
+<td>border-after-color</td>
+    <td>
+    padding-bottom
+</td>
+  </tr>
+<tr>
+<td>border-after-style</td>
+    <td>
+    padding-end
+</td>
+  </tr>
+<tr>
+<td>border-after-width</td>
+    <td>
+    padding-left
+</td>
+  </tr>
+<tr>
+<td>border-before-color</td>
+    <td>
+    padding-right
+</td>
+  </tr>
+<tr>
+<td>border-before-style</td>
+    <td>
+    padding-start
+</td>
+  </tr>
+<tr>
+<td>border-before-width</td>
+    <td>
+    padding-top
+</td>
+  </tr>
+<tr>
+<td>border-bottom-color</td>
+    <td>
+    region-name</td>
+  </tr>
+<tr>
+<td>border-bottom-style</td>
+    <td>
+    reference-orientation</td>
+  </tr>
+<tr>
+<td>border-bottom-width</td>
+    <td>
+    writing-mode</td>
+  </tr>
+<tr>
+<td>border-end-color</td>
+    <td>
+     </td>
+  </tr>
+<tr>
+<td>border-end-style</td>
+    <td>
+     </td>
+  </tr>
+<tr>
+<td>border-end-width</td>
+    <td>
+     </td>
+  </tr>
+<tr>
+<td>border-left-color</td>
+    <td>
+     </td>
+  </tr>
+<tr>
+<td>border-left-style</td>
+    <td>
+     </td>
+  </tr>
+<tr>
+<td>border-left-width</td>
+    <td> </td>
+  </tr>
+<tr>
+<td>border-right-color</td>
+    <td> </td>
+  </tr>
+<tr>
+<td>border-right-style</td>
+    <td>
+     </td>
+  </tr>
+<tr>
+<td>border-right-width</td>
+    <td> </td>
+  </tr>
+<tr>
+<td>border-start-color</td>
+    <td> </td>
+  </tr>
+<tr>
+<td>border-start-style</td>
+    <td>
+     </td>
+  </tr>
+<tr>
+<td>border-start-width</td>
+    <td>
+     </td>
+  </tr>
+<tr>
+<td>border-top-color</td>
+    <td>
+     </td>
+  </tr>
+<tr>
+<td>border-top-style</td>
+    <td>
+     </td>
+  </tr>
+<tr>
+<td>border-top-width</td>
+    <td>
+     </td>
+  </tr>
+</table>
+<h3>实例 1</h3>
+
+<p>XSL-FO 使用名为 "Page Masters" 的页面模板来定义页面的布局。每个模板必须拥有一个唯一的名称：</p>
+
+<div class="code notranslate"><div>
+
+&lt;fo:simple-page-master master-name="intro"&gt;<br />
+  &lt;fo:region-body margin="5in" /&gt;<br />
+&lt;/fo:simple-page-master&gt;<br /><br />
+&lt;fo:simple-page-master master-name="left"&gt;<br />
+  &lt;fo:region-body margin-left="2in" margin-right="3in" /&gt;<br />
+&lt;/fo:simple-page-master&gt;<br /><br />
+&lt;fo:simple-page-master master-name="right"&gt;<br />
+  &lt;fo:region-body margin-left="3in" margin-right="2in" /&gt;<br />
+&lt;/fo:simple-page-master&gt;
+
+</div></div>
+<p>在上面的实例中，三个 &lt;fo:simple-page-master&gt; 元素，定义了三个不同的模板。每个模板（page-master）都有不同的名称。</p>
+<p>第一个模板名为 "intro"。它可作为介绍页面的模板使用。</p>
+<p>第二个和第三个模板名为 "left" 和 "right"。它们可作为偶数和奇数页码的页面模板使用。</p>
+
+<h3>实例 2</h3>
+<p>这是从某个 XSL-FO 文档中提取的一个片断：</p>
+
+<div class="code notranslate"><div>
+
+&lt;fo:simple-page-master master-name="A4"<br />
+ page-width="297mm" page-height="210mm"<br />
+ margin-top="1cm"   margin-bottom="1cm"<br />
+ margin-left="1cm"  margin-right="1cm"&gt;<br />
+  &lt;fo:region-body   margin="3cm"/&gt;<br />
+  &lt;fo:region-before extent="2cm"/&gt;<br />
+  &lt;fo:region-after  extent="2cm"/&gt;<br />
+  &lt;fo:region-start  extent="2cm"/&gt;<br />
+  &lt;fo:region-end    extent="2cm"/&gt;<br />
+&lt;/fo:simple-page-master&gt;
+
+</div></div>
+<p>上面的代码定义了一个名称为 "A4" 的 "Simple Page Master Template"。</p>
+<p>页面的宽度是 297 毫米，高度是 210 毫米。</p>
+<p>页面的四个边距（上边距、下边距、左边距、右边距）均为 1 厘米。</p>
+<p>主体的边距是 3 厘米（四个边都是）。</p>
+<p>主体的 before、after、start 以及 end 区均为 2 厘米。</p>
+<p>上面的实例中的主体的宽度可通过页面宽度减去左右边距以及 region-body 的边距来计算得出：</p>
+<p>297mm - (2 x 1cm) - (2 x 3cm) = 297mm - 20mm - 60mm = 217mm</p>
+
+<p>请注意，region（region-start 和 region-end）没有被计算进来。正如之前讲解过的，这些区（region）是主体的组成部分。</p>
+<hr />
+<a href="xslfo-reference.html"><img class="navup" src="/images/up.gif" alt="XSL-FO 参考手册"> XSL-FO 参考手册</a>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/xslfo/obj-region-body.html" rel="prev"> XSL-FO region-body 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/xslfo/obj-region-start.html" rel="next">XSL-FO region-start 对象</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.197 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 19:47:53 -->
+
+<!-- super cache -->

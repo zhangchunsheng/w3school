@@ -1,0 +1,525 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript 字符串（String）对象 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='PHP date_sub() 函数' href='http://www.w3cschool.cc/php/func-date-date-sub.html' />
+<link rel='next' title='JavaScript Date（日期）对象' href='http://www.w3cschool.cc/js/js-obj-date.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/js/js-obj-string.html' />
+<meta name="keywords" content="JavaScript 字符串（String）对象,JS 教程">
+<meta name="description" content="JavaScript 字符串（String） 对象  String 对象用于处理已有的字符块。  JavaScript 字符串 一个字符串用于存储一系列字符就像 'John Doe'. 一个字符串可以使用单引号或双引号：   实例  var carname='Volvo XC60'; var carname='Volvo XC60';  你使用位置（索引）可以访问字符串中任何的字符：  实例  var character=carname..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JS 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-tutorial.html" >
+	JavaScript 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-intro.html" >
+	JavaScript 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-howto.html" >
+	JavaScript 用法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-whereto.html" >
+	JavaScript 输出	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-statements.html" >
+	JavaScript 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-comments.html" >
+	JavaScript 注释	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-variables.html" >
+	JavaScript  变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-datatypes.html" >
+	JavaScript 数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-intro.html" >
+	JavaScript 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-functions.html" >
+	JavaScript 函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-operators.html" >
+	JavaScript 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-comparisons.html" >
+	JavaScript 比较	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-if-else.html" >
+	JavaScript 条件语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-switch.html" >
+	JavaScript Switch	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-loop-for.html" >
+	JavaScript for 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-loop-while.html" >
+	JavaScript while	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-break.html" >
+	JavaScript Breaks	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-errors.html" >
+	JavaScript  错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-form-validation.html" >
+	JavaScript 表单验证	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> HTML DOM</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom.html" >
+	DOM 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-html.html" >
+	DOM HTML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-css.html" >
+	DOM CSS	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-events.html" >
+	DOM 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-elements.html" >
+	DOM 元素	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-objects.html" >
+	JavaScript 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-number.html" >
+	JavaScript Number 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-string.html" >
+	JavaScript String	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-date.html" >
+	JavaScript Date（日期）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-array.html" >
+	JavaScript  Array（数组）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-boolean.html" >
+	JavaScript Boolean（布尔）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-math.html" >
+	JavaScript Math（算数）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-regexp.html" >
+	JavaScript RegExp 对象	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 浏览器BOM</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-window.html" >
+	JavaScript Window	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-screen.html" >
+	JavaScript Window Screen	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-location.html" >
+	JavaScript Window Location	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-history.html" >
+	JavaScript Window History	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-navigator.html" >
+	JavaScript Navigator	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-popup.html" >
+	JavaScript 弹窗	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-timing.html" >
+	JavaScript 计时事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-cookies.html" >
+	JavaScript Cookies	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 库</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-libraries.html" >
+	JavaScript 库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-lib-jquery.html" >
+	JavaScript 测试 jQuery	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-lib-prototype.html" >
+	JavaScript 测试 Prototype	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 实例</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-examples.html" >
+	JavaScript 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-objects.html" >
+	JavaScript 对象实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-browser.html" >
+	JavaScript 浏览器对象实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-dom.html" >
+	JavaScript HTML DOM 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-summary.html" >
+	JavaScript 总结	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 参考手册</h2>
+<a target="_top" href="/jsref/jsref-tutorial.html">JavaScript 对象</a>
+<a target="_top" href="/jsref/dom-obj-document.html">HTML DOM 对象</a></div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/js/js-obj-number.html" rel="prev"> JavaScript Number 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/js/js-obj-date.html" rel="next">JavaScript Date（日期）对象</a> &raquo;</div>
+	</div>
+
+	<h1>JavaScript <span class="color_h1">字符串（String）</span> 对象</h1>
+<hr />
+<p class="intro">String 对象用于处理已有的字符块。</p>
+<hr />
+<h2>JavaScript 字符串</h2>
+<p>一个字符串用于存储一系列字符就像 "John Doe".</p>
+<p>一个字符串可以使用单引号或双引号：</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code ">
+var
+carname="Volvo XC60";<br />
+var
+carname='Volvo XC60';</div>
+</div>
+<p>你使用位置（索引）可以访问字符串中任何的字符：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var character=carname[7];</div>
+</div>
+
+<p>字符串的索引从零开始, 所以字符串第一字符为 [0],第二个字符为 [1], 等等。</p>
+<p>你可以在字符串中使用引号，如下实例：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var answer="It's alright";<br />
+var answer="He is called 'Johnny'";<br />
+var answer='He is called "Johnny"';</div>
+</div>
+
+<p>或者你可以在字符串中使用转义字符使用引号：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var answer='It's alright';<br />
+var answer="He is called "Johnny"";</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjs_datatypes_string">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>字符串（String）</h2>
+<p>字符串（String）使用长度属性<strong>length</strong>来计算字符串的长度：</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	var txt="Hello World!";<br />document.write(txt.length);<br /><br />var txt="ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br />document.write(txt.length);</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjs_string_length">尝试一下 »</a>
+</div>
+<hr />
+<h2>在字符串中查找字符串</h2>
+<p>字符串使用 indexOf() 来定位字符串中某一个指定的字符首次出现的位置：</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	var str="Hello world, welcome to the universe.";<br />var n=str.indexOf("welcome");</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryjs_string_indexof" target="_blank">尝试一下 »</a>
+</div>
+<p>如果没找到对应的字符函数返回-1</p>
+<p> lastIndexOf() 方法在字符串末尾开始查找字符串出现的文章。</p>
+<hr />
+<h2>内容匹配</h2>
+<p><strong>match()</strong>函数用来查找字符串中特定的字符，并且如果找到的话，则返回这个字符。</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+	<div class="example_code notranslate">
+		var str="Hello world!";<br />document.write(str.match("world") + "&lt;br&gt;");<br />
+	document.write(str.match("World") + "&lt;br&gt;");<br />document.write(str.match("world!"));</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryjs_string_match" target="_blank">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>替换内容</h2>
+<p><strong>replace()</strong> replace() 方法在字符串中用某些字符替换另一些字符。</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	str="Please visit Microsoft!"<br />var n=str.replace("Microsoft","w3cschool");<br />
+</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryjs_string_replace" target="_blank">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>字符串大小写转换</h2>
+<p>字符串大小写转换使用函数 <strong>toUpperCase() </strong>
+/<strong> toLowerCase()</strong>:</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var txt="Hello World!";       // 
+String<br />
+var txt1=txt.toUpperCase();   // txt1 is txt converted 
+to upper<br />
+var txt2=txt.toLowerCase();   // txt2 is txt converted 
+to lower</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryjs_string_toupper" target="_blank">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>字符串转为数组</h2>
+<p>字符串使用strong>split()</strong>函数转为数组:</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+txt="a,b,c,d,e"   // String<br />
+txt.split(",");   // Split on commas<br />txt.split(" ");   // Split on 
+	spaces<br />txt.split("|");   // Split on pipe 
+</div>
+<br /><a class="tryitbtn" href="/try/try.php?filename=tryjs_string_split" target="_blank">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>特殊字符</h2>
+<p>backslash () 函数可以插入特殊符号，可以是：撇号,引号等其他特殊符号。</p>
+<p>查看如下 JavaScript 代码:</p>
+
+<div class="code notranslate"><div>
+
+var txt="We are the so-called "Vikings" from the north.";<br />
+document.write(txt);</div></div>
+
+<p>在JavaScript中，字符串的开始和停止使用单引号或双引号。这意味着，上面的字符串将被切成： We are the so-called</p>
+<p>解决以上的问题可以使用函数 backslash ()</p>
+
+<div class="code notranslate"><div>
+
+var txt="We are the so-called "Vikings" from the north.";<br />
+document.write(txt);</div></div>
+
+<p>JavaScript将输出正确的文本字符串：We are the so-called "Vikings" from the north.</p>
+<p>下表列出其他特殊字符，可以使用反斜杠转义特殊字符：</p>
+
+<table class="reference ">
+<tr>
+<th align="left">代码</th>
+  <th align="left">输出</th>
+</tr>
+<tr>
+<td>\'</td>
+  <td>单引号</td>
+</tr>
+<tr>
+<td>\"</td>
+  <td>双引号</td>
+</tr>
+<tr>
+<td>\\</td>
+  <td>斜杆</td>
+</tr>
+<tr>
+<td>\n</td>
+  <td>换行</td>
+</tr>
+<tr>
+<td>\r</td>
+  <td>回车</td>
+</tr>
+<tr>
+<td>\t</td>
+  <td>tab</td>
+</tr>
+<tr>
+<td>\b</td>
+  <td>空格</td>
+</tr>
+<tr>
+<td>\f</td>
+  <td>换页</td>
+</tr>
+</table>
+<br /><hr />
+<h2>字符串属性和方法</h2>
+<p>属性:</p>
+<ul>
+<li>length</li>
+	<li>prototype</li>
+	<li>constructor</li>
+</ul>
+<p>方法:</p>
+<ul>
+<li>charAt()</li>
+	<li>charCodeAt()</li>
+	<li>concat()</li>
+	<li>fromCharCode()</li>
+	<li>indexOf()</li>
+	<li>lastIndexOf()</li>
+	<li>match()</li>
+	<li>replace()</li>
+	<li>search()</li>
+	<li>slice()</li>
+	<li>split()</li>
+	<li>substr()</li>
+	<li>substring()</li>
+	<li>toLowerCase()</li>
+	<li>toUpperCase()</li>
+	<li>valueOf()</li>
+</ul>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/js/js-obj-number.html" rel="prev"> JavaScript Number 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/js/js-obj-date.html" rel="next">JavaScript Date（日期）对象</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.186 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 23:46:31 -->
+
+<!-- super cache -->

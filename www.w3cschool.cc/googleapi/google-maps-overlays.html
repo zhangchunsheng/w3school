@@ -1,0 +1,435 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Google 地图叠加层 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Google 地图基础' href='http://www.w3cschool.cc/googleapi/google-maps-basic.html' />
+<link rel='next' title='Google 地图事件' href='http://www.w3cschool.cc/googleapi/google-maps-events.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/googleapi/google-maps-overlays.html' />
+<meta name="keywords" content="Google 地图叠加层,Google地图 API">
+<meta name="description" content="var myCenter=new google.maps.LatLng(51.508742,-0.120850);  function initialize() { var mapProp = {   center: myCenter,   zoom:5,   mapTypeId: google.maps.MapTypeId.ROADMAP   };  var map = new google.maps.Map(document.get..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Google地图 API</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/googleapi-tutorial.html" >
+	Google API 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-api-key.html" >
+	Google 地图 API	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-basic.html" >
+	Google 地图基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-overlays.html" >
+	Google 地图叠加层	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-events.html" >
+	Google 地图事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-controls.html" >
+	Google 地图控件集	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-types.html" >
+	Google 地图类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-ref.html" >
+	Google 地图参考手册	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/ref-map.html" >
+	地图 API Map() 构造器	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/googleapi/google-maps-basic.html" rel="prev"> Google 地图基础</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/googleapi/google-maps-events.html" rel="next">Google 地图事件</a> &raquo;</div>
+	</div>
+
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&#038;sensor=false">
+</script>
+
+<script>
+var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+
+function initialize()
+{
+var mapProp = {
+  center: myCenter,
+  zoom:5,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+<style>a.menu_google_maps_overlays{font-weight:bold;}</style>
+
+<h1>Google 地图 <span class="color_h1"叠加层</span>
+</h1>
+<hr />
+<p class="intro">在Google地图中添加一个标记</p>
+<div id="googleMap" style="width:100%;height:380px"></div>
+<hr />
+<h2>Google 地图 - 叠加层</h2>
+<p>叠加层是地图上绑定到经度/纬度坐标的对象，会随您拖动或缩放地图而移动。</p>
+<p>Google 地图 API 有如下几种叠加层：</p>
+<ul>
+  	
+    <li>地图上的点使用标记来显示，通常显示自定义图标。标记是 GMarker 类型的对象，并且可以利用 GIcon 类型的对象来自定义图标。</li>
+    
+    <li>地图上的线使用折线（表示点的集合）来显示。线是类型为 GPolyline 的对象。</li>
+    
+    <li>地图上的区域显示为多边形（如果是任意形状的区域）或底面叠加层（如果是矩形区域）。多边形类似于闭合的折线，因此可以是任何形状。地面叠加层通常用于地图上与图块有直接或间接关联的区域。</li>
+    
+    <li>地图本身使用图块叠加层显示。如果您有自己的系列图块，可以使用 GTileLayerOverlay 类来改变地图上已有的图块，甚至可以使用 GMapType 来创建您自己的地图类型。</li>
+    
+    <li>信息窗口也是一种特殊的叠加层。但是请注意，信息窗口会自动添加到地图中，并且地图只能添加一个类型为 GInfoWindow 的对象。</li>
+    
+  </ul>
+
+<hr />
+<h2>Google 地图 - 添加标记</h2>
+<p>记标识地图上的点。默认情况下，它们使用 G_DEFAULT_ICON（您也可以指定自定义图标）。GMarker 构造函数将 GLatLng 和 GMarkerOptions（可选）对象作为参数。<p></p>
+标记设计为可交互。例如，默认情况下它们接收 "click" 事件，常用于在事件侦听器中打开信息窗口。</p>
+<p>通过 setMap() 
+方法在地图上添加标记:</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var marker=new google.maps.Marker({<br />
+  position:myCenter,<br />
+  });<br /><br />
+marker.setMap(map);</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtml_map_overlays_marker">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>Google 地图 - 可拖动的标记</h2>
+<p>以下实例将减少如何使用 animation 属性来拖动标记:</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+marker=new google.maps.Marker({<br />
+  position:myCenter,<br />
+  animation:google.maps.Animation.BOUNCE<br />
+  });<br /><br />
+marker.setMap(map);</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtml_map_overlays_animate">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>Google 地图 - 图标</h2>
+<p>标记可以用自定义的新图标来显示，以替代默认图标:</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var marker=new google.maps.Marker({<br />
+  position:myCenter,<br />
+  icon:'pinkball.png'<br />
+  });<br /><br />
+marker.setMap(map);</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtml_map_overlays_icon">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>Google 地图 - 折线</h2>
+<p>GPolyline 对象可在地图上创建线性叠加层。GPolyline 包括一系列点，并创建一系列有序连接这些点的线段。</p>
+<p>折线支持以下属性：</p>
+<ul>
+<li>path - 指定了多个直线的纬度/经度坐标 </li>
+	<li>strokeColor - 指定直线的十六进制颜色值(格式: "#FFFFFF")</li>
+	<li>strokeOpacity - 指定直线的透明度(该值为  0.0 
+	到 1.0)</li>
+	<li>strokeWeight - 定义线的宽度,以像素为单位。</li>
+	<li>editable - 定义用户是否可编辑直线(true/false)</li>
+</ul>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var myTrip = [stavanger,amsterdam,london];<br />
+var flightPath = new google.maps.Polyline({<br />
+  path:myTrip,<br />
+  strokeColor:"#0000FF",<br />
+  strokeOpacity:0.8,<br />
+  strokeWeight:2<br />
+});</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtml_map_overlays_polyline">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>Google 地图 - 多边形</h2>
+<p>GPolygon 对象类似于 GPolyline 对象，因为它们都包括一系列有序的点。但是，多边形不像折线一样有两个端点，而是设计为定义形成闭环的区域。</p>
+<p>和折线一样，您可以自定义多边形边（线）的颜色、粗细和透明度，以及封闭的填充区域的颜色和透明度。颜色应是十六进制数字 HTML 样式。</p>
+<p>多边形支持以下属性：</p>
+<ul>
+<li>path - 指定多个直线纬度的坐标 (第一个和最后一个坐标是相等的)</li>
+	<li>strokeColor - 指定直线的十六进制颜色值(格式: "#FFFFFF")</li>
+	<li>strokeOpacity -指定直线的透明度(该值为  0.0 
+	到 1.0)</li>
+	<li>strokeWeight - 定义线的宽度,以像素为单位。</li>
+	<li>fillColor - 指定闭合区域的十六进制颜色值 (格式: "#FFFFFF")</li>
+	<li>fillOpacity - 指定填充颜色的透明度 (该值为 
+	0.0 到  1.0)</li>
+	<li>editable - 定义用户是否可编辑直线(true/false)</li>
+</ul>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var myTrip = [stavanger,amsterdam,london,stavanger];<br />
+var flightPath = new google.maps.Polygon({<br />
+  path:myTrip,<br />
+  strokeColor:"#0000FF",<br />
+  strokeOpacity:0.8,<br />
+  strokeWeight:2,<br />
+  fillColor:"#0000FF",<br />
+  fillOpacity:0.4<br />
+});</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtml_map_overlays_polygon">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>Google 地图 - 圆</h2>
+<p>圆支持以下属性：</p>
+<ul>
+<li>center - 指定圆的中心点参数 google.maps.LatLng </li>
+	<li>radius - 指定圆的半径，以米为单位</li>
+	<li>strokeColor - 指定弧线的十六进制颜色值(格式: "#FFFFFF")</li>
+	<li>strokeOpacity - 指定弧线的透明度(该值为  0.0 
+	到 1.0)</li>
+	<li>strokeWeight -定义线的宽度,以像素为单位。</li>
+	<li>fillColor - 指定圆的十六进制颜色值填充值 (格式: "#FFFFFF")</li>
+	<li>fillOpacity - 指定填充颜色的透明度 (该值为 
+	0.0 到  1.0)</li>
+	<li>定义用户是否可编辑直线(true/false)</li>
+</ul>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var myCity = new google.maps.Circle({<br />
+  center:amsterdam,<br />
+  radius:20000,<br />
+  strokeColor:"#0000FF",<br />
+  strokeOpacity:0.8,<br />
+  strokeWeight:2,<br />
+  fillColor:"#0000FF",<br />
+  fillOpacity:0.4<br />
+});</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtml_map_overlays_circle">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>Google 地图 - 信息窗口</h2>
+<p>在一个标记上显示一个文本信息窗口：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+var infowindow = new google.maps.InfoWindow({<br />
+  content:"Hello World!"<br />
+  });<br /><br />
+infowindow.open(map,marker);</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryhtml_map_overlays_infowindow">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>Google 地图 - 叠加层参考手册</h2>
+<p><a href="google-maps-ref.html">Google Maps API 参考手册</a>.</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/googleapi/google-maps-basic.html" rel="prev"> Google 地图基础</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/googleapi/google-maps-events.html" rel="next">Google 地图事件</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.269 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 20:44:17 -->
+
+<!-- super cache -->

@@ -1,0 +1,550 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>SQLite PRAGMA | w3cschool菜鸟教程</title>
+	<link rel='prev' title='JSP 国际化' href='http://www.w3cschool.cc/jsp/jsp-internationalization.html' />
+<link rel='next' title='SQLite 约束' href='http://www.w3cschool.cc/sqlite/sqlite-constraints.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/sqlite/sqlite-pragma.html' />
+<meta name="keywords" content="SQLite PRAGMA,SQLite 教程">
+<meta name="description" content="SQLite PRAGMA   SQLite 的 PRAGMA 命令是一个特殊的命令，可以用在 SQLite 环境内控制各种环境变量和状态标志。一个 PRAGMA 值可以被读取，也可以根据需求进行设置。   语法 要查询当前的 PRAGMA 值，只需要提供该 pragma 的名字：  PRAGMA pragma_name;  要为 PRAGMA 设置一个新的值，语法如下：  PRAGMA pragma_name = value;  设置..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>SQLite 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html" >
+	SQLite 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-intro.html" >
+	SQLite 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-installation.html" >
+	SQLite 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-commands.html" >
+	SQLite 命令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-syntax.html" >
+	SQLite 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-data-types.html" >
+	SQLite 数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-create-database.html" >
+	SQLite 创建数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-attach-database.html" >
+	SQLite 附加数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-detach-database.html" >
+	SQLite 分离数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-create-table.html" >
+	SQLite 创建表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-drop-table.html" >
+	SQLite 删除表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-insert.html" >
+	SQLite Insert 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-select.html" >
+	SQLite Select 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-operators.html" >
+	SQLite 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-expressions.html" >
+	SQLite 表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-where-clause.html" >
+	SQLite Where 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-and-or-clauses.html" >
+	SQLite AND/OR 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-update.html" >
+	SQLite Update 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-delete.html" >
+	SQLite Delete 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-like-clause.html" >
+	SQLite Like 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-glob-clause.html" >
+	SQLite Glob 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-limit-clause.html" >
+	SQLite Limit 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-order-by.html" >
+	SQLite Order By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-group-by.html" >
+	SQLite Group By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-having-clause.html" >
+	SQLite Having 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-distinct-keyword.html" >
+	SQLite Distinct 关键字	</a>
+	<br><h2 class="left"><span class="left_h2">SQLite 高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-pragma.html" >
+	SQLite PRAGMA	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-constraints.html" >
+	SQLite 约束	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-joins.html" >
+	SQLite Joins	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-unions-clause.html" >
+	SQLite Unions 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-null-values.html" >
+	SQLite NULL 值	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-alias.html" >
+	SQLite 别名	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-trigger.html" >
+	SQLite 触发器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-index.html" >
+	SQLite 索引	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-indexed-by.html" >
+	SQLite Indexed By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-alter-command.html" >
+	SQLite Alter 命令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-truncate-table.html" >
+	SQLite Truncate Table	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-view.html" >
+	SQLite 视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-transaction.html" >
+	SQLite 事务	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-subquery.html" >
+	SQLite 子查询	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-autoincrement.html" >
+	SQLite Autoincrement	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-injection.html" >
+	SQLite 注入	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-explain.html" >
+	SQLite Explain	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-vacuum.html" >
+	SQLite Vacuum	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-date-time.html" >
+	SQLite 日期 & 时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-functions.html" >
+	SQLite 常用函数	</a>
+	<br><h2 class="left"><span class="left_h2">SQLite 接口</span></h2>	<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-c-cpp.html" >
+	SQLite - C/C++	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-java.html" >
+	SQLite - Java	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-php.html" >
+	SQLite - PHP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-perl.html" >
+	SQLite - Perl	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-python.html" >
+	SQLite - Python	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/sqlite/sqlite-distinct-keyword.html" rel="prev"> SQLite Distinct 关键字</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/sqlite/sqlite-constraints.html" rel="next">SQLite 约束</a> &raquo;</div>
+	</div>
+
+	<h1>SQLite <span class="color_h1">PRAGMA</span></h1>
+
+<div class="tutintro">
+<p>SQLite 的 <b>PRAGMA</b> 命令是一个特殊的命令，可以用在 SQLite 环境内控制各种环境变量和状态标志。一个 PRAGMA 值可以被读取，也可以根据需求进行设置。</p>
+</div>
+
+<h2>语法</h2>
+<p>要查询当前的 PRAGMA 值，只需要提供该 pragma 的名字：</p>
+<pre class="prettyprint">
+PRAGMA pragma_name;
+</pre>
+<p>要为 PRAGMA 设置一个新的值，语法如下：</p>
+<pre class="prettyprint">
+PRAGMA pragma_name = value;
+</pre>
+<p>设置模式，可以是名称或等值的整数，但返回的值将始终是一个整数。</p>
+
+<h2>auto_vacuum Pragma</h2>
+<p><b>auto_vacuum</b> Pragma 获取或设置 auto-vacuum 模式。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]auto_vacuum;
+PRAGMA [database.]auto_vacuum = mode;
+</pre>
+<p>其中，<b>mode</b> 可以是以下任何一种：</p>
+<table class="reference notranslate">
+<tr><th style="width:25%">Pragma 值</th><th>描述</th></tr>
+<tr><td>0 或 NONE</td><td>禁用 Auto-vacuum。这是默认模式，意味着数据库文件尺寸大小不会缩小，除非手动使用 VACUUM 命令。</td></tr>
+<tr><td>1 或 FULL</td><td>启用 Auto-vacuum，是全自动的。在该模式下，允许数据库文件随着数据从数据库移除而缩小。</td></tr>
+<tr><td>2 或 INCREMENTAL</td><td>启用 Auto-vacuum，但是必须手动激活。在该模式下，引用数据被维持，免费页面只放在免费列表中。这些页面可在任何时候使用 <b>incremental_vacuum pragma</b> 进行覆盖。</td></tr>
+</table>
+
+<h2>cache_size Pragma</h2>
+<p><b>cache_size</b> Pragma 可获取或暂时设置在内存中页面缓存的最大尺寸。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]cache_size;
+PRAGMA [database.]cache_size = pages;
+</pre>
+<p><b>pages</b> 值表示在缓存中的页面数。内置页面缓存的默认大小为 2,000 页，最小尺寸为 10 页。</p>
+
+<h2>case_sensitive_like Pragma</h2>
+<p><b>case_sensitive_like</b> Pragma 控制内置的 LIKE 表达式的大小写敏感度。默认情况下，该 Pragma 为 false，这意味着，内置的 LIKE 操作符忽略字母的大小写。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA case_sensitive_like = [true|false];
+</pre>
+<p>目前没有办法查询该 Pragma 的当前状态。</p>
+
+<h2>count_changes Pragma</h2>
+<p><b>count_changes</b> Pragma 获取或设置数据操作语句的返回值，如 INSERT、UPDATE 和 DELETE。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA count_changes;
+PRAGMA count_changes = [true|false];
+</pre>
+<p>默认情况下，该 Pragma 为 false，这些语句不返回任何东西。如果设置为 true，每个所提到的语句将返回一个单行单列的表，由一个单一的整数值组成，该整数表示操作影响的行。</p>
+
+<h2>database_list Pragma</h2>
+<p><b>database_list</b> Pragma 将用于列出了所有的数据库连接。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA database_list;
+</pre>
+<p>该 Pragma 将返回一个单行三列的表格，每当打开或附加数据库时，会给出数据库中的序列号，它的名称和相关的文件。</p>
+
+<h2>encoding Pragma</h2>
+<p><b>encoding</b> Pragma 控制字符串如何编码及存储在数据库文件中。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA encoding;
+PRAGMA encoding = format;
+</pre>
+<p>格式值可以是 UTF-8、UTF-16le 或 UTF-16be 之一。</p>
+
+<h2>freelist_count Pragma</h2>
+<p><b>freelist_count</b> Pragma 返回一个整数，表示当前被标记为免费和可用的数据库页数。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]freelist_count;
+</pre>
+<p>格式值可以是 UTF-8、UTF-16le 或 UTF-16be 之一。</p>
+
+<h2>index_info Pragma</h2>
+<p><b>index_info</b> Pragma 返回关于数据库索引的信息。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]index_info( index_name );
+</pre>
+<p>结果集将为每个包含在给出列序列的索引、表格内的列索引、列名称的列显示一行。</p>
+
+<h2>index_list Pragma</h2>
+<p><b>index_list</b> Pragma 列出所有与表相关联的索引。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]index_list( table_name );
+</pre>
+<p>结果集将为每个给出列序列的索引、索引名称、表示索引是否唯一的标识显示一行。</p>
+
+<h2>journal_mode Pragma</h2>
+<p><b>journal_mode</b> Pragma 获取或设置控制日志文件如何存储和处理的日志模式。语法如下：:</p>
+<pre class="prettyprint">
+PRAGMA journal_mode;
+PRAGMA journal_mode = mode;
+PRAGMA database.journal_mode;
+PRAGMA database.journal_mode = mode;
+</pre>
+<p>这里支持五种日志模式：</p>
+<table class="reference notranslate">
+<tr><th style="width:25%">Pragma 值</th><th>描述</th></tr>
+<tr><td>DELETE</td><td>默认模式。在该模式下，在事务结束时，日志文件将被删除。</td></tr>
+<tr><td>TRUNCATE</td><td>日志文件被阶段为零字节长度。</td></tr>
+<tr><td>PERSIST</td><td>日志文件被留在原地，但头部被重写，表明日志不再有效。</td></tr>
+<tr><td>MEMORY</td><td>日志记录保留在内存中，而不是磁盘上。</td></tr>
+<tr><td>OFF</td><td>不保留任何日志记录。</td></tr>
+</table>
+
+<h2>max_page_count Pragma</h2>
+<p><b>max_page_count</b> Pragma 为数据库获取或设置允许的最大页数。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]max_page_count;
+PRAGMA [database.]max_page_count = max_page;
+</pre>
+<p>默认值是 1,073,741,823，这是一个千兆的页面，即如果默认 1 KB 的页面大小，那么数据库中增长起来的一个兆字节。</p>
+
+<h2>page_count Pragma</h2>
+<p><b>page_count</b> Pragma 返回当前数据库中的网页数量。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]page_count;
+</pre>
+<p>数据库文件的大小应该是 page_count * page_size。</p>
+
+<h2>page_size Pragma</h2>
+<p><b>page_size</b> Pragma 获取或设置数据库页面的大小。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]page_size;
+PRAGMA [database.]page_size = bytes;
+</pre>
+<p>默认情况下，允许的尺寸是 512、1024、2048、4096、8192、16384、32768 字节。改变现有数据库页面大小的唯一方法就是设置页面大小，然后立即 VACUUM 该数据库。</p>
+
+<h2>parser_trace Pragma</h2>
+<p><b>parser_trace</b> Pragma 随着它解析 SQL 命令来控制打印的调试状态，语法如下：</p>
+<pre class="prettyprint">
+PRAGMA parser_trace = [true|false];
+</pre>
+<p>默认情况下，它被设置为 false，但设置为 true 时则启用，此时 SQL 解析器会随着它解析 SQL 命令来打印出它的状态。</p>
+
+<h2>recursive_triggers Pragma</h2>
+<p><b>recursive_triggers</b> Pragma 获取或设置递归触发器功能。如果未启用递归触发器，一个触发动作将不会触发另一个触发。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA recursive_triggers;
+PRAGMA recursive_triggers = [true|false];
+</pre>
+
+<h2>schema_version Pragma</h2>
+<p><b>schema_version</b> Pragma 获取或设置存储在数据库头中的的架构版本值。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]schema_version;
+PRAGMA [database.]schema_version = number;
+</pre>
+<p>这是一个 32 位有符号整数值，用来跟踪架构的变化。每当一个架构改变命令执行（比如 CREATE... 或 DROP...）时，这个值会递增。</p>
+
+<h2>secure_delete Pragma</h2>
+<p><b>secure_delete</b> Pragma 用来控制内容是如何从数据库中删除。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA secure_delete;
+PRAGMA secure_delete = [true|false];
+PRAGMA database.secure_delete;
+PRAGMA database.secure_delete = [true|false];
+</pre>
+<p>安全删除标志的默认值通常是关闭的，但是这是可以通过 SQLITE_SECURE_DELETE 构建选项来改变的。</p>
+
+<h2>sql_trace Pragma</h2>
+<p><b>sql_trace</b> Pragma 用于把 SQL 跟踪结果转储到屏幕上。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA sql_trace;
+PRAGMA sql_trace = [true|false];
+</pre>
+<p>SQLite 必须通过 SQLITE_DEBUG 指令来编译要引用的该 Pragma。</p>
+
+<h2>synchronous Pragma</h2>
+<p><b>synchronous</b> Pragma 获取或设置当前磁盘的同步模式，该模式控制积极的 SQLite 如何将数据写入物理存储。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]synchronous;
+PRAGMA [database.]synchronous = mode;
+</pre>
+<p>SQLite 支持下列同步模式：</p>
+<table class="reference notranslate">
+<tr><th style="width:25%">Pragma 值</th><th>描述</th></tr>
+<tr><td>0 或 OFF</td><td>不进行同步。</td></tr>
+<tr><td>1 或 NORMAL</td><td>在关键的磁盘操作的每个序列后同步。</td></tr>
+<tr><td>2 或 FULL</td><td>在每个关键的磁盘操作后同步。</td></tr>
+</table>
+
+<h2>temp_store Pragma</h2>
+<p><b>temp_store</b> Pragma 获取或设置临时数据库文件所使用的存储模式。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA temp_store;
+PRAGMA temp_store = mode;
+</pre>
+<p>SQLite 支持下列存储模式：</p>
+<table class="reference notranslate">
+<tr><th style="width:25%">Pragma 值</th><th>描述</th></tr>
+<tr><td>0 或 DEFAULT</td><td>默认使用编译时的模式。通常是 FILE。</td></tr>
+<tr><td>1 或 FILE</td><td>使用基于文件的存储。</td></tr>
+<tr><td>2 或 MEMORY</td><td>使用基于内存的存储。</td></tr>
+</table>
+
+<h2>temp_store_directory Pragma</h2>
+<p><b>temp_store_directory</b> Pragma 获取或设置用于临时数据库文件的位置。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA temp_store_directory;
+PRAGMA temp_store_directory = 'directory_path';
+</pre>
+
+<h2>user_version Pragma</h2>
+<p><b>user_version</b> Pragma 获取或设置存储在数据库头的用户自定义的版本值。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA [database.]user_version;
+PRAGMA [database.]user_version = number;
+</pre>
+<p>这是一个 32 位的有符号整数值，可以由开发人员设置，用于版本跟踪的目的。</p>
+
+<h2>writable_schema Pragma</h2>
+<p><b>writable_schema</b> Pragma 获取或设置是否能够修改系统表。语法如下：</p>
+<pre class="prettyprint">
+PRAGMA writable_schema;
+PRAGMA writable_schema = [true|false];
+</pre>
+<p>如果设置了该 Pragma，则表以 sqlite_ 开始，可以创建和修改，包括 sqlite_master 表。使用该 Pragma 时要注意，因为它可能导致整个数据库损坏。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/sqlite/sqlite-distinct-keyword.html" rel="prev"> SQLite Distinct 关键字</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/sqlite/sqlite-constraints.html" rel="next">SQLite 约束</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.182 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 11:35:47 -->
+
+<!-- super cache -->

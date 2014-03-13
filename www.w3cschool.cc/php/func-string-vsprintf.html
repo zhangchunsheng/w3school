@@ -1,0 +1,518 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>PHP vsprintf() 函数 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='PHP vprintf() 函数' href='http://www.w3cschool.cc/php/func-string-vprintf.html' />
+<link rel='next' title='HTML DOM appendChild() 方法' href='http://www.w3cschool.cc/jsref/met-node-appendchild.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/php/func-string-vsprintf.html' />
+<meta name="keywords" content="PHP vsprintf() 函数,PHP 基础">
+<meta name="description" content="PHP vsprintf() 函数  PHP String 参考手册   实例 把格式化字符串写入变量中：   	&lt;?php$number = 9;$str = 'Beijing';$txt = vsprintf('There are %u  	million bicycles in %s.',array($number,$str));echo $txt;?&gt; 运行实例 »   定义和用法  vsprintf() 函数把格式..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>PHP 基础</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-tutorial.html" >
+	PHP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-intro.html" >
+	PHP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-install.html" >
+	PHP 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-syntax.html" >
+	PHP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-variables.html" >
+	PHP 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-string.html" >
+	PHP 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-operators.html" >
+	PHP 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-if-else.html" >
+	PHP If...Else	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-switch.html" >
+	PHP Switch	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-arrays.html" >
+	PHP 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-arrays-sort.html" >
+	PHP 数组排序	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-superglobals.html">
+	PHP超级全局变量	</a>	<a target="_top" href="http://www.w3cschool.cc/php/php-looping.html" >
+	PHP While 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-looping-for.html" >
+	PHP For 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-functions.html" >
+	PHP 函数	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-magic-constant.html">
+	PHP 魔术变量	</a>
+<br><h2 class="left"><span class="left_h2">PHP</span> 表单</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-forms.html" >
+	PHP 表单	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-form-validation.html">
+	PHP 表单验证</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-required.html">
+	PHP表单 - 必需字段</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-url-email.html">
+	PHP表单 - 验证邮件和URL</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-complete.html">
+	PHP 完整表单实例</a>	<a target="_top" href="http://www.w3cschool.cc/php/php-get.html" >
+	PHP $_GET 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-post.html" >
+	PHP $_POST 变量	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-arrays-multi.html" >
+	PHP 多维数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-date.html" >
+	PHP 日期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-includes.html" >
+	PHP 包含	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-file.html" >
+	PHP 文件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-file-upload.html" >
+	PHP 文件上传	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-cookies.html" >
+	PHP Cookies	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-sessions.html" >
+	PHP Sessions	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mail.html" >
+	PHP E-mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-secure-mail.html" >
+	PHP 安全 E-mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-error.html" >
+	PHP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-exception.html" >
+	PHP Exception	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-filter.html" >
+	PHP Filter	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 数据库</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-intro.html" >
+	PHP MySQL 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-connect.html" >
+	PHP MySQL Connect	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-create.html" >
+	PHP MySQL Create	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-insert.html" >
+	PHP MySQL Insert	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-select.html" >
+	PHP MySQL Select	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-where.html" >
+	PHP MySQL Where	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-order-by.html" >
+	PHP MySQL Order By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-update.html" >
+	PHP MySQL Update	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-delete.html" >
+	PHP MySQL Delete	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-db-odbc.html" >
+	PHP ODBC	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> XML</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-xml-parser-expat.html" >
+	XML Expat Parser	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-xml-dom.html" >
+	XML DOM	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-xml-simplexml.html" >
+	XML SimpleXML	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 与 AJAX</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-intro.html" >
+	AJAX 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-php.html" >
+	AJAX PHP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-database.html" >
+	AJAX 数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-xml.html" >
+	AJAX XML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-livesearch.html" >
+	AJAX Live Search	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-rss-reader.html" >
+	AJAX RSS Reader	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-poll.html" >
+	AJAX Poll	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 参考手册</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-ref-array.html" >
+	PHP Array	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-calendar.html" >
+	PHP Calendar	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-curl.html">PHP cURL </a>	<a target="_top" href="http://www.w3cschool.cc/php/php-ref-date.html" >
+	PHP Date	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-directory.html" >
+	PHP Directory	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-error.html" >
+	PHP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-filesystem.html" >
+	PHP Filesystem	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-filter.html" >
+	PHP Filter	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-ftp.html" >
+	PHP FTP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-http.html" >
+	PHP HTTP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-libxml.html" >
+	PHP Libxml	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-mail.html" >
+	PHP Mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-math.html" >
+	PHP Math	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-misc.html" >
+	PHP Misc	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-mysqli.html" >
+	PHP MySQLi	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-simplexml.html" >
+	PHP SimpleXML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-string.html" >
+	PHP String	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-xml.html" >
+	PHP XML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-zip.html" >
+	PHP Zip	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-timezones.html" >
+	PHP Timezones	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/php/func-string-vprintf.html" rel="prev"> PHP vprintf() 函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/php/func-string-wordwrap.html" rel="next">PHP wordwrap() 函数</a> &raquo;</div>
+	</div>
+
+	<h1>PHP <span class="color_h1">vsprintf()</span> 函数</h1>
+<p><a href="php-ref-string.html"><img class="navup" src="/images/up.gif" alt="PHP String 参考手册"> PHP String 参考手册</a></p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<p>把格式化字符串写入变量中：</p>
+<div class="example_code notranslate">
+
+	&lt;?php<br />$number = 9;<br />$str = "Beijing";<br />$txt = vsprintf("There are %u 
+	million bicycles in %s.",array($number,$str));<br />echo $txt;<br />?&gt;</div>
+<br /><a target="_blank" class="showbtn" href="/try/showphp.php?filename=demo_func_string_vsprintf">运行实例 »</a>
+</div>
+<hr />
+<h2>定义和用法</h2>
+
+<p>vsprintf() 函数把格式化字符串写入变量中。</p>
+<p>与 sprintf() 不同，vsprintf() 中的参数位于数组中。数组元素将被插入到主字符串中的百分号（%）符号处。该函数是逐步执行的。在第一个 % 符号处，插入第一个数组元素，在第二个 % 符号处，插入第二个数组元素，依此类推。</p>
+
+<p><b>注释：</b>如果 % 符号多于 arg 参数，则您必须使用占位符。占位符被插入到 % 符号之后，由数字和 "\$" 组成。请参见实例 2。</p>
+<p><b>提示：</b>相关函数：<a href="func-string-fprintf.html">fprintf()</a>、
+<a href="func-string-vfprintf.html">vfprintf()</a>、
+<a href="func-string-printf.html">printf()</a>、<a href="func-string-sprintf.html">
+sprintf()</a> 和 <a href="func-string-vprintf.html">vprintf()</a></p>
+<hr />
+<h2>语法</h2>
+
+<div class="code notranslate"><div>
+
+vsprintf(<em>format,argarray</em>)
+
+</div></div>
+<br /><table class="reference notranslate">
+<tr>
+<th width="20%">参数</th>
+    <th width="80%">描述</th>
+  </tr>
+<tr>
+<td><em>format</em></td>
+    <td>必需。规定字符串以及如何格式化其中的变量。<p>可能的格式值：</p>
+<ul>
+<li>%% - 返回一个百分号 %</li>
+	<li>%b - 二进制数</li>
+	<li>%c - ASCII 值对应的字符</li>
+	<li>%d - 包含正负号的十进制数（负数、0、正数）</li>
+	<li>%e - 使用小写的科学计数法（例如 1.2e+2）</li>
+	<li>%E - 使用大写的科学计数法（例如 1.2E+2）</li>
+	<li>%u - 不包含正负号的十进制数（大于等于 0）</li>
+	<li>%f - 浮点数（本地设置）</li>
+	<li>%F - 浮点数（非本地设置）</li>
+	<li>%g - 较短的 %e 和 %f</li>
+	<li>%G - 较短的 %E 和 %f</li>
+	<li>%o - 八进制数</li>
+	<li>%s - 字符串</li>
+	<li>%x - 十六进制数（小写字母）</li>
+	<li>%X - 十六进制数（大写字母）</li>
+</ul>
+<p>附加的格式值。必需放置在 % 和字母之间（例如 %.2f）：</p>
+	<ul>
+<li>+ （在数字前面加上 + 或 - 来定义数字的正负性。默认情况下，只有负数才做标记，正数不做标记）</li>
+		<li>' （规定使用什么作为填充，默认是空格。它必须与宽度指定器一起使用。例如：%'x20s（使用 "x" 作为填充））</li>
+		<li>- （左调整变量值）</li>
+		<li>[0-9] （规定变量值的最小宽度）</li>
+		<li>.[0-9] （规定小数位数或最大字符串长度）</li>
+	</ul>
+<p><b>注释：</b>如果使用多个上述的格式值，它们必须按照上面的顺序进行使用，不能打乱。</p>
+</td>
+  </tr>
+<tr>
+<td><em>argarray</em></td>
+    <td>必需。带有参数的一个数组，这些参数会被插到 format 字符串中的 % 符号处。</td>
+  </tr>
+</table>
+<h2>技术细节</h2>
+<table class="tecspec">
+<tr>
+<th align="left" width="20%">返回值：</th>
+	<td width="80%">以格式化字符串的形式返回数组值。</td>
+</tr>
+<tr>
+<th align="left">PHP 版本：</th>
+	<td>4.1.0+</td>
+</tr>
+</table>
+<br /><hr />
+<h2>更多实例</h2>
+<div class="example">
+<h2 class="example">实例 1</h2>
+<p>使用格式值 %f：</p>
+<div class="example_code notranslate">
+
+&lt;?php<br />
+$num1 = 123;<br />
+$num2 = 456;<br />
+$txt = vsprintf("%f%f",array($num1,$num2));<br />
+echo $txt;<br />
+?&gt;</div>
+<br /><a target="_blank" class="showbtn" href="/try/showphp.php?filename=demo_func_string_vsprintf2">运行实例 »</a>
+</div>
+<br /><div class="example">
+<h2 class="example">实例 2</h2>
+<p>使用占位符：</p>
+<div class="example_code notranslate">
+
+	&lt;?php<br />
+$number = 123;<br />
+$txt = vsprintf("With 2 decimals: %1$.2f<br />
+&lt;br&gt;With no decimals: %1$u",array($number));<br />
+echo $txt;<br />
+?&gt;</div>
+<br /><a target="_blank" class="showbtn" href="/try/showphp.php?filename=demo_func_string_vsprintf3">运行实例 »</a>
+</div>
+<br /><div class="example">
+<h2 class="example">实例 3</h2>
+<p>使用 sprintf() 来演示所有可能的格式值：</p>
+<div class="example_code notranslate">
+
+	&lt;?php<br />$num1 = 123456789;<br />$num2 = -123456789;<br />$char = 50; // The 
+	ASCII Character 50 is 2<br /><br />// Note: The format value "%%" returns a 
+	percent sign<br />echo sprintf("%%b = %b",$num1)."&lt;br&gt;"; // Binary 
+	number<br />echo sprintf("%%c = %c",$char)."&lt;br&gt;"; // The ASCII Character<br />
+	echo sprintf("%%d = %d",$num1)."&lt;br&gt;"; // Signed decimal number<br />echo sprintf("%%d = %d",$num2)."&lt;br&gt;"; // Signed decimal number<br />echo 
+	sprintf("%%e = %e",$num1)."&lt;br&gt;"; // Scientific notation (lowercase)<br />echo 
+	sprintf("%%E = %E",$num1)."&lt;br&gt;"; // Scientific notation (uppercase)<br />echo 
+	sprintf("%%u = %u",$num1)."&lt;br&gt;"; // Unsigned decimal number (positive)<br />
+	echo sprintf("%%u = %u",$num2)."&lt;br&gt;"; // Unsigned decimal number (negative)<br />
+	echo sprintf("%%f = %f",$num1)."&lt;br&gt;"; // Floating-point number (local 
+	settings aware)<br />echo sprintf("%%F = %F",$num1)."&lt;br&gt;"; // Floating-point 
+	number (not local sett aware)<br />echo sprintf("%%g = %g",$num1)."&lt;br&gt;"; 
+	// Shorter of %e and %f<br />echo sprintf("%%G = %G",$num1)."&lt;br&gt;"; // Shorter 
+	of %E and %f<br />echo sprintf("%%o = %o",$num1)."&lt;br&gt;"; // Octal number<br />
+	echo sprintf("%%s = %s",$num1)."&lt;br&gt;"; // String<br />echo sprintf("%%x = 
+	%x",$num1)."&lt;br&gt;"; // Hexadecimal number (lowercase)<br />echo sprintf("%%X = 
+	%X",$num1)."&lt;br&gt;"; // Hexadecimal number (uppercase)<br />echo sprintf("%%+d = 
+	%+d",$num1)."&lt;br&gt;"; // Sign specifier (positive)<br />echo sprintf("%%+d = 
+	%+d",$num2)."&lt;br&gt;"; // Sign specifier (negative)<br />?&gt;</div>
+<br /><a target="_blank" class="showbtn" href="/try/showphp.php?filename=demo_func_string_sprintf4">运行实例 »</a>
+</div>
+<br /><div class="example">
+<h2 class="example">实例 4</h2>
+<p>字符串说明符的演示：</p>
+<div class="example_code notranslate">
+
+	&lt;?php<br />$str1 = "Hello";<br />$str2 = "Hello world!";<br /><br />echo vsprintf("[%s]",array($str1))."&lt;br&gt;";<br />
+	echo vsprintf("[%8s]",array($str1))."&lt;br&gt;";<br />echo vsprintf("[%-8s]",array($str1))."&lt;br&gt;";<br />
+	echo vsprintf("[%08s]",array($str1))."&lt;br&gt;"; <br />echo vsprintf("[%'*8s]",array($str1))."&lt;br&gt;";<br />
+	echo vsprintf("[%8.8s]",array($str2))."&lt;br&gt;"; <br />?&gt;</div>
+<br /><a target="_blank" class="showbtn" href="/try/showphp.php?filename=demo_func_string_vsprintf4">运行实例 »</a>
+</div>
+<br /><hr />
+<a href="php-ref-string.html"><img class="navup" src="/images/up.gif" alt="PHP String 参考手册"> PHP String 参考手册</a>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/php/func-string-vprintf.html" rel="prev"> PHP vprintf() 函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/php/func-string-wordwrap.html" rel="next">PHP wordwrap() 函数</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.391 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 20:07:03 -->
+
+<!-- super cache -->

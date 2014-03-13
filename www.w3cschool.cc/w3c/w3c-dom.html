@@ -1,0 +1,426 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>W3C DOM 活动 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='W3C XPath 活动' href='http://www.w3cschool.cc/w3c/w3c-xpath.html' />
+<link rel='next' title='W3C XQuery 活动' href='http://www.w3cschool.cc/w3c/w3c-xquery.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/w3c/w3c-dom.html' />
+<meta name="keywords" content="W3C DOM 活动,W3C 教程">
+<meta name="description" content="W3C DOM Activities  文档对象模型 (DOM：Document Object Model) 是一个平台，一个中立于语言的应用程序编程接口 (API)，允许程序访问并更改文档的内容、结构和样式。   DOM Tutorials  如需学习更多有关 DOM 的知识，请阅读我们的 HTML DOM 教程和 XML DOM 教程。    DOM 级别 0 DOM 级别 0 不是 W3C 规范。而仅仅是对在 Netscape N..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>W3C 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-tutorial.html" >
+	W3C 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-intro.html" >
+	W3C 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-process.html" >
+	W3C 程序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-html.html" >
+	W3C HTML 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-xhtml.html" >
+	W3C XHTML 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-xml.html" >
+	W3C XML 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-css.html" >
+	W3C CSS 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-xsl.html" >
+	W3C XSL 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-schema.html" >
+	W3C XML Schema 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-xpath.html" >
+	W3C XPath 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-xquery.html" >
+	W3C XQuery 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-dom.html" >
+	W3C DOM 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-soap.html" >
+	W3C SOAP 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-wsdl.html" >
+	W3C WSDL 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-rdf.html" >
+	W3C RDF 活动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/w3c/w3c-other.html" >
+	其他 W3C 活动	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/w3c/w3c-xpath.html" rel="prev"> W3C XPath 活动</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/w3c/w3c-xquery.html" rel="next">W3C XQuery 活动</a> &raquo;</div>
+	</div>
+
+	<h1>W3C <span class="color_h1">DOM</span> Activities</h1>
+<hr />
+<p class="intro">文档对象模型 (DOM：Document Object Model) 是一个平台，一个中立于语言的应用程序编程接口 (API)，允许程序访问并更改文档的内容、结构和样式。 </p>
+<hr />
+<h2>DOM Tutorials</h2>
+
+<p><p>如需学习更多有关 DOM 的知识，请阅读我们的 <a href="/htmldom/htmldom-tutorial.html">HTML DOM 教程</a>和 <a href="/dom/dom-tutorial.html">XML DOM 教程</a>。</p>
+</p>
+
+<hr />
+<h2>DOM 级别 0</h2>
+<p>DOM 级别 0 不是 W3C 规范。而仅仅是对在 Netscape Navigator 3.0 和 Microsoft Internet Explorer 3.0 中的等价功能性的一种定义。</p>
+<p>DOM 发展过程中的关键角色有：ArborText、IBM、Inso EPS、JavaSoft、Microsoft、Netscape、Novell、the Object Management Group、SoftQuad、Sun Microsystems 以及 Texcel。</p>
+<p>W3C 的 DOM 级别 1 建立于此功能性之上。</p>
+
+<hr />
+<h2>DOM 级别 1</h2>
+<p>DOM 级别 1 专注于 HTML 和 XML 文档模型。它含有文档导航和处理功能。</p>
+<p>DOM 级别 1 于 1998 年 10 月 1 日成为 W3C 推荐标准。</p>
+<p>第二版的工作草案在 2000 年 9 月 29 日。</p>
+<h2>DOM 级别 2</h2>
+<p>DOM 级别 2 对 DOM 级别 1 添加了样式表对象模型，并定义了操作附于文档之上的样式信息的功能性。</p>
+<p>DOM 级别 2 同时还定义了一个事件模型，并提供了对 XML 命名空间的支持。</p>
+<p>作为一项 W3C 推荐标准，DOM 级别 2 规范发布于 2000 年 11 月 13 日：</p>
+
+<h3>DOM Level 2 核心</h3>
+<p>DOM Level 2 核心 规定了访问和更改文档内容及结构的一个 API，此 API 同时包含用于 XML 的接口。</p>
+
+<h3>DOM Level 2 HTML</h3>
+<p>DOM Level 2 HTML 规定了操作 HTML 文档结构和内容的 API。（这部分规范仍然是工作草案）</p>
+
+<h3>DOM Level 2 Views</h3>
+<p>DOM Level 2 规定了对文档视图进行访问和更改的 API。视图是与原文档相关联的表现形式或某种备用的表现形式。 </p>
+
+<h3>DOM Level 2 Style</h3>
+<p>DOM Level 2 Style 规定了动态访问及更改内容样式表的 API。</p>
+
+<h3>DOM Level 2 Events</h3>
+<p>DOM Level 2 Events 规定了访问文档事件的 API。</p>
+
+<h3>DOM Level 2 Traversal-Range</h3>
+<p>DOM Level 2 Traversal-Range 规定了动态遍历和识别文档中内容范围的 API。</p>
+
+
+
+<h2>DOM 级别 3</h2>
+
+<p>DOM Level 3 规定了内容模型 (DTD 和 Schemas) 和文档验证。同时规定了文档加载和保存、文档查看、文档格式化和关键事件。DOM Level 3 建立于 DOM Core Level 2 之上。</p>
+
+<h3>DOM Level 3 Requirements</h3>
+<p>DOM Requirements 文档已经为 Level 3 requirements 进行了更新，并于 2000 年 4 月 12 日发布为工作草案。</p>
+
+<p>下面的 DOM Level 3 工作草案发布于 2000 年 9 月 1 日：</p>
+
+<h3>DOM Level 3 Core</h3>
+<p>DOM Level 3 Core 规定了访问和更改文档内容、结构及样式的一个 API。</p>
+
+<h3>DOM Level 3 Events</h3>
+<p>通过增加新的接口和新的事件集，DOM Level 3 Events API 对 Level 2 Event API 的功能进行了扩展。</p>
+
+<h3>DOM Level 3 Load and Save</h3>
+<p>DOM Level 3 Content Model 规定了用于内容加载和保存、内容模型 (DTD and Schemas) 和文档验证支持的 API。</p>
+
+<h3>DOM Level 3 Views and Formatting</h3>
+<p>DOM Level 3 Views 规定了对文档视图进行访问和更改的 API。视图是与原文档相关联的表现形式或某种备用的表现形式。</p>
+
+
+<hr />
+<h2>W3C DOM 规范和时间线</h2>
+<table class="reference notranslate">
+<tr>
+<th align="left">规范</th>
+      <th align="left">草案/提议</th>
+      <th align="left">推荐</th>
+    </tr>
+<tr>
+<td>DOM Level 1</td>
+      <td> </td>
+      <td><a href="http://www.w3.org/TR/REC-DOM-Level-1/" target="_blank">01. Oct 
+      1998</a></td>
+    </tr>
+<tr>
+<td>DOM Level 1 (2.Ed)</td>
+      <td><a href="http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/" target="_blank">29. Sep 
+		2000</a></td>
+      <td> </td>
+    </tr>
+<tr>
+<td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+<tr>
+<td>DOM Level 2 Core</td>
+      <td> </td>
+      <td><a href="http://www.w3.org/TR/DOM-Level-2-Core/" target="_blank">13. Nov 
+      2000</a></td>
+    </tr>
+<tr>
+<td>DOM Level 2 HTML</td>
+      <td> </td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-2-HTML/">09. Jan 
+      2003</a></td>
+    </tr>
+<tr>
+<td>DOM Level 2 Views</td>
+      <td> </td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-2-Views/">13. Nov 
+      2000</a></td>
+    </tr>
+<tr>
+<td>DOM Level 2 Style</td>
+      <td> </td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-2-Style/">13. Nov 
+      2000</a></td>
+    </tr>
+<tr>
+<td>DOM Level 2 Events</td>
+      <td> </td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-2-Events/">13. Nov 
+      2000</a></td>
+    </tr>
+<tr>
+<td>DOM Level 2 Traversal-Range</td>
+      <td> </td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/">13. Nov 
+      2000</a></td>
+    </tr>
+<tr>
+<td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+<tr>
+<td>DOM Level 3 Requirements</td>
+      <td><a href="http://www.w3.org/TR/DOM-Requirements/" target="_blank">26. Feb 2004</a></td>
+      <td> </td>
+    </tr>
+<tr>
+<td>DOM Level 3 Core</td>
+      <td> </td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-3-Core/">07. Apr 2004</a></td>
+    </tr>
+<tr>
+<td>DOM Level 3 Events</td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-3-Events/">31. May 2011</a></td>
+      <td> </td>
+    </tr>
+<tr>
+<td>DOM Level 3 Load and Save</td>
+      <td> </td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-3-LS/">07. Apr 2004</a></td>
+    </tr>
+<tr>
+<td>DOM Level 3 Validation</td>
+      <td> </td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-3-Val/">27. Jan 2004</a></td>
+    </tr>
+<tr>
+<td>DOM Level 3 XPath</td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-3-XPath/">26. Feb 2004</a></td>
+      <td> </td>
+    </tr>
+<tr>
+<td>DOM Level 3 Views</td>
+      <td><a target="_blank" href="http://www.w3.org/TR/DOM-Level-3-Views/">26. Feb 2004</a></td>
+      <td> </td>
+    </tr>
+</table>
+<br /><hr />
+<h2>W3C 参考手册:</h2>
+<p><a target="_blank" href="http://www.w3.org/dom">W3C DOM 首页</a></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/w3c/w3c-xpath.html" rel="prev"> W3C XPath 活动</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/w3c/w3c-xquery.html" rel="next">W3C XQuery 活动</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.132 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 19:43:36 -->
+
+<!-- super cache -->

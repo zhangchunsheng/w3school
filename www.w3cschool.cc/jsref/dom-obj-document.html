@@ -1,0 +1,574 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML DOM Document 对象 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Navigator 对象' href='http://www.w3cschool.cc/jsref/obj-navigator.html' />
+<link rel='next' title='PHP basename() 函数' href='http://www.w3cschool.cc/php/func-filesystem-basename.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jsref/dom-obj-document.html' />
+<meta name="keywords" content="HTML DOM Document 对象,JavaScript 参考手册">
+<meta name="description" content="HTML DOM Document 对象   HTML DOM 节点 在 HTML DOM (Document Object Model) 中 , 每一个元素都是  节点:   文档是一个文档。 所有的HTML元素都是元素节点。 	所有 HTML 属性都是属性节点。 	文本插入到 HTML 元素是文本节点。are text nodes。 	注释是注释节点。   Document 对象 当浏览器载入 HTML 文档, 它就会成为 docu..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JavaScript 参考手册</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-tutorial.html" >
+	概览	</a>
+	<br/><h2 class="left"><span class="left_h2">JavaScript</span> 对象</h2>	<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-array.html" >
+	JavaScript Array 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-boolean.html" >
+	JavaScript Boolean 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-date.html" >
+	JavaScript Date 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-math.html" >
+	JavaScript Math 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-number.html" >
+	JavaScript Number 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-string.html" >
+	JavaScript String 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-regexp.html" >
+	JavaScript RegExp 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-global.html" >
+	JavaScript 全局属性/函数	</a>
+	<br /><h2 class="left"><span class="left_h2">Browser</span> 对象</h2>	<a target="_top" href="http://www.w3cschool.cc/jsref/obj-window.html" >
+	Window 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/obj-navigator.html" >
+	Navigator 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/obj-screen.html" >
+	Screen 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/obj-history.html" >
+	History 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/obj-location.html" >
+	Location 对象	</a>
+	<br/><h2 class="left"><span class="left_h2">DOM</span> 对象</h2>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-document.html" >
+	HTML DOM Document 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-all.html" >
+	HTML DOM 元素对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-attributes.html" >
+	HTML DOM 属性对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-event.html" >
+	HTML DOM 事件（Event）对象	</a>
+	<br/><h2 class="left"><span class="left_h2">HTML </span>对象</h2>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-anchor.html" >
+	&lt;a&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-area.html" >
+	&lt;area&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-base.html" >
+	&lt;base&gt;	</a>
+	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-blockquote.html">&lt;blockquote&gt;	</a>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-body.html" >
+	&lt;body&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-pushbutton.html" >
+	&lt;button&gt;	</a>
+	<a target="_top" href="dom-obj-col.html" class="menu_dom_obj_col">&lt;col&gt;</a>
+<a target="_top" href="dom-obj-colgroup.html" class="menu_dom_obj_colgroup">&lt;colgroup&gt;</a>
+<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-del.html">&lt;del&gt;</a>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-form.html" >
+	&lt;form&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-frame.html" >
+	&lt;iframe&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-frameset.html" >
+	&lt;frameset &gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-image.html" >
+	&lt;img&gt;	</a>
+	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-ins.html">
+	&lt;ins&gt;	</a>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-button.html" >
+	&lt;input&gt; - button	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-checkbox.html" >
+	&lt;input&gt; - checkbox	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-fileupload.html" >
+	&lt;input&gt;  - file	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-hidden.html" >
+	&lt;input&gt; -  hidden	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-password.html" >
+	&lt;input&gt; -  password	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-radio.html" >
+	&lt;input&gt; -  radio	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-reset.html" >
+	&lt;input&gt; -  reset	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-submit.html" >
+	&lt;input;&gt; - submit	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-text.html" >
+	&lt;input&gt; - text	</a>
+	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-keygen.html">
+	&lt;keygen&gt;	</a>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-link.html" >
+	&lt;link&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-meta.html" >
+	&lt;meta&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-object.html" >
+	&lt;object&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-option.html" >
+	&lt;option&gt;	</a>
+	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-quote.html"> &lt;q&gt;	</a>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-select.html" >
+	&lt;select&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-style.html" >
+	&lt;style&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-table.html" >
+	&lt;table&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-tabledata.html" >
+	&lt;td&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-tablerow.html" >
+	&lt;tr&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-textarea.html" >
+	&lt;textarea&gt;	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsref/obj-navigator.html" rel="prev"> Navigator 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsref/jsref-constructor-array.html" rel="next">JavaScript constructor 属性</a> &raquo;</div>
+	</div>
+
+	<h1> HTML DOM <span class="color_h1">Document</span> 对象</h1>
+
+<hr />
+<h2>HTML DOM 节点</h2>
+<p>在 HTML DOM (Document Object Model) 中 , 每一个元素都是  <strong>节点</strong>:
+</p>
+<ul>
+<li>文档是一个文档。</li>
+<li>所有的HTML元素都是元素节点。</li>
+	<li>所有 HTML 属性都是属性节点。</li>
+	<li>文本插入到 HTML 元素是文本节点。are text nodes。</li>
+	<li>注释是注释节点。</li>
+</ul>
+<hr />
+<h2>Document 对象</h2>
+<p>当浏览器载入 HTML 文档, 它就会成为 <strong>document 对象</strong>。</p>
+<p>document 对象是HTML文档的根节点与所有其他节点（元素节点，文本节点，属性节点, 注释节点）。</p>
+<p>Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。</p>
+<p><b>提示：</b>Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。</p>
+
+<hr />
+<h2>浏览器支持</h2>
+<p>
+<img src="/images/compatible_ie.gif" width="31" height="30" alt="Internet Explorer" title="Internet Explorer"><img src="/images/compatible_firefox.gif" width="31" height="30" alt="Firefox" title="Firefox"><img src="/images/compatible_opera.gif" width="28" height="30" alt="Opera" title="Opera"><img src="/images/compatible_chrome.gif" width="31" height="30" alt="Google Chrome" title="Google Chrome"><img src="/images/compatible_safari.gif" width="28" height="30" alt="Safari" title="Safari"></p>
+<p>所有主要浏览器都支持 Document 对象。</p>
+
+<hr />
+<h2>Document 对象属性和方法</h2>
+<p>HTML文档中可以使用以上属性和方法:</p>
+
+
+
+<table class="reference notranslate">
+<tr>
+<th width="35%" align="left">属性 / 方法</th>
+    <th align="left">描述</th>
+</tr>
+<tr>
+<td>document.adoptNode(node)</td>
+	<td>从另外一个文档返回  adapded 节点到当前文档。</td>
+</tr>
+<tr>
+<td><a href="coll-doc-anchors.html">document.anchors</a></td>
+    <td>返回对文档中所有 Anchor 对象的引用。</td>
+</tr>
+<tr>
+<td>document.applets</td>
+    <td>返回对文档中所有 Applet 对象的引用。</td>
+</tr>
+<tr>
+<td><a href="prop-doc-baseuri.html">document.baseURI</a></td>
+	<td>返回文档的绝对基础 URI</td>
+</tr>
+<tr>
+<td>document.body</td>
+    <td>返回文档的body元素</td>
+</tr>
+<tr>
+<td><a href="met-doc-close.html">document.close()</a></td>
+    <td>关闭用 document.open() 方法打开的输出流，并显示选定的数据。</td>
+</tr>
+<tr>
+<td><a href="prop-doc-cookie.html">document.cookie</a></td>
+    <td>设置或返回与当前文档有关的所有 cookie。</td>
+</tr>
+<tr>
+<td><a href="met-document-createattribute.html">document.createAttribute()</a></td>
+	<td>创建一个属性节点</td>
+</tr>
+<tr>
+<td><a href="met-document-createcomment.html">document.createComment()</a></td>
+	<td>createComment() 方法可创建注释节点。</td>
+</tr>
+<tr>
+<td><a href="met-document-createdocumentfragment.html">document.createDocumentFragment()</a></td>
+	<td>创建空的 DocumentFragment 对象，并返回此对象。</td>
+</tr>
+<tr>
+<td><a href="met-document-createelement.html">document.createElement()</a></td>
+	<td>创建元素节点。</td>
+</tr>
+<tr>
+<td><a href="met-document-createtextnode.html">document.createTextNode()</a></td>
+	<td>创建文本节点。</td>
+</tr>
+<tr>
+<td><a href="prop-document-doctype.html">document.doctype</a></td>
+	<td>返回与文档相关的文档类型声明 (DTD)。</td>
+</tr>
+<tr>
+<td><a href="prop-document-documentelement.html">document.documentElement</a></td>
+	<td>返回文档的根节点</td>
+</tr>
+<tr>
+<td><a href="prop-doc-documentmode.html">document.documentMode</a></td>
+    <td>返回用于通过浏览器渲染文档的模式</td>
+</tr>
+<tr>
+<td><a href="prop-document-documenturi.html">document.documentURI</a></td>
+	<td>设置或返回文档的位置</td>
+</tr>
+<tr>
+<td><a href="prop-doc-domain.html">document.domain</a></td>
+    <td>返回当前文档的域名。</td>
+</tr>
+<tr>
+<td>document.domConfig</td>
+	<td>返回normalizeDocument()被调用时所使用的配置</td>
+</tr>
+<tr>
+<td><a href="coll-doc-forms.html">document.forms</a></td>
+    <td>返回对文档中所有 Form 对象引用。</td>
+</tr>
+<tr>
+<td><a href="met-document-getelementbyid.html">document.getElementById()</a></td>
+	<td>返回对拥有指定 id 的第一个对象的引用。</td>
+</tr>
+<tr>
+<td><a href="met-doc-getelementsbyname.html">document.getElementsByName()</a></td>
+    <td>返回带有指定名称的对象集合。</td>
+</tr>
+<tr>
+<td><a href="met-document-getelementsbytagname.html">document.getElementsByTagName()</a></td>
+	<td>返回带有指定标签名的对象集合。</td>
+</tr>
+<tr>
+<td><a href="coll-doc-images.html">document.images</a></td>
+    <td>返回对文档中所有 Image 对象引用。</td>
+</tr>
+<tr>
+<td><a href="prop-document-implementation.html">document.implementation</a></td>
+	<td>返回处理该文档的 DOMImplementation 对象。</td>
+</tr>
+<tr>
+<td><a href="met-document-importnode.html">document.importNode()</a></td>
+	<td>把一个节点从另一个文档复制到该文档以便应用。</td>
+</tr>
+<tr>
+<td><a href="prop-document-inputencoding.html">document.inputEncoding</a></td>
+	<td>返回用于文档的编码方式（在解析时）。</td>
+</tr>
+<tr>
+<td><a href="prop-doc-lastmodified.html">document.lastModified</a></td>
+    <td>返回文档被最后修改的日期和时间。</td>
+</tr>
+<tr>
+<td><a href="coll-doc-links.html">document.links</a></td>
+    <td>返回对文档中所有 Area 和 Link 对象引用。</td>
+</tr>
+<tr>
+<td><a href="met-document-normalize.html">document.normalize()</a></td>
+	<td>删除空文本节点，并连接相邻节点</td>
+</tr>
+<tr>
+<td><a href="met-document-normalizedocument.html">document.normalizeDocument()</a></td>
+	<td>删除空文本节点，并连接相邻节点的</td>
+</tr>
+<tr>
+<td><a href="met-doc-open.html">document.open()</a></td>
+    <td>打开一个流，以收集来自任何 document.write() 或 document.writeln() 方法的输出。</td>
+</tr>
+<tr>
+<td><a href="prop-doc-readystate.html">document.readyState</a></td>
+    <td>返回文档状态 (载入中……) </td>
+</tr>
+<tr>
+<td><a href="prop-doc-referrer.html">document.referrer</a></td>
+    <td>返回载入当前文档的文档的 URL。</td>
+</tr>
+<tr>
+<td><a href="met-document-renamenode.html">document.renameNode()</a></td>
+	<td>重命名元素或者属性节点。</td>
+</tr>
+<tr>
+<td><a href="prop-document-stricterrorchecking.html">document.strictErrorChecking</a></td>
+	<td>设置或返回是否强制进行错误检查。</td>
+</tr>
+<tr>
+<td><a href="prop-doc-title.html">document.title</a></td>
+    <td>返回当前文档的标题。</td>
+</tr>
+<tr>
+<td><a href="prop-doc-url.html">document.URL</a></td>
+    <td>返回文档完整的URL</td>
+</tr>
+<tr>
+<td><a href="met-doc-write.html">document.write()</a></td>
+    <td>向文档写 HTML 表达式 或 JavaScript 代码。</td>
+</tr>
+<tr>
+<td><a href="met-doc-writeln.html">document.writeln()</a></td>
+    <td>等同于 write() 方法，不同的是在每个表达式之后写一个换行符。</td>
+</tr>
+</table>
+<br /><hr />
+<h2>警告 !!!</h2>
+<p>在 W3C DOM核心，文档对象
+继承节点对象的所有属性和方法。</p>
+<p>很多属性和方法在文档中是没有意义的。</p>
+<p><strong>HTML 文档对象可以避免使用这些节点对象和属性：</strong></p>
+
+<table class="reference notranslate">
+<tr>
+<th width="30%" align="left"> 属性 / 方法</th>
+<th align="left">避免的原因</th>
+</tr>
+<tr>
+<td>document.attributes</td>
+	<td>文档没有该属性</td>
+</tr>
+<tr>
+<td>document.hasAttributes()</td>
+	<td>文档没有该属性</td>
+</tr>
+<tr>
+<td>document.nextSibling</td>
+	<td>文档没有下一节点</td>
+</tr>
+<tr>
+<td>document.nodeName</td>
+	<td>这个通常是 #document</td>
+</tr>
+<tr>
+<td>document.nodeType</td>
+	<td>这个通常是 9(DOCUMENT_NODE) </td>
+</tr>
+<tr>
+<td>document.nodeValue</td>
+	<td>文档没有一个节点值</td>
+</tr>
+<tr>
+<td>document.ownerDocument</td>
+	<td>文档没有主文档</td>
+</tr>
+<tr>
+<td>document.ownerElement</td>
+	<td>文档没有自己的节点</td>
+</tr>
+<tr>
+<td>document.parentNode</td>
+	<td>文档没有父节点</td>
+</tr>
+<tr>
+<td>document.previousSibling</td>
+	<td>文档没有兄弟节点</td>
+</tr>
+<tr>
+<td>document.textContent</td>
+	<td>文档没有文本节点</td>
+</tr>
+</table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsref/obj-navigator.html" rel="prev"> Navigator 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsref/jsref-constructor-array.html" rel="next">JavaScript constructor 属性</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.387 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 10:45:05 -->
+
+<!-- super cache -->

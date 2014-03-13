@@ -1,0 +1,371 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Mobile 列表视图 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='XSLT 总结' href='http://www.w3cschool.cc/xsl/xsl-summary.html' />
+<link rel='next' title='jQuery Mobile 列表内容' href='http://www.w3cschool.cc/jquerymobile/jquerymobile-list-content.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jquerymobile/jquerymobile-list-views.html' />
+<meta name="keywords" content="jQuery Mobile 列表视图,jQuery Mobile">
+<meta name="description" content="jQuery Mobile 列表视图     jQuery Mobile 列表视图  jQuery Mobile 中的列表视图是标准的HTML 列表; 有序(&lt;ol&gt;) 和 无序(&lt;ul&gt;).  列表视图是jQuery Mobile中功能强大的一个特性。它会使标准的无序或有序列表应用更广泛。应用方法就是在ul或ol标签中添加data-role=”listview”属性。在每个项目(&lt;li&gt;)中添加链接..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>jQuery Mobile</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html" >
+	jQuery Mobile 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-intro.html" >
+	jQuery Mobile 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-install.html" >
+	jQuery Mobile 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-pages.html" >
+	jQuery Mobile 页面	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-transitions.html" >
+	jQuery Mobile 页面切换	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-buttons.html" >
+	jQuery Mobile 按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-icons.html" >
+	jQuery Mobile 按钮图标	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-toolbars.html" >
+	jQuery Mobile 工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-navbars.html" >
+	jQuery Mobile 导航栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-collapsibles.html" >
+	jQuery Mobile 可折叠块	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-grids.html" >
+	jQuery Mobile 网格	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 列表</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-list-views.html" >
+	jQuery Mobile 列表视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-list-content.html" >
+	jQuery Mobile 列表内容	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 表单</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-basic.html" >
+	jQuery Mobile 表单基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-inputs.html" >
+	jQuery Mobile 表单输入	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-select.html" >
+	jQuery Mobile 表单选择	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-form-sliders.html" >
+	jQuery Mobile 表单滑动条	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 主题</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-themes.html" >
+	jQuery Mobile 主题	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Mobile 事件</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events.html" >
+	jQuery Mobile 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-touch.html" >
+	jQuery Mobile 触摸事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-scroll.html" >
+	jQuery Mobile 滚屏事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-orientation.html" >
+	jQuery Mobile 方向改变事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-examples.html" >
+	jQuery Mobile 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-data.html" >
+	jQuery Mobile Data 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-icons.html" >
+	jQuery Mobile 图标	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-ref-events.html" >
+	jQuery Mobile 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquerymobile/jquerymobile-events-page.html" >
+	jQuery Mobile页面事件	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-pages.html" rel="prev"> jQuery Mobile 页面</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-list-content.html" rel="next">jQuery Mobile 列表内容</a> &raquo;</div>
+	</div>
+
+	<h1>jQuery Mobile <span class="color_h1">列表视图</span>
+</h1>
+<hr />
+<iframe src="/try/demo_source/tryjqmob_lists_adv.htm" scrolling="no" frameborder="0" width="95%" height="273px" seamless=""></iframe>
+<br /><hr />
+<h2>jQuery Mobile 列表视图</h2>
+<p> jQuery Mobile 中的列表视图是标准的HTML 列表; 有序(&lt;ol&gt;) 和
+无序(&lt;ul&gt;). </p>
+<p>列表视图是jQuery Mobile中功能强大的一个特性。它会使标准的无序或有序列表应用更广泛。应用方法就是在ul或ol标签中添加data-role="listview"属性。在每个项目(&lt;li&gt;)中添加链接，用户可以点击它：</p>
+
+<div class="example">
+	<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;ol <span class="marked">data-role="listview"</span>&gt;<br />  &lt;li&gt;&lt;a href="#"&gt;列表项m&lt;/a&gt;&lt;/li&gt;<br />
+	&lt;/ol&gt;<br /><br />&lt;ul <span class="marked">data-role="listview"</span>&gt;<br />
+	 
+	&lt;li&gt;&lt;a href="#"&gt;列表项&lt;/a&gt;&lt;/li&gt;<br />&lt;/ul&gt;<br />
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjqmob_lists_views">尝试一下 »</a>
+</div>
+<p>列表样式的圆角和边缘，使用
+data-inset="true" 属性设置:</p>
+<div class="example">
+	<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;ul data-role="listview" <span class="marked">data-inset="true"</span>&gt;<br />
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjqmob_lists_inset">尝试一下 »</a>
+</div>
+<br /><table class="lamp" id="table1"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>默认情况下，列表项的链接会自动变成一个按钮 
+(不需要 data-role="button")。</td>
+</tr></table>
+<br /><hr />
+<h2>列表分隔</h2>
+<p>列表项也可以转化为列表分割项，用来组织列表，使列表项成组。</p>
+<p>指定列表分割，给列表项&lt;li&gt;元素添加 data-role="list-divider" 属性即可：</p>
+<div class="example">
+	<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;ul data-role="listview"&gt;<br /> &lt;li <span class="marked">data-role="list-divider"</span>&gt;欧洲&lt;/li&gt;<br />  
+	&lt;li&gt;&lt;a href="#"&gt;法国&lt;/a&gt;&lt;/li&gt;<br />  &lt;li&gt;&lt;a href="#"&gt;德国&lt;/a&gt;&lt;/li&gt;<br />
+	&lt;/ul&gt;<br />
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjqmob_lists_dividers">尝试一下 »</a>
+</div>
+<p>如果你有一个字母顺序排列的列表，（例如一个电话簿）通过 &lt;ol&gt; 或者&lt;ul&gt; 元素的 data-autodividers="true" 属性设置可以配置为自动生成的项目的分隔:</p>
+<div class="example">
+	<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;ul data-role="listview" <span class="marked">data-autodividers="true"</span>&gt;<br />  &lt;li&gt;&lt;a href="#"&gt;Adele&lt;/a&gt;&lt;/li&gt;<br />  
+	&lt;li&gt;&lt;a href="#"&gt;Agnes&lt;/a&gt;&lt;/li&gt;<br />  &lt;li&gt;&lt;a href="#"&gt;Billy&lt;/a&gt;&lt;/li&gt;<br />  
+	&lt;li&gt;&lt;a href="#"&gt;Calvin&lt;/a&gt;&lt;/li&gt;<br />  ...<br />&lt;/ul&gt;<br />
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjqmob_lists_autodividers">尝试一下 »</a>
+</div>
+<br /><table class="lamp" id="table1"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>data-autodividers="true" 可以配置为自动生成的项目的分隔。默认情况下，创建的分隔文本是列表项文本的第一个大写字母。</td>
+</tr></table>
+<br /><hr />
+<h2>搜索过滤</h2>
+<p>jquery Mobile提供一个非常简单的方法，实现客户端搜索功能，筛选列表的选项。只需添加 data-filter="true" 属性即可:</p>
+<div class="example">
+	<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;ul data-role="listview"
+	<span class="marked">data-filter="true"</span>&gt;&lt;/ul&gt;<br />
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjqmob_lists_filter">尝试一下 »</a>
+</div>
+<p>默认情况下，搜索输入框默认的字符为 "Filter items..."。 </p>
+<p>通过设置mobileinit事件的绑定程序或者给 $.mobile.listview.prototype.options.filterPlaceholder 选项设置一个字符串，或者给列表设置 data-filter-placeholder 属性，可以设置搜索输入框的默认字符:</p>
+<div class="example">
+	<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;ul 
+	data-role="listview" data-filter="true" <span class="marked">data-filter-placeholder="搜索姓名"</span>&gt;<br />
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/try.php?filename=tryjqmob_lists_filter_placeholder">尝试一下 »</a>
+</div>
+<br /><hr />
+<div class="tryit_ex">
+<img src="/images/tryitimg.gif" width="40" height="46px" alt="实例"><h2>更多实例</h2>
+</div>
+
+<p>
+<a href="/try/try.php?filename=tryjqmob_lists_readonly" target="_blank">只读列表</a><br />
+如何创建一个不带链接的列表 (不会是个按钮且不可点击)。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-pages.html" rel="prev"> jQuery Mobile 页面</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-list-content.html" rel="next">jQuery Mobile 列表内容</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.713 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:24:14 -->
+
+<!-- super cache -->

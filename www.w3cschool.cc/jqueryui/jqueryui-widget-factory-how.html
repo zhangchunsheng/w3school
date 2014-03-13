@@ -1,0 +1,537 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI 如何使用部件库 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery UI 为什么使用部件库' href='http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-why.html' />
+<link rel='next' title='ASP Cookies 集合' href='http://www.w3cschool.cc/asp/coll-cookies-response.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-how.html' />
+<meta name="keywords" content="jQuery UI 如何使用部件库,Jquery UI">
+<meta name="description" content="jQuery UI 如何使用部件库（Widget Factory）  我们将创建一个进度条。正如下面实例所示，这可以通过调用 jQuery.widget() 来完成，它带有两个参数：一个是要创建的插件名称，一个是包含支持插件的函数的对象文字。当插件被调用时，它将创建一个新的插件实例，所有的函数都将在该实例的语境中被执行。这与两种重要方式的标准 jQuery 插件不同。首先，语境是一个对象，不是 DOM 元素。其次，语境总是一个单一的对象..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Jquery UI</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html" >
+	jQuery UI 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-intro.html" >
+	jQuery UI 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-download.html" >
+	jQuery UI 下载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-use.html" >
+	jQuery UI 使用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-custom.html" >
+	jQuery UI 定制	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-work.html" >
+	jQuery UI 工作原理	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">主题</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme.html" >
+	jQuery UI 主题	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-themeroller.html" >
+	jQuery UI ThemeRoller	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-api.html" >
+	jQuery UI CSS 框架 API	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-design.html" >
+	jQuery UI 设计主题	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">部件库</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory.html" >
+	jQuery UI 部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-extend.html" >
+	jQuery UI 扩展小部件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-method.html" >
+	jQuery UI 小部件方法调用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-why.html" >
+	jQuery UI 为什么使用部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-how.html" >
+	jQuery UI 如何使用部件库	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-api.html" >
+	jQuery UI API 文档	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-why.html" rel="prev"> jQuery UI 为什么使用部件库</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/jqueryui-api.html" rel="next">jQuery UI API 文档</a> &raquo;</div>
+	</div>
+
+	<h1>jQuery UI <span class="color_h1">如何使用部件库（Widget Factory）</span></h1>
+
+<p>我们将创建一个进度条。正如下面实例所示，这可以通过调用 <code>jQuery.widget()</code> 来完成，它带有两个参数：一个是要创建的插件名称，一个是包含支持插件的函数的对象文字。当插件被调用时，它将创建一个新的插件实例，所有的函数都将在该实例的语境中被执行。这与两种重要方式的标准 jQuery 插件不同。首先，语境是一个对象，不是 DOM 元素。其次，语境总是一个单一的对象，不是一个集合。</p>
+<pre>
+$.widget( "custom.progressbar", {
+    _create: function() {
+        var progress = this.options.value + "%";
+        this.element
+            .addClass( "progressbar" )
+            .text( progress );
+    }
+});
+</pre>
+
+<p>插件的名称必须包含命名空间，在这个实例中，我们使用了 <code>custom</code> 命名空间。您只能创建一层深的命名空间，因此，<code>custom.progressbar</code> 是一个有效的插件名称，而 <code>very.custom.progressbar</code> 不是一个有效的插件名称。</p>
+<p>我们看到部件库（Widget Factory）为我们提供了两个属性。<code>this.element</code> 是一个包含一个元素的 jQuery 对象。如果我们的插件在包含多个元素的 jQuery 对象上调用，则会为每个元素创建一个单独的插件实例，且每个实例都会有自己的 <code>this.element</code>。第二个属性，<code>this.options</code>，是一个包含所有插件选项的键名/键值对的哈希（hash）。这些选项可以被传给插件，如下所示：</p>
+<pre>
+$( "&lt;div&gt;&lt;/div&gt;" )
+    .appendTo( "body" )
+    .progressbar({ value: 20 });
+</pre>
+
+<p>当我们调用 <code>jQuery.widget()</code>，它通过给 <code>jQuery.fn</code>（用于创建标准插件的系统） 添加函数来扩展 jQuery。所添加的函数名称是基于您传给 <code>jQuery.widget()</code> 的名称，不带命名空间 - &quot;progressbar&quot;。传给插件的选项是在插件实例中获取设置的值。如下面的实例所示，我们可以为任意一个选项指定默认值。当设计您的 API 时，您应该清楚你的插件的最常见的使用情况，以便您可以设置适当的默认值，且确保使所有的选项真正可选。</p>
+<pre>
+$.widget( "custom.progressbar", {
+ 
+    // Default options.
+    options: {
+        value: 0
+    },
+    _create: function() {
+        var progress = this.options.value + "%";
+        this.element
+            .addClass( "progressbar" )
+            .text( progress );
+    }
+});
+</pre>
+
+<h3>调用插件方法</h3>
+<p>现在我们可以初始化我们的进度条，我们将通过在插件实例上调用方法来执行动作。为了定义一个插件方法，我们只在我们传给 <code>jQuery.widget()</code> 的对象中引用函数。我们也可以通过给函数名加下划线前缀来定义 &quot;private&quot; 方法。</p>
+<pre>
+$.widget( "custom.progressbar", {
+ 
+    options: {
+        value: 0
+    },
+ 
+    _create: function() {
+        var progress = this.options.value + "%";
+        this.element
+            .addClass( "progressbar" )
+            .text( progress );
+    },
+ 
+    // Create a public method.
+    value: function( value ) {
+ 
+        // No value passed, act as a getter.
+        if ( value === undefined ) {
+            return this.options.value;
+        }
+ 
+        // Value passed, act as a setter.
+        this.options.value = this._constrain( value );
+        var progress = this.options.value + "%";
+        this.element.text( progress );
+    },
+ 
+    // Create a private method.
+    _constrain: function( value ) {
+        if ( value &gt; 100 ) {
+            value = 100;
+        }
+        if ( value &lt; 0 ) {
+            value = 0;
+        }
+        return value;
+    }
+});
+</pre>
+
+<p>为了在插件实例上调用方法，您可以向 jQuery 插件传递方法的名称。如果您调用的方法接受参数，您只需简单地在方法名后面传递这些参数即可。</p>
+<p><strong>注意：</strong>通过向同一个用于初始化插件的 jQuery 函数传递方法名来执行方法。这样做是为了在保持链方法调用时防止 jQuery 命名空间污染。在本章节的后续，我们将看到看起来更自然的其他用法。</p>
+<pre>
+var bar = $( "&lt;div&gt;&lt;/div&gt;" )
+    .appendTo( "body" )
+    .progressbar({ value: 20 });
+ 
+// Get the current value.
+alert( bar.progressbar( "value" ) );
+ 
+// Update the value.
+bar.progressbar( "value", 50 );
+ 
+// Get the current value again.
+alert( bar.progressbar( "value" ) );
+</pre>
+
+<h3>使用选项</h3>
+<p><code>option()</code> 方法是自动提供给插件的。<code>option()</code> 方法允许您在初始化后获取并设置选项。该方法像 jQuery 的 <code>.css()</code> 和 <code>.attr()</code> 方法：您可以只传递一个名称作为取值器来使用，也可以传递一个名称和值作为设置器使用，或者传递一个键名/键值对的哈希来设置多个值。当作为取值器使用时，插件将返回与传入名称相对应的选项的当前值。当作为设置器使用时，插件的 <code>_setOption</code> 方法将被每个被设置的选项调用。我们可以在我们的插件中指定一个 <code>_setOption</code> 方法来反应选项更改。对于更改选项要独立执行的动作，我们可以重载 <code>_setOptions</code>。</p>
+<pre>
+$.widget( "custom.progressbar", {
+    options: {
+        value: 0
+    },
+    _create: function() {
+        this.options.value = this._constrain(this.options.value);
+        this.element.addClass( "progressbar" );
+        this.refresh();
+    },
+    _setOption: function( key, value ) {
+        if ( key === "value" ) {
+            value = this._constrain( value );
+        }
+        this._super( key, value );
+    },
+    _setOptions: function( options ) {
+        this._super( options );
+        this.refresh();
+    },
+    refresh: function() {
+        var progress = this.options.value + "%";
+        this.element.text( progress );
+    },
+    _constrain: function( value ) {
+        if ( value &gt; 100 ) {
+            value = 100;
+        }
+        if ( value &lt; 0 ) {
+            value = 0;
+        }
+        return value;
+    }
+});
+</pre>
+
+<h3>添加回调</h3>
+<p>最简单的扩展插件的方法是添加回调，这样用户就可以在插件状态发生变化时做出反应。我们可以看下面的实例如何在进度达到 100% 时添加回调到进度条。<code>_trigger()</code> 方法有三个参数：回调名称，一个启动回调的 jQuery 事件对象，以及一个与事件相关的数据哈希。回调名称是唯一一个必需的参数，但是对于想要在插件上实现自定义功能的用户，其他的参数是非常有用的。例如，如果我们创建一个可拖拽插件，我们可以在触发拖拽回调时传递 mousemove 事件，这将允许用户对基于由事件对象提供的 x/y 坐标上的拖拽做出反应。请注意，传递到 <code>_trigger()</code> 的原始的事件必须是一个 jQuery 事件，而不是一个原生的浏览器事件。</p>
+<pre>
+$.widget( "custom.progressbar", {
+    options: {
+        value: 0
+    },
+    _create: function() {
+        this.options.value = this._constrain(this.options.value);
+        this.element.addClass( "progressbar" );
+        this.refresh();
+    },
+    _setOption: function( key, value ) {
+        if ( key === "value" ) {
+            value = this._constrain( value );
+        }
+        this._super( key, value );
+    },
+    _setOptions: function( options ) {
+        this._super( options );
+        this.refresh();
+    },
+    refresh: function() {
+        var progress = this.options.value + "%";
+        this.element.text( progress );
+        if ( this.options.value == 100 ) {
+            this._trigger( "complete", null, { value: 100 } );
+        }
+    },
+    _constrain: function( value ) {
+        if ( value &gt; 100 ) {
+            value = 100;
+        }
+        if ( value &lt; 0 ) {
+            value = 0;
+        }
+        return value;
+    }
+});
+</pre>
+
+<p>回调函数本质上只是附加选项，所以您可以像其他选项一样获取并设置它们。无论何时执行回调，都会有一个相对应的事件被触发。事件类型是通过连接插件的名称和回调函数名称确定的。回调和事件都接受两个相同的参数：一个事件对象和一个与事件相关的数据哈希，具体如下面实例所示。您的插件可能需要包含防止用户使用的功能，为了做到这点，最好的方法就是创建爱你可撤销的回调。用户可以撤销回调或者相关的事件，与他们撤销任何一个原生事件一样，都是通过调用 <code>event.preventDefault()</code> 或返回 <code>false</code> 来实现的。如果用户撤销回调，<code>_trigger()</code> 方法将返回 <code>false</code>，这样您就能在插件内实现合适的功能。</p>
+<pre>
+var bar = $( "&lt;div&gt;&lt;/div&gt;" )
+    .appendTo( "body" )
+    .progressbar({
+        complete: function( event, data ) {
+            alert( "Callbacks are great!" );
+        }
+    })
+    .bind( "progressbarcomplete", function( event, data ) {
+        alert( "Events bubble and support many handlers for extreme flexibility." );
+        alert( "The progress bar value is " + data.value );
+    });
+ 
+bar.progressbar( "option", "value", 100 );
+</pre>
+
+<h2>本质</h2>
+<p>现在我们已经看到如何使用部件库（Widget Factory）创建一个插件，接下来让我们看看它实际上是如何工作的。当您调用 <code>jQuery.widget()</code> 时，它将为插件创建一个构造函数，并设置您为插件实例传入的作为原型的对象。所有自动添加到插件的功能都来自一个基本的小部件原型，该原型定义为 <code>jQuery.Widget.prototype</code>。当创建插件实例时，会使用 <code>jQuery.data</code> 把它存储在原始的 DOM 元素上，插件名作为键名。</p>
+<p>由于插件实例直接链接到 DOM 元素上，您可以直接访问插件实例，而不需要遍历插件方法。这将允许您直接在插件实例上调用方法，而不需要传递字符串形式的方法名，同时您也可以直接访问插件的属性。</p>
+<pre>
+var bar = $( "&lt;div&gt;&lt;/div&gt;" )
+    .appendTo( "body" )
+    .progressbar()
+    .data( "progressbar" );
+ 
+// Call a method directly on the plugin instance.
+bar.option( "value", 50 );
+ 
+// Access properties on the plugin instance.
+alert( bar.options.value );
+</pre>
+
+<p>您也可以在不遍历插件方法的情况下创建一个实例，通过选项和元素直接调用构造函数即可：</p>
+<pre>
+var bar = $.custom.progressbar( {}, $( "&lt;div&gt;&lt;/div&gt;" ).appendTo( "body") );
+ 
+// Same result as before.
+alert( bar.options.value );
+</pre>
+
+<h3>扩展插件的原型</h3>
+<p>插件有构造函数和原型的最大好处是易于扩展插件。通过添加或修改插件原型上的方法，我们可以修改插件所有实例的行为。例如，如果我们想要向进度条添加一个方法来重置进度为 0%，我们可以向原型添加这个方法，它将在所有插件实例上可调用。</p>
+<pre>
+$.custom.progressbar.prototype.reset = function() {
+    this._setOption( "value", 0 );
+};
+</pre>
+
+<p>如需了解扩展小部件的更多细节，以及如何在一个已有的小部件上创建一个全新的小部件的更多细节，请查看 <a href="/jqueryui/jqueryui-widget-extend.html">通过部件库（Widget Factory）扩展小部件（Widget）</a>。</p>
+
+<h3>清理</h3>
+<p>在某些情况下，允许用户应用插件，然后再取消应用。您可以通过 <code>_destroy()</code> 方法做到这一点。在 <code>_destroy()</code> 方法内，您应该撤销在初始化和后期使用期间插件所做的一切动作。<code>_destroy()</code> 是通过 <code>.destroy()</code> 方法被调用的，<code>.destroy()</code> 方法是在插件实例绑定的元素从 DOM 上移除时被自动调用的，所以这可被用于垃圾回收。基本的 <code>.destroy()</code> 方法也处理一些常用的清理操作，比如从小部件的 DOM 元素上移除实例引用，从元素上解除绑定小部件命名空间中的所有事件，解除绑定所有使用 <code>_bind()</code> 添加的事件。</p>
+<pre>
+$.widget( "custom.progressbar", {
+    options: {
+        value: 0
+    },
+    _create: function() {
+        this.options.value = this._constrain(this.options.value);
+        this.element.addClass( "progressbar" );
+        this.refresh();
+    },
+    _setOption: function( key, value ) {
+        if ( key === "value" ) {
+            value = this._constrain( value );
+        }
+        this._super( key, value );
+    },
+    _setOptions: function( options ) {
+        this._super( options );
+        this.refresh();
+    },
+    refresh: function() {
+        var progress = this.options.value + "%";
+        this.element.text( progress );
+        if ( this.options.value == 100 ) {
+            this._trigger( "complete", null, { value: 100 } );
+        }
+    },
+    _constrain: function( value ) {
+        if ( value &gt; 100 ) {
+            value = 100;
+        }
+        if ( value &lt; 0 ) {
+            value = 0;
+        }
+        return value;
+    },
+    _destroy: function() {
+        this.element
+            .removeClass( "progressbar" )
+            .text( "" );
+    }
+});
+</pre>
+
+<h2>关闭注释</h2>
+<p>部件库（Widget Factory）只是创建有状态插件的一种方式。这里还有一些其他不同的模型可以使用，且每个都有各自的优势和劣势。部件库（Widget Factory）解决了很多常见的问题，且大大提高了效率，同时也大大提高了代码的重用性，使它适合于 jQuery UI 及其他有状态的插件。</p>
+<p>请注意，在本章节中我们使用了 <code>custom</code> 命名空间。<code>ui</code> 命名空间被官方的 jQuery UI 插件保留。当创建您自己的插件时，您应该创建自己的命名空间。这样才能更清楚插件来自哪里，属于哪个范围。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-why.html" rel="prev"> jQuery UI 为什么使用部件库</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/jqueryui-api.html" rel="next">jQuery UI API 文档</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.431 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 18:43:43 -->
+
+<!-- super cache -->

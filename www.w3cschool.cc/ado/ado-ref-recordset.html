@@ -1,0 +1,723 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>ADO Recordset 对象 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='ADO Record 对象' href='http://www.w3cschool.cc/ado/ado-ref-record.html' />
+<link rel='next' title='ADO Stream 对象' href='http://www.w3cschool.cc/ado/ado-ref-stream.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/ado/ado-ref-recordset.html' />
+<meta name="keywords" content="ADO Recordset 对象,ADO 教程">
+<meta name="description" content="ADO Recordset 对象  实例 GetRows 本例演示如何使用 GetRows 方法。  Recordset 对象  ADO Recordset 对象用于容纳一个来自数据库表的记录集。一个 Recordset 对象由记录和列（字段）组成。  在 ADO 中，此对象是最重要且最常用于对数据库的数据进行操作的对象。  ProgID   set objRecordset=Server.CreateObject('ADODB.rec..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>ADO 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-tutorial.html" >
+	ADO 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-intro.html" >
+	ADO 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-connect.html" >
+	ADO 数据库连接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-recordset.html" >
+	ADO ADO Recordset（记录集）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-display.html" >
+	ADO 显示	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-query.html" >
+	ADO 查询	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-sort.html" >
+	ADO 排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-add.html" >
+	ADO 添加记录	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-update.html" >
+	ADO 更新记录	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-delete.html" >
+	ADO 删除记录	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-getstring.html" >
+	ADO 加速脚本	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-command.html" >
+	ADO Command 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-connection.html" >
+	ADO Connection 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-error.html" >
+	ADO Error 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-field.html" >
+	ADO Field 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-parameter.html" >
+	ADO Parameter 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-property.html" >
+	ADO Property 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-record.html" >
+	ADO Record 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-recordset.html" >
+	ADO Recordset 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-stream.html" >
+	ADO Stream 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-datatypes.html" >
+	ADO 数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-summary.html" >
+	ADO 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-examples.html" >
+	ADO 实例	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/ado/ado-ref-record.html" rel="prev"> ADO Record 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/ado/ado-ref-stream.html" rel="next">ADO Stream 对象</a> &raquo;</div>
+	</div>
+
+	<h1>ADO <span class="color_h1">Recordset</span> 对象</h1>
+<hr />
+<h2>实例</h2>
+<p><a target="_blank" href="/try/showasp.php?filename=demo_ado_getrows">GetRows</a><br />
+本例演示如何使用 GetRows 方法。</p>
+<hr />
+<h2>Recordset 对象</h2>
+
+<p>ADO Recordset 对象用于容纳一个来自数据库表的记录集。一个 Recordset 对象由记录和列（字段）组成。</p>
+
+<p>在 ADO 中，此对象是最重要且最常用于对数据库的数据进行操作的对象。</p>
+
+<h3>ProgID</h3>
+<div class="code notranslate"><div>
+
+set objRecordset=Server.CreateObject("ADODB.recordset")
+
+</div></div>
+<p>当您首次打开一个 Recordset 时，当前记录指针将指向第一个记录，同时 BOF 和 EOF 属性为 False。如果没有记录，BOF 和 EOF 属性为 True。</p>
+
+<p>Recordset 对象能够支持两种更新类型：</p>
+<ul>
+立即更新 - 一旦调用 Update 方法，所有更改被立即写入数据库。
+批更新 - provider 将缓存多个更改，然后使用 UpdateBatch 方法把这些更改传送到数据库。
+</ul>
+
+<p>在 ADO，定义了 4 中不同的游标（指针）类型：</p>
+<ul>
+<li>动态游标 - 允许您查看其他用户所作的添加、更改和删除</li>
+<li>键集游标 - 类似动态游标，不同的是您无法查看有其他用户所做的添加，并且它会防止您访问其他用户已删除的记录。其他用户所做的数据更改仍然是可见的。</li>
+<li>静态游标 - 提供记录集的静态副本，可用来查找数据或生成报告。此外，由其他用户所做的添加、更改和删除将是不可见的。当您打开一个客户端 Recordset 对象时，这是唯一被允许的游标类型。</li>
+<li>仅向前游标 - 只允许在 Recordset 中向前滚动。此外，由其他用户所做的添加、更改和删除将是不可见的。</li>
+</ul>
+
+<p>可通过 CursorType 属性或 Open 方法中的 CursorType 参数来设置游标的类型。</p>
+
+<p class="note"><span>注释：</span>并非所有的提供者（providers）支持 Recordset 对象的所有方法和属性。</p>
+
+
+<hr />
+<h2>属性</h2>
+
+<table class="reference">
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>AbsolutePage</td>
+<td>设置或返回一个可指定 Recordset 对象中页码的值。</td>
+</tr>
+
+<tr>
+<td>AbsolutePosition</td>
+<td>设置或返回一个值，此值可指定 Recordset 对象中当前记录的顺序位置（序号位置）。</td>
+</tr>
+
+<tr>
+<td>ActiveCommand</td>
+<td>返回与 Recordset 对象相关联的 Command 对象。</td>
+</tr>
+
+<tr>
+<td>ActiveConnection</td>
+<td>如果连接被关闭，设置或返回连接的定义，如果连接打开，设置或返回当前的 Connection 对象。</td>
+</tr>
+
+<tr>
+<td>BOF</td>
+<td>如果当前的记录位置在第一条记录之前，则返回 true，否则返回 fasle。</td>
+</tr>
+
+<tr>
+<td>Bookmark</td>
+<td>设置或返回一个书签。此书签保存当前记录的位置。</td>
+</tr>
+
+<tr>
+<td>CacheSize</td>
+<td>设置或返回能够被缓存的记录的数目。</td>
+</tr>
+
+<tr>
+<td>CursorLocation</td>
+<td>设置或返回游标服务的位置。</td>
+</tr>
+
+<tr>
+<td>CursorType</td>
+<td>设置或返回一个 Recordset 对象的游标类型。</td>
+</tr>
+
+<tr>
+<td>DataMember</td>
+<td>设置或返回要从 DataSource 属性所引用的对象中检索的数据成员的名称。</td>
+</tr>
+
+<tr>
+<td>DataSource</td>
+<td>指定一个包含要被表示为 Recordset 对象的数据的对象。</td>
+</tr>
+
+<tr>
+<td>EditMode</td>
+<td>返回当前记录的编辑状态。</td>
+</tr>
+
+<tr>
+<td>EOF</td>
+<td>如果当前记录的位置在最后的记录之后，则返回 true，否则返回 fasle。</td>
+</tr>
+
+<tr>
+<td>Filter</td>
+<td>返回一个针对 Recordset 对象中数据的过滤器。</td>
+</tr>
+
+<tr>
+<td>Index</td>
+<td>设置或返回 Recordset 对象的当前索引的名称。</td>
+</tr>
+
+<tr>
+<td>LockType</td>
+<td>设置或返回当编辑 Recordset 中的一条记录时，可指定锁定类型的值。</td>
+</tr>
+
+<tr>
+<td>MarshalOptions</td>
+<td>设置或返回一个值，此值指定哪些记录被返回服务器。</td>
+</tr>
+
+<tr>
+<td>MaxRecords</td>
+<td>设置或返回从一个查询返回 Recordset 对象的的最大记录数目。</td>
+</tr>
+
+<tr>
+<td>PageCount</td>
+<td>返回一个 Recordset 对象中的数据页数。</td>
+</tr>
+
+<tr>
+<td>PageSize</td>
+<td>设置或返回 Recordset 对象的一个单一页面上所允许的最大记录数。</td>
+</tr>
+
+<tr>
+<td>RecordCount</td>
+<td>返回一个 Recordset 对象中的记录数目。</td>
+</tr>
+
+<tr>
+<td>Sort</td>
+<td>设置或返回一个或多个作为 Recordset 排序基准的字段名。</td>
+</tr>
+
+<tr>
+<td>Source</td>
+<td>设置一个字符串值，或一个 Command 对象引用，或返回一个字符串值，此值可指示 Recordset 对象的数据源。</td>
+</tr>
+
+<tr>
+<td>State</td>
+<td>返回一个值，此值可描述是否 Recordset 对象是打开、关闭、正在连接、正在执行或正在取回数据。</td>
+</tr>
+
+<tr>
+<td>Status</td>
+<td>返回有关批更新或其他大量操作的当前记录的状态。</td>
+</tr>
+
+<tr>
+<td>StayInSync</td>
+<td>设置或返回当父记录位置改变时对子记录的引用是否改变。</td>
+</tr>
+</table>
+
+<h2>方法</h2>
+
+<table class="reference">
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>AddNew</td>
+<td>创建一条新记录。</td>
+</tr>
+
+<tr>
+<td>Cancel</td>
+<td>撤销一次执行。</td>
+</tr>
+
+<tr>
+<td>CancelBatch</td>
+<td>撤销一次批更新。</td>
+</tr>
+
+<tr>
+<td>CancelUpdate</td>
+<td>撤销对 Recordset 对象的一条记录所做的更改。</td>
+</tr>
+
+<tr>
+<td>Clone</td>
+<td>创建一个已有 Recordset 的副本。</td>
+</tr>
+
+<tr>
+<td>Close</td>
+<td>关闭一个 Recordset。</td>
+</tr>
+
+<tr>
+<td>CompareBookmarks</td>
+<td>比较两个书签。</td>
+</tr>
+
+<tr>
+<td>Delete</td>
+<td>删除一条记录或一组记录。</td>
+</tr>
+
+<tr>
+<td>Find</td>
+<td>搜索一个 Recordset 中满足指定某个条件的一条记录。</td>
+</tr>
+
+<tr>
+<td>GetRows</td>
+<td>把多条记录从一个 Recordset 对象中拷贝到一个二维数组中。</td>
+</tr>
+
+<tr>
+<td>GetString</td>
+<td>将 Recordset 作为字符串返回。</td>
+</tr>
+
+<tr>
+<td>Move</td>
+<td>在 Recordset 对象中移动记录指针。</td>
+</tr>
+
+<tr>
+<td>MoveFirst</td>
+<td>把记录指针移动到第一条记录。</td>
+</tr>
+
+<tr>
+<td>MoveLast</td>
+<td>把记录指针移动到最后一条记录。</td>
+</tr>
+
+<tr>
+<td>MoveNext</td>
+<td>把记录指针移动到下一条记录。</td>
+</tr>
+
+<tr>
+<td>MovePrevious
+<td>把记录指针移动到上一条记录。
+</tr>
+
+<tr>
+<td>NextRecordset</td>
+<td>通过执行一系列命令清除当前 Recordset 对象并返回下一个 Recordset。</td>
+</tr>
+
+<tr>
+<td>Open</td>
+<td>打开一个数据库元素，此元素可提供对表的记录、查询的结果或保存的 Recordset 的访问。</td>
+</tr>
+
+<tr>
+<td>Requery</td>
+<td>通过重新执行对象所基于的查询来更新 Recordset 对象中的数据。</td>
+</tr>
+
+<tr>
+<td>Resync</td>
+<td>从原始数据库刷新当前 Recordset 中的数据。</td>
+</tr>
+
+<tr>
+<td>Save</td>
+<td>把 Recordset 对象保存到 file 或 Stream 对象中。</td>
+</tr>
+
+<tr>
+<td>Seek</td>
+<td>搜索 Recordset 的索引以快速定位与指定的值相匹配的行，并使其成为当前行。</td>
+</tr>
+
+<tr>
+<td>Supports</td>
+<td>返回一个布尔值，此值可定义 Recordset 对象是否支持特定类型的功能。</td>
+</tr>
+
+<tr>
+<td>Update</td>
+<td>保存所有对 Recordset 对象中的一条单一记录所做的更改。</td>
+</tr>
+
+<tr>
+<td>UpdateBatch</td>
+<td>把所有 Recordset 中的更改存入数据库。请在批更新模式中使用。</td>
+</tr>
+</table>
+
+<h2>事件</h2>
+<p>注意: 你不能使用 VBScript 或者 JScript 处理(只允许 Visual Basic, Visual C++, 和 Visual J++ 语言处理事件).</p>
+
+<table class="reference">
+<tr>
+<th>事件</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>EndOfRecordset</td>
+<td>当试图移动到超过 Recordset 结尾的行时被触发。</td>
+</tr>
+
+<tr>
+<td>FetchComplete</td>
+<td>当异步操作中的所有记录均被读取后被触发。</td>
+</tr>
+
+<tr>
+<td>FetchProgress</td>
+<td>在异步操作期间被定期地触发，报告已读取多少记录。</td>
+</tr>
+
+<tr>
+<td>FieldChangeComplete</td>
+<td>Field 对象的值更改被触发。</td>
+</tr>
+
+<tr>
+<td>MoveComplete</td>
+<td>Recordset 中的当前位置更改后被触发。</td>
+</tr>
+
+<tr>
+<td>RecordChangeComplete</td>
+<td>一条记录更改之后被触发。</td>
+</tr>
+
+<tr>
+<td>RecordsetChangeComplete</td>
+<td>在 Recordset 更改之后被触发。</td>
+
+<tr>
+<td>WillChangeField</td>
+<td>在 Field 对象的值更改之前被触发</td>
+</tr>
+
+<tr>
+<td>WillChangeRecord</td>
+<td>在一条记录更改之前被触发。</td>
+</tr>
+
+<tr>
+<td>WillChangeRecordset</td>
+<td>在 Recordset 更改之前被触发。</td>
+</tr>
+
+<tr>
+<td>WillMove</td>
+<td>在 Recordset 中的当前位置更改之前被触发。</td>
+</tr>
+</table>
+
+<h2>集合</h2>
+
+<table class="reference">
+<tr>
+<th>集合</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>Fields</td>
+<td>指示在此 Recordset 对象中 Field 对象的数目。</td>
+</tr>
+
+<tr>
+<td>Properties</td>
+<td>包含所有 Recordset 对象中的 Property 对象。</td>
+</tr>
+</table>
+
+<h2>Fields 集合的属性</h2>
+
+<table class="reference">
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>Count</td>
+<td>
+<p>返回 fields 集合中项目的数目。以 0 起始。</p>
+<p>例子：</p>
+<pre>countfields = rs.Fields.Count</pre>
+</td>
+</tr>
+
+<tr>
+<td>Item(named_item/number)</td>
+<td>
+<p>返回 fields 集合中的某个指定的项目。</p>
+<p>例子：</p>
+<pre>itemfields = rs.Fields.Item(1)
+或者	
+itemfields = rs.Fields.Item(&amp;quot;Name&amp;quot;)
+</pre>
+</td>
+</tr>
+</table>
+
+<h2>Properties 集合的属性</h2>
+<table class="reference">
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>Count</td>
+<td>
+<p>返回 properties 集合中项目的数目。以 0 起始。</p>
+<p>例子：</p>
+<pre>countprop = rs.Properties.Count</pre>
+</td>
+</tr>
+
+<tr>
+<td>Item(named_item/number)</td>
+<td>
+<p>返回 properties 集合中某个指定的项目。</p>
+<p>例子：</p>
+<pre>
+itemprop = rs.Properties.Item(1)
+或者
+itemprop = rs.Properties.Item(&amp;quot;Name&amp;quot;)
+</pre>
+</td>
+</tr>
+</table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/ado/ado-ref-record.html" rel="prev"> ADO Record 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/ado/ado-ref-stream.html" rel="next">ADO Stream 对象</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.147 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 19:41:11 -->
+
+<!-- super cache -->

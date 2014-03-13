@@ -1,0 +1,524 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery 实例 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery noConflict() 方法' href='http://www.w3cschool.cc/jquery/jquery-noconflict.html' />
+<link rel='next' title='ADO 简介' href='http://www.w3cschool.cc/ado/ado-intro.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jquery/jquery-examples.html' />
+<meta name="keywords" content="jQuery 实例,jQuery 教程">
+<meta name="description" content="jQuery 实例   你想增进 jQuery 技能吗？   jQuery 选择器 $(this).hide() 演示 jQuery 的 hide() 函数，隐藏当前的 HTML 元素。 $('p').hide() 演示 jQuery 的 hide() 函数，隐藏所有 &lt;p&gt; 元素。 $('.test').hide() 演示 jQuery 的 hide() 函数，隐藏所有 class='test' 的元素。 $('#test..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>jQuery 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-tutorial.html" >
+	jQuery 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-intro.html" >
+	jQuery 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-install.html" >
+	jQuery 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-syntax.html" >
+	jQuery 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-selectors.html" >
+	jQuery 选择器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-events.html" >
+	jQuery 事件	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery 效果</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-hide-show.html" >
+	jQuery 隐藏/显示	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-fade.html" >
+	jQuery 淡入淡出	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-slide.html" >
+	jQuery 滑动	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-animate.html" >
+	jQuery 动画	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-stop.html" >
+	jQuery 停止动画	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-callback.html" >
+	jQuery Callback	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-chaining.html" >
+	jQuery Chaining	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery HTML</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-dom-get.html" >
+	jQuery 捕获	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-dom-set.html" >
+	jQuery 设置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-dom-add.html" >
+	jQuery 添加元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-dom-remove.html" >
+	jQuery 删除元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-css-classes.html" >
+	jQuery CSS 类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-css.html" >
+	jQuery css() 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-dimensions.html" >
+	jQuery 尺寸	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery 遍历</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-traversing.html" >
+	jQuery 遍历	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-traversing-ancestors.html" >
+	jQuery 祖先	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-traversing-descendants.html" >
+	jQuery 后代	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-traversing-siblings.html" >
+	jQuery 同胞	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-traversing-filtering.html" >
+	jQuery 过滤	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery Ajax</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ajax-intro.html" >
+	jQuery AJAX 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ajax-load.html" >
+	jQuery load() 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ajax-get-post.html" >
+	jQuery  get()/post() 方法	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery 其他</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-noconflict.html" >
+	jQuery noConflict() 方法	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery 实例</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-examples.html" >
+	jQuery 实例	</a>
+	<br><h2 class="left"><span class="left_h2">jQuery 参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ref-selectors.html" >
+	jQuery 选择器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ref-events.html" >
+	jQuery 事件方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ref-effects.html" >
+	jQuery 效果方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ref-html.html" >
+	jQuery HTML / CSS 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ref-traversing.html" >
+	jQuery 遍历方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ref-ajax.html" >
+	jQuery AJAX 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ref-misc.html" >
+	jQuery 杂项方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jquery/jquery-ref-prop.html" >
+	jQuery 属性	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jquery/jquery-noconflict.html" rel="prev"> jQuery noConflict() 方法</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jquery/jq-sel-all.html" rel="next">jQuery * 选择器</a> &raquo;</div>
+	</div>
+
+	<h1>jQuery <span class="color_h1">实例</span>
+</h1>
+<hr />
+<p class="intro">你想增进 jQuery 技能吗？</p>
+
+<hr />
+<h2>jQuery 选择器</h2>
+<p class="tit_d1"><a href="/try/try.php?filename=tryjquery_hide_this" target="_blank">$(this).hide()</a></p>
+<p class="tit_d3">演示 jQuery 的 hide() 函数，隐藏当前的 HTML 元素。</p>
+<p class="tit_d1"><a href="/try/try.php?filename=tryjquery_hide_p" target="_blank">$("p").hide()</a></p>
+<p class="tit_d3">演示 jQuery 的 hide() 函数，隐藏所有 &lt;p&gt; 元素。</p>
+<p class="tit_d1"><a href="/try/try.php?filename=tryjquery_hide_class" target="_blank">$(".test").hide()</a></p>
+<p class="tit_d3">演示 jQuery 的 hide() 函数，隐藏所有 class="test" 的元素。</p>
+<p class="tit_d1"><a href="/try/try.php?filename=tryjquery_hide_id" target="_blank">$("#test").hide()</a></p>
+<p class="tit_d3">演示 jQuery 的 hide() 函数，隐藏 id="test" 的元素。</p>
+
+<hr />
+<h2>jQuery 事件</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_click">jQuery click()</a><br />
+演示 jQuery jQuery click() 事件.</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dblclick">jQuery 
+dblclick()</a><br />
+演示 jQuery dblclick() 事件。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_mouseenter">jQuery 
+mouseenter()</a><br />
+演示 jQuery mouseenter() 事件。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_mouseleave">jQuery 
+mouseleave()</a><br />
+演示 jQuery mouseleave() 事件。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_mousedown">jQuery 
+mousedown()</a><br />
+演示 jQuery mousedown() 事件。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_mouseup">jQuery mouseup()</a><br />
+演示 jQuery mouseup() 事件。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_hover">jQuery hover()</a><br />
+演示 jQuery hover() 事件。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_focus_blur">jQuery 
+focus() 和 blur()</a><br />
+演示 jQuery focus() 和 blur() 事件。</p>
+<p><b><a href="jquery-events.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery 隐藏/显示</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_hide">jQuery hide()</a><br />
+演示 jQuery hide() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_hide_show">jQuery 
+hide() 和 show()</a><br />
+演示jQuery hide() 和 show() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_toggle">jQuery toggle()</a><br />
+jQuery toggle() 用于切换 hide() 和 show() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_hide_explanations">jQuery hide()</a><br />
+另外一个隐藏文本的实例。</p>
+<p><b><a href="jquery-hide-show.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery 淡入淡出</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_fadein">jQuery fadeIn()</a><br />
+演示 jQuery fadeIn() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_fadeout">jQuery fadeOut()</a><br />
+演示 jQuery fadeOut() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_fadetoggle">jQuery fadeToggle()</a><br />
+演示 jQuery fadeToggle() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_fadeto">jQuery fadeTo()</a><br />
+演示 jQuery fadeTo() 方法。</p>
+<p><b><a href="jquery-fade.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery 滑动</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_slide_down">jQuery slideDown()</a><br />
+演示 jQuery slideDown() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_slide_up">jQuery slideUp()</a><br />
+演示 jQuery slideUp() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_slide_toggle">jQuery slideToggle()</a><br />
+演示 jQuery slideToggle() 方法。</p>
+<p><b><a href="jquery-slide.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery 动画</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_animation1">jQuery animate()</a><br />
+演示简单的 jQuery animate() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_animation1_multicss">jQuery animate() - 设置多个css属性</a><br />
+演示通过 jQuery animate() 方法 改变样式。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_animation1_relative">jQuery animate() - 使用相关值</a><br />
+演示如何在 jQuery animate() 方法中使用相关值。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_animation1_toggle">jQuery animate() - 使用预定义值</a><br />
+演示通过 animate() 方法预定义 "hide", "show", "toggle" 值。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_animation">jQuery animate()</a><br />
+演示更多 jQuery animate() 方法实例</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_animation2">jQuery animate()</a><br />
+演示更多 jQuery animate() 方法实例 (多个 animate() 回调).</p>
+<p><b><a href="jquery-animate.html">实例 解析</a></b></p>
+<hr />
+<h2>jQuery 停止动画</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_stop_slide">jQuery stop() 滑动</a><br />
+演示 jQuery stop() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_stop_params">jQuery stop() 动画 (带参数)</a><br />
+演示 jQuery stop() 方法。</p>
+<p><b><a href="jquery-stop.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery HTML 获取 和 属性</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_html_get">jQuery text() 和 html() - 获取文本和内容</a><br />
+使用jQuery text() 和 html() 方法获取内容。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_val_get">jQuery val() - 获取值</a><br />
+使用jQuery val() 方法获取表单的字段值。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_attr_get">jQuery attr() - 获取属性值</a><br />
+使用jQuery attr() 方法获取属性值。</p>
+<p><b><a href="jquery-dom-get.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery HTML 设置内容和属性</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_html_set">jQuery text(), html(), 和 val() - 设置内容</a><br />
+使用 jQuery text(), html() 和 val() 方法设置内容 。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_html_callback">jQuery text() 和 html() - 设置内容并使用回调函数</a><br />
+使用 text() 和 html() 设置内容并使用回调函数</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_attr_set">jQuery attr() - 设置属性值</a><br />
+使用  jQuery attr() 方法设置属性值 。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_attr_set2">jQuery attr() - 设置 多个属性值</a><br />
+使用jQuery attr() 方法设置多个属性值。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_attr_callback">jQuery attr() - 设置属性值并使用回调函数</a><br />
+设置属性值 + 并使用回调函数调用attr().</p>
+<p><b><a href="jquery-dom-set.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery HTML 添加元素/内容</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_html_append">jQuery append()</a><br />
+在选取元素的末尾添加内容</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_html_prepend">jQuery prepend()</a><br />
+在选取元素的开头添加内容</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_html_append2">jQuery append() -插入多个元素</a><br />
+创新新的 text/HTML 元素, jQuery 和 JavaScript/DOM。添加在新元素文本后。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_html_after">jQuery after() 和 before()</a><br />
+在选取元素的前后添加 HTML　元素。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_html_after2">jQuery after() - 插入多个元素</a><br />
+创新新的 text/HTML 元素,jQuery和 JavaScript/DOM。在选取元素的末尾插入新元素。</p>
+<p><b><a href="jquery-dom-add.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery HTML 移除元素/内容</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_remove">jQuery remove()</a><br />
+移除选取的元素</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_empty">jQuery empty()</a><br />
+移除选取元素的所有子元素</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_remove2">jQuery remove() - 使用参数</a><br />
+过滤元素并移除</p>
+<p><b><a href="jquery-dom-remove.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery Get 和 设置 CSS 类</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_addclass">jQuery addClass()</a><br />
+不同元素添加 class 属性</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_addclass2">jQuery addClass() - 多个类</a><br />
+ 使用 addClass() 方法添加多个类</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_removeclass">jQuery removeClass()</a><br />
+移除指定元素的类</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dom_toggleclass">jQuery toggleClass()</a><br />
+在选取的元素切换（添加/删除）类</p>
+<p><b><a href="jquery-css-classes.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery css() 方法</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_css_getcolor">jQuery css() - 返回 CSS 属性</a><br />
+返回第一个匹配元素的css属性值</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_css_setcolor">jQuery css() - 设置 CSS 属性</a><br />
+设置 所有配置元素指定的 CSS 属性 </p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_css_set_multiple">jQuery css() - 设置 CSS 属性</a><br />
+设置多个匹配元素的 CSS 属性 </p>
+<p><b><a href="jquery-css.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery 尺寸</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dim_width_height">jQuery - 返回 width() 和 height()</a><br />
+返回指定元素的 width 和 height </p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dim_innerwidth_height">jQuery - 返回 innerWidth() 和 innerHeight()</a><br />
+返回指定元素的 inner-width/height</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dim_outerwidth_height">jQuery - 返回 outerWidth() 和 outerHeight()</a><br />
+返回指定元素的 outer-width/height</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dim_outerwidth_height2">jQuery - 返回 outerWidth(true) 和 outerHeight(true)</a><br />
+返回指定元素的 outer-width/height (包含外边框)</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dim_width_height2">
+jQuery - 返回 width() 和 height() of document 和 window</a><br />
+返回 HTML 文档和窗口的 width 和 height</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_dim_width_height_set">
+jQuery - 设置 width() 和 height()</a><br />
+设置指定元素的 width 和 height</p>
+<p><b><a href="jquery-dimensions.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery 遍历 - 祖先</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_parent">jQuery parent()</a><br />
+演示 jQuery parent() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_parents">jQuery parents()</a><br />
+演示 jQuery parents() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_parentsuntil">jQuery parentsUntil()</a><br />
+演示 jQuery parentsUntil() 方法。</p>
+<p><b><a href="jquery-traversing-ancestors.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery 遍历 - 后代</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_children">jQuery children()</a><br />
+演示 jQuery children() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_find">jQuery find()</a><br />
+演示 jQuery find() 方法。</p>
+<p><b><a href="jquery-traversing-descendants.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery 遍历 - 同胞(siblings)</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_siblings">jQuery siblings()</a><br />
+演示 jQuery siblings() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_next">jQuery next()</a><br />
+演示 jQuery next() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_nextall">jQuery nextAll()</a><br />
+演示 jQuery nextAll() 方法。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_nextuntil">jQuery nextUntil()</a><br />
+演示 jQuery nextUntil() 方法。</p>
+
+<p><b><a href="jquery-traversing-siblings.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery AJAX load() 方法</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_ajax_load">jQuery load()</a><br />
+异步载入文件内容并插入到  &lt;div&gt; 元素中。</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_ajax_load2">jQuery load()</a><br />
+异步载入文件内容中指定的元素内容并插入到  &lt;div&gt; 元素.</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_ajax_load_callback">
+jQuery load() - 使用回调函数(callback)</a><br />
+使用 jQuery load() 方法的回调函数。</p>
+<p><b><a href="jquery-ajax-load.html">实例解析</a></b></p>
+<hr />
+<h2>jQuery AJAX get() 和 post() 方法</h2>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_ajax_get">jQuery get()</a><br />
+使用 $.get() 方法从服务端异步获取数据</p>
+<p><a target="_blank" href="/try/try.php?filename=tryjquery_ajax_post">jQuery 
+post()</a><br />
+使用 $.post() 方法从服务端异步获取数据</p>
+<p><b><a href="jquery-ajax-get-post.html">实例解析</a></b></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jquery/jquery-noconflict.html" rel="prev"> jQuery noConflict() 方法</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jquery/jq-sel-all.html" rel="next">jQuery * 选择器</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.372 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 21:07:08 -->
+
+<!-- super cache -->

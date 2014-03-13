@@ -1,0 +1,424 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Google 地图参考手册 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Google 地图类型' href='http://www.w3cschool.cc/googleapi/google-maps-types.html' />
+<link rel='next' title='地图 API Map() 构造器' href='http://www.w3cschool.cc/googleapi/ref-map.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/googleapi/google-maps-ref.html' />
+<meta name="keywords" content="Google 地图参考手册,Google地图 API">
+<meta name="description" content="Google 地图 API 参考手册   Google 地图API 参考手册  地图    构造函数/对象     描述     Map()     在指定的 HTML 容器中创建新的地图，该容器通常是一个DIV元素。     叠加层   构造函数/对象     描述     Marker     创建一个标记。     MarkerOptions     标记的选项。由DirectionsRenderer渲染的所有标记都将使用这些选项..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Google地图 API</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/googleapi-tutorial.html" >
+	Google API 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-api-key.html" >
+	Google 地图 API	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-basic.html" >
+	Google 地图基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-overlays.html" >
+	Google 地图叠加层	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-events.html" >
+	Google 地图事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-controls.html" >
+	Google 地图控件集	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-types.html" >
+	Google 地图类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/google-maps-ref.html" >
+	Google 地图参考手册	</a>
+		<a target="_top" href="http://www.w3cschool.cc/googleapi/ref-map.html" >
+	地图 API Map() 构造器	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/googleapi/google-maps-types.html" rel="prev"> Google 地图类型</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/googleapi/ref-map.html" rel="next">地图 API Map() 构造器</a> &raquo;</div>
+	</div>
+
+	<h1>Google 地图 API <span class="color_h1">参考手册</span>
+</h1>
+<hr />
+<h2>Google 地图API 参考手册</h2>
+
+<h2>地图</h2>
+
+<table class="reference notranslate" id="table1">
+<tr>
+<th width="30%" align="left">构造函数/对象</th>
+    <th width="70%" align="left">描述</th>
+  </tr>
+<tr>
+<td><a href="ref-map.html">Map()</a></td>
+    <td>在指定的 HTML 容器中创建新的地图，该容器通常是一个DIV元素。</td>
+  </tr>
+</table>
+<h2>叠加层</h2>
+<table class="reference notranslate" id="table3">
+<tr>
+<th width="30%" align="left">构造函数/对象</th>
+    <th width="70%" align="left">描述</th>
+  </tr>
+<tr>
+<td>Marker</td>
+    <td>创建一个标记。</td>
+  </tr>
+<tr>
+<td>MarkerOptions</td>
+    <td>标记的选项。由DirectionsRenderer渲染的所有标记都将使用这些选项。</td>
+  </tr>
+<tr>
+<td>MarkerImage</td>
+    <td>A structure representing a Marker icon or shadow image</td>
+  </tr>
+<tr>
+<td>MarkerShape</td>
+    <td>Defines the marker shape to use in determination of a marker's clickable 
+	region (type and coord)</td>
+  </tr>
+<tr>
+<td>Animation</td>
+    <td>Specifies animations that can be played on a marker (bounce or drop)</td>
+  </tr>
+<tr>
+<td>InfoWindow</td>
+    <td>Creates an info window</td>
+  </tr>
+<tr>
+<td>InfoWindowOptions</td>
+    <td>Options for rendering the info window</td>
+  </tr>
+<tr>
+<td>Polyline</td>
+    <td>Creates a polyline (contains path and stroke styles)</td>
+  </tr>
+<tr>
+<td>PolylineOptions</td>
+    <td>Options for rendering the polyline</td>
+  </tr>
+<tr>
+<td>Polygon</td>
+    <td>Creates a polygon (contains path and stroke+fill styles)</td>
+  </tr>
+<tr>
+<td>PolygonOptions</td>
+    <td>Options for rendering the polygon</td>
+  </tr>
+<tr>
+<td>Rectangle</td>
+    <td>Creates a rectangle (contains bounds and stroke+fill styles)</td>
+  </tr>
+<tr>
+<td>RectangleOptions</td>
+    <td>Options for rendering the rectangle</td>
+  </tr>
+<tr>
+<td>Circle</td>
+    <td>Creates a circle (contains center+radius and stroke+fill styles)</td>
+  </tr>
+<tr>
+<td>CircleOptions</td>
+    <td>Options for rendering the circle</td>
+  </tr>
+<tr>
+<td>GroundOverlay</td>
+    <td> </td>
+  </tr>
+<tr>
+<td>GroundOverlayOptions</td>
+    <td> </td>
+  </tr>
+<tr>
+<td>OverlayView</td>
+    <td> </td>
+  </tr>
+<tr>
+<td>MapPanes</td>
+    <td> </td>
+  </tr>
+<tr>
+<td>MapCanvasProjection</td>
+    <td> </td>
+  </tr>
+</table>
+<h2>事件</h2>
+
+<table class="reference notranslate" id="table5">
+<tr>
+<th width="30%" align="left">构造函数/对象</th>
+    <th width="70%" align="left">描述</th>
+  </tr>
+<tr>
+<td>MapsEventListener</td>
+    <td>It has no methods and no constructor. Its instances are returned from 
+	addListener(), addDomListener() and are eventually passed back to 
+	removeListener()</td>
+  </tr>
+<tr>
+<td>event</td>
+    <td>Adds/Removes/Trigger event listeners</td>
+  </tr>
+<tr>
+<td>MouseEvent</td>
+    <td>Returned from various mouse events on the map and overlays</td>
+  </tr>
+</table>
+<h2>控件集</h2>
+<table class="reference notranslate" id="table4">
+<tr>
+<th width="30%" align="left">构造函数/对象</th>
+    <th width="70%" align="left">描述</th>
+  </tr>
+<tr>
+<td>MapTypeControlOptions</td>
+    <td>Holds options for modifying a control (position and style)</td>
+  </tr>
+<tr>
+<td>MapTypeControlStyle</td>
+    <td>Specifies what kind of map control to display (Drop-down menu or 
+	buttons) </td>
+  </tr>
+<tr>
+<td>OverviewMapControlOptions</td>
+    <td>Options for rendering of the overview map control (opened or collapsed)</td>
+  </tr>
+<tr>
+<td>PanControlOptions</td>
+    <td>Options for rendering of the pan control (position)</td>
+  </tr>
+<tr>
+<td>RotateControlOptions</td>
+    <td>Options for rendering of the rotate control (position)</td>
+  </tr>
+<tr>
+<td>ScaleControlOptions</td>
+    <td>Options for rendering of the scale control (position and style)</td>
+  </tr>
+<tr>
+<td>ScaleControlStyle</td>
+    <td>Specifies what kind of scale control to display</td>
+  </tr>
+<tr>
+<td>StreetViewControlOptions</td>
+    <td>Options for rendering of the street view pegman control (position)</td>
+  </tr>
+<tr>
+<td>ZoomControlOptions</td>
+    <td>Options for rendering of the zoom control (position and style)</td>
+  </tr>
+<tr>
+<td>ZoomControlStyle</td>
+    <td>Specifies what kind of zoom control to display (large or small)</td>
+  </tr>
+<tr>
+<td>ControlPosition</td>
+    <td>Specifies the placement of controls on the map</td>
+  </tr>
+</table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/googleapi/google-maps-types.html" rel="prev"> Google 地图类型</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/googleapi/ref-map.html" rel="next">地图 API Map() 构造器</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.123 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 21:13:45 -->
+
+<!-- super cache -->

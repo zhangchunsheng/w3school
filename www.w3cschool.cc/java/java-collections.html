@@ -1,0 +1,637 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Java 集合框架 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='MongoDB PHP' href='http://www.w3cschool.cc/mongodb/mongodb-php.html' />
+<link rel='next' title='Java 泛型' href='http://www.w3cschool.cc/java/java-generics.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/java/java-collections.html' />
+<meta name="keywords" content="Java 集合框架,Java 教程">
+<meta name="description" content="Java 集合框架  早在Java 2中之前，Java就提供了特设类。比如：Dictionary, Vector, Stack, 和Properties这些类用来存储和操作对象组。   虽然这些类都非常有用，但是它们缺少一个核心的，统一的主题。由于这个原因，使用Vector类的方式和使用Properties类的方式有着很大不同。  集合框架被设计成要满足以下几个目标。  	 		该框架必须是高性能的。基本集合（动态数组，链表，树，哈希表..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Java 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-tutorial.html" >
+	Java 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-intro.html" >
+	Java 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-environment-setup.html" >
+	Java开发环境配置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-syntax.html" >
+	Java基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-object-classes.html" >
+	Java对象和类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-datatypes.html" >
+	Java基本数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-variable-types.html" >
+	Java变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-modifier-types.html" >
+	Java修饰符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-operators.html" >
+	Java运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-loop.html" >
+	Java循环结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-if-else-switch.html" >
+	Java分支结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-number.html" >
+	Java Number类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-character.html" >
+	Java Character类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-string.html" >
+	Java String类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-stringbuffer.html" >
+	Java StringBuffer和StringBuilder类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-array.html" >
+	Java 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-date-time.html" >
+	Java日期时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-regular-expressions.html" >
+	Java正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-methods.html" >
+	Java 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-files-io.html" >
+	Java 流(Stream)、文件(File)和IO	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-exceptions.html" >
+	Java 异常处理	</a>
+	<br><h2 class="left">Java <span class="left_h2">面向对象</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-inheritance.html" >
+	Java 继承	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-override-overload.html" >
+	Java 重写(Override)与重载(Overload)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-polymorphism.html" >
+	Java 多态	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-abstraction.html" >
+	Java 抽象类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-encapsulation.html" >
+	java 封装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-interfaces.html" >
+	Java 接口	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-package.html" >
+	Java 包(package)	</a>
+	<br><h2 class="left">Java <span class="left_h2">高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-data-structures.html" >
+	Java 数据结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-collections.html" >
+	Java 集合框架	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-generics.html" >
+	Java 泛型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-serialization.html" >
+	Java序列化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-networking.html" >
+	Java 网络编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-sending-email.html" >
+	Java 发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-multithreading.html" >
+	Java 多线程编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-applet-basics.html" >
+	Java Applet基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-documentation.html" >
+	Java 文档注释	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-data-structures.html" rel="prev"> Java 数据结构</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-generics.html" rel="next">Java 泛型</a> &raquo;</div>
+	</div>
+
+	<h1>Java 集合框架</h1>
+<p>
+早在Java 2中之前，Java就提供了特设类。比如：Dictionary, Vector, Stack, 和Properties这些类用来存储和操作对象组。
+</p>
+<p>
+虽然这些类都非常有用，但是它们缺少一个核心的，统一的主题。由于这个原因，使用Vector类的方式和使用Properties类的方式有着很大不同。</p>
+<p>
+集合框架被设计成要满足以下几个目标。</p>
+<ul>
+	<li>
+		该框架必须是高性能的。基本集合（动态数组，链表，树，哈希表）的实现也必须是高效的。</li>
+	<li>
+		该框架允许不同类型的集合，以类似的方式工作，具有高度的互操作性。</li>
+	<li>
+		对一个集合的扩展和适应必须是简单的。</li>
+</ul>
+<p>
+为此，整个集合框架就围绕一组标准接口而设计。你可以直接使用这些接口的标准实现，诸如： LinkedList, HashSet, 和 TreeSet等,除此之外你也可以通过这些接口实现自己的集合。</p>
+<p>
+集合框架是一个用来代表和操纵集合的统一架构。所有的集合框架都包含如下内容：</p>
+
+<ul>
+	<li>
+		<strong>接口：</strong>是代表集合的抽象数据类型。接口允许集合独立操纵其代表的细节。在面向对象的语言，接口通常形成一个层次。</li>
+	<li>
+		<strong>实现（类）：</strong>是集合接口的具体实现。从本质上讲，它们是可重复使用的数据结构。</li>
+	<li>
+		<strong>算法：</strong>是实现集合接口的对象里的方法执行的一些有用的计算，例如：搜索和排序。这些算法被称为多态，那是因为相同的方法可以在相似的接口上有着不同的实现。</li>
+</ul><p>
+除了集合，该框架也定义了几个Map接口和类。Map里存储的是键/值对。尽管Map不是collections，但是它们完全整合在集合中。</p>
+<hr /><h2>集合接口</h2>
+<p>
+集合框架定义了一些接口。本节提供了每个接口的概述：</p>
+
+<table class="reference">
+<tbody>
+<tr>
+<th>序号</th>
+<th>接口描述</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Collection 接口<br />
+
+允许你使用一组对象，是Collection层次结构的根接口。</td>
+</tr>
+<tr>
+<td>2</td>
+<td> List 接口<br />
+
+继承于<strong>Collection</strong>和一个 List实例存储一个有序集合的元素。</td>
+</tr>
+<tr>
+<td>3</td>
+<td> Set<br />
+
+继承于 <strong>Collection，是</strong>一个不包含重复元素的集合。</td>
+</tr>
+<tr>
+<td>4</td>
+<td> SortedSet<br />
+
+继承于Set保存有序的集合。</td>
+</tr>
+<tr>
+<td>5</td>
+<td> Map<br />
+
+将唯一的键映射到值。</td>
+</tr>
+<tr>
+<td>6</td>
+<td> Map.Entry<br />
+
+描述在一个Map中的一个元素（键/值对）。是一个Map的内部类。</td>
+</tr>
+<tr>
+<td>7</td>
+<td> SortedMap<br />
+
+继承于Map，使Key保持在升序排列。</td>
+</tr>
+<tr>
+<td>8</td>
+<td> Enumeration<br />
+
+这是一个传统的接口和定义的方法，通过它可以枚举（一次获得一个）对象集合中的元素。这个传统接口已被迭代器取代。</td>
+</tr>
+</tbody>
+</table>
+
+<hr /><h2>集合类</h2>
+<p>
+Java提供了一套实现了Collection接口的标准集合类。其中一些是具体类，这些类可以直接拿来使用，而另外一些是抽象类，提供了接口的部分实现。
+</p><p>标准集合类汇总于下表：</p>
+<table class="reference">
+<tbody>
+<tr>
+<th>序号</th>
+<th>类描述</th>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>AbstractCollection </strong><br />
+
+实现了大部分的集合接口。</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>AbstractList </strong><br />
+
+继承于AbstractCollection 并且实现了大部分List接口。</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>AbstractSequentialList </strong><br />
+
+继承于 AbstractList ，提供了对数据元素的链式访问而不是随机访问。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>LinkedList<br />
+
+继承于 AbstractSequentialList，实现了一个链表。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ArrayList<br />
+
+通过继承AbstractList，实现动态数组。</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>AbstractSet </strong><br />
+
+继承于AbstractCollection 并且实现了大部分Set接口。</td>
+</tr>
+<tr>
+<td>7</td>
+<td>HashSet<br />
+
+继承了AbstractSet，并且使用一个哈希表。</td>
+</tr>
+<tr>
+<td>8</td>
+<td>LinkedHashSet<br />
+
+具有可预知迭代顺序的 <tt>Set</tt> 接口的哈希表和链接列表实现。</td>
+</tr>
+<tr>
+<td>9</td>
+<td>TreeSet<br />
+
+继承于AbstractSet，使用元素的自然顺序对元素进行排序.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>AbstractMap </strong><br />
+
+实现了大部分的Map接口。</td>
+</tr>
+<tr>
+<td>11</td>
+<td>HashMap
+<br />
+继承了HashMap，并且使用一个哈希表。</td>
+</tr>
+<tr>
+<td>12</td>
+<td>TreeMap
+<br />
+继承了AbstractMap，并且使用一颗树。</td>
+</tr>
+<tr>
+<td>13</td>
+<td>WeakHashMap
+<br />
+继承AbstractMap类，使用弱密钥的哈希表。</td>
+</tr>
+<tr>
+<td>14</td>
+<td>LinkedHashMap
+<br />
+继承于HashMap，使用元素的自然顺序对元素进行排序.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>IdentityHashMap
+<br />
+继承AbstractMap类，比较文档时使用引用相等。</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<p>在前面的教程中已经讨论通过java.util包中定义的类，如下所示：
+</p>
+<table class="reference">
+<tbody>
+<tr>
+<th>序号</th>
+<th>类描述</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Vector
+<br />
+Vector类实现了一个动态数组。和ArrayList和相似，但是两者是不同的。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Stack
+<br />
+栈是Vector的一个子类，它实现了一个标准的后进先出的栈。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dictionary
+<br />
+Dictionary 类是一个抽象类，用来存储键/值对，作用和Map类相似。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Hashtable
+<br />
+Hashtable是原始的java.util的一部分， 是一个Dictionary具体的实现 。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Properties
+<br />
+Properties 继承于 Hashtable.表示一个持久的属性集.属性列表中每个键及其对应值都是一个字符串。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>BitSet<br />
+一个Bitset类创建一种特殊类型的数组来保存位值。BitSet中数组大小会随需要增加。</td>
+</tr>
+</tbody>
+</table>
+<p>一个Bitset类创建一种特殊类型的数组来保存位值。BitSet中数组大小会随需要增加。
+</p>
+<hr />
+<h2>集合算法</h2>
+<p>
+集合框架定义了几种算法，可用于集合和映射。这些算法被定义为集合类的静态方法。</p>
+<p>
+在尝试比较不兼容的类型时，一些方法能够抛出 ClassCastException异常。当试图修改一个不可修改的集合时，抛出UnsupportedOperationException异常。</p>
+<p>
+集合定义三个静态的变量：EMPTY_SET EMPTY_LIST，EMPTY_MAP的。这些变量都不可改变。</p>
+<p>
+
+
+
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				序号</th>
+			<th>
+				算法描述</th>
+		</tr>
+		<tr>
+			<td>
+				1</td>
+			<td>
+				Collection Algorithms<br />
+				这里是一个列表中的所有算法实现。</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+
+<h2>
+如何使用迭代器
+</h2>
+<p>
+通常情况下，你会希望遍历一个集合中的元素。例如，显示集合中的每个元素。</p>
+<p>
+做到这一点最简单的方法是采用一个迭代器，它是一个对象，实现了Iterator 接口或ListIterator接口。</p>
+<p>
+迭代器，使你能够通过循环来得到或删除集合的元素。ListIterator继承了Iterator，以允许双向遍历列表和修改元素。</p>
+<table class="reference>
+	<tbody>
+		<tr>
+			<th>
+				序号</th>
+			<th>
+				迭代器方法描述</th>
+		</tr>
+		<tr>
+			<td>
+				1</td>
+			<td>
+				使用 Java Iterator<br />
+				<span id="result_box" tabindex="-1">这里通过</span>实例列出Iterator和listIterator接口提供的所有方法。</td>
+		</tr>
+	</tbody>
+</table>
+
+<hr />
+<h2>
+如何使用比较器
+</h2>
+<p>
+TreeSet和TreeMap的按照排序顺序来存储元素. 然而，这是通过比较器来精确定义按照什么样的排序顺序。</p>
+<p>
+这个接口可以让我们以不同的方式来排序一个集合。</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				序号</th>
+			<th>
+				比较器方法描述</th>
+		</tr>
+		<tr>
+			<td>
+				1</td>
+			<td>
+				使用 Java Comparator<br />
+				这里通过实例列出Comparator接口提供的所有方法</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+<h2>总结
+</h2>
+<p>
+Java集合框架为程序员提供了预先包装的数据结构和算法来操纵他们。</p>
+<p>
+集合是一个对象，可容纳其他对象的引用。集合接口声明对每一种类型的集合可以执行的操作。</p>
+<p>
+集合框架的类和接口均在java.util包中。</p>
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-data-structures.html" rel="prev"> Java 数据结构</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-generics.html" rel="next">Java 泛型</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.182 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:31:48 -->
+
+<!-- super cache -->

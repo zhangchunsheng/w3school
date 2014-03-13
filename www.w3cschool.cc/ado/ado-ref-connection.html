@@ -1,0 +1,452 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>ADO Connection 对象 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='ADO Command 对象' href='http://www.w3cschool.cc/ado/ado-command.html' />
+<link rel='next' title='ADO Error 对象' href='http://www.w3cschool.cc/ado/ado-ref-error.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/ado/ado-ref-connection.html' />
+<meta name="keywords" content="ADO Connection 对象,ADO 教程">
+<meta name="description" content="ADO Connection 对象  Connection 对象  ADO Connection 对象用于创建一个到达某个数据源的开放连接。通过此连接，您可以对一个数据库进行访问和操作。  如果需要多次访问某个数据库，您应当使用 Connection 对象来建立一个连接。您也可以经由一个 Command 或 Recordset 对象传递一个连接字符串来创建某个连接。不过，此类连接仅仅适合一次具体的简单的查询。  ProgID    se..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>ADO 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-tutorial.html" >
+	ADO 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-intro.html" >
+	ADO 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-connect.html" >
+	ADO 数据库连接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-recordset.html" >
+	ADO ADO Recordset（记录集）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-display.html" >
+	ADO 显示	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-query.html" >
+	ADO 查询	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-sort.html" >
+	ADO 排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-add.html" >
+	ADO 添加记录	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-update.html" >
+	ADO 更新记录	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-delete.html" >
+	ADO 删除记录	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-getstring.html" >
+	ADO 加速脚本	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-command.html" >
+	ADO Command 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-connection.html" >
+	ADO Connection 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-error.html" >
+	ADO Error 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-field.html" >
+	ADO Field 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-parameter.html" >
+	ADO Parameter 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-property.html" >
+	ADO Property 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-record.html" >
+	ADO Record 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-recordset.html" >
+	ADO Recordset 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-ref-stream.html" >
+	ADO Stream 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-datatypes.html" >
+	ADO 数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-summary.html" >
+	ADO 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/ado/ado-examples.html" >
+	ADO 实例	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/ado/ado-command.html" rel="prev"> ADO Command 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/ado/ado-ref-error.html" rel="next">ADO Error 对象</a> &raquo;</div>
+	</div>
+
+	<h1>ADO <span class="color_h1">Connection</span> 对象</h1>
+<hr />
+<h2>Connection 对象</h2>
+
+<p>ADO Connection 对象用于创建一个到达某个数据源的开放连接。通过此连接，您可以对一个数据库进行访问和操作。</p>
+
+<p>如果需要多次访问某个数据库，您应当使用 Connection 对象来建立一个连接。您也可以经由一个 Command 或 Recordset 对象传递一个连接字符串来创建某个连接。不过，此类连接仅仅适合一次具体的简单的查询。</p>
+
+<h3>ProgID</h3>
+<div class="code">
+<div>
+
+set objConnection=Server.CreateObject("ADODB.connection")
+
+</div>
+</div>
+
+<hr />
+
+<h2>属性</h2>
+<table class="reference">
+<tbody>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>设置或返回 Connection 对象的属性。</td>
+</tr>
+<tr>
+<td>CommandTimeout</td>
+<td>指示在终止尝试和产生错误之前执行命令期间需等待的时间。</td>
+</tr>
+<tr>
+<td>ConnectionString</td>
+<td>设置或返回用于建立连接数据源的细节信息。</td>
+</tr>
+<tr>
+<td>ConnectionTimeout</td>
+<td>指示在终止尝试和产生错误前建立连接期间所等待的时间。</td>
+</tr>
+<tr>
+<td>CursorLocation</td>
+<td>设置或返回游标服务的位置。</td>
+</tr>
+<tr>
+<td>DefaultDatabase</td>
+<td>指示 Connection 对象的默认数据库。</td>
+</tr>
+<tr>
+<td>IsolationLevel</td>
+<td>指示 Connection 对象的隔离级别。</td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>设置或返回 provider 的访问权限。</td>
+</tr>
+<tr>
+<td>Provider</td>
+<td>设置或返回 Connection 对象提供者的名称。</td>
+</tr>
+<tr>
+<td>State</td>
+<td>返回一个描述连接是打开还是关闭的值。</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>返回 ADO 的版本号。</td>
+</tr>
+</tbody>
+</table>
+<div>
+<h2>方法</h2>
+<table class="reference">
+<tbody>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>BeginTrans</td>
+<td>开始一个新事务。</td>
+</tr>
+<tr>
+<td>Cancel</td>
+<td>取消一次执行。</td>
+</tr>
+<tr>
+<td>Close</td>
+<td>关闭一个连接。</td>
+</tr>
+<tr>
+<td>CommitTrans</td>
+<td>保存任何更改并结束当前事务。</td>
+</tr>
+<tr>
+<td>Execute</td>
+<td>执行查询、SQL 语句、存储过程或 provider 具体文本。</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>打开一个连接。</td>
+</tr>
+<tr>
+<td>OpenSchema</td>
+<td>从 provider 返回有关数据源的 schema 信息。</td>
+</tr>
+<tr>
+<td>RollbackTrans</td>
+<td>取消当前事务中所作的任何更改并结束事务。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<h2>事件</h2>
+<p>
+<strong>注释：</strong>您无法使用 VBScript or JScript 来处理事件（仅能使用 Visual Basic、Visual C++ 以及 Visual J++ 语言处理事件）。
+</p>
+<table class="reference">
+<tbody>
+<tr>
+<th>事件</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>BeginTransComplete</td>
+<td>在 BeginTrans 操作之后被触发。</td>
+</tr>
+<tr>
+<td>CommitTransComplete</td>
+<td>在 CommitTrans 操作之后被触发。</td>
+</tr>
+<tr>
+<td>ConnectComplete</td>
+<td>在一个连接开始后被触发。</td>
+</tr>
+<tr>
+<td>Disconnect</td>
+<td>在一个连接结束之后被触发。</td>
+</tr>
+<tr>
+<td>ExecuteComplete</td>
+<td>在一条命令执行完毕后被触发。</td>
+</tr>
+<tr>
+<td>InfoMessage</td>
+<td>假如在一个 ConnectionEvent 操作过程中警告发生，则触发该事件。</td>
+</tr>
+<tr>
+<td>RollbackTransComplete</td>
+<td>在 RollbackTrans 操作之后被触发。</td>
+</tr>
+<tr>
+<td>WillConnect</td>
+<td>在一个连接开始之前被触发。</td>
+</tr>
+<tr>
+<td>WillExecute</td>
+<td>在一条命令被执行之前被触发。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<h2>集合</h2>
+<table class="reference">
+<tbody>
+<tr>
+<th>集合</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>Errors</td>
+<td>包含 Connection 对象的所有 Error 对象。</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td>包含 Connection 对象的所有 Property 对象。</td>
+</tr>
+</tbody>
+</table>
+</div>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/ado/ado-command.html" rel="prev"> ADO Command 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/ado/ado-ref-error.html" rel="next">ADO Error 对象</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.142 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 19:41:06 -->
+
+<!-- super cache -->

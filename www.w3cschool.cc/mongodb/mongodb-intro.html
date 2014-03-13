@@ -1,0 +1,377 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>MongoDB 简介 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Bootstrap 教程' href='http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html' />
+<link rel='next' title='Bootstrap 简介' href='http://www.w3cschool.cc/bootstrap/bootstrap-intro.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/mongodb/mongodb-intro.html' />
+<meta name="keywords" content="MongoDB 简介,MongoDB 教程">
+<meta name="description" content="什么是MongoDB ? MongoDB 是由C++语言编写的开源数据库系统。 在高负载的情况下，添加更多的节点，可以保证服务器性能。 MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。   MongoDB 将数据存储为一个文档。MongoDB是一个基于分布式文件存储的数据库。  FirstName='Arun', Address='St. Xavier's Road', Spouse=[{Name:'Kiran'}]..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>MongoDB 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-tutorial.html" >
+	MongoDB 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/nosql.html" >
+	NoSQL 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-intro.html" >
+	MongoDB 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-window-install.html" >
+	window平台安装MongoDB	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-linux-install.html" >
+	Linux平台安装MongoDB	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-databases-documents-collections.html" >
+	MongoDB - 数据库，对象，集合	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-connections.html" >
+	MongoDB 连接	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-install-php-driver.html" >
+	PHP安装MongoDB扩展	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-insert.html" >
+	MongoDB 数据插入	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-update.html" >
+	MongoDB update()函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-remove.html" >
+	MongoDB remove()函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-query.html" >
+	MongoDB 查询	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-operators.html" >
+	MongoDB条件操作符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-operators-type.html" >
+	MongoDB条件操作符 - $type	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-limit-skip.html" >
+	MongoDB Limit与Skip方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-sort.html" >
+	MongoDB 排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-indexing.html" >
+	MongoDB 索引	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-aggregate.html" >
+	MongoDB 聚合(aggregate)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-replication.html" >
+	MongoDB 复制(副本集)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-sharding.html" >
+	MongoDB 分片	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-mongodump-mongorerstore.html" >
+	MongoDB 备份与恢复	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-mongostat-mongotop.html" >
+	MongoDB 监控	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-java.html" >
+	MongoDB Java	</a>
+		<a target="_top" href="http://www.w3cschool.cc/mongodb/mongodb-php.html" >
+	MongoDB PHP	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/mongodb/nosql.html" rel="prev"> NoSQL 简介</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/mongodb/mongodb-window-install.html" rel="next">window平台安装MongoDB</a> &raquo;</div>
+	</div>
+
+	<h2>什么是MongoDB ?</h2>
+<p>MongoDB 是由C++语言编写的开源数据库系统。</p>
+<p>在高负载的情况下，添加更多的节点，可以保证服务器性能。</p>
+<p>MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。</p>
+
+<img class="alignnone size-full wp-image-3523" alt="mongodb-logo" src="http://www.w3cschool.cc/wp-content/uploads/2013/10/mongodb-logo.png" width="269" height="108" data-pinit="registered" />
+<p>MongoDB 将数据存储为一个文档。MongoDB是一个基于分布式文件存储的数据库。</p>
+<div class="code"><div>
+FirstName="Arun", Address="St. Xavier's Road", Spouse=[{Name:"Kiran"}], Children=[{Name:"Rihit", Age:8}]. <br />
+FirstName="Sameer",Address="8 Gandhi Road". </div>
+</div>
+
+<p><strong>注意：</strong>以上数据有两个不同的文档（以"."分隔）。以这种方式存储数据即为文件存储的数据库。 MongoDB是一个面向文档的数据库。</p>
+<br /><hr />
+<h2>主要特点</h2>
+<ul><li>MongoDB的提供了一个面向文档存储，操作起来比较简单和容易。</li>
+<li>你可以在MongoDB记录中设置任何属性的索引 (如：FirstName="Sameer",Address="8 Gandhi Road")来实现更快的排序。</li>
+<li>你可以通过本地或者网络创建数据镜像，这使得MongoDB有更强的扩展性。</li>
+<li>如果负载的增加（需要更多的存储空间和更强的处理能力） ，它可以分布在计算机网络中的其他节点上这就是所谓的分片。</li>
+<li>Mongo支持丰富的查询表达式。查询指令使用JSON形式的标记，可轻易查询文档中内嵌的对象及数组。 </li>
+<li>MongoDb 使用update()命令可以实现替换完成的文档（数据）或者一些指定的数据字段 。</li>
+<li>Mongodb中的Map/reduce主要是用来对数据进行批量处理和聚合操作。</li>
+<li>Map和Reduce。Map函数调用emit(key,value)遍历集合中所有的记录，将key与value传给Reduce函数进行处理。</li>
+<li>Map函数和Reduce函数是使用Javascript编写的，并可以通过db.runCommand或mapreduce命令来执行MapReduce操作。</li>
+<li>GridFS是MongoDB中的一个内置功能，可以用于存放大量小文件。</li>
+<li>MongoDB允许在服务端执行脚本，可以用Javascript编写某个函数，直接在服务端执行，也可以把函数的定义存储在服务端，下次直接调用即可。</li>
+<li>MongoDB支持各种编程语言:RUBY，PYTHON，JAVA，C++，PHP，C#等多种语言。</li>
+<li>MongoDB安装简单。</li></ul>
+
+<br /><hr /></h2>
+历史</h2>
+2007年10月，MongoDB由10gen团队所发展。2009年2月首度推出。
+<ul>
+<li>2012年05月23日，MongoDB2.1 开发分支发布了! 该版本采用全新架构，包含诸多增强。</li>
+<li>2012年06月06日，MongoDB 2.0.6 发布，分布式文档数据库。</li>
+<li>2013年04月23日，MongoDB 2.4.3 发布，此版本包括了一些性能优化，功能增强以及bug修复。</li>
+<li>2013年08月20日，MongoDB 2.4.6 发布，是目前最新的稳定版。</li>
+</ul>
+<br /><hr /></h2>
+MongoDB 下载</h2>
+<p>你可以在mongodb官网下载该安装包，地址为：<a href=" http://www.mongodb.org/downloads" target="_blank"> http://www.mongodb.org/downloads</a>。MonggoDB支持以下平台:</p>
+<ul><li>
+OS X 32-bit
+</li>
+<li>OS X 64-bit
+</li>
+<li>Linux 32-bit</li>
+
+
+<li>Linux 64-bit</li>
+
+<li>Windows 32-bit</li>
+
+<li>Windows 64-bit
+</li>
+<li>Solaris i86pc</li>
+
+<li>Solaris 64
+</li>
+</ul>
+<br /><hr /><h2>
+MongoDB 工具</h2>
+<p>有几种可用于MongoDB的管理工具。</p>
+<h3>监控</h3>
+<p>MongoDB提供了网络和系统监控工具Munin，它作为一个插件应用于MongoDB中。</p>
+<p>Gangila是MongoDB高性能的系统监视的工具，它作为一个插件应用于MongoDB中。</p>
+<p>基于图形界面的开源工具 Cacti, 用于查看CPU负载, 网络带宽利用率,它也提供了一个应用于监控 MongoDB 的插件。</p>
+<h3>GUI</h3>
+<ul>
+<li>
+Fang of Mongo – 网页式,由Django和jQuery所构成。</li>
+<li>Futon4Mongo – 一个CouchDB Futon web的mongodb山寨版。</li>
+<li>Mongo3 – Ruby写成。</li>
+<li>MongoHub – 适用于OSX的应用程序。</li>
+<li>Opricot – 一个基于浏览器的MongoDB控制台, 由PHP撰写而成。</li>
+<li>Database Master — Windows的mongodb管理工具</li>
+<li>RockMongo — 最好的PHP语言的MongoDB管理工具，轻量级, 支持多国语言.</li>
+</ul>
+<br /><hr /><h2>
+MongoDB 应用案例</h2>
+<p>下面列举一些公司MongoDB的实际应用：</p>
+<ul>
+<li>Craiglist上使用MongoDB的存档数十亿条记录。</li>
+
+<li>FourSquare，基于位置的社交网站，在Amazon EC2的服务器上使用MongoDB分享数据。</li>
+
+<li>Shutterfly，以互联网为基础的社会和个人出版服务，使用MongoDB的各种持久性数据存储的要求。</li>
+
+<li>bit.ly, 一个基于Web的网址缩短服务，使用MongoDB的存储自己的数据。</li>
+
+<li>spike.com，一个MTV网络的联营公司， spike.com使用MongoDB的。</li>
+
+<li>Intuit公司，一个为小企业和个人的软件和服务提供商，为小型企业使用MongoDB的跟踪用户的数据。</li>
+
+<li>sourceforge.net，资源网站查找，创建和发布开源软件免费，使用MongoDB的后端存储。</li>
+
+<li>etsy.com ，一个购买和出售手工制作物品网站，使用MongoDB。</li>
+
+<li>纽约时报，领先的在线新闻门户网站之一，使用MongoDB。</li>
+
+<li>CERN，著名的粒子物理研究所，欧洲核子研究中心大型强子对撞机的数据使用MongoDB。</li>
+</ul>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/mongodb/nosql.html" rel="prev"> NoSQL 简介</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/mongodb/mongodb-window-install.html" rel="next">window平台安装MongoDB</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.588 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:15:57 -->
+
+<!-- super cache -->

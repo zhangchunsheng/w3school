@@ -1,0 +1,329 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI API &#8211; CSS 框架（CSS Framework） | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery UI API &#8211; :tabbable Selector' href='http://www.w3cschool.cc/jqueryui/api-tabbable-selector.html' />
+<link rel='next' title='jQuery UI API &#8211; 图标（Icons）' href='http://www.w3cschool.cc/jqueryui/api-icons.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jqueryui/api-css-framework.html' />
+<meta name="keywords" content="jQuery UI API &#8211; CSS 框架（CSS Framework）,Jquery UI">
+<meta name="description" content="jQuery UI API - CSS 框架（CSS Framework）   下面是 jQuery UI 使用的 Class 名称列表。这些 Class 用来创建跨应用程序的视觉一致性，且允许组件通过 jQuery UI ThemeRoller 进行主题化。下面的 CSS 类根据样式是否是固定的结构化的，或者是否是可主题化的（颜色、字体、背景等），分别定义在 ui.core.css 和 ui.theme.css 两个文件中。   布局..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Jquery UI</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html" >
+	jQuery UI 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-intro.html" >
+	jQuery UI 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-download.html" >
+	jQuery UI 下载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-use.html" >
+	jQuery UI 使用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-custom.html" >
+	jQuery UI 定制	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-work.html" >
+	jQuery UI 工作原理	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">主题</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme.html" >
+	jQuery UI 主题	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-themeroller.html" >
+	jQuery UI ThemeRoller	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-api.html" >
+	jQuery UI CSS 框架 API	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-design.html" >
+	jQuery UI 设计主题	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">部件库</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory.html" >
+	jQuery UI 部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-extend.html" >
+	jQuery UI 扩展小部件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-method.html" >
+	jQuery UI 小部件方法调用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-why.html" >
+	jQuery UI 为什么使用部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-how.html" >
+	jQuery UI 如何使用部件库	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-api.html" >
+	jQuery UI API 文档	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/api-tabbable-selector.html" rel="prev"> jQuery UI API &#8211; :tabbable Selector</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/api-icons.html" rel="next">jQuery UI API &#8211; 图标（Icons）</a> &raquo;</div>
+	</div>
+
+	<h1>jQuery UI API - <span class="color_h1">CSS 框架（CSS Framework）</span></h1>
+
+<p>
+下面是 jQuery UI 使用的 Class 名称列表。这些 Class 用来创建跨应用程序的视觉一致性，且允许组件通过 <a href="http://jqueryui.com/themeroller/">jQuery UI ThemeRoller</a> 进行主题化。下面的 CSS 类根据样式是否是固定的结构化的，或者是否是可主题化的（颜色、字体、背景等），分别定义在 ui.core.css 和 ui.theme.css 两个文件中。
+</p>
+
+<h3>布局助手</h3>
+<ul>
+<li><code>.ui-helper-hidden</code>：对元素应用 <code>display: none</code>。</li>
+<li><code>.ui-helper-hidden-accessible</code>：对元素应用访问隐藏（通过页面绝对定位）。</li>
+<li><code>.ui-helper-reset</code>：UI 元素的基本样式重置。重置的元素比如：<code>padding</code>、<code>margin</code>、<code>text-decoration</code>、list-style，等等。</li>
+<li><code>.ui-helper-clearfix</code>：对父元素应用浮动包装属性。</li>
+<li><code>.ui-helper-zfix</code>：对 <code>&lt;iframe&gt;</code> 元素应用 iframe &quot;fix&quot; CSS。</li>
+<li><code>.ui-front</code>：应用 z-index 来管理屏幕上多个小部件的堆叠，如需了解更多详情，请查看 <a href="/jqueryui/api-stacking-elements.html">堆叠元素（Stacking Elements）</a> 页面。</li>
+</ul>
+
+<h3>小部件容器</h3>
+<ul>
+<li><code>.ui-widget</code>：对所有小部件的外部容器应用的 Class。对小部件应用字体和字体尺寸，同时也对自表单元素应用相同的字体和 1em 的字体尺寸，以应对 Windows 浏览器中的继承问题。</li>
+<li><code>.ui-widget-header</code>：对标题容器应用的 Class。对元素及其子元素的文本、链接、图标应用标题容器样式。</li>
+<li><code>.ui-widget-content</code>：对内容容器应用的 Class。对元素及其子元素的文本、链接、图标应用内容容器样式。（可应用到标题的父元素或者同级元素）</li>
+</ul>
+
+<h3>交互状态</h3>
+<ul>
+<li><code>.ui-state-default</code>：对可点击按钮元素应用的 Class。对元素及其子元素的文本、链接、图标应用 &quot;clickable default&quot; 容器样式。</li>
+<li><code>.ui-state-hover</code>：当鼠标悬浮在可点击按钮元素上时应用的 Class。对元素及其子元素的文本、链接、图标应用 &quot;clickable hover&quot; 容器样式。</li>
+<li><code>.ui-state-focus</code>：当键盘聚焦在可点击按钮元素上时应用的 Class。对元素及其子元素的文本、链接、图标应用 &quot;clickable hover&quot; 容器样式。</li>
+<li><code>.ui-state-active</code>：当鼠标点击可点击按钮元素上时应用的 Class。对元素及其子元素的文本、链接、图标应用 &quot;clickable active&quot; 容器样式。</li>
+</ul>
+
+<h3>交互提示 Cues</h3><ul>
+<li><code>.ui-state-highlight</code>：对高亮或者选中元素应用的 Class。对元素及其子元素的文本、链接、图标应用 &quot;highlight&quot; 容器样式。</li>
+<li><code>.ui-state-error</code>：对错误消息容器元素应用的 Class。对元素及其子元素的文本、链接、图标应用 &quot;error&quot; 容器样式。</li>
+<li><code>.ui-state-error-text</code>：对只有无背景的错误文本颜色应用的 Class。可用于表单标签，也可以对子图标应用错误图标颜色。</li>
+<li><code>.ui-state-disabled</code>：对禁用的 UI 元素应用一个暗淡的不透明度。意味着对一个已经定义样式的元素添加额外的样式。</li>
+<li><code>.ui-priority-primary</code>：对第一优先权的按钮应用的 Class。应用粗体文本。</li>
+<li><code>.ui-priority-secondary</code>：对第二优先权的按钮应用的 Class。应用正常粗细的文本，对元素应用轻微的透明度。</li>
+</ul>
+
+<h3>图标</h3>
+<h4>状态和图像</h4>
+<ul>
+<li><code>.ui-icon</code>：对图标元素应用的基本 Class。设置尺寸为 16px 方块，隐藏内部文本，对 &quot;content&quot; 状态的精灵图像设置背景图像。<strong>注意：</strong> <em><code>.ui-icon</code> class 将根据它的父容器得到一个不同的精灵背景图像。例如，<code>ui-state-default</code> 容器内的 <code>ui-icon</code> 元素将根据 <code>ui-state-default</code> 的图标颜色进行着色。</em></li>
+</ul>
+
+<h4>图标类型</h4>
+<p>在声明 <code>.ui-icon</code> class 之后，接着您可以声明一个秒速图标类型的 class。通常情况下，图标 class 遵循语法 <code>.ui-icon-{icon type}-{icon sub description}-{direction}</code>。</p>
+<p>例如，一个指向右侧的三角形图标，如下所示：
+<code>.ui-icon-triangle-1-e</code></p>
+<p>jQuery UI 的 <a href="http://jqueryui.com/themeroller">ThemeRoller</a> 在它的预览一栏中提供了全套的 CSS 框架图标。将鼠标悬浮在图标上可查看 class 名称。</p>
+
+<h3>其他视觉效果</h3>
+<h4>圆角半径助手</h4>
+<ul>
+<li><code>.ui-corner-tl</code>：对元素的左上角应用圆角半径。</li>
+<li><code>.ui-corner-tr</code>：对元素的右上角应用圆角半径。</li>
+<li><code>.ui-corner-bl</code>：对元素的左下角应用圆角半径。</li>
+<li><code>.ui-corner-br</code>：对元素的右下角应用圆角半径。</li>
+<li><code>.ui-corner-top</code>：对元素上边的左右角应用圆角半径。</li>
+<li><code>.ui-corner-bottom</code>：对元素下边的左右角应用圆角半径。</li>
+<li><code>.ui-corner-right</code>：对元素右边的上下角应用圆角半径。</li>
+<li><code>.ui-corner-left</code>：对元素左边的上下角应用圆角半径。</li>
+<li><code>.ui-corner-all</code>：对元素的所有四个角应用圆角半径。</li>
+</ul>
+
+<h4>覆盖 &amp; 阴影</h4><ul>
+<li><code>.ui-widget-overlay</code>：对覆盖屏幕应用 100% 宽度和高度，同时设置背景颜色/纹理和屏幕不透明度。</li>
+<li><code>.ui-widget-shadow</code>：对覆盖应用的 Class，设置了不透明度、上偏移/左偏移，以及阴影的 &quot;厚度&quot;。厚度是通过对阴影所有边设置内边距（padding）进行应用的。偏移是通过设置上外边距（margin）和左外边距（margin）进行应用的（可以是正数，也可以是负数）。</li>
+</ul>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/api-tabbable-selector.html" rel="prev"> jQuery UI API &#8211; :tabbable Selector</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/api-icons.html" rel="next">jQuery UI API &#8211; 图标（Icons）</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.334 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 18:44:09 -->
+
+<!-- super cache -->

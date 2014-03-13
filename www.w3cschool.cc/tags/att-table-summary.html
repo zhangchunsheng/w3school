@@ -1,0 +1,556 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML table summary 属性 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='HTML table rules 属性' href='http://www.w3cschool.cc/tags/att-table-rules.html' />
+<link rel='next' title='HTML table width 属性' href='http://www.w3cschool.cc/tags/att-table-width.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/tags/att-table-summary.html' />
+<meta name="keywords" content="HTML table summary 属性,HTML 参考手册">
+<meta name="description" content="HTML &lt;table&gt; summary 属性   HTML &lt;table&gt; 标签    实例 下面的 HTML 表格定义了表格内容的摘要：         &lt;table border='1' summary='Monthly  	savings for the Flintstones family'&gt;               &lt;tr&gt;                 &lt;th&g..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>HTML 参考手册</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-reference.html" >
+	HTML 标签列表(字母排序)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-byfunc.html" >
+	HTML 标签列表（功能排序）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-standardattributes.html" >
+	HTML 属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-eventattributes.html" >
+	HTML 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-canvas.html" >
+	HTML 画布	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-av-dom.html" >
+	HTML 音频/视频	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-elementsdoctypes.html" >
+	HTML 有效DOCTYPES	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-colorname.html" >
+	HTML 颜色名	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-colorpicker.html" >
+	HTML 拾色器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-charactersets.html" >
+	HTML 字符集	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-ascii.html" >
+	HTML ASCII	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/ref-entities.html" >
+	HTML ISO-8859-1	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-symbols.html" >
+	HTML 符号	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-urlencode.html" >
+	HTML URL 编码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-language-codes.html" >
+	HTML 语言代码	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-httpmessages.html" >
+	HTTP 消息	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-httpmethods.html" >
+	HTTP 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/html-keyboardshortcuts.html" >
+	键盘快捷键	</a>
+	<br/><h2 class="left"><span class="left_h2">HTML</span> 标签</h2>	<a target="_top" href="http://www.w3cschool.cc/tags/tag-comment.html" >
+	&lt;!--&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-doctype.html" >
+	&lt;!DOCTYPE&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-a.html" >
+	&lt;a&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-abbr.html" >
+	&lt;abbr&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-acronym.html" >
+	&lt;acronym&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-address.html" >
+	&lt;address&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-applet.html" >
+	&lt;applet&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-area.html" >
+	&lt;area&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-article.html" >
+	&lt;article&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-aside.html" >
+	&lt;aside&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-audio.html" >
+	&lt;audio&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-b.html" >
+	&lt;b&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-base.html" >
+	&lt;base&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-basefont.html" >
+	&lt;basefont&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-bdi.html" >
+	&lt;bdi&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-bdo.html" >
+	&lt;bdo&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-big.html" >
+	&lt;big&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-blockquote.html" >
+	&lt;blockquote&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-body.html" >
+	&lt;body&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-br.html" >
+	&lt;br&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-button.html" >
+	&lt;button&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-canvas.html" >
+	&lt;canvas&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-caption.html" >
+	&lt;caption&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-center.html" >
+	&lt;center&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-cite.html" >
+	&lt;cite&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-code.html" >
+	&lt;code&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-col.html" >
+	&lt;col&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-colgroup.html" >
+	&lt;colgroup&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-command.html" >
+	&lt;command&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-datalist.html" >
+	&lt;datalist&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dd.html" >
+	&lt;dd&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-del.html" >
+	&lt;del&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-details.html" >
+	&lt;details&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dfn.html" >
+	&lt;dfn&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dialog.html" >
+	&lt;dialog&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dir.html" >
+	&lt;dir&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-div.html" >
+	&lt;div&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dl.html" >
+	&lt;dl&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-dt.html" >
+	&lt;dt&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-em.html" >
+	&lt;em&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-embed.html" >
+	&lt;embed&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-fieldset.html" >
+	&lt;fieldset&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-figcaption.html" >
+	&lt;figcaption&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-figure.html" >
+	&lt;figure&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-font.html" >
+	&lt;font&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-footer.html" >
+	&lt;footer&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-form.html" >
+	&lt;form&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-frame.html" >
+	&lt;frame&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-frameset.html" >
+	&lt;frameset&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-head.html" >
+	&lt;head&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-header.html" >
+	&lt;header&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-hgroup.html" >
+	&lt;hgroup&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-hn.html" >
+	&lt;h1&gt; - &lt;h6&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-hr.html" >
+	&lt;hr&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-i.html" >
+	&lt;i&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-iframe.html" >
+	&lt;iframe&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-img.html" >
+	&lt;img&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-input.html" >
+	&lt;input&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-ins.html" >
+	&lt;ins&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-kbd.html" >
+	&lt;kbd&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-keygen.html" >
+	&lt;keygen&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-label.html" >
+	&lt;label&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-legend.html" >
+	&lt;legend&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-li.html" >
+	&lt;li&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-link.html" >
+	&lt;link&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-map.html" >
+	&lt;map&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-mark.html" >
+	&lt;mark&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-menu.html" >
+	&lt;menu&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-meta.html" >
+	&lt;meta&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-meter.html" >
+	&lt;meter&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-nav.html" >
+	&lt;nav&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-noframes.html" >
+	&lt;noframes&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-noscript.html" >
+	&lt;noscript&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-object.html" >
+	&lt;object&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-ol.html" >
+	&lt;ol&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-optgroup.html" >
+	&lt;optgroup&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-option.html" >
+	&lt;option&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-output.html" >
+	&lt;output&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-p.html" >
+	&lt;p&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-param.html" >
+	&lt;param&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-pre.html" >
+	&lt;pre&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-html.html" >
+	&lt;html&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-progress.html" >
+	&lt;progress&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-q.html" >
+	&lt;q&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-rp.html" >
+	&lt;rp&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-rt.html" >
+	&lt;rt&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-ruby.html" >
+	&lt;ruby&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-s.html" >
+	&lt;s&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-samp.html" >
+	&lt;samp&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-script.html" >
+	&lt;script&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-section.html" >
+	&lt;section&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-select.html" >
+	&lt;select&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-small.html" >
+	&lt;small&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-source.html" >
+	&lt;source&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-span.html" >
+	&lt;span&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-strike.html" >
+	&lt;strike&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-strong.html" >
+	&lt;strong&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-style.html" >
+	&lt;style&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-sub.html" >
+	&lt;sub&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-summary.html" >
+	&lt;summary&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-sup.html" >
+	&lt;sup&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-table.html" >
+	&lt;table&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-tbody.html" >
+	&lt;tbody&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-td.html" >
+	&lt;td&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-textarea.html" >
+	&lt;textarea&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-tfoot.html" >
+	&lt;tfoot&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-th.html" >
+	&lt;th&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-thead.html" >
+	&lt;thead&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-time.html" >
+	&lt;time&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-title.html" >
+	&lt;title&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-tr.html" >
+	&lt;tr&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-track.html" >
+	&lt;track&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-tt.html" >
+	&lt;tt&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-u.html" >
+	&lt;u&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-ul.html" >
+	&lt;ul&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-var.html" >
+	&lt;var&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-video.html" >
+	&lt;video&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/tags/tag-wbr.html" >
+	&lt;wbr&gt;	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/tags/att-table-rules.html" rel="prev"> HTML table rules 属性</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/tags/att-table-width.html" rel="next">HTML table width 属性</a> &raquo;</div>
+	</div>
+
+	<h1>HTML &lt;table&gt; <span class="color_h1">summary</span> 属性</h1>
+<p><a href="tag-table.html"><img class="navup" src="/images/up.gif" alt="HTML table 标签参考手册">  HTML &lt;table&gt; 标签</a></p>
+<div class="example">
+
+
+<h2 class="example">实例</h2>
+<p>下面的 HTML 表格定义了表格内容的摘要：</p>
+<div class="example_code notranslate">
+  
+    &lt;table border="1" summary="Monthly 
+	savings for the Flintstones family"&gt;<br />
+       
+      &lt;tr&gt;<br />
+         
+      &lt;th&gt;Month&lt;/th&gt;<br />
+         
+      &lt;th&gt;Savings&lt;/th&gt;<br />
+       
+      &lt;/tr&gt;<br />
+       
+      &lt;tr&gt;<br />
+         
+      &lt;td&gt;January&lt;/td&gt;<br />
+         
+      &lt;td&gt;$100&lt;/td&gt;<br />
+       
+      &lt;/tr&gt;<br />
+      &lt;/table&gt;
+  
+</div>
+<br /><a target="_blank" href="/try/try.php?filename=tryhtml_table_summary" class="tryitbtn">尝试一下 »</a>
+
+</div>
+<hr />
+<h2>浏览器支持</h2>
+<p><img src="/images/compatible_ie.gif" width="31" height="30" alt="Internet Explorer" title="Internet Explorer"><img src="/images/compatible_firefox.gif" width="31" height="30" alt="Firefox" title="Firefox"><img src="/images/compatible_opera.gif" width="28" height="30" alt="Opera" title="Opera"><img src="/images/compatible_chrome.gif" width="31" height="30" alt="Google Chrome" title="Google Chrome"><img src="/images/compatible_safari.gif" width="28" height="30" alt="Safari" title="Safari"></p>
+<p>summary 属性在普通的 Web 浏览器中没有视觉效果，但可以通过屏幕阅读器使用。</p>
+<hr />
+<h2>定义和用法</h2>
+<p><span class="deprecated">HTML5 不支持 &lt;table&gt; summary 属性。</span></p>
+<p>summary 属性规定表格内容的摘要。</p>
+<hr />
+<h2>语法</h2>
+<div class="code notranslate"><div>
+  
+    &lt;table summary="<i>text</i>"&gt;
+
+</div></div>
+
+<h2>属性值</h2>
+<table class="reference notranslate">
+<tr>
+<th width="20%">值</th>
+    <th>描述</th>
+  </tr>
+<tr>
+<td><i>text</i></td>
+    <td>表格内容的摘要。</td>
+  </tr>
+</table>
+<br /><hr />
+<a href="tag-table.html"><img class="navup" src="/images/up.gif" alt="HTML table 标签参考手册">  HTML &lt;table&gt; 标签</a>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/tags/att-table-rules.html" rel="prev"> HTML table rules 属性</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/tags/att-table-width.html" rel="next">HTML table width 属性</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.432 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 19:55:48 -->
+
+<!-- super cache -->

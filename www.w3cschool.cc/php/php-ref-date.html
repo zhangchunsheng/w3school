@@ -1,0 +1,674 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>PHP 5 Date/Time 函数 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='PHP 5 Calendar 函数' href='http://www.w3cschool.cc/php/php-ref-calendar.html' />
+<link rel='next' title='PHP 5 Directory 函数' href='http://www.w3cschool.cc/php/php-ref-directory.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/php/php-ref-date.html' />
+<meta name="keywords" content="PHP 5 Date/Time 函数,PHP 基础">
+<meta name="description" content="PHP 5 Date/Time 函数  PHP Date/Time 简介 Date/Time 函数允许您从 PHP 脚本运行的服务器上获取日期和时间。您可以使用 Date/Time 函数通过不同的方式来格式化日期和时间。 注释：这些函数依赖于服务器的本地设置。使用这些函数时请记住要考虑夏令时和闰年。  安装 PHP Date/Time 函数是PHP 核心的组成部分。无需安装即可使用这些函数。  Runtime 配置 Date/Time ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>PHP 基础</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-tutorial.html" >
+	PHP 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-intro.html" >
+	PHP 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-install.html" >
+	PHP 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-syntax.html" >
+	PHP 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-variables.html" >
+	PHP 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-string.html" >
+	PHP 字符串	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-operators.html" >
+	PHP 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-if-else.html" >
+	PHP If...Else	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-switch.html" >
+	PHP Switch	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-arrays.html" >
+	PHP 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-arrays-sort.html" >
+	PHP 数组排序	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-superglobals.html">
+	PHP超级全局变量	</a>	<a target="_top" href="http://www.w3cschool.cc/php/php-looping.html" >
+	PHP While 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-looping-for.html" >
+	PHP For 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-functions.html" >
+	PHP 函数	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-magic-constant.html">
+	PHP 魔术变量	</a>
+<br><h2 class="left"><span class="left_h2">PHP</span> 表单</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-forms.html" >
+	PHP 表单	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-form-validation.html">
+	PHP 表单验证</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-required.html">
+	PHP表单 - 必需字段</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-url-email.html">
+	PHP表单 - 验证邮件和URL</a>
+<a target="_top" href="http://www.w3cschool.cc/php/php-form-complete.html">
+	PHP 完整表单实例</a>	<a target="_top" href="http://www.w3cschool.cc/php/php-get.html" >
+	PHP $_GET 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-post.html" >
+	PHP $_POST 变量	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-arrays-multi.html" >
+	PHP 多维数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-date.html" >
+	PHP 日期	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-includes.html" >
+	PHP 包含	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-file.html" >
+	PHP 文件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-file-upload.html" >
+	PHP 文件上传	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-cookies.html" >
+	PHP Cookies	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-sessions.html" >
+	PHP Sessions	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mail.html" >
+	PHP E-mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-secure-mail.html" >
+	PHP 安全 E-mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-error.html" >
+	PHP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-exception.html" >
+	PHP Exception	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-filter.html" >
+	PHP Filter	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 数据库</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-intro.html" >
+	PHP MySQL 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-connect.html" >
+	PHP MySQL Connect	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-create.html" >
+	PHP MySQL Create	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-insert.html" >
+	PHP MySQL Insert	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-select.html" >
+	PHP MySQL Select	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-where.html" >
+	PHP MySQL Where	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-order-by.html" >
+	PHP MySQL Order By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-update.html" >
+	PHP MySQL Update	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-mysql-delete.html" >
+	PHP MySQL Delete	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-db-odbc.html" >
+	PHP ODBC	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> XML</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-xml-parser-expat.html" >
+	XML Expat Parser	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-xml-dom.html" >
+	XML DOM	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-xml-simplexml.html" >
+	XML SimpleXML	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 与 AJAX</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-intro.html" >
+	AJAX 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-php.html" >
+	AJAX PHP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-database.html" >
+	AJAX 数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-xml.html" >
+	AJAX XML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-livesearch.html" >
+	AJAX Live Search	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-rss-reader.html" >
+	AJAX RSS Reader	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ajax-poll.html" >
+	AJAX Poll	</a>
+	<br><h2 class="left"><span class="left_h2">PHP</span> 参考手册</h2>	<a target="_top" href="http://www.w3cschool.cc/php/php-ref-array.html" >
+	PHP Array	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-calendar.html" >
+	PHP Calendar	</a>
+	<a target="_top" href="http://www.w3cschool.cc/php/php-curl.html">PHP cURL </a>	<a target="_top" href="http://www.w3cschool.cc/php/php-ref-date.html" >
+	PHP Date	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-directory.html" >
+	PHP Directory	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-error.html" >
+	PHP Error	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-filesystem.html" >
+	PHP Filesystem	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-filter.html" >
+	PHP Filter	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-ftp.html" >
+	PHP FTP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-http.html" >
+	PHP HTTP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-libxml.html" >
+	PHP Libxml	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-mail.html" >
+	PHP Mail	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-math.html" >
+	PHP Math	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-misc.html" >
+	PHP Misc	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-mysqli.html" >
+	PHP MySQLi	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-simplexml.html" >
+	PHP SimpleXML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-string.html" >
+	PHP String	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-xml.html" >
+	PHP XML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-zip.html" >
+	PHP Zip	</a>
+		<a target="_top" href="http://www.w3cschool.cc/php/php-ref-timezones.html" >
+	PHP Timezones	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/php/php-ref-calendar.html" rel="prev"> PHP 5 Calendar 函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/php/php-ref-directory.html" rel="next">PHP 5 Directory 函数</a> &raquo;</div>
+	</div>
+
+	<h1>PHP 5 <span class="color_h1">Date/Time</span> 函数</h1>
+<hr />
+<h2>PHP Date/Time 简介</h2>
+<p>Date/Time 函数允许您从 PHP 脚本运行的服务器上获取日期和时间。您可以使用 Date/Time 函数通过不同的方式来格式化日期和时间。</p>
+<p><b>注释：</b>这些函数依赖于服务器的本地设置。使用这些函数时请记住要考虑夏令时和闰年。</p>
+<hr />
+<h2>安装</h2>
+<p>PHP Date/Time 函数是PHP 核心的组成部分。无需安装即可使用这些函数。</p>
+<hr />
+<h2>Runtime 配置</h2>
+<p>Date/Time 函数的行为受到 php.ini 中设置的影响：</p>
+<table class="reference notranslate">
+<tr>
+<th width="20%">名称</th>
+    <th width="57%">描述</th>
+    <th width="10%">默认</th>
+    <th width="13%">PHP 版本</th>
+  </tr>
+<tr>
+<td>date.timezone</td>
+    <td>规定默认时区（所有的 Date/Time 函数使用该选项）</td>
+    <td>""</td>
+    <td>PHP 5.1</td>
+    </tr>
+<tr>
+<td>date.default_latitude</td>
+    <td>规定默认纬度（date_sunrise() 和 date_sunset() 使用该选项）</td>
+    <td> "31.7667"</td>
+    <td>PHP 5.0</td>
+  </tr>
+<tr>
+<td>date.default_longitude</td>
+    <td>规定默认经度（date_sunrise() 和 date_sunset() 使用该选项）</td>
+    <td>"35.2333"</td>
+    <td>PHP 5.0</td>
+  </tr>
+<tr>
+<td>date.sunrise_zenith</td>
+    <td>规定默认日出天顶（date_sunrise() 和 date_sunset() 使用该选项）</td>
+    <td>"90.83"</td>
+    <td>PHP 5.0</td>
+  </tr>
+<tr>
+<td>date.sunset_zenith</td>
+    <td>规定默认日落天顶（date_sunrise() 和 date_sunset() 使用该选项）</td>
+    <td>"90.83"</td>
+    <td>PHP 5.0</td>
+  </tr>
+</table>
+<br /><hr />
+<h2>PHP 5 Date/Time 函数</h2>
+<table class="reference notranslate">
+<tr>
+<th width="37%">函数</th>
+    <th width="63%">描述</th>
+  </tr>
+<tr>
+<td><a href="func-date-checkdate.html">checkdate()</a></td>
+    <td>验证格利高里日期。</td>
+  </tr>
+<tr>
+<td><a href="func-date-date-add.html">date_add()</a></td>
+    <td>添加日、月、年、时、分和秒到一个日期。</td>
+  </tr>
+<tr>
+<td><a href="func-date-create-from-format.html">date_create_from_format()</a></td>
+    <td>返回一个根据指定格式进行格式化的新的 DateTime 对象。</td>
+    </tr>
+<tr>
+<td><a href="func-date-date-create.html">date_create()</a></td>
+    <td>返回一个新的 DateTime 对象。</td>
+    </tr>
+<tr>
+<td><a href="func-date-date-set.html">date_date_set()</a></td>
+    <td>设置一个新的日期。</td>
+    </tr>
+<tr>
+<td><a href="func-date-default-timezone-get.html">date_default_timezone_get()</a></td>
+    <td>返回默认时区，被所有的 Date/Time 函数使用。</td>
+  </tr>
+<tr>
+<td><a href="func-date-default-timezone-set.html">date_default_timezone_set()</a></td>
+    <td>设置默认时区，被所有的 Date/Time 函数使用。</td>
+  </tr>
+<tr>
+<td><a href="func-date-date-diff.html">date_diff()</a></td>
+    <td>返回两个日期间的差值。</td>
+  </tr>
+<tr>
+<td><a href="func-date-date-format.html">date_format()</a></td>
+    <td>返回根据指定格式进行格式化的日期。</td>
+    </tr>
+<tr>
+<td><a href="func-date-get-last-errors.html">date_get_last_errors()</a></td>
+    <td>返回日期字符串中的警告/错误。</td>
+    </tr>
+<tr>
+<td>date_interval_create_from_date_string()</td>
+    <td>从字符串的相关部分建立一个 DateInterval。</td>
+    </tr>
+<tr>
+<td><a href="func-date-interval-format.html">date_interval_format()</a></td>
+    <td>格式化时间间隔。</td>
+  </tr>
+<tr>
+<td><a href="func-date-isodate-set.html">date_isodate_set()</a></td>
+    <td>设置 ISO 日期。</td>
+  </tr>
+<tr>
+<td><a href="func-date-modify.html">date_modify()</a></td>
+    <td>修改时间戳。</td>
+  </tr>
+<tr>
+<td><a href="func-date-offset-get.html">date_offset_get()</a></td>
+    <td>返回时区偏移。</td>
+  </tr>
+<tr>
+<td><a href="func-date-parse-from-format.html">date_parse_from_format()</a></td>
+    <td>根据指定的格式返回一个带有指定日期的详细信息的关联数组。</td>
+  </tr>
+<tr>
+<td><a href="func-date-date-parse.html">date_parse()</a></td>
+    <td>返回一个带有指定日期的详细信息的关联数组。</td>
+  </tr>
+<tr>
+<td><a href="func-date-date-sub.html">date_sub()</a></td>
+    <td>从指定日期减去日、月、年、时、分和秒。</td>
+  </tr>
+<tr>
+<td><a href="func-date-sun-info.html">date_sun_info()</a></td>
+    <td>返回一个包含有关指定日期与地点的日出/日落和黄昏开始/黄昏结束的信息的数组。</td>
+  </tr>
+<tr>
+<td><a href="func-date-sunrise.html">date_sunrise()</a></td>
+    <td>返回指定日期与地点的日出时间。</td>
+  </tr>
+<tr>
+<td><a href="func-date-sunset.html">date_sunset()</a></td>
+    <td>返回指定日期与地点的日落时间。</td>
+  </tr>
+<tr>
+<td><a href="func-date-time-set.html">date_time_set()</a></td>
+    <td>设置时间。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timestamp-get.html">date_timestamp_get()</a></td>
+    <td>返回 Unix 时间戳。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timestamp-set.html">date_timestamp_set()</a></td>
+    <td>设置基于 Unix 时间戳的日期和时间。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timezone-get.html">date_timezone_get()</a></td>
+    <td>返回给定 DateTime 对象的时区。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timezone-set.html">date_timezone_set()</a></td>
+    <td>设置 DateTime 对象的时区。</td>
+  </tr>
+<tr>
+<td><a href="func-date-date.html">date()</a></td>
+    <td>格式化本地日期和时间。</td>
+  </tr>
+<tr>
+<td><a href="func-date-getdate.html">getdate()</a></td>
+    <td>返回某个时间戳或者当前本地的日期/时间的日期/时间信息。</td>
+  </tr>
+<tr>
+<td><a href="func-date-gettimeofday.html">gettimeofday()</a></td>
+    <td>返回当前时间。</td>
+  </tr>
+<tr>
+<td><a href="func-date-gmdate.html">gmdate()</a></td>
+    <td>格式化 GMT/UTC 日期和时间。</td>
+  </tr>
+<tr>
+<td><a href="func-date-gmmktime.html">gmmktime()</a></td>
+    <td>返回 GMT 日期的 UNIX 时间戳。</td>
+  </tr>
+<tr>
+<td><a href="func-date-gmstrftime.html">gmstrftime()</a></td>
+    <td>根据区域设置格式化 GMT/UTC 日期和时间。</td>
+  </tr>
+<tr>
+<td><a href="func-date-idate.html">idate()</a></td>
+    <td>格式化本地时间/日期为整数。</td>
+  </tr>
+<tr>
+<td><a href="func-date-localtime.html">localtime()</a></td>
+    <td>返回本地时间。</td>
+  </tr>
+<tr>
+<td><a href="func-date-microtime.html">microtime()</a></td>
+    <td>返回当前 Unix 时间戳的微秒数。</td>
+  </tr>
+<tr>
+<td><a href="func-date-mktime.html">mktime()</a></td>
+    <td>返回一个日期的 Unix 时间戳。</td>
+  </tr>
+<tr>
+<td><a href="func-date-strftime.html">strftime()</a></td>
+    <td>根据区域设置格式化本地时间/日期。</td>
+  </tr>
+<tr>
+<td><a href="func-date-strptime.html">strptime()</a></td>
+    <td>解析由 strftime() 生成的时间/日期。</td>
+  </tr>
+<tr>
+<td><a href="func-date-strtotime.html">strtotime()</a></td>
+    <td>将任何英文文本的日期或时间描述解析为 Unix 时间戳。</td>
+  </tr>
+<tr>
+<td><a href="func-date-time.html">time()</a></td>
+    <td>返回当前时间的 Unix 时间戳。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timezone-abbreviations-list.html">timezone_abbreviations_list()</a></td>
+    <td>返回包含夏令时、偏移量和时区名称的关联数组。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timezone-identifiers-list.html">timezone_identifiers_list()</a></td>
+    <td>返回带有所有时区标识符的数值数组。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timezone-location-get.html">timezone_location_get()</a></td>
+    <td>返回指定时区的位置信息。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timezone-name-from-abbr.html">timezone_name_from_ abbr()</a></td>
+    <td>根据时区缩略语返回时区名称。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timezone-name-get.html">timezone_name_get()</a></td>
+    <td>返回时区的名称。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timezone-offset-get.html">timezone_offset_get()</a></td>
+    <td>返回相对于 GMT 的时区偏移。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timezone-open.html">timezone_open()</a></td>
+    <td>创建一个新的 DateTimeZone 对象。</td>
+  </tr>
+<tr>
+<td>timezone_transitions_get()</td>
+    <td>返回时区的所有转换。</td>
+  </tr>
+<tr>
+<td><a href="func-date-timezone-version-get.html">timezone_version_get()</a></td>
+    <td>返回时区数据库的版本。</td>
+  </tr>
+</table>
+<br /><hr />
+<h2>PHP 5 预定义的 Date/Time 常量</h2>
+<table class="reference notranslate">
+<tr>
+<th width="37%">常量</th>
+    <th width="63%">描述</th>
+  </tr>
+<tr>
+<td>DATE_ATOM</td>
+    <td>Atom (例如：2005-08-15T16:13:03+0000)</td>
+  </tr>
+<tr>
+<td>DATE_COOKIE</td>
+    <td>HTTP Cookies (例如：Sun, 14 Aug 2005 16:13:03 UTC)</td>
+  </tr>
+<tr>
+<td>DATE_ISO8601</td>
+    <td>ISO-8601 (例如：2005-08-14T16:13:03+0000)</td>
+  </tr>
+<tr>
+<td>DATE_RFC822</td>
+    <td>RFC 822 (例如：Sun, 14 Aug 2005 16:13:03 UTC)</td>
+  </tr>
+<tr>
+<td>DATE_RFC850</td>
+    <td>RFC 850 (例如：Sunday, 14-Aug-05 16:13:03 UTC)</td>
+  </tr>
+<tr>
+<td>DATE_RFC1036</td>
+    <td>RFC 1036 (例如：Sunday, 14-Aug-05 16:13:03 UTC)</td>
+  </tr>
+<tr>
+<td>DATE_RFC1123</td>
+    <td>RFC 1123 (例如：Sun, 14 Aug 2005 16:13:03 UTC)</td>
+  </tr>
+<tr>
+<td>DATE_RFC2822</td>
+    <td>RFC 2822 (例如：Sun, 14 Aug 2005 16:13:03 +0000)</td>
+  </tr>
+<tr>
+<td>DATE_RSS</td>
+    <td>RSS (例如：Sun, 14 Aug 2005 16:13:03 UTC)</td>
+  </tr>
+<tr>
+<td>DATE_W3C</td>
+    <td>万维网联盟 (例如：2005-08-14T16:13:03+0000)</td>
+  </tr>
+</table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/php/php-ref-calendar.html" rel="prev"> PHP 5 Calendar 函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/php/php-ref-directory.html" rel="next">PHP 5 Directory 函数</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.396 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 04:08:11 -->
+
+<!-- super cache -->

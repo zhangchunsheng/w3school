@@ -1,0 +1,327 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript 指南 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery keyup() 方法' href='http://www.w3cschool.cc/jquery/event-keyup.html' />
+<link rel='next' title='jQuery live() 方法' href='http://www.w3cschool.cc/jquery/event-live.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/web/web-javascript.html' />
+<meta name="keywords" content="JavaScript 指南,网站建设指南">
+<meta name="description" content="JavaScript 指南  JavaScript - 客户端脚本 JavaScript 是属于网络的脚本语言!  JavaScript 被数百万计的网页用来改进设计、验证表单、检测浏览器、创建cookies,以及更多的应用。 JavaScript 学习简单   JavaScript 实例  My First Web Page This is a paragraph. Display Date   尝试一下 »  点击 '尝试一下' 按..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>网站建设指南</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-buildingprimer.html" >
+	网站建设指南	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-www.html" >
+	WWW 指南- 万维网	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-html.html" >
+	HTML 指南	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-css.html" >
+	CSS 指南	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-javascript.html" >
+	JavaScript 指南	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-xml.html" >
+	XML 指南	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-scripting.html" >
+	服务端脚本指南	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-sql.html" >
+	SQL 指南	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-design.html" >
+	Web 创建设计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-standards.html" >
+	Web 标准	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-validate.html" >
+	网站验证	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-semantic.html" >
+	Web 语义化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-glossary.html" >
+	Web 词汇表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/web-search.html" >
+	Web 搜索引擎优化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/web/glossary.html" >
+	W3C词汇和术语表	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/web/web-css.html" rel="prev"> CSS 指南</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/web/web-xml.html" rel="next">XML 指南</a> &raquo;</div>
+	</div>
+
+	<h1>
+<span class="color_h1">JavaScript</span> 指南</h1>
+<hr />
+<h2>JavaScript - 客户端脚本</h2>
+<p>JavaScript 是属于网络的脚本语言! </p>
+<p>JavaScript 被数百万计的网页用来改进设计、验证表单、检测浏览器、创建cookies,以及更多的应用。</p>
+<p>JavaScript 学习简单</p>
+
+<div class="example">
+<h2 class="example_head">JavaScript 实例</h2>
+<div class="example_result notranslate">
+<h2>My First Web Page</h2>
+<p id="demo">This is a paragraph.</p>
+<button type="button">Display Date</button>
+<br /><br />
+</div>
+<br /><a target="_blank" class="tryitbtn" href="/try/tryit.php?filename=tryjs_events">尝试一下 »</a>
+<br />
+点击 "尝试一下" 按钮查看在线实例。
+</div>
+<br /><hr />
+<h2>什么是 JavaScript?</h2>
+<ul>
+<li>JavaScript 被设计用来向 HTML 页面添加交互行为。</li>
+<li>JavaScript 是一种脚本语言（脚本语言是一种轻量级的编程语言）。</li>
+<li>JavaScript 由数行可执行计算机代码组成。</li>
+<li>JavaScript 通常被直接嵌入 HTML 页面。</li>
+<li>JavaScript 是一种解释性语言（就是说，代码执行不进行预编译）。</li>
+<li>所有的人无需购买许可证均可使用 JavaScript。</li>
+</ul>
+<hr />
+<h2>客户端脚本</h2>
+<p>JavaScript "制定" 浏览器行为。这就是所谓的客户端脚本（或浏览器的脚本）。</p>
+<p>服务器端脚本是"制定"服务器的行为（见本站的ASP / PHP教程）。</p>
+<hr />
+<h2>JavaScript可以做什么？</h2>
+<ul>
+<li><strong>JavaScript 为 HTML 设计师提供了一种编程工具</strong>
+<br />HTML 创作者往往都不是程序员，但是 JavaScript 却是一种只拥有极其简单的语法的脚本语言！几乎每个人都有能力将短小的代码片断放入他们的 HTML 页面当中。</li>
+<li><strong>JavaScript 可以将动态的文本放入 HTML 页面</strong>
+<br />类似于这样的一段 JavaScript 声明可以将一段可变的文本放入 HTML 页面：document.write(&quot;&lt;h1&gt;&quot; + name + &quot;&lt;/h1&gt;&quot;)</li>
+<li><strong>JavaScript 可以对事件作出响应</strong>
+<br />可以将 JavaScript 设置为当某事件发生时才会被执行，例如页面载入完成或者当用户点击某个 HTML 元素时。</li>
+<li><strong>JavaScript 可以读写 HTML 元素</strong>
+<br />JavaScript 可以读取及改变 HTML 元素的内容。</li>
+<li><strong>JavaScript 可被用来验证数据</strong>
+<br />在数据被提交到服务器之前，JavaScript 可被用来验证这些数据。</li>
+<li><strong>JavaScript 可被用来检测访问者的浏览器</strong>
+<br />JavaScript 可被用来检测访问者的浏览器，并根据所检测到的浏览器，为这个浏览器载入相应的页面。</li>
+<li><strong>JavaScript 可被用来创建 cookies</strong>
+<br />JavaScript 可被用来存储和取回位于访问者的计算机中的信息。</li>
+</ul>
+
+<hr />
+<h2>什么是HTML DOM？</h2>
+<p>HTML DOM 定义了访问和操作 HTML 文档的标准方法。
+</p>
+<p>DOM 将 HTML 文档表达为树结构。</p>
+<div class="example">
+<h2 class="example_head">HTML DOM Tree 实例</h2>
+<div class="example_code notranslate" style="text-align:center">
+<img border="0" src="/images/htmltree.gif" alt="DOM HTML tree" width="486" height="266">
+</div>
+<br />
+</div>
+<br /><hr />
+<h2>如何学习JavaScript？</h2>
+<p><a href="/js/js-tutorial.html">访问完整的 JavaScript 教程</a></p>
+<p><a href="/htmldom/htmldom-tutorial.html">访问 完整的 HTML DOM 教程</a></p>
+<p><a href="/jsref/jsref-tutorial.html">访问完整的 JavaScript 和 HTML DOM 参考手册</a></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/web/web-css.html" rel="prev"> CSS 指南</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/web/web-xml.html" rel="next">XML 指南</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.123 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 03:19:48 -->
+
+<!-- super cache -->

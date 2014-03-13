@@ -1,0 +1,594 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Java修饰符 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Java变量类型' href='http://www.w3cschool.cc/java/java-variable-types.html' />
+<link rel='next' title='Java运算符' href='http://www.w3cschool.cc/java/java-operators.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/java/java-modifier-types.html' />
+<meta name="keywords" content="Java修饰符,Java 教程">
+<meta name="description" content="Java修饰符 Java语言提供了很多修饰符，主要分为以下两类：  访问修饰符 非访问修饰符   修饰符用来定义类、方法或者变量，通常放在语句的最前端。我们通过下面的例子来说明：   public class className {    // ... } private boolean myFlag; static final double weeks = 9.5; protected static final int BOXWIDT..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Java 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-tutorial.html" >
+	Java 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-intro.html" >
+	Java 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-environment-setup.html" >
+	Java开发环境配置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-syntax.html" >
+	Java基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-object-classes.html" >
+	Java对象和类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-datatypes.html" >
+	Java基本数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-variable-types.html" >
+	Java变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-modifier-types.html" >
+	Java修饰符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-operators.html" >
+	Java运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-loop.html" >
+	Java循环结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-if-else-switch.html" >
+	Java分支结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-number.html" >
+	Java Number类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-character.html" >
+	Java Character类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-string.html" >
+	Java String类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-stringbuffer.html" >
+	Java StringBuffer和StringBuilder类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-array.html" >
+	Java 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-date-time.html" >
+	Java日期时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-regular-expressions.html" >
+	Java正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-methods.html" >
+	Java 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-files-io.html" >
+	Java 流(Stream)、文件(File)和IO	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-exceptions.html" >
+	Java 异常处理	</a>
+	<br><h2 class="left">Java <span class="left_h2">面向对象</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-inheritance.html" >
+	Java 继承	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-override-overload.html" >
+	Java 重写(Override)与重载(Overload)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-polymorphism.html" >
+	Java 多态	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-abstraction.html" >
+	Java 抽象类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-encapsulation.html" >
+	java 封装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-interfaces.html" >
+	Java 接口	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-package.html" >
+	Java 包(package)	</a>
+	<br><h2 class="left">Java <span class="left_h2">高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-data-structures.html" >
+	Java 数据结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-collections.html" >
+	Java 集合框架	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-generics.html" >
+	Java 泛型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-serialization.html" >
+	Java序列化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-networking.html" >
+	Java 网络编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-sending-email.html" >
+	Java 发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-multithreading.html" >
+	Java 多线程编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-applet-basics.html" >
+	Java Applet基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-documentation.html" >
+	Java 文档注释	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-variable-types.html" rel="prev"> Java变量类型</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-operators.html" rel="next">Java运算符</a> &raquo;</div>
+	</div>
+
+	<h1>Java修饰符</h1>
+<p>Java语言提供了很多修饰符，主要分为以下两类：</p>
+<ul>
+<li>访问修饰符</li>
+<li>非访问修饰符</li>
+</ul>
+<p>
+修饰符用来定义类、方法或者变量，通常放在语句的最前端。我们通过下面的例子来说明：
+</p>
+<pre>
+public class className {
+   // ...
+}
+private boolean myFlag;
+static final double weeks = 9.5;
+protected static final int BOXWIDTH = 42;
+public static void main(String[] arguments) {
+   // 方法体
+}
+</pre>
+<hr />
+<h2>
+访问控制修饰符
+</h2>
+<p>Java中，可以使用访问控制符来保护对类、变量、方法和构造方法的访问。Java支持4种不同的访问权限。</p>
+<p>默认的，也称为default，在同一包内可见，不使用任何修饰符。</p>
+<p>私有的，以private修饰符指定，在同一类内可见。</p>
+<p>共有的，以public修饰符指定，对所有类可见。</p>
+<p>受保护的，以protected修饰符指定，对同一包内的类和所有子类可见。</p>
+<h3>默认访问修饰符-不使用任何关键字</h3>
+<p>
+使用默认访问修饰符声明的变量和方法，对同一个包内的类是可见的。接口里的变量都隐式声明为public static final,而接口里的方法默认情况下访问权限为public。
+</p>
+<p>实例：</p>
+<p>
+如下例所示，变量和方法的声明可以不使用任何修饰符。
+</p>
+<pre>
+String version = "1.5.1";
+boolean processOrder() {
+   return true;
+}
+</pre>
+
+<h3>私有访问修饰符-private</h3>
+
+<p>私有访问修饰符是最严格的访问级别，所以被声明为private的方法、变量和构造方法只能被所属类访问，并且类和接口不能声明为private。</p>
+<p>声明为私有访问类型的变量只能通过类中公共的getter方法被外部类访问。</p>
+<p>Private访问修饰符的使用主要用来隐藏类的实现细节和保护类的数据。</p>
+<p>下面的类使用了私有访问修饰符：</p>
+<pre>
+public class Logger {
+   private String format;
+   public String getFormat() {
+      return this.format;
+   }
+   public void setFormat(String format) {
+      this.format = format;
+   }
+}
+</pre>
+<p>
+实例中，Logger类中的format变量为私有变量，所以其他类不能直接得到和设置该变量的值。为了使其他类能够操作该变量，定义了两个public方法：getFormat() （返回format的值）和setFormat(String)（设置format的值）
+</p>
+<h3>公有访问修饰符-public</h3>
+
+<p>被声明为public的类、方法、构造方法和接口能够被任何其他类访问。
+</p><p>如果几个相互访问的public类分布在不用的包中，则需要导入相应public类所在的包。由于类的继承性，类所有的公有方法和变量都能被其子类继承。
+</p><p>
+以下函数使用了公有访问控制：</p>
+<pre>
+public static void main(String[] arguments) {
+   // ...
+}
+</pre>
+<p>Java程序的main() 方法必须设置成公有的，否则，Java解释器将不能运行该类。</p>
+
+<h3>受保护的访问修饰符-protected</h3>
+
+<p>被声明为protected的变量、方法和构造器能被同一个包中的任何其他类访问，也能够被不同包中的子类访问。
+</p><p>Protected访问修饰符不能修饰类和接口，方法和成员变量能够声明为protected，但是接口的成员变量和成员方法不能声明为protected。
+</p><p>子类能访问Protected修饰符声明的方法和变量，这样就能保护不相关的类使用这些方法和变量。
+</p><p>
+下面的父类使用了protected访问修饰符，子类重载了父类的openSpeaker()方法。</p>
+<pre>
+class AudioPlayer {
+   protected boolean openSpeaker(Speaker sp) {
+      // 实现细节
+   }
+}
+
+class StreamingAudioPlayer {
+   boolean openSpeaker(Speaker sp) {
+      // 实现细节
+   }
+}
+</pre>
+
+<p>如果把openSpeaker()方法声明为private，那么除了AudioPlayer之外的类将不能访问该方法。如果把openSpeaker()声明为public，那么所有的类都能够访问该方法。如果我们只想让该方法对其所在类的子类可见，则将该方法声明为protected。
+</p>
+<h3>访问控制和继承</h3>
+<p>
+
+请注意以下方法继承的规则：
+</p>
+<ul>
+	<li>
+		<p>
+			父类中声明为public的方法在子类中也必须为public。</p>
+	</li>
+	<li>
+		<p>
+			父类中声明为protected的方法在子类中要么声明为protected，要么声明为public。不能声明为private。</p>
+	</li>
+	<li>
+		<p>
+			父类中默认修饰符声明的方法，能够在子类中声明为private。</p>
+	</li>
+	<li>
+		<p>
+			父类中声明为private的方法，不能够被继承。</p>
+	</li>
+</ul>
+
+
+
+
+<hr />
+<h2>
+非访问修饰符</h2>
+<p>为了实现一些其他的功能，Java也提供了许多非访问修饰符。</p>
+<p>static修饰符，用来创建类方法和类变量。</p>
+<p>Final修饰符，用来修饰类、方法和变量，final修饰的类不能够被继承，修饰的方法不能被继承类重新定义，修饰的变量为常量，是不可修改的。</p>
+<p>Abstract修饰符，用来创建抽象类和抽象方法。</p>
+<p>Synchronized和volatile修饰符，主要用于线程的编程。</p>
+<h3>Static修饰符</h3>
+<ul>
+<li>
+<p><strong>静态变量：</strong><p>
+Static关键字用来声明独立于对象的静态变量，无论一个类实例化多少对象，它的静态变量只有一份拷贝。
+静态变量也被成为类变量。局部变量能被声明为static变量。
+</li><li>
+<p><strong>静态方法：</strong><p>
+Static关键字用来声明独立于对象的静态方法。静态方法不能使用类的非静态变量。静态方法从参数列表得到数据，然后计算这些数据。
+</li></ul>
+<p>
+对类变量和方法的访问可以直接使用classname.variablename和classname.methodname的方式访问。
+</p>
+<p>
+如下例所示，static修饰符用来创建类方法和类变量。</p>
+<pre>
+public class InstanceCounter {
+   private static int numInstances = 0;
+   protected static int getCount() {
+      return numInstances;
+   }
+
+   private static void addInstance() {
+      numInstances++;
+   }
+
+   InstanceCounter() {
+      InstanceCounter.addInstance();
+   }
+
+   public static void main(String[] arguments) {
+      System.out.println("Starting with " +
+      InstanceCounter.getCount() + " instances");
+      for (int i = 0; i &lt; 500; ++i){
+         new InstanceCounter();
+          }
+      System.out.println("Created " +
+      InstanceCounter.getCount() + " instances");
+   }
+}
+</pre>
+<p>以上实例运行编辑结果如下:</p>
+<pre>
+Started with 0 instances
+Created 500 instances
+</pre>
+<h3>Final修饰符</h3>
+<p><strong>Final变量：</strong></p>
+
+<p>Final变量能被显式地初始化并且只能初始化一次。被声明为final的对象的引用不能指向不同的对象。但是final对象里的数据可以被改变。也就是说final对象的引用不能改变，但是里面的值可以改变。</p>
+<p>Final修饰符通常和static修饰符一起使用来创建类常量。</p>
+<p>实例:</p>
+<pre>
+public class Test{
+  final int value = 10;
+  // 下面是声明常量的实例
+  public static final int BOXWIDTH = 6;
+  static final String TITLE = "Manager";
+
+  public void changeValue(){
+     value = 12; //将输出一个错误
+  }
+}</pre>
+<h3>Final方法</h3>
+<p>类中的Final方法可以被子类继承，但是不能被子类修改。</p>
+<p>声明final方法的主要目的是防止该方法的内容被修改。</p>
+<p>如下所示，使用final修饰符声明方法。</p>
+<pre>
+public class Test{
+    public final void changeName(){
+       // 方法体
+    }
+}
+</pre>
+<h3>Final类</h3>
+<p>Final类能被继承，没有类能够继承final类的任何特性。</p>
+<p>实例：</p>
+<pre>
+public final class Test {
+   // 类体
+}
+</pre>
+<h3>Abstract修饰符</h3>
+<p><strong>抽象类：</strong></p>
+<p>抽象类不能用来实例化对象，声明抽象类的唯一目的是为了将来对该类进行扩充。
+</p><p>一个类不能同时被abstract和final修饰。如果一个类包含抽象方法，那么该类一定要声明为抽象类，否则将出现编译错误。
+</p><p>抽象类可以包含抽象方法和非抽象方法。
+</p><p>实例：</p>
+<pre>
+abstract class Caravan{
+   private double price;
+   private String model;
+   private String year;
+   public abstract void goFast(); //抽象方法
+   public abstract void changeColor();
+}
+</pre>
+<h3>抽象方法</h3>
+<p>
+抽象方法是一种没有任何实现的方法，该方法的的具体实现由子类提供。抽象方法不能被声明成final和strict。
+</p><p>任何继承抽象类的子类必须实现父类的所有抽象方法，除非该子类也是抽象类。
+</p><p>如果一个类包含若干个抽象方法，那么该类必须声明为抽象类。抽象类可以不包含抽象方法。
+</p><p>抽象方法的声明以分号结尾，例如：public abstract sample();
+</p><p>实例：</p>
+<pre>
+public abstract class SuperClass{
+    abstract void m(); //抽象方法
+}
+ 
+class SubClass extends SuperClass{
+     //实现抽象方法
+      void m(){
+          .........
+      }
+}
+</pre>
+<h3>Synchronized修饰符</h3>
+<p>Synchronized关键字声明的方法同一时间只能被一个线程访问。Synchronized修饰符可以应用于四个访问修饰符。
+</p><p>实例：</p>
+<pre>
+public synchronized void showDetails(){
+.......
+} 
+</pre>
+<h3>Transient修饰符</h3>
+
+<p>序列化的对象包含被transient修饰的实例变量时，java虚拟机(JVM)跳过该特定的变量。
+</p><p>该修饰符包含在定义变量的语句中，用来预处理类和变量的数据类型。
+</p><p>实例：</p>
+<pre>
+public transient int limit = 55;   // will not persist
+public int b; // will persist
+</pre>
+<h3>volatile修饰符</h3>
+
+<p>Volatile修饰的成员变量在每次被线程访问时，都强迫从共享内存中重读该成员变量的值。而且，当成员变量发生变化时，强迫线程将变化值回写到共享内存。这样在任何时刻，两个不同的线程总是看到某个成员变量的同一个值。一个volatile对象引用可能是null。
+</p><p>实例：</p>
+<pre>
+public class MyRunnable implements Runnable
+{
+    private volatile boolean active;
+    public void run()
+    {
+        active = true;
+        while (active) // line 1
+        {
+            // 代码
+        }
+    }
+    public void stop()
+    {
+        active = false; // line 2
+    }
+}
+</pre>
+<p>
+一般地，在一个线程中调用run()方法，在另一个线程中调用stop()方法。如果line 1中的active位于缓冲区的值被使用，那么当把line 2中的active设置成false时，循环也不会停止。
+</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-variable-types.html" rel="prev"> Java变量类型</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-operators.html" rel="next">Java运算符</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.172 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 20:10:04 -->
+
+<!-- super cache -->

@@ -1,0 +1,521 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Java分支结构 &#8211; if&#8230;else/switch | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Java循环结构 &#8211; for, while 及 do&#8230;while' href='http://www.w3cschool.cc/java/java-loop.html' />
+<link rel='next' title='Java Number类' href='http://www.w3cschool.cc/java/java-number.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/java/java-if-else-switch.html' />
+<meta name="keywords" content="Java分支结构 &#8211; if&#8230;else/switch,Java 教程">
+<meta name="description" content="Java分支结构 - if...else/switch 顺序结构只能顺序执行，不能进行判断和选择，因此需要分支结构。 Java有两种分支结构：  	 		if语句 	 		switch语句  if语句 一个if语句包含一个布尔表达式和一条或多条语句。 语法 If语句的用语法如下：  if(布尔表达式) {    //如果布尔表达式为true将执行的语句 }   如果布尔表达式的值为true，则执行if语句中的代码块。否则执行If语句块后..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Java 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-tutorial.html" >
+	Java 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-intro.html" >
+	Java 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-environment-setup.html" >
+	Java开发环境配置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-syntax.html" >
+	Java基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-object-classes.html" >
+	Java对象和类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-datatypes.html" >
+	Java基本数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-variable-types.html" >
+	Java变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-modifier-types.html" >
+	Java修饰符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-operators.html" >
+	Java运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-loop.html" >
+	Java循环结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-if-else-switch.html" >
+	Java分支结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-number.html" >
+	Java Number类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-character.html" >
+	Java Character类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-string.html" >
+	Java String类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-stringbuffer.html" >
+	Java StringBuffer和StringBuilder类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-array.html" >
+	Java 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-date-time.html" >
+	Java日期时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-regular-expressions.html" >
+	Java正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-methods.html" >
+	Java 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-files-io.html" >
+	Java 流(Stream)、文件(File)和IO	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-exceptions.html" >
+	Java 异常处理	</a>
+	<br><h2 class="left">Java <span class="left_h2">面向对象</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-inheritance.html" >
+	Java 继承	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-override-overload.html" >
+	Java 重写(Override)与重载(Overload)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-polymorphism.html" >
+	Java 多态	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-abstraction.html" >
+	Java 抽象类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-encapsulation.html" >
+	java 封装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-interfaces.html" >
+	Java 接口	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-package.html" >
+	Java 包(package)	</a>
+	<br><h2 class="left">Java <span class="left_h2">高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-data-structures.html" >
+	Java 数据结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-collections.html" >
+	Java 集合框架	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-generics.html" >
+	Java 泛型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-serialization.html" >
+	Java序列化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-networking.html" >
+	Java 网络编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-sending-email.html" >
+	Java 发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-multithreading.html" >
+	Java 多线程编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-applet-basics.html" >
+	Java Applet基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-documentation.html" >
+	Java 文档注释	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-loop.html" rel="prev"> Java循环结构 &#8211; for, while 及 do&#8230;while</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-number.html" rel="next">Java Number类</a> &raquo;</div>
+	</div>
+
+	<h1>Java分支结构 - if...else/switch</h1>
+<p>顺序结构只能顺序执行，不能进行判断和选择，因此需要分支结构。</p>
+<p>Java有两种分支结构：</p>
+<ul>
+	<li>
+		if语句</li>
+	<li>
+		switch语句</li>
+</ul>
+<hr /><h2>if语句</h2>
+<p>一个if语句包含一个布尔表达式和一条或多条语句。</p>
+<h3>语法</h3>
+<p>If语句的用语法如下：</p>
+<pre>
+if(布尔表达式)
+{
+   //如果布尔表达式为true将执行的语句
+}
+</pre>
+<p>
+如果布尔表达式的值为true，则执行if语句中的代码块。否则执行If语句块后面的代码。
+</p>
+<pre>
+public class Test {
+
+   public static void main(String args[]){
+      int x = 10;
+
+      if( x &lt; 20 ){
+         System.out.print("这是 if 语句");
+      }
+   }
+}
+</pre>
+<p>以上代码编译运行结果如下：</p>
+<pre>
+这是 if 语句
+</pre>
+<hr /><h2>if...else语句</h2>
+<p>if语句后面可以跟else语句，当if语句的布尔表达式值为false时，else语句块会被执行。</p>
+<h3>语法</h3>
+<p>if…else的用法如下：</p>
+<pre>
+if(布尔表达式){
+   //如果布尔表达式的值为true
+}else{
+   //如果布尔表达式的值为false
+}
+</pre>
+<h3>实例</h3>
+<pre>
+public class Test {
+
+   public static void main(String args[]){
+      int x = 30;
+
+      if( x &lt; 20 ){
+         System.out.print("这是 if 语句");
+      }else{
+         System.out.print("这是 else 语句");
+      }
+   }
+}
+</pre>
+<p>以上代码编译运行结果如下：</p>
+<pre>
+这是 else 语句
+</pre>
+<hr /><h2>if...else if...else语句</h2>
+<p>
+if语句后面可以跟elseif&hellip;else语句，这种语句可以检测到多种可能的情况。</p><p>
+使用if，else if，else语句的时候，需要注意下面几点：</p>
+<ul>
+	<li>
+		if语句至多有1个else语句，else语句在所有的elseif语句之后。</li>
+	<li>
+		If语句可以有若干个elseif语句，它们必须在else语句之前。</li>
+	<li>
+		一旦其中一个else if语句检测为true，其他的else if以及else语句都将跳过执行。</li>
+</ul>
+<h3>语法</h3>
+<p>if...else语法格式如下:</h3>
+<pre>
+if(布尔表达式 1){
+   //如果布尔表达式 1的值为true执行代码
+}else if(布尔表达式 2){
+   //如果布尔表达式 2的值为true执行代码
+}else if(布尔表达式 3){
+   //如果布尔表达式 3的值为true执行代码
+}else {
+   //如果以上布尔表达式都不为true执行代码
+}
+</pre>
+<h3>实例</h3>
+<pre>
+public class Test {
+
+   public static void main(String args[]){
+      int x = 30;
+
+      if( x == 10 ){
+         System.out.print("Value of X is 10");
+      }else if( x == 20 ){
+         System.out.print("Value of X is 20");
+      }else if( x == 30 ){
+         System.out.print("Value of X is 30");
+      }else{
+         System.out.print("This is else statement");
+      }
+   }
+}
+</pre>
+<p>以上代码编译运行结果如下：</p>
+<pre>
+Value of X is 30
+</pre><hr />
+<h2>嵌套的if…else语句</h2>
+<p>使用嵌套的if-else语句是合法的。也就是说你可以在另一个if或者elseif语句中使用if或者elseif语句。
+</p>
+<h3>语法</h3>
+<p>嵌套的if…else语法格式如下：</p>
+<pre>
+if(布尔表达式 1){
+   ////如果布尔表达式 1的值为true执行代码
+   if(布尔表达式 2){
+      ////如果布尔表达式 2的值为true执行代码
+   }
+}
+</pre>
+<p>你可以像 <em>if</em> 语句一样嵌套 <em>else if...else</em>。</p>
+<h3>实例</h3>
+<pre>
+public class Test {
+
+   public static void main(String args[]){
+      int x = 30;
+      int y = 10;
+
+      if( x == 30 ){
+         if( y == 10 ){
+             System.out.print("X = 30 and Y = 10");
+          }
+       }
+    }
+}
+</pre>
+<p>以上代码编译运行结果如下：</p>
+<pre>
+X = 30 and Y = 10
+</pre>
+<hr />
+<h2>switch语句</h2>
+<p>switch语句判断一个变量与一系列值中某个值是否相等，每个值称为一个分支。</p>
+<h3>语法</h3>
+<p>switch语法格式如下：</p>
+<pre>
+switch(expression){
+    case value :
+       //语句
+       break; //可选
+    case value :
+       //语句
+       break; //可选
+    //你可以有任意数量的case语句
+    default : //可选
+       //语句
+}
+</pre>
+<p>
+switch语句有如下规则：</p>
+<ul>
+	<li>
+		switch语句中的变量类型只能为byte、short、int或者char。</li>
+	<li>
+		switch语句可以拥有多个case语句。每个case后面跟一个要比较的值和冒号。</li>
+	<li>
+		case语句中的值的数据类型必须与变量的数据类型相同，而且只能是常量或者字面常量。</li>
+	<li>
+		当变量的值与case语句的值相等时，那么case语句之后的语句开始执行，直到break语句出现才会跳出switch语句。3</li>
+	<li>
+		当遇到break语句时，switch语句终止。程序跳转到switch语句后面的语句执行。case语句不必须要包含break语句。如果没有break语句出现，程序会继续执行下一条case语句，直到出现break语句。</li>
+	<li>
+		switch语句可以包含一个default分支，该分支必须是switch语句的最后一个分支。default在没有case语句的值和变量值相等的时候执行。default分支不需要break语句。</li>
+</ul>
+<h3>实例</h3>
+<pre>
+public class Test {
+
+   public static void main(String args[]){
+      //char grade = args[0].charAt(0);
+      char grade = 'C';
+
+      switch(grade)
+      {
+         case 'A' :
+            System.out.println("Excellent!"); 
+            break;
+         case 'B' :
+         case 'C' :
+            System.out.println("Well done");
+            break;
+         case 'D' :
+            System.out.println("You passed");
+         case 'F' :
+            System.out.println("Better try again");
+            break;
+         default :
+            System.out.println("Invalid grade");
+      }
+      System.out.println("Your grade is " + grade);
+   }
+}
+</pre>
+<p>以上代码编译运行结果如下：</p>
+<pre>
+$ java Test
+Well done
+Your grade is a C
+$
+</pre>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-loop.html" rel="prev"> Java循环结构 &#8211; for, while 及 do&#8230;while</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/java/java-number.html" rel="next">Java Number类</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.200 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 23:08:27 -->
+
+<!-- super cache -->

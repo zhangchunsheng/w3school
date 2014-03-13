@@ -1,0 +1,1052 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery EasyUI 数据网格与树插件 &#8211; Tree 树 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='jQuery EasyUI 数据网格与树插件 &#8211; Propertygrid 属性网格' href='http://www.w3cschool.cc/jeasyui/plugins-dt-propertygrid.html' />
+<link rel='next' title='jQuery EasyUI 数据网格与树插件 &#8211; Treegrid 树形网格' href='http://www.w3cschool.cc/jeasyui/plugins-dt-treegrid.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jeasyui/plugins-dt-tree.html' />
+<meta name="keywords" content="jQuery EasyUI 数据网格与树插件 &#8211; Tree 树,jQuery EasyUI教程">
+<meta name="description" content="pre { white-space: pre-wrap; }   jQuery EasyUI 数据网格与树插件 - Tree 树   jQuery EasyUI 插件   通过 $.fn.tree.defaults 重写默认的 defaults。 树（tree）在网页中以树形结构显示分层数据。它向用户提供展开、折叠、拖拽、编辑和异步加载功能。   依赖  draggable droppable   用法 树（tree）定义在 &lt;u..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>jQuery EasyUI教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html" >
+	jQuery EasyUI 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-intro.html" >
+	jQuery EasyUI 简介	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 应用</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud1.html" >
+	jEasyUI 创建 CRUD 应用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud2.html" >
+	jEasyUI 创建 CRUD 数据网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-crud3.html" >
+	jEasyUI 表单的 CRUD 应用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-app-rssreader.html" >
+	jEasyUI  创建 RSS 阅读器	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 拖放</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-basic.html" >
+	jEasyUI 基本的拖动和放置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-shopping.html" >
+	jEasyUI 创建拖放的购物车	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-dd-timetable.html" >
+	jEasyUI 创建学校课程表	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 菜单与按钮</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-menu.html" >
+	jEasyUI 创建简单的菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-linkbutton.html" >
+	jEasyUI 创建链接按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-menubutton.html" >
+	jEasyUI 创建菜单按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-mb-splitbutton.html" >
+	jEasyUI 创建分割按钮	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 布局</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-layout.html" >
+	jEasyUI 创建边框布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-panel.html" >
+	jEasyUI 创建复杂布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-accordion.html" >
+	jEasyUI 创建折叠面板	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs1.html" >
+	jEasyUI 创建标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs2.html" >
+	jEasyUI 动态添加标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-tabs3.html" >
+	jEasyUI 添加自动播放标签页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-layout-xp.html" >
+	jEasyUI 创建 XP 风格左侧面板	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 数据网格</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid1.html" >
+	jEasyUI 转换 HTML 表格为数据网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid3.html" >
+	jEasyUI 取得选中行数据	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid24.html" >
+	jEasyUI 添加查询功能	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid4.html" >
+	jEasyUI 添加工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid19.html" >
+	jEasyUI 创建复杂工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid5.html" >
+	jEasyUI 设置冻结列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid6.html" >
+	jEasyUI 动态改变列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid7.html" >
+	jEasyUI 格式化列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid8.html" >
+	jEasyUI 设置排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid14.html" >
+	jEasyUI 自定义排序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid9.html" >
+	jEasyUI 创建列组合	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid10.html" >
+	jEasyUI 添加复选框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid11.html" >
+	jEasyUI 自定义分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid12.html" >
+	jEasyUI 启用行内编辑	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid23.html" >
+	jEasyUI 扩展编辑器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid15.html" >
+	jEasyUI 列运算	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid13.html" >
+	jEasyUI 合并单元格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid16.html" >
+	jEasyUI 创建自定义视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid17.html" >
+	jEasyUI 创建页脚摘要	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid18.html" >
+	jEasyUI 条件设置行背景颜色	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid20.html" >
+	jEasyUI 创建属性网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid21.html" >
+	jEasyUI 扩展行显示细节	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid22.html" >
+	jEasyUI 创建子网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid27.html" >
+	jEasyUI 显示海量数据	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-datagrid-datagrid2.html" >
+	jEasyUI 添加分页组件	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 窗口</h2>
+<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win1.html">
+	jEasyUI 创建简单窗口	</a>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win2.html" >
+	jEasyUI 自定义窗口工具栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-win3.html" >
+	jEasyUI 窗口与布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-dlg1.html" >
+	jEasyUI 创建对话框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-win-dlg2.html" >
+	jEasyUI 自定义对话框	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 树形菜单</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree1.html" >
+	jEasyUI 使用标记创建树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree2.html" >
+	jEasyUI 创建异步树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree3.html" >
+	jEasyUI 树形菜单添加节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree4.html" >
+	jEasyUI 创建带复选框的树形菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree5.html" >
+	jEasyUI 树形菜单拖放控制	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-tree6.html" >
+	jEasyUI 树形菜单加载父/子节点	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid1.html" >
+	jEasyUI 创建基础树形网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid2.html" >
+	jEasyUI 创建复杂树形网格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid3.html" >
+	jEasyUI 树形网格动态加载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid4.html" >
+	jEasyUI 树形网格添加分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-tree-treegrid5.html" >
+	jEasyUI 树形网格惰性加载节点	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 表单</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form1.html" >
+	jEasyUI 创建异步提交表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form3.html" >
+	jEasyUI 表单验证	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form2.html" >
+	jEasyUI 创建树形下拉框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form4.html" >
+	jEasyUI 格式化下拉框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-form-form5.html" >
+	jEasyUI 过滤下拉数据网格	</a>
+	<br><h2 class="left"><span class="left_h2">jEasyUI</span> 参考手册</h2>	<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-ref-plugins.html" >
+	jQuery EasyUI 插件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jeasyui/jeasyui-ref-extension.html" >
+	jQuery EasyUI 扩展	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jeasyui/plugins-dt-propertygrid.html" rel="prev"> jQuery EasyUI 数据网格与树插件 &#8211; Propertygrid 属性网格</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jeasyui/plugins-dt-treegrid.html" rel="next">jQuery EasyUI 数据网格与树插件 &#8211; Treegrid 树形网格</a> &raquo;</div>
+	</div>
+
+	<style>
+pre {
+white-space: pre-wrap;
+}
+</style>
+
+<h1>jQuery EasyUI 数据网格与树插件 - <span class="color_h1">Tree 树</span></h1>
+<hr />
+<a href="jeasyui-ref-plugins.html"><img class="navup" src="/images/up.gif" alt="jQuery EasyUI 插件"> jQuery EasyUI 插件</a>
+<hr />
+<div class="tutintro">
+<p>通过 $.fn.tree.defaults 重写默认的 defaults。</p>
+<p>树（tree）在网页中以树形结构显示分层数据。它向用户提供展开、折叠、拖拽、编辑和异步加载功能。</p>
+</div>
+<img src="/wp-content/uploads/2013/12/tree.png"/>
+<h2>依赖</h2>
+<ul>
+<li>draggable</li>
+<li>droppable</li>
+</ul>
+
+<h2>用法</h2>
+<p>树（tree）定义在 &lt;ul&gt; 元素中。该标记可定义叶节点和子节点。节点将是 ul 列表内的 &lt;li&gt; 元素。下面演示了将被用于制作嵌套在 ul 元素内的树节点的元素。</p>
+<pre style="color:#006600">
+&lt;ul id="tt" class="easyui-tree"&gt;
+    &lt;li&gt;
+		&lt;span&gt;Folder&lt;/span&gt;
+		&lt;ul&gt;
+			&lt;li&gt;
+				&lt;span&gt;Sub Folder 1&lt;/span&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;span&gt;&lt;a href="#"&gt;File 11&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;span&gt;File 12&lt;/span&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;span&gt;File 13&lt;/span&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;&lt;span&gt;File 2&lt;/span&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;span&gt;File 3&lt;/span&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;File21&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<p>树（Tree）也可以在一个空的 &lt;ul&gt; 元素中定义，可使用 javascript 加载数据。</p>
+<pre style="color:#006600">
+&lt;ul id="tt"&gt;&lt;/ul&gt;
+</pre>
+<pre style="color:#006600">
+$('#tt').tree({
+    url:'tree_data.json'
+});
+</pre>
+<p>使用 loadFilter 来处理来自 ASP.NET web 服务的 json 数据。</p>
+<pre style="color:#006600">
+$('#tt').tree({
+    url: ...,
+    loadFilter: function(data){
+		if (data.d){
+			return data.d;
+		} else {
+			return data;
+		}
+    }
+});
+</pre>
+
+<h2>树的数据格式（Tree Data Format）</h2>
+<p>每个节点可以包括下列属性：</p>
+<ul>
+<li>id：节点的 id，它对于加载远程数据很重要。</li>
+<li>text：要显示的节点文本。</li>
+<li>state：节点状态，'open' 或 'closed'，默认是 'open'。当设置为 'closed' 时，该节点有子节点，并且将从远程站点加载它们。</li>
+<li>checked：指示节点是否被选中。</li>
+<li>attributes：给一个节点添加的自定义属性。</li>
+<li>children：定义了一些子节点的节点数组。</li>
+</ul>
+<p>实例：</p>
+<pre style="color:#006600">
+[{
+    "id":1,
+    "text":"Folder1",
+    "iconCls":"icon-save",
+    "children":[{
+		"text":"File1",
+		"checked":true
+    },{
+		"text":"Books",
+		"state":"open",
+		"attributes":{
+			"url":"/demo/book/abc",
+			"price":100
+		},
+		"children":[{
+			"text":"PhotoShop",
+			"checked":true
+		},{
+			"id": 8,
+			"text":"Sub Bookds",
+			"state":"closed"
+		}]
+    }]
+},{
+    "text":"Languages",
+    "state":"closed",
+    "children":[{
+		"text":"Java"
+    },{
+		"text":"C#"
+    }]
+}]
+</pre>
+
+<h2>异步树</h2>
+<p>树支持内置的异步加载模式，因此用户可以创建一个空的树，然后指定一个动态返回 JSON 数据的服务器端，用于根据需求异步填充树。下面是一个实例：</p>
+<pre style="color:#006600">
+&lt;ul class="easyui-tree" data-options="url:'get_data.php'"&gt;&lt;/ul&gt;
+</pre>
+<p>树是通过 URL 'get_data.php' 加载的。子节点依赖于父节点状态被加载。当展开一个关闭的节点时，如果该节点没有子节点加载，它将通过上面定义的 URL 向服务器发送节点的 id 值作为名为 'id' 的 http 请求参数，以便检索子节点。</p>
+<p>请看从服务器返回的数据：</p>
+<pre style="color:#006600">
+[{
+    "id": 1,
+    "text": "Node 1",
+    "state": "closed",
+    "children": [{
+		"id": 11,
+		"text": "Node 11"
+    },{
+		"id": 12,
+		"text": "Node 12"
+    }]
+},{
+    "id": 2,
+    "text": "Node 2",
+    "state": "closed"
+}]
+</pre>
+<p>节点 1 和节点 2 是关闭的，当展开节点 1 时，将直接展示它的子节点。当展开节点 2 时，将向服务器发送 value(2) 以便检索子节点。</p>
+<p>本教程中的 <a href='/jeasyui/jeasyui-tree-tree2.html' target='_blank'>创建异步树</a> 演示了如何编写服务器代码来根据需求返回树的数据。</p>
+
+<h2>属性</h2>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">类型</th>
+    <th align="left">描述</th>
+	<th align="left">默认值</th>
+</tr>
+<tr>
+	<td>url</td>
+    <td>string</td>
+    <td>获取远程数据的 URL 。</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>method</td>
+    <td>string</td>
+    <td>检索数据的 http 方法（method）。</td>
+	<td>post</td>
+</tr>
+<tr>
+	<td>animate</td>
+    <td>boolean</td>
+    <td>定义当节点展开折叠时是否显示动画效果。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>checkbox</td>
+    <td>boolean</td>
+    <td>定义是否在每个节点前边显示复选框。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>cascadeCheck</td>
+    <td>boolean</td>
+    <td>定义是否级联检查。</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>onlyLeafCheck</td>
+    <td>boolean</td>
+    <td>定义是否只在叶节点前显示复选框。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>lines</td>
+    <td>boolean</td>
+    <td>定义是否显示树线条。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>dnd</td>
+    <td>boolean</td>
+    <td>定义是否启用拖放。</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>data</td>
+    <td>array</td>
+    <td>要加载的节点数据。
+<pre style="color:#006600">
+$('#tt').tree({
+	data: [{
+		text: 'Item1',
+		state: 'closed',
+		children: [{
+			text: 'Item11'
+		},{
+			text: 'Item12'
+		}]
+	},{
+		text: 'Item2'
+	}]
+});
+</pre>
+	</td>
+	<td>null</td>
+</tr>
+<tr>
+	<td>formatter</td>
+    <td>function(node)</td>
+    <td>定义如何呈现节点文本。<br />
+	代码实例：
+<pre style="color:#006600">
+$('#tt').tree({
+	formatter:function(node){
+		return node.text;
+	}
+});
+</pre>
+	</td>
+	<td></td>
+</tr>
+<tr>
+	<td>loader</td>
+    <td>function(param,success,error)</td>
+	<td>定义如何从远程服务器加载数据。返回 false 则取消该动作。该函数有下列参数：<br />
+	param：要传递到远程服务器的参数对象。<br />
+	success(data)：当检索数据成功时调用的回调函数。<br />
+	error()：当检索数据失败时调用的回调函数。<br />
+	</td>
+	<td>json loader</td>
+</tr>
+<tr>
+	<td>loadFilter</td>
+    <td>function(data,parent)</td>
+    <td>返回要显示的过滤数据。返回数据时以标准树格式返回的。该函数有下列参数：<br /> 
+	data：要加载的原始数据。<br />
+	parent：DOM 对象，表示父节点。
+	</td>
+	<td></td>
+</tr>
+</table>
+
+<h2>事件</h2>
+<p>很多事件的回调函数需要 'node' 参数，它包括下列属性：</p>
+<ul>
+<li>id：绑定到节点的标识值。</li>
+<li>text：要显示的文本。</li>
+<li>iconCls：用来显示图标的 css class。</li>
+<li>checked：节点是否被选中。</li>
+<li>state：节点状态，'open' 或 'closed'。</li>
+<li>attributes：绑定到节点的自定义属性。</li>
+<li>target：目标的 DOM 对象。</li>
+</ul>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">参数</th>
+    <th align="left">描述</th>
+</tr>
+<tr>
+	<td>onClick</td>
+    <td>node</td>
+    <td>当用户点击一个节点时触发。代码实例：
+<pre style="color:#006600">
+$('#tt').tree({
+	onClick: function(node){
+		alert(node.text);  // alert node text property when clicked
+	}
+});
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>onDblClick</td>
+    <td>node</td>
+    <td>当用户双击一个节点时触发。</td>
+</tr>
+<tr>
+	<td>onBeforeLoad</td>
+    <td>node, param</td>
+    <td>当加载数据的请求发出前触发，返回 false 则取消加载动作。</td>
+</tr>
+<tr>
+	<td>onLoadSuccess</td>
+    <td>node, data</td>
+    <td>当数据加载成功时触发。</td>
+</tr>
+<tr>
+	<td>onLoadError</td>
+    <td>arguments</td>
+    <td>当数据加载失败时触发，arguments 参数与 jQuery.ajax 的 'error' 函数一样。</td>
+</tr>
+<tr>
+	<td>onBeforeExpand</td>
+    <td>node</td>
+    <td>节点展开前触发，返回 false 则取消展开动作。</td>
+</tr>
+<tr>
+	<td>onExpand</td>
+    <td>node</td>
+    <td>当节点展开时触发。</td>
+</tr>
+<tr>
+	<td>onBeforeCollapse</td>
+    <td>node</td>
+    <td>节点折叠前触发，返回 false 则取消折叠动作。</td>
+</tr>
+<tr>
+	<td>onCollapse</td>
+    <td>node</td>
+    <td>当节点折叠时触发。</td>
+</tr>
+<tr>
+	<td>onBeforeCheck</td>
+    <td>node, checked</td>
+    <td>当用户点击复选框前触发，返回 false 则取消该选中动作。该事件自版本 1.3.1 起可用。</td>
+</tr>
+<tr>
+	<td>onCheck</td>
+    <td>node, checked</td>
+    <td>当用户点击复选框时触发。</td>
+</tr>
+<tr>
+	<td>onBeforeSelect</td>
+    <td>node</td>
+    <td>节点被选中前触发，返回 false 则取消选择动作。</td>
+</tr>
+<tr>
+	<td>onSelect</td>
+    <td>node</td>
+    <td>当节点被选中时触发。</td>
+</tr>
+<tr>
+	<td>onContextMenu</td>
+    <td>e, node</td>
+    <td>当右键点击节点时触发。代码实例：
+<pre style="color:#006600">
+// right click node and then display the context menu
+$('#tt').tree({
+	onContextMenu: function(e, node){
+		e.preventDefault();
+		// select the node
+		$('#tt').tree('select', node.target);
+		// display context menu
+		$('#mm').menu('show', {
+			left: e.pageX,
+			top: e.pageY
+		});
+	}
+});
+
+// the context menu is defined as below:
+&lt;div id="mm" class="easyui-menu" style="width:120px;"&gt;
+	&lt;div onclick="append()" data-options="iconCls:'icon-add'"&gt;Append&lt;/div&gt;
+	&lt;div onclick="remove()" data-options="iconCls:'icon-remove'"&gt;Remove&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>onBeforeDrag</td>
+    <td>node</td>
+    <td>当节点的拖拽开始时触发，返回 false 则禁止拖拽。该事件自版本 1.3.2 起可用。 </td>
+</tr>
+<tr>
+	<td>onStartDrag</td>
+    <td>node</td>
+    <td>当开始拖拽节点时触发。该事件自版本 1.3.2 起可用。</td>
+</tr>
+<tr>
+	<td>onStopDrag</td>
+    <td>node</td>
+    <td>当停止拖拽节点时触发。该事件自版本 1.3.2 起可用。</td>
+</tr>
+<tr>
+	<td>onDragEnter</td>
+    <td>target, source</td>
+    <td>当节点被拖拽进入某个允许放置的目标节点时触发，返回 false 则禁止放置。<br />
+	target：被放置的目标节点元素。<br />
+	source：被拖拽的源节点。<br />
+	该事件自版本 1.3.2 起可用。
+	</td>
+</tr>
+<tr>
+	<td>onDragOver</td>
+    <td>target, source</td>
+    <td>当节点被拖拽到允许放置的目标节点上时触发，返回 false 则禁止放置。<br />
+	target：被放置的目标节点元素。<br />
+	source：被拖拽的源节点。<br />
+	该事件自版本 1.3.2 起可用。
+	</td>
+</tr>
+<tr>
+	<td>onDragLeave</td>
+    <td>target, source</td>
+    <td>当节点被拖拽离开允许放置的目标节点时触发。<br />
+	target：被放置的目标节点元素。<br />
+	source：被拖拽的源节点。<br />
+	该事件自版本 1.3.2 起可用。
+	</td>
+</tr>
+<tr>
+	<td>onBeforeDrop</td>
+    <td>target,source,point</td>
+    <td>节点被放置之前触发，返回 false 则禁止放置。<br />
+	target：DOM 对象，放置的目标节点。<br />
+	source：源节点。<br />
+	point：表示放置操作，可能的值是：'append'、'top' 或 'bottom'。<br />
+	该事件自版本 1.3.2 起可用。
+	</td>
+</tr>
+<tr>
+	<td>onDrop</td>
+    <td>target,source,point</td>
+    <td>当节点被放置时触发。
+	target：DOM 对象，放置的目标节点。<br />
+	source：源节点。<br />
+	point：表示放置操作，可能的值是：'append'、'top' 或 'bottom'。
+	</td>
+</tr>
+<tr>
+	<td>onBeforeEdit</td>
+    <td>node</td>
+    <td>编辑节点前触发。</td>
+</tr>
+<tr>
+	<td>onAfterEdit</td>
+    <td>node</td>
+    <td>编辑节点后触发。</td>
+</tr>
+<tr>
+	<td>onCancelEdit</td>
+    <td>node</td>
+    <td>当取消编辑动作时触发。</td>
+</tr>
+</table>
+
+<h2>方法</h2>
+<table class="reference notranslate">
+<tr>
+	<th align="left">名称</th>
+    <th align="left">参数</th>
+    <th align="left">描述</th>
+</tr>
+<tr>
+	<td>options</td>
+    <td>none</td>
+    <td>返回树的选项（options）。</td>
+</tr>
+<tr>
+	<td>loadData</td>
+    <td>data</td>
+    <td>加载树的数据。</td>
+</tr>
+<tr>
+	<td>getNode</td>
+    <td>target</td>
+    <td>获取指定的节点对象。</td>
+</tr>
+<tr>
+	<td>getData</td>
+    <td>target</td>
+    <td>获取指定的节点数据，包括它的子节点。</td>
+</tr>
+<tr>
+	<td>reload</td>
+    <td>target</td>
+    <td>重新加载树的数据。</td>
+</tr>
+<tr>
+	<td>getRoot</td>
+    <td>none</td>
+    <td>获取根节点，返回节点对象。</td>
+</tr>
+<tr>
+	<td>getRoots</td>
+    <td>none</td>
+    <td>获取根节点，返回节点数组。</td>
+</tr>
+<tr>
+	<td>getParent</td>
+    <td>target</td>
+    <td>获取父节点，target 参数表示节点的 DOM 对象。</td>
+</tr>
+<tr>
+	<td>getChildren</td>
+    <td>target</td>
+    <td>获取子节点， target 参数表示节点的 DOM 对象。</td>
+</tr>
+<tr>
+	<td>getChecked</td>
+    <td>state</td>
+    <td>获取选中的节点。状态可用值有：'checked'、'unchecked'、'indeterminate'。如果状态未分配，则返回 'checked' 节点。<br />
+	代码实例：
+<pre style="color:#006600">
+var nodes = $('#tt').tree('getChecked');	// get checked nodes
+var nodes = $('#tt').tree('getChecked', 'unchecked');	// get unchecked nodes
+var nodes = $('#tt').tree('getChecked', 'indeterminate');	// get indeterminate nodes
+var nodes = $('#tt').tree('getChecked', ['checked','indeterminate']);	// get checked and indeterminate nodes
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>getSelected</td>
+    <td>none</td>
+    <td>获取选中的节点并返回它，如果没有选中节点，则返回 null。</td>
+</tr>
+<tr>
+	<td>isLeaf</td>
+    <td>target</td>
+    <td>把指定的节点定义成叶节点，target 参数表示节点的 DOM 对象。</td>
+</tr>
+<tr>
+	<td>find</td>
+    <td>id</td>
+    <td>找到指定的节点并返回该节点对象。代码实例：
+<pre style="color:#006600">
+// find a node and then select it
+var node = $('#tt').tree('find', 12);
+$('#tt').tree('select', node.target);
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>select</td>
+    <td>target</td>
+    <td>选中一个节点，target 参数表示节点的 DOM 对象。</td>
+</tr>
+<tr>
+	<td>check</td>
+    <td>target</td>
+    <td>把指定节点设置为勾选。</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+    <td>target</td>
+    <td>把指定节点设置为未勾选。</td>
+</tr>
+<tr>
+	<td>collapse</td>
+    <td>target</td>
+    <td>折叠一个节点，target 参数表示节点的 DOM 对象。</td>
+</tr>
+<tr>
+	<td>expand</td>
+    <td>target</td>
+    <td>展开一个节点，target 参数表示节点的 DOM 对象。当节点关闭且没有子节点时，节点的 id 值（名为 'id' 参数）将被发送至服务器以请求子节点数据。</td>
+</tr>
+<tr>
+	<td>collapseAll</td>
+    <td>target</td>
+    <td>折叠所有的节点。</td>
+</tr>
+<tr>
+	<td>expandAll</td>
+    <td>target</td>
+    <td>展开所有的节点。</td>
+</tr>
+<tr>
+	<td>expandTo</td>
+    <td>target</td>
+    <td>从根部展开一个指定的节点。</td>
+</tr>
+<tr>
+	<td>scrollTo</td>
+    <td>target</td>
+    <td>滚动到指定节点。该方法自版本 1.3.4 起可用。</td>
+</tr>
+<tr>
+	<td>append</td>
+    <td>param</td>
+    <td>追加一些子节点到一个父节点，param 参数有两个属性：<br />
+	parent：DOM 对象，要追加到的父节点，如果没有分配，则追加为根节点。<br />
+	data：数组，节点的数据。<br />
+	<br />
+	代码实例：
+<pre style="color:#006600">
+// append some nodes to the selected node
+var selected = $('#tt').tree('getSelected');
+$('#tt').tree('append', {
+	parent: selected.target,
+	data: [{
+		id: 23,
+		text: 'node23'
+	},{
+		text: 'node24',
+		state: 'closed',
+		children: [{
+			text: 'node241'
+		},{
+			text: 'node242'
+		}]
+	}]
+});
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>toggle</td>
+    <td>target</td>
+    <td>切换节点的展开/折叠状态，target 参数表示节点的 DOM 对象。</td>
+</tr>
+<tr>
+	<td>insert</td>
+    <td>param</td>
+    <td>在指定节点的前边或后边插入一个节点，param 参数包括下列属性：<br />
+	before：DOM 对象，前边插入的节点。<br />
+	after：DOM 对象，后边插入的节点。<br />
+	data：对象，节点数据。<br />
+	<br />
+	下面的代码演示了如何在选中节点之前插入一个新的节点：
+<pre style="color:#006600">
+var node = $('#tt').tree('getSelected');
+if (node){
+	$('#tt').tree('insert', {
+		before: node.target,
+		data: {
+			id: 21,
+			text: 'node text'
+		}
+	});
+}
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>remove</td>
+    <td>target</td>
+    <td>移除一个节点和它的子节点，target 参数表示节点的 DOM 对象。</td>
+</tr>
+<tr>
+	<td>pop</td>
+    <td>target</td>
+    <td>弹出一个节点和它的子节点，该方法和 remove 一样，但是返回了移除的节点数据。</td>
+</tr>
+<tr>
+	<td>update</td>
+    <td>param</td>
+    <td>更新指定的节点，'param' 参数有下列属性：<br />
+	target（DOM 对象，要被更新的节点）、id、text、iconCls、checked，等等。<br />
+	<br />
+	代码实例：
+<pre style="color:#006600">
+// update the selected node text
+var node = $('#tt').tree('getSelected');
+if (node){
+	$('#tt').tree('update', {
+		target: node.target,
+		text: 'new text'
+	});
+}
+</pre>
+	</td>
+</tr>
+<tr>
+	<td>enableDnd</td>
+    <td>none</td>
+    <td>启用拖放功能。</td>
+</tr>
+<tr>
+	<td>disableDnd</td>
+    <td>none</td>
+    <td>禁用拖放功能。</td>
+</tr>
+<tr>
+	<td>beginEdit</td>
+    <td>target</td>
+    <td>开始编辑节点。</td>
+</tr>
+<tr>
+	<td>endEdit</td>
+    <td>target</td>
+    <td>结束编辑节点。</td>
+</tr>
+<tr>
+	<td>cancelEdit</td>
+    <td>target</td>
+    <td>取消编辑节点。</td>
+</tr>
+</table>
+<hr />
+<a href="jeasyui-ref-plugins.html"><img class="navup" src="/images/up.gif" alt="jQuery EasyUI 插件"> jQuery EasyUI 插件</a>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jeasyui/plugins-dt-propertygrid.html" rel="prev"> jQuery EasyUI 数据网格与树插件 &#8211; Propertygrid 属性网格</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jeasyui/plugins-dt-treegrid.html" rel="next">jQuery EasyUI 数据网格与树插件 &#8211; Treegrid 树形网格</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.265 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 19:51:07 -->
+
+<!-- super cache -->

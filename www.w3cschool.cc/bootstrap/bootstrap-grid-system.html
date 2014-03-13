@@ -1,0 +1,704 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap 网格系统 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Bootstrap 3 CSS 概览' href='http://www.w3cschool.cc/bootstrap/bootstrap-css-overview.html' />
+<link rel='next' title='Bootstrap 布局' href='http://www.w3cschool.cc/bootstrap/bootstrap-layout.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/bootstrap/bootstrap-grid-system.html' />
+<meta name="keywords" content="Bootstrap 网格系统,Bootstrap 教程">
+<meta name="description" content="Bootstrap 网格系统 简介 在本教程中，您将学习如何使用 Bootstrap 来创建网格系统（Grid System）。 正如您可能知道的，在图形设计中，网格系统是一个二维结构，由水平轴和垂直轴相交的区域组成，用于构建内容。它被广泛应用于平面设计的设计布局和内容结构。在网页设计中，它是一种通过使用 HTML 和 CSS 来快速有效地创建一致的布局的非常有效的方法。因此，网格系统已经成为网页设计的框架或工作流程的一个重要的组件/模..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Bootstrap 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html" >
+	Bootstrap 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-intro.html" >
+	Bootstrap 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-css-overview.html" >
+	Bootstrap CSS 概览	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-grid-system.html" >
+	Bootstrap 网格系统	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-layout.html" >
+	Bootstrap 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-responsive-design.html" >
+	Bootstrap 响应式设计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typography.html" >
+	Bootstrap 排版	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tables.html" >
+	Bootstrap 表格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-forms.html" >
+	Bootstrap 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-icons.html" >
+	Bootstrap 图标	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button-tutorial.html" >
+	Bootstrap 按钮	</a><a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-image.html" >
+	Bootstrap 图像	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-glyphicons.html">
+	Bootstrap Glyphicons	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-list-group.html">
+	Bootstrap 清单组/价格表	</a>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-nav.html" >
+	Bootstrap 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-navbar.html" >
+	Bootstrap 导航条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-inlinelabels-badges.html" >
+	Bootstrap 内联标签和徽章	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-thumbnails.html" >
+	Bootstrap 缩略图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-progress-bars.html" >
+	Bootstrap 进度条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-breadcrumbs.html" >
+	Bootstrap 面包屑导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-pagination.html" >
+	Bootstrap 分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-alerts-errors.html" >
+	Bootstrap 警告和错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-less.html" >
+	Bootstrap LESS	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-media-object.html">
+	Bootstrap多媒体对象	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-panels.html">
+	Bootstrap面板	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-wells.html">
+	Bootstrap wells	</a>
+<br><h2 class="left"><span class="left_h2">Bootstrap JavaScript</span></h2>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-modals.html" >
+	Bootstrap 模态框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-popover.html" >
+	Bootstrap 弹出框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-dropdown.html" >
+	Bootstrap 下拉菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-scrollspy.html" >
+	Bootstrap 滚动监听	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-carousel.html" >
+	Bootstrap 轮播	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typeahead.html" >
+	Bootstrap Typeahead	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button.html" >
+	Bootstrap 按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-collapse.html" >
+	Bootstrap 折叠	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-ui-editor.html" >
+	Bootstrap UI 编辑器	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-css-overview.html" rel="prev"> Bootstrap 3 CSS 概览</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-layout.html" rel="next">Bootstrap 布局</a> &raquo;</div>
+	</div>
+
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/bootstrap/bootstrap.css" >
+
+<h1>Bootstrap <span class="color_h1">网格系统</span></h1>
+<h2 class="tutheader">简介</h2>
+<p>在本教程中，您将学习如何使用 Bootstrap 来创建网格系统（Grid System）。</p>
+<p>正如您可能知道的，在图形设计中，网格系统是一个二维结构，由水平轴和垂直轴相交的区域组成，用于构建内容。它被广泛应用于平面设计的设计布局和内容结构。在网页设计中，它是一种通过使用 HTML 和 CSS 来快速有效地创建一致的布局的非常有效的方法。因此，网格系统已经成为网页设计的框架或工作流程的一个重要的组件/模块。</p>
+<p>简单的说，在网页设计中，我们使用 HTML 和 CSS 创建行和列来实现一个网格。且列中包含了实际内容。</p>
+<p>自版本 2.3.2 起，Bootstrap 提供了两种类型的网格。默认的网格系统是 940px 宽和 12 列。您可以添加响应式的样式表让它随着呈现的视口调整宽度为 724px 和 1170px。</p>
+<p>这里还设有一个流动网格系统，它是基于百分比的，而不是基于像素的。且可被扩展为像默认固定网格一样具有响应性。在本教程中我们将通过一些实例来讨论默认网格，流动网格系统将在另一个单独的教程进行讲解。</p>
+<p>请从 "http://twitter.github.io/bootstrap/assets/bootstrap.zip" 上下载最新版的 Bootstrap 文件。您可以在我们的<a href="bootstrap-intro.html">入门教程</a>中了解相关的文件结构。</p>
+<h2 class="tutheader">从默认网格入门</h2>
+<p>让我们先从一个基本的 HTML 开始，看看如何在上面应用默认网格。</p>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+    &lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;script src="bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>Bootstrap 使用 CSS 的 class "row" 来创建水平行，使用 CSS 的 class "spanx"（x 的值从 1 到 12）来创建垂直列。通过这两个就可以创建一个三列的网格（每一列包含一些文本内容），HTML 如下所示</p>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="span4"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="span4"&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;  
+&lt;/div&gt;
+  &lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;script src="bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>下面是网格系统的图形表示</p>
+<img src="/wp-content/uploads/2013/10/grid-system.png" alt="Bootstrap 网格系统">
+<p>这样，我们就通过对每个列使用 "span4" class，创建好了一个三列网格。"container" class 是用来保存整个结构的。<a href="/try/tryit.php?filename=bootstrap-example-fixed-layout" target="_blank">您可以在这里查看在线实例</a>。从这一点，我们可以推导出用于创建给定数量列的 CSS class 的一般语法。</p>
+<p><strong>创建网格的一般语法：</strong></p>
+<pre name="code" class="html">
+&lt;div class=&amp;quot;row&amp;quot;&gt;
+&lt;div class=&amp;quot;spanx&amp;quot;&gt;
+inline elements like span, block level elements like p, div.
+&lt;/div&gt;
+repeat &lt;div class=&amp;quot;spanx&amp;quot;&gt; y times.
+</pre>
+<p>其中 y 是您想要创建的列数以及 x 等于 12（这是您可以创建的最大的列数）的总和。x 必须是正整数，且值必须从 1 到 12。</p>
+<p>例如，如果您有三个等宽的列，每个列都是 class="span4"，但是如果您想让第一个列比其他两个更大一些，第一个列可以使用 class="span6"，其他两个列使用 class="span3"。</p>
+
+<h2 class="tutheader">如何在固定网格中创建行</h2>
+<p>接下来，在我们继续其他实例之前，先来看看在固定网格中用来创建行和列的 CSS 规则。</p>
+<p>row class 如下所示</p>
+<pre name="code" class="css">
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+</pre>
+<p>设置左边距为负的 20px，且设置 "*zoom: 1;"。这里的 "*" 表示所有元素的 zoom 属性都设置为 1，用来修复 IE6/7 的 bug。设置 zoom 属性为 1，即设置了一个名为 hasLayout 的内部属性，用于修复 IE6/7 的许多缩放/渲染问题。</p>
+<pre name="code" class="css">
+.row:before,
+.row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+</pre>
+<p>Bootstrap 使用前面的 CSS 代码来创建行。它使用 ":before" 和 ":after" 的 CSS 属性。这两个是伪元素。":before" 用于在目标元素之前插入一些内容，":after" 用于在目标元素之后插入一些内容。"display:table;" 使得元素以表格形式呈现。通过设置 "line-height: 0;" 来确保每个行没有自己的行高，通过使用 'content: ""' 来确保元素前后没有内容被插入。</p>
+<p>然后使用如下规则来确保给定元素的左右两侧没有浮动元素。</p>
+<pre name="code" class="css">
+.row:after {
+  clear: both;
+}
+</pre>
+<h2 class="tutheader">如何在固定网格中创建列</h2>
+<pre name="code" class="css">
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+</pre>
+<p>这是要使用的 CSS 规则。'[class*="span"]' 选择了 class 属性值以 'span' 开始的所有元素。现在使用 "float: left;" 来定位每个列彼此相邻。使用 "min-height: 1px" 来让所有的列有一个最小的高度为 1px，使用 "margin-left: 20px;"设置左边距为 20px。</p>
+<p>使用单独的 CSS 规则来设置列宽。具体如下面的表格所示</p>
+<table class="reference notranslate">
+<tr>
+<th>CSS 代码</th>
+<th>解释</th>
+</tr>
+<tr>
+<td><pre>
+.span12 {
+  width: 940px;
+}
+</pre></td>
+<td>如果该行有一个单一的列，列宽为 940px。</td>
+</tr>
+<tr>
+<td><pre>
+.span11 {
+  width: 860px;
+}
+</pre></td>
+<td>如果该行有一个由 11 列合并的列，列宽为 860px。</td>
+</tr>
+<tr>
+<td><pre>
+.span10 {
+  width: 780px;
+}
+</pre></td>
+<td>如果该行有一个由 10 列合并的列，列宽为 780px。</td>
+</tr>
+<tr>
+<td><pre>
+.span9 {
+  width: 700px;
+}
+</pre></td>
+<td>如果该行有一个由 9 列合并的列，列宽为 700px。</td>
+</tr>
+<tr>
+<td><pre>
+.span8 {
+  width: 620px;
+}
+</pre></td>
+<td>如果该行有一个由 8 列合并的列，列宽为 620px。</td>
+</tr>
+<tr>
+<td><pre>
+.span7 {
+  width: 540px;
+}
+</pre></td>
+<td>如果该行有一个由 7 列合并的列，列宽为 540px。</td>
+</tr>
+<tr>
+<td><pre>
+.span6 {
+  width: 460px;
+}
+</pre></td>
+<td>如果该行有一个由 6 列合并的列，列宽为 460px。</td>
+</tr>
+<tr>
+<td><pre>
+.span5 {
+  width: 380px;
+}
+</pre></td>
+<td>如果该行有一个由 5 列合并的列，列宽为 380px。</td>
+</tr>
+<tr>
+<td><pre>
+.span4 {
+  width: 300px;
+}
+</pre></td>
+<td>如果该行有一个由 4 列合并的列，列宽为 300px。</td>
+</tr>
+<tr>
+<td><pre>
+.span2 {
+  width: 220px;
+}
+</pre></td>
+<td>如果该行有一个由 3 列合并的列，列宽为 220px。</td>
+</tr>
+<tr>
+<td><pre>
+.span2 {
+  width: 140px;
+}
+</pre></td>
+<td>如果该行有一个由 2 列合并的列，列宽为 140px。</td>
+</tr>
+<tr>
+<td><pre>
+.span1 {
+  width: 60px;
+}
+</pre></td>
+<td>单个列宽为 60px。</td>
+</tr>
+</table>
+<br />
+<h2 class="tutheader">Bootstrap 默认网格实例</h2>
+<p>该实例演示了如何创建 1 个列、2 个列、6 个列、12 个列和 4 个列（按这个顺序）。</p>
+<p>还要注意的是，所有创建的列被 "container" class 包围，"container" 是通过使用 Bootstrap 来创建一个固定布局。</p>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="en"&gt; 
+&lt;head&gt; 
+&lt;meta charset="utf-8"&gt; 
+ 
+&lt;meta name="description" content="Creating a 16 columns Grid with Bootstrap. Learn with examples to create a Grid System in Bootstrap."&gt; 
+&lt;link href="booststrap/css/bootstrap.min.css" rel="stylesheet"&gt; 
+&lt;style&gt;
+.span12 h1{color:#FE6E4C; font-weight: bold; padding: 5px;}
+h3 {margin: 10px 0 10px 0;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="span12"&gt;
+&lt;h1&gt;w3cschool.cc is a web design and development tutorial.&lt;/h1&gt; 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="span12"&gt;
+&lt;p&gt;w3cschool offers web development tutorials. We believe in Open Source. Love standards. And prioritize simplicity and readability while serving content. With 3000+ unique content pages and thousands of examples, we are comprehensive. We have online practice editors to play around with the example codes.&lt;/p&gt; 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="span12"&gt;
+&lt;h3&gt;Some of the topics and more... :&lt;/h3&gt; 
+&lt;/div&gt;
+&lt;div class="span2"&gt;
+&lt;p&gt;&lt;img src="images/html5_logo.png" width="140" height="86" alt="html5 logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span2"&gt;
+&lt;p&gt;&lt;img src="images/javascript-logo.png" width="140" height="86" alt="javascript logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span2"&gt;
+&lt;p&gt;&lt;img src="images/json.gif" width="140" height="86" alt="JSON logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span2"&gt;
+&lt;p&gt;&lt;img src="images/php.png" width="140" height="86" alt="PHP logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span2"&gt;
+&lt;p&gt;&lt;img src="images/mysql-logo.png" width="140" height="86" alt="MySQL logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span2"&gt;
+&lt;p&gt;&lt;img src="images/browser-statistics.png" width="140" height="86" alt="Browser Statistics logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="span12"&gt;
+&lt;h3&gt;Social networking sites to share:&lt;/h3&gt; 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/gplus.png" width="50" height="49" alt="GPlus logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/twitter.png" width="50" height="38" alt="Twitter logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/orkut.png" width="50" height="55" alt="Orkut logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/ipad.png" width="50" height="53" alt="iPad logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/digo.png" width="50" height="54" alt="Digo logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/zapface.png" width="51" height="53" alt="Zapface logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/facebook.png" width="48" height="53" alt="facebook logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/netvibes.png" width="51" height="53" alt="Netvibes logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/linkedin.png" width="49" height="54" alt="LinkedIn logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/newsvine.png" width="48" height="53" alt="Newsvine logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/blogger.png" width="51" height="53" alt="Blogger logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div class="span1"&gt;
+&lt;p&gt;&lt;img src="images/reditt.png" width="48" height="57" alt="Reddit logo" /&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="span3"&gt;
+&lt;h3&gt;Fontend Development:&lt;/h3&gt; 
+&lt;p&gt;HTML4.0, XHTML1.0, CSS2.1, HTML5, CSS3, JavaScript&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="span3"&gt;
+&lt;h3&gt;Backend Developemt:&lt;/h3&gt; 
+&lt;p&gt;PHP, Ruby, Python, Java, ASP.NET, SCALA&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="span3"&gt;
+&lt;h3&gt;Database Management:&lt;/h3&gt; 
+&lt;p&gt;SQL, MySQL POstgreSQL, NoSQL, MongoDB&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="span3"&gt;
+&lt;h3&gt;APIs, Tools and Tips:&lt;/h3&gt; 
+&lt;p&gt;Google Plus API, Twitter Bootstrap, JSON, Firebug, WebPNG&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h2 class="tutheader">以下就是您将创建的东西</h2>
+<p><img src="/wp-content/uploads/2013/10/grid-demo.jpg" alt="bootstrap 网格实例" width="500" height="239" /></p>
+<h2 class="heading">在线查看</h2>
+<p><a href="/try/tryit.php?filename=bootstrap-example-grid-system" target="_blank">在不同的浏览器窗口中查看上面的实例。</a></p>
+<p><a href="/try/bootstrap/twitter-bootstrap-gridsystem-example.zip">请点击这里，下载上面实例的所有 HTML、CSS、JS 和图像文件。</a></p>
+<h2 class="tutheader">添加响应性到默认网格</h2>
+<p>如果您想要给 Bootstrap 的默认网格添加响应性能，只需要在 HTML 文件的原生 CSS 后添加 <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&lt;link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"&gt;</pre></p>
+<p>如需查看带有响应性的默认网格，<a href="/try/tryit.php?filename=bootstrap-example-grid-system-with-responsive-features" target="_blank">点击这里，查看在线演示</a>。<a href="/try/bootstrap/twitter-bootstrap-grid-system-with-responsive-features-example.zip" target="_blank">点击这里，下载相关代码</a>。</p>
+<p>默认网格系统发挥响应性有两个条件。当视口（网格渲染的可用空间）大于 1200px 时[通过 @media (min-width: 1200px) 获得]，当视口大于 768px 但小于 979px 时[通过 @media (min-width: 768px) 和 (max-width: 979px) 设置]。</p>
+<h2 class="tutheader">偏移列：默认网格</h2>
+<p>通过使用偏移，您可以把列移动它原始位置的右侧。这是通过向列添加左边距来实现的。通过 Bootstrap，您可以使用 "offsetx"（其中 x 的值是一个正整数） class 和 class "spany"（其中 y 的值是一个正整数）。取决于 'offestx' 中 'x' 的值，相关的列向右移动 'x' 个列的宽度。</p>
+<p>偏移的宽度是在 Bootstrap CSS 中定义的。offset12 的最高左边距是 980px，offset1 的最低左边距是 100px。</p>
+<p>由于默认网格系统是基于像素的，当应用偏移时，您必须知道您要用于偏移的像素和要用于列的像素。这两个加在一起必须不超过您的水平视口的像素数。</p>
+<p>在下面的实例中，我们将创建一个两列的网格。其中，我们让左边的列向右移动 4 个列。HTML 代码如下所示：</p>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+&lt;div class="span4 offset4"&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="span3"&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;script src="bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p><a href="/try/tryit.php?filename=bootstrap-example-offestting-column" target="_blank">点击这里，查看在线演示</a>。<a href="/try/bootstrap/offestting-column-example.zip" target="_blank">点击这里，下载相关代码</a>。</p>
+<p>您可以通过在原生 CSS 后添加响应式 CSS，也可以通过使用偏移列，来向默认网格添加响应性。</p>
+<h2 class="tutheader">嵌套列：默认网格</h2>
+<p>使用 Bootstrap 默认网格，列可以嵌套。您只需要简单地在列中创建一个行，并创建您想要在行中嵌套的列数。与此同时，您必须记住用来嵌套其他列的列的总列数，确保不能超过您创建父列时所提到的列数。</p>
+<p>下面的实例演示如何在 Bootstrap 的默认网格中嵌套列。</p>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+    &lt;div class="span7"&gt;
+    &lt;div class="row"&gt;
+    &lt;div class="span4"&gt;
+   &lt;p&gt;Maecenas aliquet velit vel turpis. Mauris neque metus, malesuada nec, ultricies sit amet, porttitor mattis, enim. In massa libero, interdum nec, interdum vel, blandit sed, nulla. In ullamcorper, est eget tempor cursus, neque mi consectetuer mi, a ultricies massa est sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Proin nulla arcu, nonummy luctus, dictum eget, fermentum et, lorem. Nunc porta convallis pede.&lt;/p&gt;
+    &lt;/div&gt;
+   &lt;div class="span3"&gt;
+&lt;p&gt;Maecenas aliquet velit vel turpis. Mauris neque metus, malesuada nec, ultricies sit amet, porttitor mattis, enim. In massa libero, interdum nec, interdum vel, blandit sed, nulla. In ullamcorper, est eget tempor cursus, neque mi consectetuer mi, a ultricies massa est sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Proin nulla arcu, nonummy luctus, dictum eget, fermentum et, lorem. Nunc porta convallis pede.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+  &lt;div class="span5"&gt;
+  &lt;p&gt;Maecenas aliquet velit vel turpis. Mauris neque metus, malesuada nec, ultricies sit amet, porttitor mattis, enim. In massa libero, interdum nec, interdum vel, blandit sed, nulla. In ullamcorper, est eget tempor cursus, neque mi consectetuer mi, a ultricies massa est sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Proin nulla arcu, nonummy luctus, dictum eget, fermentum et, lorem. Nunc porta convallis pede.&lt;/p&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;/div&gt;
+    &lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;script src="bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p><a href="/try/tryit.php?filename=bootstrap-example-nested-columns" target="_blank">点击这里，查看在线演示</a>。<a href="/try/bootstrap/nested-columns-example.zip" target="_blank">点击这里，下载相关代码</a>。</p>
+<p>在上面的实例中，在容器下的行有两个列，分别被定义为 'class="span7"' 和 'class="span5"'。使得列的总数为 12。现在，我们在左边的列添加一个行，然后创建两个列，分别被定义为 'class="span4"' 和 'class="span3"'。因此，它遵守它的父列规定的列的总数（7=4+3）。</p>
+<p>您也可以在这里添加响应性能。</p>
+<h2 class="tutheader">结论</h2>
+<p>在本教程中，我们已经讨论了 Bootstrap 的默认网格系统。本教程是基于 Bootstrap 的 V2.3.2。下面是本教程中相关要点总结：</p>
+<ul class="w3r_list">
+<li>Bootstrap 的默认网格系统是 940px 宽，并带有 12 个列。</li>
+<li>在网格中，行通过 'class="row"' 创建，列通过 'class="spanx"' 创建，其中 x 是一个正整数。所有列 x 的总和必须不超过 12。</li>
+<li>通过添加 Bootstrap 的响应式 CSS，您可以添加响应性到默认网格。</li>
+<li>使用偏移来向列创建额外的空间。通过使用 'class="offsetx"'，其中 x 是正整数。如果您使用偏移，列的总数，包括偏移使用的数量，不能超过 11。</li>
+<li>列可以嵌套。如果使用嵌套列，当计算网格（容器中的一行）中列的总数时，嵌套列也要计算在内。</li>
+<li>嵌套列中也可以使用偏移。</li>
+</ul>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-css-overview.html" rel="prev"> Bootstrap 3 CSS 概览</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-layout.html" rel="next">Bootstrap 布局</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		$("pre").css('background-image', 'none');
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.164 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:18:09 -->
+
+<!-- super cache -->

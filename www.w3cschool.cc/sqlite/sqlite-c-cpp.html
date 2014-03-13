@@ -1,0 +1,742 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>SQLite &#8211; C/C++ | w3cschool菜鸟教程</title>
+	<link rel='prev' title='SQLite 常用函数' href='http://www.w3cschool.cc/sqlite/sqlite-functions.html' />
+<link rel='next' title='SQLite &#8211; Java' href='http://www.w3cschool.cc/sqlite/sqlite-java.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/sqlite/sqlite-c-cpp.html' />
+<meta name="keywords" content="SQLite &#8211; C/C++,SQLite 教程">
+<meta name="description" content="SQLite - C/C++  安装 在 C/C++ 程序中使用 SQLite 之前，我们需要确保机器上已经有 SQLite 库。可以查看 SQLite 安装章节了解安装过程。 C/C++ 接口 API 以下是重要的 C&amp;C++ / SQLite 接口程序，可以满足您在 C/C++ 程序中使用 SQLite 数据库的需求。如果您需要了解更多细节，请查看 SQLite 官方文档。  序号API &amp; 描述 1sqlite3_..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>SQLite 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html" >
+	SQLite 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-intro.html" >
+	SQLite 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-installation.html" >
+	SQLite 安装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-commands.html" >
+	SQLite 命令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-syntax.html" >
+	SQLite 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-data-types.html" >
+	SQLite 数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-create-database.html" >
+	SQLite 创建数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-attach-database.html" >
+	SQLite 附加数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-detach-database.html" >
+	SQLite 分离数据库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-create-table.html" >
+	SQLite 创建表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-drop-table.html" >
+	SQLite 删除表	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-insert.html" >
+	SQLite Insert 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-select.html" >
+	SQLite Select 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-operators.html" >
+	SQLite 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-expressions.html" >
+	SQLite 表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-where-clause.html" >
+	SQLite Where 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-and-or-clauses.html" >
+	SQLite AND/OR 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-update.html" >
+	SQLite Update 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-delete.html" >
+	SQLite Delete 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-like-clause.html" >
+	SQLite Like 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-glob-clause.html" >
+	SQLite Glob 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-limit-clause.html" >
+	SQLite Limit 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-order-by.html" >
+	SQLite Order By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-group-by.html" >
+	SQLite Group By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-having-clause.html" >
+	SQLite Having 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-distinct-keyword.html" >
+	SQLite Distinct 关键字	</a>
+	<br><h2 class="left"><span class="left_h2">SQLite 高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-pragma.html" >
+	SQLite PRAGMA	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-constraints.html" >
+	SQLite 约束	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-joins.html" >
+	SQLite Joins	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-unions-clause.html" >
+	SQLite Unions 子句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-null-values.html" >
+	SQLite NULL 值	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-alias.html" >
+	SQLite 别名	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-trigger.html" >
+	SQLite 触发器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-index.html" >
+	SQLite 索引	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-indexed-by.html" >
+	SQLite Indexed By	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-alter-command.html" >
+	SQLite Alter 命令	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-truncate-table.html" >
+	SQLite Truncate Table	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-view.html" >
+	SQLite 视图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-transaction.html" >
+	SQLite 事务	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-subquery.html" >
+	SQLite 子查询	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-autoincrement.html" >
+	SQLite Autoincrement	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-injection.html" >
+	SQLite 注入	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-explain.html" >
+	SQLite Explain	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-vacuum.html" >
+	SQLite Vacuum	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-date-time.html" >
+	SQLite 日期 & 时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-functions.html" >
+	SQLite 常用函数	</a>
+	<br><h2 class="left"><span class="left_h2">SQLite 接口</span></h2>	<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-c-cpp.html" >
+	SQLite - C/C++	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-java.html" >
+	SQLite - Java	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-php.html" >
+	SQLite - PHP	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-perl.html" >
+	SQLite - Perl	</a>
+		<a target="_top" href="http://www.w3cschool.cc/sqlite/sqlite-python.html" >
+	SQLite - Python	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/sqlite/sqlite-functions.html" rel="prev"> SQLite 常用函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/sqlite/sqlite-java.html" rel="next">SQLite &#8211; Java</a> &raquo;</div>
+	</div>
+
+	<h1>SQLite - <span class="color_h1">C/C++</span></h1>
+
+<h2>安装</h2>
+<p>在 C/C++ 程序中使用 SQLite 之前，我们需要确保机器上已经有 SQLite 库。可以查看 SQLite 安装章节了解安装过程。</p>
+<h2>C/C++ 接口 API</h2>
+<p>以下是重要的 C&amp;C++ / SQLite 接口程序，可以满足您在 C/C++ 程序中使用 SQLite 数据库的需求。如果您需要了解更多细节，请查看 SQLite 官方文档。</p>
+<table class="reference notranslate">
+<tr><th width="5%">序号</th><th>API &amp; 描述</th></tr>
+<tr><td>1</td><td><b>sqlite3_open(const char *filename, sqlite3 **ppDb)</b><br />
+<p>该例程打开一个指向 SQLite 数据库文件的连接，返回一个用于其他 SQLite 程序的数据库连接对象。</p>
+<p>如果 <i>filename</i> 参数是 NULL 或 ':memory:'，那么 sqlite3_open() 将会在 RAM 中创建一个内存数据库，这只会在 session 的有效时间内持续。</p>
+<p>如果文件名 filename 不为 NULL，那么 sqlite3_open() 将使用这个参数值尝试打开数据库文件。如果该名称的文件不存在，sqlite3_open() 将创建一个新的命名为该名称的数据库文件并打开。</p>
+</td></tr>
+<tr><td>2</td><td><b>sqlite3_exec(sqlite3*, const char *sql, sqlite_callback, void *data, char **errmsg)</b><br />
+<p>该例程提供了一个执行 SQL 命令的快捷方式，SQL 命令由 sql 参数提供，可以由多个 SQL 命令组成。</p>
+<p>在这里，第一个参数 <i>sqlite3</i> 是打开的数据库对象，<i>sqlite_callback</i> 是一个回调，<i>data</i> 作为其第一个参数，errmsg 将被返回用来获取程序生成的任何错误。</p>
+<p>sqlite3_exec() 程序解析并执行由 <b>sql</b> 参数所给的每个命令，直到字符串结束或者遇到错误为止。</p>
+</td></tr>
+<tr><td>3</td><td><b>sqlite3_close(sqlite3*)</b><br />
+<p>该例程关闭之前调用 sqlite3_open() 打开的数据库连接。所有与连接相关的语句都应在连接关闭之前完成。</p>
+<p>如果还有查询没有完成，sqlite3_close() 将返回 SQLITE_BUSY 禁止关闭的错误消息。</p></td></tr>
+</table>
+<h2>连接数据库</h2>
+<p>下面的 C 代码段显示了如何连接到一个现有的数据库。如果数据库不存在，那么它就会被创建，最后将返回一个数据库对象。</p>
+<pre class="prettyprint">
+#include &lt;stdio.h&gt;
+#include &lt;sqlite3.h&gt;
+
+int main(int argc, char* argv[])
+{
+   sqlite3 *db;
+   char *zErrMsg = 0;
+   int rc;
+
+   rc = sqlite3_open("test.db", &amp;#038;db);
+
+   if( rc ){
+      fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+      exit(0);
+   }else{
+      fprintf(stderr, "Opened database successfully\n");
+   }
+   sqlite3_close(db);
+}
+</pre>
+<p>现在，让我们来编译和运行上面的程序，在当前目录中创建我们的数据库 <b>test.db</b>。您可以根据需要改变路径。</p>
+<pre class="result">
+$gcc test.c -l sqlite3
+$./a.out
+Opened database successfully
+</pre>
+<p>如果要使用 C++ 源代码，可以按照下列所示编译代码：</p>
+<pre class="result">
+$g++ test.c -l sqlite3
+</pre>
+<p>在这里，把我们的程序链接上 sqlite3 库，以便向 C 程序提供必要的函数。这将在您的目录下创建一个数据库文件 test.db，您将得到如下结果：</p>
+<pre class="result">
+-rwxr-xr-x. 1 root root 7383 May  8 02:06 a.out
+-rw-r--r--. 1 root root  323 May  8 02:05 test.c
+-rw-r--r--. 1 root root    0 May  8 02:06 test.db
+</pre>
+<h2>创建表</h2>
+<p>下面的 C 代码段将用于在先前创建的数据库中创建一个表：</p>
+<pre class="prettyprint">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sqlite3.h&gt; 
+
+static int callback(void *NotUsed, int argc, char **argv, char **azColName){
+   int i;
+   for(i=0; i&amp;lt;argc; i++){
+      printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+   }
+   printf("\n");
+   return 0;
+}
+
+int main(int argc, char* argv[])
+{
+   sqlite3 *db;
+   char *zErrMsg = 0;
+   int  rc;
+   char *sql;
+
+   /* Open database */
+   rc = sqlite3_open("test.db", &amp;#038;db);
+   if( rc ){
+      fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+      exit(0);
+   }else{
+      fprintf(stdout, "Opened database successfully\n");
+   }
+
+   /* Create SQL statement */
+   sql = "CREATE TABLE COMPANY("  \
+         "ID INT PRIMARY KEY     NOT NULL," \
+         "NAME           TEXT    NOT NULL," \
+         "AGE            INT     NOT NULL," \
+         "ADDRESS        CHAR(50)," \
+         "SALARY         REAL );";
+
+   /* Execute SQL statement */
+   rc = sqlite3_exec(db, sql, callback, 0, &amp;#038;zErrMsg);
+   if( rc != SQLITE_OK ){
+   fprintf(stderr, "SQL error: %s\n", zErrMsg);
+      sqlite3_free(zErrMsg);
+   }else{
+      fprintf(stdout, "Table created successfully\n");
+   }
+   sqlite3_close(db);
+   return 0;
+}
+</pre>
+<p>上述程序编译和执行时，它会在 test.db 文件中创建 COMPANY 表，最终文件列表如下所示：</p>
+<pre class="result">
+-rwxr-xr-x. 1 root root 9567 May  8 02:31 a.out
+-rw-r--r--. 1 root root 1207 May  8 02:31 test.c
+-rw-r--r--. 1 root root 3072 May  8 02:31 test.db
+</pre>
+<h2>INSERT 操作</h2>
+<p>下面的 C 代码段显示了如何在上面创建的 COMPANY 表中创建记录：</p>
+<pre class="prettyprint">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sqlite3.h&gt;
+
+static int callback(void *NotUsed, int argc, char **argv, char **azColName){
+   int i;
+   for(i=0; i&amp;lt;argc; i++){
+      printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+   }
+   printf("\n");
+   return 0;
+}
+
+int main(int argc, char* argv[])
+{
+   sqlite3 *db;
+   char *zErrMsg = 0;
+   int rc;
+   char *sql;
+
+   /* Open database */
+   rc = sqlite3_open("test.db", &amp;#038;db);
+   if( rc ){
+      fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+      exit(0);
+   }else{
+      fprintf(stderr, "Opened database successfully\n");
+   }
+
+   /* Create SQL statement */
+   sql = "INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) "  \
+         "VALUES (1, 'Paul', 32, 'California', 20000.00 ); " \
+         "INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) "  \
+         "VALUES (2, 'Allen', 25, 'Texas', 15000.00 ); "     \
+         "INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)" \
+         "VALUES (3, 'Teddy', 23, 'Norway', 20000.00 );" \
+         "INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)" \
+         "VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00 );";
+
+   /* Execute SQL statement */
+   rc = sqlite3_exec(db, sql, callback, 0, &amp;#038;zErrMsg);
+   if( rc != SQLITE_OK ){
+      fprintf(stderr, "SQL error: %s\n", zErrMsg);
+      sqlite3_free(zErrMsg);
+   }else{
+      fprintf(stdout, "Records created successfully\n");
+   }
+   sqlite3_close(db);
+   return 0;
+}
+</pre>
+<p>上述程序编译和执行时，它会在 COMPANY 表中创建给定记录，并会显示以下两行：</p>
+<pre class="result">
+Opened database successfully
+Records created successfully
+</pre>
+<h2>SELECT 操作</h2>
+<p>在我们开始讲解获取记录的实例之前，让我们先了解下回调函数的一些细节，这将在我们的实例使用到。这个回调提供了一个从 SELECT 语句获得结果的方式。它声明如下：</p>
+<pre class="prettyprint">
+typedef int (*sqlite3_callback)(
+void*,    /* Data provided in the 4th argument of sqlite3_exec() */
+int,      /* The number of columns in row */
+char**,   /* An array of strings representing fields in the row */
+char**    /* An array of strings representing column names */
+);
+</pre>
+<p>如果上面的回调在 sqlite_exec() 程序中作为第三个参数，那么 SQLite 将为 SQL 参数内执行的每个 SELECT 语句中处理的每个记录调用这个回调函数。</p>
+<p>下面的 C 代码段显示了如何从前面创建的 COMPANY 表中获取并显示记录：</p>
+<pre class="prettyprint">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sqlite3.h&gt;
+
+static int callback(void *data, int argc, char **argv, char **azColName){
+   int i;
+   fprintf(stderr, "%s: ", (const char*)data);
+   for(i=0; i&amp;lt;argc; i++){
+      printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+   }
+   printf("\n");
+   return 0;
+}
+
+int main(int argc, char* argv[])
+{
+   sqlite3 *db;
+   char *zErrMsg = 0;
+   int rc;
+   char *sql;
+   const char* data = "Callback function called";
+
+   /* Open database */
+   rc = sqlite3_open("test.db", &amp;#038;db);
+   if( rc ){
+      fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+      exit(0);
+   }else{
+      fprintf(stderr, "Opened database successfully\n");
+   }
+
+   /* Create SQL statement */
+   sql = "SELECT * from COMPANY";
+
+   /* Execute SQL statement */
+   rc = sqlite3_exec(db, sql, callback, (void*)data, &amp;#038;zErrMsg);
+   if( rc != SQLITE_OK ){
+      fprintf(stderr, "SQL error: %s\n", zErrMsg);
+      sqlite3_free(zErrMsg);
+   }else{
+      fprintf(stdout, "Operation done successfully\n");
+   }
+   sqlite3_close(db);
+   return 0;
+}
+</pre>
+<p>上述程序编译和执行时，它会产生以下结果：</p>
+<pre class="result">
+Opened database successfully
+Callback function called: ID = 1
+NAME = Paul
+AGE = 32
+ADDRESS = California
+SALARY = 20000.0
+
+Callback function called: ID = 2
+NAME = Allen
+AGE = 25
+ADDRESS = Texas
+SALARY = 15000.0
+
+Callback function called: ID = 3
+NAME = Teddy
+AGE = 23
+ADDRESS = Norway
+SALARY = 20000.0
+
+Callback function called: ID = 4
+NAME = Mark
+AGE = 25
+ADDRESS = Rich-Mond
+SALARY = 65000.0
+
+Operation done successfully
+</pre>
+<h2>UPDATE 操作</h2>
+<p>下面的 C 代码段显示了如何使用 UPDATE 语句来更新任何记录，然后从 COMPANY 表中获取并显示更新的记录：</p>
+<pre class="prettyprint">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sqlite3.h&gt; 
+
+static int callback(void *data, int argc, char **argv, char **azColName){
+   int i;
+   fprintf(stderr, "%s: ", (const char*)data);
+   for(i=0; i&amp;lt;argc; i++){
+      printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+   }
+   printf("\n");
+   return 0;
+}
+
+int main(int argc, char* argv[])
+{
+   sqlite3 *db;
+   char *zErrMsg = 0;
+   int rc;
+   char *sql;
+   const char* data = "Callback function called";
+
+   /* Open database */
+   rc = sqlite3_open("test.db", &amp;#038;db);
+   if( rc ){
+      fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+      exit(0);
+   }else{
+      fprintf(stderr, "Opened database successfully\n");
+   }
+
+   /* Create merged SQL statement */
+   sql = "UPDATE COMPANY set SALARY = 25000.00 where ID=1; " \
+         "SELECT * from COMPANY";
+
+   /* Execute SQL statement */
+   rc = sqlite3_exec(db, sql, callback, (void*)data, &amp;#038;zErrMsg);
+   if( rc != SQLITE_OK ){
+      fprintf(stderr, "SQL error: %s\n", zErrMsg);
+      sqlite3_free(zErrMsg);
+   }else{
+      fprintf(stdout, "Operation done successfully\n");
+   }
+   sqlite3_close(db);
+   return 0;
+}
+</pre>
+<p>上述程序编译和执行时，它会产生以下结果：</p>
+<pre class="result">
+Opened database successfully
+Callback function called: ID = 1
+NAME = Paul
+AGE = 32
+ADDRESS = California
+SALARY = 25000.0
+
+Callback function called: ID = 2
+NAME = Allen
+AGE = 25
+ADDRESS = Texas
+SALARY = 15000.0
+
+Callback function called: ID = 3
+NAME = Teddy
+AGE = 23
+ADDRESS = Norway
+SALARY = 20000.0
+
+Callback function called: ID = 4
+NAME = Mark
+AGE = 25
+ADDRESS = Rich-Mond
+SALARY = 65000.0
+
+Operation done successfully
+</pre>
+<h2>DELETE 操作</h2>
+<p>下面的 C 代码段显示了如何使用 DELETE 语句删除任何记录，然后从 COMPANY 表中获取并显示剩余的记录：</p>
+<pre class="prettyprint">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sqlite3.h&gt; 
+
+static int callback(void *data, int argc, char **argv, char **azColName){
+   int i;
+   fprintf(stderr, "%s: ", (const char*)data);
+   for(i=0; i&lt;argc; i++){
+      printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+   }
+   printf("\n");
+   return 0;
+}
+
+int main(int argc, char* argv[])
+{
+   sqlite3 *db;
+   char *zErrMsg = 0;
+   int rc;
+   char *sql;
+   const char* data = "Callback function called";
+
+   /* Open database */
+   rc = sqlite3_open("test.db", &amp;#038;db);
+   if( rc ){
+      fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+      exit(0);
+   }else{
+      fprintf(stderr, "Opened database successfully\n");
+   }
+
+   /* Create merged SQL statement */
+   sql = "DELETE from COMPANY where ID=2; " \
+         "SELECT * from COMPANY";
+
+   /* Execute SQL statement */
+   rc = sqlite3_exec(db, sql, callback, (void*)data, &amp;#038;zErrMsg);
+   if( rc != SQLITE_OK ){
+      fprintf(stderr, "SQL error: %s\n", zErrMsg);
+      sqlite3_free(zErrMsg);
+   }else{
+      fprintf(stdout, "Operation done successfully\n");
+   }
+   sqlite3_close(db);
+   return 0;
+}
+</pre>
+<p>上述程序编译和执行时，它会产生以下结果：</p>
+<pre class="result">
+Opened database successfully
+Callback function called: ID = 1
+NAME = Paul
+AGE = 32
+ADDRESS = California
+SALARY = 20000.0
+
+Callback function called: ID = 3
+NAME = Teddy
+AGE = 23
+ADDRESS = Norway
+SALARY = 20000.0
+
+Callback function called: ID = 4
+NAME = Mark
+AGE = 25
+ADDRESS = Rich-Mond
+SALARY = 65000.0
+
+Operation done successfully
+</pre>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/sqlite/sqlite-functions.html" rel="prev"> SQLite 常用函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/sqlite/sqlite-java.html" rel="next">SQLite &#8211; Java</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 1.040 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-06 22:27:42 -->
+
+<!-- super cache -->

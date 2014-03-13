@@ -1,0 +1,732 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>VBScript 函数 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='VBScript VarType 函数' href='http://www.w3cschool.cc/vbscript/func-vartype.html' />
+<link rel='next' title='Web 品质标准' href='http://www.w3cschool.cc/quality/quality-standards.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/vbscript/vbscript-ref-functions.html' />
+<meta name="keywords" content="VBScript 函数,VBScript 教程">
+<meta name="description" content="VBScript 函数   本页列出了所有内建的 VBScript 函数，主要分为以下几类：        Date/Time 函数       Conversion 函数       Format 函数                 Math 函数       Array 函数                 String 函数       其他函数          Date/Time 函数   函数     描述     CDa..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>VBScript 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/vbscript/vbscript-tutorial.html" >
+	VB 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/vbscript/vbscript-howto.html" >
+	VB 用法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/vbscript/vbscript-variables.html" >
+	VB 变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/vbscript/vbscript-procedures.html" >
+	VB 程序	</a>
+		<a target="_top" href="http://www.w3cschool.cc/vbscript/vbscript-conditionals.html" >
+	VB 条件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/vbscript/vbscript-looping.html" >
+	VB 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/vbscript/vbscript-summary.html" >
+	VB 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/vbscript/vbscript-examples.html" >
+	VB 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/vbscript/vbscript-ref-functions.html" >
+	VB 函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/vbscript/vbscript-ref-keywords.html" >
+	VB 关键字	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/vbscript/func-vartype.html" rel="prev"> VBScript VarType 函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/vbscript/vbscript-ref-keywords.html" rel="next">VBScript 关键字</a> &raquo;</div>
+	</div>
+
+	<h1>VBScript <span class="color_h1">函数</span>
+</h1>
+<hr />
+<p>本页列出了所有内建的 VBScript 函数，主要分为以下几类：</p>
+<table style="border:0;width:100%"><tr>
+<td style="width:33%">
+    <ul>
+<li><a href="#date">Date/Time 函数</a></li>
+      <li><a href="#conversion">Conversion 函数</a></li>
+      <li><a href="#format">Format 函数</a></li>
+    </ul>
+</td>
+    <td style="width:33%">
+    <ul>
+<li><a href="#math">Math 函数</a></li>
+      <li><a href="#array">Array 函数</a></li>
+    </ul>
+</td>
+    <td style="width:34%">
+    <ul>
+<li><a href="#string">String 函数</a></li>
+      <li><a href="#other">其他函数</a></li>
+    </ul>
+</td>
+  </tr></table>
+<h2><a id="date">Date/Time 函数</a></h2>
+<table class="reference notranslate">
+<tr>
+<th style="width:32%;text-align:left">函数</th>
+    <th style="width:68%;text-align:left">描述</th>
+  </tr>
+<tr>
+<td valign="top"><a href="func-cdate.html">CDate</a></td>
+    <td valign="top">把有效的日期和时间表达式转换为日期（Date）类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="vb-func-date.html">Date</a></td>
+    <td valign="top">返回当前的系统日期。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="vb-func-dateadd.html">DateAdd</a></td>
+    <td valign="top">返回已添加指定时间间隔的日期。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="vb-func-datediff.html">DateDiff</a></td>
+    <td valign="top">返回两个日期之间的时间间隔数。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="vb-func-datepart.html">DatePart</a></td>
+    <td valign="top">返回给定日期的指定部分。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-dateserial.html">DateSerial</a></td>
+    <td valign="top">返回指定年、月、日的日期。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-datevalue.html">DateValue</a></td>
+    <td valign="top">返回日期。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-day.html">Day</a></td>
+    <td valign="top">返回代表一月中的一天的数字（介于并包括 1 到 31 之间）。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-formatdatetime.html">FormatDateTime</a></td>
+    <td valign="top">返回格式化为日期或时间的表达式。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-hour.html">Hour</a></td>
+    <td valign="top">返回代表一天中的小时的数字（介于并包括 0 到 23 之间）。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-isdate.html">IsDate</a></td>
+    <td valign="top">返回指示计算表达式能否转换为日期的布尔值。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-minute.html">Minute</a></td>
+    <td valign="top">返回一个数字，代表小时的分钟（介于并包括 0 到 59 之间）。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-month.html">Month</a></td>
+    <td valign="top">返回一个数字，代表年的月份（介于并包括 1 到 12 之间）。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-monthname.html">MonthName</a></td>
+    <td valign="top">返回指定月份的名称。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="vb-func-now.html">Now</a></td>
+    <td valign="top">返回当前的系统日期和时间。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-second.html">Second</a></td>
+    <td valign="top">返回一个数字，代表分钟的秒（介于并包括 0 到 59 之间）。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-time.html">Time</a></td>
+    <td valign="top">返回当前的系统时间。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-timer.html">Timer</a></td>
+    <td valign="top">返回自 12:00 AM 以来的秒数。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-timeserial.html">TimeSerial</a></td>
+    <td valign="top">返回特定小时、分钟和秒的时间。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-timevalue.html">TimeValue</a></td>
+    <td valign="top">返回时间。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-weekday.html">Weekday</a></td>
+    <td valign="top">返回一个数字，代表一周的天数（介于并包括 1 到 7 之间）。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-weekdayname.html">WeekdayName</a></td>
+    <td valign="top">返回一周中指定的一天的星期名。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-year.html">Year</a></td>
+    <td valign="top">返回一个数字，代表年份。</td>
+  </tr>
+</table>
+<br /><table style="border:0;width:100%"><tr>
+<td style="width:70%;text-align:left"><h2><a id="conversion">Conversion 函数</a></h2></td>
+    <td style="width:30%;text-align:right"><a href="#top">Top</a></td>
+  </tr></table>
+<table class="reference notranslate">
+<tr>
+<th style="width:32%;text-align:left">函数</th>
+    <th style="width:68%;text-align:left">描述</th>
+  </tr>
+<tr>
+<td valign="top"><a href="func-asc.html">Asc</a></td>
+    <td valign="top">把字符串中的首字母转换为 ANSI 字符代码。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-cbool.html">CBool</a></td>
+    <td valign="top">把表达式转换为布尔（Boolean）类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-cbyte.html">CByte</a></td>
+    <td valign="top">把表达式转换为字节（Byte）类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-ccur.html">CCur</a></td>
+    <td valign="top">把表达式转换为货币（Currency）类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-cdate.html">CDate</a></td>
+    <td valign="top">把有效的日期和时间表达式转换为日期（Date）类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-cdbl.html">CDbl</a></td>
+    <td valign="top">把表达式转换为双精度（Double）类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-chr.html">Chr</a></td>
+    <td valign="top">把指定的 ANSI 字符代码转换为字符。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-cint.html">CInt</a></td>
+    <td valign="top">把表达式转换为整数（Integer）类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-clng.html">CLng</a></td>
+    <td valign="top">把表达式转换为长整型（Long）类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-csng.html">CSng</a></td>
+    <td valign="top">把表达式转换为单精度（Single）类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-cstr.html">CStr</a></td>
+    <td valign="top">把表达式转换为字符串（String）类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-hex.html">Hex</a></td>
+    <td valign="top">返回指定数字的十六进制值。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-oct.html">Oct</a></td>
+    <td valign="top">返回指定数字的八进制值。</td>
+  </tr>
+</table>
+<br /><table style="border:0;width:100%"><tr>
+<td style="width:70%;text-align:left"><h2><a id="format">Format 函数</a></h2></td>
+    <td style="width:30%;text-align:right"><a href="#top">Top</a></td>
+  </tr></table>
+<table class="reference notranslate">
+<tr>
+<th style="width:32%;text-align:left">函数</th>
+    <th style="width:68%;text-align:left">描述</th>
+  </tr>
+<tr>
+<td valign="top"><a href="func-formatcurrency.html">FormatCurrency</a></td>
+    <td valign="top">返回作为货币值进行格式化的表达式。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-formatdatetime.html">FormatDateTime</a></td>
+    <td valign="top">返回作为日期或时间进行格式化的表达式。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-formatnumber.html">FormatNumber</a></td>
+    <td valign="top">返回作为数字进行格式化的表达式。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-formatpercent.html">FormatPercent</a></td>
+    <td valign="top">返回作为百分数进行格式化的表达式。</td>
+  </tr>
+</table>
+<br /><table style="border:0;width:100%"><tr>
+<td style="width:70%;text-align:left"><h2><a id="math">Math 函数</a></h2></td>
+    <td style="width:30%;text-align:right"><a href="#top">Top</a></td>
+  </tr></table>
+<table class="reference notranslate">
+<tr>
+<th style="width:32%;text-align:left">函数</th>
+    <th style="width:68%;text-align:left">描述</th>
+  </tr>
+<tr>
+<td valign="top"><a href="func-abs.html">Abs</a></td>
+    <td valign="top">返回指定数字的绝对值。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-atn.html">Atn</a></td>
+    <td valign="top">返回指定数字的反正切。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-cos.html">Cos</a></td>
+    <td valign="top">返回指定数字（角度）的余弦。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-exp.html">Exp</a></td>
+    <td valign="top">返回 <i>e</i>（自然对数的底）的幂次方。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-hex.html">Hex</a></td>
+    <td valign="top">返回指定数字的十六进制值。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-int.html">Int</a></td>
+    <td valign="top">返回指定数字的整数部分。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-fix.html">Fix</a></td>
+    <td valign="top">返回指定数字的整数部分。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-log.html">Log</a></td>
+    <td valign="top">返回指定数字的自然对数。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-oct.html">Oct</a></td>
+    <td valign="top">返回指定数字的八进制值。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-rnd.html">Rnd</a></td>
+    <td valign="top">返回小于1但大于或等于0的一个随机数。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-sgn.html">Sgn</a></td>
+    <td valign="top">返回可指示指定数字的符号的一个整数。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-sin.html">Sin</a></td>
+    <td valign="top">返回指定数字（角度）的正弦。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-sqr.html">Sqr</a></td>
+    <td valign="top">返回指定数字的平方根。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-tan.html">Tan</a></td>
+    <td valign="top">返回指定数字（角度）的正切。</td>
+  </tr>
+</table>
+<br /><table style="border:0;width:100%"><tr>
+<td style="width:70%;text-align:left"><h2><a id="array">Array 函数</a></h2></td>
+    <td style="width:30%;text-align:right"><a href="#top">Top</a></td>
+  </tr></table>
+<table class="reference notranslate">
+<tr>
+<th style="width:32%;text-align:left">函数</th>
+    <th style="width:68%;text-align:left">描述</th>
+  </tr>
+<tr>
+<td valign="top"><a href="vb-func-array.html">Array</a></td>
+    <td valign="top">返回一个包含数组的变量。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-filter.html">Filter</a></td>
+    <td valign="top">返回下标从零开始的数组，其中包含基于特定过滤条件的字符串数组的子集。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-isarray.html">IsArray</a></td>
+    <td valign="top">返回一个指示指定的变量是否为数组的布尔值。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-join.html">Join</a></td>
+    <td valign="top">返回一个由数组中若干子字符串组成的字符串。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-lbound.html">LBound</a></td>
+    <td valign="top">返回指示数组维数的最小下标。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-split.html">Split</a></td>
+    <td valign="top">返回下标从零开始的一维数组，包含指定数量的子字符串。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-ubound.html">UBound</a></td>
+    <td valign="top">返回指示数组维数的最大下标。</td>
+  </tr>
+</table>
+<br /><table style="border:0;width:100%"><tr>
+<td style="width:70%;text-align:left"><h2><a id="string">String 函数</a></h2></td>
+    <td style="width:30%;text-align:right"><a href="#top">Top</a></td>
+  </tr></table>
+<table class="reference notranslate">
+<tr>
+<th style="width:32%;text-align:left">函数</th>
+    <th style="width:68%;text-align:left">描述</th>
+  </tr>
+<tr>
+<td valign="top"><a href="func-instr.html">InStr</a></td>
+    <td valign="top">返回字符串在另一字符串中首次出现的位置。搜索从字符串的第一个字符开始。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-instrrev.html">InStrRev</a></td>
+    <td valign="top">返回字符串在另一字符串中首次出现的位置。搜索从字符串的最末字符开始。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-lcase.html">LCase</a></td>
+    <td valign="top">把指定字符串转换为小写。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-left.html">Left</a></td>
+    <td valign="top">从字符串的左侧返回指定数量的字符。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-len.html">Len</a></td>
+    <td valign="top">返回字符串中的字符数量。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-ltrim.html">LTrim</a></td>
+    <td valign="top">删除字符串左侧的空格。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-rtrim.html">RTrim</a></td>
+    <td valign="top">删除字符串右侧的空格。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-trim.html">Trim</a></td>
+    <td valign="top">删除字符串左侧和右侧的空格。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-mid.html">Mid</a></td>
+    <td valign="top">从字符串中返回指定数量的字符。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-replace.html">Replace</a></td>
+    <td valign="top">使用另一个字符串替换字符串的指定部分指定的次数。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-right.html">Right</a></td>
+    <td valign="top">从字符串的右侧返回指定数量的字符。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-space.html">Space</a></td>
+    <td valign="top">返回由指定数量的空格组成的字符串。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-strcomp.html">StrComp</a></td>
+    <td valign="top">比较两个字符串，返回代表比较结果的一个值。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-string.html">String</a></td>
+    <td valign="top">返回包含指定长度的重复字符的字符串。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-strreverse.html">StrReverse</a></td>
+    <td valign="top">反转字符串。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-ucase.html">UCase</a></td>
+    <td valign="top">把指定的字符串转换为大写。</td>
+  </tr>
+</table>
+<br /><table style="border:0;width:100%"><tr>
+<td style="width:70%;text-align:left"><h2><a id="other">其他函数</a></h2></td>
+    <td style="width:30%;text-align:right"><a href="#top">Top</a></td>
+  </tr></table>
+<table class="reference notranslate">
+<tr>
+<th style="width:32%;text-align:left">函数</th>
+    <th style="width:68%;text-align:left">描述</th>
+  </tr>
+<tr>
+<td valign="top"><a href="func-createobject.html">CreateObject</a></td>
+    <td valign="top">创建指定类型的对象。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-eval.html">Eval</a></td>
+    <td valign="top">计算表达式，并返回结果。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-getlocale.html">GetLocale</a></td>
+    <td valign="top">返回当前的 locale ID。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-getobject.html">GetObject</a></td>
+    <td valign="top">返回对文件中 automation 对象的引用。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-getref.html">GetRef</a></td>
+    <td valign="top">允许您把 VBScript 子程序连接到页面上的一个 DHTML 事件。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-inputbox.html">InputBox</a></td>
+    <td valign="top">显示对话框，用户可在其中输入文本，并/或点击按钮，然后返回内容。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-isempty.html">IsEmpty</a></td>
+    <td valign="top">返回一个布尔值，指示指定的变量是否已被初始化。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-isnull.html">IsNull</a></td>
+    <td valign="top">返回一个布尔值，指示指定的表达式是否包含无效数据（Null）。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-isnumeric.html">IsNumeric</a></td>
+    <td valign="top">返回一个布尔值，指示指定的表达式是否可作为数字来计算。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-isobject.html">IsObject</a></td>
+    <td valign="top">返回一个布尔值，指示指定的表达式是否是一个 automation 对象。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-loadpicture.html">LoadPicture</a></td>
+    <td valign="top">返回一个图片对象。仅用于 32 位平台。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-msgbox.html">MsgBox</a></td>
+    <td valign="top">显示消息框，等待用户点击按钮，并返回指示用户点击了哪个按钮的值。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-rgb.html">RGB</a></td>
+    <td valign="top">返回一个表示 RGB 颜色值的数字。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-round.html">Round</a></td>
+    <td valign="top">对数字进行四舍五入。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-scriptengine.html">ScriptEngine</a></td>
+    <td valign="top">返回使用中的脚本语言。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-scriptengine.html">ScriptEngineBuildVersion</a></td>
+    <td valign="top">返回使用中的脚本引擎的内部版本号。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-scriptengine.html">ScriptEngineMajorVersion</a></td>
+    <td valign="top">返回使用中的脚本引擎的主版本号。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-scriptengine.html">ScriptEngineMinorVersion</a></td>
+    <td valign="top">返回使用中的脚本引擎的次版本号。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-setlocale.html">SetLocale</a></td>
+    <td valign="top">设置 locale ID，并返回之前的 locale ID。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-typename.html">TypeName</a></td>
+    <td valign="top">返回指定变量的子类型。</td>
+  </tr>
+<tr>
+<td valign="top"><a href="func-vartype.html">VarType</a></td>
+    <td valign="top">返回指示变量子类型的值。</td>
+  </tr>
+</table>
+<br />	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/vbscript/func-vartype.html" rel="prev"> VBScript VarType 函数</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/vbscript/vbscript-ref-keywords.html" rel="next">VBScript 关键字</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.238 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 03:49:19 -->
+
+<!-- super cache -->

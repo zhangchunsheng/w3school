@@ -1,0 +1,868 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI API &#8211; 折叠面板部件（Accordion Widget） | w3cschool菜鸟教程</title>
+	<link rel='prev' title='ins cite 属性' href='http://www.w3cschool.cc/jsref/prop-ins-cite.html' />
+<link rel='next' title='jQuery UI API &#8211; 自动完成部件（Autocomplete Widget）' href='http://www.w3cschool.cc/jqueryui/api-autocomplete.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jqueryui/api-accordion.html' />
+<meta name="keywords" content="jQuery UI API &#8211; 折叠面板部件（Accordion Widget）,Jquery UI">
+<meta name="description" content="jQuery UI API - 折叠面板部件（Accordion Widget）  所属类别  小部件（Widgets）   用法 描述：把一对标题和内容面板转换成折叠面板。 版本新增：1.0 折叠面板容器的标记需要一对标题和内容面板。     First header   First content panel   Second header   Second content panel   折叠面板支持任意标记，但是每个内容面板必须..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Jquery UI</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html" >
+	jQuery UI 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-intro.html" >
+	jQuery UI 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-download.html" >
+	jQuery UI 下载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-use.html" >
+	jQuery UI 使用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-custom.html" >
+	jQuery UI 定制	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-work.html" >
+	jQuery UI 工作原理	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">主题</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme.html" >
+	jQuery UI 主题	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-themeroller.html" >
+	jQuery UI ThemeRoller	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-api.html" >
+	jQuery UI CSS 框架 API	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-design.html" >
+	jQuery UI 设计主题	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">部件库</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory.html" >
+	jQuery UI 部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-extend.html" >
+	jQuery UI 扩展小部件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-method.html" >
+	jQuery UI 小部件方法调用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-why.html" >
+	jQuery UI 为什么使用部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-how.html" >
+	jQuery UI 如何使用部件库	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-api.html" >
+	jQuery UI API 文档	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/api-jquery-widget-bridge.html" rel="prev"> jQuery UI API &#8211; 插件桥（Widget Plugin Bridge）</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/api-autocomplete.html" rel="next">jQuery UI API &#8211; 自动完成部件（Autocomplete Widget）</a> &raquo;</div>
+	</div>
+
+	<h1>jQuery UI API - <span class="color_h1">折叠面板部件（Accordion Widget）</span></h1>
+
+<h2>所属类别</h2>
+<p>
+<a href="/jqueryui/api-category-widgets.html">小部件（Widgets）</a>
+</p>
+
+<h2>用法</h2>
+<p><strong>描述：</strong>把一对标题和内容面板转换成折叠面板。</p>
+<p><strong>版本新增：</strong>1.0</p>
+<p>折叠面板容器的标记需要一对标题和内容面板。</p>
+<pre style="white-space: pre-wrap;">
+&lt;div id="accordion"&gt;
+  &lt;h3&gt;First header&lt;/h3&gt;
+  &lt;div&gt;First content panel&lt;/div&gt;
+  &lt;h3&gt;Second header&lt;/h3&gt;
+  &lt;div&gt;Second content panel&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>折叠面板支持任意标记，但是每个内容面板必须是与其相关的头部面板的下一个同级。请查看 <a href="#option-header"><code>header</code></a> 选项了解如何使用自定义的标记结构。</p>
+<p>面板可以通过设置 <a href="#option-active"><code>active</code></a> 选项以编程的方式激活。</p>
+
+<h3>键盘交互</h3>
+<p>当焦点在标题（header）上时，下面的键盘命令可用：</p>
+<ul>
+	<li>UP/LEFT - 移动焦点到上一个标题（header）。如果在第一个标题（header）上，则移动焦点到最后一个标题（header）上。</li>
+	<li>DOWN/RIGHT - 移动焦点到下一个标题（header）。如果在最后一个标题（header）上，则移动焦点到第一个标题（header）上。</li>
+	<li>HOME - 移动焦点到第一个标题（header）上。</li>
+	<li>END - 移动焦点到最后一个标题（header）上。</li>
+	<li>SPACE/ENTER - 激活与获得焦点的标题（header）相关的面板（panel）。</li>
+</ul>
+<p>当焦点在面板（panel）中时，下面的键盘命令可用：</p>
+<ul>
+	<li>CTRL+UP：移动焦点到相关的标题（header）。</li>
+</ul>
+
+<h3 id="theming">主题化</h3>
+<p>折叠面板部件（Accordion Widget）使用 <a href="/jqueryui/api-css-framework.html">jQuery UI CSS 框架</a> 来定义它的外观和感观的样式。如果需要使用折叠面板指定的样式，则可以使用下面的 CSS class 名称：</p>
+<ul>
+	<li><code>ui-accordion</code>：折叠面板的外层容器。
+	<ul>
+		<li><code>ui-accordion-header</code>：折叠面板的标题。如果标题包含 <a href="#option-icons"><code>icons</code></a>，则标题会另外有个 <code>ui-accordion-icons</code> class。</li>
+		<li><code>ui-accordion-content</code>：折叠面板的内容面板。</li>
+	</ul>
+	</li>
+</ul>
+
+<h3>依赖</h3>
+<ul>
+	<li><a href="/jqueryui/api-category-ui-core.html">UI 核心（UI Core）</a></li>
+	<li><a href="/jqueryui/api-jQuery-widget.html">部件库（Widget Factory）</a></li>
+	<li><a href="/jqueryui/api-category-effects-core.html">特效核心（Effects Core）</a>（可选的；当与 <a href="#option-animate"><code>animate</code></a> 选项一起使用时）</li>
+</ul>
+
+<h3>附加说明</h3>
+<ul>
+	<li>该部件要求一些功能性的 CSS，否则将无法工作。如果您创建了一个自定义的主题，请使用小部件指定的 CSS 文件作为起点。</li>
+</ul>
+
+<h3>快速导航</h3>
+<table class="reference notranslate">
+<tr>
+	<th width="34%">选项</th>
+	<th width="33%">方法</th>
+    <th width="33%">事件</th>
+</tr>
+<tr>
+	<td>
+<div><a href="#option-active">active</a></div>
+<div><a href="#option-animate">animate</a></div>
+<div><a href="#option-collapsible">collapsible</a></div>
+<div><a href="#option-disabled">disabled</a></div>
+<div><a href="#option-event">event</a></div>
+<div><a href="#option-header">header</a></div>
+<div><a href="#option-heightStyle">heightStyle</a></div>
+<div><a href="#option-icons">icons</a></div>
+	</td>
+	<td>
+<div><a href="#method-destroy">destroy</a></div>
+<div><a href="#method-disable">disable</a></div>
+<div><a href="#method-enable">enable</a></div>
+<div><a href="#method-option">option</a></div>
+<div><a href="#method-refresh">refresh</a></div>
+<div><a href="#method-widget">widget</a></div>
+	</td>
+    <td>
+<div><a href="#event-activate">activate</a></div>
+<div><a href="#event-beforeActivate">beforeActivate</a></div>
+<div><a href="#event-create">create</a></div>
+	</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate">
+<tr>
+	<th width="15%">选项</th>
+	<th width="15%">类型</th>
+    <th width="60%">描述</th>
+	<th width="10%">默认值</th>
+</tr>
+<tr id="option-active">
+	<td>active</td>
+    <td>Boolean 或 Integer</td>
+	<td>当前打开哪一个面板。<br />
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+	<li><strong>Boolean</strong>：设置 <code>active</code> 为 <code>false</code> 将折叠所有的面板。这要求 <a href="#option-collapsible"><code>collapsible</code></a> 选项必须为 <code>true</code>。</li>
+	<li><strong>Integer</strong>：激活打开的面板索引，以零为基础。负值则表示从最后一个面板后退选择面板。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>active</code> 选项的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({ active: 2 });
+	</pre>
+	<p>在初始化后，获取或设置 <code>active</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var active = $( ".selector" ).accordion( "option", "active" );
+ 
+// setter
+$( ".selector" ).accordion( "option", "active", 2 );
+	</pre>
+	</td>
+	<td>0</td>
+</tr>
+<tr id="option-animate">
+	<td>animate</td>
+    <td>Boolean 或 Number 或 String 或 Object</td>
+	<td>是否使用动画改变面板，且如何使用动画改变面板。<br />
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+	<li><strong>Boolean</strong>：<code>false</code> 值将禁用动画。</li>
+	<li><strong>Number</strong>：easing 默认的持续时间，以毫秒计。</li>
+	<li><strong>String</strong>：默认的持续时间要使用的 <a href="/jqueryui/api-easings.html">easing</a> 名称。
+	<li><strong>Object</strong>：<code>easing</code> 和 <code>duration</code> 属性的动画设置。</li>
+		<ul>
+		<li>上面任意的选项都可以包含 <code>down</code> 属性。</li>
+		<li>当被激活的面板有一个比当前激活面板较低的指数时，发生 "Down" 动画。</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>animate</code> 选项的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({ animate: "bounceslide" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>animate</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var animate = $( ".selector" ).accordion( "option", "animate" );
+ 
+// setter
+$( ".selector" ).accordion( "option", "animate", "bounceslide" );
+	</pre>
+	</td>
+	<td>{}</td>
+</tr>
+<tr id="option-collapsible">
+	<td>collapsible</td>
+    <td>Boolean</td>
+	<td>所有部分是否都可以马上关闭。允许折叠激活的部分。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>collapsible</code> 选项的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({ collapsible: true });
+	</pre>
+	<p>在初始化后，获取或设置 <code>collapsible</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var collapsible = $( ".selector" ).accordion( "option", "collapsible" );
+ 
+// setter
+$( ".selector" ).accordion( "option", "collapsible", true );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-disabled">
+	<td>disabled</td>
+    <td>Boolean</td>
+	<td>如果设置为 <code>true</code>，则禁用该 accordion。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>disabled</code> 选项的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({ disabled: true });
+	</pre>
+	<p>在初始化后，获取或设置 <code>disabled</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var disabled = $( ".selector" ).accordion( "option", "disabled" );
+ 
+// setter
+$( ".selector" ).accordion( "option", "disabled", true );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-event">
+	<td>event</td>
+    <td>String</td>
+	<td>accordion 头部会作出反应的事件，用以激活相关的面板。可以指定多个事件，用空格间隔。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>event</code> 选项的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({ event: "mouseover" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>event</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var event = $( ".selector" ).accordion( "option", "event" );
+ 
+// setter
+$( ".selector" ).accordion( "option", "event", "mouseover" );
+	</pre>
+	</td>
+	<td>"click"</td>
+</tr>
+<tr id="option-header">
+	<td>header</td>
+    <td>Selector</td>
+	<td>标题元素的选择器，通过主要 accordion 元素上的 .find() 进行应用。内容面板必须是紧跟在与其相关的标题后的同级元素。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>header</code> 选项的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({ header: "h3" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>header</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var header = $( ".selector" ).accordion( "option", "header" );
+ 
+// setter
+$( ".selector" ).accordion( "option", "header", "h3" );
+	</pre>
+	</td>
+	<td>"> li > :first-child,> :not(li):even"</td>
+</tr>
+<tr id="option-heightStyle">
+	<td>heightStyle</td>
+    <td>String</td>
+	<td>控制 accordion 和每个面板的高度。可能的值：<br />
+	<ul>
+	<li><code>"auto"</code>：所有的面板将会被设置为最高的面板的高度。</li>
+	<li><code>"fill"</code>：基于 accordion 的父元素的高度，扩展到可用的高度。</li>
+	<li><code>"content"</code>：每个面板的高度取决于它的内容。</li>	
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>heightStyle</code> 选项的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({ heightStyle: "fill" });
+	</pre>
+	<p>在初始化后，获取或设置 <code>heightStyle</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var heightStyle = $( ".selector" ).accordion( "option", "heightStyle" );
+ 
+// setter
+$( ".selector" ).accordion( "option", "heightStyle", "fill" );
+	</pre>
+	</td>
+	<td>"auto"</td>
+</tr>
+<tr id="option-icons">
+	<td>icons</td>
+    <td>Object</td>
+	<td>标题要使用的图标，与 <a href="/jqueryui/api-icons.html">jQuery UI CSS 框架提供的图标（Icons）</a> 匹配。设置为 <code>false</code> 则不显示图标。<br />
+	<ul>
+	<li>header （string，默认值："ui-icon-triangle-1-e"）</li>
+	<li>activeHeader （string，默认值："ui-icon-triangle-1-s"）</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>icons</code> 选项的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({ icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" } });
+	</pre>
+	<p>在初始化后，获取或设置 <code>icons</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var icons = $( ".selector" ).accordion( "option", "icons" );
+ 
+// setter
+$( ".selector" ).accordion( "option", "icons", { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" } );
+	</pre>
+	</td>
+	<td>{ "header": "ui-icon-triangle-1-e", "activeHeader": "ui-icon-triangle-1-s" }</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate">
+<tr>
+	<th width="15%">方法</th>
+	<th width="15%">返回</th>
+    <th width="70%">描述</th>
+</tr>
+<tr id="method-destroy">
+	<td>destroy()</td>
+    <td>jQuery (plugin only)</td>
+	<td>完全移除 accordion 功能。这会把元素返回到它的预初始化状态。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 destroy 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion( "destroy" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-disable">
+	<td>disable()</td>
+    <td>jQuery (plugin only)</td>
+	<td>禁用 accordion。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 disable 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion( "disable" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-enable">
+	<td>enable()</td>
+    <td>jQuery (plugin only)</td>
+	<td>启用 accordion。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 enable 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion( "enable" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-option">
+	<td>option( optionName )</td>
+    <td>Object</td>
+	<td>获取当前与指定的 <code>optionName</code> 关联的值。<br />
+	<ul>
+	<li><strong>optionName</strong><br />
+	类型：String<br />
+	描述：要获取的选项的名称。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+var isDisabled = $( ".selector" ).accordion( "option", "disabled" );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option()</td>
+    <td>PlainObject</td>
+	<td>获取一个包含键/值对的对象，键/值对表示当前 accordion 选项哈希。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+var options = $( ".selector" ).accordion( "option" );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option( optionName, value )</td>
+    <td>jQuery (plugin only)</td>
+	<td>设置与指定的 <code>optionName</code> 关联的 accordion 选项的值。<br />
+	<ul>
+	<li><strong>optionName</strong><br />
+	类型：String<br />
+	描述：要设置的选项的名称。
+	</li>
+	<li><strong>value</strong><br />
+	类型：Object<br />
+	描述：要为选项设置的值。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion( "option", "disabled", true );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option( options )</td>
+    <td>jQuery (plugin only)</td>
+	<td>为 accordion 设置一个或多个选项。<br />
+	<ul>
+	<li><strong>options</strong><br />
+	类型：Object<br />
+	描述：要设置的 option-value 对。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用该方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion( "option", { disabled: true } );
+	</pre>
+	</td>
+</tr>
+<tr id="method-refresh">
+	<td>refresh()</td>
+	<td>jQuery (plugin only)</td>
+	<td>处理任何在 DOM 中直接添加或移除的标题和面板，并重新计算 accordion 的高度。结果取决于内容和 <code><a href="#option-heightStyle ">heightStyle </a></code> 选项。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 refresh 方法：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion( "refresh" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-widget">
+	<td>widget()</td>
+    <td>jQuery</td>
+	<td>返回一个包含 accordion 的 <code>jQuery</code> 对象。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>调用 widget 方法：</p>
+	<pre style="white-space: pre-wrap;">
+var widget = $( ".selector" ).accordion( "widget" );
+	</pre>
+	</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate">
+<tr>
+	<th width="15%">事件</th>
+	<th width="15%">类型</th>
+    <th width="70%">描述</th>
+</tr>
+<tr id="event-activate">
+	<td>activate( event, ui )</td>
+	<td>accordionactivate</td>
+	<td>面板被激活后触发（在动画完成之后）。如果 accordion 之前是折叠的，则 <code>ui.oldHeader</code> 和 <code>ui.oldPanel</code> 将是空的 jQuery 对象。如果 accordion 正在折叠，则 <code>ui.newHeader</code> 和 <code>ui.newPanel</code> 将是空的 jQuery 对象。<br />
+	<p><strong>注意：由于 <code>activate</code> 事件只有在面板激活时才能触发，当创建 accordion 部件时，最初的面板不会触发该事件。如果您需要一个用于部件创建的钩，请使用 <code>create</code> 事件。</strong></p>
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+		<ul>
+		<li><strong>newHeader</strong><br />
+		类型：jQuery<br />
+		描述：刚被激活的标题。
+		</li>
+		<li><strong>oldHeader</strong><br />
+		类型：jQuery<br />
+		描述：刚被取消激活的标题。
+		</li>
+		<li><strong>newPanel</strong><br />
+		类型：jQuery<br />
+		描述：刚被激活的面板。
+		</li>
+		<li><strong>oldPanel</strong><br />
+		类型：jQuery<br />
+		描述：刚被取消激活的面板。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 activate 回调的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({
+  activate: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 accordionactivate 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "accordionactivate", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-beforeActivate">
+	<td>beforeActivate( event, ui )</td>
+	<td>accordionbeforeactivate</td>
+	<td>面板被激活前直接触发。可以取消以防止面板被激活。如果 accordion 当前是折叠的，则 <code>ui.oldHeader</code> 和 <code>ui.oldPanel</code> 将是空的 jQuery 对象。如果 accordion 正在折叠，则 <code>ui.newHeader</code> 和 <code>ui.newPanel</code> 将是空的 jQuery 对象。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+		<ul>
+		<li><strong>newHeader</strong><br />
+		类型：jQuery<br />
+		描述：将被激活的标题。
+		</li>
+		<li><strong>oldHeader</strong><br />
+		类型：jQuery<br />
+		描述：将被取消激活的标题。
+		</li>
+		<li><strong>newPanel</strong><br />
+		类型：jQuery<br />
+		描述：将被激活的面板。
+		</li>
+		<li><strong>oldPanel</strong><br />
+		类型：jQuery<br />
+		描述：将被取消激活的面板。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 beforeActivate 回调的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({
+  beforeActivate: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 accordionbeforeactivate 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "accordionbeforeactivate", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+<tr id="event-create">
+	<td>create( event, ui )</td>
+	<td>accordioncreate</td>
+	<td>当创建 accordion 时触发。如果 accordion 是折叠的，<code>ui.header</code> 和 <code>ui.panel</code> 将是空的 jQuery 对象。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+		<ul>
+		<li><strong>header</strong><br />
+		类型：jQuery<br />
+		描述：激活的标题。
+		</li>
+		<li><strong>panel</strong><br />
+		类型：jQuery<br />
+		描述：激活的面板。
+		</li>
+		</ul>
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 create 回调的 accordion：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).accordion({
+  create: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 accordioncreate 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "accordioncreate", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+</table>
+
+<h2>实例</h2>
+<p>一个简单的 jQuery UI 折叠面板（Accordion）。</p>
+<pre style="white-space: pre-wrap;">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  
+  &lt;link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"&gt;
+  &lt;script src="//code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+  &lt;script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;div id="accordion"&gt;
+  &lt;h3&gt;部分 1&lt;/h3&gt;
+  &lt;div&gt;
+    &lt;p&gt;Mauris mauris ante, blandit et, ultrices a, suscipit eget.
+    Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
+    condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros.
+    Nam mi. Proin viverra leo ut odio.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;h3&gt;部分 2&lt;/h3&gt;
+  &lt;div&gt;
+    &lt;p&gt;Sed non urna. Phasellus eu ligula. Vestibulum sit amet purus.
+    Vivamus hendrerit, dolor aliquet laoreet, mauris turpis velit,
+    faucibus interdum tellus libero ac justo.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;h3&gt;部分 3&lt;/h3&gt;
+  &lt;div&gt;
+    &lt;p&gt;Nam enim risus, molestie et, porta ac, aliquam ac, risus.
+    Quisque lobortis.Phasellus pellentesque purus in massa.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;List item one&lt;/li&gt;
+      &lt;li&gt;List item two&lt;/li&gt;
+      &lt;li&gt;List item three&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+&lt;script&gt;
+$( "#accordion" ).accordion();
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p><a href="/try/tryit.php?filename=jqueryui-api-accordion" target="_blank"><button class="btn btn-info btn-lg">查看演示</button></a></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/api-jquery-widget-bridge.html" rel="prev"> jQuery UI API &#8211; 插件桥（Widget Plugin Bridge）</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/api-autocomplete.html" rel="next">jQuery UI API &#8211; 自动完成部件（Autocomplete Widget）</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 参考手册</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.206 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 21:02:51 -->
+
+<!-- super cache -->

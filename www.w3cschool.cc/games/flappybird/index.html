@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+  <head>
+    <title>Flappy Bird电脑版 - w3cschool.cc</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Flappy Bird电脑版是一款可以在PC端玩的Flappy Bird小游戏，玩家在Flappy Bird网页上可以操控小鸟飞行且避开绿色的管道。如果小鸟碰到了障碍物，游戏就会结束。每当小鸟飞过一组管道，玩家就会获得一分。"/>
+    <meta name="keywords" content="flappybird, Flappy Bird电脑版, Flappy Bird网页版, flappy"/>
+  </head>
+
+  <body>
+  <h1 style="margin:10px;text-align:center;">Flappy Bird电脑版</h1>
+    <div id="fb-root">
+	<p style="text-align:center;">请使用Chrome或Firefox浏览器打开游戏，万恶的IE浏览器有可能不支持Flappy Bird电脑版游戏！！！<strong>（<a target="_blank" title="w3cschool菜鸟教程" href="http://www.w3cschool.cc/">w3cschool菜鸟教程...</a>）</strong></p>
+	</div>
+  
+    <!-- Canvas placeholder -->
+    <div id="screen"></div>
+    <!-- Sharing section -->
+    <div id="share">
+  
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"1","bdPos":"right","bdTop":"100"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      <div class="google">
+       
+      </div>
+     
+    </div>
+
+    <!-- melonJS Library -->
+    <script type="text/javascript" src="lib/melonJS-1.0.0-min.js" ></script>
+    <script type="text/javascript" src="build/clumsy-min.js" ></script>
+    <!-- Bootstrap & Mobile optimization tricks -->
+    <script type="text/javascript">
+      window.onReady(function onReady() {
+        game.onload();
+
+        // Mobile browser hacks
+        if (me.device.isMobile && !navigator.isCocoonJS) {
+          // Prevent the webview from moving on a swipe
+          window.document.addEventListener("touchmove", function (e) {
+            e.preventDefault();
+            window.scroll(0, 0);
+            return false;
+          }, false);
+
+          // Scroll away mobile GUI
+          (function () {
+            window.scrollTo(0, 1);
+            me.video.onresize(null);
+          }).defer();
+
+          me.event.subscribe(me.event.WINDOW_ONRESIZE, function (e) {
+            window.scrollTo(0, 1);
+          });
+        }
+      });
+    </script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+
+  </body>
+</html>

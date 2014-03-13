@@ -1,0 +1,1139 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI API &#8211; 部件库（Widget Factory） | w3cschool菜鸟教程</title>
+	<link rel='prev' title='PHP表单验证' href='http://www.w3cschool.cc/php/php-form-validation.html' />
+<link rel='next' title='jQuery UI API &#8211; 插件桥（Widget Plugin Bridge）' href='http://www.w3cschool.cc/jqueryui/api-jquery-widget-bridge.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jqueryui/api-jquery-widget.html' />
+<meta name="keywords" content="jQuery UI API &#8211; 部件库（Widget Factory）,Jquery UI">
+<meta name="description" content="jQuery UI API - 部件库（Widget Factory）  所属类别  实用工具（Utilities） | 小部件（Widgets）   jQuery.widget( name [, base ], prototype ) 用法 描述：使用与所有 jQuery UI 小部件相同的抽象化来创建有状态的 jQuery 插件。   	jQuery.widget( name [, base ], prototype )     	..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Jquery UI</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html" >
+	jQuery UI 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-intro.html" >
+	jQuery UI 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-download.html" >
+	jQuery UI 下载	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-use.html" >
+	jQuery UI 使用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-custom.html" >
+	jQuery UI 定制	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-work.html" >
+	jQuery UI 工作原理	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">主题</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme.html" >
+	jQuery UI 主题	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-themeroller.html" >
+	jQuery UI ThemeRoller	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-api.html" >
+	jQuery UI CSS 框架 API	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-theme-design.html" >
+	jQuery UI 设计主题	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">部件库</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory.html" >
+	jQuery UI 部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-extend.html" >
+	jQuery UI 扩展小部件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-method.html" >
+	jQuery UI 小部件方法调用	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-why.html" >
+	jQuery UI 为什么使用部件库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-widget-factory-how.html" >
+	jQuery UI 如何使用部件库	</a>
+	<br><h2 class="left">jQuery UI <span class="left_h2">参考手册</span></h2>	<a target="_top" href="http://www.w3cschool.cc/jqueryui/jqueryui-api.html" >
+	jQuery UI API 文档	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/api-jquery-ui-keycode.html" rel="prev"> jQuery UI API &#8211; jQuery.ui.keyCode</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/api-jquery-widget-bridge.html" rel="next">jQuery UI API &#8211; 插件桥（Widget Plugin Bridge）</a> &raquo;</div>
+	</div>
+
+	<h1>jQuery UI API - <span class="color_h1">部件库（Widget Factory）</span></h1>
+
+<h2>所属类别</h2>
+<p>
+<a href="/jqueryui/api-category-utilities.html">实用工具（Utilities）</a> | <a href="/jqueryui/api-category-widgets.html">小部件（Widgets）</a>
+</p>
+
+<h2 id="jQuery-Widget1">jQuery.widget( name [, base ], prototype ) 用法</h2>
+<p><strong>描述：</strong>使用与所有 jQuery UI 小部件相同的抽象化来创建有状态的 jQuery 插件。</p>
+
+<div class="code notranslate"><div>
+	jQuery.widget( name [, base ], prototype )
+</div></div>
+<br />
+<table class="reference notranslate">
+<tr>
+	<th width="15%">参数</th>
+	<th width="15%">类型</th>
+	<th width="15%">类型</th>
+</tr>
+<tr>
+	<td>name</td>
+    <td>String</td>
+	<td>要创建的小部件名称，包括命名空间。</td>
+</tr>
+<tr>
+	<td>base</td>
+    <td>Function()</td>
+	<td>要继承的基础小部件。必须是一个可以使用 `new` 关键词实例化的构造函数。默认为 jQuery.Widget。</td>
+</tr>
+<tr>
+	<td>prototype</td>
+    <td>PlainObject</td>
+	<td>要作为小部件原型使用的对象。</td>
+</tr>
+</table>
+
+<p>
+您可以使用 <code>$.Widget</code> 对象作为要继承的基础，或者可以明确地从现有的 jQuery UI 或第三方控件，从头开始创建新的小部件。定义一个带有相同名称的小部件来继承基础部件，甚至允许您适当地扩展小部件。
+</p>
+<p>
+jQuery UI 中包含许多保持状态的小部件，因此比典型的 jQuery 插件稍有不同的使用模式。所有的jQuery UI 小部件使用相同的模式，这是由部件库（Widget Factory）定义的。所以，只要您学会使用其中一个，您就知道如何使用其他的小部件（Widget）。
+</p>
+<p>
+注释：本章节使用 <a href="/jqueryui/api-progressbar.html">进度条部件（Progressbar Widget）</a> 演示实例，但是语法适用于每个小部件。
+</p>
+
+<h3>初始化</h3>
+<p>
+为了跟踪小部件的状态，我们必须引入小部件的全生命周期。小部件初始化时生命周期开始。要初始化一个小部件，我们只需要简单地在一个或多个元素上调用插件。
+</p>
+<pre style="white-space: pre-wrap;">
+$( "#elem" ).progressbar();
+</pre>
+<p>
+这将初始化 jQuery 对象中的每个元素。上面实例中元素 id 为 <code>"elem"</code>。
+</p>
+
+<h3>选项</h3>
+<p>
+由于 <code>progressbar()</code> 调用时不带参数，小部件是使用默认选项进行初始化的。我们可以在初始化时传递一组选项来覆盖默认选项：
+</p>
+<pre style="white-space: pre-wrap;">
+$( "#elem" ).progressbar({ value: 20 });
+</pre>
+<p>
+我们可以根据需要传递选项的个数，任何我们未传递的选项都使用它们的默认值。
+</p>
+<p>您可以传递多个选项参数，这些参数将会被合并为一个对象（类似于 <a href="//api.jquery.com/jQuery.extend/"><code>$.extend( true, target, object1, objectN )</code></a>）。这在为所有实例覆盖一些设置，实例间共享选项时很有用：</p>
+<pre style="white-space: pre-wrap;">
+var options = { modal: true, show: "slow" };
+$( "#dialog1" ).dialog( options );
+$( "#dialog2" ).dialog( options, { autoOpen: false });
+</pre>
+<p>
+所有在初始化时传递的选项都是深拷贝的，确保后续在不影响小部件的情况下修改对象。数组是唯一的例外，它们是按原样引用的。这个例外是为了适当地支持数据绑定，其中数据源必须作为引用。
+</p>
+<p>
+默认值保存在小部件的属性中，因此我们可以覆盖 jQuery UI 设置的值。例如，在下面的设置后，所有将来的进度条实例将默认为值 80：
+</p>
+<pre style="white-space: pre-wrap;">
+$.ui.progressbar.prototype.options.value = 80;
+</pre>
+<p>
+选项是小部件状态的组成部分，所以我们也可以在初始化后设置选项。我们会在后续看到 option 方法。
+</p>
+
+<h3>方法</h3>
+<p>
+现在小部件已经初始化，我们可以查询它的状态，或者在小部件上执行动作。所有初始化后的动作都是以方法调用方式执行。为了在小部件上调用一个方法，我们向 jQuery 插件传递方法的名称。例如，在进度条部件（Progressbar Widget）上调用 <code>value()</code> 方法，我们可以使用：
+</p>
+<pre style="white-space: pre-wrap;">
+$( "#elem" ).progressbar( "value" );
+</pre>
+<p>
+如果方法接受参数，我们可以在方法名称后传递参数。例如，要传递参数 <code>40</code> 到 <code>value()</code> 方法，我们可以使用：
+</p>
+<pre style="white-space: pre-wrap;">
+$( "#elem" ).progressbar( "value", 40 );
+</pre>
+<p>
+就像 jQuery 中的其他方法，大多数的小部件方法返回 jQuery 对象：
+</p>
+<pre style="white-space: pre-wrap;">
+$( "#elem" )
+  .progressbar( "value", 90 )
+  .addClass( "almost-done" );
+</pre>
+<p>
+每个小部件都有自己的方法设置，这些设置是基于小部件提供的功能。但是，有一些方法是存在于所有的小部件上，这会在下面进行详细讲解。
+</p>
+
+<h3>事件</h3>
+<p>
+所有的小部件都有与它们各种行为相关的事件，以便在状态改变的时候通知您。对于大多数的小部件，当事件被触发时，名称以小部件名称的小写字母形式作为前缀。例如，我们可以绑定进度条的 <code>change</code> 事件，该事件在值改变时触发。
+</p>
+<pre style="white-space: pre-wrap;">
+$( "#elem" ).bind( "progressbarchange", function() {
+  alert( "The value has changed!" );
+});
+</pre>
+<p>
+每个事件都有一个对应的回调，这会作为选项。如果需要，我们可以抓住进度条的 <code>change</code> 回调，而不用绑定 <code>progressbarchange</code> 事件。
+</p>
+<pre style="white-space: pre-wrap;">
+$( "#elem" ).progressbar({
+  change: function() {
+    alert( "The value has changed!" );
+  }
+});
+</pre>
+<p>
+所有的小部件都有一个 <code>change</code> 事件，该事件在实例化时触发。
+</p>
+
+<h3>实例化</h3>
+<p>小部件的实例是使用带有小部件全称作为键的 <a href="//api.jquery.com/jQuery.data/"><code>jQuery.data()</code></a> 存储的。因此，您可以使用下面代码从元素检索进度条部件（Progressbar Widget）的实例对象。</p>
+<pre style="white-space: pre-wrap;">
+$( "#elem" ).data( "ui-progressbar" );
+</pre>
+<p>元素是否绑定了给定小部件，可以使用 <a href="/jqueryui/api-data-selector.html"><code>:data</code></a> 选择器来检测。</p>
+<pre style="white-space: pre-wrap;">
+$( "#elem" ).is( ":data( 'ui-progressbar' )" ); // true
+$( "#elem" ).is( ":data( 'ui-draggable' )" ); // false
+</pre>
+<p>您也可以使用 <code>:data</code> 来获得作为给定小部件实例的所有元素的列表。</p>
+<pre style="white-space: pre-wrap;">
+$( ":data( 'ui-progressbar' )" );
+</pre>
+
+<h3>属性</h3>
+<p>所有的小部件都有下面的属性：</p>
+<ul>
+	<li><strong>defaultElement</strong>：当构造小部件实例未提供元素时要使用的元素。例如，由于进度条的 <code>defaultElement</code> 是 <code>"&lt;div&gt;</code>"，<code>$.ui.progressbar({ value: 50 })</code> 在一个新建的 <code>&lt;div&gt;</code> 上实例化进度条小部件实例。</li>
+	<li><strong>document</strong>：其内包含小部件元素的 <code>document</code>。如果需要在框架内与小部件进行交互时很有用。</li>
+	<li><strong>element</strong>：一个 jQuery 对象，包含用于实例化小部件的 元素。如果您选择多个元素并调用 <code>.myWidget()</code>，将为每个元素创建一个单独的小部件实例。因此，该属性总是包含一个元素。</li>
+	<li><strong>namespace</strong>：小部件原型存储的全局 jQuery 对象的位置。例如，<code>"ui"</code> 的 <code>namespace</code> 表示小部件原型存储在 <code>$.ui</code>。</li>
+	<li><strong>options</strong>：一个包含小部件当前使用选项的对象。在实例化时，用户提供的任何选项将会自动与 <code>$.myNamespace.myWidget.prototype.options</code> 中定义的默认值合并。用户指定的选项会覆盖默认值。</li>
+	<li><strong>uuid</strong>：一个表示控件标识符的唯一整数。</li>
+	<li><strong>version</strong>：小部件的字符串版本。对于 jQuery UI 小部件，该属性会被设置为小部件使用的 jQuery UI 的版本。插件开发者必须在他们的原型中明确设置该属性。</li>
+	<li><strong>widgetEventPrefix</strong>：添加到小部件事件名称的前缀。例如，<a href="/jqueryui/api-draggable.html">可拖拽小部件（Draggable Widget）</a> 的 <code>widgetEventPrefix</code> 是 <code>"drag"</code>，因此当创建一个 draggable 时，事件的名称是 <code>"dragcreate"</code>。默认情况下，小部件的 <code>widgetEventPrefix</code> 是它的名称。<em>注意：该属性已被废弃，将在以后的版本中非常。事件名称将被改为 widgetName:eventName （例如 <code>"draggable:create"</code>）。</em></li>
+	<li><strong>widgetFullName</strong>：包含命名空间的小部件全称。对于 <code>$.widget( "myNamespace.myWidget", {} )</code>， <code>widgetFullName</code> 将是 <code>"myNamespace-myWidget"</code>。</li>
+	<li><strong>widgetName</strong>：小部件的名称。对于 <code>$.widget( "myNamespace.myWidget", {} )</code>，<code>widgetName</code> 将是 <code>"myWidget"</code>。</li>
+	<li><strong>window</strong>：其内包含小部件元素的 <code>window</code>。如果需要在框架内与小部件进行交互时很有用。</li>
+</ul>
+
+<h2 id="jQuery-Widget2">jQuery.Widget 基础小部件用法</h2>
+<p><strong>描述：</strong>部件库（Widget Factory）使用的基础小部件。</p>
+
+<h3>快速导航</h3>
+<table class="reference notranslate">
+<tr>
+	<th width="34%">选项</th>
+	<th width="33%">方法</th>
+    <th width="33%">事件</th>
+</tr>
+<tr>
+	<td>
+<div><a href="#option-disabled">disabled</a></div>
+<div><a href="#option-hide">hide</a></div>
+<div><a href="#option-show">show</a></div>
+	</td>
+	<td>
+<div><a href="#method-_create">_create</a></div>
+<div><a href="#method-_delay">_delay</a></div>
+<div><a href="#method-_destroy">_destroy</a></div>
+<div><a href="#method-_focusable">_focusable</a></div>
+<div><a href="#method-_getCreateEventData">_getCreateEventData</a></div>
+<div><a href="#method-_getCreateOptions">_getCreateOptions</a></div>
+<div><a href="#method-_hide">_hide</a></div>
+<div><a href="#method-_hoverable">_hoverable</a></div>
+<div><a href="#method-_init">_init</a></div>
+<div><a href="#method-_off">_off</a></div>
+<div><a href="#method-_on">_on</a></div>
+<div><a href="#method-_setOption">_setOption</a></div>
+<div><a href="#method-_setOptions">_setOptions</a></div>
+<div><a href="#method-_show">_show</a></div>
+<div><a href="#method-_super">_super</a></div>
+<div><a href="#method-_superApply">_superApply</a></div>
+<div><a href="#method-_trigger">_trigger</a></div>
+<div><a href="#method-destroy">destroy</a></div>
+<div><a href="#method-disable">disable</a></div>
+<div><a href="#method-enable">enable</a></div>
+<div><a href="#method-option">option</a></div>
+<div><a href="#method-widget">widget</a></div>
+	</td>
+    <td>
+<div><a href="#event-create">create</a></div>
+	</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate">
+<tr>
+	<th width="15%">选项</th>
+	<th width="15%">类型</th>
+    <th width="60%">描述</th>
+	<th width="10%">默认值</th>
+</tr>
+<tr id="option-disable">
+	<td>disabled</td>
+    <td>Boolean</td>
+	<td>如果设置为 <code>true</code>，则禁用该小部件。<br />
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>disabled</code> 选项的小部件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).widget({ disabled: true });
+	</pre>
+	<p>在初始化后，获取或设置 <code>disabled</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var disabled = $( ".selector" ).widget( "option", "disabled" );
+ 
+// setter
+$( ".selector" ).widget( "option", "disabled", true );
+	</pre>
+	</td>
+	<td>false</td>
+</tr>
+<tr id="option-hide">
+	<td>hide</td>
+	<td>Boolean 或 Number 或 String 或 Object</td>
+	<td>是否使用动画隐藏元素，以及如何动画隐藏元素。<br />
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+	<li><strong>Boolean</strong>：当设置为 <code>false</code> 时，则不使用动画，元素会立即隐藏。当设置为 <code>true</code> 时，元素会使用默认的持续时间和默认的 easing 淡出。</li>
+	<li><strong>Number</strong>：元素将使用指定的持续时间和默认的 easing 淡出。</li>
+	<li><strong>String</strong>：元素将使用指定的特效隐藏。该值可以是一个内建的 jQuery 动画方法名称，比如 <code>"slideUp"</code>，也可以是一个 <a href="/jqueryui/api-category-effects.html">jQuery UI 特效</a> 的名称，比如<code>"fold"</code>。以上两种情况的特效将使用默认的持续时间和默认的 easing。</li>
+	<li><strong>Object</strong>：如果值是一个对象，则 <code>effect</code>、<code>delay</code>、<code>duration</code> 和 <code>easing</code> 属性会被提供。如果 <code>effect</code> 属性包含 jQuery 方法的名称，则使用该方法，否则，它被认为是一个 jQuery UI 特效的名称。当使用一个支持额外设置的 jQuery UI 特效时，您可以在对象中包含这些设置，且它们会被传递给特效。如果 <code>duration</code> 或 <code>easing</code> 被省略，则使用默认值。如果 <code>effect</code> 被省略，则使用 <code>"fadeOut"</code>。如果 <code>delay</code> 被省略，则不使用延迟。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>hide</code> 选项的小部件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).widget({ hide: { effect: "explode", duration: 1000 } });
+	</pre>
+	<p>在初始化后，获取或设置 <code>hide</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var hide = $( ".selector" ).widget( "option", "hide" );
+ 
+// setter
+$( ".selector" ).widget( "option", "hide", { effect: "explode", duration: 1000 } );
+	</pre>
+	</td>
+	<td>null</td>
+</tr>
+<tr id="option-show">
+	<td>show</td>
+	<td>Boolean 或 Number 或 String 或 Object</td>
+	<td>是否使用动画显示元素，以及如何动画显示元素。<br />
+	<p><strong>支持多个类型：</strong></p>
+	<ul>
+	<li><strong>Boolean</strong>：当设置为 <code>false</code> 时，则不使用动画，元素会立即显示。当设置为 <code>true</code> 时，元素会使用默认的持续时间和默认的 easing 淡入。</li>
+	<li><strong>Number</strong>：元素将使用指定的持续时间和默认的 easing 淡入。</li>
+	<li><strong>String</strong>：元素将使用指定的特效显示。该值可以是一个内建的 jQuery 动画方法名称，比如 <code>"slideDown"</code>，也可以是一个 <a href="/jqueryui/api-category-effects.html">jQuery UI 特效</a> 的名称，比如<code>"fold"</code>。以上两种情况的特效将使用默认的持续时间和默认的 easing。</li>
+	<li><strong>Object</strong>：如果值是一个对象，则 <code>effect</code>、<code>delay</code>、<code>duration</code> 和 <code>easing</code> 属性会被提供。如果 <code>effect</code> 属性包含 jQuery 方法的名称，则使用该方法，否则，它被认为是一个 jQuery UI 特效的名称。当使用一个支持额外设置的 jQuery UI 特效时，您可以在对象中包含这些设置，且它们会被传递给特效。如果 <code>duration</code> 或 <code>easing</code> 被省略，则使用默认值。如果 <code>effect</code> 被省略，则使用 <code>"fadeIn"</code>。如果 <code>delay</code> 被省略，则不使用延迟。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 <code>show</code> 选项的小部件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).widget({ show: { effect: "blind", duration: 800 } });
+	</pre>
+	<p>在初始化后，获取或设置 <code>show</code> 选项：</p>
+	<pre style="white-space: pre-wrap;">
+// getter
+var show = $( ".selector" ).widget( "option", "show" );
+ 
+// setter
+$( ".selector" ).widget( "option", "show", { effect: "blind", duration: 800 } );
+	</pre>
+	</td>
+	<td>null</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate">
+<tr>
+	<th width="15%">方法</th>
+	<th width="15%">返回</th>
+    <th width="70%">描述</th>
+</tr>
+<tr id="method-_create">
+	<td>_create()</td>
+	<td>jQuery (plugin only)</td>
+	<td><code>_create()</code> 方法是小部件的构造函数。没有参数，但是 <code>this.element</code> 和 <code>this.options</code> 已经设置。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>基于一个选项设置小部件元素的背景颜色。</p>
+	<pre style="white-space: pre-wrap;">
+_create: function() {
+  this.element.css( "background-color", this.options.color );
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_delay">
+	<td>_delay( fn [, delay ] )</td>
+	<td>Number</td>
+	<td>在指定延迟后调用提供的函数。保持 <code>this</code> 上下文正确。本质上是 <code>setTimeout()</code>。<br />
+	使用 <code>clearTimeout()</code> 返回超时 ID。<br />
+	<ul>
+	<li><strong>fn</strong><br />
+	类型：Function() 或 String<br />
+	描述：要调用的函数。也可以是小部件上方法的名称。
+	</li>
+	<li><strong>delay</strong><br />
+	类型：Number<br />
+	描述：调用函数前等待的毫秒数，默认为 <code>0</code>。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>100 毫秒后在小部件上调用 <code>_foo()</code> 方法。</p>
+	<pre style="white-space: pre-wrap;">
+this._delay( this._foo, 100 );
+	</pre>
+	</td>
+</tr>
+<tr id="method-_destroy">
+	<td>_destroy()</td>
+	<td>jQuery (plugin only)</td>
+	<td>公共的 <a href="#method-destroy"><code>destroy()</code></a> 方法清除所有的公共数据、事件等等。代表了定制、指定小部件、清理的 <code>_destroy()</code>。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>当小部件被销毁时，从小部件的元素移除一个 class。</p>
+	<pre style="white-space: pre-wrap;">
+_destroy: function() {
+  this.element.removeClass( "my-widget" );
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_focusable">
+	<td>_focusable( element )</td>
+	<td>jQuery (plugin only)</td>
+	<td>建立聚焦在元素上时要应用 <code>ui-state-focus</code> class 的 <code>element</code>。<br />
+	<ul>
+	<li><strong>element</strong><br />
+	类型：jQuery<br />
+	描述：要应用 focusable 行为的元素。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>向小部件内的一组元素应用 focusable 样式：</p>
+	<pre style="white-space: pre-wrap;">
+this._focusable( this.element.find( ".my-items" ) );
+	</pre>
+	</td>
+</tr>
+<tr id="method-_getCreateEventData">
+	<td>_getCreateEventData()</td>
+	<td>Object</td>
+	<td>所有的小部件触发 <a href="#event-create"><code>create</code></a> 事件。默认情况下，事件中不提供任何的数据，但是该方法会返回一个对象，作为 <code>create</code> 事件的数据被传递。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>向 <code>create</code> 事件处理程序传递小部件的选项，作为参数。</p>
+	<pre style="white-space: pre-wrap;">
+_getCreateEventData: function() {
+  return this.options;
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_getCreateOptions">
+	<td>_getCreateOptions()</td>
+	<td>Object</td>
+	<td>该方法允许小部件在初始化期间为定义选项定义一个自定义的方法。用户提供的选项会覆盖该方法返回的选项，即会覆盖默认的选项。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>让小部件元素的 id 属性作为选项可用。</p>
+	<pre style="white-space: pre-wrap;">
+_getCreateOptions: function() {
+  return { id: this.element.attr( "id" ) };
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_hide">
+	<td>_hide( element, option [, callback ] )</td>
+	<td>jQuery (plugin only)</td>
+	<td>使用内置的动画方法或使用自定义的特效隐藏一个元素。如需了解可能的 <code>option</code> 值，请查看 <a href="#option-hide">hide</a>。<br />
+	<ul>
+	<li><strong>element</strong><br />
+	类型：jQuery<br />
+	描述：要隐藏的元素。
+	</li>
+	<li><strong>option</strong><br />
+	类型：Object<br />
+	描述：定义如何隐藏元素的设置。
+	</li>
+	<li><strong>callback</strong><br />
+	类型：Function()<br />
+	描述：元素完全隐藏后要调用的回调。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>为自定义动画传递 <code>hide</code> 选项。</p>
+	<pre style="white-space: pre-wrap;">
+this._hide( this.element, this.options.hide, function() {
+ 
+  // Remove the element from the DOM when it's fully hidden.
+  $( this ).remove();
+});
+	</pre>
+	</td>
+</tr>
+<tr id="method-_hoverable">
+	<td>_hoverable( element )</td>
+	<td>jQuery (plugin only)</td>
+	<td>建立悬浮在元素上时要应用 <code>ui-state-hover</code> class 的 <code>element</code>。事件处理程序在销毁时自动清理。<br />
+	<ul>
+	<li><strong>element</strong><br />
+	类型：jQuery<br />
+	描述：要应用 hoverable 行为的元素。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>当悬浮在元素上时，向元素内所有的 <code>div</code> 应用 hoverable 样式。</p>
+	<pre style="white-space: pre-wrap;">
+this._hoverable( this.element.find( "div" ) );
+	</pre>
+	</td>
+</tr>
+<tr id="method-_init">
+	<td>_init()</td>
+	<td>jQuery (plugin only)</td>
+	<td>小部件初始化的理念与创建不同。任何时候不带参数的调用插件或者只带一个选项哈希的调用插件，初始化小部件。当小部件被创建时会包含这个方法。
+	<p>注释：如果存在不带参数成功调用小部件时要执行的逻辑动作，初始化只能在这时处理。</p>
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>如果设置了 <code>autoOpen</code> 选项，则调用 <code>open()</code> 方法。</p>
+	<pre style="white-space: pre-wrap;">
+_init: function() {
+  if ( this.options.autoOpen ) {
+    this.open();
+  }
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_off">
+	<td>_off( element, eventName )</td>
+	<td>jQuery (plugin only)</td>
+	<td>从指定的元素取消绑定事件处理程序。<br />
+	<ul>
+	<li><strong>element</strong><br />
+	类型：jQuery<br />
+	描述：要取消绑定事件处理程序的元素。不像 <code>_on()</code> 方法，<code>_off()</code> 方法中元素是必需的。
+	</li>
+	<li><strong>eventName</strong><br />
+	类型：String<br />
+	描述：一个或多个空格分隔的事件类型。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>从小部件的元素上取消绑定所有 click 事件。</p>
+	<pre style="white-space: pre-wrap;">
+this._off( this.element, "click" );
+	</pre>
+	</td>
+</tr>
+<tr id="method-_on">
+	<td>_on( [suppressDisabledCheck ] [, element ], handlers )</td>
+	<td>jQuery (plugin only)</td>
+	<td>授权通过事件名称内的选择器被支持，例如 <code>"click .foo"</code>。<code>_on()</code> 方法提供了一些直接事件绑定的好处：<br />
+	<ul>
+	<li>保持处理程序内适当的 <code>this</code> 上下文。
+	</li>
+	<li>自动处理禁用的部件：如果小部件被禁用或事件发生在带有 <code>ui-state-disabled</code> class 的元素上，则不调用事件处理程序。可以被 <code>suppressDisabledCheck</code> 参数重写。
+	</li>
+	<li>事件处理程序会自动添加命名空间，在销毁时会自自动清理。
+	</li>
+	<li><strong>suppressDisabledCheck</strong>（默认值：<code>false</code>）<br />
+	类型：Boolean<br />
+	描述：是否要绕过禁用的检查。
+	</li>
+	<li><strong>element</strong><br />
+	类型：jQuery<br />
+	描述：要绑定事件处理程序的元素。如果未提供元素，<code>this.element</code> 用于未授权的事件，<a href="#method-widget">widget 元素</a> 用于授权的事件。
+	</li>
+	<li><strong>handlers</strong><br />
+	类型：Object<br />
+	描述：一个 map，其中字符串键代表事件类型，可选的选择器用于授权，值代表事件调用的处理函数。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>放置小部件元素内所有被点击的链接的默认行为。</p>
+	<pre style="white-space: pre-wrap;">
+this._on( this.element, {
+  "click a": function( event ) {
+    event.preventDefault();
+  }
+});
+	</pre>
+	</td>
+</tr>
+<tr id="method-_setOption">
+	<td>_setOption( key, value )</td>
+	<td>jQuery (plugin only)</td>
+	<td>为每个独立的选项调用 <a href="#method-_setOptions"><code>_setOptions()</code></a> 方法。小部件状态随着改变而更新。<br />
+	<ul>
+	<li><strong>key</strong><br />
+	类型：String<br />
+	描述：要设置的选项名称。
+	</li>
+	<li><strong>value</strong><br />
+	类型：Object<br />
+	描述：为选项设置的值。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>当小部件的 <code>height</code> 或 <code>width</code> 选项改变时，更新小部件的元素。</p>
+	<pre style="white-space: pre-wrap;">
+_setOption: function( key, value ) {
+  if ( key === "width" ) {
+    this.element.width( value );
+  }
+  if ( key === "height" ) {
+    this.element.height( value );
+  }
+  this._super( key, value );
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_setOptions">
+	<td>_setOptions( options )</td>
+	<td>jQuery (plugin only)</td>
+	<td>当调用 <a href="#method-option"><code>option()</code></a> 方法时调用，无论以什么形式调用 <code>option()</code>。如果您要根据多个选项的改变而改变处理器密集型，重载该方法是很有用的。<br />
+	<ul>
+	<li><strong>options</strong><br />
+	类型：Object<br />
+	描述：为选项设置的值。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>如果小部件的 <code>height</code> 或 <code>width</code> 选项改变，调用 <code>resize</code> 方法。</p>
+	<pre style="white-space: pre-wrap;">
+_setOptions: function( options ) {
+  var that = this,
+    resize = false;
+ 
+  $.each( options, function( key, value ) {
+    that._setOption( key, value );
+    if ( key === "height" || key === "width" ) {
+      resize = true;
+    }
+  });
+ 
+  if ( resize ) {
+    this.resize();
+  }
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_show">
+	<td>_show( element, option [, callback ] )</td>
+	<td>jQuery (plugin only)</td>
+	<td>使用内置的动画方法或使用自定义的特效显示一个元素。如需了解可能的 <code>option</code> 值，请查看 <a href="#option-show">show</a>。<br />
+	<ul>
+	<li><strong>element</strong><br />
+	类型：jQuery<br />
+	描述：要显示的元素。
+	</li>
+	<li><strong>option</strong><br />
+	类型：Object<br />
+	描述：定义如何显示元素的设置。
+	</li>
+	<li><strong>callback</strong><br />
+	类型：Function()<br />
+	描述：元素完全显示后要调用的回调。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>为自定义动画传递 <code>show</code> 选项。</p>
+	<pre style="white-space: pre-wrap;">
+this._show( this.element, this.options.show, function() {
+ 
+  // Focus the element when it's fully visible.
+  this.focus();
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_super">
+	<td>_super( [arg ] [, ... ] )</td>
+	<td>jQuery (plugin only)</td>
+	<td>从父部件中调用相同名称的方法，带有任意指定的参数。本质上是 <code>.call()</code>。<br />
+	<ul>
+	<li><strong>arg</strong><br />
+	类型：Object<br />
+	描述：要传递给父部件的方法的零到多个参数。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>处理 <code>title</code> 选项更新，并调用付部件的 <code>_setOption()</code> 来更新选项的内部存储。</p>
+	<pre style="white-space: pre-wrap;">
+_setOption: function( key, value ) {
+  if ( key === "title" ) {
+    this.element.find( "h3" ).text( value );
+  }
+  this._super( key, value );
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_superApply">
+	<td>_superApply( arguments )</td>
+	<td>jQuery (plugin only)</td>
+	<td>从父部件中调用相同名称的方法，带有参数的数组。本质上是 <code>.apply()</code>。<br />
+	<ul>
+	<li><strong>arguments</strong><br />
+	类型：Array<br />
+	描述：要传递给父部件的方法的参数数组。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>处理 <code>title</code> 选项更新，并调用付部件的 <code>_setOption()</code> 来更新选项的内部存储。</p>
+	<pre style="white-space: pre-wrap;">
+_setOption: function( key, value ) {
+  if ( key === "title" ) {
+    this.element.find( "h3" ).text( value );
+  }
+  this._superApply( arguments );
+}
+	</pre>
+	</td>
+</tr>
+<tr id="method-_trigger">
+	<td>_trigger( type [, event ] [, data ] )</td>
+	<td>Boolean</td>
+	<td>触发一个事件及其相关的回调。带有该名称的选项与作为回调被调用的类型相等。<br />
+	<p>事件名称是小部件名称和类型的小写字母串。</p>
+	<p>注释：当提供数据时，您必须提供所有三个参数。如果没有传递事件，则传递 <code>null</code>。</p>
+	<p>如果默认行为是阻止的，则返回 <code>false</code>，否则返回 <code>true</code>。当处理程序返回 <code>false</code> 时或调用 <code>event.preventDefault()</code> 时，则阻止默认行为发生。</p>
+	<ul>
+	<li><strong>type</strong><br />
+	类型：String<br />
+	描述：<code>type</code> 应该匹配回调选项的名称。完整的事件类型会自动生成。
+	</li>
+	<li><strong>event</strong><br />
+	类型：Event<br />
+	描述：导致该事件发生的原始事件，想听众提供上下文时很有用。
+	</li>
+	<li><strong>data</strong><br />
+	类型：Object<br />
+	描述：一个与事件相关的数据哈希。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>当按下一个键时，触发 <code>search</code> 事件。</p>
+	<pre style="white-space: pre-wrap;">
+this._on( this.element, {
+  keydown: function( event ) {
+ 
+    // Pass the original event so that the custom search event has
+    // useful information, such as keyCode
+    this._trigger( "search", event, {
+ 
+      // Pass additional information unique to this event
+      value: this.element.val()
+    });
+  }
+});
+	</pre>
+	</td>
+</tr>
+<tr id="method-destroy">
+	<td>destroy()</td>
+    <td>jQuery (plugin only)</td>
+	<td>完全移除小部件功能。这会把元素返回到它的预初始化状态。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>当点击小部件的任意锚点时销毁小部件。</p>
+	<pre style="white-space: pre-wrap;">
+this._on( this.element, {
+  "click a": function( event ) {
+    event.preventDefault();
+    this.destroy();
+  }
+});
+	</pre>
+	</td>
+</tr>
+<tr id="method-disable">
+	<td>disable()</td>
+    <td>jQuery (plugin only)</td>
+	<td>禁用小部件。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>当点击小部件的任意锚点时禁用小部件。</p>
+	<pre style="white-space: pre-wrap;">
+this._on( this.element, {
+  "click a": function( event ) {
+    event.preventDefault();
+    this.disable();
+  }
+});
+	</pre>
+	</td>
+</tr>
+<tr id="method-enable">
+	<td>enable()</td>
+    <td>jQuery (plugin only)</td>
+	<td>启用小部件。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>当点击小部件的任意锚点时启用小部件。</p>
+	<pre style="white-space: pre-wrap;">
+this._on( this.element, {
+  "click a": function( event ) {
+    event.preventDefault();
+    this.enable();
+  }
+});
+	</pre>
+	</td>
+</tr>
+<tr id="method-option">
+	<td id="method-option">option( optionName )</td>
+    <td>Object</td>
+	<td>获取当前与指定的 <code>optionName</code> 关联的值。<br />
+	<ul>
+	<li><strong>optionName</strong><br />
+	类型：String<br />
+	描述：要获取的选项的名称。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>获得 <code>width</code> 选项的值。</p>
+	<pre style="white-space: pre-wrap;">
+this.option( "width" );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option()</td>
+    <td>PlainObject</td>
+	<td>获取一个包含键/值对的对象，键/值对表示当前小部件选项哈希。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>记录每个小部件选项的键/值对，用于调试。</p>
+	<pre style="white-space: pre-wrap;">
+var options = this.option();
+for ( var key in options ) {
+  console.log( key, options[ key ] );
+}
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option( optionName, value )</td>
+    <td>jQuery (plugin only)</td>
+	<td>设置与指定的 <code>optionName</code> 关联的小部件选项的值。<br />
+	<ul>
+	<li><strong>optionName</strong><br />
+	类型：String<br />
+	描述：要设置的选项的名称。
+	</li>
+	<li><strong>value</strong><br />
+	类型：Object<br />
+	描述：要为选项设置的值。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>设置 <code>width</code> 选项为 <code>500</code>。</p>
+	<pre style="white-space: pre-wrap;">
+this.option( "width", 500 );
+	</pre>
+	</td>
+</tr>
+<tr>
+	<td>option( options )</td>
+    <td>jQuery (plugin only)</td>
+	<td>为小部件设置一个或多个选项。<br />
+	<ul>
+	<li><strong>options</strong><br />
+	类型：Object<br />
+	描述：要设置的 option-value 对。
+	</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>设置 <code>height</code> 和 <code>width</code> 选项为 <code>500</code>。</p>
+	<pre style="white-space: pre-wrap;">
+this.option({
+  width: 500,
+  height: 500
+});
+	</pre>
+	</td>
+</tr>
+<tr id="method-widget">
+	<td>widget()</td>
+    <td>jQuery</td>
+	<td>返回一个包含原始元素或其他相关的生成元素的 <code>jQuery</code> 对象。<br />
+	<ul>
+	<li>该方法不接受任何参数。</li>
+	</ul>
+	<p><strong>代码实例：</strong></p>
+	<p>当创建小部件时，在小部件的原始元素周围放置一个红色的边框。</p>
+	<pre style="white-space: pre-wrap;">
+_create: function() {
+  this.widget().css( "border", "2px solid red" );
+}
+	</pre>
+	</td>
+</tr>
+</table>
+<br />
+<table class="reference notranslate">
+<tr>
+	<th width="15%">事件</th>
+	<th width="15%">类型</th>
+    <th width="70%">描述</th>
+</tr>
+<tr id="event-create">
+	<td>create( event, ui )</td>
+	<td>widgetcreate</td>
+	<td>当小部件被创建时触发。<br />
+	<ul>
+	<li><strong>event</strong><br />
+	类型：Event
+	</li>
+	<li><strong>ui</strong><br />
+	类型：Object
+	</li>
+	</ul>
+	<p>注意：<code>ui</code> 对象是空的，这里包含它是为了与其他事件保持一致性。</p>
+	<p><strong>代码实例：</strong></p>
+	<p>初始化带有指定 create 回调的小部件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).widget({
+  create: function( event, ui ) {}
+});
+	</pre>
+	<p>绑定一个事件监听器到 widgetcreate 事件：</p>
+	<pre style="white-space: pre-wrap;">
+$( ".selector" ).on( "widgetcreate", function( event, ui ) {} );
+	</pre>
+	</td>
+</tr>
+</table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jqueryui/api-jquery-ui-keycode.html" rel="prev"> jQuery UI API &#8211; jQuery.ui.keyCode</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jqueryui/api-jquery-widget-bridge.html" rel="next">jQuery UI API &#8211; 插件桥（Widget Plugin Bridge）</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.215 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 18:44:11 -->
+
+<!-- super cache -->

@@ -1,0 +1,564 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Java 文档注释 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Java Applet基础' href='http://www.w3cschool.cc/java/java-applet-basics.html' />
+<link rel='next' title='JSP 教程' href='http://www.w3cschool.cc/jsp/jsp-tutorial.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/java/java-documentation.html' />
+<meta name="keywords" content="Java 文档注释,Java 教程">
+<meta name="description" content="Java 文档注释   Java只是三种注释方式。前两种分别是// 和/* */，第三种被称作说明注释，它以/** 开始，以 */结束。 说明注释允许你在程序中嵌入关于程序的信息。你可以使用javadoc工具软件来生成信息，并输出到HTML文件中。 说明注释，是你更加方面的记录你的程序的信息。  javadoc 标签  javadoc工具软件识别以下标签：   	 		 			 				标签 			 				描述 			 				示例 ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Java 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-tutorial.html" >
+	Java 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-intro.html" >
+	Java 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-environment-setup.html" >
+	Java开发环境配置	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-syntax.html" >
+	Java基础语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-object-classes.html" >
+	Java对象和类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-basic-datatypes.html" >
+	Java基本数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-variable-types.html" >
+	Java变量类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-modifier-types.html" >
+	Java修饰符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-operators.html" >
+	Java运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-loop.html" >
+	Java循环结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-if-else-switch.html" >
+	Java分支结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-number.html" >
+	Java Number类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-character.html" >
+	Java Character类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-string.html" >
+	Java String类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-stringbuffer.html" >
+	Java StringBuffer和StringBuilder类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-array.html" >
+	Java 数组	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-date-time.html" >
+	Java日期时间	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-regular-expressions.html" >
+	Java正则表达式	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-methods.html" >
+	Java 方法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-files-io.html" >
+	Java 流(Stream)、文件(File)和IO	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-exceptions.html" >
+	Java 异常处理	</a>
+	<br><h2 class="left">Java <span class="left_h2">面向对象</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-inheritance.html" >
+	Java 继承	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-override-overload.html" >
+	Java 重写(Override)与重载(Overload)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-polymorphism.html" >
+	Java 多态	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-abstraction.html" >
+	Java 抽象类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-encapsulation.html" >
+	java 封装	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-interfaces.html" >
+	Java 接口	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-package.html" >
+	Java 包(package)	</a>
+	<br><h2 class="left">Java <span class="left_h2">高级教程</span></h2>	<a target="_top" href="http://www.w3cschool.cc/java/java-data-structures.html" >
+	Java 数据结构	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-collections.html" >
+	Java 集合框架	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-generics.html" >
+	Java 泛型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-serialization.html" >
+	Java序列化	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-networking.html" >
+	Java 网络编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-sending-email.html" >
+	Java 发送邮件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-multithreading.html" >
+	Java 多线程编程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-applet-basics.html" >
+	Java Applet基础	</a>
+		<a target="_top" href="http://www.w3cschool.cc/java/java-documentation.html" >
+	Java 文档注释	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-applet-basics.html" rel="prev"> Java Applet基础</a></div>
+		<div class="next"></div>
+	</div>
+
+	<h1>Java 文档注释
+</h1>
+<p>
+Java只是三种注释方式。前两种分别是// 和/* */，第三种被称作说明注释，它以/** 开始，以 */结束。</p><p>
+说明注释允许你在程序中嵌入关于程序的信息。你可以使用javadoc工具软件来生成信息，并输出到HTML文件中。</p><p>
+说明注释，是你更加方面的记录你的程序的信息。</p><hr />
+<h2>
+javadoc 标签</h2>
+<p>
+javadoc工具软件识别以下标签：
+</p>
+<table class="reference">
+	<tbody>
+		<tr>
+			<th>
+				<strong>标签</strong></th>
+			<th style="text-align: center;">
+				<strong>描述</strong></th>
+			<th style="text-align: center;">
+				<strong>示例</strong></th>
+		</tr>
+		<tr>
+			<td>
+				@author</td>
+			<td>
+				标识一个类的作者</td>
+			<td>
+				@author description</td>
+		</tr>
+		<tr>
+			<td>
+				@deprecated</td>
+			<td>
+				指名一个过期的类或成员</td>
+			<td>
+				@deprecated description</td>
+		</tr>
+		<tr>
+			<td>
+				{@docRoot}</td>
+			<td>
+				指明当前文档根目录的路径</td>
+			<td>
+				Directory Path</td>
+		</tr>
+		<tr>
+			<td>
+				@exception</td>
+			<td>
+				标志一个类抛出的异常</td>
+			<td>
+				@exception exception-name explanation</td>
+		</tr>
+		<tr>
+			<td>
+				{@inheritDoc}</td>
+			<td>
+				从直接父类继承的注释</td>
+			<td>
+				Inherits a comment from the immediate surperclass.</td>
+		</tr>
+		<tr>
+			<td>
+				{@link}</td>
+			<td>
+				插入一个到另一个主题的链接</td>
+			<td>
+				{@link name text}</td>
+		</tr>
+		<tr>
+			<td>
+				{@linkplain}</td>
+			<td>
+				插入一个到另一个主题的链接，但是该链接显示纯文本字体</td>
+			<td>
+				Inserts an in-line link to another topic.</td>
+		</tr>
+		<tr>
+			<td>
+				@param</td>
+			<td>
+				说明一个方法的参数</td>
+			<td>
+				@param parameter-name explanation</td>
+		</tr>
+		<tr>
+			<td>
+				@return</td>
+			<td>
+				说明返回值类型</td>
+			<td>
+				@return explanation</td>
+		</tr>
+		<tr>
+			<td>
+				@see</td>
+			<td>
+				指定一个到另一个主题的链接</td>
+			<td>
+				@see anchor</td>
+		</tr>
+		<tr>
+			<td>
+				@serial</td>
+			<td>
+				说明一个序列化属性</td>
+			<td>
+				@serial description</td>
+		</tr>
+		<tr>
+			<td>
+				@serialData</td>
+			<td>
+				说明通过writeObject( ) 和&nbsp;writeExternal( )方法写的数据</td>
+			<td>
+				@serialData description</td>
+		</tr>
+		<tr>
+			<td>
+				@serialField</td>
+			<td>
+				说明一个ObjectStreamField组件</td>
+			<td>
+				@serialField name type description</td>
+		</tr>
+		<tr>
+			<td>
+				@since</td>
+			<td>
+				标记当引入一个特定的变化时</td>
+			<td>
+				@since release</td>
+		</tr>
+		<tr>
+			<td>
+				@throws</td>
+			<td>
+				和 @exception标签一样.</td>
+			<td>
+				The @throws tag has the same meaning as the @exception tag.</td>
+		</tr>
+		<tr>
+			<td>
+				{@value}</td>
+			<td>
+				显示常量的值，该常量必须是static属性。</td>
+			<td>
+				Displays the value of a constant, which must be a static field.</td>
+		</tr>
+		<tr>
+			<td>
+				@version</td>
+			<td>
+				指定类的版本</td>
+			<td>
+				@version info</td>
+		</tr>
+	</tbody>
+</table>
+<hr /><h2>文档注释</h2>
+<p>
+在开始的/**之后，第一行或几行是关于类、变量和方法的主要描述.</p><p>
+之后，你可以包含一个或多个何种各样的@标签。每一个@标签必须在一个新行的开始或者在一行的开始紧跟星号(*).</p><p>
+多个相同类型的标签应该放成一组。例如，如果你有三个@see标签，可以将它们一个接一个的放在一起。</p><p>
+下面是一个类的说明注释的示例：</p>
+<pre>
+/*** This class draws a bar chart.
+* @author Zara Ali
+* @version 1.2
+*/
+</pre>
+<hr /><h2>
+javadoc输出什么</h2>
+<p>
+
+javadoc工具将你Java程序的源代码作为输入，输出一些包含你程序注释的HTML文件。</p><p>
+每一个类的信息将在独自的HTML文件里。javadoc也可以输出继承的树形结构和索引。</p><p>
+由于javadoc的实现不同，工作也可能不同，你需要检查你的Java开发系统的版本等细节，选择合适的Javadoc版本。</p>
+<h3>
+实例</h3>
+<p>
+下面是一个使用说明注释的简单实例。注意每一个注释都在它描述的项目的前面。</p><p>
+在经过javadoc处理之后，SquareNum类的注释将在SquareNum.html中找到。</p>
+<pre>
+import java.io.*;
+ 
+/**
+* This class demonstrates documentation comments.
+* @author Ayan Amhed
+* @version 1.2
+*/
+public class SquareNum {
+   /**
+   * This method returns the square of num.
+   * This is a multiline description. You can use
+   * as many lines as you like.
+   * @param num The value to be squared.
+   * @return num squared.
+   */
+   public double square(double num) {
+      return num * num;
+   }
+   /**
+   * This method inputs a number from the user.
+   * @return The value input as a double.
+   * @exception IOException On input error.
+   * @see IOException
+   */
+   public double getNumber() throws IOException {
+      InputStreamReader isr = new InputStreamReader(System.in);
+      BufferedReader inData = new BufferedReader(isr);
+      String str;
+      str = inData.readLine();
+      return (new Double(str)).doubleValue();
+   }
+   /**
+   * This method demonstrates square().
+   * @param args Unused.
+   * @return Nothing.
+   * @exception IOException On input error.
+   * @see IOException
+   */
+   public static void main(String args[]) throws IOException
+   {
+      SquareNum ob = new SquareNum();
+      double val;
+      System.out.println("Enter value to be squared: ");
+      val = ob.getNumber();
+      val = ob.square(val);
+      System.out.println("Squared value is " + val);
+   }
+}
+</pre>
+<p>
+如下，使用javadoc工具处理SquareNum.java文件：
+</p>
+<pre>
+$ javadoc SquareNum.java
+Loading source file SquareNum.java...
+Constructing Javadoc information...
+Standard Doclet version 1.5.0_13
+Building tree for all the packages and classes...
+Generating SquareNum.html...
+SquareNum.java:39: warning - @return tag cannot be used\
+                      in method with void return type.
+Generating package-frame.html...
+Generating package-summary.html...
+Generating package-tree.html...
+Generating constant-values.html...
+Building index for all the packages and classes...
+Generating overview-tree.html...
+Generating index-all.html...
+Generating deprecated-list.html...
+Building index for all classes...
+Generating allclasses-frame.html...
+Generating allclasses-noframe.html...
+Generating index.html...
+Generating help-doc.html...
+Generating stylesheet.css...
+1 warning
+$
+</pre>
+ 	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/java/java-applet-basics.html" rel="prev"> Java Applet基础</a></div>
+		<div class="next"></div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.329 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 03:29:20 -->
+
+<!-- super cache -->

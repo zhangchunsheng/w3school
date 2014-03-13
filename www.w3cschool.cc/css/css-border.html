@@ -1,0 +1,578 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Border(边框) | w3cschool菜鸟教程</title>
+	<link rel='prev' title='CSS 框模型' href='http://www.w3cschool.cc/css/css-boxmodel.html' />
+<link rel='next' title='CSS 轮廓（outline）属性' href='http://www.w3cschool.cc/css/css-outline.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/css/css-border.html' />
+<meta name="keywords" content="CSS Border(边框),CSS 教程">
+<meta name="description" content="CSS 边框   CSS 边框属性 CSS边框属性允许你指定一个元素边框的样式和颜色。   边框样式 边框样式属性指定要显示什么样的边界。  border-style属性用来定义边框的样式 border-style 值: none: 默认无边框 dotted: dotted:定义一个点线框 dashed: 定义一个虚线框 solid: 定义实线边界 double: 定义两个边界。 两个边界的宽度和border-width的值相同 gro..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>CSS 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-tutorial.html" >
+	CSS 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-intro.html" >
+	CSS 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-syntax.html" >
+	CSS 语法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-id-class.html" >
+	CSS Id 和 Class选择器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-howto.html" >
+	CSS 创建	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-background.html" >
+	CSS Backgrounds(背景)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-text.html" >
+	CSS Text(文本)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-font.html" >
+	CSS Fonts(字体)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-link.html" >
+	CSS 链接(link)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-list.html" >
+	CSS 列表样式(ul)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-table.html" >
+	CSS Table(表格)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-boxmodel.html" >
+	CSS 框模型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-border.html" >
+	CSS Border(边框)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-outline.html" >
+	CSS 轮廓（outline）属性	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-margin.html" >
+	CSS Margin(外边距)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-padding.html" >
+	CSS Padding（填充）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-grouping-nesting.html" >
+	CSS 分组和嵌套	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-dimension.html" >
+	CSS 尺寸 (Dimension)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-display-visibility.html" >
+	CSS Display(显示)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-positioning.html" >
+	CSS Positioning(定位)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-float.html" >
+	CSS Float(浮动)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-align.html" >
+	CSS Align( 对齐)	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-pseudo-classes.html" >
+	CSS 伪类	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-pseudo-elements.html" >
+	CSS 伪元素	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-navbar.html" >
+	CSS 导航栏	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-image-gallery.html" >
+	CSS 图片廊	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-image-transparency.html" >
+	CSS 图像透明/不透明	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-image-sprites.html" >
+	CSS 图像拼合技术	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-mediatypes.html" >
+	CSS 媒体类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-attribute-selectors.html" >
+	CSS 属性选择器	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-summary.html" >
+	CSS 总结	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css/css-examples.html" >
+	CSS 实例	</a>
+	<br><h2 class="left"><span class="left_h2">CSS3</span> 教程</h2>
+<a target="_top" href="http://www.w3cschool.cc/css3/css3-tutorial.html" >
+	CSS3 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-intro.html" >
+	CSS3 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-borders.html" >
+	CSS3 边框（Borders）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-backgrounds.html" >
+	CSS3 背景	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-text-effects.html" >
+	CSS3 文本效果	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-fonts.html" >
+	CSS3 字体	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-2dtransforms.html" >
+	CSS3 2D 转换	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-3dtransforms.html" >
+	CSS3 3D 转换	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-transitions.html" >
+	CSS3 过渡	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-animations.html" >
+	CSS3 动画	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-multiple-columns.html" >
+	CSS3 多列	</a>
+		<a target="_top" href="http://www.w3cschool.cc/css3/css3-user-interface.html" >
+	CSS3 用户界面	</a>
+<br>
+<h2 class="left"><span class="left_h2">CSS</span> 参考手册</h2>
+<a target="_top" href="/cssref/css-reference.html" >CSS 参考手册</a>
+<a target="_top" href="/cssref/css-selectors.html">CSS 选择器</a>
+<a target="_top" href="/cssref/css-ref-aural.html">CSS 语音参考</a>
+<a target="_top" href="/cssref/css-websafe-fonts.html">CSS Web安全字体</a>
+<a target="_top" href="/cssref/css-units.html">CSS 单位</a>
+<a target="_top" href="/cssref/css-colors.html">CSS 颜色</a>
+<a target="_top" href="/cssref/css-colors-legal.html">CSS 颜色值</a>
+<a target="_top" href="/cssref/css-colornames.html">CSS 颜色名</a>
+<a target="_top" href="/cssref/css-colorsfull.html">CSS 十六进制颜色</a></div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/css/css-boxmodel.html" rel="prev"> CSS 框模型</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/css/css-outline.html" rel="next">CSS 轮廓（outline）属性</a> &raquo;</div>
+	</div>
+
+	<h1>CSS <span class="color_h1">边框</span>
+</h1>
+<br /><div style="width:93%;border:10px groove #98bf21;padding:8px">
+<h2>CSS 边框属性</h2>
+<p>CSS边框属性允许你指定一个元素边框的样式和颜色。</p>
+</div>
+
+<h2>边框样式</h2>
+<p>边框样式属性指定要显示什么样的边界。</p>
+<p><img src="/images/lamp.gif" alt="Remark"> <b>border-style</b>属性用来定义边框的样式</p>
+<h2>border-style 值:</h2>
+<p style="border: 1px none #000000;padding:3px">none: 默认无边框</p>
+<p style="border: 1px dotted #000000;padding:3px">dotted: dotted:定义一个点线框</p>
+<p style="border: 1px dashed #000000;padding:3px">dashed: 定义一个虚线框</p>
+<p style="border: 1px solid #000000;padding:3px">solid: 定义实线边界</p>
+<p style="border: 3px double #000000;padding:3px">double: 定义两个边界。 两个边界的宽度和border-width的值相同</p>
+<p style="border: 5px groove #98bf21;padding:3px">groove: 定义3D沟槽边界。效果取决于边界的颜色值</p>
+<p style="border: 5px ridge #98bf21;padding:3px">ridge: 定义3D脊边界。效果取决于边界的颜色值</p>
+<p style="border: 5px inset #98bf21;padding:3px">inset:定义一个3D的嵌入边框。效果取决于边界的颜色值</p>
+<p style="border: 5px outset #98bf21;padding:3px">outset: 定义一个3D突出边框。 效果取决于边界的颜色值</p>
+<p>尝试一下: <a target="_blank" href="/try/try.php?filename=trycss_border-style">设置边框样式</a></p>
+<hr />
+<h2>边框宽度</h2>
+<p>您可以通过 border-width 属性为边框指定宽度。</p>
+<p>为边框指定宽度有两种方法：可以指定长度值，比如 2px 或 0.1em；或者使用 3 个关键字之一，它们分别是 thin 、medium（默认值） 和 thick。</p>
+<p><b>注意：</b>CSS 没有定义 3 个关键字的具体宽度，所以一个用户代理可能把 thin 、medium 和 thick 分别设置为等于 5px、3px 和 2px，而另一个用户代理则分别设置为 3px、2px 和 1px。</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+p.one<br />
+{<br />
+border-style:solid;<br />
+border-width:5px;<br />
+}<br />
+p.two<br />
+{<br />
+border-style:solid;<br />
+border-width:medium;<br />
+}
+</div>
+<br /><a target="_blank" href="/try/try.php?filename=trycss_border-width" class="tryitbtn">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>边框颜色</h2>
+<p>border-color属性用于设置边框的颜色。可以设置的颜色：</p>
+<ul>
+	<li>name - 指定颜色的名称，如 "red"</li>
+	<li>RGB - 指定 RGB 值, 如 "rgb(255,0,0)"</li>
+	<li>Hex - 指定16进制值, 如 "#ff0000"</li>
+</ul>
+<p>您还可以设置边框的颜色为"transparent"。</p>
+<p><b>注意：</b> border-color单独使用是不起作用的，必须得先使用border-style来设置边框样式。</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code">
+p.one<br />
+{<br />
+border-style:solid;<br />
+border-color:red;<br />
+}<br />
+p.two<br />
+{<br />
+border-style:solid;<br />
+border-color:#98bf21;<br />
+}
+</div>
+<br /><a target="_blank" href="/try/try.php?filename=trycss_border-color1" class="tryitbtn">尝试一下 »</a>
+</div>
+<br /><hr />
+<h2>边框-单独设置各边</h2>
+<p>在CSS中，可以指定不同的侧面不同的边框：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+p<br />
+{<br />
+border-top-style:dotted;<br />
+border-right-style:solid;<br />
+border-bottom-style:dotted;<br />
+border-left-style:solid;<br />
+}</div>
+<br /><a target="_blank" href="/try/try.php?filename=trycss_border-side" class="tryitbtn">尝试一下 »</a>
+</div>
+<p>上面的例子也可以设置一个单一属性：</p>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+border-style:dotted solid;</div>
+<br /><a target="_blank" href="/try/try.php?filename=trycss_border-side2" class="tryitbtn">尝试一下 »</a>
+</div>
+
+<p>border-style属性可以有1-4个值：</p>
+<ul>
+<li>
+<b>border-style:dotted solid double dashed; </b>
+	<ul>
+
+	<li>上边框是 dotted</li>
+	<li>右边框是 solid</li>
+	<li>底边框是 double</li>
+	<li>左边框是 dashed</li>
+
+</ul>
+<br />
+</li>
+	<li>
+<b>border-style:dotted solid double;</b>
+	<ul>
+<li>上边框是 dotted</li>
+	<li>右边框是 solid</li>
+	<li>底边框是 double</li>
+</ul>
+<br />
+</li>
+	<li>
+<b>border-style:dotted solid;</b>
+	<ul>
+<li>上、底边框是 dotted</li>
+	<li>右、左边框是 solid</li>
+</ul>
+<br />
+</li>
+	<li>
+<b>border-style:dotted;</b><ul><li>四面边框是 dotted</li></ul>
+</li>
+</ul>
+<p>上面的例子用了border-style。然而，它也可以和border-width 、 border-color一起使用。</p>
+
+<hr />
+<h2>边框-简写属性</h2>
+<p>上面的例子用了很多属性来设置边框。</p>
+<p>T你也可以在一个属性中设置边框。</p>
+<p>
+你可以在"border"属性中设置：</p>
+<ul>
+<li>border-width</li>
+	<li>border-style (required)</li>
+	<li>border-color</li>
+</ul>
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+border:5px solid red;</div>
+<br /><a target="_blank" href="/try/try.php?filename=trycss_border" class="tryitbtn">尝试一下 »</a>
+</div>
+<br /><hr />
+<div class="tryit_ex">
+<img src="/images/tryitimg.gif" width="40" height="46px" alt="Examples"><h2>更多实例</h2>
+</div>
+<p><a target="_blank" href="/try/try.php?filename=trycss_border-top">所有边框属性在一个声明之中</a><br />
+本例演示用简写属性来将所有四个边框属性设置于同一声明中。</p>
+
+<p><a target="_blank" href="/try/try.php?filename=trycss_border-bottom-style">设置下边框的样式</a><br />
+本例演示如何设置下边框的样式。</p>
+<p><a target="_blank" href="/try/try.php?filename=trycss_border-left-width">设置左边框的宽度</a><br />
+本例演示如何设置左边框的宽度。</p>
+
+<p><a target="_blank" href="/try/try.php?filename=trycss_border-color">设置四个边框的颜色</a><br />
+本例演示如何设置四个边框的颜色。可以设置一到四个颜色。</p>
+<p><a target="_blank" href="/try/try.php?filename=trycss_border-right-color">设置右边框的颜色</a><br />
+本例演示如何设置右边框的颜色。</p>
+<hr />
+<h2>CSS 边框属性</h2>
+
+<table class="reference">
+  <tbody><tr>
+    <th>属性</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a title="CSS border 属性" href="/cssref/pr-border.html">border</a></td>
+    <td>简写属性，用于把针对四个边的属性设置在一个声明。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-style 属性" href="/cssref/pr-border-style.html">border-style</a></td>
+    <td>用于设置元素所有边框的样式，或者单独地为各边设置边框样式。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-width 属性" href="/cssref/pr-border-width.html">border-width</a></td>
+    <td>简写属性，用于为元素的所有边框设置宽度，或者单独地为各边边框设置宽度。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-color 属性" href="/cssref/pr-border-color.html">border-color</a></td>
+    <td>简写属性，设置元素的所有边框中可见部分的颜色，或为 4 个边分别设置颜色。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-bottom 属性" href="/cssref/pr-border-bottom.html">border-bottom</a></td>
+    <td>简写属性，用于把下边框的所有属性设置到一个声明中。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-bottom-color 属性" href="/cssref/pr-border-bottom-color.html">border-bottom-color</a></td>
+    <td>设置元素的下边框的颜色。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-bottom-style 属性" href="/cssref/pr-border-bottom-style.html">border-bottom-style</a></td>
+    <td>设置元素的下边框的样式。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-bottom-width 属性" href="/cssref/pr-border-bottom-width.html">border-bottom-width</a></td>
+    <td>设置元素的下边框的宽度。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-left 属性" href="/cssref/pr-border-left.html">border-left</a></td>
+    <td>简写属性，用于把左边框的所有属性设置到一个声明中。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-left-color 属性" href="/cssref/pr-border-left-color.html">border-left-color</a></td>
+    <td>设置元素的左边框的颜色。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-left-style 属性" href="/cssref/pr-border-left-style.html">border-left-style</a></td>
+    <td>设置元素的左边框的样式。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-left-width 属性" href="/cssref/pr-border-left-width.html">border-left-width</a></td>
+    <td>设置元素的左边框的宽度。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-right 属性" href="/cssref/pr-border-right.html">border-right</a></td>
+    <td>简写属性，用于把右边框的所有属性设置到一个声明中。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-right-color 属性" href="/cssref/pr-border-right-color.html">border-right-color</a></td>
+    <td>设置元素的右边框的颜色。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-right-style 属性" href="/cssref/pr-border-right-style.html">border-right-style</a></td>
+    <td>设置元素的右边框的样式。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-right-width 属性" href="/cssref/pr-border-right-width.html">border-right-width</a></td>
+    <td>设置元素的右边框的宽度。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-top 属性" href="/cssref/pr-border-top.html">border-top</a></td>
+    <td>简写属性，用于把上边框的所有属性设置到一个声明中。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-top-color 属性" href="/cssref/pr-border-top-color.html">border-top-color</a></td>
+    <td>设置元素的上边框的颜色。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-top-style 属性" href="/cssref/pr-border-top-style.html">border-top-style</a></td>
+    <td>设置元素的上边框的样式。</td>
+  </tr>
+  <tr>
+    <td><a title="CSS border-top-width 属性" href="/cssref/pr-border-top-width.html">border-top-width</a></td>
+    <td>设置元素的上边框的宽度。</td>
+  </tr>
+</tbody></table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/css/css-boxmodel.html" rel="prev"> CSS 框模型</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/css/css-outline.html" rel="next">CSS 轮廓（outline）属性</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.811 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:16:37 -->
+
+<!-- super cache -->

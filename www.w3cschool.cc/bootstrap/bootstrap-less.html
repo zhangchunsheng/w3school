@@ -1,0 +1,351 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap LESS | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Bootstrap 警告和错误' href='http://www.w3cschool.cc/bootstrap/bootstrap-alerts-errors.html' />
+<link rel='next' title='Bootstrap 模态框' href='http://www.w3cschool.cc/bootstrap/bootstrap-modals.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/bootstrap/bootstrap-less.html' />
+<meta name="keywords" content="Bootstrap LESS,Bootstrap 教程">
+<meta name="description" content="Bootstrap LESS 简介  Less 是一个 CSS 预处理器，让 CSS 具有动态性。另一方面，Bootstrap 是一个快速开发 Web App 和站点的工具包。在本教程中，我们已经讨论了有关使用带有 Less CSS 的 Bootstrap 知识。这样，您可以在 CSS 中使用 Bootstrap 的 Less 变量、mixins（混合）和 nesting（嵌套）。 获取 Bootstrap 和 Less CSS 您可以..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Bootstrap 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html" >
+	Bootstrap 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-intro.html" >
+	Bootstrap 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-css-overview.html" >
+	Bootstrap CSS 概览	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-grid-system.html" >
+	Bootstrap 网格系统	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-layout.html" >
+	Bootstrap 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-responsive-design.html" >
+	Bootstrap 响应式设计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typography.html" >
+	Bootstrap 排版	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tables.html" >
+	Bootstrap 表格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-forms.html" >
+	Bootstrap 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-icons.html" >
+	Bootstrap 图标	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button-tutorial.html" >
+	Bootstrap 按钮	</a><a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-image.html" >
+	Bootstrap 图像	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-glyphicons.html">
+	Bootstrap Glyphicons	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-list-group.html">
+	Bootstrap 清单组/价格表	</a>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-nav.html" >
+	Bootstrap 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-navbar.html" >
+	Bootstrap 导航条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-inlinelabels-badges.html" >
+	Bootstrap 内联标签和徽章	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-thumbnails.html" >
+	Bootstrap 缩略图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-progress-bars.html" >
+	Bootstrap 进度条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-breadcrumbs.html" >
+	Bootstrap 面包屑导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-pagination.html" >
+	Bootstrap 分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-alerts-errors.html" >
+	Bootstrap 警告和错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-less.html" >
+	Bootstrap LESS	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-media-object.html">
+	Bootstrap多媒体对象	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-panels.html">
+	Bootstrap面板	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-wells.html">
+	Bootstrap wells	</a>
+<br><h2 class="left"><span class="left_h2">Bootstrap JavaScript</span></h2>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-modals.html" >
+	Bootstrap 模态框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-popover.html" >
+	Bootstrap 弹出框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-dropdown.html" >
+	Bootstrap 下拉菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-scrollspy.html" >
+	Bootstrap 滚动监听	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-carousel.html" >
+	Bootstrap 轮播	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typeahead.html" >
+	Bootstrap Typeahead	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button.html" >
+	Bootstrap 按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-collapse.html" >
+	Bootstrap 折叠	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-ui-editor.html" >
+	Bootstrap UI 编辑器	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-alerts-errors.html" rel="prev"> Bootstrap 警告和错误</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-modals.html" rel="next">Bootstrap 模态框</a> &raquo;</div>
+	</div>
+
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/bootstrap/bootstrap.css" >
+
+<h1>Bootstrap <span class="color_h1">LESS</span></h1>
+<h2 class="tutheader">简介</h2>
+<div id="writeup">
+<p>Less 是一个 CSS 预处理器，让 CSS 具有动态性。另一方面，Bootstrap 是一个快速开发 Web App 和站点的工具包。在本教程中，我们已经讨论了有关使用带有 Less CSS 的 Bootstrap 知识。这样，您可以在 CSS 中使用 Bootstrap 的 Less 变量、mixins（混合）和 nesting（嵌套）。</p>
+<h2 class="tutheader">获取 Bootstrap 和 Less CSS</h2>
+<p>您可以从 GitHUB 获取 Bootstrap，从 lesscss.org 获取 Less CSS。</p>
+<h2 class="tutheader">包含哪些内容</h2>
+<p>一旦您下载了 Bootstrap，解压缩文件。Bootstrap 的 Less 组件位于 'lib' 目录下。自 Bootstrap v1.4.0 版本起，就包含有九个 less 文件。下面我们一起来看看这九个文件分别包含什么。</p>
+<h2 class="subheading">bootstrap.less</h2>
+<p>这是主要的 Less 文件。该文件中导入了一些其他的 less 文件。该文件中没有任何代码。</p>
+<h2 class="subheading">forms.less</h2>
+<p>这个 Less 文件包含了表单布局、输入框类型的样式。</p>
+<h2 class="subheading">mixins.less</h2>
+<p>这个 Less 文件让 CSS 代码可重复使用。</p>
+<h2 class="subheading">patterns.less</h2>
+<p>这个 Less 文件包含了重复的用户界面元素的 CSS 代码，不会被位于 scaffolding Less 文件中的基本样式覆盖。</p>
+<h2 class="subheading">reset.less</h2>
+<p>这个 Less 文件包含了 CSS 重置。这是 Eric Meyer 的 CSS 重置的一个更新。一些 HTML 元素比如 dfn、samp 等的重置被免除。</p>
+<h2 class="subheading">scaffolding.less</h2>
+<p>这个 Less 文件保存了创建网格系统、结构化布局、页面模板所需的基本样式。</p>
+<h2 class="subheading">tables.less</h2>
+<p>这个 Less 文件包含了创建表格的样式。</p>
+<h2 class="subheading">type.less</h2>
+<p>这个 Less 文件下可找到排版相关的样式。标题、段落、列表、代码等的样式位于这个文件里边。</p>
+<h2 class="subheading">variables.less</h2>
+<p>这个 Less 文件包含了要定制 Bootstrap 外观和感观的变量。</p>
+<h2 class="tutheader">如何使用</h2>
+<p>如果要使用它，请在您的 HTML 页面包含下面代码：</p>
+<div class="code"> &lt;link rel="stylesheet/less" href="lib/bootstrap.less" media="all" /&gt;<br />
+			    &lt;script src="js/less-1.1.5.min.js"&gt;&lt;/script&gt;
+</div>
+</div>
+<p>请注意，less-1.1.5.min.js 不在 js 文件夹内，您需要下载并把它放置在指定的文件夹下。</p>
+<h2 class="tutheader">如何编译</h2>
+
+<h2 class="subheading">使用 JavaScript</h2>
+<p>只需要简单的引用 less js 文件并重新加载页面。js 文件就会编译 less。</p>
+
+<h2 class="subheading">命令行</h2>
+<p>如果您已经安装了 Less 命令行（Command Line），原型下面要编译的命令：</p>
+<p class="code">$ lessc ./lib/bootstrap.less &gt; bootstrap.css</p>
+<p>如果您想要一个压缩的编译，可以使用 --compress 命令。</p>
+
+<h2 class="subheading">带有 makefile 的节点</h2>
+<p>首先，通过下面的命令安装 Less 命令行：</p>
+<p class="code">$ npm install lessc</p>
+<p class="code">然后从您的 bootstrap 根目录运行 &quot;make&quot; 。</p>
+<p class="code">如果您已经安装了 &quot;watch&quot; ，可以使用 &quot;make watch&quot; 命令。这样做之后，每当您编辑 lib 文件夹下的文件时，bootstrap 会自动重建。</p>
+
+<h2 class="subheading">Less Mac app</h2>
+<p>虽然是非官方的，但是这里有一个可用的 Less Mac 应用程序可用于编译。</p>
+
+<p><a href="/try/bootstrap/twitter-bootstrap.zip">点击这里，下载本教程中使用到的所有 HTML、CSS、JS 和图片文件。</a></p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-alerts-errors.html" rel="prev"> Bootstrap 警告和错误</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-modals.html" rel="next">Bootstrap 模态框</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		$("pre").css('background-image', 'none');
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.153 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 20:06:56 -->
+
+<!-- super cache -->

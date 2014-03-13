@@ -1,0 +1,925 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap 按钮 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='Python time tzset()方法' href='http://www.w3cschool.cc/python/att-time-tzset.html' />
+<link rel='next' title='Bootstrap 图像' href='http://www.w3cschool.cc/bootstrap/bootstrap-image.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/bootstrap/bootstrap-button-tutorial.html' />
+<meta name="keywords" content="Bootstrap 按钮,Bootstrap 教程">
+<meta name="description" content="Bootstrap 按钮 目标 按钮广泛应用于网站或应用程序中。在本教程中，我们将通过实例、实例解释来讨论如何使用 Boostrap 3 按钮，以及如何定制默认的按钮。 使用默认的按钮 下面的实例将演示如何通过 Bootstrap 3 快速创建按钮。           Default buttons from Bootstrap 3                         body {     padding: 50px   ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>Bootstrap 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html" >
+	Bootstrap 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-intro.html" >
+	Bootstrap 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-css-overview.html" >
+	Bootstrap CSS 概览	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-grid-system.html" >
+	Bootstrap 网格系统	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-layout.html" >
+	Bootstrap 布局	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-responsive-design.html" >
+	Bootstrap 响应式设计	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typography.html" >
+	Bootstrap 排版	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-tables.html" >
+	Bootstrap 表格	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-forms.html" >
+	Bootstrap 表单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-icons.html" >
+	Bootstrap 图标	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button-tutorial.html" >
+	Bootstrap 按钮	</a><a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-image.html" >
+	Bootstrap 图像	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-glyphicons.html">
+	Bootstrap Glyphicons	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-list-group.html">
+	Bootstrap 清单组/价格表	</a>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-nav.html" >
+	Bootstrap 导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-navbar.html" >
+	Bootstrap 导航条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-inlinelabels-badges.html" >
+	Bootstrap 内联标签和徽章	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-thumbnails.html" >
+	Bootstrap 缩略图	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-progress-bars.html" >
+	Bootstrap 进度条	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-breadcrumbs.html" >
+	Bootstrap 面包屑导航	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-pagination.html" >
+	Bootstrap 分页	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-alerts-errors.html" >
+	Bootstrap 警告和错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-less.html" >
+	Bootstrap LESS	</a>
+	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-media-object.html">
+	Bootstrap多媒体对象	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-panels.html">
+	Bootstrap面板	</a>
+<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-wells.html">
+	Bootstrap wells	</a>
+<br><h2 class="left"><span class="left_h2">Bootstrap JavaScript</span></h2>	<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-modals.html" >
+	Bootstrap 模态框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-popover.html" >
+	Bootstrap 弹出框	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-dropdown.html" >
+	Bootstrap 下拉菜单	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-scrollspy.html" >
+	Bootstrap 滚动监听	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-carousel.html" >
+	Bootstrap 轮播	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-typeahead.html" >
+	Bootstrap Typeahead	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-button.html" >
+	Bootstrap 按钮	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-collapse.html" >
+	Bootstrap 折叠	</a>
+		<a target="_top" href="http://www.w3cschool.cc/bootstrap/bootstrap-ui-editor.html" >
+	Bootstrap UI 编辑器	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-glyphicons.html" rel="prev"> Bootstrap Glyphicons</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-image.html" rel="next">Bootstrap 图像</a> &raquo;</div>
+	</div>
+
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/bootstrap/bootstrap.css" >
+
+<h1>Bootstrap <span class="color_h1">按钮</span></h1>
+<h2 class="tutheader">目标</h2>
+<p>按钮广泛应用于网站或应用程序中。在本教程中，我们将通过实例、实例解释来讨论如何使用 Boostrap 3 按钮，以及如何定制默认的按钮。</p>
+<h2 class="tutheader">使用默认的按钮</h2>
+<p>下面的实例将演示如何通过 Bootstrap 3 快速创建按钮。</p>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="dist/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+    &lt;style&gt;
+    body {
+    padding: 50px
+    }
+    &lt;/style&gt;
+    &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;!-- Standard button --&gt;
+&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;
+
+&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+
+&lt;!-- Indicates a successful or positive action --&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+
+&lt;!-- Contextual button for informational alert messages --&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+
+&lt;!-- Indicates caution should be taken with this action --&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+
+&lt;!-- Indicates a dangerous or potentially negative action --&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+
+&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+    &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+    &lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+    &lt;script src="dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>以上代码输出如下。您可以<a href="/try/tryit.php?filename=bootstrap-button-example" target="_blank">点击这里，在线查看实例</a>。</p>
+<img src="/wp-content/uploads/2013/12/default-buttons-screenshot.png" alt="Default buttons Bootstrap 3">
+<h3>CSS</h3>
+<p>我们将来探讨一下用来创建这些按钮的 CSS 规则。用于创建按钮的主要的 class 是 <em>btn</em>，如下所示。</p>
+<pre name="code" class="css">
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+</pre>
+<p>由于上面的 CSS 代码，按钮（带有 btn class）呈现为 inline-block，允许按钮与其具有共同基线的相邻元素内联呈现，但是您可以给它添加 width 和 height 属性。它的顶部填充和底部填充分别为 6 和 12 像素。底部外边距设置为 0。<p>
+<p>字体尺寸设置为 14 像素，且字体的粗细设置为 normal。带有 btn class 的按钮行高为 1.428571429，比默认高度 1 稍高一点。文本居中对齐。</p>
+<p>white-space 属性设置为 nowrap，所以新行、空格和制表符将会折叠。相关的垂直居中的元素将会定位于高度的中间。当您把鼠标悬浮于相关元素之上时，光标会呈现为指针形状。这里不会显示背景图片。</p>
+<p>这里将会呈现一个透明的，1 像素粗的实体边框。由于 <em>border-radius: 4px;</em>，相关按钮的边角将是圆角状的。通过增加或减少值 4px，您可以让圆角的圆度变得更大或更小。由于 <em>user-select: none</em>，相关按钮及子元素的文本将不可选。为了获得跨浏览器的一致性，相同的属性在应用时带有多个供应商的前缀。</p>
+<p>上面实例中显示的每个按钮除了 <em>btn</em> 之外还有另一个 CSS class，比如 btn-default、btn-primary 等等。这些 class 用于设置按钮的 <em>color</em>、<em>background-color</em> 和 <em>border</em> 属性。他们是用于常规按钮及带有链接状态（即 hover、active、focus 等等）按钮的 CSS 规则。</p>
+<p><em>btn-primary</em> class 的代码如下</p>
+<pre name="code" class="css">
+.btn-primary {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+</pre>
+<h3>不同尺寸的按钮</h3>
+<p>这里有三种尺寸可设置。为了设置每种尺寸，需要添加一个额外的 class。</p>
+<p><em>btn-lg</em> for setting large button.</p>
+<pre name="code" class="html">
+&lt;button type="button" class="btn btn-primary btn-lg"&gt;Large button&lt;/button&gt;
+</pre>
+<p>btn-lg class 的 CSS 代码如下</p>
+<pre name="code" class="css">
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+</pre>
+<p>使用 <em>btn-sm</em> 和 <em>btn-xs</em> 设置带有不同尺寸的按钮。</p>
+<pre name="code" class="html">
+&lt;button type="button" class="btn btn-primary btn-sm"&gt;Large button&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary btn-xs"&gt;Large button&lt;/button&gt;
+</pre>
+<p>btn-sm 和 btn-xs classe 的 CSS 代码如下</p>
+<pre name="code" class="css">
+.btn-sm,
+.btn-xs {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn-xs {
+  padding: 1px 5px;
+}
+</pre>
+<p>下面的代码演示了不同类型的带有不同尺寸的按钮。您可以<a href="/try/tryit.php?filename=bootstrap-button-of-different-sizes-example" target="_blank">点击这里，在线查看演示</a>。下面是效果截屏及代码。</p>
+<img src="/wp-content/uploads/2013/12/buttons-different-sizes-screenshot.png" alt="Buttons of different size">
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="dist/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+    &lt;style&gt;
+    body {
+    padding: 50px
+    }
+    &lt;/style&gt;
+    &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;!-- Standard button --&gt;
+&lt;p&gt;
+&lt;button type="button" class="btn btn-default btn-sm"&gt;Default small button&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-lg"&gt;Default large button&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-xs"&gt;Default extra small button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
+&lt;button type="button" class="btn btn-primary btn-sm"&gt;Small Primary button&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary btn-lg"&gt;Large Primary button&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary btn-xs"&gt;Extra small Primary button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Indicates a successful or positive action --&gt;
+&lt;button type="button" class="btn btn-success btn-sm"&gt;Small Success Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-success btn-lg"&gt;Large Success Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-success btn-xs"&gt;Extra small Success Button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Contextual button for informational alert messages --&gt;
+&lt;button type="button" class="btn btn-info btn-sm"&gt;Small Info Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-info btn-lg"&gt;Large Info Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-info btn-xs"&gt;Extra small Info Button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Indicates caution should be taken with this action --&gt;
+&lt;button type="button" class="btn btn-warning btn-sm"&gt;Small Warning Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning btn-lg"&gt;Large Warning Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning btn-xs"&gt;Extra small Warning Button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Indicates a dangerous or potentially negative action --&gt;
+&lt;button type="button" class="btn btn-danger btn-sm"&gt;Small Danger Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger btn-lg"&gt;Large Danger Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger btn-xs"&gt;Extra small Danger Button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;
+&lt;button type="button" class="btn btn-link btn-sm"&gt;Small Link with Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-link btn-lg"&gt;Large Link with Button&lt;/button&gt;
+&lt;/p&gt;
+
+    &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+    &lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+    &lt;script src="dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>块级按钮</h3>
+<p>如需使用按钮所在容器的所有宽度，Bootstrap 3 提供了块级按钮选项。您需要添加 <em>btn-block</em> class 到上面讨论的 class 中来创建块级按钮。</p>
+<pre name="code" class="html">
+&lt;button type="button" class="btn btn-primary btn-lg btn-block"&gt;Large button&lt;/button&gt;
+&lt;button type="button" class="btn btn-success btn-lg btn-block"&gt;Large button&lt;/button&gt;  
+</pre>
+<p>创建块级按钮的 CSS 定义如下</p>
+<pre name="code" class="css">
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+</pre>
+<p>下面显示了块级按钮的截屏和代码。您可以 <a href="/try/tryit.php?filename=bootstrap-block-level-buttons-example" target="_blank">点击这里，在线查看实例</a>。</p>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="dist/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+    &lt;style&gt;
+    body {
+    padding: 50px
+    }
+    &lt;/style&gt;
+    &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-12"&gt;
+&lt;!-- Standard button --&gt;
+&lt;p&gt;
+&lt;button type="button" class="btn btn-primary btn-sm btn-block"&gt;Default small block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-default btn-lg btn-block"&gt;Default large block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary btn-xs btn-block"&gt;Default extra block level button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
+&lt;button type="button" class="btn btn-primary btn-sm btn-block"&gt;Small Primary block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary btn-lg btn-block"&gt;Large Primary block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary btn-xs btn-block"&gt;Extra Large Primary block level button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Indicates a successful or positive action --&gt;
+&lt;button type="button" class="btn btn-success btn-sm btn-block"&gt;Small Success block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-success btn-lg btn-block"&gt;Large Success block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-success btn-xs btn-block"&gt;Extra large Success block level button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Contextual button for informational alert messages --&gt;
+&lt;button type="button" class="btn btn-info btn-sm btn-block"&gt;Small Info block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-info btn-lg btn-block"&gt;Large Info block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-info btn-xs btn-block"&gt;Extra Large Info block level button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Indicates caution should be taken with this action --&gt;
+&lt;button type="button" class="btn btn-warning btn-sm btn-block"&gt;Small Warning block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning btn-lg btn-block"&gt;Large Warning block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning btn-xs btn-block"&gt;Extra Large Warning block level button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Indicates a dangerous or potentially negative action --&gt;
+&lt;button type="button" class="btn btn-danger btn-sm btn-block"&gt;Small Danger block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger btn-lg btn-block"&gt;Large Danger block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger btn-xs btn-block"&gt;Extra Large Danger block level button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;
+&lt;button type="button" class="btn btn-link btn-sm btn-block"&gt;Small Link with block level button&lt;/button&gt;
+&lt;button type="button" class="btn btn-link btn-lg btn-block"&gt;Large Link with block level button&lt;/button&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+    &lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+    &lt;script src="dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<img src="/wp-content/uploads/2013/12/buttons-block-level-screenshot.png" alt="Block level buttons">
+<h3>活动的按钮</h3>
+<p>您可以使用 <em>active</em> CSS class 来给按钮或链接添加不同的外观，以显示它是活动的。这里是一个 <a href="/try/tryit.php?filename=bootstrap-active-buttons-example" target="_blank">实例演示</a>、截屏和代码。</p>
+<img src="/wp-content/uploads/2013/12/buttons-active-screenshot.png" alt="Active buttons">
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="dist/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+    &lt;style&gt;
+    body {
+    padding: 50px
+    }
+    &lt;/style&gt;
+    &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;!-- Standard button --&gt;
+&lt;button type="button" class="btn btn-default active"&gt;Default&lt;/button&gt;
+
+&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
+&lt;button type="button" class="btn btn-primary active"&gt;Primary&lt;/button&gt;
+
+&lt;!-- Indicates a successful or positive action --&gt;
+&lt;button type="button" class="btn btn-success active"&gt;Success&lt;/button&gt;
+
+&lt;!-- Contextual button for informational alert messages --&gt;
+&lt;button type="button" class="btn btn-info active"&gt;Info&lt;/button&gt;
+
+&lt;!-- Indicates caution should be taken with this action --&gt;
+&lt;button type="button" class="btn btn-warning active"&gt;Warning&lt;/button&gt;
+
+&lt;!-- Indicates a dangerous or potentially negative action --&gt;
+&lt;button type="button" class="btn btn-danger active"&gt;Danger&lt;/button&gt;
+
+&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;
+&lt;button type="button" class="btn btn-link active"&gt;Link&lt;/button&gt;
+    &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+    &lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+    &lt;script src="dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>使用 Chrome 开发者工具，我们会发现当按钮被添加了 <em>active</em> class 时，CSS 规则生效。</p>
+<p>Default 活动按钮</p>
+<pre name="code" class="css">
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+color: #333;
+background-color: #ebebeb;
+border-color: #adadad;
+}
+</pre>
+<p>Primary 活动按钮</p>
+<pre name="code" class="css">
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+color: #fff;
+background-color: #3276b1;
+border-color: #285e8e;
+}
+</pre>
+<p>Success 活动按钮</p>
+<pre name="code" class="css">
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
+color: #fff;
+background-color: #47a447;
+border-color: #398439;
+}
+</pre>
+<p>Info 活动按钮</p>
+<pre name="code" class="css">
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
+color: #fff;
+background-color: #39b3d7;
+border-color: #269abc;
+}
+</pre>
+<p>Warning 活动按钮</p>
+<pre name="code" class="css">
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open .dropdown-toggle.btn-warning {
+color: #fff;
+background-color: #ed9c28;
+border-color: #d58512;
+}
+</pre>
+<p>Danger 活动按钮</p>
+<pre name="code" class="css">
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger {
+color: #fff;
+background-color: #d2322d;
+border-color: #ac2925;
+}
+</pre>
+<p>Link 活动按钮</p>
+<pre name="code" class="css">
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+border-color: transparent;
+}
+</pre>
+<p>所以，您可以看到这些是通过改变 color、backgound-color 和 border-color 属性来实现的。</p>
+<h3>禁用的按钮</h3>
+<p>您可以使用 <em>disabled</em> CSS class 来给按钮或链接添加不同的外观，以显示它是禁用的。这里是一个 <a href="/try/tryit.php?filename=bootstrap-disabled-buttons-example" target="_blank">实例演示</a>、截屏和代码。</p>
+<p>为了使按钮有点模糊，使用下面的 CSS 规则（通过 Chrome 开发者工具查找）</p>
+<pre name="code" class="css">
+.btn[disabled], fieldset[disabled] .btn {
+pointer-events: none;
+cursor: not-allowed;
+opacity: .65;
+filter: alpha(opacity=65);
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+</pre>
+<img src="/wp-content/uploads/2013/12/buttons-disabled-screenshot.png" alt="Disabled Buttons">
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="dist/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+    &lt;style&gt;
+    body {
+    padding: 50px
+    }
+    &lt;/style&gt;
+    &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;!-- Standard button --&gt;
+&lt;button type="button" class="btn btn-default" disabled="disabled"&gt;Default&lt;/button&gt;
+
+&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
+&lt;button type="button" class="btn btn-primary" disabled="disabled"&gt;Primary&lt;/button&gt;
+
+&lt;!-- Indicates a successful or positive action --&gt;
+&lt;button type="button" class="btn btn-success" disabled="disabled"&gt;Success&lt;/button&gt;
+
+&lt;!-- Contextual button for informational alert messages --&gt;
+&lt;button type="button" class="btn btn-info" disabled="disabled"&gt;Info&lt;/button&gt;
+
+&lt;!-- Indicates caution should be taken with this action --&gt;
+&lt;button type="button" class="btn btn-warning" disabled="disabled"&gt;Warning&lt;/button&gt;
+
+&lt;!-- Indicates a dangerous or potentially negative action --&gt;
+&lt;button type="button" class="btn btn-danger" disabled="disabled"&gt;Danger&lt;/button&gt;
+    &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+    &lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+    &lt;script src="dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>禁用的锚元素</h3>
+<p>当带有 btn 和其他相关的 class 的锚元素呈现为禁用状态时，它与平常有点不同。首先，锚元素的链接仍然存在，只有外观和感观改变了。此外，您不能在导航栏中使用它们。</p>
+<p><a href="/try/tryit.php?filename=bootstrap-disabled-anchor-buttons-example" target="_blank">点击这里，在线查看演示</a>。代码如下：</p>
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="dist/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+    &lt;style&gt;
+    body {
+    padding: 50px
+    }
+    &lt;/style&gt;
+    &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;!-- Standard button --&gt;
+&lt;a href="http://www.example.com" class="btn btn-default disabled" role="button"&gt;Default&lt;/a&gt;
+
+&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
+&lt;a href="http://www.example.com" class="btn btn-primary disabled" role="button"&gt;Primary&lt;/a&gt;
+
+&lt;!-- Indicates a successful or positive action --&gt;
+&lt;a href="http://www.example.com" class="btn btn-success disabled" role="button"&gt;Success&lt;/a&gt;
+
+&lt;!-- Contextual button for informational alert messages --&gt;
+&lt;a href="http://www.example.com" class="btn btn-info disabled" role="button"&gt;Info&lt;/a&gt;
+
+&lt;!-- Indicates caution should be taken with this action --&gt;
+&lt;a href="http://www.example.com" class="btn btn-warning disabled" role="button"&gt;Warning&lt;/a&gt;
+
+&lt;!-- Indicates a dangerous or potentially negative action --&gt;
+&lt;a href="http://www.example.com" class="btn btn-danger disabled" role="button"&gt;Danger&lt;/a&gt;
+    &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+    &lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+    &lt;script src="dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>请注意，<em>role="button"</em> 是为了便于使用的目的而使用的。</p>
+<h3>按钮标签</h3>
+<p>您可以通过 button、a 和 input 元素使用按钮 class，来把按钮当成标签使用。但是推荐您通常是通过 button 元素来使用，否则它将引起跨浏览器不一致问题。</p>
+<p>下面的实例演示了如何使用按钮标签</p>
+<img src="/wp-content/uploads/2013/12/buttons-tags-screenshot.png" alt="button tags example screenshot">
+<pre name="code" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="dist/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+    &lt;style&gt;
+    body {
+    padding: 50px
+    }
+    &lt;/style&gt;
+    &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;p&gt;
+&lt;a class="btn btn-default" href="#" role="button"&gt;Link&lt;/a&gt;
+&lt;button class="btn btn-default" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn btn-default" type="button" value="Input"&gt;
+&lt;input class="btn btn-default" type="submit" value="Submit"&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="btn btn-primary" href="#" role="button"&gt;Link&lt;/a&gt;
+&lt;button class="btn btn-primary" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn btn-primary" type="button" value="Input"&gt;
+&lt;input class="btn btn-primary" type="submit" value="Submit"&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="btn btn-success" href="#" role="button"&gt;Link&lt;/a&gt;
+&lt;button class="btn btn-success" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn btn-success" type="button" value="Input"&gt;
+&lt;input class="btn btn-success" type="submit" value="Submit"&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="btn btn-info" href="#" role="button"&gt;Link&lt;/a&gt;
+&lt;button class="btn btn-info" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn btn-info" type="button" value="Input"&gt;
+&lt;input class="btn btn-info" type="submit" value="Submit"&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="btn btn-warning" href="#" role="button"&gt;Link&lt;/a&gt;
+&lt;button class="btn btn-warning" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn btn-warning" type="button" value="Input"&gt;
+&lt;input class="btn btn-warning" type="submit" value="Submit"&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="btn btn-danger" href="#" role="button"&gt;Link&lt;/a&gt;
+&lt;button class="btn btn-danger" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn btn-danger" type="button" value="Input"&gt;
+&lt;input class="btn btn-danger" type="submit" value="Submit"&gt;
+&lt;/p&gt;
+    &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+    &lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+    &lt;script src="dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p><a href="/try/tryit.php?filename=bootstrap-button-tags-example" target="_blank">点击这里，在线查看演示。</a></p>
+<h2 class="tutheader">定制按钮</h2>
+<p>现在我们将以默认按钮开始进行定制，让它拥有一个完全不同的外观和感观。</p>
+<p>我们将按如下的按钮代码开始</p>
+<pre name="code" class="html">
+&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;
+</pre>
+<p>现在我们要创建一个 CSS class <em>btn-w3r</em>，并用它替换 btn-default。所以，我们将编写如下代码来取代上面的代码</p>
+<pre name="code" class="html">
+&lt;button type="button" class="btn btn-w3r"&gt;Default&lt;/button&gt;
+</pre>
+<p>首先我们将改变背景颜色，添加如下的 CSS</p>
+<pre name="code" class="html">
+.btn-w3r {
+    background: #cb60b3; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cb60b3 0%, #ad1283 50%, #de47ac 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cb60b3), color-stop(50%,#ad1283), color-stop(100%,#de47ac)); /   *   Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#de47ac',GradientType=0 ); /* IE6-9 */
+    }
+</pre>
+<p>现在按钮如下所示</p>
+<img src="/wp-content/uploads/2013/12/customized-button-step-one-screenshot.png" alt="customized button step one screenshot">
+<p>如需改变字体颜色，我们将在已存在的 <em>btn-w3r</em> class 的 CSS 代码后追加如下的 CSS</p>
+<pre name="code" class="css">
+color:#fff;
+</pre>
+<img src="/wp-content/uploads/2013/12/customized-button-step-two-screenshot.png" alt="customized button step two screenshot">
+<p>现在，为了让按钮形状看起来像圆形，我们将在已存在的 <em>btn-w3r</em> class 的 CSS 代码前添加如下的 CSS</p>
+<pre name="code" class="css">
+width: 200px;
+    height: 200px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+</pre>
+<img src="/wp-content/uploads/2013/12/customized-button-step-three-screenshot.png" alt="customized button step three screenshot">
+<p>如需添加一个悬停效果，我们将添加如下的 CSS 代码</p>
+<pre name="code" class="css">
+.btn-w3r:hover {
+    background: #333; 
+    color:#e75616;
+    }
+</pre>
+<p>下面是添加上述 CSS 代码后的按钮悬停效果</p>
+<img src="/wp-content/uploads/2013/12/customized-button-step-four-screenshot.png" alt="customized button step four screenshot">
+<p>您可以 <a href="/try/tryit.php?filename=bootstrap-button-customized-example" target="_blank">点击这里，查看我们所创建的定制按钮的在线演示</a>。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/bootstrap/bootstrap-glyphicons.html" rel="prev"> Bootstrap Glyphicons</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/bootstrap/bootstrap-image.html" rel="next">Bootstrap 图像</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		$("pre").css('background-image', 'none');
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.168 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 19:01:00 -->
+
+<!-- super cache -->

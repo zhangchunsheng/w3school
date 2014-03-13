@@ -1,0 +1,526 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>Window 对象 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='HTML DOM anchors 集合' href='http://www.w3cschool.cc/jsref/coll-doc-anchors.html' />
+<link rel='next' title='Window frames 属性' href='http://www.w3cschool.cc/jsref/prop-win-frames.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/jsref/obj-window.html' />
+<meta name="keywords" content="Window 对象,JavaScript 参考手册">
+<meta name="description" content="The Window 对象  Window 对象 Window 对象表示浏览器中打开的窗口。 如果文档包含框架（&lt;frame&gt; 或 &lt;iframe&gt; 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。 注意： 没有应用于 window 对象的公开标准，不过所有浏览器都支持该对象。  Window 对象属性    属性     描述     closed..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JavaScript 参考手册</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-tutorial.html" >
+	概览	</a>
+	<br/><h2 class="left"><span class="left_h2">JavaScript</span> 对象</h2>	<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-array.html" >
+	JavaScript Array 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-boolean.html" >
+	JavaScript Boolean 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-date.html" >
+	JavaScript Date 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-math.html" >
+	JavaScript Math 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-number.html" >
+	JavaScript Number 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-string.html" >
+	JavaScript String 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-regexp.html" >
+	JavaScript RegExp 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/jsref-obj-global.html" >
+	JavaScript 全局属性/函数	</a>
+	<br /><h2 class="left"><span class="left_h2">Browser</span> 对象</h2>	<a target="_top" href="http://www.w3cschool.cc/jsref/obj-window.html" >
+	Window 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/obj-navigator.html" >
+	Navigator 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/obj-screen.html" >
+	Screen 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/obj-history.html" >
+	History 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/obj-location.html" >
+	Location 对象	</a>
+	<br/><h2 class="left"><span class="left_h2">DOM</span> 对象</h2>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-document.html" >
+	HTML DOM Document 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-all.html" >
+	HTML DOM 元素对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-attributes.html" >
+	HTML DOM 属性对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-event.html" >
+	HTML DOM 事件（Event）对象	</a>
+	<br/><h2 class="left"><span class="left_h2">HTML </span>对象</h2>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-anchor.html" >
+	&lt;a&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-area.html" >
+	&lt;area&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-base.html" >
+	&lt;base&gt;	</a>
+	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-blockquote.html">&lt;blockquote&gt;	</a>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-body.html" >
+	&lt;body&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-pushbutton.html" >
+	&lt;button&gt;	</a>
+	<a target="_top" href="dom-obj-col.html" class="menu_dom_obj_col">&lt;col&gt;</a>
+<a target="_top" href="dom-obj-colgroup.html" class="menu_dom_obj_colgroup">&lt;colgroup&gt;</a>
+<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-del.html">&lt;del&gt;</a>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-form.html" >
+	&lt;form&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-frame.html" >
+	&lt;iframe&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-frameset.html" >
+	&lt;frameset &gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-image.html" >
+	&lt;img&gt;	</a>
+	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-ins.html">
+	&lt;ins&gt;	</a>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-button.html" >
+	&lt;input&gt; - button	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-checkbox.html" >
+	&lt;input&gt; - checkbox	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-fileupload.html" >
+	&lt;input&gt;  - file	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-hidden.html" >
+	&lt;input&gt; -  hidden	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-password.html" >
+	&lt;input&gt; -  password	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-radio.html" >
+	&lt;input&gt; -  radio	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-reset.html" >
+	&lt;input&gt; -  reset	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-submit.html" >
+	&lt;input;&gt; - submit	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-text.html" >
+	&lt;input&gt; - text	</a>
+	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-keygen.html">
+	&lt;keygen&gt;	</a>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-link.html" >
+	&lt;link&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-meta.html" >
+	&lt;meta&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-object.html" >
+	&lt;object&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-option.html" >
+	&lt;option&gt;	</a>
+	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-quote.html"> &lt;q&gt;	</a>	<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-select.html" >
+	&lt;select&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-style.html" >
+	&lt;style&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-table.html" >
+	&lt;table&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-tabledata.html" >
+	&lt;td&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-tablerow.html" >
+	&lt;tr&gt;	</a>
+		<a target="_top" href="http://www.w3cschool.cc/jsref/dom-obj-textarea.html" >
+	&lt;textarea&gt;	</a>
+	</div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsref/coll-doc-anchors.html" rel="prev"> HTML DOM anchors 集合</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsref/prop-win-frames.html" rel="next">Window frames 属性</a> &raquo;</div>
+	</div>
+
+	<h1>The <span class="color_h1">Window</span> 对象</h1>
+<hr />
+<h2>Window 对象</h2>
+<p>Window 对象表示浏览器中打开的窗口。</p>
+<p>如果文档包含框架（&lt;frame&gt; 或 &lt;iframe&gt; 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。</p>
+<p><img src="/images/lamp.gif" alt="Note"><b>注意：</b> 没有应用于 window 对象的公开标准，不过所有浏览器都支持该对象。</p>
+<hr />
+<h2>Window 对象属性</h2>
+
+<table class="reference">
+<tr>
+<th width="20%" align="left">属性</th>
+    <th width="80%" align="left">描述</th>
+  </tr>
+<tr>
+<td><a href="prop-win-closed.html">closed</a></td>
+    <td>返回窗口是否已被关闭。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-defaultstatus.html">defaultStatus</a></td>
+    <td>设置或返回窗口状态栏中的默认文本。</td>
+  </tr>
+<tr>
+<td><a href="dom-obj-document.html">document</a></td>
+    <td>对 Document 对象的只读引用。(请参阅<a href="dom-obj-document.html">对象</a>)</td>
+  </tr>
+<tr>
+<td><a href="prop-win-frames.html">frames</a></td>
+    <td>返回窗口中所有命名的框架。该集合是 Window 对象的数组，每个 Window 对象在窗口中含有一个框架。</td>
+  </tr>
+<tr>
+<td><a href="obj-history.html">history</a></td>
+    <td>对 History 对象的只读引用。请参数 <a href="obj-history.html">History 对象</a>。 </td>
+  </tr>
+<tr>
+<td><a href="prop-win-innerheight.html">innerHeight</a></td>
+    <td>返回窗口的文档显示区的高度。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-innerheight.html">innerWidth</a></td>
+    <td>返回窗口的文档显示区的宽度。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-length.html">length</a></td>
+    <td>设置或返回窗口中的框架数量。</td>
+  </tr>
+<tr>
+<td><a href="obj-location.html">location</a></td>
+    <td>用于窗口或框架的 Location 对象。请参阅 <a href="obj-location.html">Location 对象</a>。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-name.html">name</a></td>
+    <td>设置或返回窗口的名称。</td>
+  </tr>
+<tr>
+<td><a href="obj-navigator.html">navigator</a></td>
+    <td>对 Navigator 对象的只读引用。请参数 <a href="obj-navigator.html">Navigator 对象</a>。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-opener.html">opener</a></td>
+    <td>返回对创建此窗口的窗口的引用。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-outerheight.html">outerHeight</a></td>
+    <td>返回窗口的外部宽度。 包含工具条与滚动条。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-outerheight.html">outerWidth</a></td>
+    <td>返回窗口的外部宽度。 包含工具条与滚动条。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-pagexoffset.html">pageXOffset</a></td>
+    <td>设置或返回当前页面相对于窗口显示区左上角的 X 位置。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-pagexoffset.html">pageYOffset</a></td>
+    <td>设置或返回当前页面相对于窗口显示区左上角的 Y 位置。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-parent.html">parent</a></td>
+    <td>返回父窗口。</td>
+  </tr>
+<tr>
+<td><a href="obj-screen.html">screen</a></td>
+    <td>对 Screen 对象的只读引用。请参数 <a href="obj-screen.html">Screen 对象</a>。</a>
+</td>
+  </tr>
+<tr>
+<td><a href="prop-win-screenleft.html">screenLeft</a></td>
+    <td>返回相对于屏幕窗口的x坐标</td>
+  </tr>
+<tr>
+<td><a href="prop-win-screenleft.html">screenTop</a></td>
+    <td>返回相对于屏幕窗口的y坐标</td>
+  </tr>
+<tr>
+<td><a href="prop-win-screenx.html">screenX</a></td>
+    <td>返回相对于屏幕窗口的x坐标</td>
+  </tr>
+<tr>
+<td><a href="prop-win-screenx.html">screenY</a></td>
+    <td>返回相对于屏幕窗口的y坐标</td>
+  </tr>
+<tr>
+<td><a href="prop-win-self.html">self</a></td>
+    <td>返回对当前窗口的引用。等价于 Window 属性。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-status.html">status</a></td>
+    <td>置窗口状态栏的文本。</td>
+  </tr>
+<tr>
+<td><a href="prop-win-top.html">top</a></td>
+    <td>返回最顶层的父窗口。</td>
+  </tr>
+</table>
+<h2>Window 对象方法</h2>
+<table class="reference notranslate">
+<tr>
+<th width="20%" align="left">方法</th>
+    <th width="80%" align="left">描述</th>
+  </tr>
+<tr>
+<td><a href="met-win-alert.html">alert()</a></td>
+    <td>显示带有一段消息和一个确认按钮的警告框。</td>
+  </tr>
+<tr>
+<td><a href="met-win-blur.html">blur()</a></td>
+    <td>把键盘焦点从顶层窗口移开。</td>
+    </tr>
+<tr>
+<td><a href="met-win-clearinterval.html">clearInterval()</a></td>
+    <td>取消由 setInterval() 设置的 timeout。</td>
+    </tr>
+<tr>
+<td><a href="met-win-cleartimeout.html">clearTimeout()</a></td>
+    <td>取消由 setTimeout() 方法设置的 timeout。</td>
+    </tr>
+<tr>
+<td><a href="met-win-close.html">close()</a></td>
+    <td>关闭浏览器窗口。</td>
+    </tr>
+<tr>
+<td><a href="met-win-confirm.html">confirm()</a></td>
+    <td>显示带有一段消息以及确认按钮和取消按钮的对话框。</td>
+    </tr>
+<tr>
+<td><a href="met-win-createpopup.html">createPopup()</a></td>
+    <td>创建一个 pop-up 窗口。</td>
+    </tr>
+<tr>
+<td><a href="met-win-focus.html">focus()</a></td>
+    <td>把键盘焦点给予一个窗口。</td>
+    </tr>
+<tr>
+<td><a href="met-win-moveby.html">moveBy()</a></td>
+    <td>可相对窗口的当前坐标把它移动指定的像素。</td>
+    </tr>
+<tr>
+<td><a href="met-win-moveto.html">moveTo()</a></td>
+    <td>把窗口的左上角移动到一个指定的坐标。</td>
+    </tr>
+<tr>
+<td><a href="met-win-open.html">open()</a></td>
+    <td>打开一个新的浏览器窗口或查找一个已命名的窗口。</td>
+    </tr>
+<tr>
+<td><a href="met-win-print.html">print()</a></td>
+    <td>打印当前窗口的内容。</td>
+    </tr>
+<tr>
+<td><a href="met-win-prompt.html">prompt()</a></td>
+    <td>显示可提示用户输入的对话框。</td>
+    </tr>
+<tr>
+<td><a href="met-win-resizeby.html">resizeBy()</a></td>
+    <td>按照指定的像素调整窗口的大小。</td>
+    </tr>
+<tr>
+<td><a href="met-win-resizeto.html">resizeTo()</a></td>
+    <td>把窗口的大小调整到指定的宽度和高度。</td>
+    </tr>
+<tr>
+<td>scroll()</td>
+    <td> </td>
+    </tr>
+<tr>
+<td><a href="met-win-scrollby.html">scrollBy()</a></td>
+    <td>按照指定的像素值来滚动内容。</td>
+    </tr>
+<tr>
+<td><a href="met-win-scrollto.html">scrollTo()</a></td>
+    <td>把内容滚动到指定的坐标。</td>
+    </tr>
+<tr>
+<td><a href="met-win-setinterval.html">setInterval()</a></td>
+    <td>按照指定的周期（以毫秒计）来调用函数或计算表达式。</td>
+    </tr>
+<tr>
+<td><a href="met-win-settimeout.html">setTimeout()</a></td>
+    <td>在指定的毫秒数后调用函数或计算表达式。</td>
+    </tr>
+</table>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/jsref/coll-doc-anchors.html" rel="prev"> HTML DOM anchors 集合</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/jsref/prop-win-frames.html" rel="next">Window frames 属性</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.429 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-05 03:45:05 -->
+
+<!-- super cache -->

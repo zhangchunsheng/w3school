@@ -1,0 +1,493 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript 函数 | w3cschool菜鸟教程</title>
+	<link rel='prev' title='JavaScript 对象' href='http://www.w3cschool.cc/js/js-obj-intro.html' />
+<link rel='next' title='JavaScript 运算符' href='http://www.w3cschool.cc/js/js-operators.html' />
+<link rel='canonical' href='http://www.w3cschool.cc/js/js-functions.html' />
+<meta name="keywords" content="JavaScript 函数,JS 教程">
+<meta name="description" content="JavaScript 函数   函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。   实例  	&lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;script&gt; function myFunction() { alert('Hello World!'); } &lt;/script&gt; &lt;/head&gt; &lt;body&gt; &lt;button  ..">
+
+	<!--[if lt IE 7]>
+	<style>
+	#leftcolumn{margin-left:0}
+	</style>
+	<![endif]-->
+	<link rel="shortcut icon" href="http://www.w3cschool.cc/favicon.ico" mce_href="http://www.w3cschool.cc/favicon.ico" type="image/x-icon" >
+	<script src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/css/stdtheme.css?1.02" >
+	
+	</head>
+<body>
+<div id="top">
+	<div style="height:78px;">
+		<div id="topLogo">
+			<a id="top"></a>
+			<a href="http://www.w3cschool.cc" title="w3cschool菜鸟教程"><img width="336" height="69" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/logo.png"  alt="W3CSchool.cc" style="border:0;margin-top:5px;" /></a>
+		</div>
+		<div id="searchTranslate">
+			<div id="searchText">Search w3cschool.cc:</div>
+			<div id="googleSearch">
+			<form name="cse" id="searchbox_demo" action="http://www.google.com.hk/search">
+				  <input type="hidden" name="cref" value="" />
+				  <input type="hidden" name="ie" value="utf-8" />
+				  <input type="hidden" name="hl" value="" />
+				  <input type="hidden" name="sitesearch" value="w3cschool.cc">
+				  <input name="as_q" type="text" size="20" />
+				  <input type="submit" name="sa" value="搜索" />
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	<div id="topnav">
+		<div id="topnavTut">
+			<a href="http://www.w3cschool.cc">首页</a>
+			<a href="http://www.w3cschool.cc/html/html-tutorial.html">HTML</a>
+			<a href="http://www.w3cschool.cc/css/css-tutorial.html">CSS</a>
+			<a href="http://www.w3cschool.cc/js/js-tutorial.html">JavaScript</a>
+			<a href="http://www.w3cschool.cc/jquery/jquery-tutorial.html">jQuery</a>
+				<a href="http://www.w3cschool.cc/jqueryui/jqueryui-tutorial.html">jQueryUI</a>
+			<a href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap</a>
+			<a href="http://www.w3cschool.cc/jquerymobile/jquerymobile-tutorial.html">jQueryMobile</a>
+			<a href="http://www.w3cschool.cc/jeasyui/jqueryeasyui-tutorial.html">jQueryEasyUI</a>
+			<a href="http://www.w3cschool.cc/xml/xml-tutorial.html">XML</a>
+			<a href="http://www.w3cschool.cc/sql/sql-tutorial.html">SQL</a>
+			<a href="http://www.w3cschool.cc/sqlite/sqlite-tutorial.html">SQLite</a>
+			<a href="http://www.w3cschool.cc/php/php-tutorial.html">PHP</a>
+			<a href="http://www.w3cschool.cc/python/python-tutorial.html">Python</a>
+			<a href="http://www.w3cschool.cc/java/java-tutorial.html">Java</a>
+			<a href="http://www.w3cschool.cc/jsp/jsp-tutorial.html">Jsp</a>
+			<a href="http://www.w3cschool.cc/ios/ios-tutorial.html">IOS</a>
+			<a href="http://www.w3cschool.cc/css-radius">前端工具</a>
+			<a href="http://www.w3cschool.cc/sitemap">更多……</a>
+			
+		</div>
+		<div id="topnavAbout">
+				</div>
+	</div>
+
+	<div id="page">
+		<!-- TopLeftRectangle -->
+		
+		<div style="clear:both;"></div>
+<div id="leftcolumn">
+	
+	<h2 class="left"><strong>JS 教程</strong></h2>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-tutorial.html" >
+	JavaScript 教程	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-intro.html" >
+	JavaScript 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-howto.html" >
+	JavaScript 用法	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-whereto.html" >
+	JavaScript 输出	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-statements.html" >
+	JavaScript 语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-comments.html" >
+	JavaScript 注释	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-variables.html" >
+	JavaScript  变量	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-datatypes.html" >
+	JavaScript 数据类型	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-intro.html" >
+	JavaScript 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-functions.html" >
+	JavaScript 函数	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-operators.html" >
+	JavaScript 运算符	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-comparisons.html" >
+	JavaScript 比较	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-if-else.html" >
+	JavaScript 条件语句	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-switch.html" >
+	JavaScript Switch	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-loop-for.html" >
+	JavaScript for 循环	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-loop-while.html" >
+	JavaScript while	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-break.html" >
+	JavaScript Breaks	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-errors.html" >
+	JavaScript  错误	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-form-validation.html" >
+	JavaScript 表单验证	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> HTML DOM</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom.html" >
+	DOM 简介	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-html.html" >
+	DOM HTML	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-css.html" >
+	DOM CSS	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-events.html" >
+	DOM 事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-htmldom-elements.html" >
+	DOM 元素	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 高级教程</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-objects.html" >
+	JavaScript 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-number.html" >
+	JavaScript Number 对象	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-string.html" >
+	JavaScript String	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-date.html" >
+	JavaScript Date（日期）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-array.html" >
+	JavaScript  Array（数组）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-boolean.html" >
+	JavaScript Boolean（布尔）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-math.html" >
+	JavaScript Math（算数）	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-obj-regexp.html" >
+	JavaScript RegExp 对象	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 浏览器BOM</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-window.html" >
+	JavaScript Window	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-screen.html" >
+	JavaScript Window Screen	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-location.html" >
+	JavaScript Window Location	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-history.html" >
+	JavaScript Window History	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-window-navigator.html" >
+	JavaScript Navigator	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-popup.html" >
+	JavaScript 弹窗	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-timing.html" >
+	JavaScript 计时事件	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-cookies.html" >
+	JavaScript Cookies	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 库</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-libraries.html" >
+	JavaScript 库	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-lib-jquery.html" >
+	JavaScript 测试 jQuery	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-lib-prototype.html" >
+	JavaScript 测试 Prototype	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 实例</h2>	<a target="_top" href="http://www.w3cschool.cc/js/js-examples.html" >
+	JavaScript 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-objects.html" >
+	JavaScript 对象实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-browser.html" >
+	JavaScript 浏览器对象实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-ex-dom.html" >
+	JavaScript HTML DOM 实例	</a>
+		<a target="_top" href="http://www.w3cschool.cc/js/js-summary.html" >
+	JavaScript 总结	</a>
+	<br><h2 class="left"><span class="left_h2">JS</span> 参考手册</h2>
+<a target="_top" href="/jsref/jsref-tutorial.html">JavaScript 对象</a>
+<a target="_top" href="/jsref/dom-obj-document.html">HTML DOM 对象</a></div><div id="main">
+<div id="mainLeaderboard">
+<div style="width:728px;height:90px;float:right;">
+<script type="text/javascript">
+/*w3cschool-single*/
+var cpro_id = "u1419468";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+</div>
+
+	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/js/js-obj-intro.html" rel="prev"> JavaScript 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/js/js-operators.html" rel="next">JavaScript 运算符</a> &raquo;</div>
+	</div>
+
+	<h1>JavaScript <span class="color_h1">函数</span>
+</h1>
+<hr />
+<p class="intro">函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;script&gt;<br /><span class="marked">
+function myFunction()<br />
+{<br />
+alert("Hello World!");<br />
+}</span><br />
+&lt;/script&gt;<br />
+&lt;/head&gt;<br /><br />
+&lt;body&gt;<br />
+&lt;button 
+onclick="<span class="marked">myFunction()</span>"&gt;Try it&lt;/button&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</div>
+</div>
+<br /><hr />
+<h2>JavaScript 函数语法</h2>
+<p>函数就是包裹在花括号中的代码块，前面使用了关键词 function：</p>
+<div class="code notranslate"><div>
+
+function <i>functionname</i>()<br />
+{<br /><i>执行代码</i><br />
+}</div></div>
+
+<p>当调用该函数时，会执行函数内的代码。</p>
+<p>可以在某事件发生时直接调用函数（比如当用户点击按钮时），并且可由 JavaScript 在任何位置进行调用。</p>
+<table class="lamp"><tr>
+<th width="34"><img src="/images/lamp.jpg" width="32" height="32" alt="lamp"></th>
+<td>JavaScript 对大小写敏感。关键词 function 必须是小写的，并且必须以与函数名称相同的大小写来调用函数。</td>
+</tr></table>
+<br /><hr />
+<h2>调用带参数的函数</h2>
+<p>在调用函数时，您可以向其传递值，这些值被称为参数。</p>
+
+<p>这些参数可以在函数中使用。</p>
+
+<p>您可以发送任意多的参数，由逗号 (,) 分隔：</p>
+<div class="code notranslate"><div>
+	myFunction(<i>argument1,argument2</i>)<br />
+</div></div>
+
+<p>当您声明函数时，请把参数作为变量来声明： </p>
+<div class="code notranslate"><div>
+function myFunction(<em><span class="marked">var1</span></em>,<em><span class="marked">var2</span></em>)<br />{<br /><i>代码</i><br />
+}</div></div>
+
+<p>变量和参数必须以一致的顺序出现。第一个变量就是第一个被传递的参数的给定的值，以此类推。</p>
+<div class="example">
+	<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;button
+onclick="myFunction(<span class="marked">'Harry Potter'</span>,<span class="marked">'Wizard'</span>)"&gt;Try 
+	it&lt;/button&gt;<br /><br />
+&lt;script&gt;<br />
+function myFunction(<span class="marked">name</span>,<span class="marked">job</span>)<br />
+{<br />
+alert("Welcome 
+	" + <span class="marked">name</span> + ", the " + <span class="marked">
+	job</span>);<br />
+}<br />
+&lt;/script&gt;</div>
+<br /><a target="_blank" href="/try/try.php?filename=tryjs_function2" class="tryitbtn">尝试一下 »</a>
+</div>
+
+<p>上面的函数会当按钮被点击时提示 &quot;Welcome Bill Gates, the CEO&quot;。</p>
+
+<p>函数很灵活，您可以使用不同的参数来调用该函数，这样就会给出不同的消息：</p>
+<div class="example">
+	<h2 class="example">实例</h2>
+<div class="example_code notranslate">
+	&lt;button
+onclick="myFunction(<span class="marked">'Harry Potter'</span>,<span class="marked">'Wizard'</span>)"&gt;Try 
+	it&lt;/button&gt;<br />&lt;button
+onclick="myFunction(<span class="marked">'Bob'</span>,<span class="marked">'Builder'</span>)"&gt;Try 
+	it&lt;/button&gt;</div>
+<br /><a target="_blank" href="/try/try.php?filename=tryjs_function3" class="tryitbtn">尝试一下 »</a>
+</div>
+
+<p>根据您点击的不同的按钮，上面的例子会提示 "Welcome Harry Potter, the Wizard" 或 "Welcome Bob, the Builder"。</p>
+<hr />
+<h2>带有返回值的函数</h2>
+<p>有时，我们会希望函数将值返回调用它的地方。</p>
+
+<p>通过使用 return 语句就可以实现。</p>
+
+<p>在使用 return 语句时，函数会停止执行，并返回指定的值。</p>
+<h3>语法</h3>
+<div class="code notranslate"><div>
+
+function myFunction()<br />
+{<br />var x=5;<br />return x;<br />}</div></div>
+
+<p>上面的函数会返回值 5。</p>
+<p><strong>注意：</strong> 整个 JavaScript 并不会停止执行，仅仅是函数。JavaScript 将继续执行代码，从调用函数的地方。</p>
+<p>函数调用将被返回值取代：</p>
+<div class="code notranslate"><div>
+
+	var myVar=myFunction();</div></div>
+
+<p>myVar 变量的值是 5，也就是函数 "myFunction()" 所返回的值。</p>
+<p>即使不把它保存为变量，您也可以使用返回值：</p>
+<div class="code notranslate"><div>
+
+	document.getElementById("demo").innerHTML=myFunction();</div></div>
+
+<p>"demo" 元素的 innerHTML 将成为 5，也就是函数 "myFunction()" 所返回的值。</p>
+<p>您可以使返回值基于传递到函数中的参数：</p>
+
+<div class="example">
+<h2 class="example">实例</h2>
+<p>计算两个数字的乘积，并返回结果：</p>
+
+<div class="example_code notranslate">
+	function myFunction(a,b)<br />{<br />return a*b;<br />}<br /><br />
+	document.getElementById("demo").innerHTML=myFunction(4,3);<br />
+</div>
+<p>"demo" 元素的 innerHTML 将是：</p>
+<div class="example_code notranslate">
+12
+</div>
+
+<br /><a target="_blank" href="/try/try.php?filename=tryjs_function_return" class="tryitbtn">尝试一下 »</a>
+</div>
+
+<p>在您仅仅希望退出函数时 ，也可使用 return 语句。返回值是可选的：</p>
+<div class="code notranslate"><div>
+
+function myFunction(a,b)<br />
+{<br />if (a&gt;b)<br />  {<br />  <span class="marked">return;</span><br />  }<br />x=a+b<br />}</div></div>
+
+<p>如果 a 大于 b，则上面的代码将退出函数，并不会计算 a 和 b 的总和。/p>
+<hr />
+<h2>局部 JavaScript 变量</h2>
+<p>在 JavaScript 函数内部声明的变量（使用 var）是<em>局部</em>变量，所以只能在函数内部访问它。（该变量的作用域是局部的）。</p>
+
+<p>您可以在不同的函数中使用名称相同的局部变量，因为只有声明过该变量的函数才能识别出该变量。</p>
+
+<p>只要函数运行完毕，本地变量就会被删除。</p>
+<hr />
+<h2>全局 JavaScript 变量</h2>
+
+<p>在函数外声明的变量是<em>全局</em>变量，网页上的所有脚本和函数都能访问它。</p>
+<hr />
+<h2>JavaScript 变量的生存期</h2>
+
+<p>JavaScript 变量的生命期从它们被声明的时间开始。</p>
+
+<p>局部变量会在函数运行以后被删除。</p>
+
+<p>全局变量会在页面关闭后被删除。</p>
+<hr />
+<h2>向未声明的 JavaScript 变量来分配值</h2>
+<p>如果您把值赋给尚未声明的变量，该变量将被自动作为全局变量声明。</p>
+<p>这条语句：</p>
+
+<div class="code notranslate"><div>
+
+carname="Volvo";</div></div>
+
+<p>将声明一个全局变量 carname，即使它在函数内执行。</p>	<div class="chapter">
+		<div class="prev">&laquo; <a href="http://www.w3cschool.cc/js/js-obj-intro.html" rel="prev"> JavaScript 对象</a></div>
+		<div class="next"><a href="http://www.w3cschool.cc/js/js-operators.html" rel="next">JavaScript 运算符</a> &raquo;</div>
+	</div>
+</div>
+<div id="rightcolumn">
+	
+	<div>
+		<a href="http://www.w3cschool.cc/games/flappybird/" rel="nofollow" target="_blank"/>
+			<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/fb.png" alt="Flappy Bird电脑版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>扫描二维码访问移动版</h2>
+		<a href="http://m.w3cschool.cc/" rel="nofollow" target="_blank"/>
+		<img src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/150x150.png" alt="w3cschool移动版"/>
+		</a>
+	</div>
+	<div class="rightad">
+		<h2>工具推荐</h2>
+		<a href="http://www.w3cschool.cc/jsontool" target="_blank" title="json格式工具"/>json格式工具</a>
+		<a href="javascript:void(0)">（QQ讨论群：71358470）</a>
+	</div>
+	<div class="rightad">
+		<h2>参考手册</h2>
+
+		<a href="/tags/html-reference.html" title="HTML 4">HTML 4</a>
+		<a href="/tags/html-reference.html" title="HTML 5">HTML 5</a>
+		<a href="/jsref/jsref-tutorial.html" title="CSS 参考手册">JS 参考手册</a>
+		<a href="/cssref/css-reference.html" title="CSS 参考手册">CSS 参考手册</a>
+		<a href="/tags/html-colorpicker.html" title="拾色器">拾色器</a>
+		<a href="/tags/html-colorname.html" title="HTML 颜色名">HTML 颜色名</a>
+		
+	</div>
+	<div class="rightad">
+		<h2>CHM 离线手册</h2>
+		<a href="http://url.cn/RVn5Ra" rel="nofollow" target="_blank"/>Bootstrap离线版</a>
+		<a href="http://url.cn/JBFcTA" rel="nofollow" target="_blank"/>jQuery EasyUI离线版</a>
+		<a href="http://url.cn/QkCiwZ" rel="nofollow" title="MongoDB 入门教程" target="_blank">MongoDB入门手册</a>
+		<a href="http://url.cn/KH9NML" rel="nofollow" target="_blank"/>w3cschool 离线版</a>
+		<a href="http://www.w3cschool.cc/chmproblem" target="_blank"/>打开CHM文档遇到问题……</a>
+	</div>
+	<div class="wideSkyscraper">
+		<script type="text/javascript">
+		/*w3cschool 竖幅*/
+		var cpro_id = "u1419463";
+		</script>
+		<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+	</div>
+</div>
+		<div style="clear:both;"></div>
+<div id="footer">
+			<br>
+	
+			<hr style="height:2px;">
+			<div id="footerImg"><a href="http://www.w3cschool.cc/">
+				<img style="border:0" src="http://www.w3cschool.cc/wp-content/themes/w3cschool.cc/assets/img/w3cschoolcc_gray.gif" alt="W3Cschool.cc" /></a>
+			</div>
+			<div id="footerAbout">
+				<a href="http://www.w3cschool.cc/disclaimer">免责声明</a>
+<a href="http://www.w3cschool.cc/aboutus">关于我们</a>
+</ul>	
+			</div>
+			<div id="footerText">
+				提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+版权所有，保留一切权利。W3CSchool 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+			</div>
+		</div>
+	</div>
+</div>
+<a class="backtop" href="javascript:void"></a>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e2a116daf0104a78d601f40a45c75b4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script src="http://s11.cnzz.com/stat.php?id=5578006&web_id=5578006" language="JavaScript"></script>
+</div>
+<div class="share-box">
+  <div class="share-box-top">分享到</div>
+  <div class="share-box-inner">
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到人人网" href="#"></a>
+		<a class="bds_baidu" title="百度收藏" href="#"></a>
+        <span class="bds_more">更多</span>
+	<a class="shareCount" id="shareCount" href="#" title="累计分享0次">0</a>
+    </div>
+  </div>
+  <div class="share-box-bottom"></div>
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=470751" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<script>
+function NewWindow(text)
+{
+  win=window.open(text,'','top=0,left=0,width=400,height=350');
+}
+$(function() { 
+	$("#leftcolumn").find("a").each(function(){
+		if($(this).attr("href") == window.location.href) {
+			$(this).css("font-weight", "bold");
+		}
+		
+  });
+  
+  	$(window).scroll(function () {
+        if($(window).scrollTop()>=100) {
+            $(".backtop").fadeIn();
+        }else {
+        	
+        		$(".backtop").fadeOut();
+        }
+    });
+	
+
+	$(".backtop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 500);
+		return false;
+	});
+		
+})
+</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.182 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-03-04 20:10:27 -->
+
+<!-- super cache -->
