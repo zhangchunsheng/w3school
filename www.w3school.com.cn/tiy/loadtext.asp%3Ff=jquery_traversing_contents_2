@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+</head>
+<body>
+<div class="container">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+  do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  <br /><br />
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+  laboris nisi ut aliquip ex ea commodo consequat.
+  <br /> <br />
+  Duis aute irure dolor in reprehenderit in voluptate velit 
+  esse cillum dolore eu fugiat nulla pariatur.
+</div>
+<script>
+$('.container').contents().filter(function() {
+  return this.nodeType == 3;
+}).wrap('<p style="color:blue;"></p>').end().filter('br').remove();
+</script>
+</body>
+</html>

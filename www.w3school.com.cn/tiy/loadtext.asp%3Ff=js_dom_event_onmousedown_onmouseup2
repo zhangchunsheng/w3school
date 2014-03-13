@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function lighton()
+{
+document.getElementById('myimage').src="/i/eg_bulbon.gif";
+}
+function lightoff()
+{
+document.getElementById('myimage').src="/i/eg_bulboff.gif";
+}
+</script>
+</head>
+
+<body>
+<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="/i/eg_bulboff.gif" />
+<p>按住鼠标不放可以点亮这盏灯！</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub Page_Load(sender As Object, e As EventArgs)
+   if check1.Checked then
+     panel1.Visible=false
+   else
+     panel1.Visible=true
+   end if
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;asp:Panel id=&quot;panel1&quot;
+runat=&quot;server&quot; BackColor=&quot;#ff0000&quot;
+Height=&quot;100px&quot; Width=&quot;100px&quot;&gt;
+Hello World!
+&lt;/asp:Panel&gt;
+&lt;asp:CheckBox id=&quot;check1&quot;
+Text=&quot;隐藏 Panel 控件&quot;
+runat=&quot;server&quot;/&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;asp:Button Text=&quot;重新加载&quot; runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

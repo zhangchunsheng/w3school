@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").bind({
+    click:function(){$("p").slideToggle();},
+    mouseover:function(){$("body").css("background-color","red");},  
+    mouseout:function(){$("body").css("background-color","#FFFFFF");}  
+  });
+});
+</script>
+</head>
+<body>
+<p>This is a paragraph.</p>
+<button>«Îµ„ª˜’‚¿Ô</button>
+</body>
+</html>

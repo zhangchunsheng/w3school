@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<p>我的浏览器能够播放 MP4 视频吗？<span>
+<button onclick="supportType(event,'video/mp4','avc1.42E01E, mp4a.40.2')" type="button">测试</button>
+</span></p>
+
+<p>我的浏览器能够播放 OGG 视频吗？<span>
+<button onclick="supportType(event,'video/ogg','theora, vorbis')" type="button">测试</button>
+</span></p>
+
+<script> 
+function supportType(e,vidType,codType)
+  { 
+  myVid=document.createElement('video');
+  isSupp=myVid.canPlayType(vidType+';codecs="'+codType+'"');
+  if (isSupp=="")
+    {
+    isSupp="No";
+    }
+  e.target.parentNode.innerHTML="Answer: " + isSupp;
+  } 
+</script> 
+</body> 
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ol reversed>
+  <li>咖啡</li>
+  <li>牛奶</li>
+  <li>茶</li>
+</ol>
+
+<p><strong>注释：</strong>目前只有 Chrome 和 Safari 6 支持 ol 元素的 reversed 属性。</p>
+
+</body>
+</html>

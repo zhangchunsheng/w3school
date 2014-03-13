@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<fieldset>
+  <legend>健康信息：</legend>
+  <form>
+    <label>身高：<input type="text" /></label>
+    <label>体重：<input type="text" /></label>
+  </form>
+</fieldset>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div>p
+{
+background-color:yellow;
+}
+</style>
+</head>
+
+<body>
+<h1>欢迎来到我到的主页</h1>
+
+<div>
+<p>我是唐老鸭。</p>
+<p>我住在 Duckburg。</p>
+</div>
+
+<p>我最好的朋友是米老鼠。</p>
+
+<div>
+<span><p>我的样式不会改变。</p></span>
+</div>
+
+</body>
+</html>

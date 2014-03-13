@@ -1,0 +1,47 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+
+基本的 TextBox:
+&lt;asp:TextBox id=&quot;tb1&quot; runat=&quot;server&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+
+密码 TextBox:
+&lt;asp:TextBox id=&quot;tb2&quot; TextMode=&quot;password&quot; runat=&quot;server&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+
+带有文本的 TextBox:
+&lt;asp:TextBox id=&quot;tb3&quot; Text=&quot;Hello World!&quot; runat=&quot;server&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+
+多行 TextBox:
+&lt;asp:TextBox id=&quot;tb4&quot; TextMode=&quot;multiline&quot; runat=&quot;server&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+
+设置了高度的 TextBox:
+&lt;asp:TextBox id=&quot;tb5&quot; rows=&quot;5&quot; TextMode=&quot;multiline&quot; runat=&quot;server&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+
+设置了宽度的 TextBox:
+&lt;asp:TextBox id=&quot;tb6&quot; columns=&quot;30&quot; runat=&quot;server&quot; /&gt;
+
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

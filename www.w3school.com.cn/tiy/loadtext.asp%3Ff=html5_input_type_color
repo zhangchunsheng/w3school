@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Color: <input type="color" name="user_color" /><br />
+<input type="submit" />
+</form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+border:2px solid;
+padding:10px;
+background:#dddddd;
+border-bottom-right-radius:2em;
+}
+</style>
+</head>
+<body>
+
+<div>border-bottom-right-radius 属性允许您向右下角添加圆角边框。</div>
+
+</body>
+</html>

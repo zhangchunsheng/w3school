@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("p").eq(1).css("background-color","yellow");
+});
+</script>
+</head>
+<body>
+
+<h1>欢迎来到我的主页</h1>
+<p>我是唐老鸭 (index 0)。</p>
+<p>唐老鸭 (index 1)。</p>
+<p>我住在 Duckburg (index 2)。</p>
+<p>我最好的朋友是米老鼠 (index 3)。</p>
+
+</body>
+</html>

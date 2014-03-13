@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+</head>
+
+<body>
+
+<p>½á¹û£º</p>
+
+<script>
+$(function(){
+  var $p = jQuery("p"), p = $p[0];
+  $p.append(jQuery.hasData(p)+" "); /* false */
+  jQuery.data(p, "testing", 123);
+  $p.append(jQuery.hasData(p)+" "); /* true*/
+  jQuery.removeData(p, "testing");
+  $p.append(jQuery.hasData(p)+" "); /* false */
+});
+</script>
+
+</body>
+</html>

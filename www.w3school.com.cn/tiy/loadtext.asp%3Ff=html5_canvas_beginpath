@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+ctx.beginPath();              
+ctx.lineWidth="5";
+ctx.strokeStyle="red";  // 绿色路径
+ctx.moveTo(0,75);
+ctx.lineTo(250,75);
+ctx.stroke();  // 进行绘制
+
+ctx.beginPath();
+ctx.strokeStyle="blue";  // 紫色路径
+ctx.moveTo(50,0);
+ctx.lineTo(150,130);            
+ctx.stroke();  // 进行绘制
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+x=0;
+$(document).ready(function(){
+$(window).resize(function() {
+  $("span").text(x+=1);
+});
+
+});
+</script>
+</head>
+<body>
+<p>窗口大小被调整过 <span>0</span> 次。</p>
+<p>请试着重新调整浏览器窗口的大小。</p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0;
+while (cars[i])
+{
+document.write(cars[i] + "<br>");
+i++;
+}
+</script>
+
+</body>
+</html>

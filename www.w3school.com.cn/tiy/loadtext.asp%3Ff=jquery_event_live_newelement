@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("p").live("click",function(){
+    $(this).slideToggle();
+  });
+  $("button").click(function(){
+    $("<p>This is a new paragraph.</p>").insertAfter("button");
+  });
+});
+</script>
+</head>
+<body>
+<p>这是一个段落。</p>
+<p>点击任意 p 元素会令其消失。包括本段落。</p>
+<button>在本按钮后面插入新的 p 元素</button>
+<p><b>注释：</b>通过使用 live() 方法而不是 bind() 方法，新的 p 元素同样会在点击时消失。</p>
+</body>
+</html>

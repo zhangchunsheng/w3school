@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $(document.createElement("div")).replaceAll("p");
+  });
+});
+</script>
+<style>
+div{height:20px;background-color:yellow;margin:10px;}
+</style>
+</head>
+<body>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button class="btn1">用新的 div 替换所有段落</button>
+</body>
+</html>

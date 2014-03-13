@@ -1,0 +1,46 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=server&gt;
+&lt;asp:Table runat=&quot;server&quot; CellPadding=&quot;5&quot;
+GridLines=&quot;horizontal&quot; HorizontalAlign=&quot;Center&quot;&gt;
+   &lt;asp:TableRow&gt;
+     &lt;asp:TableCell&gt;1&lt;/asp:TableCell&gt;
+     &lt;asp:TableCell&gt;2&lt;/asp:TableCell&gt;
+   &lt;/asp:TableRow&gt;
+   &lt;asp:TableRow&gt;
+     &lt;asp:TableCell&gt;3&lt;/asp:TableCell&gt;
+     &lt;asp:TableCell&gt;4&lt;/asp:TableCell&gt;
+   &lt;/asp:TableRow&gt;
+&lt;/asp:Table&gt;
+&lt;br /&gt;
+&lt;asp:Table runat=&quot;server&quot; CellPadding=&quot;5&quot;
+GridLines=&quot;vertical&quot; HorizontalAlign=&quot;Center&quot;&gt;
+   &lt;asp:TableRow&gt;
+     &lt;asp:TableCell&gt;1&lt;/asp:TableCell&gt;
+     &lt;asp:TableCell&gt;2&lt;/asp:TableCell&gt;
+   &lt;/asp:TableRow&gt;
+   &lt;asp:TableRow&gt;
+     &lt;asp:TableCell&gt;3&lt;/asp:TableCell&gt;
+     &lt;asp:TableCell&gt;4&lt;/asp:TableCell&gt;
+   &lt;/asp:TableRow&gt;
+&lt;/asp:Table&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

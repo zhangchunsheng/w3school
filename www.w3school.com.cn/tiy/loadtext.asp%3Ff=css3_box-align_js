@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box
+{
+display:-moz-box;
+display:-webkit-box;
+display:box;
+width:200px;
+height:100px;
+border:2px solid red;
+}
+</style>
+<script>
+function ChangeBoxAlign(x)
+{
+// Returns the selected option's text
+var boxAlign=x.options[x.selectedIndex].text;
+var div=document.getElementById("myDiv");
+if (div.style.MozBoxAlign!==undefined)
+  {
+  div.style.MozBoxAlign=boxAlign;
+  }
+else if (div.style.webkitBoxAlign!==undefined)
+  {
+  div.style.webkitBoxAlign=boxAlign;
+  }
+else
+  {
+  alert("Your browser doesn't support this example!");
+  }
+}
+</script>
+</head>
+<body>
+<div class="box" id="myDiv">
+  <b>第一个子元素</b>
+  <i>第二个子元素</i>
+</div>
+
+<select onchange="ChangeBoxAlign (this);" size="6">
+  <option selected="selected" />baseline
+  <option />center
+  <option />end
+  <option />inherit
+  <option />start
+  <option />stretch
+</select>
+
+<p><b>注释：</b>本例在 Internet Explorer 和 Opera 中无效。</p>
+
+</body>
+</html>

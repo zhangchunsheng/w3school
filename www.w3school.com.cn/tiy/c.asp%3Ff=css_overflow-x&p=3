@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+
+<link rel="stylesheet" type="text/css" href="/tiy/cc.css" />
+
+<script type="text/javascript" src="/tiy/cs.js"></script>
+
+<title>w3school在线测试工具 v1.2</title>
+
+<script type="text/javascript">
+<!--
+function test_demo_val(strValue)
+{
+
+var strId="MyDIV"
+
+document.getElementById(strId).style.overflowX=strValue;
+
+document.getElementById("CodeValue").innerHTML=strValue;
+}
+//-->
+</script>
+
+<style>
+#MyDIV
+{
+margin:10px;
+border:1px solid black;
+background-color:#f1f1f1;
+}
+
+#MyDIV
+{
+width:150px;
+height:200px;
+overflow-x:visible;
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+<h1>W3School TIY</h1>
+
+<div id="ad">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3381531532877742";
+/* 728x90, tiy_big */
+google_ad_slot = "7947784850";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+
+
+<div id="SelArea">
+<h2>CSS 属性：</h2>
+
+<h3>overflow-x:</h3>				
+
+<form action="javascript:return false;">
+<ul>
+<input type="hidden" id="PreSelectedValue" value="scroll" />
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_1" value="visible" />visible</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_2" value="hidden" />hidden</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_3" value="scroll" />scroll</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_4" value="auto" />auto</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_5" value="no-display" />no-display</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_6" value="no-content" />no-content</li>
+</ul>
+</form>
+
+
+
+</div>
+
+
+<div id="result">
+<h2>结果：</h2>
+
+<div id="DemoArea">
+<div id="MyDIV"><img src="/i/redstar.gif" /></div>
+</div>
+
+<h2>CSS 代码：</h2>
+
+<pre id="CodeArea">
+#MyDIV
+{
+width:150px;
+height:200px;
+overflow-x:<span id="CodeValue">visible</span>;
+}
+</pre>
+</div>
+
+
+<div id="footer">
+<p class="help">请点击上面的属性值来查看结果</p>
+<p class="copyright"><a href="http://www.w3school.com.cn">W3School.com.cn</a> - TIY</p>
+</div>
+
+</div>
+
+</body>
+
+<script type="text/javascript">tiy_onload()</script>
+
+</html>
+

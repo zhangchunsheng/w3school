@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<style>
+  body { font-size:16px; font-weight:bolder; }
+  p { margin:5px 0; }
+</style>
+</head>
+<body>
+  <div>
+    <span>Hello</span>
+    <p class="selected">Hello Again</p>
+    <div class="selected">And Again</div>
+
+    <p>And One Last Time</p>
+  </div>
+<script>$("div").children(".selected").css("color", "blue");</script>
+</body>
+</html>

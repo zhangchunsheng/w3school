@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+text-shadow:0 0 3px #FF0000;
+}
+</style>
+</head>
+<body>
+
+<h1>霓虹灯效果的文本阴影！</h1>
+
+</body>
+</html>

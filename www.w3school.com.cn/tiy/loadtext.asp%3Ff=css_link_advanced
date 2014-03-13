@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a:link,a:visited
+{
+display:block;
+font-weight:bold;
+font-size:14px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#FFFFFF;
+background-color:#98bf21;
+width:120px;
+text-align:center;
+padding:4px;
+text-decoration:none;
+}
+
+a:hover,a:active
+{
+background-color:#7A991A;
+}
+</style>
+</head>
+
+<body>
+<a href="/index.html" target="_blank">W3School</a>
+</body>
+</html>

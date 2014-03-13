@@ -1,0 +1,34 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script runat=&quot;server&quot;&gt;
+Sub change(sender As Object, e As EventArgs)
+lbl1.Text=&quot;You changed text to &quot; & txt1.Text
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+Enter your name:
+&lt;asp:TextBox id=&quot;txt1&quot; runat=&quot;server&quot;
+text=&quot;Hello World!&quot;
+ontextchanged=&quot;change&quot; autopostback=&quot;true&quot;/&gt;
+&lt;p&gt;&lt;asp:Label id=&quot;lbl1&quot; runat=&quot;server&quot; /&gt;&lt;/p&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+
+</body>

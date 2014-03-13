@@ -1,0 +1,81 @@
+/* CSS Document */
+
+*	{
+	margin:0;
+	padding:0;
+	border:0;
+	background-color:transparent;
+	}
+
+body	{
+	text-align:left;
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+	}
+
+h1, p#bg_color
+	{
+	margin-top:15px;
+	text-align:center;
+	}
+
+h1
+	{
+	font-family:'Î¢ÈíÑÅºÚ', Verdana, Arial, Helvetica, sans-serif;
+	font-size:30px;
+	}
+
+em
+	{
+	font-weight:bold;
+	font-style:normal;
+	}
+
+p#bg_color
+	{
+	font-size:14px;
+	}
+
+div#wrapper
+	{
+	margin: 0 auto;
+	text-align: left;
+	border:0px solid #c5c5c5;
+	width:972px;
+	}
+
+div#header	{
+	color:#000;
+	height:90px;
+	background:#fff;
+	border: 1px solid #c5c5c5;
+	background: #f5f5f5;
+	width:972px;
+	}
+
+#footer	{
+	text-align:right;
+	padding:10px;
+	}
+
+table {
+	font-family:Arial, Helvetica, sans-serif;
+	margin-top:20px;
+	border-collapse:collapse;
+	border:1px solid #888;
+	width:100%;
+	}
+
+table th {
+	vertical-align:baseline;
+	padding:5px 15px 5px 5px;
+	background-color:#333;
+	border:1px solid #888;
+	text-align:left;
+	color:#ffffff;
+	}
+
+table td {
+	vertical-align:text-top;
+	padding:5px 15px 5px 5px;
+	border:1px solid #aaa;
+	}

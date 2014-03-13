@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<button onclick="enableControls()" type="button">启动控件</button>
+<button onclick="disableControls()" type="button">禁用控件</button>
+<button onclick="checkControls()" type="button">检查控件的状态</button>
+<br> 
+<video id="video1">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function enableControls()
+  { 
+  myVid.controls=true;
+  myVid.load();
+  } 
+function disableControls()
+  { 
+  myVid.controls=false;
+  myVid.load();
+  } 
+function checkControls()
+  { 
+  alert(myVid.controls);
+  } 
+</script> 
+
+</body>
+</html>

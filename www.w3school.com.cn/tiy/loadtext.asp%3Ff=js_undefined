@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var person;
+var car="Volvo";
+document.write(person + "<br />");
+document.write(car + "<br />");
+var car=null
+document.write(car + "<br />");
+</script>
+
+</body>
+</html>

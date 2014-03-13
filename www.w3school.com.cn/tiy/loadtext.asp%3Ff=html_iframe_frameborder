@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe src="/example/html/demo_iframe.html" frameborder="0"></iframe>
+
+<p>某些老式的浏览器不支持内联框架。</p>
+<p>如果不支持，则 iframe 是不可见的。</p>
+
+</body>
+</html>

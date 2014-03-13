@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").wrapInner(function(){
+      return "<b></b>"
+    });
+  });
+});
+
+</script>
+<style type="text/css">
+div{background-color:yellow;padding:10px;}
+</style>
+</head>
+
+<body>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+<button>用 b 元素包围每个 p 元素</button>
+</body>
+</html>

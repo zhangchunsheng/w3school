@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var person={
+firstname : "Bill",
+lastname  : "Gates",
+id        :  5566
+};
+document.write(person.lastname + "<br />");
+document.write(person["lastname"] + "<br />");
+</script>
+
+</body>
+</html>

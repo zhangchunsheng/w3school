@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("input").keyup(function(){
+    txt=$("input").val();
+    $("span").load("/jquery/gethint.asp",{suggest:txt});
+  });
+});
+</script>
+</head>
+<body>
+<p>请在下面的输入框中输入名字（a 到 z 的字符）：</p>
+名字：<input type="text" />
+<p>建议：<span></span></p>
+<p>注释：我们在 <a href="/ajax/ajax_asp_php.asp" target="_blank">AJAX 教程</a> 中讲解过本例中使用的文件（gethint.asp）。</p>
+</body>
+</html>

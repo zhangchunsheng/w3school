@@ -1,0 +1,32 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub Page_Load(Sender As Object,E As EventArgs)
+   image1.Src=&quot;/i/eg_smile.gif&quot;
+   image1.Alt=&quot;Smiley&quot;
+   image1.Border=&quot;3&quot;
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;img id=&quot;image1&quot; runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

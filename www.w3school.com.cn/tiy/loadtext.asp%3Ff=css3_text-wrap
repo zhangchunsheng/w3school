@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+p.test1
+{
+width:11em; 
+border:1px solid #000000;
+text-wrap:none;
+}
+
+p.test2
+{
+width:11em; 
+border:1px solid #000000;
+text-wrap:normal;
+}
+</style>
+</head>
+<body>
+
+<p class="test1"> This paragraph contains some text. This line should not breake or wrap to the next line.</p>
+<p class="test2"> This paragraph contains some text: The line breaks as normal.</p>
+
+<p><b>注释：</b>目前主流浏览器都不支持 text-wrap 属性。</p>
+
+</body>
+</html>

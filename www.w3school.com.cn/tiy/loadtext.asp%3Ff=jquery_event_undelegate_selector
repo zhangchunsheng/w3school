@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+function changeSize()
+  {
+  $(this).animate({fontSize:"+=3px"});
+  }
+function changeSpacing()
+  {
+  $(this).animate({letterSpacing:"+=2px"});
+  }
+
+$(document).ready(function(){
+  $("body").delegate("p","click",changeSize);
+  $("body").delegate("p","click",changeSpacing);
+  $("button").click(function(){
+    $("body").undelegate("p");
+  });
+});
+</script>
+</head>
+<body>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+<p>点击任何段落增加字体大小和字符间距。包括本段落。</p>
+<button>从 p 元素删除由 delegate() 方法添加的所有事件处理器</button>
+</body>
+</html>

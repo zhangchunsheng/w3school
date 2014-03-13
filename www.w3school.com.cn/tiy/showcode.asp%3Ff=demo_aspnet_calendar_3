@@ -1,0 +1,29 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;asp:Calendar DayNameFormat=&quot;Full&quot; runat=&quot;server&quot;
+SelectionMode=&quot;DayWeekMonth&quot;
+SelectMonthText=&quot;&lt;*&gt;&quot;
+SelectWeekText=&quot;&lt;-&gt;&quot;/&gt;
+   &lt;SelectorStyle BackColor=&quot;#f5f5f5&quot; /&gt;
+&lt;/asp:Calendar&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

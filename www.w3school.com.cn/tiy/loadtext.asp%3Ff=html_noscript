@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">
+document.write("Hello World!")
+</script>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<p>不支持 JavaScript 的浏览器将显示 noscript 元素中的文本。</p>
+ 
+</body>
+</html>

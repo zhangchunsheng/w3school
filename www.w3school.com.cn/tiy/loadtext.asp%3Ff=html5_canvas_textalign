@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+// Create a red line in position 150
+ctx.strokeStyle="blue";
+ctx.moveTo(150,20);
+ctx.lineTo(150,170);
+ctx.stroke();
+
+ctx.font="15px Arial";    
+
+// Show the different textAlign values
+ctx.textAlign="start";      
+ctx.fillText("textAlign=start",150,60);        
+ctx.textAlign="end";      
+ctx.fillText("textAlign=end",150,80);                  
+ctx.textAlign="left";      
+ctx.fillText("textAlign=left",150,100);
+ctx.textAlign="center";     
+ctx.fillText("textAlign=center",150,120);              
+ctx.textAlign="right";      
+ctx.fillText("textAlign=right",150,140);
+
+</script>
+
+</body>
+</html>

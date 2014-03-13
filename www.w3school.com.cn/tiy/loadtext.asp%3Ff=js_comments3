@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="myH1"></h1>
+
+<p id="myP"></p>
+
+<script>
+//document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+</script>
+
+<p><b>注释：</b>注释不会被执行。</p>
+
+</body>
+</html>

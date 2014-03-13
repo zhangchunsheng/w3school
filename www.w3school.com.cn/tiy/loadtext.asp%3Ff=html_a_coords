@@ -1,0 +1,13 @@
+<html>
+<body>
+
+<object data="/i/eg_planets.jpg" alt="Planets" type="image/gif" usemap="#Map1">
+  <map name="Map1">
+  <a href="/example/html/sun.html" shape="rect" coords="0,0,110,260">Sun</a>
+  <a href="/example/html/mercur.html" shape="circle" coords="129,161,10">Mercury</a>
+  <a href="/example/html/venus.html" shape="circle" coords="180,139,14">Venus</a>
+  </map>
+</object>
+
+</body>
+</html>

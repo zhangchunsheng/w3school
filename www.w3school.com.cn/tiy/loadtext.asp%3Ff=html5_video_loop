@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<video controls="controls" loop="loop">
+  <source src="/i/movie.ogg" type="video/ogg" />
+  <source src="/i/movie.mp4" type="video/mp4" />
+Your browser does not support the video tag.
+</video>
+
+</body>
+</html>

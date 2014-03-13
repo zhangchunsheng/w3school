@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a:link {color:#FF0000;}    /* 未被访问的链接 */
+a:visited {color:#00FF00;} /* 已被访问的链接 */
+a:hover {color:#FF00FF;}   /* 鼠标指针移动到链接上 */
+a:active {color:#0000FF;}  /* 正在被点击的链接 */
+</style>
+</head>
+
+<body>
+<p><b><a href="/index.html" target="_blank">这是一个链接</a></b></p>
+<p><b>注释：</b>为了使定义生效，a:hover 必须位于 a:link 和 a:visited 之后！！</p>
+<p><b>注释：</b>为了使定义生效，a:active 必须位于 a:hover 之后！！</p>
+</body>
+</html>

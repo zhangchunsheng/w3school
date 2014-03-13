@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript" src="/example/html5/demo_defer.js" defer="defer"></script>
+
+<p>上面的脚本从下面的段落请求信息。通常，这是不可能的，因为脚本在段落加载之前已经执行了。</p>
+
+<p id="p1">Hello World!</p>
+
+<p>不过，defer 属性规定脚本稍后执行。这样脚本就可以从段落中请求信息了。</p>
+
+</body>
+</html>

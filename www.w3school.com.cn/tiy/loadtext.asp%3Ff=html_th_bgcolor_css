@@ -1,0 +1,20 @@
+<html>
+<body>
+
+<table border="1">
+  <tr>
+    <th style="background-color:#FF0000">Company in USA</th>
+    <th style="background-color:#00FF00">Address</th>
+  </tr>
+  <tr>
+    <td>Apple, Inc.</td>
+    <td>1 Infinite Loop Cupertino, CA 95014</td>
+  </tr>
+  <tr>
+    <td>Google, Inc.</td>
+    <td>1600 Amphitheatre Parkway Mountain View, CA 94043</td>
+  </tr>
+</table>
+
+</body>
+</html>

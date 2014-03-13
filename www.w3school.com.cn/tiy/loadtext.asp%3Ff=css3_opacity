@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+background-color:red;
+opacity:0.5;
+filter:Alpha(opacity=50); /* IE8 以及更早的浏览器 */
+}
+</style>
+</head>
+<body>
+
+<div>本元素的不透明度是 0.5。请注意，文本和背景色都受到不透明级别的影响。</div>
+
+</body>
+</html>

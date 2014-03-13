@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("div").ajaxError(function(){
+    alert("发生错误！");
+  });
+  $("button").click(function(){
+    $("div").load("wrongfile.txt");
+  });
+});
+</script>
+</head>
+
+<body>
+
+<div id="txt"><h2>通过 AJAX 改变文本</h2></div>
+<button>改变内容</button>
+
+</body>
+</html>

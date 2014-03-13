@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+document.write("可用高度：" + screen.availHeight);
+
+</script>
+
+</body>
+</html>

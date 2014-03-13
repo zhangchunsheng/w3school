@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<menu>
+  <command onclick="alert('Hello World')" disabled="disabled">
+  ЕуЛїетРя
+  </command>
+</menu>
+
+</body>
+</html>

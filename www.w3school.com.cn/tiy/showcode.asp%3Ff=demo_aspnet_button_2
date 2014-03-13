@@ -1,0 +1,37 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub submit(Source As Object, e As EventArgs)
+   button1.Style(&quot;background-color&quot;)=&quot;#0000ff&quot;
+   button1.Style(&quot;color&quot;)=&quot;#ffffff&quot;
+   button1.Style(&quot;width&quot;)=&quot;200px&quot;
+   button1.Style(&quot;cursor&quot;)=&quot;pointer&quot;
+   button1.Style(&quot;font-family&quot;)=&quot;verdana&quot;
+   button1.Style(&quot;font-weight&quot;)=&quot;bold&quot;
+   button1.Style(&quot;font-size&quot;)=&quot;14pt&quot;
+   button1.Text=&quot;You clicked me!&quot;
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;asp:Button id=&quot;button1&quot; Text=&quot;Click me!&quot; runat=&quot;server&quot; OnClick=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

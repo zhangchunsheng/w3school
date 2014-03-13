@@ -1,0 +1,26 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;a href=&quot;/example/aspe/demo_aspe_simplequerystring.asp?color=green&quot;&gt;Example&lt;/a&gt;
+
+<code class="aspcode">&lt;%
+Response.Write(Request.QueryString)
+%&gt;</code>
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

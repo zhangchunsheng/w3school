@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+[class*="test"]
+{
+background:#ffff00;
+}
+</style>
+</head>
+<body>
+
+<div class="first_test">第一个 div 元素。</div>
+<div class="second">第二个 div 元素。</div>
+<div class="test">第三个 div 元素。</div>
+<p class="test">这是段落中的文本。</p>
+
+</body>
+</html>

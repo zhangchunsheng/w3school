@@ -1,0 +1,28 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;asp:ListBox runat=&quot;server&quot;&gt;
+&lt;asp:ListItem Text=&quot;Text1&quot; /&gt;
+&lt;asp:ListItem Value=&quot;Text3&quot; Text=&quot;Text1&quot;&gt;Text2&lt;/asp:ListItem&gt;
+&lt;asp:ListItem Value=&quot;Text3&quot; /&gt;
+&lt;/asp:ListBox&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

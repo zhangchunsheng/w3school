@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<button onclick="getAudioTracks()" type="button">获得可用音轨的数量</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getAudioTracks()
+  { 
+  alert(myVid.audioTracks.length);
+  } 
+</script> 
+
+</body> 
+</html>

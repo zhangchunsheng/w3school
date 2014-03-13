@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<script type="text/javascript">
+var str = "Visit W3School.com.cn";
+var patt1 = new RegExp("s","m");
+
+if(patt1.multiline)
+  {
+  document.write("Multiline property is set");
+  }
+else
+  {
+  document.write("Multiline property is NOT set.");
+  }
+</script>
+
+</body>
+</html>

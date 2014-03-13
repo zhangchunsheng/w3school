@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.box
+{
+display:-moz-box; /* Firefox */
+display:-webkit-box; /* Safari and Chrome */
+display:box;
+border:1px solid black;
+}
+.ord1
+{
+margin:5px;
+-moz-box-ordinal-group:1; /* Firefox */
+-webkit-box-ordinal-group:1; /* Safari and Chrome */
+box-ordinal-group:1;
+}
+.ord2
+{
+margin:5px;
+-moz-box-ordinal-group:2; /* Firefox */
+-webkit-box-ordinal-group:2; /* Safari and Chrome */
+box-ordinal-group:2;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<div class="ord2">第一个 DIV</div>
+<div class="ord1">第二个 DIV</div>
+<div class="ord1">第三个 DIV</div>
+</div>
+
+<p><b>注释：</b>IE 或 Opera 不支持 box-ordinal-group 属性。</p>
+
+</body>
+</html>

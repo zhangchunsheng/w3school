@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<button onclick="getVid()" type="button">获得当前视频的 URL</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getVid()
+  { 
+  alert(myVid.currentSrc);
+  } 
+</script> 
+
+</body> 
+</html>

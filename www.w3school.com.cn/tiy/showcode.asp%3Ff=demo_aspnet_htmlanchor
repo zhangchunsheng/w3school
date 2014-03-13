@@ -1,0 +1,39 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub Page_Load
+   link1.HRef=&quot;http://www.w3school.com.cn&quot;
+   link1.Target=&quot;_blank&quot;
+   link1.Title=&quot;W3School&quot;
+
+   link2.HRef=&quot;http://www.microsoft.com&quot;
+   link2.Target=&quot;_blank&quot;
+   link2.Title=&quot;Microsoft&quot;
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;a id=&quot;link1&quot; runat=&quot;server&quot;&gt;∑√Œ  W3School£°&lt;/a&gt;
+&lt;br /&gt;
+&lt;a id=&quot;link2&quot; runat=&quot;server&quot;&gt;∑√Œ  Microsoft£°&lt;/a&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+
+</body>

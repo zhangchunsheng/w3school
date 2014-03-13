@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<bdo dir="rtl">
+Here is some Hebrew text that should be written from right-to-left.
+</bdo>
+
+</body>
+</html>

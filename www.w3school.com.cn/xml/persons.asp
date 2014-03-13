@@ -1,0 +1,1 @@
+<?xml version='1.0' encoding='ISO-8859-1'?><Customers><Person><FirstName>John</FirstName><LastName>Adams</LastName></Person><Person><FirstName>George</FirstName><LastName>Bush</LastName></Person><Person><FirstName>Thomas</FirstName><LastName>Carter</LastName></Person></Customers>

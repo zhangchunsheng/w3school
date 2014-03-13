@@ -1,0 +1,164 @@
+/* CSS Document */
+
+div#wrapper
+	{
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+	border:1px solid #c5c5c5;
+	}
+
+div#header
+	{
+	width: 960px;
+	height: 90px;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #c5c5c5;
+	}
+
+#header h1
+	{
+	float: left;
+	margin: 22px 0 0 5px;
+	padding: 0;
+	font-size: 27px;
+	color: #a5a5a5;
+	}
+
+#header #ad {
+	float:right;
+	margin:0 0 0 10px;
+	padding:0;
+	width:728px;
+	height:90px;
+	border-left:1px solid #c5c5c5;
+	}
+
+#SelArea
+	{
+	float: left;
+	width: 480px;
+	margin:0;
+	padding:0;
+	border: 0px solid #c5c5c5;
+	}
+
+#SelArea p
+	{
+	margin:20px;	
+	}
+
+#result
+	{
+	float: left;
+	width: 478px;
+	margin:0;
+	padding:0;
+	border: 0px solid #c5c5c5;
+	}
+
+#DemoArea
+	{
+	width: 450px;
+	height: 280px;
+	margin:0;
+	padding:0;
+	margin-left: 10px;
+	background-color: #ffffff;
+	border: 1px solid #c3c3c3;
+	}
+
+#CodeArea
+	{
+	width: 440px;
+	margin:0;
+	margin-left: 10px;
+	margin-bottom:10px;
+	padding: 5px;
+	font-family: courier new;
+	color: #222222;
+	background-color: #f1f1f1;
+	border: 1px solid #c3c3c3;
+	}
+
+#footer	{
+	width: 960px;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	background: #f5f5f5;
+	border-top: 1px solid #c5c5c5;
+	}
+
+#CodeValue
+	{
+	font-weight: bold;
+	font-size: 12px;
+	color: blue;
+	}
+
+#SelAreaCode
+	{
+	margin: 30px 15px 15px 15px;
+	}
+
+.help {
+	float:left;
+	margin:10px;
+	}
+
+.copyright {
+	text-align:right;
+	margin:0;
+	padding:10px;
+	}
+
+.marked
+	{
+	color:#dd0000;
+	font:bold 18px 'Î¢ÈíÑÅºÚ';
+	}
+
+.note span
+	{
+	font-weight:bold;
+	}
+
+body
+	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align:center;
+	}
+
+h2
+	{
+	font: bold 16px 'Î¢ÈíÑÅºÚ';
+	margin: 5px 0 5px 5px;
+	color: red;
+	}
+
+h3
+	{
+	font-size: 14px;
+	margin: 10px;
+	}
+
+form
+	{
+	margin: 15px;
+	}
+
+ul, li
+	{
+	margin:0;
+	padding:0;
+	}
+
+li
+	{
+	list-style:none;
+	}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="form1">
+<button id="button1" type="button">点击这里</button>
+</form>
+
+<p>包含该按钮的表单的 id 是：
+<script>
+document.write(document.getElementById("button1").form.id);
+</script>
+</p>
+
+</body>
+</html>

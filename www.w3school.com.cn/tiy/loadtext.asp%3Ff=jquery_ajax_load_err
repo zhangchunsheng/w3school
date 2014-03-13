@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").load("wrongname.xml",function(response,status,xhr){
+      if (status=="success")
+      {
+      $("div").html("<ol></ol>");
+      $(response).find("artist").each(function(){
+        var item_text = $(this).text();
+        $('<li></li>').html(item_text).appendTo('ol');
+        });
+      }
+      else
+      {
+      $("div").html("An error occured: <br/>" + xhr.status + " " + xhr.statusText)
+      }
+    });
+  });
+});
+</script>
+</head>
+<body>
+<p>Artists</p>
+<div></div>
+<button>获得 CD 信息</button>
+<p>本例中使用的 XML 文件是 <a href="/example/xmle/cd_catalog.xml" target="_blank">cd_catalog</a></p>
+</body>
+</html>

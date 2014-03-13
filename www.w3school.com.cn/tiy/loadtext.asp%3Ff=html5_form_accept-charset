@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" accept-charset="ISO-8859-1">
+  First name: <input type="text" name="fname" /><br />
+  Last name: <input type="text" name="lname" /><br />
+  <input type="submit" value="Ìá½»" />
+</form>
+
+</body>
+</html>

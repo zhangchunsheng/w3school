@@ -1,0 +1,29 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;
+所有可能的服务器变量：
+&lt;/p&gt;
+<code class="aspcode">&lt;%
+For Each Item in Request.ServerVariables
+      Response.Write(Item & &quot;&lt;br /&gt;&quot;)
+Next
+%&gt;</code>
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<a href="http://www.w3school.com.cn/html/" accesskey="h">HTML 教程</a><br />
+<a href="http://www.w3school.com.cn/css/" accesskey="c">CSS 教程</a>
+
+<p><b>注释：</b>请使用Alt + <i>accessKey</i> (或者 Shift + Alt + <i>accessKey</i>) 来访问带有指定快捷键的元素。</p>
+
+</body>
+</html>

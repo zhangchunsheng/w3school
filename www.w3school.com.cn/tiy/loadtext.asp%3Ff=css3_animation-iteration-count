@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+width:100px;
+height:100px;
+background:red;
+position:relative;
+animation:mymove 3s;
+animation-iteration-count:3;
+
+/* Safari and Chrome */
+-webkit-animation:mymove 3s;
+-webkit-animation-iteration-count:3;
+}
+
+@keyframes mymove
+{
+from {top:0px;}
+to {top:200px;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+from {top:0px;}
+to {top:200px;}
+}
+</style>
+</head>
+<body>
+
+<p><strong>注释：</strong>Internet Explorer 9 以及更早的版本不支持 animation-iteration-count 属性。</p>
+
+<div></div>
+
+</body>
+</html>

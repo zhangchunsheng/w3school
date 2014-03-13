@@ -1,0 +1,15 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).unload(function(){
+    alert("再见！");
+  });
+});
+</script>
+</head>
+<body>
+<p>当您点击 <a href="http://w3school.com.cn">这个链接</a> 时，或者关闭窗口，会触发一个警告框。</p>
+</body>
+</html>

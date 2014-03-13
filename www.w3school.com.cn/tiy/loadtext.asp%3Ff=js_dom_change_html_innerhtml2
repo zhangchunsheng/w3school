@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="header">Old Header</h1>
+
+<script>
+var element=document.getElementById("header");
+element.innerHTML="New Header";
+</script>
+
+<p>"Old Header" 已被修改为 "New Header"。</p>
+
+</body>
+</html>

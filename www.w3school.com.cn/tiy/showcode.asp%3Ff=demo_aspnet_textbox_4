@@ -1,0 +1,36 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+sub submit(sender As Object, e As EventArgs)
+lbl1.Text=txt1.Text
+end sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;asp:TextBox id=&quot;txt1&quot; Text=&quot;Hello World!&quot;
+Font_Face=&quot;verdana&quot; BackColor=&quot;#0000ff&quot;
+ForeColor=&quot;white&quot; TextMode=&quot;MultiLine&quot;
+Height=&quot;50&quot; runat=&quot;server&quot; /&gt;
+&lt;asp:Button OnClick=&quot;submit&quot;
+Text=&quot;把文本复制到 Label&quot; runat=&quot;server&quot; /&gt;
+&lt;p&gt;&lt;asp:Label id=&quot;lbl1&quot; runat=&quot;server&quot; /&gt;&lt;/p&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

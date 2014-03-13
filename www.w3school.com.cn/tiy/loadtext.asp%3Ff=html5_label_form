@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="demo_form.asp" method="get" id="genderform">
+<label>Male
+<input type="radio" name="sex" id="male" value="male" />
+</label>
+<br />
+<label>Female
+<input type="radio" name="sex" id="female" value="female"  />
+</label>
+<input type="submit" value="提交" />
+</form>
+
+<p>用于第一个单选按钮的 label 位于 form 元素之外，但仍然是表单的一部分。请尝试点击这个 label，可以切换到 radio 控件。</p>
+
+<label for="male" form="nameform">Male</label>
+</body>
+</html>

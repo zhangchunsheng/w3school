@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 onclick="this.innerHTML='hello!'">请点击这段文本！</h1>
+
+</body>
+</html>

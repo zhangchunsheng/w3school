@@ -1,0 +1,28 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub Page_Load
+   lbl1.Text=&quot;The date and time is &quot; & now()
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+&lt;form runat=&quot;server&quot;&gt;
+&lt;h3&gt;&lt;asp:label id=&quot;lbl1&quot; runat=&quot;server&quot; /&gt;&lt;/h3&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

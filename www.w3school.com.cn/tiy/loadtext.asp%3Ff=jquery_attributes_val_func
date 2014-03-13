@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("input:text").val(function(n,c){
+      return c + " Gates";
+    });
+  });
+});
+</script>
+</head>
+
+<body>
+<p>Name: <input type="text" name="user" value="Bill" /></p>
+<button>设置文本域的值</button>
+</body>
+</html>

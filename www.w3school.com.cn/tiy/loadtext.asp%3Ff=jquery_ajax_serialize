@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").text($("form").serialize());
+  });
+});
+</script>
+</head>
+<body>
+<form action="">
+First name: <input type="text" name="FirstName" value="Bill" /><br />
+Last name: <input type="text" name="LastName" value="Gates" /><br />
+</form>
+
+<button>序列化表单值</button>
+<div></div>
+</body>
+</html>

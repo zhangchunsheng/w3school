@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+img
+{
+filter:gray()
+}
+</style>
+
+<script type="text/javascript">
+function color(elmnt)
+{
+elmnt.style.filter=false
+}
+
+function gray(elmnt)
+{
+elmnt.style.filter="gray()"
+}
+</script>
+
+</head>
+<body>
+
+请把鼠标移动到图像链接上：
+<p>
+<a href="/i/eg_landscape.jpg">
+<img border="0" onmouseover="color(this)" onmouseout="gray(this)" src="/i/eg_w3school.gif" /><br /></a>
+
+<a href="http://www.altavista.com/">
+<img border="0" onmouseover="color(this)" onmouseout="gray(this)" src="/i/eg_altavista.gif" /><br /></a>
+
+<a href="http://www.yahoo.com/">
+<img border="0" onmouseover="color(this)" onmouseout="gray(this)" src="/i/eg_yahoo.gif" /></a>
+</p>
+
+</body>
+</html>

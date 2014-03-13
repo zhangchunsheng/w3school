@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<a href="/example/html/form_action.asp">
+<img src="/i/eg_tulip.jpg" ismap />
+</a>
+
+<p>点击这幅图像，点击坐标会以 URL 查询字符串发送到服务器。</p>
+
+</body>
+</html>

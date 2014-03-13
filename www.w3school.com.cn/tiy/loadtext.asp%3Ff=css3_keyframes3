@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+width:100px;
+height:100px;
+background:red;
+position:relative;
+animation:mymove 5s infinite;
+-moz-animation:mymove 5s infinite; /* Firefox */
+-webkit-animation:mymove 5s infinite; /* Safari and Chrome */
+-o-animation:mymove 5s infinite; /* Opera */
+}
+
+@keyframes mymove
+{
+0%   {top:0px; background:red; width:100px;}
+100% {top:200px; background:yellow; width:300px;}
+}
+
+@-moz-keyframes mymove /* Firefox */
+{
+0%   {top:0px; background:red; width:100px;}
+100% {top:200px; background:yellow; width:300px;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+0%   {top:0px; background:red; width:100px;}
+100% {top:200px; background:yellow; width:300px;}
+}
+
+@-o-keyframes mymove /* Opera */
+{
+0%   {top:0px; background:red; width:100px;}
+100% {top:200px; background:yellow; width:300px;}
+}
+</style>
+</head>
+<body>
+
+<p><b>注释：</b>本例在 Internet Explorer 中无效。</p>
+
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+var jq=$.noConflict();
+jq(document).ready(function(){
+  jq("button").click(function(){
+    jq("p").hide();
+  });
+});
+</script>
+</head>
+
+<body>
+<h2>这是标题</h2>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+<button>请点击这里</button>
+</body>
+</html>

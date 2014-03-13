@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="tag_link.asp" hreflang="en"/>
+</head>
+
+<body>
+<h1>W3School 示例页面</h1>
+<p>如您所见，link 元素的 hreflang 属性不会在浏览器中产生任何效果。不过，该属性可被搜索引擎或脚本使用。</p>
+</body>
+</html>

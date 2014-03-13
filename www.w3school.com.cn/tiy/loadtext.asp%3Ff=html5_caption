@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+table{border-collapse:collapse;}
+table, td, th{border:1px solid black;}
+</style>
+</head>
+<body>
+
+<table>
+  <caption>每月的存款</caption>
+  <tr>
+    <th>月份</th>
+    <th>存款</th>
+  </tr>
+  <tr>
+    <td>一月</td>
+    <td>1000 元</td>
+  </tr>
+  <tr>
+    <td>二月</td>
+    <td>1500 元</td>
+  </tr>
+</table>
+
+</body>
+</html>

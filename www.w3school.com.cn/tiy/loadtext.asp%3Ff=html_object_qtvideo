@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<object width="420" height="360"
+ classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" 
+ codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+<param name="src" value="/i/movie.mp4" />
+<param name="controller" value="true" />
+</object>
+
+</body>
+</html>

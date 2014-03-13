@@ -1,0 +1,66 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="aspcode">&lt;%@ Import Namespace=&quot;System.Data.OleDb&quot; %&gt;</code>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+sub Page_Load
+dim dbconn,sql,dbcomm,dbread
+dbconn=New OleDbConnection(&quot;Provider=Microsoft.Jet.OLEDB.4.0;data source=&quot; & server.mappath(&quot;/db/northwind.mdb&quot;))
+dbconn.Open()
+sql=&quot;SELECT * FROM customers&quot;
+dbcomm=New OleDbCommand(sql,dbconn)
+dbread=dbcomm.ExecuteReader()
+customers.DataSource=dbread
+customers.DataBind()
+dbread.Close()
+dbconn.Close()
+end sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;asp:Repeater id=&quot;customers&quot; runat=&quot;server&quot;&gt;
+
+&lt;HeaderTemplate&gt;
+&lt;table border=&quot;1&quot; width=&quot;100%&quot;&gt;
+&lt;tr bgcolor=&quot;#b0c4de&quot;&gt;
+&lt;th&gt;Companyname&lt;/th&gt;
+&lt;th&gt;Contactname&lt;/th&gt;
+&lt;th&gt;Address&lt;/th&gt;
+&lt;th&gt;City&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/HeaderTemplate&gt;
+
+&lt;ItemTemplate&gt;
+&lt;tr bgcolor=&quot;#f0f0f0&quot;&gt;
+&lt;td&gt;<code class="aspcode">&lt;%#Container.DataItem(&quot;companyname&quot;)%&gt;</code> &lt;/td&gt;
+&lt;td&gt;<code class="aspcode">&lt;%#Container.DataItem(&quot;contactname&quot;)%&gt;</code> &lt;/td&gt;
+&lt;td&gt;<code class="aspcode">&lt;%#Container.DataItem(&quot;address&quot;)%&gt;</code> &lt;/td&gt;
+&lt;td&gt;<code class="aspcode">&lt;%#Container.DataItem(&quot;city&quot;)%&gt;</code> &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/ItemTemplate&gt;
+
+&lt;FooterTemplate&gt;
+&lt;/table&gt;
+&lt;/FooterTemplate&gt;
+
+&lt;/asp:Repeater&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

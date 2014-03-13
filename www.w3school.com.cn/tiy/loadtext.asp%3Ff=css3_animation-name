@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+width:100px;
+height:100px;
+background:red;
+position:relative;
+animation-name:mymove;
+animation-duration:5s;
+
+/* Safari and Chrome */
+-webkit-animation-name:mymove;
+-webkit-animation-duration:5s;
+}
+
+@keyframes mymove
+{
+from {left:0px;}
+to {left:200px;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+from {left:0px;}
+to {left:200px;}
+}
+</style>
+</head>
+<body>
+
+<p><strong>注释：</strong>Internet Explorer 9 以及更早的版本不支持 animation-name 属性。</p>
+
+<div></div>
+
+<p><b>注释：</b>始终规定 animation-duration 属性，否则时长为 0，就不会播放动画了。</p>
+
+</body>
+</html>

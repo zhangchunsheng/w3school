@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<style type="text/css">
+[title]
+{
+color:red;
+}
+</style>
+</head>
+
+<body>
+<h1>可以应用样式：</h1>
+<h2 title="Hello world">Hello world</h2>
+<a title="W3School" href="http://w3school.com.cn">W3School</a>
+
+<hr />
+
+<h1>无法应用样式：</h1>
+<h2>Hello world</h2>
+<a href="http://w3school.com.cn">W3School</a>
+</body>
+</html>

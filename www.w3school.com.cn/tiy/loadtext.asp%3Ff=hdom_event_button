@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+function whichButton(event)
+{
+var btnNum = event.button;
+if (btnNum==2)
+  {
+  alert("您点击了鼠标右键！")
+  }
+else if(btnNum==0)
+  {
+  alert("您点击了鼠标左键！")
+  }
+else if(btnNum==1)
+  {
+  alert("您点击了鼠标中键！");
+  }
+else
+  {
+  alert("您点击了" + btnNum+ "号键，我不能确定它的名称。");
+  }
+}
+</script>
+</head>
+
+<body onmousedown="whichButton(event)">
+<p>请在文档中点击鼠标。一个消息框会提示出您点击了哪个鼠标按键。</p>
+</body>
+
+</html>

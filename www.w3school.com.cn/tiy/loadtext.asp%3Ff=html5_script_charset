@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="/example/html5/demo_time.js" charset="UTF-8"></script>
+</head>
+<body>
+
+<p>当前日期/时间：<span id="timePara"></span></p>
+<button onclick="getDateTime()">获得当前日期和时间</button>
+
+</body>
+</html>

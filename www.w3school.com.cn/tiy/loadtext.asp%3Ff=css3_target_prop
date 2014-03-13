@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+a
+{
+target:new front;
+}
+</style>
+</head>
+<body>
+
+<p><b>注释：</b>目前没有浏览器支持 target 属性。</p>
+
+<a href="http://www.w3school.com.cn">欢迎访问 W3School</a>
+
+</body>
+</html>

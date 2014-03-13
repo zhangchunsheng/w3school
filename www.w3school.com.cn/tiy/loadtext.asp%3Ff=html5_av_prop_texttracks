@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<button onclick="getTextTracks()" type="button">获得可用文本轨道的数量</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  <track src="demo_sub.vtt">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getTextTracks()
+  { 
+  alert(myVid.textTracks.length);
+  } 
+</script> 
+
+</body> 
+</html>

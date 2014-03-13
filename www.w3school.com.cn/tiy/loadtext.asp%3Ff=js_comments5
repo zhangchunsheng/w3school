@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="myP"></p>
+
+<script>
+var x=5;   // 声明 x 并把 5 赋值给它
+var y=x+2; // 声明 y 并把 x+2 赋值给它
+document.getElementById("myP").innerHTML=y // 把 y 的值写到 myP
+</script>
+
+<p><b>注释：</b>注释不会被执行。</p>
+
+</body>
+</html>

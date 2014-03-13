@@ -1,0 +1,37 @@
+<html>
+<head>
+
+<script type="text/javascript">
+function inset(elmnt)
+{
+elmnt.style.border="inset 2"
+}
+
+function outset(elmnt)
+{
+elmnt.style.border="outset 2"
+}
+</script>
+
+<style>
+td
+{
+background:C0C0C0;
+border:2px outset;
+}
+
+</style>
+</head>
+<body>
+
+<table width="80">
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="/index.html">HOME</a></td></tr>
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="/js/index.asp">JavaScript</a></td></tr>
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="http://www.microsoft.com">Explorer</a></td></tr>
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="http://my.netscape.com">Navigator</a></td></tr>
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="http://www.altavista.com">AltaVista</a></td></tr>
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="http://www.yahoo.com">Yahoo!</a></td></tr>
+</table>
+
+</body>
+</html>

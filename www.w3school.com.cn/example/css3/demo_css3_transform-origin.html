@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1
+{
+font-family:'微软雅黑';
+}
+
+p {
+font-size:14px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+#div1
+{
+position: relative;
+height: 200px;
+width: 200px;
+margin: 50px;
+padding:10px;
+border: 1px solid black;
+}
+
+#div2
+{
+padding:50px;
+position: absolute;
+border: 1px solid black;
+background-color: yellow;
+transform: rotate(45deg);
+transform-origin:20% 40%;
+-ms-transform: rotate(45deg); /* IE 9 */
+-ms-transform-origin:20% 40%; /* IE 9 */
+-webkit-transform: rotate(45deg); /* Safari and Chrome */
+-webkit-transform-origin:20% 40%; /* Safari and Chrome */
+-moz-transform: rotate(45deg); /* Firefox */
+-moz-transform-origin:20% 40%; /* Firefox */
+-o-transform: rotate(45deg); /* Opera */
+-o-transform-origin:20% 40%; /* Opera */
+}
+</style>
+
+<script>
+function changeRot(value)
+{
+document.getElementById('div2').style.transform="rotate(" + value + "deg)";
+document.getElementById('div2').style.msTransform="rotate(" + value + "deg)";
+document.getElementById('div2').style.webkitTransform="rotate(" + value + "deg)";
+document.getElementById('div2').style.MozTransform="rotate(" + value + "deg)";
+document.getElementById('div2').style.OTransform="rotate(" + value + "deg)";
+document.getElementById('persp').innerHTML=value + "deg";
+}
+
+function changeOrg()
+{
+var x=document.getElementById('ox').value;
+var y=document.getElementById('oy').value;
+document.getElementById('div2').style.transformOrigin=x + '% ' + y + '%';
+document.getElementById('div2').style.msTransformOrigin=x + '% ' + y + '%';
+document.getElementById('div2').style.webkitTransformOrigin=x + '% ' + y + '%';
+document.getElementById('div2').style.MozTransformOrigin=x + '% ' + y + '%';
+document.getElementById('div2').style.OTransformOrigin=x + '% ' + y + '%';
+document.getElementById('origin').innerHTML=x + "% " + y + "%";            
+}
+</script>
+</head>
+
+<body>
+<h1>transform-origin 属性演示</h1>
+
+<p>旋转这个黄色的 div 元素，试着改变 X 轴和 Y 轴的参数：</p>
+
+<div id="div1">
+  <div id="div2">HELLO</div>
+</div>
+
+<p style="margin-bottom:50px;">
+旋转：
+<br /><input type="range" min="-360" max="360" value="45" onChange="changeRot(this.value)" /><br />
+transform: rotateY:(<span id="persp">45deg</span>);
+</p>
+
+<p>
+X 轴：
+<br /><input type="range" min="-100" max="200" value="20" onChange="changeOrg()" id="ox" /><br />
+Y 轴：
+<br /><input type="range" min="-100" max="200" value="40" onChange="changeOrg()" id="oy" /><br />
+transform-origin: <span id="origin">20% 40%</span>;
+</p>
+
+</body>
+</html>

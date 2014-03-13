@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+border:2px solid;
+padding:10px 40px; 
+width:300px;
+resize:both;
+overflow:auto;
+}
+</style>
+</head>
+<body>
+
+<div>resize 属性规定是否可由用户调整元素尺寸。</div>
+
+<p><b>注释：</b> Firefox 4+、Safari 以及 Chrome 支持 resize 属性。</p>
+
+</body>
+</html>

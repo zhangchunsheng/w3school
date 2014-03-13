@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<button onclick="getVolume()" type="button">音量是多少？</button>
+<button onclick="setHalfVolume()" type="button">把音量设置为 0.2</button>
+<button onclick="setFullVolume()" type="button">把音量设置为 1.0</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getVolume()
+  { 
+  alert(myVid.volume);
+  } 
+function setHalfVolume()
+  { 
+  myVid.volume=0.2;
+  } 
+function setFullVolume()
+  { 
+  myVid.volume=1.0;
+  } 
+</script> 
+
+</body> 
+</html>

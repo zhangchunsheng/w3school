@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Hello World!</p>
+
+<div id="main">
+<p>The DOM is very useful.</p>
+<p>本例演示 <b>getElementsByTagName</b> 方法。</p>
+</div>
+
+<script>
+var x=document.getElementById("main");
+var y=x.getElementsByTagName("p");
+document.write('id 为 "main" 的 div 中的第一段文本是：' + y[0].innerHTML);
+</script>
+
+</body>
+</html>

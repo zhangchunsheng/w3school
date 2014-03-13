@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML="New text!";
+</script>
+
+<p>上面的段落被一段脚本改变了。</p>
+
+</body>
+</html>

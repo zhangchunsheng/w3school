@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    x=$("p").get(0);
+    $("div").text(x.nodeName + ": " + x.innerHTML);
+  });
+});
+</script>
+</head>
+<body>
+<p>This is a paragraph</p>
+<button>»ñµÃ p DOM ÔªËØ</button>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("p").bind('click dblclick mouseover mouseout',function(event){
+    $("div").html("事件：" + event.type);
+  });
+});
+</script>
+</head>
+
+<body>
+<p>该段落定义了 click、double-click、mouseover 以及 mouseout 事件。如果您触发了其中的一个事件，下面的 div 中会显示出事件的类型。</p>
+<div></div>
+</body>
+</html>

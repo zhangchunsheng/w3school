@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a.one:link {color:#ff0000;}
+a.one:visited {color:#0000ff;}
+a.one:hover {color:#ffcc00;}
+
+a.two:link {color:#ff0000;}
+a.two:visited {color:#0000ff;}
+a.two:hover {font-size:150%;}
+
+a.three:link {color:#ff0000;}
+a.three:visited {color:#0000ff;}
+a.three:hover {background:#66ff66;}
+
+a.four:link {color:#ff0000;}
+a.four:visited {color:#0000ff;}
+a.four:hover {font-family:'微软雅黑';}
+
+a.five:link {color:#ff0000;text-decoration:none;}
+a.five:visited {color:#0000ff;text-decoration:none;}
+a.five:hover {text-decoration:underline;}
+</style>
+</head>
+
+<body>
+<p>请把鼠标指针移动到下面的链接上，看看它们的样式变化。</p>
+
+<p><b><a class="one" href="/index.html" target="_blank">这个链接改变颜色</a></b></p>
+<p><b><a class="two" href="/index.html" target="_blank">这个链接改变字体尺寸</a></b></p>
+<p><b><a class="three" href="/index.html" target="_blank">这个链接改变背景色</a></b></p>
+<p><b><a class="four" href="/index.html" target="_blank">这个链接改变字体</a></b></p>
+<p><b><a class="five" href="/index.html" target="_blank">这个链接改变文本的装饰</a></b></p>
+</body>
+
+</html>

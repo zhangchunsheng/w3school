@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#toggle").on("click",function(){
+    $("div").toggle(5000);
+  });
+  $("#interval").on("click",function(){
+    jQuery.fx.interval = 500;
+  });
+});
+</script>
+</head>
+<body>
+
+<button id="toggle">切换 div</button>
+<button id="interval">以较少的帧数来运行动画</button>
+
+<div style="background:#98bf21;height:100px;width:100px;margin:50px;">
+</div>
+
+</body>
+</html>

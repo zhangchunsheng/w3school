@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("a").click(function(event){
+    event.preventDefault();
+    alert("Default prevented: " + event.isDefaultPrevented());
+  });
+});
+</script>
+</head>
+<body>
+<a href="http://w3school.com.cn/">W3School</a>
+<p>preventDefault() 方法将防止上面的链接打开 URL。</p>
+<p>请点击该链接，检查是否阻止了默认动作。</p>
+</body>
+</html>

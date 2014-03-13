@@ -1,0 +1,9 @@
+<html>
+<body>
+
+<p>Here comes a short quotation: <q>This is a short quotation</q></p>
+
+<p>请注意，浏览器在引用的周围插入了引号。</p>
+
+</body>
+</html>

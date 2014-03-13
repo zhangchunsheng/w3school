@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>欢迎来到我的主页</h1>
+  </div>
+
+  <div data-role="content">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#" data-icon="plus">更多</a></li>
+        <li><a href="#" data-icon="minus">更少</a></li>
+        <li><a href="#" data-icon="delete">删除</a></li>
+        <li><a href="#" data-icon="check">喜爱</a></li>
+        <li><a href="#" data-icon="info">信息</a></li>
+      </ul>
+    </div>
+    <p>该例演示内容中的导航栏。</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>我的页脚</h1>
+  </div>
+</div> 
+
+</body>
+</html>

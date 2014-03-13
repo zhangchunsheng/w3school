@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1">
+  <tr>
+    <th id="name">Name</th>
+    <th id="email">Email</th>
+    <th id="phone">Phone</th>
+    <th id="addr">Address</th>
+  </tr>
+  <tr>
+    <td headers="name">Bill Gates</td>
+    <td headers="email">someone@example.com</td>
+    <td headers="phone">+78900789</td>
+    <td headers="addr">Microsoft Corporation USA</td>
+  </tr>
+</table>
+
+</body>
+</html>

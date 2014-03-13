@@ -1,0 +1,42 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub button1(Source As Object, e As ImageClickEventArgs)
+      p1.InnerHtml=&quot;You clicked the on button!&quot;
+End Sub
+Sub button2(Source As Object, e As ImageClickEventArgs)
+      p1.InnerHtml=&quot;You clicked the off button!&quot;
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;p&gt;请点击其中的一幅图片：&lt;/p&gt;
+&lt;p&gt;
+&lt;input type=&quot;image&quot; src=&quot;/i/eg_bulbon.gif&quot;
+OnServerClick=&quot;button1&quot; runat=&quot;server&quot; width=&quot;45&quot; height=&quot;60&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;input type=&quot;image&quot; src=&quot;/i/eg_bulboff.gif&quot;
+OnServerClick=&quot;button2&quot; runat=&quot;server&quot; width=&quot;45&quot; height=&quot;60&quot; /&gt;
+&lt;/p&gt;
+&lt;p id=&quot;p1&quot; runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

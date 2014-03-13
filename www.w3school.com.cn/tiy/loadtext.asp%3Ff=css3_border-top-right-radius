@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+border:2px solid;
+padding:10px;
+background:#dddddd;
+border-top-right-radius:2em;
+-webkit-border-top-right-radius:2em; /* Safari */
+}
+</style>
+</head>
+<body>
+
+<div>border-top-right-radius 属性允许您向右上角添加圆角边框。</div>
+
+</body>
+</html>

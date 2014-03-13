@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">这是一段文本。</p>
+
+<input type="button" value="隐藏文本" onclick="document.getElementById('p1').style.visibility='hidden'" />
+<input type="button" value="显示文本" onclick="document.getElementById('p1').style.visibility='visible'" />
+
+</body>
+</html>

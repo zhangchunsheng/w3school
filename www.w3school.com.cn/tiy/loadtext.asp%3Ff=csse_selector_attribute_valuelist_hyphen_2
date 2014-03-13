@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<style type="text/css">
+img[src|="/i/figure"] {border: 1px solid gray;}
+{
+border: 1px solid gray;
+}
+</style>
+</head>
+
+<body>
+<h1>可以应用样式：</h1>
+<img title="Figure 1" src="/i/figure-1.gif" />
+<img title="Figure 2" src="/i/figure-2.gif" />
+
+<hr />
+
+<h1>无法应用样式：</h1>
+<img src="/i/eg_w3school.gif" />
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub submit(Source As Object, e As EventArgs)
+if r1.Checked=True then
+   p1.InnerHtml=&quot;Your favorite color is red&quot;
+else
+   if r2.Checked=True then
+     p1.InnerHtml=&quot;Your favorite color is green&quot;
+   else
+     if r3.Checked=True then
+       p1.InnerHtml=&quot;Your favorite color is blue&quot;
+     end if
+   end if
+end if
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;p&gt;请选择您喜欢的颜色：
+&lt;br /&gt;
+&lt;input id=&quot;r1&quot; name=&quot;col&quot; type=&quot;radio&quot; runat=&quot;server&quot;&gt;Red&lt;/input&gt;
+&lt;br /&gt;
+&lt;input id=&quot;r2&quot; name=&quot;col&quot; type=&quot;radio&quot; runat=&quot;server&quot;&gt;Green&lt;/input&gt;
+&lt;br /&gt;
+&lt;input id=&quot;r3&quot; name=&quot;col&quot; type=&quot;radio&quot; runat=&quot;server&quot;&gt;Blue&lt;/input&gt;
+&lt;br /&gt;
+&lt;input type=&quot;button&quot; value=&quot;提交&quot; OnServerClick=&quot;submit&quot; runat=&quot;server&quot;/&gt;
+&lt;p id=&quot;p1&quot; runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

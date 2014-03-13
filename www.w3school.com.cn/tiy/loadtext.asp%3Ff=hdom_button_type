@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function alertType()
+{
+alert(document.getElementById("myButton").type)
+}
+</script>
+</head>
+<body>
+
+<button id="myButton" type="button" onclick="alertType()">µ„ª˜’‚¿Ô</button>
+
+</body>
+</html>

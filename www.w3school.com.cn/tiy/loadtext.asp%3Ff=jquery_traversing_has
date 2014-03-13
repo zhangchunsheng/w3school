@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .full { border: 1px solid red; }
+  </style>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+</head>
+
+<body>
+<ul><li>Does the UL contain an LI?</li></ul>
+
+<script>
+  $("ul").append("<li>" + ($("ul").has("li").length ? "Yes" : "No") + "</li>");
+  $("ul").has("li").addClass("full");
+</script>
+
+</body>
+</html>

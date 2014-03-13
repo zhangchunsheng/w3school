@@ -1,0 +1,17 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    alert("Image width " + $("img").attr("width"));
+  });
+});
+</script>
+</head>
+<body>
+<img src="/i/eg_smile.gif" width="128" height="128" />
+<br />
+<button>·µ»ØÍ¼ÏñµÄ¿í¶È</button>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+
+<table border="1" style="height:200px">
+  <tr>
+    <th valign="middle">Company</th>
+    <th valign="bottom">Address</th>
+  </tr>
+  <tr>
+    <td>Apple, Inc.</td>
+    <td>1 Infinite Loop Cupertino, CA 95014</td>
+  </tr>
+</table>
+
+</body>
+</html>

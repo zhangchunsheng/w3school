@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("div").append("<p>" + $("div").context + "</p>").append("<p>" + $("div",document.body).context.nodeName + "</p>");
+}); 
+</script>
+</head>
+<body>
+
+<span>Context: <div></div></span>
+<span><b>注释：</b>context 属性在 jQuery 版本 1.10 中被弃用。</span> 
+
+</body>
+</html>

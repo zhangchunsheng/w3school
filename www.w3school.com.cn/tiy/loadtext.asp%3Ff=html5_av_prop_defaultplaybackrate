@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<button onclick="getPlaySpeed()" type="button">默认的播放速度是多少？</button>
+<button onclick="setPlaySpeed()" type="button">把视频设置为慢速播放</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getPlaySpeed()
+  { 
+  alert(myVid.defaultPlaybackRate);
+  } 
+function setPlaySpeed()
+  { 
+  myVid.defaultPlaybackRate=0.5;
+  myVid.load();
+  } 
+</script> 
+
+</body> 
+</html>

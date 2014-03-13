@@ -1,0 +1,19 @@
+<html>
+<head>
+<style type="text/css">
+h1, h2, h4 {color:silver;}
+h2, h3 {background:gray;}
+h1, h4, b {background:white;}
+h3 {color:white;}
+b {color:gray;}
+</style>
+</head>
+
+<body>
+<h1>这是 heading 1</h1>
+<h2>这是 heading 2</h2>
+<h3>这是 heading 3</h3>
+<h4>这是 heading 4</h4>
+<p>这是一段<b>普通</b>的段落文本。</p>
+</body>
+</html>

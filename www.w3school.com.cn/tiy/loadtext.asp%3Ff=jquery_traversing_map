@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>p { color:red; }</style>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+</head>
+
+<body>
+  <p><b>Values: </b></p>
+  <form>
+    <input type="text" name="name" value="John"/>
+    <input type="text" name="password" value="password"/>
+    <input type="text" name="url" value="http://w3school.com.cn/"/>
+  </form>
+
+<script>
+    $("p").append( $("input").map(function(){
+      return $(this).val();
+    }).get().join(", ") );
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();     
+ctx.moveTo(20,20);             // 创建开始点
+ctx.lineTo(100,20);            // 创建水平线
+ctx.arcTo(150,20,150,70,50);   // 创建弧
+ctx.lineTo(150,120);           // 创建垂直线
+ctx.stroke();                  // 进行绘制
+
+</script> 
+
+</body>
+</html>

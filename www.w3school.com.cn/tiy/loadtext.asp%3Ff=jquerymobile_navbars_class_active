@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>欢迎来到我的主页</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#" class="ui-btn-active" data-icon="home">首页</a></li>
+        <li><a href="#pagetwo" data-icon="arrow-r">页面二</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="content">
+    <p>本例设有 ui-btn-active 类，请注意首页按钮时突出显示的（已选）。</p>
+    <p>如果点击页面二，您会注意到按钮不会突出显示。</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>我的页脚</h1>
+  </div> 
+</div> 
+
+<div data-role="page" id="pagetwo">
+   <div data-role="header">
+    <h1>欢迎来到我的主页</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#pageone" data-icon="home">首页</a></li>
+        <li><a href="#" data-icon="arrow-r">页面二</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="content">
+    <p>本页中没有被预选的按钮（突出显示）。</p> 
+    <p>如需让按钮被选的外观表示当前正在访问页面，请返回导航栏教程，继续向下阅读。</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>我的页脚</h1>
+  </div>
+</div> 
+
+</body>
+</html>

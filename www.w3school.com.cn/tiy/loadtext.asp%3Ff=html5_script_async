@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Hello World!</p>
+<script type="text/javascript" src="/example/html5/demo_async.js" async="async"></script>
+
+</body>
+</html>

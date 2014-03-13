@@ -1,0 +1,31 @@
+<html>
+<body>
+
+<p>点击下面的按钮，会显示出基于今日日期的消息：</p>
+
+<button onclick="myFunction()">点击这里</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x;
+var d=new Date().getDay();
+switch (d)
+  {
+  case 6:
+    x="Today it's Saturday";
+    break;
+  case 0:
+    x="Today it's Sunday";
+    break;
+  default:
+    x="Looking forward to the Weekend";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>

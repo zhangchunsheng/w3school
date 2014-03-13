@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<button onclick="getMuted()" type="button">该视频默认是静音的吗？</button>
+<button onclick="setToMuted()" type="button">把视频设置为默认静音，并重载视频</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getMuted()
+  { 
+  alert(myVid.defaultMuted);
+  } 
+function setToMuted()
+  { 
+  myVid.defaultMuted=true;
+  myVid.load()
+  } 
+</script> 
+
+</body> 
+</html>

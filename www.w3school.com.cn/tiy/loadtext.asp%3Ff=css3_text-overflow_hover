@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div.test
+{
+white-space:nowrap; 
+width:12em; 
+overflow:hidden; 
+border:1px solid #000000;
+}
+
+div.test:hover
+{
+text-overflow:inherit;
+overflow:visible;
+}
+</style>
+
+</head>
+
+<body>
+
+<p>如果您把光标移动到下面两个 div 上，就能够看到全部文本。</p>
+
+<p>这个 div 使用 "text-overflow:ellipsis" ：</p>
+
+<div class="test" style="text-overflow:ellipsis;">This is some long text that will not fit in the box</div>
+
+<p>这个 div 使用 "text-overflow:clip"：</p>
+
+<div class="test" style="text-overflow:clip;">This is some long text that will not fit in the box</div>
+
+</body>
+</html>

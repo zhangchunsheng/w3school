@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="image" src="/i/eg_tulip.jpg" />
+
+<script>
+document.getElementById("image").src="/i/shanghai_lupu_bridge.jpg";
+</script>
+
+<p>原始图片是郁金香（eg_tulip.jpg），但是已被修改为卢浦大桥（shanghai_lupu_bridge.jpg）。</p>
+
+</body>
+</html>

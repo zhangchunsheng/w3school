@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<menu>
+<command onclick="alert('Hello World')" type="radio" radiogroup="group1">Click Me!</command><br />
+<command onclick="alert('Good morning!')">Click This!</command><br />
+<command onclick="alert('Good day!')" type="radio" radiogroup="group1">And this!</command>
+</menu>
+
+</body>
+</html>

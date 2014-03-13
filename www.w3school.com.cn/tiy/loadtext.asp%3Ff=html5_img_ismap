@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<a href="/example/html5/demo_form.asp">
+<img src="/i/eg_tulip.jpg" ismap="ismap" width="400" height="266" alt="郁金香" />
+</a>
+
+<p>请点击上面的图片，点击的坐标会以 URL 查询字符串的形式发送到服务器。</p>
+
+</body>
+</html>

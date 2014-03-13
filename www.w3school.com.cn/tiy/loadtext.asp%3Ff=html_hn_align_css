@@ -1,0 +1,10 @@
+<html>
+<body>
+
+<h1 style="text-align:center">This is heading 1</h1>
+<h2 style="text-align:left">This is heading 2</h2>
+<h3 style="text-align:right">This is heading 3</h3>
+<h4 style="text-align:justify">This is heading 4</h4>
+
+</body>
+</html>

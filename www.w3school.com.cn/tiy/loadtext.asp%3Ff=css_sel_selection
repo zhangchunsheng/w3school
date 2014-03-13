@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+::selection
+{
+color:#ff0000;
+}
+::-moz-selection
+{
+color:#ff0000;
+}
+</style>
+</head>
+<body>
+
+<h1>请试着选取页面上的文本</h1>
+
+<p>这是一个段落。</p>
+
+<div>这是 div 元素中的文本。</div>
+
+<br>
+
+<a href="http://www.w3school.com.cn" target="_blank">访问 W3School ！</a>
+
+</body>
+</html>

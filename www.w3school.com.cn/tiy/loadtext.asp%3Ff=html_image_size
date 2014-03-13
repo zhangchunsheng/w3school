@@ -1,0 +1,18 @@
+<html>
+
+<body>
+
+<img src="/i/eg_mouse.jpg" width="50" height="50">
+
+<br />
+
+<img src="/i/eg_mouse.jpg" width="100" height="100">
+
+<br />
+
+<img src="/i/eg_mouse.jpg" width="200" height="200">
+
+<p>通过改变 img 标签的 "height" 和 "width" 属性的值，您可以放大或缩小图像。</p>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<p>请试着把 miterLimit 设置为 4。如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 "bevel" 类型来显示。</p>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.lineWidth=10;
+ctx.lineJoin="miter";
+ctx.miterLimit=5;
+ctx.moveTo(20,20);
+ctx.lineTo(50,27);
+ctx.lineTo(20,34);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+margin:20px;
+width:150px; 
+padding:10px;
+height:70px;
+border:2px solid black;
+outline:2px solid red;
+outline-offset:15px;
+} 
+</style>
+</head>
+<body>
+
+<p><b>注释：</b>Internet Explorer 和 Opera 不支持 support outline-offset 属性。</p>
+
+<div>这个 div 在边框边缘之外 15 像素处有一个轮廓。</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+}
+li
+{
+float:left;
+}
+a
+{
+display:block;
+width:60px;
+background-color:#dddddd;
+}
+</style>
+</head>
+
+<body>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+
+<p><b>注释：</b>如果没有规定 !DOCTYPE，则浮动项目会产生意想不到的结果。</p>
+
+<p>为了显示出链接区域，我们为链接添加了背景色。</p>
+
+<p><b>注释：</b>向 ul 元素添加 overflow:hidden，是为了防止 li 元素出现在列表之外。</p>
+
+</body>
+</html>

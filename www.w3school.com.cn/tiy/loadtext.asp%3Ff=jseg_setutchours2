@@ -1,0 +1,13 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+var d=new Date();
+d.setUTCHours(23,15,6);
+document.write(d);
+
+</script>
+
+</body>
+</html>

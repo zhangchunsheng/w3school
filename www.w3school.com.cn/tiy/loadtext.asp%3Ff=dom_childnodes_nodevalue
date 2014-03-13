@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="intro">Hello World!</p>
+
+<script>
+txt=document.getElementById("intro").childNodes[0].nodeValue;
+document.write(txt);
+</script>
+
+</body>
+</html>

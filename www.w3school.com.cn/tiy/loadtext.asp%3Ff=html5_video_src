@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<video controls="controls" src="/i/movie.ogg">
+Your browser does not support the video tag.
+</video>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div
+{
+position:relative;
+height:60px;
+width:60px;
+border:1px solid #000;
+background-color:yellow;
+transform:rotateY(180deg);
+-webkit-transform:rotateY(180deg); /* Chrome and Safari */
+-moz-transform:rotateY(180deg); /* Firefox */
+}
+#div1
+{
+-webkit-backface-visibility:hidden;
+-moz-backface-visibility:hidden;
+-ms-backface-visibility:hidden;
+}
+#div2
+{
+-webkit-backface-visibility:visible;
+-moz-backface-visibility:visible;
+-ms-backface-visibility:visible;
+}
+</style>
+</head>
+<body>
+
+<p>本例有两个 div 元素，均旋转 180 度，背向用户。</p>
+
+<p>第一个 div 元素的 backface-visibility 属性设置为 "hidden"，所以应该是不可见的。</p>
+
+<div id="div1">DIV 1</div>
+
+<div id="div2">DIV 2</div>
+
+<p><b>注释：</b>本例只在 Internet Explorer 10、Firefox、Chrome 以及 Safari 中有效。</p>
+
+</body>
+</html>
+

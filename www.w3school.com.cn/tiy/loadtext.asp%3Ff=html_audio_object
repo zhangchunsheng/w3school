@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<object height="100" width="100" data="/i/horse.mp3"></object>
+<p><b>注释：</b>浏览器可能需要安装插件以后，才能播放该文件。</p>
+
+</body>
+</html>

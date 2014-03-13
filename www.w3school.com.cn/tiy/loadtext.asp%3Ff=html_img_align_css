@@ -1,0 +1,14 @@
+<html>
+
+<body>
+
+<h2>未设置对齐方式的图像：</h2>
+
+<p>图像 <img src ="/i/eg_cute.gif" /> 在文本中</p>
+
+<h2>向右浮动的图像：</h2>
+
+<p>图像 <img src="/i/eg_cute.gif" style="float:right" /> 在文本中</p>
+
+</body>
+</html>

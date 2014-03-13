@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p style="background-color:#FFFF00">
+使用十六进制值设置的颜色
+</p>
+
+<p style="background-color:rgb(255,255,0)">
+使用 rgb 值设置的颜色
+</p>
+
+<p style="background-color:yellow">
+使用颜色名设置的颜色
+</p>
+
+</body>
+</html>

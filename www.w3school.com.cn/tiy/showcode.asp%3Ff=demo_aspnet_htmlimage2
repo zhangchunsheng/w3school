@@ -1,0 +1,38 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub choose_image(Sender As Object, e As EventArgs)
+   image1.Src = select1.Value
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;select id=&quot;select1&quot; runat=&quot;server&quot;&gt;
+   &lt;option value=&quot;/i/eg_smile.gif&quot;&gt;–¶¡≥&lt;/option&gt;
+   &lt;option value=&quot;/i/eg_bulbon.gif&quot;&gt;µ∆≈›&lt;/option&gt;
+   &lt;option value=&quot;/i/eg_mouse.jpg&quot;&gt; Û±Í&lt;/option&gt;
+&lt;/select&gt;
+&lt;input type=&quot;submit&quot; runat=&quot;server&quot; value=&quot;œ‘ æÕºœÒ&quot;
+OnServerClick=&quot;choose_image&quot;&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;img id=&quot;image1&quot; src=&quot;/i/eg_smile.gif&quot; runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

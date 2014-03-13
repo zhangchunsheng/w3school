@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<style>
+input[type="text"]
+{
+  width:150px;
+  display:block;
+  margin-bottom:10px;
+  background-color:yellow;
+  font-family: Verdana, Arial;
+}
+
+input[type="button"]
+{
+  width:120px;
+  margin-left:35px;
+  display:block;
+  font-family: Verdana, Arial;
+}
+</style>
+</head>
+<body>
+
+<form name="input" action="" method="get">
+<input type="text" name="Name" value="Bill" size="20">
+<input type="text" name="Name" value="Gates" size="20">
+<input type="button" value="Example Button">
+
+</form>
+</body>
+</html>

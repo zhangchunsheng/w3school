@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").dblclick(function(){
+    $("p").slideToggle();
+  });
+  $("p").click(function(){
+    $("button").dblclick();
+  });
+});
+</script>
+</head>
+<body>
+<button>请双击这里</button>
+<p>点击本段落会触发上面这个按钮的 dblclick 事件。</p>
+</body>
+</html>

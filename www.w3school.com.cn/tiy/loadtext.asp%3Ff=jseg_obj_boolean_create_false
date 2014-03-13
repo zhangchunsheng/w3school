@@ -1,0 +1,31 @@
+<html>
+<body>
+
+<script type="text/javascript">
+var myBoolean=new Boolean();
+document.write(myBoolean);
+document.write("<br />");
+
+var myBoolean=new Boolean(0);
+document.write(myBoolean);
+document.write("<br />");
+
+var myBoolean=new Boolean(null);
+document.write(myBoolean);
+document.write("<br />");
+
+var myBoolean=new Boolean("");
+document.write(myBoolean);
+document.write("<br />");
+
+var myBoolean=new Boolean(false);
+document.write(myBoolean);
+document.write("<br />");
+
+var myBoolean=new Boolean(NaN);
+document.write(myBoolean);
+document.write("<br />");
+</script>
+
+</body>
+</html>

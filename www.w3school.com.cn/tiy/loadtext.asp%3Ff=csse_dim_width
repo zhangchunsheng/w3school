@@ -1,0 +1,15 @@
+<html>
+<head>
+<style type="text/css">
+img
+{
+width: 300px
+}
+</style>
+</head>
+<body>
+
+<img src="/i/eg_smile.gif" />
+
+</body>
+</html>

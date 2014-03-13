@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#disable").click(function(){
+    jQuery.fx.off = true;
+  });
+  $("#enable").click(function(){
+    jQuery.fx.off = false;
+  });
+  $("#toggle").click(function(){
+    $("div").toggle("slow");
+  });
+});
+</script>
+</head>
+<body>
+
+<button id="disable">jQuery.fx.off = true ( Ω˚”√ )</button>
+<button id="enable">jQuery.fx.off = false ( ∆Ù”√ )</button>
+<br><br>
+<button id="toggle">«–ªª∂Øª≠</button>
+
+<div style="background:#98bf21;height:100px;width:100px;margin:50px;">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub submit(sender As Object, e As EventArgs)
+dim i,j
+table1.BGColor=&quot;yellow&quot;
+table1.BorderColor=&quot;red&quot;
+for i=0 To table1.Rows.Count-1
+   for j=0 To table1.Rows(i).Cells.Count-1
+     table1.Rows(i).Cells(j).InnerHtml=&quot;Row &quot; & i
+   next
+next
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;table id=&quot;table1&quot; border=&quot;1&quot; runat=&quot;server&quot;&gt;
+   &lt;tr&gt;
+     &lt;td&gt;Cell 1&lt;/td&gt;
+     &lt;td&gt;Cell 2&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+     &lt;td&gt;Cell 3&lt;/td&gt;
+     &lt;td&gt;Cell 4&lt;/td&gt;
+   &lt;/tr&gt;
+&lt;/table&gt;
+&lt;br /&gt;
+&lt;input type=&quot;button&quot; value=&quot;¸Ä±äÄÚÈÝ&quot; OnServerClick=&quot;submit&quot; runat=&quot;server&quot;/&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

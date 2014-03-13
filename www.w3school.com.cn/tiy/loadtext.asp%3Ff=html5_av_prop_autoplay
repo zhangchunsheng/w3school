@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<button onclick="enableAutoplay()" type="button">启用自动播放</button>
+<button onclick="disableAutoplay()" type="button">禁用自动播放</button>
+<button onclick="checkAutoplay()" type="button">检查自动播放状态</button>
+<br>
+<video id="video1" controls="controls">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function enableAutoplay()
+  { 
+  myVid.autoplay=true;
+  myVid.load();
+  } 
+function disableAutoplay()
+  { 
+  myVid.autoplay=false;
+  myVid.load();
+  } 
+function checkAutoplay()
+  { 
+  alert(myVid.autoplay);
+  } 
+</script> 
+
+<p>Video courtesy of <a href="http://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+</body> 
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+appearance:button;
+-moz-appearance:button; /* Firefox */
+-webkit-appearance:button; /* Safari and Chrome */
+}
+</style>
+</head>
+<body>
+
+<p><b>注释：</b>Internet Explorer 和 Opera 不支持 appearance 属性。</p>
+
+<div>一些文本。</div>
+
+</body>
+</html>

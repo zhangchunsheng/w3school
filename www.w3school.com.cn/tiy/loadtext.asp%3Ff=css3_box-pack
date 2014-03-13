@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+width:350px;
+height:100px;
+border:1px solid black;
+  
+/* Firefox */
+display:-moz-box;
+-moz-box-pack:center;
+-moz-box-align:center;
+
+/* Safari, Chrome, and Opera */
+display:-webkit-box;
+-webkit-box-pack:center;
+-webkit-box-align:center;
+
+/* W3C */
+display:box;
+box-pack:center;
+box-align:center;
+}
+</style>
+</head>
+<body>
+
+<div>
+<p>我是居中对齐的。</p>
+</div>
+
+<p><b>注释：</b>IE 不支持 box-pack 和 box-align 属性。</p>
+
+</body>
+</html>

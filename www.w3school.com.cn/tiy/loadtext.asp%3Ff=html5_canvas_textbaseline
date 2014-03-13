@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="200" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+//Draw a red line at y=100
+ctx.strokeStyle="blue";
+ctx.moveTo(5,100);
+ctx.lineTo(395,100);
+ctx.stroke();
+
+ctx.font="20px Arial"
+
+//Place each word at y=100 with different textBaseline values
+ctx.textBaseline="top"; 
+ctx.fillText("Top",5,100); 
+ctx.textBaseline="bottom"; 
+ctx.fillText("Bottom",50,100); 
+ctx.textBaseline="middle"; 
+ctx.fillText("Middle",120,100); 
+ctx.textBaseline="alphabetic"; 
+ctx.fillText("Alphabetic",190,100); 
+ctx.textBaseline="hanging"; 
+ctx.fillText("Hanging",290,100); 
+
+</script>
+
+</body>
+</html>

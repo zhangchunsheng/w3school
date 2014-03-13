@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>链接到一段音乐</h2>
+
+<p><a href="/i/song.mp3">点击这里，播放音乐</a></p>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="aspcode">&lt;%@ Import Namespace=&quot;System.Data&quot; %&gt;</code>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+sub Page_Load
+if Not Page.IsPostBack then
+   dim mycdcatalog=New DataSet
+   mycdcatalog.ReadXml(MapPath(&quot;cdcatalog.xml&quot;))
+   cdcatalog.DataSource=mycdcatalog
+   cdcatalog.DataBind()
+end if
+end sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;asp:DataList id=&quot;cdcatalog&quot;
+runat=&quot;server&quot;
+cellpadding=&quot;2&quot;
+cellspacing=&quot;2&quot;
+borderstyle=&quot;inset&quot;
+backcolor=&quot;#e8e8e8&quot;
+width=&quot;100%&quot;
+headerstyle-font-name=&quot;Verdana&quot;
+headerstyle-font-size=&quot;12pt&quot;
+headerstyle-horizontalalign=&quot;center&quot;
+headerstyle-font-bold=&quot;True&quot;
+itemstyle-backcolor=&quot;#778899&quot;
+itemstyle-forecolor=&quot;#ffffff&quot;
+footerstyle-font-size=&quot;9pt&quot;
+footerstyle-font-italic=&quot;True&quot;&gt;
+
+&lt;HeaderTemplate&gt;
+My CD Catalog
+&lt;/HeaderTemplate&gt;
+
+&lt;ItemTemplate&gt;
+&quot;<code class="aspcode">&lt;%#Container.DataItem(&quot;title&quot;)%&gt;</code>&quot; of <code class="aspcode">&lt;%#Container.DataItem(&quot;artist&quot;)%&gt;</code>  - $<code class="aspcode">&lt;%#Container.DataItem(&quot;price&quot;)%&gt;</code>
+&lt;/ItemTemplate&gt;
+
+&lt;FooterTemplate&gt;
+Copy Right W3school.com.cn
+&lt;/FooterTemplate&gt;
+
+&lt;/asp:DataList&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

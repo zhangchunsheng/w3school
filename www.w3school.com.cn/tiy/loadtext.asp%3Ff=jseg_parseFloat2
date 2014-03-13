@@ -1,0 +1,14 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+document.write(parseFloat("3.14") + "<br />") 
+document.write(parseFloat("314e-2") + "<br />") 
+document.write(parseFloat("0.0314E+2") + "<br />") 
+document.write(parseFloat("3.14more non-digit characters") + "<br />") 
+
+</script>
+
+</body>
+</html>

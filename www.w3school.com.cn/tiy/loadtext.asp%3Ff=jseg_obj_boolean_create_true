@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<script type="text/javascript">
+var myBoolean=new Boolean(1);
+document.write(myBoolean);
+document.write("<br />");
+
+var myBoolean=new Boolean(true);
+document.write(myBoolean);
+document.write("<br />");
+
+var myBoolean=new Boolean("true");
+document.write(myBoolean);
+document.write("<br />");
+
+var myBoolean=new Boolean("false");
+document.write(myBoolean);
+document.write("<br />");
+
+var myBoolean=new Boolean("Bill Gates");
+document.write(myBoolean);
+document.write("<br />");
+</script>
+
+</body>
+</html>

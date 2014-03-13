@@ -1,0 +1,28 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+<code class="aspcode">&lt;%
+If Response.IsClientConnected=true then
+Response.Write(&quot;用户仍然保持连接。&quot;)
+else
+Response.Write(&quot;用户未连接。&quot;)
+end if
+%&gt;</code>
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

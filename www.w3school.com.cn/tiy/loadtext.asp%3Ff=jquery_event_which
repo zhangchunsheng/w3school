@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("input").keydown(function(event){ 
+    $("div").html("Key: " + event.which);
+  });
+});
+</script>
+</head>
+<body>
+
+请随意键入一些字符：<input type="text" />
+<p>当您在上面的框中键入文本时，下面的 div 会显示键位序号。</p>
+<div />
+
+</body>
+</html>

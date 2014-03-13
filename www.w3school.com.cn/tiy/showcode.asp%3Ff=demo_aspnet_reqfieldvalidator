@@ -1,0 +1,33 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+名称：&lt;asp:TextBox id=&quot;name&quot; runat=&quot;server&quot; /&gt;
+&lt;br /&gt;
+年龄：&lt;asp:TextBox id=&quot;age&quot; runat=&quot;server&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;asp:Button runat=&quot;server&quot; Text=&quot;提交&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;asp:RequiredFieldValidator
+ControlToValidate=&quot;name&quot;
+Text=&quot;name 字段是必填的！&quot;
+runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

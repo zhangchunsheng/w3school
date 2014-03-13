@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp">
+<label for="male">Male</label>
+<input type="radio" name="sex" id="male" value="male" />
+<br />
+<label for="female">Female</label>
+<input type="radio" name="sex" id="female" value="female"  />
+<br />
+<input type="submit" value="Ìá½»" />
+</form>
+
+</body>
+</html>

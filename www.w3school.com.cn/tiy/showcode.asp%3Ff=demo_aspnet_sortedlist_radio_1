@@ -1,0 +1,46 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+sub Page_Load
+if Not Page.IsPostBack then
+   dim mycountries=New SortedList
+   mycountries.Add(&quot;C&quot;,&quot;China&quot;)
+   mycountries.Add(&quot;S&quot;,&quot;Sweden&quot;)
+   mycountries.Add(&quot;F&quot;,&quot;France&quot;)
+   mycountries.Add(&quot;I&quot;,&quot;Italy&quot;)
+   rb.DataSource=mycountries
+   rb.DataValueField=&quot;Key&quot;
+   rb.DataTextField=&quot;Value&quot;
+   rb.DataBind()
+end if
+end sub
+
+sub displayMessage(s as Object,e As EventArgs)
+lbl1.text=&quot;Your favorite country is: &quot; & rb.SelectedItem.Text
+end sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;asp:RadioButtonList id=&quot;rb&quot; runat=&quot;server&quot;
+AutoPostBack=&quot;True&quot; onSelectedIndexChanged=&quot;displayMessage&quot; /&gt;
+&lt;p&gt;&lt;asp:label id=&quot;lbl1&quot; runat=&quot;server&quot; /&gt;&lt;/p&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

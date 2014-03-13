@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Hello World!</p>
+<p>DOM 很有用！</p>
+<p>本例演示 <b>length</b> 属性。</p>
+
+<script>
+x=document.getElementsByTagName("p");
+for (i=0;i<x.length;i++)
+  { 
+  document.write(x[i].innerHTML);
+  document.write("<br>");
+  }
+</script>
+</body>
+</html>

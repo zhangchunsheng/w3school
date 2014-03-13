@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>此处是页面标题</h1>
+  </div>
+
+  <div data-role="content">
+    <p>工具栏中的导航栏将自动继承其父元素的样式。如需定制每个按钮的外观，请在链接内添加 data-theme 属性。</p>
+  </div>
+
+  <div data-role="footer" data-theme="e">
+  <h1>此处是页脚文本</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#" data-icon="home" data-theme="b">按钮 1</a></li>
+        <li><a href="#" data-icon="arrow-r">按钮 2</a></li>
+        <li><a href="#" data-icon="arrow-r">按钮 3</a></li>
+        <li><a href="#" data-icon="search" data-theme="a" >按钮 4</a></li>
+      </ul>
+    </div>   
+  </div>
+</div> 
+
+</body>
+</html>

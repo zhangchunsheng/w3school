@@ -1,0 +1,23 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").mouseup(function(){
+    $("div").slideToggle();
+  });
+  $("#mousePara").mouseover(function(){
+    $("button").mouseup();
+  });
+});
+</script>
+</head>
+<body>
+<div>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+</div>
+<button>切换</button>
+<p id="mousePara">如果您把鼠标移动本段落上，会激活上面这个按钮的 mouseup 事件。</p>
+</body>
+</html>

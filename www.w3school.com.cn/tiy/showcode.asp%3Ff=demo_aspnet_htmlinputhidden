@@ -1,0 +1,34 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub submit(Source As Object, e As EventArgs)
+      hidden1.Value=string1.Value
+      p1.InnerHtml=&quot;Hidden value= &quot; + hidden1.Value
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+请输入一些文本： &lt;input id=&quot;string1&quot; type=&quot;text&quot; size=&quot;25&quot; runat=&quot;server&quot; /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;提交&quot; OnServerClick=&quot;submit&quot; runat=&quot;server&quot; /&gt;
+&lt;input id=&quot;hidden1&quot; type=&quot;hidden&quot; runat=&quot;server&quot; /&gt;
+&lt;p id=&quot;p1&quot; runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

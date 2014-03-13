@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1">
+  <tr>
+    <th>月份</th>
+    <th>存款</th>
+  </tr>
+  <tr>
+    <td>一月</td>
+    <td>3000 元</td>
+  </tr>
+  <tr>
+    <td>二月</td>
+    <td>5000 元</td>
+  </tr>
+  <tr>
+    <td colspan="2">总计：8000 元</td>
+  </tr>
+</table>
+
+</body>
+</html>

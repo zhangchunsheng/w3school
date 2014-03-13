@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/example/html5/demo_media_screen.css"/>
+<link rel="stylesheet" type="text/css" href="/example/html5/demo_media_print.css" media="print" />
+</head>
+
+<body>
+<h1>W3School 示例</h1>
+<p><a href="/example/html5/demo_html5_link_media.html" target="_blank">点击这里</a>可以打开一个新窗口。</p>
+<p>如果打印此页，或者在打印预览模式下打开此页，您将看到使用 media="print" 样式表进行格式化的样式。"print" 样式表可以呈现白色背景上的黑色文本。</p>
+</body>
+</html>

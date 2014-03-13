@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="intro">Hello World!</p>
+<p>本例演示 <b>getElementById</b> 方法！</p>
+
+<script>
+x=document.getElementById("intro");
+document.write("<p>来自 intro 段落的文本：" + x.innerHTML + "</p>");
+</script>
+
+</body>
+</html>

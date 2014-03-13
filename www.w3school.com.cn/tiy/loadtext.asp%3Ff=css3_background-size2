@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+background:url(/i/bg_flower.gif);
+background-size:35% 100%;
+-moz-background-size:35% 100%; /* 老版本的 Firefox */
+background-repeat:no-repeat;
+}
+</style>
+</head>
+<body>
+
+<div>
+<p>这是一个段落。</p>
+<p>这是一个段落。</p>
+<p>这是一个段落。</p>
+<p>这是一个段落。</p>
+<p>这是一个段落。</p>
+<p>这是一个段落。</p>
+<p>这是一个段落。</p>
+<p>这是一个段落。</p>
+<p>这是一个段落。</p>
+</div>
+
+</body>
+</html>

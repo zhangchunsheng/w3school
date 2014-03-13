@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+
+<p><b>注释：</b>我们使用在测试链接中使用了 href="#"。在真实的网站中，应该是真实的 URL。</p>
+
+</body>
+</html>

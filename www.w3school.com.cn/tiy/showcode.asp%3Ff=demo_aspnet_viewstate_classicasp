@@ -1,0 +1,33 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form action=&quot;/example/aspnet/demo_aspnet_viewstate_classicasp.aspx&quot;
+ method=&quot;post&quot;&gt;
+Your name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; size=&quot;20&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+<code class="aspcode">&lt;%
+dim fname
+fname=Request.Form(&quot;fname&quot;)
+If fname&lt;&gt;&quot;&quot; Then
+       Response.Write(&quot;Hello &quot; & fname & &quot;!&quot;)
+End If
+%&gt;</code>
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+for (var i=0;i<cars.length;i++)
+{
+document.write(cars[i] + "<br>");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<head>
+<style type="text/css">
+h1 {
+  font: 28px Verdana;
+  color: blue background: red;
+  }
+</style>
+</head>
+
+<body>
+<h1>This is heading 1</h1>
+</body>
+</html>

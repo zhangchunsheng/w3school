@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+p {
+font-size:14px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+#div1
+{
+width:120px;
+height:100px;
+background-color:yellow;
+border:1px solid black;
+-ms-transform:rotate(7deg); /* Firefox */
+-moz-transform:rotate(7deg); /* Firefox */
+-webkit-transform:rotate(7deg); /* Safari and Chrome */
+-o-transform:rotate(7deg); /* Safari and Chrome */
+transform:rotate(7deg);
+}
+</style>
+
+<script>
+function rotate(value)
+{
+document.getElementById('div1').style.webkitTransform="rotate(" + value + "deg)";
+document.getElementById('div1').style.msTransform="rotate(" + value + "deg)";
+document.getElementById('div1').style.MozTransform="rotate(" + value + "deg)";
+document.getElementById('div1').style.OTransform="rotate(" + value + "deg)";
+document.getElementById('div1').style.transform="rotate(" + value + "deg)";
+document.getElementById('span1').innerHTML=value + "deg";
+}
+</script>
+
+</head>
+<body>
+
+<p>请旋转这个黄色的 div 元素：</p>
+
+<div id="div1">HELLO</div>
+
+<p>
+旋转：
+<br /><input type="range" min="-360" max="360" value="7" onchange="rotate(this.value)" /><br />
+transform: rotate(<span id="span1">7deg</span>);
+</p>
+
+</body>
+</html>

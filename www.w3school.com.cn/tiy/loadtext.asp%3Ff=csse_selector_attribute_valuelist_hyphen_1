@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<style type="text/css">
+*[lang|="en"] {color: blue;}
+{
+color: red;
+}
+</style>
+</head>
+
+<body>
+<h1>可以应用样式：</h1>
+<p lang="en">Hello!</p>
+<p lang="en-us">Greetings!</p>
+<p lang="en-au">G'day!</p>
+
+
+<hr />
+
+<h1>无法应用样式：</h1>
+<p lang="fr">Bonjour!</p>
+<p lang="cy-en">Jrooana!</p>
+</body>
+</html>

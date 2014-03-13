@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+var x1=36.00;
+var x2=36;
+var y=123e5;
+var z=123e-5;
+
+document.write(x1 + "<br />")
+document.write(x2 + "<br />")
+document.write(y + "<br />")
+document.write(z + "<br />")
+
+</script>
+
+</body>
+</html>

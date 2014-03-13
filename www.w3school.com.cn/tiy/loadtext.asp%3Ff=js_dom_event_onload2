@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function mymessage()
+{
+alert("这段消息由 onload 事件触发");
+}
+</script>
+</head>
+
+<body onload="mymessage()">
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub user(source As object,args As ServerValidateEventArgs)
+   if len(args.Value)&lt;8 or len(args.Value)&gt;16 then
+    args.IsValid=false
+   else
+    args.IsValid=true
+   end if
+End Sub
+&lt;/script&gt;</code>    
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;asp:Label runat=&quot;server&quot; Text=&quot;请输入用户名：&quot; /&gt;
+&lt;asp:TextBox id=&quot;txt1&quot; runat=&quot;server&quot; /&gt;
+&lt;asp:Button Text=&quot;提交&quot; runat=&quot;server&quot;/&gt;
+&lt;br /&gt;
+&lt;asp:Label id=&quot;mess&quot; runat=&quot;server&quot;/&gt;
+&lt;br /&gt;
+&lt;asp:CustomValidator
+ControlToValidate=&quot;txt1&quot;
+OnServerValidate=&quot;user&quot;
+Text=&quot;用户名必须介于 8 到 16 个字符之间！&quot;
+runat=&quot;server&quot;/&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

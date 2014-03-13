@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.container
+{
+width:300px;
+border:1px dotted black;
+
+/* Firefox */
+display:-moz-box;
+-moz-box-orient:horizontal;
+-moz-box-lines:multiple;
+
+/* Safari and Chrome */
+display:-webkit-box;
+-webkit-box-orient:horizontal;
+-webkit-box-lines:multiple;
+
+/* W3C */
+display:box;
+box-orient:horizontal;
+box-lines:multiple;
+}
+
+.box
+{
+width:100px;
+
+/* Firefox */
+-moz-box-flex: 1.0;
+
+/* Safari and Chrome */
+-webkit-box-flex: 1.0;
+
+/* W3C */
+box-flex: 1.0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box">11111111111</div>
+  <div class="box">22222222222</div>
+  <div class="box">33333333333</div>
+  <div class="box">44444444444</div>
+</div>
+
+<p><b>注释：</b>目前没有浏览器支持 box-lines 属性。</p>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+
+<link rel="stylesheet" type="text/css" href="/tiy/cc.css" />
+
+<script type="text/javascript" src="/tiy/cs.js"></script>
+
+<title>w3school在线测试工具 v1.2</title>
+
+<script type="text/javascript">
+<!--
+function test_demo_val(strValue)
+{
+
+var strId="MyDIV"
+
+document.getElementById(strId).style.transform=strValue;
+document.getElementById(strId).style.WebkitTransform=strValue;
+document.getElementById(strId).style.MozTransform=strValue;
+document.getElementById(strId).style.OTransform=strValue;
+document.getElementById(strId).style.msTransform=strValue;
+
+document.getElementById("CodeValue").innerHTML=strValue;
+}
+//-->
+</script>
+
+<style>
+#MyDIV
+{
+width:200px;
+height:100px;
+margin:80px;
+border:1px solid black;
+background-color:lightblue;
+}
+
+#MyDIV
+{
+transform:rotateZ(10deg);
+-webkit-transform:rotateZ(10deg);
+-moz-transform:rotateZ(10deg);
+-ms-transform:rotateZ(10deg);
+-o-transform:rotateZ(10deg);
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+<h1>W3School TIY</h1>
+
+<div id="ad">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3381531532877742";
+/* 728x90, tiy_big */
+google_ad_slot = "7947784850";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+
+
+<div id="SelArea">
+<h2>CSS 属性：</h2>
+
+<h3>transform:</h3>				
+
+<form action="javascript:return false;">
+<ul>
+<input type="hidden" id="PreSelectedValue" value="" />
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_1" value="rotateZ(10deg)" checked="checked" />rotateZ(10deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_2" value="rotateZ(20deg)" />rotateZ(20deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_3" value="rotateZ(30deg)" />rotateZ(30deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_4" value="rotateZ(40deg)" />rotateZ(40deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_5" value="rotateZ(45deg)" />rotateZ(45deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_6" value="rotateZ(50deg)" />rotateZ(50deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_7" value="rotateZ(60deg)" />rotateZ(60deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_8" value="rotateZ(70deg)" />rotateZ(70deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_9" value="rotateZ(80deg)" />rotateZ(80deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_10" value="rotateZ(90deg)" />rotateZ(90deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_11" value="rotateZ(100deg)" />rotateZ(100deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_12" value="rotateZ(110deg)" />rotateZ(110deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_13" value="rotateZ(120deg)" />rotateZ(120deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_14" value="rotateZ(130deg)" />rotateZ(130deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_15" value="rotateZ(140deg)" />rotateZ(140deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_16" value="rotateZ(150deg)" />rotateZ(150deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_17" value="rotateZ(160deg)" />rotateZ(160deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_18" value="rotateZ(170deg)" />rotateZ(170deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_19" value="rotateZ(180deg)" />rotateZ(180deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_20" value="rotateZ(270deg)" />rotateZ(270deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_21" value="rotateZ(360deg)" />rotateZ(360deg)</li>
+<li><input autocomplete="off" type="radio" name="rpos" onClick="test_demo(this)" id="value_22" value="none" />none</li>
+</ul>
+</form>
+
+
+<p class="note"><span>注释：</span>Internet Explorer 和 Opera 不支持 rotateZ 方法。</p>
+
+
+</div>
+
+
+<div id="result">
+<h2>结果：</h2>
+
+<div id="DemoArea">
+<div id="MyDIV">MyDIV</div>
+</div>
+
+<h2>CSS 代码：</h2>
+
+<pre id="CodeArea">
+#MyDIV
+{
+transform:<span id="CodeValue">rotateZ(10deg)</span>;
+}
+</pre>
+</div>
+
+
+<div id="footer">
+<p class="help">请点击上面的属性值来查看结果</p>
+<p class="copyright"><a href="http://www.w3school.com.cn">W3School.com.cn</a> - TIY</p>
+</div>
+
+</div>
+
+</body>
+
+<script type="text/javascript">tiy_onload()</script>
+
+</html>
+

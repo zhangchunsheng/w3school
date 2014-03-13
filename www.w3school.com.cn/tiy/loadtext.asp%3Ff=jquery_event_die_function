@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+function changeSize()
+{
+$(this).animate({fontSize:"+=3px"});
+}
+function changeColor()
+{
+$(this).animate({letterSpacing:"+=2px"});
+}
+$(document).ready(function(){
+  $("p").live("click",changeSize);
+  $("p").live("click",changeColor);
+  $("button").click(function(){
+    $("p").die("click",changeSize);
+  });
+});
+</script>
+</head>
+<body>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+<p>点击任意 p 元素可以增加尺寸和字间距。包括该段落。</p>
+<button>移除通过 live() 方法为 p 元素添加的 changeSize() 事件处理器</button>
+</body>
+</html>

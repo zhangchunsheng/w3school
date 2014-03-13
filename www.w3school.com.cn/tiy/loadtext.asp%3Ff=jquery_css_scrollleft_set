@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").scrollLeft(100);
+  });
+});
+</script>
+</head>
+<body>
+<div style="border:1px solid black;width:100px;height:130px;overflow:auto">
+The longest word in the english dictionary is: pneumonoultramicroscopicsilicovolcanoconiosis.
+</div>
+<button class="btn1">把滚动条的水平位置设置为 100px</button>
+</body>
+</html>

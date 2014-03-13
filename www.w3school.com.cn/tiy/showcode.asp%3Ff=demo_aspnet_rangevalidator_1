@@ -1,0 +1,37 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+请输入介于 2005-01-01 到 2005-12-31 的日期：
+&lt;br /&gt;
+&lt;asp:TextBox id=&quot;tbox1&quot; runat=&quot;server&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;asp:Button Text=&quot;验证&quot; runat=&quot;server&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;asp:RangeValidator
+ControlToValidate=&quot;tbox1&quot;
+MinimumValue=&quot;2005-01-01&quot;
+MaximumValue=&quot;2005-12-31&quot;
+Type=&quot;Date&quot;
+EnableClientScript=&quot;false&quot;
+Text=&quot;日期必须介于 2005-01-01 和 2005-12-31 之间！&quot;
+runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

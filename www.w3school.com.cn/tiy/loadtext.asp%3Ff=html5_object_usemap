@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>请点击图像上的星球，把它们放大。</p>
+
+<object data="/i/eg_planets.jpg" usemap="#planetmap"></object>
+
+<map name="planetmap" id="planetmap">
+<area shape="rect" coords="0,0,110,260" href ="/example/html/sun.html" alt="Sun" />
+<area shape="circle" coords="129,161,10" href ="/example/html/mercur.html" alt="Mercury" />
+<area shape="circle" coords="180,139,14" href ="/example/html/venus.html" alt="Venus" />
+</map>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击这个按钮，来调用带参数的函数。</p>
+
+<button onclick="myFunction('Bill Gates','CEO')">点击这里</button>
+
+<script>
+function myFunction(name,job)
+{
+alert("Welcome " + name + ", the " + job);
+}
+</script>
+
+</body>
+</html>

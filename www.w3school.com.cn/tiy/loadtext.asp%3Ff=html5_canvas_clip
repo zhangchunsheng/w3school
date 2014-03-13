@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>不使用 clip()：</p>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+// Draw a rectangle
+ctx.rect(50,20,200,120);
+ctx.stroke();
+// Draw red rectangle
+ctx.fillStyle="green";
+ctx.fillRect(0,0,150,100);
+</script> 
+
+<br />
+
+<p>使用 clip()：</p>
+<canvas id="myCanvas2" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas2");
+var ctx=c.getContext("2d");
+// Clip a rectangular area
+ctx.rect(50,20,200,120);
+ctx.stroke();
+ctx.clip();
+// Draw red rectangle after clip()
+ctx.fillStyle="green";
+ctx.fillRect(0,0,150,100);
+</script> 
+
+</body>
+</html>

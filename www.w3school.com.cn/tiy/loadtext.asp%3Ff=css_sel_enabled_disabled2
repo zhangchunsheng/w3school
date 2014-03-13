@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+input:enabled
+{
+background:#ffff00;
+}
+input:disabled
+{
+background:#dddddd;
+}
+</style>
+</head>
+<body>
+
+<form action="">
+First name: <input type="text" value="Mickey" /><br>
+Last name: <input type="text" value="Mouse" /><br>
+Country: <input type="text" disabled="disabled" value="Disneyland" /><br>
+Password: <input type="password" name="password" /><br>
+<input type="radio" value="male" name="gender" /> Male<br>
+<input type="radio" value="female" name="gender" /> Female<br>
+<input type="checkbox" value="Bike" /> I have a bike<br>
+<input type="checkbox" value="Car" /> I have a car 
+</form>
+
+<p><b>注释：</b>本例只在 Opera 中正确地工作！</p>
+
+</body>
+</html>

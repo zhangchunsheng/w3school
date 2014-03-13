@@ -1,0 +1,40 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub button1(Source As Object, e As EventArgs)
+   p1.InnerHtml=&quot;您点击了蓝色按钮！&quot;
+End Sub
+Sub button2(Source As Object, e As EventArgs)
+   p1.InnerHtml=&quot;您点击了粉色按钮！&quot;
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;button id=&quot;b1&quot; OnServerClick=&quot;button1&quot;
+style=&quot;background-color:#e6e6fa;
+height=25;width:100&quot; runat=&quot;server&quot;&gt;蓝色按钮&lt;/button&gt;
+&lt;button id=&quot;b2&quot; 
+OnServerClick=&quot;button2&quot; 
+style=&quot;background-color:#fff0f5;
+height=25;width:100&quot; runat=&quot;server&quot;&gt;粉色按钮&lt;/button&gt;
+&lt;p id=&quot;p1&quot; runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

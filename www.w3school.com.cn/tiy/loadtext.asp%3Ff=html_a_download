@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击 W3School 的 logo 来下载该图片：<p>
+
+<a href="/i/w3school_logo_white.gif" download="w3logo">
+<img border="0" src="/i/w3school_logo_white.gif" alt="W3School">
+</a>
+
+</body>
+</html>

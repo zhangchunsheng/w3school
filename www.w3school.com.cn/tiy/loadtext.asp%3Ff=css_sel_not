@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p
+{
+color:#000000;
+}
+:not(p)
+{
+color:#ff0000;
+}
+</style>
+</head>
+<body>
+
+<h1>这是标题</h1>
+
+<p>这是一个段落。</p>
+
+<p>这是另一个段落。</p>
+
+<div>这是 div 元素中的文本。</div>
+
+<br>
+
+<a href="http://www.w3school.com.cn" target="_blank">访问 W3School ！</a>
+
+</body>
+</html>

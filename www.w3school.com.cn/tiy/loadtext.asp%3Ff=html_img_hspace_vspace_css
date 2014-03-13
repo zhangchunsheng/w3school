@@ -1,0 +1,17 @@
+<html>
+<body>
+
+<h3>不带有外边距的图像：</h3>
+<p>
+<img src="/i/eg_logo_w3school.gif" align="middle" />
+This is some text. This is some text. This is some text.
+</p>
+
+<h3>左右外边距各为 50 像素的图像：</h3>
+<p>
+<img src="/i/eg_logo_w3school.gif" align="middle" style="margin:0px 50px" />
+This is some text. This is some text. This is some text.
+</p>
+
+</body>
+</html>

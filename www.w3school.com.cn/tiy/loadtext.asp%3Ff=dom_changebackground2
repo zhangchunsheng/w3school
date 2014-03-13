@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function ChangeBackground()
+{
+document.body.style.backgroundColor="lavender";
+}
+</script>
+
+<input type="button" onclick="ChangeBackground()" value="¸Ä±ä±³¾°É«" />
+
+</body>
+</html>

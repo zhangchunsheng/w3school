@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>本例调用的函数会执行一个计算，然后返回结果：</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(a,b)
+{
+return a*b;
+}
+
+document.getElementById("demo").innerHTML=myFunction(4,3);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp">
+<input type="file" name="pic" accept="image/gif,image.jpg" />
+<input type="submit" />
+</form>
+
+<p><b>注释：</b>出于安全方面的考虑，本例不允许您上传文件。</p>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+table{border-collapse:collapse;width:100%}
+table, td, th{border:1px solid black;}
+</style>
+</head>
+<body>
+
+<table>
+<colgroup span="2" style="background-color:#e80000" />
+  <tr>
+    <td>Adams</td>
+    <td>Bush</td>
+    <td>Carter</td>
+  </tr>
+  <tr>
+    <td>London</td>
+    <td>New York </td>
+    <td>Beijing</td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<menu>
+  <command onclick="alert('Hello World')" icon="/i/eg_bulbon.gif">
+  ЕуЛїетРя
+  </command>
+</menu>
+
+</body>
+</html>

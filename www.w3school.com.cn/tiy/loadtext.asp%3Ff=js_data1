@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var x=2;
+var y=3;
+var z=2+3;
+
+document.write(x + "<br>");
+document.write(y + "<br>");
+document.write(z + "<br>");
+</script>
+
+</body>
+</html>

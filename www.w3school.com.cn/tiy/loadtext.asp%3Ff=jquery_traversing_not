@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+</head>
+
+<body>
+
+<p>This is a paragragh.</p>
+<p>This is a paragragh.</p>
+<p>This is a paragragh.</p>
+<p id="selected">This is a paragragh.</p>
+<p>This is a paragragh.</p>
+<p>This is a paragragh.</p>
+
+<script>
+$("p").not("#selected").css('background-color', 'red');
+</script>
+
+</body>
+</html>

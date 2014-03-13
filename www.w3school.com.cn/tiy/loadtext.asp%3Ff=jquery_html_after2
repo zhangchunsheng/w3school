@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+function afterText()
+{
+var txt1="<b>I </b>";                    // 以 HTML 创建元素
+var txt2=$("<i></i>").text("love ");     // 通过 jQuery 创建元素
+var txt3=document.createElement("big");  // 通过 DOM 创建元素
+txt3.innerHTML="jQuery!";
+$("img").after(txt1,txt2,txt3);          // 在 img 之后插入新元素
+}
+</script>
+</head>
+<body>
+
+<img src="/i/eg_w3school.gif" alt="W3School Logo" />
+<br><br>
+<button onclick="afterText()">在图片后面添加文本</button>
+
+</body>
+</html>

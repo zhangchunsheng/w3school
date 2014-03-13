@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a:hover
+{
+background-color:yellow;
+}
+</style>
+</head>
+<body>
+
+<a href="http://www.w3school.com.cn">W3Sschool</a>
+<a href="http://www.google.com">Google</a>
+<a href="http://www.wikipedia.org">Wikipedia</a>
+
+<p><b>注释：</b>:hover 选择器鼠标指针在其上浮动的链接设置样式。</p>
+
+</body>
+</html>

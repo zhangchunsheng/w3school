@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+p:first-of-type
+{
+background:#ff0000;
+}
+</style>
+</head>
+
+<body>
+
+<h1>这是标题</h1>
+
+<p>这是第一个段落。</p>
+<p>这是第二个段落。</p>
+<p>这是第三个段落。</p>
+<p>这是第四个段落。</p>
+
+</body>
+</html>

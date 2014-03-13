@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+person={firstname:"Bill",lastname:"gates",age:56,eyecolor:"blue"}
+
+document.write(person.firstname + " is " + person.age + " years old.");
+</script>
+
+</body>
+</html>

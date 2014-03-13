@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+<button onclick="getMedGroup()" type="button">获得视频的媒体组合</button>
+<button onclick="setMedGroup()" type="button">设置视频的媒体组合</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<video id="video2" controls="controls">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid1=document.getElementById("video1");
+myVid2=document.getElementById("video2");
+function getMedGroup()
+  { 
+  alert("Video 1 media group: " + myVid1.mediaGroup +
+ ". Video 2 media group: " + myVid2.mediaGroup);
+  } 
+function setMedGroup()
+  { 
+  myVid1.mediaGroup="test";
+  myVid2.mediaGroup="test";
+  } 
+
+</script> 
+
+</body>
+</html>

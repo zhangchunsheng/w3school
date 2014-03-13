@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Hello world!</p>
+
+<script>
+function ChangeText()
+{
+document.getElementById("p1").innerHTML="New text!";
+}
+</script>
+
+<input type="button" onclick="ChangeText()" value="改变文本" />
+
+</body>
+</html>

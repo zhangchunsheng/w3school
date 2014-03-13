@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid">
+Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+cxt.fillStyle="#92B901";
+cxt.fillRect(50,50,100,100);
+function clearCanvas()
+{
+c.height=c.height;
+}
+</script>
+<br />
+<button onclick="clearCanvas()">Çå¿Õ»­²¼</button>
+</body>
+</html>

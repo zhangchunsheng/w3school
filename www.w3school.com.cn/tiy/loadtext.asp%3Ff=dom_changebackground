@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="button"
+onclick="document.body.style.backgroundColor='lavender';"
+value="¸Ä±ä±³¾°É«">
+
+</body>
+</html>

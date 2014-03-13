@@ -1,0 +1,59 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub submit(sender As Object, e As EventArgs)
+Dim row,numrows,numcells,j,i
+row=0
+numrows=cint(rows1.Value)
+numcells=cint(cells1.Value)
+for j=1 to numrows
+   Dim r As New HtmlTableRow()
+   row=row+1
+   for i=1 to numcells
+     Dim c As New HtmlTableCell()
+     c.Controls.Add(New LiteralControl(&quot;row &quot; & j & &quot;, cell &quot; & i))
+     r.Cells.Add(c)
+   next
+   t1.Rows.Add(r)
+   t1.Visible=true
+next
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;p&gt;表格行：
+&lt;select id=&quot;rows1&quot; runat=&quot;server&quot;&gt;
+   &lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+   &lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;
+   &lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;
+&lt;/select&gt;
+&lt;br /&gt;表格列：
+&lt;select id=&quot;cells1&quot; runat=&quot;server&quot;&gt;
+   &lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+   &lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;
+   &lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;
+&lt;/select&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;显示表格&quot; runat=&quot;server&quot; OnServerClick=&quot;submit&quot;&gt;
+&lt;/p&gt;
+&lt;table id=&quot;t1&quot; border=&quot;1&quot; runat=&quot;server&quot; visible=&quot;false&quot;/&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

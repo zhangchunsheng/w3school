@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<menu>
+<command onclick="alert('Hello World')" type="checkbox">Click Me!</command>
+</menu>
+
+</body>
+</html>

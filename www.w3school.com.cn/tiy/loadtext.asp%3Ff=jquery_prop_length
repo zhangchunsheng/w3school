@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    alert($("li").length);
+  });
+});
+</script>
+</head>
+<body>
+
+<button>输出 li 元素的数目</button>
+
+<ul>
+<li>咖啡</li>
+<li>牛奶</li>
+<li>绿茶</li>
+</ul>
+
+</body>
+</html>

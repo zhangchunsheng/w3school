@@ -1,0 +1,16 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("a").click(function(event){
+    event.preventDefault();
+  });
+});
+</script>
+</head>
+<body>
+<a href="http://w3school.com.cn/">W3School</a>
+<p>preventDefault() 方法将防止上面的链接打开 URL。</p>
+</body>
+</html>

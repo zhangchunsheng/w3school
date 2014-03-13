@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#test").click(function(){
+  $(this).fadeOut(4000);
+  });
+});
+</script>
+</head>
+
+<body>
+<div id="test" style="background:yellow;width:200px">CLICK ME AWAY!</div>
+<p>如果您点击上面的框，它会淡出直到消失为止。</p>
+</body>
+
+</html>

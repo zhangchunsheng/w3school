@@ -1,0 +1,23 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  testObj=new Object();
+  testObj.greetingMorn="Good Morning!";
+  testObj.greetingEve="Good Evening!";
+  $("#btn1").click(function(){
+    $("div").data(testObj);
+  });
+  $("#btn2").click(function(){
+    alert($("div").data("greetingEve"));
+  });
+});
+</script>
+</head>
+<body>
+<button id="btn1">把数据添加到 div 元素</button><br />
+<button id="btn2">获取已添加到 div 元素的数据</button>
+<div></div>
+</body>
+</html>

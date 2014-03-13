@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+width:350px;
+height:100px;
+border:1px solid black;
+
+/* Firefox */
+display:-moz-box;
+-moz-box-direction:reverse;
+
+/* Safari, Opera, and Chrome */
+display:-webkit-box;
+-webkit-box-direction:reverse;
+
+/* W3C */
+display:box;
+box-direction:reverse;
+}
+</style>
+</head>
+<body>
+
+<div>
+<p>¶ÎÂä 1¡£</p>
+<p>¶ÎÂä 2¡£</p>
+<p>¶ÎÂä 3¡£</p>
+</div>
+
+<p><b>×¢ÊÍ£º</b>IE ²»Ö§³Ö box-direction ÊôĞÔ¡£</p>
+
+</body>
+</html>

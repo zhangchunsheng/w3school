@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+p
+  {
+  background-color:rgba(255,0,0,0.3);
+  }
+</style>
+</head>
+
+<body>
+<h1>这是标题 1</h1>
+<p>这是段落中的一些文本。</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_post_enctype.asp" method="post">
+  First name: <input type="text" name="fname" /><br />
+<input type="submit" value="提交" />
+<input type="submit" formenctype="multipart/form-data" value="以 Multipart/form-data 编码提交" />
+</form>
+
+</body>
+</html>

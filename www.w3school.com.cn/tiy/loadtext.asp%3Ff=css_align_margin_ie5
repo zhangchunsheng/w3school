@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container
+{
+text-align:center;
+}
+.center
+{
+margin-left:auto;
+margin-right:auto;
+width:70%;
+background-color:#b0e0e6;
+text-align:left;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="center">
+<p>这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。</p>
+<p>这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。</p>
+</div>
+</div>
+
+<p><b>注释：</b>在 IE5 中，对于块元素存在一个外边距处理 BUG。块元素有时会被视作行内元素。在进行居中对齐时，这确实很成问题。为了在 IE5 中进行居中对齐，请使用 text-align 属性，就像在本例中这样。</p>
+</body>
+</html>
+

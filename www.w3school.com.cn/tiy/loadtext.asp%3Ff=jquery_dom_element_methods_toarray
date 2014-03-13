@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    x=$("li").toArray()
+      for (i=0;i<x.length;i++)
+      {
+      alert(x[i].innerHTML);
+      }
+  });
+});
+</script>
+</head>
+<body>
+<button>输出每个列表项的值</button>
+<ul>
+<li>Coffee</li>
+<li>Milk</li>
+<li>Soda</li>
+</ul>
+</body>
+</html>

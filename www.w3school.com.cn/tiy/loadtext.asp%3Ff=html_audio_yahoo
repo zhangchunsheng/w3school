@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><a href="/i/song.mp3">²¥·Å mp3</a></p>
+<p><a href="/i/bird.wav">²¥·Å wav</a></p>
+
+<script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>
+
+</body>
+</html>

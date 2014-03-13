@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h1").insertBefore("p");
+  });
+});
+</script>
+</head>
+
+<body>
+<h1>这是一个标题</h1>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+<button>在每个 p 元素之前插入 h1 元素</button>
+</body>
+</html>

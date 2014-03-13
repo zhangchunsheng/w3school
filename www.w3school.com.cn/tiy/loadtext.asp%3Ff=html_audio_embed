@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<embed height="100" width="100" src="/i/horse.mp3"></embed>
+<p><b>注释：</b>浏览器可能需要安装插件以后，才能播放该文件。</p>
+
+</body>
+</html>

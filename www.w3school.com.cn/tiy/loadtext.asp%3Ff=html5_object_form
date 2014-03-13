@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get" id="form1">
+First name: <input type="text" name="fname" /><br />
+<input type="submit" value="Submit" />
+</form>
+
+<object width="400" height="400" data="/i/helloworld.swf" name="obj1" form="form1">
+</object>
+
+</body>
+</html>

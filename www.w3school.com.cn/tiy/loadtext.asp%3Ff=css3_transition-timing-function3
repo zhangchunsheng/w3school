@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+width:100px;
+height:50px;
+background:red;
+color:white;
+font-weight:bold;
+transition:width 2s;
+-moz-transition:width 2s; /* Firefox 4 */
+-webkit-transition:width 2s; /* Safari and Chrome */
+-o-transition:width 2s; /* Opera */
+}
+
+#div1 {transition-timing-function: cubic-bezier(0,0,0.25,1);}
+#div2 {transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {transition-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {transition-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {transition-timing-function: cubic-bezier(0.42,0,0.58,1);}
+
+/* Firefox 4: */
+#div1 {-moz-transition-timing-function: cubic-bezier(0,0,0.25,1);}
+#div2 {-moz-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {-moz-transition-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {-moz-transition-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {-moz-transition-timing-function: cubic-bezier(0.42,0,0.58,1);}
+
+/* Safari and Chrome: */
+#div1 {-webkit-transition-timing-function: cubic-bezier(0,0,0.25,1);}
+#div2 {-webkit-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {-webkit-transition-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {-webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {-webkit-transition-timing-function: cubic-bezier(0.42,0,0.58,1);}
+
+/* Opera: */
+#div1 {-o-transition-timing-function: cubic-bezier(0,0,0.25,1);}
+#div2 {-o-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {-o-transition-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {-o-transition-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {-o-transition-timing-function: cubic-bezier(0.42,0,0.58,1);}
+
+div:hover
+{
+width:300px;
+}
+</style>
+</head>
+<body>
+
+<div id="div1" style="top:100px">linear</div>
+<div id="div2" style="top:150px">ease</div>
+<div id="div3" style="top:200px">ease-in</div>
+<div id="div4" style="top:250px">ease-out</div>
+<div id="div5" style="top:300px">ease-in-out</div>
+
+<p>请把鼠标指针移动到红色的 div 元素上，就可以看到过渡效果。</p>
+
+<p><b>注释：</b>本例在 Internet Explorer 中无效。</p>
+
+</body>
+</html>

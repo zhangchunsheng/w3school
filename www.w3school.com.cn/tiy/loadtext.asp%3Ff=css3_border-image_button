@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+border:10px solid transparent;
+width:40px;
+padding:5px 10px;
+-moz-border-image: url(/i/border_image_button.png) 0 14 0 14 stretch; /* 老版本的 Firefox */
+-webkit-border-image: url(/i/border_image_button.png) 0 14 0 14 stretch; /* Safari */
+-o-border-image: url(/i/border_image_button.png) 0 14 0 14 stretch; /* Opera */
+border-image: url(/i/border_image_button.png) 0 14 0 14 stretch;
+}
+</style>
+</head>
+<body>
+
+<p><b>注释：</b>Internet Explorer 不支持 border-image 属性。</p>
+
+<div>Search</div>
+
+<p>这是我们使用的图片：</p>
+<img src="/i/border_image_button.png">
+
+</body>
+</html>

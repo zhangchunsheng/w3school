@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  div { width: 80px; height: 80px; background: #abc; 
+        border: 2px solid black; margin: 10px; float: left; }
+  div.after { border-color: red; }
+  </style>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+</head>
+
+<body>
+
+  <div>first</div>
+  <div>sibling<div>child</div></div>
+  <div>sibling</div>
+  <div>sibling</div>
+
+<script>
+$("div:first").nextAll().addClass("after");
+</script>
+
+</body>
+</html>

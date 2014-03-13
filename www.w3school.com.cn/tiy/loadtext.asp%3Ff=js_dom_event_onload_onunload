@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body onload="checkCookies()">
+
+<script>
+function checkCookies()
+{
+if (navigator.cookieEnabled==true)
+	{
+	alert("已启用 cookie")
+	}
+else
+	{
+	alert("未启用 cookie")
+	}
+}
+</script>
+
+<p>提示框会告诉你，浏览器是否已启用 cookie。</p>
+</body>
+</html>

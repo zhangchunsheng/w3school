@@ -1,0 +1,17 @@
+<html>
+<body>
+<h2>通过 JSON 字符串来创建对象</h3>
+<p>First Name: <span id="fname"></span></p> 
+
+<script type="text/javascript">
+var employees = [
+{ "firstName":"Bill" , "lastName":"Gates" },
+{ "firstName":"George" , "lastName":"Bush" },
+{ "firstName":"Thomas" , "lastName": "Carter" }
+];
+employees[1].firstName="Jobs";
+document.getElementById("fname").innerHTML=employees[1].firstName;
+</script>
+
+</body>
+</html>

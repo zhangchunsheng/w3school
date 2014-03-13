@@ -1,0 +1,73 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;table bgcolor=&quot;#b0c4de&quot; cellspacing=&quot;10&quot;&gt;
+   &lt;tr&gt;
+     &lt;td align=&quot;right&quot;&gt;名字：&lt;/td&gt;
+     &lt;td&gt;&lt;asp:TextBox id=&quot;txt_name&quot; runat=&quot;server&quot;/&gt;&lt;/td&gt;
+     &lt;td&gt;
+     &lt;asp:RequiredFieldValidator
+     ControlToValidate=&quot;txt_name&quot;
+     ErrorMessage=&quot;Name&quot;
+     Text=&quot;*&quot;
+     runat=&quot;server&quot;/&gt;
+     &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+     &lt;td align=&quot;right&quot;&gt;卡片类型：&lt;/td&gt;
+     &lt;td&gt;
+     &lt;asp:RadioButtonList id=&quot;rlist_type&quot;
+     RepeatLayout=&quot;Flow&quot;
+     runat=&quot;server&quot;&gt;
+     &lt;asp:ListItem&gt;Diners&lt;/asp:ListItem&gt;
+     &lt;asp:ListItem&gt;MasterCard&lt;/asp:ListItem&gt;
+     &lt;asp:ListItem&gt;Visa&lt;/asp:ListItem&gt;
+     &lt;/asp:RadioButtonList&gt;
+     &lt;/td&gt;
+     &lt;td&gt;
+     &lt;asp:RequiredFieldValidator
+     ControlToValidate=&quot;rlist_type&quot;
+     ErrorMessage=&quot;Card Type&quot;
+     InitialValue=&quot;&quot;
+     Text=&quot;*&quot;
+     runat=&quot;server&quot;/&gt;
+     &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+     &lt;td&gt;&lt;/td&gt;
+     &lt;td&gt;&lt;asp:Button id=&quot;b1&quot; Text=&quot;提交&quot; runat=&quot;server&quot;/&gt;&lt;/td&gt;
+     &lt;td&gt;&lt;/td&gt;
+   &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;asp:ValidationSummary
+ShowMessageBox=&quot;true&quot;
+ShowSummary=&quot;false&quot;
+HeaderText=&quot;您必须在下面的字段中输入值：&quot;
+EnableClientScript=&quot;true&quot;
+runat=&quot;server&quot;/&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.right
+{
+position:absolute;
+right:0px;
+width:300px;
+background-color:#b0e0e6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="right">
+<p>这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。</p>
+<p>这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。</p>
+</div>
+
+</body>
+</html>

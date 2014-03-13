@@ -1,0 +1,21 @@
+<html>
+<head>
+<style type="text/css">
+.important {font-weight:bold;}
+.warning {font-style:italic;}
+.important.warning {background:silver;}
+</style>
+</head>
+
+<body>
+<p class="important">This paragraph is very important.</p>
+
+<p class="warning">This is a warning.</p>
+
+<p class="important warning">This paragraph is a very important warning.</p>
+
+<p>This is a paragraph.</p>
+
+<p>...</p>
+</body>
+</html>

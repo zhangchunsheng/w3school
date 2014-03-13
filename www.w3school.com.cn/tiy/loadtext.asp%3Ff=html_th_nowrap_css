@@ -1,0 +1,41 @@
+<html>
+<body>
+
+<p>请适当缩小浏览器窗口，就可以看到该属性的效果：</p>
+
+<p>换行的表格：</p>
+
+<table border="1">
+  <tr>
+    <th>Company in USA</th>
+    <th>--------------------- Address --------------------</th>
+  </tr>
+  <tr>
+    <td>Apple, Inc.</td>
+    <td>1 Infinite Loop Cupertino, CA 95014</td>
+  </tr>
+  <tr>
+    <td>Google, Inc.</td>
+    <td>1600 Amphitheatre Parkway Mountain View, CA 94043</td>
+  </tr>
+</table>
+
+<p>不换行的表格：</p>
+
+<table border="1">
+  <tr>
+    <th>Company in USA</th>
+    <th style="white-space:nowrap">--------------------- Address --------------------</th>
+  </tr>
+  <tr>
+    <td>Apple, Inc.</td>
+    <td>1 Infinite Loop Cupertino, CA 95014</td>
+  </tr>
+  <tr>
+    <td>Google, Inc.</td>
+    <td>1600 Amphitheatre Parkway Mountain View, CA 94043</td>
+  </tr>
+</table>
+
+</body>
+</html>

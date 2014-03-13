@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Hello World!</p>
+<p>DOM 很有用！</p>
+<p>本例演示 <b>getElementsByTagName</b> 方法。</p>
+
+<script>
+x=document.getElementsByTagName("p");
+document.write("第一段的文本: " + x[0].innerHTML);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="/i/demo_icon.ico" type="image/gif" sizes="16x16" />
+</head>
+
+<body>
+<h2>Hello world!</h2>
+<p>在<a href="/example/html5/demo_html5_link_sizes.html" target="_blank">新窗口</a>打开该页会看到图标。</p>
+</body>
+
+</html>

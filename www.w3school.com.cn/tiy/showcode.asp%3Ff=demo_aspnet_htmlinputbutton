@@ -1,0 +1,35 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub submit(sender As Object, e as EventArgs)
+if name.value&lt;&gt;&quot;&quot; then
+   p1.InnerHtml=&quot;欢迎&quot; & name.value & &quot;！&quot;
+end if
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form runat=&quot;server&quot;&gt;
+请输入您的名字：&lt;input id=&quot;name&quot; type=&quot;text&quot; size=&quot;30&quot; runat=&quot;server&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;提交&quot; OnServerClick=&quot;submit&quot; runat=&quot;server&quot; /&gt;
+&lt;p id=&quot;p1&quot; runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<script>
+function isSeeking()
+  { 
+  myVid=document.getElementById("video1");
+  document.getElementById("span1").innerHTML=("Seeking: " + myVid.seeking);
+  } 
+</script>
+</head>
+<body>
+<video id="video1" controls="controls" onseeking="isSeeking()" onseeked="isSeeking()">
+  <source src="/example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="/example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<p>试着在视频中寻址：<span id="span1"></span></p>
+
+</body> 
+</html>

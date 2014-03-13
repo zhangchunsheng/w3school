@@ -1,0 +1,30 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;textarea cols=&quot;30&quot; rows=&quot;5&quot; disabled=&quot;disabled&quot;&gt;
+领先的 Web 技术教程 - 全部免费
+在w3school，你可以找到你所需要的所有的网站建设教程。
+从基础的HTML到XHTML，乃至进阶的XML、SQL、数据库、多媒体和WAP。
+&lt;/textarea&gt;
+
+&lt;p&gt;您无法对本例进行编辑，因为我们的在线编辑器使用 textarea 进行输入，
+而浏览器不允许 textarea 中存在另一个 textarea。&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+
+</body>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center
+{
+margin:auto;
+width:70%;
+background-color:#b0e0e6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="center">
+<p>这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。</p>
+<p>这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。</p>
+</div>
+
+<p><b>注释：</b>除非已经声明了 !DOCTYPE，否则使用 margin:auto 在 IE8 以及更早的版本中是无效的。</p>
+</body>
+</html>
+

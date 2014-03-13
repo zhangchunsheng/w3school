@@ -1,0 +1,17 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $.getScript("/example/jquery/demo_ajax_script.js");
+  });
+});
+</script>
+</head>
+<body>
+
+<button>使用 Ajax 来获得并运行一个 JavaScript 文件</button>
+
+</body>
+</html>

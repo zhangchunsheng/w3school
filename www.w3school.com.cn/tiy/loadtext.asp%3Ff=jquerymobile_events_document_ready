@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("p").on("click",function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>如果您点击我，我会消失。</p>
+<p>点击我，我会消失。</p>
+<p>点击我，我也会消失。</p>
+
+</body>
+</html>

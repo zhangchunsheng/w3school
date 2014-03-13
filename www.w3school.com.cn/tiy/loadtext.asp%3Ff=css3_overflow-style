@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+width:150px;
+height:50px;
+border:thin solid black;
+overflow:hidden;
+overflow-style:marquee,panner;
+}
+</style>
+</head>
+<body>
+
+<div>
+这是一个段落。这是一个段落。这是一个段落。这是一个段落。
+这是一个段落。这是一个段落。这是一个段落。这是一个段落。
+这是一个段落。这是一个段落。这是一个段落。这是一个段落。
+这是一个段落。这是一个段落。这是一个段落。这是一个段落。
+这是一个段落。这是一个段落。这是一个段落。这是一个段落。
+</div>
+
+<p>overflow-style 属性规定溢出元素的首选滚动方法。</p>
+<p><b>注释：</b>目前没有浏览器支持 overflow-style 属性。</p>
+
+</body>
+</html>

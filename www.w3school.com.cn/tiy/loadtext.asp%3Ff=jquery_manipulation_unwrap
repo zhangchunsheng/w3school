@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").unwrap();
+  });
+});
+</script>
+<style type="text/css">
+div{background-color:yellow;}
+article{background-color:pink;}
+</style>
+</head>
+<body>
+
+<div>
+<p>这是 div 元素中的段落。</p>
+</div>
+
+<article>
+<p>这是 article 元素中的段落。</p>
+</article>
+
+<button>删除每个 p 元素的父元素</button>
+
+</body>
+</html>

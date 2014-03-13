@@ -1,0 +1,17 @@
+<html>
+<body>
+
+<script type="text/javascript">
+var str1="noonday"; 
+var str2="possibly yesterday."; 
+
+var patt1=/\B../;
+var patt2=/y\B./;
+
+document.write(str1.match(patt1) + "<br>");
+document.write(str2.match(patt2) + "<br>");
+
+</script>
+
+</body>
+</html>

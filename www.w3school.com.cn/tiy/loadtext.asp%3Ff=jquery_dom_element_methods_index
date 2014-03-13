@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("li").click(function(){
+    alert($(this).index());
+  });
+});
+</script>
+</head>
+<body>
+<p>点击列表项可获得其相对于同胞元素的 index 位置：</p>
+<ul>
+<li>Coffee</li>
+<li>Milk</li>
+<li>Soda</li>
+</ul>
+</body>
+</html>

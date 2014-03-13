@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("div p").last().css("background-color","yellow");
+});
+</script>
+</head>
+<body>
+
+<h1>欢迎来到我的主页</h1>
+<div>
+<p>这是 div 中的一个段落。</p>
+</div>
+
+<div>
+<p>这是 div 中的另一个段落。</p>
+</div>
+
+<p>这也是段落。</p>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .full { border: 1px solid red; }
+  </style>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+</head>
+
+<body>
+<ul>
+  <li>list item 1</li>
+  <li>list item 2
+    <ul>
+      <li>list item 2-a</li>
+      <li>list item 2-b</li>
+    </ul>
+  </li>
+  <li>list item 3</li>
+  <li>list item 4</li>
+</ul>
+
+<script>
+$('li').has('ul').css('background-color', 'red');
+</script>
+
+</body>
+</html>

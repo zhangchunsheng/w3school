@@ -1,0 +1,20 @@
+<html>
+<body>
+<h2>通过 JSON 字符串来创建对象</h3>
+<p>
+First Name: <span id="fname"></span><br /> 
+Last Name: <span id="lname"></span><br /> 
+</p> 
+<script type="text/javascript">
+var txt = '{"employees":[' +
+'{"firstName":"Bill","lastName":"Gates" },' +
+'{"firstName":"George","lastName":"Bush" },' +
+'{"firstName":"Thomas","lastName":"Carter" }]}';
+
+obj = JSON.parse(txt);
+
+document.getElementById("fname").innerHTML=obj.employees[1].firstName 
+document.getElementById("lname").innerHTML=obj.employees[1].lastName 
+</script>
+</body>
+</html>

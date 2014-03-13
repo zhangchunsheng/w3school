@@ -1,0 +1,13 @@
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+  First name: <input type="text" name="fname" /><br />
+  Last name: <input type="text" name="lname" /><br />
+  <input type="image" src="/i/eg_submit.jpg" alt="Submit" width="99" height="99"/>
+</form>
+
+<p><b>注释：</b>默认地，image 输入类型会发送点击图像按钮时的 X 坐标和 Y 坐标。</p>
+
+</body>
+</html>

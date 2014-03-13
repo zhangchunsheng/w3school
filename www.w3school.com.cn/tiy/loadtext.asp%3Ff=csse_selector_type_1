@@ -1,0 +1,15 @@
+<html>
+<head>
+<style type="text/css">
+html {color:black;}
+h1 {color:blue;}
+h2 {color:silver;}
+</style>
+</head>
+
+<body>
+<h1>这是 heading 1</h1>
+<h2>这是 heading 2</h2>
+<p>这是一段普通的段落。</p>
+</body>
+</html>

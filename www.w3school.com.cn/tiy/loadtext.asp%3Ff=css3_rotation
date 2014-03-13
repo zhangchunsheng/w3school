@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+h1
+{
+rotation-point:50% 50%;
+rotation:180deg;
+}
+</style>
+</head>
+<body>
+
+<h1>旋转效果</h1>
+
+<p><b>注释：</b>目前没有浏览器支持 rotation-point 或 rotation 属性。</p>
+
+</body>
+</html>

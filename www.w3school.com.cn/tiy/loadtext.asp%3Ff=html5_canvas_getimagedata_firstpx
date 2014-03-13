@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="green";
+ctx.fillRect(10,10,50,50);
+
+var imgData=ctx.getImageData(30,30,50,50);
+red=imgData.data[0];
+green=imgData.data[1];
+blue=imgData.data[2];
+alpha=imgData.data[3];
+alert(red + " " + green + " " + blue + " " + alpha);
+
+</script>
+
+</body>
+</html>

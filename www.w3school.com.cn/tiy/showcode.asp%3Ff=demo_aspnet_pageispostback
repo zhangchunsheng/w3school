@@ -1,0 +1,36 @@
+
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/tiy/showcode.css" />
+</head>
+
+<body>
+
+<pre>
+
+<code class="jscode">&lt;script  runat=&quot;server&quot;&gt;
+Sub Page_Load
+if Not Page.IsPostBack then
+   lbl1.Text=&quot;The date and time is &quot; & now()
+end if
+End Sub
+
+Sub submit(s As Object, e As EventArgs)
+lbl2.Text=&quot;Hello World!&quot;
+End Sub
+&lt;/script&gt;</code>
+
+&lt;html&gt;
+&lt;body&gt;
+&lt;form runat=&quot;server&quot;&gt;
+&lt;h3&gt;&lt;asp:label id=&quot;lbl1&quot; runat=&quot;server&quot; /&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;asp:label id=&quot;lbl2&quot; runat=&quot;server&quot; /&gt;&lt;/h3&gt;
+&lt;asp:button text=&quot;Submit&quot; onclick=&quot;submit&quot; runat=&quot;server&quot; /&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>

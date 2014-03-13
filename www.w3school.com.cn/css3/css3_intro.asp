@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+<link rel="stylesheet" type="text/css" href="/c5.css" />
+
+<title>CSS3 简介</title>
+
+</head>
+
+<body class="html">
+
+<div id="wrapper">
+
+<div id="header">
+<a href="/index.html" title="w3school 在线教程" style="float:left;">w3school 在线教程</a>
+<div id="ad_head">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3381531532877742";
+/* 728x90, 创建于 08-12-1 */
+google_ad_slot = "7423315034";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+
+<div id="navfirst">
+<ul id="menu">
+<li id="h"><a href="/h.asp" title="HTML 系列教程">HTML 系列教程</a></li>
+<li id="b"><a href="/b.asp" title="浏览器脚本教程">浏览器脚本</a></li>
+<li id="s"><a href="/s.asp" title="服务器脚本教程">服务器脚本</a></li>
+<li id="d"><a href="/d.asp" title="ASP.NET 教程">ASP.NET 教程</a></li>
+<li id="x"><a href="/x.asp" title="XML 系列教程">XML 系列教程</a></li>
+<li id="ws"><a href="/ws.asp" title="Web Services 系列教程">Web Services 系列教程</a></li>
+<li id="w"><a href="/w.asp" title="建站手册">建站手册</a></li>
+</ul>
+</div>
+
+<div id="navsecond">
+
+<div id="course"><h2>CSS3 教程</h2>
+<ul>
+<li><a href="/css3/index.asp" title="CSS3 教程">CSS3 教程</a></li>
+<li class="currentLink"><a href="/css3/css3_intro.asp" title="CSS3 简介">CSS3 简介</a></li>
+<li><a href="/css3/css3_border.asp" title="CSS3 边框">CSS3 边框</a></li>
+<li><a href="/css3/css3_background.asp" title="CSS3 背景">CSS3 背景</a></li>
+<li><a href="/css3/css3_text_effect.asp" title="CSS3 文本效果">CSS3 文本效果</a></li>
+<li><a href="/css3/css3_font.asp" title="CSS3 字体">CSS3 字体</a></li>
+<li><a href="/css3/css3_2dtransform.asp" title="CSS3 2D 转换">CSS3 2D 转换</a></li>
+<li><a href="/css3/css3_3dtransform.asp" title="CSS3 3D 转换">CSS3 3D 转换</a></li>
+<li><a href="/css3/css3_transition.asp" title="CSS3 过渡">CSS3 过渡</a></li>
+<li><a href="/css3/css3_animation.asp" title="CSS3 动画">CSS3 动画</a></li>
+<li><a href="/css3/css3_multiple_columns.asp" title="CSS3 多列">CSS3 多列</a></li>
+<li><a href="/css3/css3_user_interface.asp" title="CSS3 用户界面">CSS3 用户界面</a></li>
+</ul>
+<h2>CSS3 参考手册</h2>
+<ul>
+<li><a href="/cssref/index.asp" title="CSS3 参考手册">CSS3 参考手册</a></li>
+<li><a href="/css/css_ref_print.asp" title="CSS 打印">CSS 打印</a></li>
+<li><a href="/css/css_ref_aural.asp" title="CSS 听觉">CSS 听觉</a></li>
+<li><a href="/css/css_units.asp" title="CSS 单位">CSS 单位</a></li>
+<li><a href="/css/css_colors_legal.asp" title="CSS 颜色值">CSS 颜色值</a></li>
+</ul>
+</div>
+
+</div>
+
+<div id="maincontent">
+
+<h1>CSS3 简介</h1>
+
+
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/css3/index.asp" title="CSS3 教程">CSS3 教程</a></li>
+<li class="next"><a href="/css3/css3_border.asp" title="CSS3 边框">CSS3 边框</a></li>
+</ul>
+</div>
+
+
+<div id="intro">
+<p>CSS3 完全向后兼容，因此您不必改变现有的设计。浏览器通常支持 CSS2。</p>
+</div>
+
+
+<div>
+<h2>CSS3 模块</h2>
+
+<p>CSS3 被划分为模块。</p>
+
+<p>其中最重要的 CSS3 模块包括：</p>
+
+<ul>
+<li>选择器</li>
+<li>框模型</li>
+<li>背景和边框</li>
+<li>文本效果</li>
+<li>2D/3D 转换</li>
+<li>动画</li>
+<li>多列布局</li>
+<li>用户界面</li>
+</ul>
+</div>
+
+
+<div>
+<h2>CSS3 标准</h2>
+
+<p>W3C 仍然在对 CSS3 规范进行开发。</p>
+
+<p>不过，现代浏览器已经实现了相当多的 CSS3 属性。</p>
+</div>
+
+
+<div id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="/css3/index.asp" title="CSS3 教程">CSS3 教程</a></li>
+<li class="next"><a href="/css3/css3_border.asp" title="CSS3 边框">CSS3 边框</a></li>
+</ul>
+</div>
+
+
+
+
+</div>
+<!-- maincontent end -->
+
+<div id="sidebar">
+
+<div id="searchui">
+<form method="get" id="searchform" action="http://www.google.com.hk/search">
+<p><label for="searched_content">Search:</label></p>
+<p><input type="hidden" name="sitesearch" value="w3school.com.cn" /></p>
+<p>
+<input type="text" name="as_q" class="box"  id="searched_content" title="在此输入搜索内容。" />
+<input type="submit" value="Go" class="button" title="搜索！" />
+</p>
+</form>
+</div>
+
+<div id="tools">
+<h5 id="tools_reference"><a href="/cssref/index.asp">CSS 参考手册</a></h5>
+</div>
+
+<div id="ad">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3381531532877742";
+/* sidebar-160x600 */
+google_ad_slot = "3772569310";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+</div>
+
+<div id="footer">
+<p>
+W3School 提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。W3School 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+</p>
+
+<p>
+当使用本站时，代表您已接受了本站的<a href="/about/about_use.asp" title="关于使用">使用条款</a>和<a href="/about/about_privacy.asp" title="关于隐私">隐私条款</a>。版权所有，保留一切权利。
+赞助商：<a href="http://www.yktz.net/" title="上海赢科投资有限公司">上海赢科投资有限公司</a>。
+<a href="http://www.miitbeian.gov.cn/">蒙ICP备06004630号</a>
+</p>
+</div>
+
+</div>
+<!-- wrapper end -->
+
+</body>
+
+</html>

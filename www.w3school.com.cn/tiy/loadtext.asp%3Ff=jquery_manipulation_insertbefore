@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+    $("<span>你好！</span>").insertBefore("p");
+  });
+});
+</script>
+</head>
+
+<body>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+<button>在每个 p 元素之前插入 span 元素</button>
+</body>
+</html>

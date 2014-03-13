@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("p, button, h1, h2").click(function(event){
+    $("div").html("点击事件由一个 " + event.target.nodeName + " 元素触发");
+  });
+});
+</script>
+</head>
+
+<body>
+<h1>这是一个标题</h1>
+<h2>这是另一个标题</h2>
+<p>这是一个段落</p>
+<button>这是一个按钮</button>
+<p>标题、段落和按钮元素定义了一个点击事件。如果您触发了事件，下面的 div 会显示出哪个元素触发了该事件。</p>
+<div></div>
+</body>
+</html>

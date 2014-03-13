@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<style type="text/css">
+img[alt]
+{
+border: 5px solid red;
+}
+</style>
+</head>
+
+<body>
+<h1>可以应用样式：</h1>
+<img src="/i/w3school_logo_black.gif" alt="W3School Logo" />
+
+<hr />
+
+<h1>无法应用样式：</h1>
+<img src="/i/w3school_logo_black.gif" />
+</body>
+</html>

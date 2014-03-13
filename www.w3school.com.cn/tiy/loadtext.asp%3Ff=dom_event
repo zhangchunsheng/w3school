@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击按钮来执行 <b>displayDate()</b> 函数。</p>
+
+<button onclick="displayDate()">试一试</button>
+
+<script>
+function displayDate()
+{
+document.getElementById("demo").innerHTML=Date();
+}
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html>
